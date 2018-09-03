@@ -8,4 +8,7 @@ import { Component } from '@angular/core';
 
 export class AppBodyComponent {
 
+	pageChanged() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
 }

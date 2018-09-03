@@ -38,3 +38,28 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
         border-bottom: 4px solid #666666;
     }
 }
+
+.ad-blocker-used-text {
+    padding: 20px 20%;
+    text-align: center;
+    font-size: 14px;
+    background-color: #3D9BE9;
+    margin-bottom: 20px;
+    border-bottom: 4px solid rgb(9, 107, 187);
+    color: #f5f5f5;
+    min-height: 30px;
+
+    &.site-footer-ad {
+        margin: 20px;
+    }
+
+    &.site-sidebar-ad {
+        min-height: 160px;
+        padding-top: calc(50% - 70px);
+    }
+
+    &.dark {
+        background-color: #2c3038;
+        border-bottom: 4px solid #383e49;
+    }
+}

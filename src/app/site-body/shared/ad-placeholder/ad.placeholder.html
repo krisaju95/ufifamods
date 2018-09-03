@@ -1,4 +1,4 @@
-<div class="site-ad-container {{theme}}" [ngClass]="{'remove-margins': removeMargins}">
+<div *ngIf="!adBlockerUsed" class="site-ad-container {{theme}}" [ngClass]="{'remove-margins': removeMargins}">
     <div class="ad-text">
         Advertisement
     </div>
@@ -19,4 +19,7 @@
             <div id="pubclerks_3092"></div>
         </div>
     </ng-container>
+</div>
+<div *ngIf="adBlockerUsed" class="ad-blocker-used-text {{theme}}" [ngClass] = "{'site-footer-ad': adZone == 2, 'site-sidebar-ad': adZone == 3}">
+    It looks like you're using an adBlocker. Would you please consider white-listing our site?
 </div>
