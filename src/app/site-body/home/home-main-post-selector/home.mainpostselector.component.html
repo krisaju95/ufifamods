@@ -1,0 +1,13 @@
+<div class="post-titles-container">
+    <div class="post-titles-table">
+        <div class="post-title-item" *ngFor="let postData of postsData; let postIndex = index">
+            <div class="post-item-cell {{postData['post-colour']}}" [ngClass]="{'post-item-cell-active': selectedPostIndex == postIndex}" (click)="selectPost(postIndex)">
+                <div class="post-item-main">
+                    <span class="post-item-category" [innerHTML]="postData['post-category']"></span>
+                    <span class="post-item-date" [innerHTML]="postData['post-date'] | date: 'd MMMM'"></span>
+                </div>
+                <div class="post-item-text" [innerHTML]="postData['post-title']"></div>
+            </div>
+        </div>
+    </div>
+</div>

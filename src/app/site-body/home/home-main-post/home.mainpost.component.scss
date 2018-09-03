@@ -1,0 +1,99 @@
+@import "../../../variables.scss";
+
+.post-container {
+    display: table;
+    height: 440px;
+    margin: 20px;
+
+    .post-container-row {
+        background-color: $site-colour-white;
+        color: $site-colour-white;
+        font-weight: 300;
+        width: 100%;
+        min-height: 440px;
+        display: table-row;
+
+        .post-image-container {
+            background-color: $site-colour-black;
+            width: 40%;
+            height: 100%;
+            min-height: 440px;
+            display: table-cell;
+        }
+        
+        .post-text-content {
+            background-color: $site-colour-second-primary;
+            width: 30%;
+            display: table-cell;
+            padding: 30px;
+            vertical-align: top;
+
+            &:hover {
+                cursor: pointer;
+                background-color: #000000;
+
+                .post-title-container {
+                    text-decoration: underline;
+                }
+            }
+
+            .post-main {
+                margin-bottom: 30px;
+                line-height: 1em;
+                font-size: 14px;
+                color: $site-colour-disabled-dark;
+    
+                .post-date {
+                    float: right;
+                    font-size: 12px;
+                }
+            }
+    
+            .post-title {
+                font-weight: bold;
+                font-size: 34px;
+                font-family: $site-font-premierleague-bold;
+                position: relative;
+                color: $site-colour-white;
+                cursor: pointer;
+                line-height: 1.2;
+            }
+    
+            .post-description {
+                font-size: 14px;
+                margin-top: 40px;
+                position: relative;
+
+                @media only screen and (min-width: $site-resolution-desktop-medium) {
+                    padding-right: 100px;
+                }
+            }
+
+            .read-more-link-container {
+                margin-top: 40px;
+                color: $site-colour-blue;
+
+                .read-more-link {
+                    text-decoration: none;
+                    position: relative;
+                    padding-bottom: 10px;
+                    color: $site-colour-blue;
+                }
+
+                .read-more-link-icon {
+                    color: $site-colour-blue;
+                }
+            }
+        }
+
+        .post-selector-container {
+            height: 100%;
+            width: 30%;
+            display: table-cell;
+            color: $site-colour-black;
+            vertical-align: top;
+            border: 1px solid #E0E0E0;
+            border-bottom: 0px solid;
+        }
+    }
+}

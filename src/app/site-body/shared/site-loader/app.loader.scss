@@ -1,0 +1,18 @@
+@import "../../../variables.scss";
+
+.site-loader-container {
+    width: 100%;
+    text-align: center;
+    color: $site-colour-blue;
+
+    .site-loader-spinner {
+        margin-top: 250px;
+    }
+
+    .site-loader-text {
+        font-weight: 300;
+        font-size: 28px;
+        margin-top: 30px;
+        margin-bottom: 250px;
+    }
+}

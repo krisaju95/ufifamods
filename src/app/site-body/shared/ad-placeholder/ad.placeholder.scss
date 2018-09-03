@@ -1,0 +1,40 @@
+div.adclerks_728 {
+    width: 100%; /* Make sure we're at 100% of available size (based on parent) */ 
+    margin: 0; /* Keep the advert spaced away from any content below it. */
+}
+
+/* Target the contents of the wrapper element */
+div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div { 
+    width: 100% !important; /* Force width */ 
+    max-width: 100% !important; /* Force max-width of elements and image */
+    height: auto !important; /* Force aspect ratio of images correct */
+}
+
+.site-ad-container {
+    width: calc(100% - 81px);
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    margin: 20px;
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-bottom: 4px solid #E8E8E8;
+
+    &.remove-margins {
+        margin: 0;
+        margin-bottom: 20px;
+        width: calc(100% - 41px);
+    }
+
+    .ad-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    &.dark {
+        background-color: #2f2e2e;
+        color: #f5f5f5;
+        border: 1px solid #444444;
+        border-bottom: 4px solid #666666;
+    }
+}

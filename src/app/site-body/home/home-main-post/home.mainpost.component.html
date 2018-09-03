@@ -1,0 +1,18 @@
+<div class="post-container">
+    <div class="post-container-row">
+        <div uk-scrollspy="target: > img; cls:uk-animation-fade; delay: 100" class="post-image-container uk-cover-container" (click)="redirectToPost(mainPostData['link'])">
+            <img *ngIf="showImage" [src]="mainPostData['media']" alt="" uk-cover>
+        </div>
+        <div class="post-text-content" (change) = "redirectToPost(mainPostData['link'])">
+            <div class="post-main">
+                <span class="post-category {{mainPostData['colour']}}" [innerHTML]="mainPostData['category']"></span>
+                <span class="post-date" [innerHTML]="mainPostData['date'] | date: 'd MMMM'"></span>
+            </div>
+            <div class="post-title-container">
+                <a class="post-title" href="#" [routerLink] = "mainPostData['link']" [innerHTML]="mainPostData['title']"></a>
+            </div>
+            <div class="post-description" [innerHTML]="mainPostData['description'] + '...'"></div>
+        </div>
+        <home-main-post-selector class="post-selector-container" [blogPosts]="blogPosts" [selectedPostIndex]="selectedPostIndex" (selectPostEvent)="selectPostEvent($event)"></home-main-post-selector>
+    </div>
+</div>

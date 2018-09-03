@@ -1,0 +1,104 @@
+@import "../../../variables.scss";
+
+.blog-post-width {
+    width: 50%;
+    margin-left: 10%;
+}
+
+.blog-post-wrapper {
+    min-height: 500px;
+}
+
+.blog-post-header {
+    background: #2C3250 url("https://i.imgur.com/USB0ZD4.jpg") center right no-repeat;
+    background-size: cover;
+    padding-top: 40px;
+    padding-bottom: 80px;
+
+    &.targetted-header-0 {
+        background: #2C3250 url("https://i.imgur.com/USB0ZD4.jpg") center right no-repeat;
+        background-size: cover;
+    }
+
+    &.targetted-header-1 {
+        background: #2C3250 url("https://i.imgur.com/Tugbp3C.jpg") center right no-repeat;
+        background-size: cover;
+    }
+
+    &.targetted-header-2 {
+        background: #2C3250 url("https://i.imgur.com/WeWTGVG.jpg") center right no-repeat;
+        background-size: cover;
+    }
+
+    &.targetted-header-3 {
+        background: #2C3250 url("https://i.imgur.com/uPNcFVf.jpg") center right no-repeat;
+        background-size: cover;
+    }
+
+    .blog-post-category {
+        color: $site-colour-blue;
+        margin-bottom: 10px;
+    }
+
+    .blog-post-date {
+        color: $site-colour-white;
+        font-size: 14px;
+        font-weight: 300;
+        margin-top: 10px;
+    }
+
+    .blog-post-badges {
+        margin-top: 20px;
+    }
+
+    .post-title-container {
+        color: $site-colour-white;
+    }
+}
+
+.blog-post-content {
+    .blog-post-header-image {
+        height: 400px;
+        width: 100%;
+        margin-top: -50px;
+        margin-bottom: 30px;
+    }
+
+    .blog-post-intro-text {
+        font-size: 18px;
+        font-weight: 600;
+        color: #2C3399;
+        margin-bottom: 20px;
+        position: relative;
+
+        .absolute-ad-placeholder {
+            color: $site-colour-black;
+            font-weight: 300;
+            font-size: 12px;
+            position: absolute;
+            left: calc(100% + 30px);
+            top: 0;
+            width: 340px;
+        }
+    }
+
+    .blog-post-main-text {
+        .site-ad-container  {
+            margin: 20px 0 !important;
+        }
+
+        ::ng-deep .site-video-player {
+            width: 100%;
+            height: 400px;
+            margin-bottom: 20px;
+
+            @media only screen and (max-width: 1023px) {
+                height: 280px;
+            }
+        }
+
+        .blog-post-last-para {
+            font-weight: 600;
+        }
+    }
+}

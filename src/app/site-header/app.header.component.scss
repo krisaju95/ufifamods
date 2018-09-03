@@ -1,0 +1,106 @@
+@import "../variables.scss";
+
+.site-header-container {
+    background: $site-colour-primary url("https://i.imgur.com/J74Gnag.jpg") no-repeat top right;
+    background-size: cover;
+    color: $site-colour-white;
+    padding: 20px;
+    position: relative;
+    vertical-align: middle;
+
+    &.light-theme {
+        background: $site-colour-white url("https://i.imgur.com/7GUdA9z.jpg") no-repeat top right;
+        background-size: cover;
+        color: $site-colour-black;
+
+        .site-title {
+            .site-title-primary {
+                color: $site-colour-black;
+            }
+        }
+
+        .site-navbar {
+            border-right: 1px solid $site-colour-disabled-dark;
+    
+            .site-navigation-item {
+                color: $site-colour-black;
+    
+                &.site-navigation-item-active {
+                    border-bottom: 2px solid $site-colour-pink;
+                }
+
+                &:hover {
+                    color: $site-colour-pink;
+                }
+            }
+        }
+
+        .social-icons-list {
+    
+            .social-icon {
+    
+                &:hover {
+                    color: $site-colour-pink;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+
+    .site-logo {
+        .site-logo-image {
+            height: 50px;
+        }
+    }
+
+    .site-title {
+        font-family: $site-font-logo;
+        margin-top: 5px;
+        margin-left: 20px;
+        font-size: 28px;
+        font-weight: bold;
+
+        .site-title-primary {
+            color: $site-colour-white;
+        }
+        .site-title-secondary {
+            color: $site-colour-secondary;
+        }
+    }
+
+    .site-navbar {
+        margin-left: 40px;
+        border-right: 1px solid $site-colour-disabled-light;
+        font-weight: 300;
+        padding-top: 10px;
+
+        .site-navigation-item {
+            margin-right: 30px;
+            color: $site-colour-white;
+            text-decoration: none;
+
+            &.site-navigation-item-active {
+                padding-bottom: 10px;
+                border-bottom: 2px solid $site-colour-blue;
+            }
+
+            &:hover {
+                color: $site-colour-blue;
+            }
+        }
+    }
+
+    .social-icons-list {
+        margin-left: 30px;
+        opacity: 0.8;
+
+        .social-icon {
+            margin-right: 20px;
+
+            &:hover {
+                color: $site-colour-blue;
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+<site-loader *ngIf="responseLoading"></site-loader>
+<div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
+    <div class="blog-post-header targetted-header-{{targettedPostHeader}}" uk-parallax="bgy: -200">
+        <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
+        <div class="post-title-container post-title-size-42 blog-post-width" [innerHTML]="postData['post-title']"></div>
+        <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
+        <div class="blog-post-badges blog-post-width">
+            <ng-container *ngFor="let category of categoryList">
+                <span class="uk-badge" [innerHTML]="category"></span>
+            </ng-container>
+        </div>
+    </div>
+    <div class="blog-post-content blog-post-width">
+        <div class="blog-post-header-image uk-cover-container">
+            <img [src]="postData['post-media']" alt="" uk-cover>
+        </div>
+        <div class="blog-post-intro-text">
+            <div [innerHTML]="postData['post-intro-text']"></div>
+            <site-ad-placeholder class="absolute-ad-placeholder" [adZone]="3" [removeMargins]="true"></site-ad-placeholder>
+        </div>
+        <div class="blog-post-main-text" [innerHTML]="postMainText"></div>
+        <site-ad-placeholder [adZone]="1" [removeMargins]="true"></site-ad-placeholder>
+        <div class="blog-post-main-text" [innerHTML]="postMainText2"></div>
+    </div>
+</div>

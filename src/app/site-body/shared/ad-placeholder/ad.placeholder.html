@@ -1,0 +1,22 @@
+<div class="site-ad-container {{theme}}" [ngClass]="{'remove-margins': removeMargins}">
+    <div class="ad-text">
+        Advertisement
+    </div>
+    <ng-container *ngIf="adZone == 1">
+        <div id="adclerks_728" class="adclerks_728">
+            <div id="pubclerks_1443"></div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="adZone == 2">
+        <div id="adclerks_728" class="adclerks_728">
+            <div id="pubclerks_1472"></div>
+        </div>
+    </ng-container>
+
+    <ng-container *ngIf="adZone == 3">
+        <div id="adclerks_728" class="adclerks_728">
+            <div id="pubclerks_3092"></div>
+        </div>
+    </ng-container>
+</div>

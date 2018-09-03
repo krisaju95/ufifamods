@@ -1,0 +1,32 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/uikit/src/scss/variables-theme.scss";
+@import "../node_modules/uikit/src/scss/mixins-theme.scss";
+@import "../node_modules/uikit/src/scss/uikit-theme.scss";
+@import "../node_modules/custom-fonts/Duepuntozero/stylesheet.css";
+@import "../node_modules/custom-fonts/PremierLeague/stylesheet.css";
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background-color: #DDDDDD;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ffc145;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #bd9647; 
+}
+
+.uk-badge {
+    background-color: #3D9BE9;
+    padding: 10px;
+    margin-right: 10px;
+}
