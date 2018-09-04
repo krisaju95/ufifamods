@@ -10,9 +10,9 @@
 		</span>
 	</div>
 	<div class="uk-flex-inline site-navbar">
-		<a href="#" routerLink="/" class="site-navigation-item site-navigation-item-active">Home</a>
-		<a href="#" routerLink="/blog/2018/07/31/fifa18-michael-carrick-end-of-an-era-player-review" class="site-navigation-item">Blog</a>
-		<a href="#" class="site-navigation-item">Downloads</a>
+		<a href="#" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+		<a href="#" routerLink="/blog/2018/07/31/fifa18-michael-carrick-end-of-an-era-player-review" routerLinkActive="site-navigation-item-active" class="site-navigation-item">Blog</a>
+		<a href="#" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Downloads</a>
 	</div>
 	<div class="uk-flex-inline social-icons-list">
 		<a href="https://twitter.com/wwtfifamods" target="_blank" class="social-icon" uk-icon="icon: twitter"></a>

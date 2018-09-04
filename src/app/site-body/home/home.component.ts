@@ -25,6 +25,10 @@ export class HomeComponent {
 			})
 	}
 
+	ngAfterViewInit() {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	}
+
 	setBlogPostsArray(blogPostsObject) {
 		for (let postObject in blogPostsObject) {
 			this.blogPosts.push(blogPostsObject[postObject]);

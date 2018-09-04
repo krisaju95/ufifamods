@@ -22,7 +22,7 @@
         }
         
         .post-text-content {
-            background-color: $site-colour-second-primary;
+            background-color: $site-colour-primary;
             width: 30%;
             display: table-cell;
             padding: 30px;
@@ -30,7 +30,7 @@
 
             &:hover {
                 cursor: pointer;
-                background-color: #000000;
+                background-color: $site-colour-second-primary;
 
                 .post-title-container {
                     text-decoration: underline;

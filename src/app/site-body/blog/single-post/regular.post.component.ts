@@ -46,7 +46,12 @@ export class RegularBlogPostComponent {
 						this.postMainText = this.sanitizeURL(this.postData['post-main-text']);
 						this.postMainText2 = this.sanitizeURL(this.postData['post-main-text-2']);
 						this.getPostCategories();
-					})
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+					},
+					() => {
+						window.location.href = "/404"
+					}
+				)
 			})
 	}
 

@@ -85,7 +85,7 @@ $site-resolution-desktop-large:     1440px;
     background-color: $site-colour-white;
 
     &.post-dark-theme {
-        background-color: $site-colour-second-primary !important;
+        background-color: $site-colour-primary !important;
 
         .post-description-container {
             color: $site-colour-white;
@@ -97,7 +97,7 @@ $site-resolution-desktop-large:     1440px;
         cursor: pointer;
 
         &.post-dark-theme {
-            background-color: #000000 !important;
+            background-color: $site-colour-second-primary !important;
         }
 
         .post-title-container {
@@ -108,7 +108,7 @@ $site-resolution-desktop-large:     1440px;
 
 .post-dark-theme {
     color: $site-colour-white;
-    background-color: $site-colour-second-primary;
+    background-color: $site-colour-primary;
 
     .post-main {
         color: #E0E0E0;

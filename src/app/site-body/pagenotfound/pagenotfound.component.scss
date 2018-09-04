@@ -1,0 +1,21 @@
+.page-not-found {
+    padding: 150px 200px;
+    padding-top: 100px;
+
+    .error-400-text {
+        font-size: 60px;
+        color: #3D9BE9;
+        font-weight: bolder;
+    }
+
+    .oops-text {
+        font-size: 100px;
+        font-weight: 600;
+    }
+
+    .error-description-text {
+        font-size: 30px;
+        font-weight: 300;
+        width: 50%;
+    }
+}
