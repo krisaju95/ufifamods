@@ -9,7 +9,7 @@ const routes: Routes = [
   // { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', redirectTo: '' },
-  { path: 'blog/:year/:month/:date/:title', component: RegularBlogPostComponent },
+  { path: 'blog/post/:year/:month/:date/:title', component: RegularBlogPostComponent },
   { path: 'downloads', component: RegularBlogPostComponent },
   { path: '404', component: PageNotFoundComponent },
   { path: '**', redirectTo: '404' }

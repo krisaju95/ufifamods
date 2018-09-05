@@ -57,7 +57,7 @@ export class RegularBlogPostComponent {
 
 	getPostURL() {
 		let postParameters = [this.getParam("year"), this.getParam("month"), this.getParam("date"), this.getParam("title")]
-		return "/blog/" + postParameters.join("/");
+		return "/blog/post/" + postParameters.join("/");
 	}
 
 	getFileURL(data) {
