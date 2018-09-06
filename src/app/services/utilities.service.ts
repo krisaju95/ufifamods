@@ -4,14 +4,19 @@ import { Injectable } from '@angular/core';
 export class UtilitiesService {
 
 	constructor(
-
 	) { }
+
+	CSLP: string = "https://jsonblob.com/api/jsonBlob/";
 
 	categoryColourMap: Object = {
 		"fut": "blue",
 		"mods": "yellow",
 		"youtube": "pink",
 		"career": "purple"
+	}
+
+	getCSLP() {
+		return this.CSLP;
 	}
 
 	getCategoryColourTheme(category) {

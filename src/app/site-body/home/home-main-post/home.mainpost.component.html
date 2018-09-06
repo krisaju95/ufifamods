@@ -1,9 +1,9 @@
 <div class="post-container">
     <div class="post-container-row">
-        <div uk-scrollspy="target: > img; cls:uk-animation-fade; delay: 100" class="post-image-container uk-cover-container" (click)="redirectToPost(mainPostData['link'])">
+        <div [routerLink] = "mainPostData['link']" uk-scrollspy="target: > img; cls:uk-animation-fade; delay: 100" class="post-image-container uk-cover-container" (click)="redirectToPost(mainPostData['link'])">
             <img *ngIf="showImage" [src]="mainPostData['media']" alt="" uk-cover>
         </div>
-        <div class="post-text-content" (change) = "redirectToPost(mainPostData['link'])">
+        <div class="post-text-content" [routerLink] = "mainPostData['link']">
             <div class="post-main">
                 <span class="post-category {{mainPostData['colour']}}" [innerHTML]="mainPostData['category']"></span>
                 <span class="post-date" [innerHTML]="mainPostData['date'] | date: 'd MMMM'"></span>

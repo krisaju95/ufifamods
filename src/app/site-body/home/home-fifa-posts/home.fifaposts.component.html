@@ -1,77 +1,77 @@
 <div class="post-container">
     <div class="post-container-row">
-        <div class="post-container-cell post-container-cell-1" (click)="redirectToPost(postsData[0]['post-link'])">
-            <div class="post-main">
-                <span class="post-category {{postsData[1]['post-colour']}}" [innerHTML]="postsData[1]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[1]['post-date'] | date: 'd MMMM'"></span>
-            </div>
-            <div class="post-text-content">
-                <a class="post-title-container post-title-size-20" [href]="postsData[1]['post-link']" [innerHTML]="postsData[1]['post-title']"></a>
-            </div>
-            <div class="post-image-container uk-cover-container uk-animation-fade" (click)="redirectToPost(postsData[1]['post-link'])">
-                <img [src]="postsData[1]['post-media']" alt="" uk-cover>
-            </div>
-            <div class="post-description-container" [innerHTML]="postsData[1]['post-description'] + '...'"></div>
-        </div>
-        <div class="post-container-cell post-container-cell-2" (click)="redirectToPost(postsData[1]['post-link'])">
+        <div class="post-container-cell post-container-cell-1" [routerLink]="postsData[0]['post-link']">
             <div class="post-main">
                 <span class="post-category {{postsData[0]['post-colour']}}" [innerHTML]="postsData[0]['post-category']"></span>
                 <span class="post-date" [innerHTML]="postsData[0]['post-date'] | date: 'd MMMM'"></span>
             </div>
+            <div class="post-text-content">
+                <a class="post-title-container post-title-size-20" href="#" [routerLink]="postsData[0]['post-link']" [innerHTML]="postsData[0]['post-title']"></a>
+            </div>
+            <div class="post-image-container uk-cover-container uk-animation-fade">
+                <img [src]="postsData[0]['post-media']" alt="" uk-cover>
+            </div>
+            <div class="post-description-container" [innerHTML]="postsData[0]['post-description'] + '...'"></div>
+        </div>
+        <div class="post-container-cell post-container-cell-2" [routerLink]="postsData[1]['post-link']">
+            <div class="post-main">
+                <span class="post-category {{postsData[1]['post-colour']}}" [innerHTML]="postsData[1]['post-category']"></span>
+                <span class="post-date" [innerHTML]="postsData[1]['post-date'] | date: 'd MMMM'"></span>
+            </div>
             <div uk-grid class="post-content-container uk-child-width-expand@s">
                 <div class="post-image-container uk-cover-container uk-animation-fade">
-                    <img [src]="postsData[0]['post-media']" alt="" uk-cover>
+                    <img [src]="postsData[1]['post-media']" alt="" uk-cover>
                 </div>
                 <div class="post-text-content">
-                    <a class="post-title-container post-title-size-28" [href]="postsData[0]['post-link']" [innerHTML]="postsData[0]['post-title']"></a>
-                    <div class="post-description-container" [innerHTML]="postsData[0]['post-description'] + '...'"></div>
+                    <a class="post-title-container post-title-size-28" href="#" [routerLink]="postsData[1]['post-link']" [innerHTML]="postsData[1]['post-title']"></a>
+                    <div class="post-description-container" [innerHTML]="postsData[1]['post-description'] + '...'"></div>
                 </div>
             </div>
         </div>
-        <div class="post-container-cell post-container-cell-3" (click)="redirectToPost(postsData[20]['post-link'])">
+        <div class="post-container-cell post-container-cell-3" [routerLink]="postsData[2]['post-link']">
             <div class="post-main">
                 <span class="post-category {{postsData[2]['post-colour']}}" [innerHTML]="postsData[2]['post-category']"></span>
                 <span class="post-date" [innerHTML]="postsData[2]['post-date'] | date: 'd MMMM'"></span>
             </div>
             <div class="post-text-content">
-                <a class="post-title-container post-title-size-20" [href]="postsData[2]['post-link']" [innerHTML]="postsData[2]['post-title']"></a>
+                <a class="post-title-container post-title-size-20" href="#" [routerLink]="postsData[2]['post-link']" [innerHTML]="postsData[2]['post-title']"></a>
             </div>
-            <div class="post-image-container uk-cover-container uk-animation-fade" (click)="redirectToPost(postsData[2]['post-link'])">
+            <div class="post-image-container uk-cover-container uk-animation-fade">
                 <img [src]="postsData[2]['post-media']" alt="" uk-cover>
             </div>
             <div class="post-description-container" [innerHTML]="postsData[2]['post-description'] + '...'"></div>
         </div>
     </div>
     <div class="post-container-row post-container-row-2">
-        <div class="post-container-cell post-container-cell-1" (click)="redirectToPost(postsData[3]['post-link'])">
+        <div class="post-container-cell post-container-cell-1" [routerLink]="postsData[3]['post-link']">
             <div class="post-main">
                 <span class="post-category {{postsData[3]['post-colour']}}" [innerHTML]="postsData[3]['post-category']"></span>
                 <span class="post-date" [innerHTML]="postsData[3]['post-date'] | date: 'd MMMM'"></span>
             </div>
             <div uk-grid class="post-content-container">
                 <div class="post-text-content">
-                    <a class="post-title-container post-title-size-16" [href]="postsData[3]['post-link']" [innerHTML]="postsData[3]['post-title']"></a>
+                    <a class="post-title-container post-title-size-16" href="#" [routerLink]="postsData[3]['post-link']" [innerHTML]="postsData[3]['post-title']"></a>
                     <div class="post-description-container" [innerHTML]="postsData[3]['post-description'] + '...'"></div>
                 </div>
             </div>
         </div>
-        <div class="post-container-cell post-container-cell-2 post-dark-theme" (click)="redirectToPost(postsData[4]['post-link'])">
+        <div class="post-container-cell post-container-cell-2 post-dark-theme" [routerLink]="postsData[4]['post-link']">
             <div class="post-main">
                 <span class="post-category {{postsData[4]['post-colour']}}" [innerHTML]="postsData[4]['post-category']"></span>
                 <span class="post-date" [innerHTML]="postsData[4]['post-date'] | date: 'd MMMM'"></span>
             </div>
             <div class="post-text-content">
-                <a class="post-title-container post-title-size-16" [href]="postsData[4]['post-link']" [innerHTML]="postsData[4]['post-title']"></a>
+                <a class="post-title-container post-title-size-16" href="#" [routerLink]="postsData[4]['post-link']" [innerHTML]="postsData[4]['post-title']"></a>
             </div>
             <div class="post-description-container" [innerHTML]="postsData[4]['post-description'] + '...'"></div>
         </div>
-        <div class="post-container-cell post-container-cell-3" (click)="redirectToPost(postsData[5]['post-link'])">
+        <div class="post-container-cell post-container-cell-3" [routerLink]="postsData[5]['post-link']">
             <div class="post-main">
                 <span class="post-category {{postsData[5]['post-colour']}}" [innerHTML]="postsData[5]['post-category']"></span>
                 <span class="post-date" [innerHTML]="postsData[5]['post-date'] | date: 'd MMMM'"></span>
             </div>
             <div class="post-text-content">
-                <a class="post-title-container post-title-size-16" [href]="postsData[5]['post-link']" [innerHTML]="postsData[5]['post-title']"></a>
+                <a class="post-title-container post-title-size-16" href="#" [routerLink]="postsData[5]['post-link']" [innerHTML]="postsData[5]['post-title']"></a>
             </div>
             <div class="post-description-container" [innerHTML]="postsData[5]['post-description'] + '...'"></div>
         </div>

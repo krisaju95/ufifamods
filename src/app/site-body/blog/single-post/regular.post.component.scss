@@ -90,11 +90,11 @@
 
         &::after {
             content: "";
-            width: 100%;
-            height: 4px;
+            width: 10%;
+            height: 5px;
             border-radius: 100px;
             background-color: $site-colour-blue;
-            right: calc(100% - 100px);
+            left: 0;
             bottom: -35px;
             position: absolute;
         }

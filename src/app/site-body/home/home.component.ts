@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UtilitiesService } from '../../services/utilities.service'
 
 @Component({
 	selector: 'home-component',
@@ -10,15 +11,15 @@ import { HttpClient } from '@angular/common/http';
 export class HomeComponent {
 
 	constructor(
-		private http: HttpClient
+		private http: HttpClient,
+		private service: UtilitiesService
 	) { }
 
 	responseLoading: Boolean = true;
 	blogPosts: Array<Object> = [];
 
 	ngOnInit() {
-		// JSON URL: https://jsonblob.com/eb4b2165-a94f-11e8-9e97-a58df81c0425
-		this.http.get("https://jsonblob.com/api/jsonBlob/eb4b2165-a94f-11e8-9e97-a58df81c0425")
+		this.http.get(this.service.getCSLP() +  "eb4b2165-a94f-11e8-9e97-a58df81c0425")
 			.subscribe((data) => {
 				this.responseLoading = false;
 				this.setBlogPostsArray(data);

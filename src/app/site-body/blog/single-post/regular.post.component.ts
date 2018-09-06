@@ -20,7 +20,7 @@ export class RegularBlogPostComponent {
 	) { }
 
 	responseLoading: boolean = true;
-	postURL: String = "";
+	postURL: string = "";
 	postMap: Array<object>;
 	fileURL: string = "";
 	postData: Object;
@@ -36,22 +36,22 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostData() {
-		this.http.get("https://jsonblob.com/api/jsonBlob/612e95db-aeb0-11e8-94a2-cf6856e41601")
+		this.http.get(this.service.getCSLP() + "612e95db-aeb0-11e8-94a2-cf6856e41601")
 			.subscribe((data) => {
 				this.fileURL = this.getFileURL(data);
-				this.http.get("https://jsonblob.com/api/jsonBlob/" + this.fileURL)
+				this.http.get(this.service.getCSLP() + this.fileURL)
 					.subscribe((postData) => {
 						this.responseLoading = false;
-						this.postData = postData[0];
+						this.postData = postData;
 						this.postMainText = this.sanitizeURL(this.postData['post-main-text']);
 						this.postMainText2 = this.sanitizeURL(this.postData['post-main-text-2']);
 						this.getPostCategories();
 						window.scrollTo({ top: 0, behavior: 'smooth' });
 					},
-					() => {
-						window.location.href = "/404"
-					}
-				)
+						() => {
+							window.location.href = "/404"
+						}
+					)
 			})
 	}
 
@@ -61,10 +61,9 @@ export class RegularBlogPostComponent {
 	}
 
 	getFileURL(data) {
-		for (let record of data) {
-			if (record['post-url'] == this.postURL) {
-				return record["post-json-url"];
-			}
+		let postObject = data[this.postURL];
+		if (postObject) {
+			return postObject["post-json-url"];
 		}
 		return "";
 	}
