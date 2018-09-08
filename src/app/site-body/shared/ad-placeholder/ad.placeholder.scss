@@ -20,6 +20,10 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     border: 1px solid #DDDDDD;
     border-bottom: 4px solid #E8E8E8;
 
+    @media only screen and (max-width: 800px) {
+        margin: 10px;
+    }
+
     &.remove-margins {
         margin: 0;
         margin-bottom: 20px;
@@ -51,6 +55,10 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     border: 1px solid #DDDDDD;
     border-bottom: 4px solid #E8E8E8;
 
+    @media only screen and (max-width: 800px) {
+        margin: 10px;
+    }
+
     &.remove-margins {
         margin: 0;
         margin-bottom: 20px;
@@ -58,6 +66,10 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
 
     &.site-footer-ad {
         margin: 20px;
+
+        @media only screen and (max-width: 800px) {
+            margin: 10px;
+        }
     }
 
     &.site-sidebar-ad {

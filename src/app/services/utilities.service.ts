@@ -44,4 +44,12 @@ export class UtilitiesService {
 		let num = parseInt((Math.random() * 100).toString()) % 4;
 		return num;
 	}
+
+	isMobileViewPort() {
+		return (window.innerWidth < 800);
+	}
+
+	isDesktopViewPort() {
+		return (window.innerWidth >= 800);
+	}
 }

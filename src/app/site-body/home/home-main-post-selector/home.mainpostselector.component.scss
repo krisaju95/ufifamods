@@ -1,93 +1,152 @@
 @import "../../../variables.scss";
 
 
-.post-titles-container {
-    height: 100%;
-    width: 100%;
-    color: $site-colour-black;
-
-    .post-titles-table {
-        display: table;
-        width: 100%;
+@media only screen and (min-width: 800px) {
+    .post-titles-container {
         height: 100%;
-        position: relative;
-
-        .post-title-item {
-            display: table-row;
+        width: 100%;
+        color: $site-colour-black;
+    
+        .post-titles-table {
+            display: table;
             width: 100%;
-            height: 25%;
-            cursor: pointer;
-
-            .post-item-cell {
-                display: table-cell;
+            height: 100%;
+            position: relative;
+    
+            .post-title-item {
+                display: table-row;
                 width: 100%;
-                vertical-align: top;
-                padding: 30px;
-                font-weight: 600;
-                border-bottom: 1px solid #E0E0E0;
-
-                &.post-item-cell-active {
-                    position: relative;
-                    background-color: #EEEEEE;
-
-                    &::after {
-                        height: 50%;
-                        width: 10px;
-                        background-color: $site-colour-blue;
-                        content: "";
-                        position: absolute;
-                        left: -5px;
-                        top: 10px;
-                    }
-
-                    &.mods {
+                height: 25%;
+                cursor: pointer;
+    
+                .post-item-cell {
+                    display: table-cell;
+                    width: 100%;
+                    vertical-align: top;
+                    padding: 30px;
+                    font-weight: 600;
+                    border-bottom: 1px solid #E0E0E0;
+    
+                    &.post-item-cell-active {
+                        position: relative;
+                        background-color: #EEEEEE;
+    
                         &::after {
-                            background-color: $site-colour-yellow;
-                        }
-                    }
-                
-                    &.fut {
-                        &::after {
+                            height: 50%;
+                            width: 10px;
                             background-color: $site-colour-blue;
+                            content: "";
+                            position: absolute;
+                            left: -5px;
+                            top: 10px;
+                        }
+    
+                        &.mods {
+                            &::after {
+                                background-color: $site-colour-yellow;
+                            }
+                        }
+                    
+                        &.fut {
+                            &::after {
+                                background-color: $site-colour-blue;
+                            }
+                        }
+                    
+                        &.fifa {
+                            &::after {
+                                background-color: $site-colour-pink;
+                            }
+                        }
+                    
+                        &.totw {
+                            &::after {
+                                background-color: #aaaaaa;
+                            }
                         }
                     }
-                
-                    &.fifa {
-                        &::after {
-                            background-color: $site-colour-pink;
+    
+                    .post-item-main {
+                        font-size: 12px;
+                        color: $site-colour-disabled-light;
+                        padding-bottom: 10px;
+                        
+                        .post-item-category {
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: $site-colour-disabled-light;
                         }
-                    }
-                
-                    &.totw {
-                        &::after {
-                            background-color: #aaaaaa;
+    
+                        .post-item-date {
+                            float: right;
                         }
                     }
                 }
-
-                .post-item-main {
-                    font-size: 12px;
-                    color: $site-colour-disabled-light;
-                    padding-bottom: 10px;
+    
+                &:hover {
+                    background-color: #EEEEEE;
                     
-                    .post-item-category {
-                        text-transform: uppercase;
-                        font-size: 12px;
-                        font-weight: bold;
-                        color: $site-colour-disabled-light;
-                    }
-
-                    .post-item-date {
-                        float: right;
+                    .post-item-text {
+                        text-decoration: underline;
                     }
                 }
             }
+        }
+    }
+}
 
-            &:hover {
-                background-color: #EEEEEE;
-                
-                .post-item-text {
-                    text-decoration: underline;
+@media only screen and (max-width: 800px) {
+    .post-titles-container {
+        height: 100%;
+        width: 100%;
+        color: $site-colour-black;
+    
+        .post-titles-table {
+            height: 100%;
+            position: relative;
+    
+            .post-title-item {
+                cursor: pointer;
+    
+                .post-item-cell {
+                    height: 100px;
+                    padding: 15px;
+                    font-weight: 600;
+                    border-bottom: 1px solid #E0E0E0;
+
+                    .post-image-container {
+                        width: 40%;
+                        height: 100%;
+                        min-height: 100px;
+                        float: left;
+                        margin-right: 10px;
+                    }
+    
+                    .post-item-main {
+                        font-size: 12px;
+                        color: $site-colour-disabled-light;
+                        padding-bottom: 10px;
+                        
+                        .post-item-category {
+                            text-transform: uppercase;
+                            font-size: 12px;
+                            font-weight: bold;
+                            color: $site-colour-disabled-light;
+                        }
+    
+                        .post-item-date {
+                            float: right;
+                        }
+                    }
+                }
+    
+                &:hover {
+                    background-color: #EEEEEE;
+                    
+                    .post-item-text {
+                        text-decoration: underline;
+                    }
                 }
             }
         }

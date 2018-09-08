@@ -1,4 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { UtilitiesService } from '../../../services/utilities.service';
+import { Router } from '@angular/router';
 
 @Component({
 	selector: 'home-main-post-selector',
@@ -9,7 +11,8 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class HomeMainPostSelectorComponent {
 
 	constructor(
-
+		private service: UtilitiesService,
+		private router: Router
 	) { }
 
 	@Input() blogPosts: Array<Object>;
@@ -17,18 +20,15 @@ export class HomeMainPostSelectorComponent {
 
 	@Output() selectPostEvent: EventEmitter<number> = new EventEmitter<number>();
 
-	postsData: Array<Object> = [];
+	postsData: Array<object> = [];
 	slideShowInterval: any;
+	isDesktopViewPort: boolean = false;
+	isMobileViewport: boolean = false;
 
 	ngOnInit() {
 		this.setPostData();
-	}
-
-	getNextPostIndex() {
-		if(this.selectedPostIndex < 3) {
-			return this.selectedPostIndex + 1;
-		}
-		return 0;
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isMobileViewport = this.service.isMobileViewPort();
 	}
 
 	setPostData() {
@@ -43,8 +43,13 @@ export class HomeMainPostSelectorComponent {
 	}
 
 	selectPost(postIndex) {
-		if(this.selectedPostIndex != postIndex) {
-			this.selectPostEvent.emit(postIndex);
+		if(this.isDesktopViewPort) {
+			if(this.selectedPostIndex != postIndex) {
+				this.selectPostEvent.emit(postIndex);
+			}
+		}
+		else {
+			this.router.navigate([this.postsData[postIndex]["post-link"]]);
 		}
 	}
 }

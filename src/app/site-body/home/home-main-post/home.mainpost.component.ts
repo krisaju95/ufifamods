@@ -20,6 +20,7 @@ export class HomeMainPostComponent {
 		this.setPostData();
 		this.setMainPostData(0);
 		this.fadeImage();
+		window.scrollTo({ top: 0, behavior: 'smooth' });
 	}
 
 	setPostData() {

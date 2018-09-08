@@ -1,97 +1,194 @@
 @import "../../../variables.scss";
 
-.post-container {
-    display: table;
-    margin: 20px;
-    width: calc(100% - 40px);
-    height: 100%;
-
-    .post-container-row {
-        display: table-row;
-        width: 100%;
+@media only screen and (min-width: 800px) {
+    .post-container {
+        display: table;
+        margin: 20px;
+        width: calc(100% - 40px);
         height: 100%;
-        background-color: $site-colour-white;
-
-        .post-container-cell {
-            display: table-cell;
-            width: 40%;
+    
+        .post-container-row {
+            display: table-row;
+            width: 100%;
             height: 100%;
-            padding: 20px;
-            border: 1px solid #E0E0E0;
-
-            &.post-container-cell-2, &.post-container-cell-3 {
-                width: 30%;
-
-                .post-image-container {
-                    width: 100%;
-                    height: 50%;
-                    margin-top: 20px;
-                }
-
-                .post-description-container {
-                    padding-top: 30px;
-                    font-size: 14px;
-                }
-            }
-
-            .post-main {
-                margin-bottom: 20px;
-                line-height: 1em;
-                font-size: 14px;
-
-                .post-date {
-                    float: right;
-                    font-size: 12px;
-                }
-            }
-
-            .post-content-container {
-                margin: 0;
-
-                .post-image-container {
-                    min-height: 350px;
-                    height: 100%;
-                    width: 50%;
-                    padding: 0;
-                }
-
-                .post-text-content {
-                    padding-left: 20px;
-
+            background-color: $site-colour-white;
+    
+            .post-container-cell {
+                display: table-cell;
+                width: 40%;
+                height: 100%;
+                padding: 20px;
+                border: 1px solid #E0E0E0;
+    
+                &.post-container-cell-2, &.post-container-cell-3 {
+                    width: 30%;
+    
+                    .post-image-container {
+                        width: 100%;
+                        height: 50%;
+                        margin-top: 20px;
+                    }
+    
                     .post-description-container {
-                        padding-top: 40px;
+                        padding-top: 30px;
                         font-size: 14px;
                     }
                 }
-            }
-        }
-
-        &.post-container-row-2 {
-            .post-container-cell {
-                border-top: 0 solid;
-
+    
+                .post-main {
+                    margin-bottom: 20px;
+                    line-height: 1em;
+                    font-size: 14px;
+    
+                    .post-date {
+                        float: right;
+                        font-size: 12px;
+                    }
+                }
+    
                 .post-content-container {
-                    .post-text-content {
+                    margin: 0;
+    
+                    .post-image-container {
+                        min-height: 350px;
+                        height: 100%;
+                        width: 50%;
                         padding: 0;
-
+                    }
+    
+                    .post-text-content {
+                        padding-left: 20px;
+    
+                        .post-description-container {
+                            padding-top: 40px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+    
+            &.post-container-row-2 {
+                .post-container-cell {
+                    border-top: 0 solid;
+    
+                    .post-content-container {
+                        .post-text-content {
+                            padding: 0;
+    
+                            .post-description-container {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+    
+                    &.post-container-cell-2, &.post-container-cell-3 {
+                        background-color: $site-colour-white;
+                        color: $site-colour-black;
+    
+                        .post-description-container {
+                            padding-top: 10px;
+                        }
+                    }
+    
+                    &.post-container-cell-3 {
                         .post-description-container {
                             padding-top: 10px;
                         }
                     }
                 }
+            }
+        }
+    }
+}
 
+@media only screen and (max-width: 800px) {
+    .post-container {
+        margin: 10px;
+    
+        .post-container-row {
+            width: 100%;
+            background-color: $site-colour-white;
+    
+            .post-container-cell {
+                height: 100%;
+                padding: 15px;
+                border: 1px solid #E0E0E0;
+    
                 &.post-container-cell-2, &.post-container-cell-3 {
-                    background-color: $site-colour-white;
-                    color: $site-colour-black;
-
+                    .post-image-container {
+                        width: 100%;
+                        height: 200px;
+                        margin-top: 20px;
+                    }
+    
                     .post-description-container {
-                        padding-top: 10px;
+                        padding-top: 30px;
+                        font-size: 14px;
                     }
                 }
+    
+                .post-main {
+                    margin-bottom: 20px;
+                    line-height: 1em;
+                    font-size: 14px;
+    
+                    .post-date {
+                        float: right;
+                        font-size: 12px;
+                    }
+                }
+    
+                .post-content-container {
+                    margin: 0;
+    
+                    .post-image-container {
+                        min-height: 350px;
+                        height: 100%;
+                        padding: 0;
+                    }
+    
+                    .post-text-content {
+                        padding: 0;
 
-                &.post-container-cell-3 {
-                    .post-description-container {
-                        padding-top: 10px;
+                        @media only screen and (min-width: 640px) {
+                            padding-left: 10px;
+                        }
+
+                        .post-description-container {
+                            padding-top: 20px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+    
+            &.post-container-row-2 {
+                .post-container-cell {
+                    border-top: 0 solid;
+    
+                    .post-content-container {
+                        .post-text-content {
+                            padding: 0;
+    
+                            .post-description-container {
+                                padding-top: 10px;
+                            }
+                        }
+                    }
+    
+                    &.post-container-cell-2, &.post-container-cell-3 {
+                        background-color: $site-colour-white;
+                        color: $site-colour-black;
+    
+                        .post-description-container {
+                            padding-top: 10px;
+                        }
+                    }
+    
+                    &.post-container-cell-3 {
+                        .post-description-container {
+                            padding-top: 10px;
+                        }
                     }
                 }
             }

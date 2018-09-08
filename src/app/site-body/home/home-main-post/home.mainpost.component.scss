@@ -1,99 +1,150 @@
 @import "../../../variables.scss";
 
-.post-container {
-    display: table;
-    height: 440px;
-    margin: 20px;
-
-    .post-container-row {
-        background-color: $site-colour-white;
-        color: $site-colour-white;
-        font-weight: 300;
-        width: 100%;
-        min-height: 440px;
-        display: table-row;
-
-        .post-image-container {
-            background-color: $site-colour-black;
-            width: 40%;
-            height: 100%;
+@media only screen and (min-width: 800px) {
+    .post-container {
+        display: table;
+        height: 440px;
+        margin: 20px;
+    
+        .post-container-row {
+            background-color: $site-colour-white;
+            color: $site-colour-white;
+            font-weight: 300;
+            width: 100%;
             min-height: 440px;
-            display: table-cell;
-        }
+            display: table-row;
+    
+            .post-image-container {
+                background-color: $site-colour-black;
+                width: 40%;
+                height: 100%;
+                min-height: 440px;
+                display: table-cell;
+            }
+            
+            .post-text-content {
+                background-color: $site-colour-primary;
+                width: 30%;
+                display: table-cell;
+                padding: 30px;
+                vertical-align: top;
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: $site-colour-second-primary;
+    
+                    .post-title-container {
+                        text-decoration: underline;
+                    }
+                }
+    
+                .post-main {
+                    margin-bottom: 30px;
+                    line-height: 1em;
+                    font-size: 14px;
+                    color: $site-colour-disabled-dark;
         
-        .post-text-content {
-            background-color: $site-colour-primary;
-            width: 30%;
-            display: table-cell;
-            padding: 30px;
-            vertical-align: top;
-
-            &:hover {
-                cursor: pointer;
-                background-color: $site-colour-second-primary;
-
-                .post-title-container {
-                    text-decoration: underline;
+                    .post-date {
+                        float: right;
+                        font-size: 12px;
+                    }
                 }
-            }
-
-            .post-main {
-                margin-bottom: 30px;
-                line-height: 1em;
-                font-size: 14px;
-                color: $site-colour-disabled-dark;
-    
-                .post-date {
-                    float: right;
-                    font-size: 12px;
-                }
-            }
-    
-            .post-title {
-                font-weight: bold;
-                font-size: 34px;
-                font-family: $site-font-premierleague-bold;
-                position: relative;
-                color: $site-colour-white;
-                cursor: pointer;
-                line-height: 1.2;
-            }
-    
-            .post-description {
-                font-size: 14px;
-                margin-top: 40px;
-                position: relative;
-
-                @media only screen and (min-width: $site-resolution-desktop-medium) {
-                    padding-right: 100px;
-                }
-            }
-
-            .read-more-link-container {
-                margin-top: 40px;
-                color: $site-colour-blue;
-
-                .read-more-link {
-                    text-decoration: none;
+        
+                .post-title {
+                    font-weight: bold;
+                    font-size: 34px;
+                    font-family: $site-font-premierleague-bold;
                     position: relative;
-                    padding-bottom: 10px;
-                    color: $site-colour-blue;
+                    color: $site-colour-white;
+                    cursor: pointer;
+                    line-height: 1.2;
                 }
-
-                .read-more-link-icon {
-                    color: $site-colour-blue;
+        
+                .post-description {
+                    font-size: 14px;
+                    margin-top: 40px;
+                    position: relative;
+    
+                    @media only screen and (min-width: $site-resolution-desktop-medium) {
+                        padding-right: 100px;
+                    }
                 }
+            }
+    
+            .post-selector-container {
+                height: 100%;
+                width: 30%;
+                display: table-cell;
+                color: $site-colour-black;
+                vertical-align: top;
+                border: 1px solid #E0E0E0;
+                border-bottom: 0px solid;
             }
         }
+    }
+}
 
-        .post-selector-container {
-            height: 100%;
-            width: 30%;
-            display: table-cell;
-            color: $site-colour-black;
-            vertical-align: top;
-            border: 1px solid #E0E0E0;
-            border-bottom: 0px solid;
+@media only screen and (max-width: 800px) {
+    .post-container {
+        margin: 10px;
+    
+        .post-container-row {
+            background-color: $site-colour-white;
+            color: $site-colour-white;
+            font-weight: 300;
+    
+            .post-image-container {
+                height: 200px;
+                background-color: $site-colour-black;
+            }
+            
+            .post-text-content {
+                background-color: $site-colour-primary;
+                padding: 15px;
+                vertical-align: top;
+    
+                &:hover {
+                    cursor: pointer;
+                    background-color: $site-colour-second-primary;
+    
+                    .post-title-container {
+                        text-decoration: underline;
+                    }
+                }
+    
+                .post-main {
+                    margin-bottom: 20px;
+                    line-height: 1em;
+                    font-size: 12px;
+                    color: $site-colour-disabled-dark;
+        
+                    .post-date {
+                        float: right;
+                    }
+                }
+        
+                .post-title {
+                    font-weight: bold;
+                    font-size: 20px;
+                    font-family: $site-font-premierleague-bold;
+                    position: relative;
+                    color: $site-colour-white;
+                    cursor: pointer;
+                    line-height: 1.2;
+                }
+        
+                .post-description {
+                    display: none;
+                }
+            }
+    
+            .post-selector-container {
+                display: block;
+                height: 100%;
+                color: $site-colour-black;
+                border: 1px solid #E0E0E0;
+                border-bottom: 0px solid;
+            }
         }
     }
 }
