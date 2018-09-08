@@ -3,6 +3,10 @@ div.adclerks_728 {
     margin: 0; /* Keep the advert spaced away from any content below it. */
 }
 
+div.adclerks_300 {
+    overflow: hidden;
+}
+
 /* Target the contents of the wrapper element */
 div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div { 
     width: 100% !important; /* Force width */ 
@@ -12,20 +16,12 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
 
 @media only screen and (min-width: 800px) {
     .site-ad-container {
-        width: calc(100% - 81px);
         text-align: center;
         padding: 20px;
         padding-top: 10px;
-        margin: 20px;
         background-color: #F5F5F5;
         border: 1px solid #DDDDDD;
         border-bottom: 4px solid #E8E8E8;
-    
-        &.remove-margins {
-            margin: 0;
-            margin-bottom: 20px;
-            width: calc(100% - 41px);
-        }
     
         .ad-text {
             font-size: 12px;
@@ -77,20 +73,12 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
 
 @media only screen and (max-width: 800px) {
     .site-ad-container {
-        width: calc(100% - 81px);
         text-align: center;
-        padding: 20px;
+        padding: 10px;
         padding-top: 10px;
-        margin: 20px;
         background-color: #F5F5F5;
         border: 1px solid #DDDDDD;
         border-bottom: 4px solid #E8E8E8;
-    
-        &.remove-margins {
-            margin: 0;
-            margin-bottom: 20px;
-            width: calc(100% - 41px);
-        }
     
         .ad-text {
             font-size: 12px;

@@ -1,25 +1,65 @@
 @import "../variables.scss";
 
-.footer-container {
-    background-color: $site-colour-second-primary;
-    color: $site-colour-white;
-    display: table;
-    width: 100%;
-    font-size: 14px;
-    font-weight: 300;
-    padding-bottom: 20px;
-
-    .footer-row {
-        display: table-row;
+@media only screen and (min-width: 800px) {
+    .footer-container {
+        background-color: $site-colour-second-primary;
+        color: $site-colour-white;
+        display: table;
         width: 100%;
-
-        .site-map {
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    
+        .footer-row {
+            display: table-row;
             width: 100%;
     
-            .uk-list {
-                .list-header {
-                    color: $site-colour-blue;
-                    font-weight: 600;
+            .footer-ad-placeholder {
+                margin: 20px;
+                display: block;
+            }
+    
+            .site-map {
+                width: 100%;
+        
+                .uk-list {
+                    .list-header {
+                        color: $site-colour-blue;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .footer-container {
+        background-color: $site-colour-second-primary;
+        color: $site-colour-white;
+        display: table;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 300;
+        padding-bottom: 20px;
+    
+        .footer-row {
+            display: table-row;
+            width: 100%;
+    
+            .footer-ad-placeholder {
+                margin: 10px;
+                display: block;
+            }
+    
+            .site-map {
+                width: 100%;
+        
+                .uk-list {
+                    .list-header {
+                        color: $site-colour-blue;
+                        font-weight: 600;
+                    }
                 }
             }
         }

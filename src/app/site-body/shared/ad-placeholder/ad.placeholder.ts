@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { Component, Input, ElementRef } from '@angular/core';
 
 @Component({
 	selector: 'site-ad-placeholder',
@@ -10,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 export class AdPlaceholderComponent {
 
 	constructor(
-		private http: HttpClient
+		private elementRef: ElementRef
 	) { }
 
 	@Input() adZone: number;
@@ -28,7 +27,11 @@ export class AdPlaceholderComponent {
 	ngAfterViewInit() {
 		this.loadAd()
 			.then(() => {
-				//
+				if(this.adZone == 3) {
+					// let adElement = this.elementRef.nativeElement.querySelector(".oneclerks gads_3092");
+					// adElement.style.height = "auto";
+					// adElement.style.width = "100%";
+				}
 			})
 			.catch(() => {
 				this.adBlockerUsed = true;
