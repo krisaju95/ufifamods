@@ -14,5 +14,12 @@ export class AppHeaderComponent {
 	) {}
 
 	lightTheme: boolean = this.service.isTargetted();
+	isDesktopViewPort: boolean = false;
+	isMobileViewport: boolean = false;
+
+	ngOnInit() {
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isMobileViewport = this.service.isMobileViewPort();
+	}
 
 }

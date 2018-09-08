@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser'
@@ -16,7 +16,8 @@ export class RegularBlogPostComponent {
 		private route: ActivatedRoute,
 		private http: HttpClient,
 		private sanitizer: DomSanitizer,
-		private service: UtilitiesService
+		private service: UtilitiesService,
+		private elementRef: ElementRef
 	) { }
 
 	responseLoading: boolean = true;
@@ -29,10 +30,15 @@ export class RegularBlogPostComponent {
 	categoryList: Array<string> = [];
 	targettedPostHeader: number = 0;
 
+	isDesktopViewPort: boolean = false;
+	isMobileViewport: boolean = false;
+
 	ngOnInit() {
 		this.postURL = this.getPostURL();
 		this.getPostData();
 		this.targettedPostHeader = this.service.getTargettedBlogPostHeader();
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isMobileViewport = this.service.isMobileViewPort();
 	}
 
 	getPostData() {
@@ -46,7 +52,12 @@ export class RegularBlogPostComponent {
 						this.postMainText = this.sanitizeURL(this.postData['post-main-text']);
 						this.postMainText2 = this.sanitizeURL(this.postData['post-main-text-2']);
 						this.getPostCategories();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
+						try {
+							this.elementRef.nativeElement.scrollIntoView();
+						}
+						catch(e) {
+							window.scrollTo({ top: 0, behavior: 'smooth' });
+						}
 					},
 						() => {
 							window.location.href = "/404"

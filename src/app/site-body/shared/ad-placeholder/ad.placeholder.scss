@@ -10,77 +10,128 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     height: auto !important; /* Force aspect ratio of images correct */
 }
 
-.site-ad-container {
-    width: calc(100% - 81px);
-    text-align: center;
-    padding: 20px;
-    padding-top: 10px;
-    margin: 20px;
-    background-color: #F5F5F5;
-    border: 1px solid #DDDDDD;
-    border-bottom: 4px solid #E8E8E8;
-
-    @media only screen and (max-width: 800px) {
-        margin: 10px;
+@media only screen and (min-width: 800px) {
+    .site-ad-container {
+        width: calc(100% - 81px);
+        text-align: center;
+        padding: 20px;
+        padding-top: 10px;
+        margin: 20px;
+        background-color: #F5F5F5;
+        border: 1px solid #DDDDDD;
+        border-bottom: 4px solid #E8E8E8;
+    
+        &.remove-margins {
+            margin: 0;
+            margin-bottom: 20px;
+            width: calc(100% - 41px);
+        }
+    
+        .ad-text {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    
+        &.dark {
+            background-color: #2f2e2e;
+            color: #f5f5f5;
+            border: 1px solid #444444;
+            border-bottom: 4px solid #666666;
+        }
     }
-
-    &.remove-margins {
-        margin: 0;
-        margin-bottom: 20px;
-        width: calc(100% - 41px);
-    }
-
-    .ad-text {
-        font-size: 12px;
-        margin-bottom: 10px;
-    }
-
-    &.dark {
-        background-color: #2f2e2e;
-        color: #f5f5f5;
-        border: 1px solid #444444;
-        border-bottom: 4px solid #666666;
+    
+    .ad-blocker-used-text {
+        padding: 20px 20%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 20px;
+        color: #2f2e2e;
+        min-height: 30px;
+        background-color: #F5F5F5;
+        border: 1px solid #DDDDDD;
+        border-bottom: 4px solid #E8E8E8;
+    
+        &.remove-margins {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    
+        &.site-footer-ad {
+            margin: 20px;
+        }
+    
+        &.site-sidebar-ad {
+            min-height: 160px;
+            padding-top: calc(50% - 70px);
+        }
+    
+        &.dark {
+            color: #f5f5f5;
+            background-color: #2c3038;
+            border: 1px solid #2f2e2e;
+            border-bottom: 4px solid #383e49;
+        }
     }
 }
 
-.ad-blocker-used-text {
-    padding: 20px 20%;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 300;
-    margin: 20px;
-    color: #2f2e2e;
-    min-height: 30px;
-    background-color: #F5F5F5;
-    border: 1px solid #DDDDDD;
-    border-bottom: 4px solid #E8E8E8;
-
-    @media only screen and (max-width: 800px) {
-        margin: 10px;
-    }
-
-    &.remove-margins {
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-    &.site-footer-ad {
+@media only screen and (max-width: 800px) {
+    .site-ad-container {
+        width: calc(100% - 81px);
+        text-align: center;
+        padding: 20px;
+        padding-top: 10px;
         margin: 20px;
-
-        @media only screen and (max-width: 800px) {
-            margin: 10px;
+        background-color: #F5F5F5;
+        border: 1px solid #DDDDDD;
+        border-bottom: 4px solid #E8E8E8;
+    
+        &.remove-margins {
+            margin: 0;
+            margin-bottom: 20px;
+            width: calc(100% - 41px);
+        }
+    
+        .ad-text {
+            font-size: 12px;
+            margin-bottom: 10px;
+        }
+    
+        &.dark {
+            background-color: #2f2e2e;
+            color: #f5f5f5;
+            border: 1px solid #444444;
+            border-bottom: 4px solid #666666;
         }
     }
-
-    &.site-sidebar-ad {
-        min-height: 160px;
-        padding-top: calc(50% - 70px);
-    }
-
-    &.dark {
-        color: #f5f5f5;
-        background-color: #2c3038;
-        border: 1px solid #2f2e2e;
-        border-bottom: 4px solid #383e49;
+    
+    .ad-blocker-used-text {
+        padding: 20px 20%;
+        text-align: center;
+        font-size: 14px;
+        font-weight: 300;
+        margin: 10px;
+        color: #2f2e2e;
+        min-height: 30px;
+        background-color: #F5F5F5;
+        border: 1px solid #DDDDDD;
+        border-bottom: 4px solid #E8E8E8;
+    
+        &.remove-margins {
+            margin: 0;
+            margin-bottom: 20px;
+        }
+    
+        &.site-sidebar-ad {
+            min-height: 160px;
+            padding-top: calc(50% - 70px);
+        }
+    
+        &.dark {
+            color: #f5f5f5;
+            background-color: #2c3038;
+            border: 1px solid #2f2e2e;
+            border-bottom: 4px solid #383e49;
+        }
     }
 }

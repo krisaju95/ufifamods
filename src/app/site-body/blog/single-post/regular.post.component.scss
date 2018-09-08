@@ -74,173 +74,179 @@
         }
     }
     
-    .blog-post-content {
-        .blog-post-header-image {
-            height: 400px;
+
+    .blog-post-container {
+        display: table;
+        width: 100%;
+        margin-top: -50px;
+
+        .blog-post-container-row {
+            display: table-row;
             width: 100%;
-            margin-top: -50px;
-            margin-bottom: 30px;
-        }
-    
-        .blog-post-intro-text {
-            font-size: 18px;
-            font-weight: bold;
-            color: $site-colour-blue;
-            margin-bottom: 60px;
-            position: relative;
-    
-            &::after {
-                content: "";
-                width: 10%;
-                height: 5px;
-                border-radius: 100px;
-                background-color: $site-colour-blue;
-                left: 0;
-                bottom: -35px;
-                position: absolute;
+
+            .blog-post-content, .blog-post-sidebar, .blog-post-right-spacer {
+                display: table-cell;
             }
-    
-            .absolute-ad-placeholder {
-                color: $site-colour-black;
-                font-weight: 300;
-                font-size: 12px;
-                position: absolute;
-                left: calc(100% + 30px);
-                top: 0;
-                width: 340px;
-            }
-        }
-    
-        .blog-post-main-text {
-            .site-ad-container  {
-                margin: 20px 0 !important;
-            }
-    
-            ::ng-deep .site-video-player {
-                width: 100%;
-                height: 400px;
-                margin-bottom: 20px;
-    
-                @media only screen and (max-width: 1023px) {
-                    height: 280px;
+
+            .blog-post-content {
+                width: 60%;
+                padding-left: 10%;
+
+                .blog-post-header-image {
+                    height: 400px;
+                    width: 100%;
+                    margin-bottom: 30px;
+                }
+            
+                .blog-post-intro-text {
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: $site-colour-blue;
+                    margin-bottom: 60px;
+                    position: relative;
+            
+                    &::after {
+                        content: "";
+                        width: 10%;
+                        height: 5px;
+                        border-radius: 100px;
+                        background-color: $site-colour-blue;
+                        left: 0;
+                        bottom: -35px;
+                        position: absolute;
+                    }
+                }
+            
+                .blog-post-main-text {
+                    .site-ad-container  {
+                        margin: 20px 0 !important;
+                    }
+            
+                    ::ng-deep .site-video-player {
+                        width: 100%;
+                        height: 400px;
+                        margin-bottom: 20px;
+            
+                        @media only screen and (max-width: 1023px) {
+                            height: 280px;
+                        }
+                    }
+            
+                    .blog-post-last-para {
+                        font-weight: 600;
+                    }
                 }
             }
-    
-            .blog-post-last-para {
-                font-weight: 600;
+
+            .blog-post-sidebar {
+                padding-left: 30px;
+                width: 300px;
+                padding-right: 30px;
+                vertical-align: top;
+                padding-top: 90px;
             }
         }
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .blog-post-width {
-        margin: 10px;
-    }
-    
+@media only screen and (max-width: 800px) {    
     .blog-post-wrapper {
         min-height: 500px;
     }
     
-    .blog-post-header {
-        background-color: #2C3250;
-        background-size: cover;
-        padding-top: 20px;
-        padding-bottom: 50px;
-        position: relative;
-    
-        &::before {
-            content: "";
-            position: absolute;
-            height: 100px;
-            width: 100px;
-            background-color: $site-colour-white;
-            border-radius: 100px;
-            opacity: 0.1;
-            left: calc(10% - 30px);
-            top: 30px;
-        }
-    
-        .blog-post-category {
-            color: $site-colour-blue;
-            margin-bottom: 10px;
-        }
-    
-        .blog-post-date {
-            color: $site-colour-white;
-            font-size: 14px;
-            font-weight: 300;
-            margin-top: 10px;
-        }
-    
-        .blog-post-badges {
-            margin-top: 20px;
-    
-            .uk-badge {
-                padding: 15px;
-            }
-        }
-    
-        .post-title-container {
-            font-size: 28px;
-            color: $site-colour-white;
-        }
-    }
-    
-    .blog-post-content {
-        .blog-post-header-image {
-            height: 200px;
+    .blog-post-container {
+        width: 100%;
+
+        .blog-post-container-row {
             width: 100%;
-            margin-top: -50px;
-            margin-bottom: 30px;
-        }
-    
-        .blog-post-intro-text {
-            font-size: 16px;
-            font-weight: bold;
-            color: $site-colour-blue;
-            margin-bottom: 60px;
-            position: relative;
-    
-            &::after {
-                content: "";
-                width: 50%;
-                height: 5px;
-                border-radius: 100px;
-                background-color: $site-colour-blue;
-                left: -25%;
-                bottom: -35px;
-                position: absolute;
-            }
-    
-            .absolute-ad-placeholder {
-                display: none;
-            }
-        }
-    
-        .blog-post-main-text {
-            font-size: 14px;
 
-            .site-ad-container  {
-                margin: 20px 0 !important;
-            }
-    
-            ::ng-deep .site-video-player {
-                width: 100%;
-                height: 400px;
-                margin-bottom: 20px;
-    
-                @media only screen and (max-width: 1023px) {
-                    height: 280px;
+            .blog-post-content {
+
+                .blog-post-header-image {
+                    height: 250px;
+                    width: 100%;
+                    margin-bottom: 10px;
                 }
 
-                @media only screen and (max-width: 800px) {
-                    height: 200px;
+                .blog-post-header-text {
+                    padding: 20px;
+                    position: relative;
+                    margin-bottom: 30px;
+
+                    .post-title-container {
+                        font-size: 24px;
+                        position: relative;
+
+                        &::before {
+                            content: "";
+                            position: absolute;
+                            height: 65px;
+                            width: 65px;
+                            background-color: $site-colour-blue;
+                            border-radius: 100px;
+                            opacity: 0.15;
+                            left: -15px;
+                            top: -25px;
+                        }
+                    }
+
+                    &::after {
+                        content: "";
+                        width: 25%;
+                        height: 5px;
+                        border-radius: 100px;
+                        background-color: $site-colour-blue;
+                        left: -10px;
+                        bottom: -10px;
+                        position: absolute;
+                    }
+
+                    .blog-post-category {
+                        color: $site-colour-blue;
+                        margin-bottom: 10px;
+                    }
+                
+                    .blog-post-date {
+                        font-size: 12px;
+                        font-weight: 300;
+                        margin-top: 10px;
+                    }
+                }
+            
+                .blog-post-intro-text {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: $site-colour-blue;
+                    margin-bottom: 60px;
+                    position: relative;
+                    margin: 20px;
+                }
+            
+                .blog-post-main-text {
+                    margin: 20px;
+
+                    .site-ad-container  {
+                        margin: 20px 0 !important;
+                    }
+            
+                    ::ng-deep .site-video-player {
+                        width: 100%;
+                        height: 400px;
+                        margin-bottom: 20px;
+            
+                        @media only screen and (max-width: 1023px) {
+                            height: 280px;
+                        }
+                    }
+            
+                    .blog-post-last-para {
+                        font-weight: 600;
+                    }
                 }
             }
-    
-            .blog-post-last-para {
-                font-weight: 600;
+
+            .blog-post-sidebar {
+                margin: 20px;
             }
         }
     }
