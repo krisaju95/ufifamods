@@ -3,18 +3,24 @@ import { NgModule } from '@angular/core';
 
 import { RegularBlogPostComponent } from './single-post/regular.post.component';
 import { SharedModule } from '../shared/app.module';
+import { FeaturedPostsSidebarComponent } from './featured-posts-sidebar/featuredposts.sidebar.component';
+
+import { AppRoutingModule } from '../../app-routing.module';
 
 @NgModule({
 	declarations: [
-		RegularBlogPostComponent
+		RegularBlogPostComponent,
+		FeaturedPostsSidebarComponent
 	],
 	imports: [
 		BrowserModule,
-		SharedModule
+		SharedModule,
+		AppRoutingModule
 	],
 	providers: [],
 	exports: [
-		RegularBlogPostComponent
+		RegularBlogPostComponent,
+		FeaturedPostsSidebarComponent
 	]
 })
 

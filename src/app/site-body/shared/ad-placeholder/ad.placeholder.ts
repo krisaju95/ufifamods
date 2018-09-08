@@ -27,11 +27,7 @@ export class AdPlaceholderComponent {
 	ngAfterViewInit() {
 		this.loadAd()
 			.then(() => {
-				if(this.adZone == 3) {
-					// let adElement = this.elementRef.nativeElement.querySelector(".oneclerks gads_3092");
-					// adElement.style.height = "auto";
-					// adElement.style.width = "100%";
-				}
+				//
 			})
 			.catch(() => {
 				this.adBlockerUsed = true;

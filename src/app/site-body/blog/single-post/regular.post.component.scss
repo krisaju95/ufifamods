@@ -114,6 +114,7 @@
                         left: 0;
                         bottom: -35px;
                         position: absolute;
+                        opacity: 0.15;
                     }
                 }
 
@@ -141,8 +142,8 @@
 
             .blog-post-sidebar {
                 padding-left: 30px;
-                width: 300px;
-                padding-right: 30px;
+                width: 40%;
+                padding-right: 10%;
                 vertical-align: top;
                 padding-top: 90px;
             }
@@ -200,6 +201,7 @@
                         left: -10px;
                         bottom: -10px;
                         position: absolute;
+                        opacity: 0.15;
                     }
 
                     .blog-post-category {
@@ -249,10 +251,6 @@
 
             .blog-post-sidebar {
                 margin: 20px;
-            }
-
-            .blog-post-right-spacer {
-                display: none;
             }
         }
     }

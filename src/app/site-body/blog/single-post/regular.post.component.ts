@@ -35,10 +35,16 @@ export class RegularBlogPostComponent {
 
 	ngOnInit() {
 		this.postURL = this.getPostURL();
-		this.getPostData();
-		this.targettedPostHeader = this.service.getTargettedBlogPostHeader();
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isMobileViewport = this.service.isMobileViewPort();
+		this.initialiseData(this.postURL);
+	}
+
+	initialiseData(postURL) {
+		this.postURL = postURL;
+		this.responseLoading = true;
+		this.getPostData();
+		this.targettedPostHeader = this.service.getTargettedBlogPostHeader();
 	}
 
 	getPostData() {
@@ -52,12 +58,7 @@ export class RegularBlogPostComponent {
 						this.postMainText = this.sanitizeURL(this.postData['post-main-text']);
 						this.postMainText2 = this.sanitizeURL(this.postData['post-main-text-2']);
 						this.getPostCategories();
-						try {
-							this.elementRef.nativeElement.scrollIntoView();
-						}
-						catch(e) {
-							window.scrollTo({ top: 0, behavior: 'smooth' });
-						}
+						window.scrollTo({ top: 0, behavior: 'smooth' });
 					},
 						() => {
 							window.location.href = "/404"

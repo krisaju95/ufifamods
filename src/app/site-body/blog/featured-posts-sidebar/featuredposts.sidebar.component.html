@@ -1,0 +1,19 @@
+<div *ngIf="!responseLoading">
+    <div class="featured-posts-title">
+        Featured Posts
+    </div>
+    <div *ngFor="let postData of postsData">
+        <div class="featured-post-container" (click)="routeToPost(postData['post-link'])">
+            <div class="post-image-container uk-cover-container">
+                <img [src]="postData['post-media']" alt="" uk-cover>
+            </div>
+            <div class="post-content">
+                <div class="post-item-main">
+                    <span class="post-item-category" [innerHTML]="postData['post-category']"></span>
+                    <span class="post-item-date" [innerHTML]="postData['post-date'] | date: 'd MMMM'"></span>
+                </div>
+                <div class="post-item-text" [innerHTML]="postData['post-title']"></div>
+            </div>
+        </div>
+    </div>
+</div>

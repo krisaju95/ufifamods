@@ -30,9 +30,7 @@
             </div>
             <div class="blog-post-sidebar">
                 <site-ad-placeholder [adZone]="3" [removeMargins]="true"></site-ad-placeholder>
-            </div>
-            <div class="blog-post-right-spacer">
-                &nbsp;
+                <featured-posts-sidebar (selectPostEvent)="initialiseData($event)"></featured-posts-sidebar>
             </div>
         </div>
     </div>
