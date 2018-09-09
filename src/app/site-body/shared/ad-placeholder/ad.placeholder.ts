@@ -44,7 +44,8 @@ export class AdPlaceholderComponent {
 			script.src = '//cdn.adclerks.com/core/ad2/10179/' + this.adZoneMap[this.adZone] + '?r=' + randpubc;
 
 			try {
-				document.body.appendChild(script);
+				let adDOMContainer = document.getElementById("adDOMContainer")
+				adDOMContainer.appendChild(script);
 			}
 			catch(e) {
 				this.adBlockerUsed = true;
