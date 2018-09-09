@@ -1,0 +1,36 @@
+<div class="search-form-container">
+    <form autocomplete="off" #searchForm="ngForm" (ngSubmit)="findSearchResults()">
+        <div class="uk-margin" uk-margin>
+            <div class="input-form-container" uk-form-custom="target: true">
+                <input autocomplete="false" name="searchQuery" [(ngModel)]="searchQuery" class="site-search-form uk-input" type="text" placeholder="Hey there! What are you looking for?" [disabled]="responseLoading" required>
+            </div>
+            <button class="site-search-button uk-button uk-button-primary social-icon" uk-icon="icon: search" [disabled]="responseLoading"></button>
+        </div>
+    </form>
+    <site-loader *ngIf="responseLoading"></site-loader>
+    <div *ngIf="!responseLoading && resultsFound">
+        <div class="post-search-result-container" *ngFor="let postData of postsData">
+            <div uk-scrollspy="target: > img; cls:uk-animation-fade; delay: 100" class="post-image-container uk-cover-container">
+                <img [src]="postData['post-image']" alt="" uk-cover>
+            </div>
+            <a href="#" [routerLink] = "postData['post-link']" class="post-title post-title-container post-title-size-28" [innerHTML]="postData['post-title']"></a>
+            <div class="blog-post-badges">
+                <ng-container *ngFor="let category of postData['post-categories']">
+                    <span class="uk-badge" [innerHTML]="category"></span>
+                </ng-container>
+            </div>
+            <div class="post-search-snippet" [innerHTML]="'...' + postData['search-result-snippet'] + '...'"></div>
+        </div>
+    </div>
+    <div *ngIf="!responseLoading && !resultsFound">
+        <div *ngIf="!searchQueryTooShort && !submittedOnce" class="search-form-intro-text">
+            Type something into the search bar above and then press Enter or click on the Search Button.
+        </div>
+        <div *ngIf="!searchQueryTooShort && submittedOnce" class="search-form-intro-text">
+            We couldn't find any results for the search term you entered. Please try a different term.
+        </div>
+        <div *ngIf="searchQueryTooShort" class="search-form-intro-text">
+            Please type in a minimum of 3 characters into the search bar. Then press Enter or click on the Search Button.
+        </div>
+    </div>
+</div>

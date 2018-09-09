@@ -1,4 +1,4 @@
-import { Component, ElementRef } from '@angular/core';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser'
@@ -16,8 +16,7 @@ export class RegularBlogPostComponent {
 		private route: ActivatedRoute,
 		private http: HttpClient,
 		private sanitizer: DomSanitizer,
-		private service: UtilitiesService,
-		private elementRef: ElementRef
+		private service: UtilitiesService
 	) { }
 
 	responseLoading: boolean = true;
