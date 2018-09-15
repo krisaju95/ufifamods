@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { DisqusModule } from 'angular2-disqus';
 
 import { RegularBlogPostComponent } from './single-post/regular.post.component';
 import { SharedModule } from '../shared/app.module';
@@ -19,7 +20,8 @@ import { SearchPostsComponent } from './search-posts/search.posts.component';
 		BrowserModule,
 		SharedModule,
 		AppRoutingModule,
-		FormsModule
+		FormsModule,
+		DisqusModule
 	],
 	providers: [],
 	exports: [

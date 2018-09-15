@@ -79,6 +79,7 @@
         display: table;
         width: 100%;
         margin-top: -50px;
+        margin-bottom: 30px;
 
         .blog-post-container-row {
             display: table-row;
@@ -107,7 +108,7 @@
             
                     &::after {
                         content: "";
-                        width: 10%;
+                        width: 20%;
                         height: 5px;
                         border-radius: 100px;
                         background-color: $site-colour-blue;
@@ -132,6 +133,10 @@
                         @media only screen and (max-width: 1023px) {
                             height: 280px;
                         }
+                    }
+
+                    .blog-post-para {
+                        margin-bottom: 20px;
                     }
             
                     .blog-post-last-para {
@@ -194,7 +199,7 @@
 
                     &::after {
                         content: "";
-                        width: 25%;
+                        width: 35%;
                         height: 5px;
                         border-radius: 100px;
                         background-color: $site-colour-blue;
@@ -246,6 +251,11 @@
                     .blog-post-last-para {
                         font-weight: 600;
                     }
+                }
+
+                .disqus-thread-container {
+                    display: block;
+                    margin: 20px;
                 }
             }
 

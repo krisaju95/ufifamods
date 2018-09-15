@@ -8,11 +8,17 @@ export class UtilitiesService {
 
 	CSLP: string = "https://jsonblob.com/api/jsonBlob/";
 
+	siteDomain: string = "http://wwtfifamods.com/";
+
 	categoryColourMap: Object = {
 		"fut": "blue",
 		"mods": "yellow",
 		"youtube": "pink",
 		"career": "purple"
+	}
+
+	getSiteDomain() {
+		return this.siteDomain;
 	}
 
 	getCSLP() {

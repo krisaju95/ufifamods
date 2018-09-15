@@ -48,6 +48,7 @@ export class SearchPostsComponent {
         this.postsData = [];
         this.responseLoading = true;
         this.searchQuery = this.searchQuery.trim();
+        this.searchQuery = this.searchQuery.toLowerCase();
 		if(this.searchQuery.length >= 3) {
             this.searchQueryTooShort = false;
             for (let postData in this.blogPostsObject) {
@@ -92,7 +93,7 @@ export class SearchPostsComponent {
 	}
 
 	routeToResultPage() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		window.scroll(0, 0);
 		this.router.navigate(["search/" + this.searchQuery]);
 	}
 }

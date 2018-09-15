@@ -19,6 +19,7 @@ export class RegularBlogPostComponent {
 		private service: UtilitiesService
 	) { }
 
+	siteURL: string = "";
 	responseLoading: boolean = true;
 	postURL: string = "";
 	postMap: Array<object>;
@@ -33,6 +34,7 @@ export class RegularBlogPostComponent {
 	isMobileViewport: boolean = false;
 
 	ngOnInit() {
+		this.siteURL = this.service.getSiteDomain();
 		this.postURL = this.getPostURL();
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isMobileViewport = this.service.isMobileViewPort();
@@ -54,16 +56,26 @@ export class RegularBlogPostComponent {
 					.subscribe((postData) => {
 						this.responseLoading = false;
 						this.postData = postData;
-						this.postMainText = this.sanitizeURL(this.postData['post-main-text']);
-						this.postMainText2 = this.sanitizeURL(this.postData['post-main-text-2']);
+						this.postMainText = this.postData['post-main-text'];
+						this.postMainText2 = this.postData['post-main-text-2'];
+						this.processMainPostContent();
 						this.getPostCategories();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
+						window.scroll(0, 0);
 					},
 						() => {
 							window.location.href = "/404"
 						}
 					)
 			})
+	}
+
+	processMainPostContent() {
+		this.postMainText = this.postMainText.replace(new RegExp("##", 'g'), "</strong>");
+		this.postMainText2 = this.postMainText2.replace(new RegExp("##", 'g'), "</strong>");
+		this.postMainText = this.postMainText.replace(new RegExp("#", 'g'), "<strong>");
+		this.postMainText2 = this.postMainText2.replace(new RegExp("#", 'g'), "<strong>");
+		this.postMainText = this.postMainText.split(";;");
+		this.postMainText2 = this.postMainText2.split(";;");
 	}
 
 	getPostURL() {

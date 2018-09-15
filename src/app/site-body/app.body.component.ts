@@ -9,10 +9,10 @@ import { Component } from '@angular/core';
 export class AppBodyComponent {
 
 	ngAfterViewInit() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		window.scroll(0, 0);
 	}
 
 	pageChanged() {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		window.scroll(0, 0);
 	}
 }

@@ -32,37 +32,15 @@
                         background-color: #EEEEEE;
     
                         &::after {
-                            height: 50%;
-                            width: 10px;
-                            background-color: $site-colour-blue;
                             content: "";
                             position: absolute;
-                            left: -5px;
-                            top: 10px;
-                        }
-    
-                        &.mods {
-                            &::after {
-                                background-color: $site-colour-yellow;
-                            }
-                        }
-                    
-                        &.fut {
-                            &::after {
-                                background-color: $site-colour-blue;
-                            }
-                        }
-                    
-                        &.fifa {
-                            &::after {
-                                background-color: $site-colour-pink;
-                            }
-                        }
-                    
-                        &.totw {
-                            &::after {
-                                background-color: #aaaaaa;
-                            }
+                            right: 100%;
+                            top: calc(50% - 20px);
+                            width: 0;
+                            height: 0;
+                            border-top: 20px solid transparent;
+                            border-right: 15px solid #EEEEEE;
+                            border-bottom: 20px solid transparent;
                         }
                     }
     

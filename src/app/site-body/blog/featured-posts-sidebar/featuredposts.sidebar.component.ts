@@ -45,7 +45,7 @@ export class FeaturedPostsSidebarComponent {
 	}
 
 	routeToPost(postURL) {
-		window.scrollTo({ top: 0, behavior: 'smooth' });
+		window.scroll(0, 0);
 		this.router.navigate([postURL]);
 		this.selectPostEvent.emit(postURL);
 	}

@@ -10,7 +10,7 @@ const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', redirectTo: '' },
   { path: 'blog/post/:year/:month/:date/:title', component: RegularBlogPostComponent },
-  { path: 'downloads', redirectTo: '404' },
+  { path: 'downloads', component: PageNotFoundComponent },
   { path: 'search', component: SearchPostsComponent },
   { path: 'search/:query', component: SearchPostsComponent },
   { path: '404', component: PageNotFoundComponent },
