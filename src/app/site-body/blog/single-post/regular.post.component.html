@@ -35,6 +35,54 @@
                         <div class="blog-post-para" [innerHTML]="para"></div>
                     </ng-container>
                 </div>
+                <div class="contributor-list-container" *ngIf="contributorsList.length > 0">
+                    <div class="contributors-list-heading">
+                        Contributors:
+                    </div>
+                    <ul class="contributors-list">
+                        <li class="contributors-list-item" *ngFor="let contributor of contributorsList" [innerHTML]="contributor"></li>
+                    </ul>
+                </div>
+                <div class="faces-included-list-container" *ngIf="facesIncludedList.length > 0">
+                    <div class="faces-included-list-heading">
+                        Star-heads Included:
+                    </div>
+                    <ul class="faces-included-list">
+                        <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
+                    </ul>
+                </div>
+                <div class="screenshots-container" *ngIf="screenshotsList.length > 0">
+                    <div class="screenshots-heading">
+                        Screenshots:
+                    </div>
+                    <div class="screenshot-item" [class.screenshot-item-even]="even" [class.screenshot-item-odd]="odd" *ngFor="let screenshot of screenshotsList; let even = even; let odd = odd">
+                        <img class="screenshot-image" [src]="screenshot">
+                    </div>
+                </div>
+                <div class="mod-disclaimer-container" *ngIf="showModDisclaimer">
+                    <div class="mod-disclaimer-header">Important:</div>
+                    <div class="mod-disclaimer">
+                        This patch was created by the WWT Modding Team and is not available for re-distribution without prior permission. Please refrain from re-publishing these mods on external sites for monetary reasons (or otherwise). For installation instructions, refer to the readme file provided in the patch. The patch is not compatible with console versions of FIFA like XBOX and PS. It is meant solely for PC users.
+                    </div>
+                </div>
+                <div class="mod-download-link-container" *ngIf="showModDisclaimer">
+                    <button class="uk-button uk-button-primary" (click)="downloadFile()">
+                        <span class="download-text" [innerHTML]="downloadText"></span>
+                        <span class="download-icon" *ngIf="downloadText == 'Download'" uk-icon="cloud-download"></span>
+                        <span class="download-icon" *ngIf="downloadText == 'Downloading'" uk-spinner></span>
+                    </button>
+                </div>
+                <div class="blog-post-outro-text">
+                    <div [innerHTML]="postData['post-last-para']"></div>
+                </div>
+                <div class="social-interactions-container">
+                    <div class="social-interactions-container-row">
+                        <fb-like class="social-interactions-container-item"></fb-like>
+                        <google-plus class="social-interactions-container-item"></google-plus>
+                        <tweet class="social-interactions-container-item"></tweet>
+                        <pin-it class="social-interactions-container-item"></pin-it>
+                    </div>
+                </div>
                 <disqus-thread class="disqus-thread-container" [page-identifier]="fileURL" [page-url]="siteURL + postURL"></disqus-thread>
             </div>
             <div class="blog-post-sidebar">

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { UtilitiesService } from '../../services/utilities.service'
+import { UtilitiesService } from '../../services/utilities.service';
 
 @Component({
 	selector: 'home-component',
@@ -19,6 +19,7 @@ export class HomeComponent {
 	blogPosts: Array<Object> = [];
 
 	ngOnInit() {
+		this.service.setPageTitle(this.service.getSiteTitle(), true);
 		this.http.get(this.service.getCSLP() +  "eb4b2165-a94f-11e8-9e97-a58df81c0425")
 			.subscribe((data) => {
 				this.responseLoading = false;

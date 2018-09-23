@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
+import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule, enableProdMode } from '@angular/core';
 
 import { AppComponent } from './app.component';
@@ -27,7 +27,8 @@ enableProdMode()
 		AppRoutingModule
 	],
 	providers: [
-		UtilitiesService
+		UtilitiesService,
+		Title
 	],
 	bootstrap: [AppComponent]
 })

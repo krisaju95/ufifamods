@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
-import { DomSanitizer } from '@angular/platform-browser'
-import { UtilitiesService } from '../../../services/utilities.service'
+import { DomSanitizer } from '@angular/platform-browser';
+import { UtilitiesService } from '../../../services/utilities.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
 	selector: 'regular-blog-post',
@@ -16,7 +17,8 @@ export class RegularBlogPostComponent {
 		private route: ActivatedRoute,
 		private http: HttpClient,
 		private sanitizer: DomSanitizer,
-		private service: UtilitiesService
+		private service: UtilitiesService,
+		private title: Title
 	) { }
 
 	siteURL: string = "";
@@ -25,8 +27,14 @@ export class RegularBlogPostComponent {
 	postMap: Array<object>;
 	fileURL: string = "";
 	postData: Object;
+	postMainTextArray: Array<string> = [];
 	postMainText: any;
 	postMainText2: any;
+	contributorsList: Array<string> = [];
+	facesIncludedList: Array<string> = [];
+	screenshotsList: Array<string> = [];
+	showModDisclaimer: boolean = false;
+	downloadText: string = "Download";
 	categoryList: Array<string> = [];
 	targettedPostHeader: number = 0;
 
@@ -56,26 +64,36 @@ export class RegularBlogPostComponent {
 					.subscribe((postData) => {
 						this.responseLoading = false;
 						this.postData = postData;
-						this.postMainText = this.postData['post-main-text'];
-						this.postMainText2 = this.postData['post-main-text-2'];
+						this.postMainTextArray = this.postData['post-main-text-array'] || [];
+						this.contributorsList = this.postData['contributors-list'] || [];
+						this.facesIncludedList = this.postData['faces-included-list'] || [];
+						this.screenshotsList = this.postData['screenshots-list'] || [];
+						this.showModDisclaimer = (this.postData['show-mod-disclaimer'] == true || this.postData['show-mod-disclaimer'] == 'true')
 						this.processMainPostContent();
 						this.getPostCategories();
 						window.scroll(0, 0);
+						this.service.setPageTitle(this.postData['post-title'], false);
 					},
 						() => {
 							window.location.href = "/404"
 						}
 					)
-			})
+			},
+				() => {
+					window.location.href = "/404"
+				}
+			)
 	}
 
 	processMainPostContent() {
-		this.postMainText = this.postMainText.replace(new RegExp("##", 'g'), "</strong>");
-		this.postMainText2 = this.postMainText2.replace(new RegExp("##", 'g'), "</strong>");
-		this.postMainText = this.postMainText.replace(new RegExp("#", 'g'), "<strong>");
-		this.postMainText2 = this.postMainText2.replace(new RegExp("#", 'g'), "<strong>");
-		this.postMainText = this.postMainText.split(";;");
-		this.postMainText2 = this.postMainText2.split(";;");
+		if(this.postMainTextArray.length > 4) {
+			this.postMainText = this.postMainTextArray.slice(0, Math.floor(this.postMainTextArray.length / 2));
+			this.postMainText2 = this.postMainTextArray.slice(Math.floor(this.postMainTextArray.length / 2), this.postMainTextArray.length);
+		}
+		else {
+			this.postMainText = this.postMainTextArray;
+			this.postMainText2 = [];
+		}
 	}
 
 	getPostURL() {
@@ -97,6 +115,19 @@ export class RegularBlogPostComponent {
 
 	getPostCategories() {
 		this.categoryList = this.postData["post-category-list"].split(";");
+	}
+
+	downloadFile() {
+		let url = this.postData['mod-download-link'];
+		let fileElement = document.createElement("iframe");
+		let downloadIframeContainer = document.getElementById("downloadIframeContainer");
+		fileElement.src = url;
+		fileElement.style.display = "none";
+		downloadIframeContainer.appendChild(fileElement);
+		this.downloadText = "Downloading";
+		setTimeout(() => {
+			this.downloadText = "Download";
+		}, 5000);
 	}
 
 	sanitizeURL(data) {

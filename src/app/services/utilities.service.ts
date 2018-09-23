@@ -1,14 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Injectable()
 export class UtilitiesService {
 
 	constructor(
+		private title: Title
 	) { }
 
 	CSLP: string = "https://jsonblob.com/api/jsonBlob/";
 
 	siteDomain: string = "http://wwtfifamods.com/";
+
+	siteTitle: string = "WWT FIFA MODS | FIFA 19 News, Media, Mods and Tutorials";
 
 	categoryColourMap: Object = {
 		"fut": "blue",
@@ -23,6 +27,10 @@ export class UtilitiesService {
 
 	getCSLP() {
 		return this.CSLP;
+	}
+
+	getSiteTitle() {
+		return this.siteTitle;
 	}
 
 	getCategoryColourTheme(category) {
@@ -49,6 +57,15 @@ export class UtilitiesService {
 	getTargettedBlogPostHeader() {
 		let num = parseInt((Math.random() * 100).toString()) % 4;
 		return num;
+	}
+
+	setPageTitle(pageTitle, isBase) {
+		if(!isBase) {
+			this.title.setTitle(pageTitle + " | " + this.getSiteTitle());
+		}
+		else {
+			this.title.setTitle(this.getSiteTitle());
+		}
 	}
 
 	isMobileViewPort() {

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { DisqusModule } from 'angular2-disqus';
+import { JwSocialButtonsModule } from 'jw-angular-social-buttons';
 
 import { RegularBlogPostComponent } from './single-post/regular.post.component';
 import { SharedModule } from '../shared/app.module';
@@ -21,7 +22,8 @@ import { SearchPostsComponent } from './search-posts/search.posts.component';
 		SharedModule,
 		AppRoutingModule,
 		FormsModule,
-		DisqusModule
+		DisqusModule,
+		JwSocialButtonsModule
 	],
 	providers: [],
 	exports: [

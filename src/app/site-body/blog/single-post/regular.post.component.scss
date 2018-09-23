@@ -143,6 +143,70 @@
                         font-weight: 600;
                     }
                 }
+
+                .contributor-list-container, .faces-included-list-container, .mod-disclaimer-container, .screenshots-container {
+                    margin: 30px 0;
+
+                    .contributors-list-heading, .faces-included-list-heading, .mod-disclaimer-header, .screenshots-heading {
+                        font-weight: bold;
+                        font-size: 18px;
+                    }
+                }
+
+                .screenshots-container {
+                    .screenshot-item {
+                        width: calc(50% - 20px);
+                        float: left;
+
+                        &.screenshot-item-even {
+                            margin-right: 10px;
+                        }
+
+                        &.screenshot-item-odd {
+                            margin-left: 10px;
+                        }
+
+                        .screenshot-image {
+                            margin: 10px 0;
+                        }
+                    }
+                }
+
+                .mod-download-link-container {
+                    text-align: center;
+                    margin: 40px 0;
+
+                    button {
+                        width: 40%;
+                        padding: 10px;
+
+                        .download-text {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+
+                .blog-post-outro-text {
+                    font-size: 18px;
+                    font-weight: bold;
+                }
+
+                .social-interactions-container {
+                    display: table;
+                    .social-interactions-container-row {
+                        display: table-row;
+                        .social-interactions-container-item {
+                            display: table-cell;
+                            vertical-align: bottom;
+                            padding-right: 20px;
+                        }
+                    }
+                }
+
+                .disqus-thread-container {
+                    display: block;
+                    margin: 40px 0;
+                }
             }
 
             .blog-post-sidebar {
@@ -246,6 +310,10 @@
                         @media only screen and (max-width: 1023px) {
                             height: 280px;
                         }
+                    }
+
+                    .blog-post-para {
+                        margin-bottom: 20px;
                     }
             
                     .blog-post-last-para {
