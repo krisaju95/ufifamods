@@ -1,8 +1,10 @@
-<site-loader *ngIf="responseLoading"></site-loader>
+<site-loader *ngIf="responseLoading" [fullScreenLoader]="true"></site-loader>
 
 <ng-container *ngIf="!responseLoading">
     <home-main-post [blogPosts]="blogPosts"></home-main-post>
     <home-fut-posts [blogPosts]="blogPosts"></home-fut-posts>
+    <hr class="section-divider">
     <site-ad-placeholder class="home-ad-placeholder" [adZone]="1"></site-ad-placeholder>
     <home-fifa-posts [blogPosts]="blogPosts"></home-fifa-posts>
+    <hr class="section-divider">
 </ng-container>

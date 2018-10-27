@@ -1,4 +1,9 @@
-<div class="site-loader-container">
+<div *ngIf="!fullScreenLoader" class="site-loader-container">
     <div uk-spinner="ratio: 3" class="site-loader-spinner"></div>
+    <div class="site-loader-text">Loading...</div>
+</div>
+
+<div *ngIf="fullScreenLoader" class="site-fs-loader">
+    <mat-spinner></mat-spinner>
     <div class="site-loader-text">Loading...</div>
 </div>

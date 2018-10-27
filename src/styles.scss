@@ -3,30 +3,51 @@
 @import "../node_modules/uikit/src/scss/mixins-theme.scss";
 @import "../node_modules/uikit/src/scss/uikit-theme.scss";
 @import "../node_modules/custom-fonts/Duepuntozero/stylesheet.css";
-@import "../node_modules/custom-fonts/PremierLeague/stylesheet.css";
+@import './wwt-mat-theme.css';
 
-/* width */
-::-webkit-scrollbar {
-    width: 10px;
+body {
+    font-family: Raleway,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-    background-color: #DDDDDD;
-}
- 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background: #444444;
+.mat-card {
+    font-family: Raleway,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    padding: 0 !important;
+    box-shadow: 0 3px 1px -2px rgba(0,0,0,.05), 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 5px 0 rgba(0,0,0,.05)!important;
+    border-bottom: 2px solid #3D9BE9;
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 100%;
+        margin-left: 50%;
+        transition: all 200ms;
+    }
+
+    @media only screen and (max-width: 800px) {
+        &::after {
+            display: none;
+        }
+    }
+
+    &:hover {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            margin-left: 0;
+            background: rgba(0, 0, 0, 0.05);
+        }
+    }
 }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: #666666; 
-}
-
-.uk-badge {
-    background-color: #3D9BE9;
-    padding: 10px;
-    margin-right: 10px;
+.wwt-mat-dialog {
+    .mat-dialog-actions {
+        padding: 24px 0;
+    }
 }

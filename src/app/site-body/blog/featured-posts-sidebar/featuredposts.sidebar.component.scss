@@ -3,12 +3,59 @@
 @media only screen and (min-width: 800px) {
     .featured-posts-title {
         margin-top: 30px;
-        font-family: $site-font-premierleague-bold;
+        font-weight: bold;
         font-size: 24px;
         margin-bottom: 15px;
         border-left: 10px solid #2C3250;
         padding-left: 10px;
         line-height: 1em;
+    }
+
+    .featured-post {
+        margin-bottom: 20px;
+
+        .post-image {
+            height: 200px;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .post-text-content {
+            padding: 20px;
+
+            mat-card-header {
+                margin: 0;
+
+                ::ng-deep .mat-card-header-text {
+                    margin: 0;
+                }
+
+                mat-card-title {
+                    font-weight: bold;
+                    font-size: 20px;
+                    color: #2c3038;
+                    margin-bottom: 10px;
+                    line-height: 28px;
+
+                    .post-category {
+                        color: $site-colour-blue;
+                    }
+
+                    .title-category-separator {
+                        color: lightgray;
+                        font-family: $site-font-premierleague-light;
+                    }
+                }
+
+                mat-card-subtitle {
+                    margin: 0;
+                }
+            }
+
+            mat-card-content {
+                margin-top: 30px;
+            }
+        }
     }
 
     .featured-post-container {
@@ -61,7 +108,7 @@
 @media only screen and (max-width: 800px) {
     .featured-posts-title {
         margin-top: 30px;
-        font-family: $site-font-premierleague-bold;
+        font-weight: bold;
         font-size: 24px;
         margin-bottom: 10px;
         border-left: 10px solid #2C3250;

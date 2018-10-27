@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
 	selector: 'site-loader',
@@ -7,5 +7,15 @@ import { Component } from '@angular/core';
 })
 
 export class AppLoaderComponent {
+	@Input() fullScreenLoader: boolean;
 
+	ngOnInit() {
+		if(this.fullScreenLoader) {
+			document.body.style.overflow = "hidden";
+		}
+	}
+
+	ngOnDestroy() {
+		document.body.style.overflow = "auto";
+	}
 }

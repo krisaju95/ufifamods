@@ -8,6 +8,7 @@
     
     .blog-post-wrapper {
         min-height: 500px;
+        background: white;
     }
     
     .blog-post-header {
@@ -16,18 +17,6 @@
         padding-top: 40px;
         padding-bottom: 80px;
         position: relative;
-    
-        &::before {
-            content: "";
-            position: absolute;
-            height: 100px;
-            width: 100px;
-            background-color: $site-colour-white;
-            border-radius: 100px;
-            opacity: 0.2;
-            left: calc(10% - 30px);
-            top: 30px;
-        }
     
         &.targetted-header-0 {
             background: #2C3250 url("https://i.imgur.com/USB0ZD4.jpg") center right no-repeat;
@@ -51,14 +40,12 @@
     
         .blog-post-category {
             color: $site-colour-blue;
-            margin-bottom: 10px;
         }
     
         .blog-post-date {
             color: $site-colour-white;
             font-size: 14px;
             font-weight: 300;
-            margin-top: 10px;
         }
     
         .blog-post-badges {
@@ -71,6 +58,9 @@
     
         .post-title-container {
             color: $site-colour-white;
+            font-size: 44px;
+            font-weight: bold;
+            line-height: 54px;
         }
     }
     
@@ -97,26 +87,16 @@
                     height: 400px;
                     width: 100%;
                     margin-bottom: 30px;
+                    background-position: center;
+                    background-size: cover;
                 }
             
                 .blog-post-intro-text {
                     font-size: 18px;
                     font-weight: bold;
                     color: $site-colour-blue;
-                    margin-bottom: 60px;
+                    margin-bottom: 20px;
                     position: relative;
-            
-                    &::after {
-                        content: "";
-                        width: 20%;
-                        height: 5px;
-                        border-radius: 100px;
-                        background-color: $site-colour-blue;
-                        left: 0;
-                        bottom: -35px;
-                        position: absolute;
-                        opacity: 0.15;
-                    }
                 }
 
                 .blog-post-ad-placeholder {
@@ -146,6 +126,7 @@
 
                 .contributor-list-container, .faces-included-list-container, .mod-disclaimer-container, .screenshots-container {
                     margin: 30px 0;
+                    clear: both;
 
                     .contributors-list-heading, .faces-included-list-heading, .mod-disclaimer-header, .screenshots-heading {
                         font-weight: bold;
@@ -180,8 +161,9 @@
                         width: 40%;
                         padding: 10px;
 
-                        .download-text {
-                            margin-right: 10px;
+                        .mat-icon {
+                            height: 28px;
+                            margin-left: 5px;
                         }
                     }
                 }

@@ -3,17 +3,18 @@
         Featured Posts
     </div>
     <div *ngFor="let postData of postsData">
-        <div class="featured-post-container" (click)="routeToPost(postData['post-link'])">
-            <div class="post-image-container uk-cover-container">
-                <img [src]="postData['post-media']" alt="" uk-cover>
+        <mat-card class="featured-post" matRipple (click)="routeToPost(postData['post-link'])">
+            <div class="post-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
+            <div class="post-text-content">
+                <mat-card-header>
+                    <mat-card-title>
+                        <span class="post-category" [innerHTML]="postData['post-category']"></span>
+                        <span class="title-category-separator"> / </span>
+                        <span class="post-title" [innerHTML]="postData['post-title']"></span>
+                    </mat-card-title>
+                    <mat-card-subtitle [innerHTML]="postData['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                </mat-card-header>
             </div>
-            <div class="post-content">
-                <div class="post-item-main">
-                    <span class="post-item-category" [innerHTML]="postData['post-category']"></span>
-                    <span class="post-item-date" [innerHTML]="postData['post-date'] | date: 'd MMMM'"></span>
-                </div>
-                <div class="post-item-text" [innerHTML]="postData['post-title']"></div>
-            </div>
-        </div>
+        </mat-card>
     </div>
 </div>

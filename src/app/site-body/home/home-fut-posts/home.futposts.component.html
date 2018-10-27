@@ -1,79 +1,113 @@
-<div class="post-container">
-    <div class="post-container-row">
-        <div class="post-container-cell post-container-cell-1" [routerLink] = "postsData[0]['post-link']">
-            <div class="post-main">
-                <span class="post-category {{postsData[0]['post-colour']}}" [innerHTML]="postsData[0]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[0]['post-date'] | date: 'd MMMM'"></span>
+<div class="home-page-posts-container">
+    <div class="home-page-section-row">
+        <div class="home-page-section-header">
+            <div class="home-page-section-title">
+                FUT
             </div>
-            <div uk-grid class="post-content-container uk-child-width-expand@s">
-                <div class="post-image-container uk-cover-container uk-animation-fade">
-                    <img [src]="postsData[0]['post-media']" alt="" uk-cover>
+            <div class="home-page-section-description">
+                FIFA 19 Ultimate Team<sup>TM</sup>
+            </div>
+        </div>
+        <div class="home-page-section-posts-container">
+            <div class="blog-posts-section-container">
+                <div class="post-section-container-row">
+                    <div class="post-container-cell post-container-cell-1">
+                        <mat-card class="post-cell-1" matRipple [routerLink] = "postsData[0]['post-link']">
+                            <div class="post-image" [style.background-image]="'url(' + postsData[0]['post-media'] + ')'"></div>
+                            <div class="post-text-content">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <span class="post-category" [innerHTML]="postsData[0]['post-category']"></span>
+                                        <span class="title-category-separator"> / </span>
+                                        <span class="post-title" [innerHTML]="postsData[0]['post-title']"></span>
+                                    </mat-card-title>
+                                    <mat-card-subtitle [innerHTML]="postsData[0]['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content class="post-description" [innerHTML]="(postsData[0]['post-description'] | slice:0:100) + '...'"></mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="post-container-cell post-container-cell-2">
+                        <mat-card class="post-cell-2" matRipple [routerLink] = "postsData[1]['post-link']">
+                            <div class="post-image" [style.background-image]="'url(' + postsData[1]['post-media'] + ')'"></div>
+                            <div class="post-text-content">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <span class="post-category" [innerHTML]="postsData[1]['post-category']"></span>
+                                        <span class="title-category-separator"> / </span>
+                                        <span class="post-title" [innerHTML]="postsData[1]['post-title']"></span>
+                                    </mat-card-title>
+                                    <mat-card-subtitle [innerHTML]="postsData[1]['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content class="post-description" [innerHTML]="(postsData[1]['post-description'] | slice:0:100) + '...'"></mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="post-container-cell post-container-cell-3">
+                        <mat-card class="post-cell-3" matRipple [routerLink] = "postsData[2]['post-link']">
+                            <div class="post-image" [style.background-image]="'url(' + postsData[2]['post-media'] + ')'"></div>
+                            <div class="post-text-content">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <span class="post-category" [innerHTML]="postsData[2]['post-category']"></span>
+                                        <span class="title-category-separator"> / </span>
+                                        <span class="post-title" [innerHTML]="postsData[2]['post-title']"></span>
+                                    </mat-card-title>
+                                    <mat-card-subtitle [innerHTML]="postsData[2]['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content class="post-description" [innerHTML]="(postsData[2]['post-description'] | slice:0:100) + '...'"></mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
                 </div>
-                <div class="post-text-content">
-                    <a class="post-title-container post-title-size-28" href="#" [routerLink] = "postsData[0]['post-link']" [innerHTML]="postsData[0]['post-title']"></a>
-                    <div class="post-description-container" [innerHTML]="postsData[0]['post-description'] + '...'"></div>
+                <div class="post-section-container-row">
+                    <div class="post-container-cell post-container-cell-4">
+                        <mat-card class="post-cell-1" matRipple [routerLink] = "postsData[3]['post-link']">
+                            <div class="post-text-content">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <span class="post-category" [innerHTML]="postsData[3]['post-category']"></span>
+                                        <span class="title-category-separator"> / </span>
+                                        <span class="post-title" [innerHTML]="postsData[3]['post-title']"></span>
+                                    </mat-card-title>
+                                    <mat-card-subtitle [innerHTML]="postsData[3]['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content class="post-description" [innerHTML]="(postsData[3]['post-description'] | slice:0:100) + '...'"></mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="post-container-cell post-container-cell-5">
+                        <mat-card class="post-cell-2" matRipple [routerLink] = "postsData[4]['post-link']">
+                            <div class="post-text-content">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <span class="post-category" [innerHTML]="postsData[4]['post-category']"></span>
+                                        <span class="title-category-separator"> / </span>
+                                        <span class="post-title" [innerHTML]="postsData[4]['post-title']"></span>
+                                    </mat-card-title>
+                                    <mat-card-subtitle [innerHTML]="postsData[4]['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content class="post-description" [innerHTML]="(postsData[4]['post-description'] | slice:0:100) + '...'"></mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
+                    <div class="post-container-cell post-container-cell-6">
+                        <mat-card class="post-cell-3" matRipple [routerLink] = "postsData[5]['post-link']">
+                            <div class="post-text-content">
+                                <mat-card-header>
+                                    <mat-card-title>
+                                        <span class="post-category" [innerHTML]="postsData[5]['post-category']"></span>
+                                        <span class="title-category-separator"> / </span>
+                                        <span class="post-title" [innerHTML]="postsData[5]['post-title']"></span>
+                                    </mat-card-title>
+                                    <mat-card-subtitle [innerHTML]="postsData[5]['post-date'] | date: 'd MMMM'"></mat-card-subtitle>
+                                </mat-card-header>
+                                <mat-card-content class="post-description" [innerHTML]="(postsData[5]['post-description'] | slice:0:100) + '...'"></mat-card-content>
+                            </div>
+                        </mat-card>
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="post-container-cell post-container-cell-2" [routerLink] = "postsData[1]['post-link']">
-            <div class="post-main">
-                <span class="post-category {{postsData[1]['post-colour']}}" [innerHTML]="postsData[1]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[1]['post-date'] | date: 'd MMMM'"></span>
-            </div>
-            <div class="post-text-content">
-                <a class="post-title-container post-title-size-20" href="#" [routerLink] = "postsData[1]['post-link']" [innerHTML]="postsData[1]['post-title']"></a>
-            </div>
-            <div class="post-image-container uk-cover-container uk-animation-fade">
-                <img [src]="postsData[1]['post-media']" alt="" uk-cover>
-            </div>
-            <div class="post-description-container" [innerHTML]="postsData[1]['post-description'] + '...'"></div>
-        </div>
-        <div class="post-container-cell post-container-cell-3 post-dark-theme" [routerLink] = "postsData[2]['post-link']">
-            <div class="post-main">
-                <span class="post-category {{postsData[2]['post-colour']}}" [innerHTML]="postsData[2]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[2]['post-date'] | date: 'd MMMM'"></span>
-            </div>
-            <div class="post-text-content">
-                <a class="post-title-container post-title-size-20" href="#" [routerLink] = "postsData[2]['post-link']" [innerHTML]="postsData[2]['post-title']"></a>
-            </div>
-            <div class="post-image-container uk-cover-container uk-animation-fade">
-                <img [src]="postsData[2]['post-media']" alt="" uk-cover>
-            </div>
-            <div class="post-description-container" [innerHTML]="postsData[2]['post-description'] + '...'"></div>
-        </div>
-    </div>
-    <div class="post-container-row post-container-row-2">
-        <div class="post-container-cell post-container-cell-1" [routerLink] = "postsData[3]['post-link']">
-            <div class="post-main">
-                <span class="post-category {{postsData[3]['post-colour']}}" [innerHTML]="postsData[3]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[3]['post-date'] | date: 'd MMMM'"></span>
-            </div>
-            <div uk-grid class="post-content-container">
-                <div class="post-text-content">
-                    <a class="post-title-container post-title-size-16" href="#" [routerLink] = "postsData[3]['post-link']" [innerHTML]="postsData[3]['post-title']"></a>
-                    <div class="post-description-container" [innerHTML]="postsData[3]['post-description'] + '...'"></div>
-                </div>
-            </div>
-        </div>
-        <div class="post-container-cell post-container-cell-2" [routerLink] = "postsData[4]['post-link']">
-            <div class="post-main">
-                <span class="post-category {{postsData[4]['post-colour']}}" [innerHTML]="postsData[4]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[4]['post-date'] | date: 'd MMMM'"></span>
-            </div>
-            <div class="post-text-content">
-                <a class="post-title-container post-title-size-16" href="#" [routerLink] = "postsData[0]['post-link']" [innerHTML]="postsData[4]['post-title']"></a>
-            </div>
-            <div class="post-description-container" [innerHTML]="postsData[4]['post-description'] + '...'"></div>
-        </div>
-        <div class="post-container-cell post-container-cell-3" [routerLink] = "postsData[5]['post-link']">
-            <div class="post-main">
-                <span class="post-category {{postsData[5]['post-colour']}}" [innerHTML]="postsData[5]['post-category']"></span>
-                <span class="post-date" [innerHTML]="postsData[5]['post-date'] | date: 'd MMMM'"></span>
-            </div>
-            <div class="post-text-content">
-                <a class="post-title-container post-title-size-16" href="#" [routerLink] = "postsData[5]['post-link']" [innerHTML]="postsData[5]['post-title']"></a>
-            </div>
-            <div class="post-description-container" [innerHTML]="postsData[5]['post-description'] + '...'"></div>
         </div>
     </div>
 </div>

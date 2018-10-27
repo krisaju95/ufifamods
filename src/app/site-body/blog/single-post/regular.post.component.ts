@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { UtilitiesService } from '../../../services/utilities.service';
 import { Title } from '@angular/platform-browser';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({
 	selector: 'regular-blog-post',
@@ -18,7 +19,7 @@ export class RegularBlogPostComponent {
 		private http: HttpClient,
 		private sanitizer: DomSanitizer,
 		private service: UtilitiesService,
-		private title: Title
+		public dialog: MatDialog
 	) { }
 
 	siteURL: string = "";
@@ -57,7 +58,7 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostData() {
-		this.http.get(this.service.getCSLP() + "612e95db-aeb0-11e8-94a2-cf6856e41601")
+		this.http.get(this.service.getCSLP() + "68a310fa-d55a-11e8-a295-27660d3c3637")
 			.subscribe((data) => {
 				this.fileURL = this.getFileURL(data);
 				this.http.get(this.service.getCSLP() + this.fileURL)
@@ -86,7 +87,7 @@ export class RegularBlogPostComponent {
 	}
 
 	processMainPostContent() {
-		if(this.postMainTextArray.length > 4) {
+		if (this.postMainTextArray.length > 4) {
 			this.postMainText = this.postMainTextArray.slice(0, Math.floor(this.postMainTextArray.length / 2));
 			this.postMainText2 = this.postMainTextArray.slice(Math.floor(this.postMainTextArray.length / 2), this.postMainTextArray.length);
 		}
@@ -117,21 +118,43 @@ export class RegularBlogPostComponent {
 		this.categoryList = this.postData["post-category-list"].split(";");
 	}
 
-	downloadFile() {
-		let url = this.postData['mod-download-link'];
-		let fileElement = document.createElement("iframe");
-		let downloadIframeContainer = document.getElementById("downloadIframeContainer");
-		fileElement.src = url;
-		fileElement.style.display = "none";
-		downloadIframeContainer.appendChild(fileElement);
-		this.downloadText = "Downloading";
-		setTimeout(() => {
-			this.downloadText = "Download";
-		}, 5000);
+	openDialog() {
+		this.dialog.open(ModDownloadDialog, {
+			data: {
+				url: this.postData['mod-download-link']
+			},
+			maxWidth: '500px',
+			panelClass: 'wwt-mat-dialog'
+		});
 	}
 
 	sanitizeURL(data) {
 		return this.sanitizer.bypassSecurityTrustHtml(data)
 	}
 
+}
+
+@Component({
+	selector: 'mod-download-dialog',
+	templateUrl: './mod.dialog.dialog.html',
+	styleUrls: ['./mod.dialog.dialog.scss']
+})
+
+export class ModDownloadDialog {
+
+	constructor(
+		@Inject(MAT_DIALOG_DATA) public data: any
+	) { }
+
+	downloadButtonClicked: boolean = false;
+
+	downloadFile() {
+		this.downloadButtonClicked = true;
+		let url = this.data.url;
+		let fileElement = document.createElement("iframe");
+		let downloadIframeContainer = document.getElementById("downloadIframeContainer");
+		fileElement.src = url;
+		fileElement.style.display = "none";
+		downloadIframeContainer.appendChild(fileElement);
+	}
 }

@@ -15,6 +15,7 @@ export class HomeMainPostComponent {
 	postsData: Array<object> = [];
 	selectedPostIndex: number = 0;
 	showImage: boolean = false;
+	currentDate: Date = new Date();
 
 	ngOnInit() {
 		this.setPostData();

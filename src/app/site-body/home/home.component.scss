@@ -1,7 +1,13 @@
 @media only screen and (min-width: 800px) {
     .home-ad-placeholder {
-        margin: 20px;
         display: block;
+    }
+
+    .section-divider {
+        width: 20%;
+        border-top-width: 5px;
+        margin: 40px 0;
+        margin-left: 40%;
     }
 }
 

@@ -1,24 +1,22 @@
-<site-loader *ngIf="responseLoading || !postData"></site-loader>
+<site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
-    <div class="blog-post-header targetted-header-{{targettedPostHeader}}" *ngIf="isDesktopViewPort" uk-parallax="bgy: -200">
+    <div class="blog-post-header targetted-header-{{targettedPostHeader}}" *ngIf="isDesktopViewPort" uk-parallax="bgy: -100">
         <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
-        <div class="post-title-container post-title-size-42 blog-post-width" [innerHTML]="postData['post-title']"></div>
+        <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
         <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
         <div class="blog-post-badges blog-post-width">
-            <ng-container *ngFor="let category of categoryList">
-                <span class="uk-badge" [innerHTML]="category"></span>
-            </ng-container>
+            <mat-chip-list>
+                <mat-chip *ngFor="let category of categoryList">{{category}}</mat-chip>
+            </mat-chip-list>
         </div>
     </div>
     <div class="blog-post-container">
         <div class="blog-post-container-row">
             <div class="blog-post-content">
-                <div class="blog-post-header-image uk-cover-container">
-                    <img [src]="postData['post-media']" alt="" uk-cover>
-                </div>
+                <div class="blog-post-header-image uk-cover-container" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
                 <div class="blog-post-header-text" *ngIf="isMobileViewport">
                     <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
-                    <div class="post-title-container post-title-size-42 blog-post-width" [innerHTML]="postData['post-title']"></div>
+                    <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
                     <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
                 </div>
                 <div class="blog-post-intro-text">
@@ -55,22 +53,14 @@
                     <div class="screenshots-heading">
                         Screenshots:
                     </div>
-                    <div class="screenshot-item" [class.screenshot-item-even]="even" [class.screenshot-item-odd]="odd" *ngFor="let screenshot of screenshotsList; let even = even; let odd = odd">
-                        <img class="screenshot-image" [src]="screenshot">
-                    </div>
-                </div>
-                <div class="mod-disclaimer-container" *ngIf="showModDisclaimer">
-                    <div class="mod-disclaimer-header">Important:</div>
-                    <div class="mod-disclaimer">
-                        This patch was created by the WWT Modding Team and is not available for re-distribution without prior permission. Please refrain from re-publishing these mods on external sites for monetary reasons (or otherwise). For installation instructions, refer to the readme file provided in the patch. The patch is not compatible with console versions of FIFA like XBOX and PS. It is meant solely for PC users.
-                    </div>
+                    <mat-grid-list cols="2" rowHeight="16:9" gutterSize="10px">
+                        <mat-grid-tile *ngFor="let screenshot of screenshotsList;">
+                            <img class="screenshot-image" [src]="screenshot">
+                        </mat-grid-tile>
+                    </mat-grid-list>
                 </div>
                 <div class="mod-download-link-container" *ngIf="showModDisclaimer">
-                    <button class="uk-button uk-button-primary" (click)="downloadFile()">
-                        <span class="download-text" [innerHTML]="downloadText"></span>
-                        <span class="download-icon" *ngIf="downloadText == 'Download'" uk-icon="cloud-download"></span>
-                        <span class="download-icon" *ngIf="downloadText == 'Downloading'" uk-spinner></span>
-                    </button>
+                    <button mat-flat-button (click)="openDialog()">Download <mat-icon>cloud_download</mat-icon></button>
                 </div>
                 <div class="blog-post-outro-text">
                     <div [innerHTML]="postData['post-last-para']"></div>
