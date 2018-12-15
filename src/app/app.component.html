@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-    <mat-sidenav #sidenav [mode]="'push'" position="end">
+    <mat-sidenav #sidenav [mode]="'push'" position="end" (closedStart)="closeSideNav()">
         <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/" routerLinkActive="nav-drawer-button-active" [routerLinkActiveOptions]="{exact: true}">
             <div class="button-icon">
                 <mat-icon>home</mat-icon>
