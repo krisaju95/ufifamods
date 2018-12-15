@@ -1,0 +1,22 @@
+<site-loader *ngIf="responseLoading" [fullScreenLoader]="true"></site-loader>
+<div *ngIf="!responseLoading" class="blog-posts-page-container">
+    <div class="blog-posts-page-header">
+        Blog
+    </div>
+    <div class="blog-posts-list-container">
+        <div class="blog-post" *ngFor="let post of (blogPostsArray | slice : startPostIndex : endPostIndex)">
+            <div [routerLink] = "post.postURL" class="post-card">
+                <div class="post-image" [style.background-image]="'url(' + post.postImage + ')'"></div>
+                <div class="post-text-content">
+                    <div class="post-title" [innerHTML]="post.postTitle"></div>
+                    <div class="post-date" [innerHTML]="post.postDate | date: 'd MMM yyyy'"></div>
+                    <div class="post-description" [innerHTML]="(post.postDescription | slice : 0 : 200) + '...'"></div>
+                </div>
+            </div>
+        </div>
+        <div class="pagination-controls">
+            <button mat-flat-button color="primary" (click)="fetchSinglePageResults(currentPageNumber - 1)" [disabled]="startPostIndex == 0">Previous</button>
+            <button mat-flat-button color="primary" (click)="fetchSinglePageResults(currentPageNumber + 1)" [disabled]="endPostIndex == (numberOfPosts - 1)">Next</button>
+        </div>
+    </div>
+</div>

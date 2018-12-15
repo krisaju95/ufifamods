@@ -123,7 +123,6 @@ export class RegularBlogPostComponent {
 			data: {
 				url: this.postData['mod-download-link']
 			},
-			maxWidth: '500px',
 			panelClass: 'wwt-mat-dialog'
 		});
 	}

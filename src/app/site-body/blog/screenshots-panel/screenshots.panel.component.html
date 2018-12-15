@@ -1,0 +1,10 @@
+<div class="screenshots-container" *ngIf="screenshotsList.length > 0">
+    <div class="screenshots-heading">
+        Screenshots:
+    </div>
+    <mat-grid-list cols="{{numberOfColumns}}" rowHeight="16:9" gutterSize="10px">
+        <mat-grid-tile *ngFor="let screenshot of screenshotsList;">
+            <img style="max-height: 100%; max-width: 100%" class="screenshot-image" [src]="screenshot">
+        </mat-grid-tile>
+    </mat-grid-list>
+</div>

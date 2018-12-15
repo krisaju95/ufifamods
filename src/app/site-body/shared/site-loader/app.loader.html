@@ -1,9 +1,10 @@
 <div *ngIf="!fullScreenLoader" class="site-loader-container">
-    <div uk-spinner="ratio: 3" class="site-loader-spinner"></div>
+    <mat-spinner [diameter]="70" [strokeWidth]="5"></mat-spinner>
     <div class="site-loader-text">Loading...</div>
 </div>
 
 <div *ngIf="fullScreenLoader" class="site-fs-loader">
-    <mat-spinner></mat-spinner>
+    <mat-spinner *ngIf="isDesktopViewport"></mat-spinner>
+    <mat-spinner *ngIf="isMobileViewport" [diameter]="70" [strokeWidth]="5"></mat-spinner>
     <div class="site-loader-text">Loading...</div>
 </div>

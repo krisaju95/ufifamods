@@ -2,9 +2,7 @@
 
 <ng-container *ngIf="!responseLoading">
     <home-main-post [blogPosts]="blogPosts"></home-main-post>
-    <home-fut-posts [blogPosts]="blogPosts"></home-fut-posts>
-    <hr class="section-divider">
+    <home-posts-section [sectionTitle]="'FUT'" [sectionDescription]="'FIFA 19 Ultimate Team<sup>TM</sup>'" [sectionCategory]="'fut'" [blogPosts]="blogPosts"></home-posts-section>
     <site-ad-placeholder class="home-ad-placeholder" [adZone]="1"></site-ad-placeholder>
-    <home-fifa-posts [blogPosts]="blogPosts"></home-fifa-posts>
-    <hr class="section-divider">
+    <home-posts-section [sectionTitle]="'FIFA 19'" [sectionDescription]="'Career Mode, Player Ratings & Mods'" [sectionCategory]="'fifa'" [blogPosts]="blogPosts"></home-posts-section>
 </ng-container>

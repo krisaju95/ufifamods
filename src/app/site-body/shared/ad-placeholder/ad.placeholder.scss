@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 div.adclerks_728 {
     width: 100%; /* Make sure we're at 100% of available size (based on parent) */ 
     margin: 0; /* Keep the advert spaced away from any content below it. */
@@ -12,114 +14,65 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     width: 100% !important; /* Force width */ 
     max-width: 100% !important; /* Force max-width of elements and image */
     height: auto !important; /* Force aspect ratio of images correct */
-}
 
-@media only screen and (min-width: 800px) {
-    .site-ad-container {
-        text-align: center;
-        padding: 20px;
-        padding-top: 10px;
-        background-color: #F5F5F5;
-        border: 1px solid #DDDDDD;
-        border-bottom: 4px solid #E8E8E8;
-    
-        .ad-text {
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-    
-        &.dark {
-            background-color: #2f2e2e;
-            color: #f5f5f5;
-            border: 1px solid #444444;
-            border-bottom: 4px solid #666666;
+    ::ng-deep img {
+        width: 100%;
+        max-width: 728px;
+
+        @media only screen and (max-width: 800px) {
+            height: auto !important;
+            width: 100% !important;
         }
     }
-    
-    .ad-blocker-used-text {
-        padding: 20px 20%;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 300;
+}
+
+.site-ad-container {
+    text-align: center;
+    padding: 20px;
+    padding-top: 10px;
+    background-color: $site-colour-primary;
+    margin: 20px;
+
+    &.remove-margins {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    @media only screen and (max-width: 800px) {
+        margin: 0 15px;
+    }
+
+    .ad-text {
+        font-size: 12px;
+        margin-bottom: 10px;
+        color: $site-colour-disabled-dark;
+    }
+}
+
+.ad-blocker-used-text {
+    padding: 20px 20%;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 300;
+    margin: 20px;
+    color: #2f2e2e;
+    min-height: 30px;
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-bottom: 4px solid #E8E8E8;
+
+    &.remove-margins {
+        margin: 0;
+        margin-bottom: 20px;
+    }
+
+    &.site-footer-ad {
         margin: 20px;
-        color: #2f2e2e;
-        min-height: 30px;
-        background-color: #F5F5F5;
-        border: 1px solid #DDDDDD;
-        border-bottom: 4px solid #E8E8E8;
-    
-        &.remove-margins {
-            margin: 0;
-            margin-bottom: 20px;
-        }
-    
-        &.site-footer-ad {
-            margin: 20px;
-        }
-    
-        &.site-sidebar-ad {
-            min-height: 160px;
-            padding-top: calc(50% - 78px);
-        }
-    
-        &.dark {
-            color: #f5f5f5;
-            background-color: #2c3038;
-            border: 1px solid #2f2e2e;
-            border-bottom: 4px solid #383e49;
-        }
     }
-}
 
-@media only screen and (max-width: 800px) {
-    .site-ad-container {
-        text-align: center;
-        padding: 10px;
-        padding-top: 10px;
-        background-color: #F5F5F5;
-        border: 1px solid #DDDDDD;
-        border-bottom: 4px solid #E8E8E8;
-    
-        .ad-text {
-            font-size: 12px;
-            margin-bottom: 10px;
-        }
-    
-        &.dark {
-            background-color: #2f2e2e;
-            color: #f5f5f5;
-            border: 1px solid #444444;
-            border-bottom: 4px solid #666666;
-        }
+    &.site-sidebar-ad {
+        min-height: 160px;
+        padding-top: calc(50% - 78px);
     }
-    
-    .ad-blocker-used-text {
-        padding: 20px 20%;
-        text-align: center;
-        font-size: 14px;
-        font-weight: 300;
-        margin: 10px;
-        color: #2f2e2e;
-        min-height: 30px;
-        background-color: #F5F5F5;
-        border: 1px solid #DDDDDD;
-        border-bottom: 4px solid #E8E8E8;
-    
-        &.remove-margins {
-            margin: 0;
-            margin-bottom: 20px;
-        }
-    
-        &.site-sidebar-ad {
-            min-height: 160px;
-            padding-top: calc(50% - 70px);
-        }
-    
-        &.dark {
-            color: #f5f5f5;
-            background-color: #2c3038;
-            border: 1px solid #2f2e2e;
-            border-bottom: 4px solid #383e49;
-        }
-    }
+
 }

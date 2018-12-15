@@ -1,0 +1,8 @@
+<div class="faces-included-list-container" *ngIf="facesIncludedList.length > 0">
+    <div class="faces-included-list-heading">
+        Star-heads Included:
+    </div>
+    <ul class="faces-included-list">
+        <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
+    </ul>
+</div>

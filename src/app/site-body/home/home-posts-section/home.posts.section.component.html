@@ -1,0 +1,38 @@
+<div class="home-page-posts-container">
+    <div class="home-page-section-header">
+        <div class="home-page-section-title" [innerHTML]="sectionTitle"></div>
+        <div class="home-page-section-description" [innerHTML]="sectionDescription">
+            FIFA 19 Ultimate Team<sup>TM</sup>
+        </div>
+    </div>
+    <div class="home-page-section-posts-container">
+        <div class="blog-posts-section-container">
+            <div class="post-section-container-row">
+                <div *ngFor="let post of (postsData | slice : 0 : 3); let postIndex = index" class="post-container-cell cell-{{postIndex + 1}}">
+                    <div class="post-card card-{{postIndex + 1}}" matRipple [routerLink]="post['post-link']">
+                        <span class="post-category" [innerHTML]="post['post-category']"></span>
+                        <div class="post-image" [style.background-image]="'url(' + post['post-media'] + ')'"></div>
+                        <div class="post-text-content">
+                            <div class="post-title" [innerHTML]="post['post-title']"></div>
+                            <div class="post-date" [innerHTML]="post['post-date'] | date: 'd MMMM'"></div>
+                            <div class="post-description" [innerHTML]="(post['post-description'] | slice : 0 : 100) + '...'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="post-section-container-row">
+                <div *ngFor="let post of (postsData | slice : 3 : 6); let postIndex = index" class="post-container-cell cell-{{postIndex + 1}}">
+                    <div class="post-card card-{{postIndex + 1}}" matRipple [routerLink]="post['post-link']">
+                        <span class="post-category" [innerHTML]="post['post-category']"></span>
+                        <div class="post-image" [style.background-image]="'url(' + post['post-media'] + ')'"></div>
+                        <div class="post-text-content">
+                            <div class="post-title" [innerHTML]="post['post-title']"></div>
+                            <div class="post-date" [innerHTML]="post['post-date'] | date: 'd MMMM'"></div>
+                            <div class="post-description" [innerHTML]="(post['post-description'] | slice : 0 : 100) + '...'"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

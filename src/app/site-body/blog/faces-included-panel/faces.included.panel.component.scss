@@ -1,0 +1,15 @@
+.faces-included-list-container {
+    margin: 30px 0;
+    clear: both;
+
+    .faces-included-list-heading {
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .faces-included-list-container {
+        margin: 30px 15px;
+    }
+}

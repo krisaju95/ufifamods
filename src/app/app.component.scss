@@ -1,0 +1,20 @@
+.mat-sidenav {
+    background: #161F30;
+    color: #F5F5F5;
+
+    .nav-drawer-button {
+        height: 100px;
+        display: block;
+        text-align: center;
+        width: 100%;
+
+        .button-icon {
+            height: 24px;;
+        }
+
+        &.nav-drawer-button-active {
+            background: #1F2C45;
+            color: #FFC145;
+        }
+    }
+}

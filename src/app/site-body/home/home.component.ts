@@ -20,10 +20,19 @@ export class HomeComponent {
 
 	ngOnInit() {
 		this.service.setPageTitle(this.service.getSiteTitle(), true);
+		let startTime = new Date().getTime();
 		this.http.get(this.service.getCSLP() +  "eb4b2165-a94f-11e8-9e97-a58df81c0425")
 			.subscribe((data) => {
-				this.responseLoading = false;
 				this.setBlogPostsArray(data);
+				let timeDiff = new Date().getTime() - startTime;
+				if(timeDiff < 2000) {
+					setTimeout(() => {
+						this.responseLoading = false;
+					}, 2000 - timeDiff);
+				}
+				else {
+					this.responseLoading = false;
+				}
 			})
 	}
 

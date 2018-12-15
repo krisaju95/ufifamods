@@ -1,3 +1,33 @@
-<site-header></site-header>
-<site-body></site-body>
-<site-footer></site-footer>
+<mat-sidenav-container>
+    <mat-sidenav #sidenav [mode]="'push'" position="end">
+        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/" routerLinkActive="nav-drawer-button-active" [routerLinkActiveOptions]="{exact: true}">
+            <div class="button-icon">
+                <mat-icon>home</mat-icon>
+            </div>
+            <div class="button-text">Home</div>
+        </button>
+        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/blog" routerLinkActive="nav-drawer-button-active">
+            <div class="button-icon">
+                <mat-icon>chrome_reader_mode</mat-icon>
+            </div>
+            <div class="button-text">Blog</div>
+        </button>
+        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/downloads" routerLinkActive="nav-drawer-button-active">
+            <div class="button-icon">
+                <mat-icon>cloud_download</mat-icon>
+            </div>
+            <div class="button-text">Downloads</div>
+        </button>
+        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/search" routerLinkActive="nav-drawer-button-active">
+            <div class="button-icon">
+                <mat-icon>search</mat-icon>
+            </div>
+            <div class="button-text">Search</div>
+        </button>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <site-header (showMobileNavbar)="openSideNav()"></site-header>
+        <site-body></site-body>
+        <site-footer></site-footer>
+    </mat-sidenav-content>
+</mat-sidenav-container>

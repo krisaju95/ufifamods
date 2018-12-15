@@ -1,47 +1,93 @@
-/* You can add global styles to this file, and also import other style files */
-@import "../node_modules/uikit/src/scss/variables-theme.scss";
-@import "../node_modules/uikit/src/scss/mixins-theme.scss";
-@import "../node_modules/uikit/src/scss/uikit-theme.scss";
 @import "../node_modules/custom-fonts/Duepuntozero/stylesheet.css";
 @import './wwt-mat-theme.css';
+@import '../node_modules/ngx-sharebuttons/styles/share-buttons.scss';
+@import '../node_modules/ngx-sharebuttons/styles/themes/modern/modern-dark-theme.scss';
 
 body {
     font-family: Raleway,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    margin: 0;
+
+    a, input, .post-card {
+        outline: 0;
+    }
+
+    .mat-checkbox-label {
+        white-space: normal;
+    }
 }
 
-.mat-card {
+.post-container-cell {
+    @media only screen and (max-width: 1024px) {
+        margin-bottom: 15px;
+    }
+}
+
+.post-card {
     font-family: Raleway,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     overflow: hidden;
     cursor: pointer;
     height: 100%;
     padding: 0 !important;
-    box-shadow: 0 3px 1px -2px rgba(0,0,0,.05), 0 2px 2px 0 rgba(0,0,0,.05), 0 1px 5px 0 rgba(0,0,0,.05)!important;
-    border-bottom: 2px solid #3D9BE9;
+    box-shadow: none !important;
+    background-color: #F1F3F4;
+    position: relative;
+    border-radius: 5px;
 
-    &::before {
-        position: absolute;
-        content: "";
-        width: 0;
-        height: 100%;
-        margin-left: 50%;
-        transition: all 200ms;
-    }
+    &:hover, &:focus {
+        background-color: #D8D8D8;
 
-    @media only screen and (max-width: 800px) {
-        &::after {
-            display: none;
+        .post-image {
+            background-blend-mode: exclusion;
         }
     }
 
-    &:hover {
-        position: relative;
+    .post-category {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        padding: 10px 20px;
+        color: #FFC145;
+        background: rgba(22, 31, 48, 0.7);
+        text-transform: uppercase;
+        font-size: 10px;
+        letter-spacing: 2px;
 
-        &::before {
-            position: absolute;
-            content: "";
-            width: 100%;
-            margin-left: 0;
-            background: rgba(0, 0, 0, 0.05);
+        @media only screen and (max-width: 1024px) {
+            padding: 10px 10px;
+        }
+    }
+
+    .post-image {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #2f2e2e;
+        min-height: 200px;
+    }
+
+    .post-text-content {
+        width: calc(100% - 40px);
+        padding: 20px;
+
+        .post-title {
+            font-weight: bold;
+            font-size: 24px;
+            color: #1F2C45;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 20px;
+            }
+        }
+
+        .post-date {
+            font-size: 14px;
+            font-weight: 300;
+            text-align: right;
+        }
+
+        .post-description {
+            margin-top: 15px;
         }
     }
 }

@@ -1,0 +1,15 @@
+.contributor-list-container {
+    margin: 30px 0;
+    clear: both;
+
+    .contributors-list-heading {
+        font-weight: bold;
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .contributor-list-container {
+        margin: 30px 15px;
+    }
+}

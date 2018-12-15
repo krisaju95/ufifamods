@@ -1,0 +1,8 @@
+<div class="contributor-list-container" *ngIf="contributorsList.length > 0">
+    <div class="contributors-list-heading">
+        Contributors:
+    </div>
+    <ul class="contributors-list">
+        <li class="contributors-list-item" *ngFor="let contributor of contributorsList" [innerHTML]="contributor"></li>
+    </ul>
+</div>

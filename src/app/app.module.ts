@@ -12,6 +12,11 @@ import { AppFooterComponent } from './site-footer/app.footer.component';
 import { SharedModule } from './site-body/shared/app.module';
 import { AppRoutingModule } from './app-routing.module';
 
+import { MaterialModule } from './site-body/shared/mat.module';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+
 enableProdMode()
 
 @NgModule({
@@ -26,7 +31,9 @@ enableProdMode()
 		BrowserAnimationsModule,
 		AppBodyModule,
 		SharedModule,
-		AppRoutingModule
+		AppRoutingModule,
+		MaterialModule,
+		FontAwesomeModule
 	],
 	providers: [
 		UtilitiesService,

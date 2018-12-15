@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
+import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
 	selector: 'app-root',
@@ -7,5 +8,16 @@ import { Component } from '@angular/core';
 })
 
 export class AppComponent {
-	title = 'wwt-fifa-mods';
+
+	@ViewChild('sidenav') sidenav: MatSidenav;
+
+	openSideNav() {
+		document.body.style.overflow = "hidden";
+		this.sidenav.open()
+	}
+
+	closeSideNav() {
+		document.body.style.overflow = "auto";
+		this.sidenav.close();
+	}
 }

@@ -1,84 +1,43 @@
 <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
-    <div class="blog-post-header targetted-header-{{targettedPostHeader}}" *ngIf="isDesktopViewPort" uk-parallax="bgy: -100">
+    <div class="blog-post-header" *ngIf="isDesktopViewPort">
         <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
         <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
         <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
-        <div class="blog-post-badges blog-post-width">
-            <mat-chip-list>
-                <mat-chip *ngFor="let category of categoryList">{{category}}</mat-chip>
-            </mat-chip-list>
-        </div>
     </div>
     <div class="blog-post-container">
-        <div class="blog-post-container-row">
-            <div class="blog-post-content">
-                <div class="blog-post-header-image uk-cover-container" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
-                <div class="blog-post-header-text" *ngIf="isMobileViewport">
-                    <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
-                    <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
-                    <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
-                </div>
-                <div class="blog-post-intro-text">
-                    <div [innerHTML]="postData['post-intro-text']"></div>
-                </div>
-                <div class="blog-post-main-text">
-                    <ng-container *ngFor="let para of postMainText">
-                        <div class="blog-post-para" [innerHTML]="para"></div>
-                    </ng-container>
-                </div>
-                <site-ad-placeholder class="blog-post-ad-placeholder" [adZone]="1"></site-ad-placeholder>
-                <div class="blog-post-main-text">
-                    <ng-container *ngFor="let para of postMainText2">
-                        <div class="blog-post-para" [innerHTML]="para"></div>
-                    </ng-container>
-                </div>
-                <div class="contributor-list-container" *ngIf="contributorsList.length > 0">
-                    <div class="contributors-list-heading">
-                        Contributors:
-                    </div>
-                    <ul class="contributors-list">
-                        <li class="contributors-list-item" *ngFor="let contributor of contributorsList" [innerHTML]="contributor"></li>
-                    </ul>
-                </div>
-                <div class="faces-included-list-container" *ngIf="facesIncludedList.length > 0">
-                    <div class="faces-included-list-heading">
-                        Star-heads Included:
-                    </div>
-                    <ul class="faces-included-list">
-                        <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
-                    </ul>
-                </div>
-                <div class="screenshots-container" *ngIf="screenshotsList.length > 0">
-                    <div class="screenshots-heading">
-                        Screenshots:
-                    </div>
-                    <mat-grid-list cols="2" rowHeight="16:9" gutterSize="10px">
-                        <mat-grid-tile *ngFor="let screenshot of screenshotsList;">
-                            <img class="screenshot-image" [src]="screenshot">
-                        </mat-grid-tile>
-                    </mat-grid-list>
-                </div>
-                <div class="mod-download-link-container" *ngIf="showModDisclaimer">
-                    <button mat-flat-button (click)="openDialog()">Download <mat-icon>cloud_download</mat-icon></button>
-                </div>
-                <div class="blog-post-outro-text">
-                    <div [innerHTML]="postData['post-last-para']"></div>
-                </div>
-                <div class="social-interactions-container">
-                    <div class="social-interactions-container-row">
-                        <fb-like class="social-interactions-container-item"></fb-like>
-                        <google-plus class="social-interactions-container-item"></google-plus>
-                        <tweet class="social-interactions-container-item"></tweet>
-                        <pin-it class="social-interactions-container-item"></pin-it>
-                    </div>
-                </div>
-                <disqus-thread class="disqus-thread-container" [page-identifier]="fileURL" [page-url]="siteURL + postURL"></disqus-thread>
+        <div class="blog-post-content">
+            <div class="blog-post-header-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
+            <div class="blog-post-header-text" *ngIf="isMobileViewport">
+                <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
+                <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
+                <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
             </div>
-            <div class="blog-post-sidebar">
-                <site-ad-placeholder [adZone]="3" [removeMargins]="true"></site-ad-placeholder>
-                <featured-posts-sidebar (selectPostEvent)="initialiseData($event)"></featured-posts-sidebar>
+            <div class="blog-post-intro-text" [innerHTML]="postData['post-intro-text']"></div>
+            <div class="blog-post-main-text">
+                <div *ngFor="let para of postMainText" class="blog-post-para" [innerHTML]="para"></div>
             </div>
+            <site-ad-placeholder class="blog-post-ad-placeholder" [removeMargins]="true" [adZone]="1"></site-ad-placeholder>
+            <div class="blog-post-main-text">
+                <div *ngFor="let para of postMainText2" class="blog-post-para" [innerHTML]="para"></div>
+            </div>
+            <contributors-panel [contributorsList]="contributorsList"></contributors-panel>
+            <faces-included-panel [facesIncludedList]="facesIncludedList"></faces-included-panel>
+            <screenshots-panel [screenshotsList]="screenshotsList"></screenshots-panel>
+            <div class="mod-download-link-container" *ngIf="showModDisclaimer">
+                <button mat-flat-button color="primary" (click)="openDialog()">Download <mat-icon>cloud_download</mat-icon></button>
+            </div>
+            <div class="blog-post-badges">
+                <mat-chip-list>
+                    <mat-chip *ngFor="let category of categoryList">{{category}}</mat-chip>
+                </mat-chip-list>
+            </div>
+            <div class="blog-post-outro-text" [innerHTML]="postData['post-last-para']"></div>
+            <share-buttons [theme]="'modern-dark'" [include]="['facebook','twitter','google','pinterest','email']" [show]="5" [showCount]="true" [size]="0"></share-buttons>
+            <disqus-thread class="disqus-thread-container" [page-identifier]="fileURL" [page-url]="siteURL + postURL"></disqus-thread>
+        </div>
+        <div class="blog-post-sidebar">
+            <featured-posts-sidebar (selectPostEvent)="initialiseData($event)"></featured-posts-sidebar>
         </div>
     </div>
 </div>

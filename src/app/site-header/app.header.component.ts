@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { UtilitiesService } from '../services/utilities.service';
 
 @Component({
@@ -13,13 +13,18 @@ export class AppHeaderComponent {
 		private service: UtilitiesService
 	) {}
 
+	@Output() showMobileNavbar: EventEmitter<boolean> = new EventEmitter<boolean>();
+
 	lightTheme: boolean = this.service.isTargetted();
-	isDesktopViewPort: boolean = false;
+	isDesktopViewport: boolean = false;
 	isMobileViewport: boolean = false;
 
 	ngOnInit() {
-		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isDesktopViewport = this.service.isDesktopViewPort();
 		this.isMobileViewport = this.service.isMobileViewPort();
 	}
 
+	showNavbar() {
+		this.showMobileNavbar.emit(true);
+	}
 }

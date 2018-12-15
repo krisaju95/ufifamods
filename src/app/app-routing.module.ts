@@ -5,10 +5,12 @@ import { HomeComponent } from './site-body/home/home.component';
 import { RegularBlogPostComponent } from './site-body/blog/single-post/regular.post.component';
 import { PageNotFoundComponent } from './site-body/pagenotfound/pagenotfound.component'
 import { SearchPostsComponent } from './site-body/blog/search-posts/search.posts.component';
+import { BlogPostsListComponent } from './site-body/blog/blog-posts-list/blogposts.list.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, pathMatch: 'full' },
   { path: 'home', redirectTo: '' },
+  { path: 'blog', pathMatch: 'full', component: BlogPostsListComponent},
   { path: 'blog/post/:year/:month/:date/:title', component: RegularBlogPostComponent },
   { path: 'downloads', component: PageNotFoundComponent },
   { path: 'search', component: SearchPostsComponent },

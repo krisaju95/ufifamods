@@ -1,282 +1,120 @@
 @import "../variables.scss";
 
-@media only screen and (min-width: 800px) {
-    .site-header-container {
-        background: $site-colour-primary url("https://i.imgur.com/J74Gnag.jpg") no-repeat top right;
-        background-size: cover;
-        color: $site-colour-white;
+.site-header-container {
+    background: $site-colour-primary url("https://i.imgur.com/fSI0haF.jpg") no-repeat top right;
+    background-size: contain;
+    color: $site-colour-white;
+    position: relative;
+    vertical-align: middle;
+    display: inline-table;
+    width: 100%;
+    height: 100px;
+
+    .site-logo-wrapper {
+        display: table-cell;
         padding: 20px;
-        position: relative;
         vertical-align: middle;
-    
-        &.light-theme {
-            background: $site-colour-white url("https://i.imgur.com/7GUdA9z.jpg") no-repeat top right;
-            background-size: cover;
-            color: $site-colour-black;
-    
-            .site-title {
-                .site-title-primary {
-                    color: $site-colour-black;
-                }
-            }
-    
-            .site-navbar {
-                border-right: 1px solid $site-colour-disabled-dark;
-        
-                .site-navigation-item {
-                    color: $site-colour-black;
-        
-                    &.site-navigation-item-active {
-                        position: relative;
-        
-                        &::after {
-                            content: "";
-                            width: 100%;
-                            height: 2px;
-                            background-color: $site-colour-pink;
-                            position: absolute;
-                            bottom: -10px;
-                            left: 0;
-                        }
-                    }
+        width: 275px;
 
-                    &.site-navigation-icon-active {
-                        color: $site-colour-pink;
-                    }
-    
-                    &:hover {
-                        color: $site-colour-pink;
-                    }
-                }
-            }
-    
-            .social-icons-list {
-        
-                .social-icon {
-        
-                    &:hover {
-                        color: $site-colour-pink;
-                        opacity: 1;
-                    }
-                }
-            }
+        .site-logo-image {
+            display: inline-block;
+            height: 50px;
+            vertical-align: top;
         }
-    
-        .site-logo {
-            .site-logo-image {
-                height: 50px;
-            }
-        }
-    
-        .site-title {
-            font-family: $site-font-logo;
-            margin-top: 5px;
-            margin-left: 20px;
-            font-size: 28px;
-            font-weight: bold;
-    
-            .site-title-primary {
-                color: $site-colour-white;
-            }
-            .site-title-secondary {
-                color: $site-colour-secondary;
-            }
-        }
-    
-        .site-navbar {
-            margin-left: 40px;
-            border-right: 1px solid $site-colour-disabled-light;
-            font-weight: 300;
-            vertical-align: middle;
-            margin-top: 5px;
-    
-            .site-navigation-item {
-                margin-right: 30px;
-                color: $site-colour-white;
-                text-decoration: none;
-    
-                &.site-navigation-item-active {
-                    position: relative;
-    
-                    &::after {
-                        content: "";
-                        width: 100%;
-                        height: 2px;
-                        background-color: $site-colour-blue;
-                        position: absolute;
-                        bottom: -10px;
-                        left: 0;
-                    }
-                }
+    }
 
-                &.site-navigation-icon-active {
-                    color: $site-colour-blue;
-                }
-    
-                &:hover {
-                    color: $site-colour-blue;
+    .site-navbar {
+        margin-left: 40px;
+        font-weight: 300;
+        vertical-align: middle;
+        margin-top: 5px;
+        display: table-cell;
+        height: 100px;
+
+        .site-navigation-item {
+            color: $site-colour-white;
+            text-decoration: none;
+            height: 100px;
+            display: inline-block;
+            line-height: 110px;
+            padding: 0 15px;
+            transition: all 300ms;
+
+            &.site-navigation-item-active {
+                position: relative;
+                background-color: rgba(256, 256, 256, 0.05);
+
+                &::after {
+                    content: "";
+                    width: 100%;
+                    height: 4px;
+                    background-color: $site-colour-yellow;
+                    position: absolute;
+                    bottom: -2px;
+                    left: 0;
                 }
             }
-        }
-    
-        .social-icons-list {
-            margin-left: 30px;
-            opacity: 0.8;
-    
-            .social-icon {
-                margin-right: 20px;
-    
-                &:hover {
-                    color: $site-colour-blue;
-                    opacity: 1;
-                }
+
+            &.site-navigation-icon-active {
+                background-color: rgba(256, 256, 256, 0.05);
+                color: $site-colour-yellow;
+            }
+
+            &:hover, &:focus {
+                color: $site-colour-yellow;
+                background-color: rgba(256, 256, 256, 0.05);
+            }
+
+            .mat-icon {
+                transform: translateY(5px);
             }
         }
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .site-header-container {
-        background: $site-colour-primary url("https://i.imgur.com/J74Gnag.jpg") no-repeat top right;
-        background-size: cover;
+.site-title {
+    font-family: $site-font-logo;
+    margin-left: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    line-height: 50px;
+    display: inline-block;
+
+    .site-title-primary {
         color: $site-colour-white;
-        padding: 15px;
-        position: relative;
-        vertical-align: middle;
-    
-        &.light-theme {
-            background: $site-colour-white url("https://i.imgur.com/7GUdA9z.jpg") no-repeat top right;
-            background-size: cover;
-            color: $site-colour-black;
-    
-            .site-title {
-                .site-title-primary {
-                    color: $site-colour-black;
-                }
-            }
-        }
-    
-        .site-logo {
-            .site-logo-image {
-                height: 30px;
-            }
-        }
-    
-        .site-title {
-            font-family: $site-font-logo;
-            margin-left: 20px;
-            font-size: 20px;
-            font-weight: bold;
-    
-            .site-title-primary {
-                color: $site-colour-white;
-            }
-            .site-title-secondary {
-                color: $site-colour-secondary;
-            }
-        }
-    
-        .site-navbar, .social-icons-list {
-            display: none;
-        }
-
-        .site-navigation-item {
-            margin-right: 30px;
-            color: $site-colour-white;
-            text-decoration: none;
-
-            &.site-navigation-item-active {
-                position: relative;
-
-                &::after {
-                    content: "";
-                    width: 100%;
-                    height: 2px;
-                    background-color: $site-colour-blue;
-                    position: absolute;
-                    bottom: -10px;
-                    left: 0;
-                }
-            }
-
-            &:hover {
-                color: $site-colour-blue;
-            }
-        }
     }
+    .site-title-secondary {
+        color: $site-colour-secondary;
+    }
+}
 
+@media only screen and (max-width: 800px) {
     .mobile-site-navbar {
-        display: table;
+        display: inline-table;
+        background: $site-colour-primary;
+        height: 75px;
         width: 100%;
-        background-color: $site-colour-second-primary;
 
-        .mobile-navbar-row {
-            display: table-row;
-            width: 100%;
+        .site-logo-container, .site-title, mat-icon {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+        }
 
-            .mobile-navbar-item, .mobile-navbar-search {
-                display: table-cell;
-                text-align: center;
-                width: 25%;
-                padding: 10px;
-                padding-bottom: 15px;
-                position: relative;
+        .site-logo-container {
+            width: 45px;
+            padding: 0 15px;
 
-                .site-navigation-item {
-                    color: $site-colour-white;
-                    text-decoration: none;
-                    font-weight: 600;
-                    font-size: 14px;
-
-                    &.site-navigation-item-active {
-        
-                        &::after {
-                            content: "";
-                            width: 100%;
-                            height: 4px;
-                            background-color: $site-colour-blue;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                        }
-                    }
-    
-                    &.site-navigation-icon-active {
-                        color: $site-colour-blue;
-                    }
-                }
-            }
-
-            .mobile-navbar-search {
-                text-align: right;
-                padding-right: 20px;
+            .site-logo-image {
+                height: 45px;
             }
         }
 
-        &.light-theme {
-            border-top: 1px solid $site-colour-disabled-dark;
-            background-color: $site-colour-white;
-
-            .mobile-navbar-row {
-    
-                .mobile-navbar-item, .mobile-navbar-search {
-    
-                    .site-navigation-item {
-                        color: $site-colour-black;
-    
-                        &.site-navigation-item-active {
-                            &::after {
-                                content: "";
-                                background-color: $site-colour-pink;
-                            }
-                        }
-        
-                        &.site-navigation-icon-active {
-                            color: $site-colour-pink;
-                        }
-                    }
-                }
-            }
+        mat-icon {
+            width: 50px;
+            color: $site-colour-white;
+            padding-top: 5px;
+            cursor: pointer;
         }
     }
 }

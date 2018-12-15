@@ -23,10 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss",
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/uikit/dist/js/uikit.min.js",
-              "node_modules/uikit/dist/js/uikit-icons.min.js"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -75,10 +72,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.scss",
-              "node_modules/jquery/dist/jquery.min.js",
-              "node_modules/uikit/dist/js/uikit.min.js",
-              "node_modules/uikit/dist/js/uikit-icons.min.js"
+              "src/styles.scss"
             ],
             "scripts": [],
             "assets": [
