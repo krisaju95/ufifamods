@@ -2,9 +2,9 @@
     <div class="posts-container">
         <div *ngFor="let post of (postsData | slice : 0 : 3); let postIndex = index" class="post-container-cell cell-{{postIndex + 1}}">
             <div class="post-card card-{{postIndex + 1}}" matRipple [routerLink]="post['post-link']">
-                <span class="post-category" [innerHTML]="post['post-category']"></span>
-                <div class="post-image" [style.background-image]="'url(' + post['post-media'] + ')'"></div>
+                <div class="post-image" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
                 <div class="post-text-content">
+                    <div class="post-category" [innerHTML]="post['post-category'] ? post['post-category'] : post['post-category-list'].split(';')[0]"></div>
                     <div class="post-title" [innerHTML]="post['post-title']"></div>
                 </div>
             </div>

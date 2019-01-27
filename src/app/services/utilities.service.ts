@@ -8,7 +8,7 @@ export class UtilitiesService {
 		private title: Title
 	) { }
 
-	CSLP: string = "https://jsonblob.com/api/jsonBlob/";
+	CSLP: string = "https://raw.githubusercontent.com/krisaju95/WWT-FIFA-Mods-Blog/cloud-storage";
 
 	siteDomain: string = "http://wwtfifamods.com/";
 
@@ -46,8 +46,8 @@ export class UtilitiesService {
 	filterPostsData(blogPosts, category) {
 		let filteredPostsData = [];
 		for(let postObject of blogPosts) {
-			let categoriesList = (postObject["sectionCategory"].toLowerCase()).split(";");
-			if(categoriesList.indexOf(category) > -1) {
+			let categoriesList = (postObject["post-category-list"].toLowerCase()).split(";");
+			if(categoriesList.indexOf(category.toLowerCase()) > -1) {
 				filteredPostsData.push(postObject);
 			}
 		}

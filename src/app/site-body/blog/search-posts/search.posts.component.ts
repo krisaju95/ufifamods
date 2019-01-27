@@ -32,7 +32,7 @@ export class SearchPostsComponent {
 
 	ngOnInit() {
         this.searchQuery = this.getSearchQuery();
-		this.http.get(this.service.getCSLP() +  "612e95db-aeb0-11e8-94a2-cf6856e41601")
+		this.http.get(this.service.getCSLP() +  "/blog-posts-list")
 			.subscribe((data) => {
                 this.blogPostsObject = data;
 				if(this.searchQuery) {

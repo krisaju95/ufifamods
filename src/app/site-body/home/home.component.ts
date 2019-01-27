@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UtilitiesService } from '../../services/utilities.service';
 
 @Component({
@@ -21,11 +21,14 @@ export class HomeComponent {
 	ngOnInit() {
 		this.service.setPageTitle(this.service.getSiteTitle(), true);
 		let startTime = new Date().getTime();
-		this.http.get(this.service.getCSLP() +  "eb4b2165-a94f-11e8-9e97-a58df81c0425")
+		let requestHeaders = new HttpHeaders();
+		requestHeaders.append('pragma', 'no-cache');
+		requestHeaders.append('cache-control', 'no-cache');
+		this.http.get(this.service.getCSLP() + "/blog-posts-list", {headers: requestHeaders})
 			.subscribe((data) => {
 				this.setBlogPostsArray(data);
 				let timeDiff = new Date().getTime() - startTime;
-				if(timeDiff < 2000) {
+				if (timeDiff < 2000) {
 					setTimeout(() => {
 						this.responseLoading = false;
 					}, 2000 - timeDiff);
@@ -33,12 +36,14 @@ export class HomeComponent {
 				else {
 					this.responseLoading = false;
 				}
-			})
+			});
 	}
 
-	setBlogPostsArray(blogPostsObject) {
-		for (let postObject in blogPostsObject) {
-			this.blogPosts.push(blogPostsObject[postObject]);
+	setBlogPostsArray(blogPostsObject: object) {
+		for (let blogPost in blogPostsObject) {
+			let postObject: object = blogPostsObject[blogPost];
+			postObject["post-link"] = blogPost;
+			this.blogPosts.push(postObject);
 		}
 	}
 }

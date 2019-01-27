@@ -58,10 +58,10 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostData() {
-		this.http.get(this.service.getCSLP() + "68a310fa-d55a-11e8-a295-27660d3c3637")
+		this.http.get(this.service.getCSLP() + "/blog-posts-list")
 			.subscribe((data) => {
 				this.fileURL = this.getFileURL(data);
-				this.http.get(this.service.getCSLP() + this.fileURL)
+				this.http.get(this.service.getCSLP() + "/blog-posts/" + this.fileURL)
 					.subscribe((postData) => {
 						this.responseLoading = false;
 						this.postData = postData;

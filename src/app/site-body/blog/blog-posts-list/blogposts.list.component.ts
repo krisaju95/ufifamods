@@ -28,19 +28,27 @@ export class BlogPostsListComponent {
 	isMobileViewport: boolean = false;
 
 	ngOnInit() {
-		this.http.get(this.service.getCSLP() +  "612e95db-aeb0-11e8-94a2-cf6856e41601")
-		.subscribe((data) => {
-			this.blogPostsObject = data;
-			this.numberOfPosts = Object.keys(this.blogPostsObject).length;
-			this.numberOfPages = Math.ceil(this.numberOfPosts / 10);
-			this.convertObjectToArray();
-			this.responseLoading = false;
-			console.log(this.blogPostsArray);
-		})
+		let startTime = new Date().getTime();
+		this.http.get(this.service.getCSLP() + "/blog-posts-list")
+			.subscribe((data) => {
+				let timeDiff = new Date().getTime() - startTime;
+				this.blogPostsObject = data;
+				this.numberOfPosts = Object.keys(this.blogPostsObject).length;
+				this.numberOfPages = Math.ceil(this.numberOfPosts / 10);
+				this.convertObjectToArray();
+				if(timeDiff < 2000) {
+					setTimeout(() => {
+						this.responseLoading = false;
+					}, 2000 - timeDiff);
+				}
+				else {
+					this.responseLoading = false;
+				}
+			})
 	}
 
 	convertObjectToArray() {
-		for(let post in this.blogPostsObject) {
+		for (let post in this.blogPostsObject) {
 			let postObject = this.blogPostsObject[post];
 			this.blogPostsArray.push({
 				postTitle: postObject['post-title'],
@@ -60,7 +68,7 @@ export class BlogPostsListComponent {
 
 	fetchSinglePageResults(pageNumber) {
 		window.scroll(0, 0);
-		if(pageNumber < this.currentPageNumber) {
+		if (pageNumber < this.currentPageNumber) {
 			this.startPostIndex = this.startPostIndex - 10;
 			this.endPostIndex = this.endPostIndex - 10;
 		}
