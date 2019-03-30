@@ -1,4 +1,4 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter, HostListener } from '@angular/core';
 import { UtilitiesService } from '../services/utilities.service';
 
 @Component({
@@ -16,15 +16,29 @@ export class AppHeaderComponent {
 	@Output() showMobileNavbar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
 	lightTheme: boolean = this.service.isTargetted();
-	isDesktopViewport: boolean = false;
-	isMobileViewport: boolean = false;
+	isDesktopViewPort: boolean = false;
+	isTabViewPort: boolean = false;
+	isMobileViewPort: boolean = false;
 
 	ngOnInit() {
-		this.isDesktopViewport = this.service.isDesktopViewPort();
-		this.isMobileViewport = this.service.isMobileViewPort();
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isTabViewPort = this.service.isTabViewPort();
+		this.isMobileViewPort = this.service.isMobileViewPort();
 	}
 
 	showNavbar() {
 		this.showMobileNavbar.emit(true);
+	}
+
+	@HostListener('window:resize') onWindowResize() {
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isTabViewPort = this.service.isTabViewPort();
+		this.isMobileViewPort = this.service.isMobileViewPort();
+	}
+
+	@HostListener('window:orientationchange') onOrientationChange() {
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isTabViewPort = this.service.isTabViewPort();
+		this.isMobileViewPort = this.service.isMobileViewPort();
 	}
 }

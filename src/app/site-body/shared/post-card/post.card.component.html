@@ -1,0 +1,17 @@
+<div class="post-card no-highlight" 
+    [ngClass]="{'post-card-dark-theme': darkTheme,
+                'post-card-position-absolute': position == 'absolute',
+                'post-card-full-width': fullWidth}"
+    matRipple
+    [routerLink]="post['post-link']"
+    [style.text-align]="textAlign == 'center' ? 'center' : 'left'">
+    <div class="post-image" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
+    <div class="post-text-content">
+        <div class="post-title" [innerHTML]="post['post-title']"></div>
+        <div class="post-description" *ngIf="!hideDescription" [innerHTML]="((post['post-description'] ? post['post-description'] : post['post-text-content']) | slice : 0 : 100).trim() + '...'"></div>
+        <div class="post-footer-text" *ngIf="!hideFooter">
+            <span class="post-category" [innerHTML]="post['post-category'] ? post['post-category'] : post['post-category-list'].split(';')[0]"></span>
+            <span class="post-date" [innerHTML]="post['post-date'] | timeSince"></span>
+        </div>
+    </div>
+</div>

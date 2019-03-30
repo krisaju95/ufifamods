@@ -5,6 +5,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomePageModule } from './home/app.module';
 import { BlogPageModule } from './blog/app.module';
 
+import { DatePipe } from '@angular/common';
+
 import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component'
 
 @NgModule({
@@ -17,7 +19,9 @@ import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component'
 		HomePageModule,
 		BlogPageModule
 	],
-	providers: [],
+	providers: [
+		DatePipe
+	],
 	exports: [
 		HomePageModule,
 		BlogPageModule

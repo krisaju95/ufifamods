@@ -1,8 +1,9 @@
 @import "../variables.scss";
 
 .site-header-container {
-    background: $site-colour-primary url("https://i.imgur.com/fSI0haF.jpg") no-repeat top right;
+    background: $site-colour-primary url("../../../media/images/header/header-art.jpg") no-repeat top right;
     background-size: contain;
+    box-shadow: 0 0 10px rgba(0, 0, 0 , 0.4);
     color: $site-colour-white;
     position: relative;
     vertical-align: middle;
@@ -12,7 +13,7 @@
 
     .site-logo-wrapper {
         display: table-cell;
-        padding: 20px;
+        padding: 20px 40px;
         vertical-align: middle;
         width: 275px;
 
@@ -23,50 +24,57 @@
         }
     }
 
-    .site-navbar {
+    .site-navbar-container {
         margin-left: 40px;
-        font-weight: 300;
+        font-weight: 600;
+        font-size: 14px;
         vertical-align: middle;
         margin-top: 5px;
         display: table-cell;
         height: 100px;
 
-        .site-navigation-item {
-            color: $site-colour-white;
-            text-decoration: none;
-            height: 100px;
+        .site-navbar {
             display: inline-block;
-            line-height: 110px;
-            padding: 0 15px;
-            transition: all 300ms;
+    
+            .site-navigation-item {
+                text-decoration: none;
+                height: 100px;
+                display: inline-block;
+                line-height: 110px;
+                padding: 0 20px;
+                text-align: center;
+                text-transform: uppercase;
+                border-left: 1px solid $site-colour-second-primary;
+                transition: all 300ms;
+                color: $site-colour-white;
+    
+                &.site-navigation-item-active {
+                    position: relative;
 
-            &.site-navigation-item-active {
-                position: relative;
-                font-weight: 600;
-
-                &::after {
-                    content: "";
-                    width: 100%;
-                    height: 2px;
-                    background-color: $site-colour-yellow;
-                    position: absolute;
-                    bottom: -1px;
-                    left: 0;
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 5px;
+                        bottom: 0;
+                        left: 0;
+                        background: $site-colour-yellow;
+                    }
+                }
+    
+                .mat-icon {
+                    transform: translateY(5px);
                 }
             }
-
-            &.site-navigation-icon-active {
-                background-color: rgba(256, 256, 256, 0.05);
-                color: $site-colour-yellow;
-            }
-
-            &:hover, &:focus {
-                color: $site-colour-yellow;
-                background-color: rgba(256, 256, 256, 0.05);
-            }
-
-            .mat-icon {
-                transform: translateY(5px);
+    
+            &:hover {
+                .site-navigation-item {
+                    color: $site-colour-disabled-light;
+    
+                    &:hover {
+                        color: $site-colour-white;
+                    }
+                }
             }
         }
     }
@@ -88,7 +96,7 @@
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
     .mobile-site-navbar {
         display: inline-table;
         background: $site-colour-primary;

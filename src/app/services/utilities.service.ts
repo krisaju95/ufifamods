@@ -45,9 +45,9 @@ export class UtilitiesService {
 
 	filterPostsData(blogPosts, category) {
 		let filteredPostsData = [];
-		for(let postObject of blogPosts) {
+		for (let postObject of blogPosts) {
 			let categoriesList = (postObject["post-category-list"].toLowerCase()).split(";");
-			if(categoriesList.indexOf(category.toLowerCase()) > -1) {
+			if (categoriesList.indexOf(category.toLowerCase()) > -1) {
 				filteredPostsData.push(postObject);
 			}
 		}
@@ -60,7 +60,7 @@ export class UtilitiesService {
 	}
 
 	setPageTitle(pageTitle, isBase) {
-		if(!isBase) {
+		if (!isBase) {
 			this.title.setTitle(pageTitle + " | " + this.getSiteTitle());
 		}
 		else {
@@ -69,10 +69,14 @@ export class UtilitiesService {
 	}
 
 	isMobileViewPort() {
-		return (window.innerWidth < 800);
+		return ((window.innerWidth < 900) && (window.innerHeight < 500) || (window.innerWidth < 500) && (window.innerHeight < 900));
+	}
+
+	isTabViewPort() {
+		return !this.isMobileViewPort() && (window.innerWidth <= 1024);
 	}
 
 	isDesktopViewPort() {
-		return (window.innerWidth >= 800);
+		return (window.innerWidth > 1024);
 	}
 }

@@ -261,7 +261,7 @@
 .mat-dialog-title {
     font-size: 24px;
     font-weight: 800;
-    color: #3D9BE9;
+    color: #305BA5;
 }
 
 .mat-expansion-panel-header {
@@ -763,7 +763,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-ripple-element {
-    background-color: rgba(0, 0, 0, .1)
+    background-color: rgba(0, 0, 0, .05);
 }
 
 .mat-option {
@@ -788,7 +788,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-accent .mat-option.mat-selected:not(.mat-option-disabled) {
@@ -820,7 +820,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
-    background: #3D9BE9
+    background: #305BA5
 }
 
 .mat-warn .mat-pseudo-checkbox-checked, .mat-warn .mat-pseudo-checkbox-indeterminate {
@@ -855,7 +855,7 @@ textarea.cdk-textarea-autosize-measuring {
 
 .mat-badge-content {
     color: #fff;
-    background: #3D9BE9
+    background: #305BA5
 }
 
 .mat-badge-accent .mat-badge-content {
@@ -1075,7 +1075,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
@@ -1140,7 +1140,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
@@ -1233,7 +1233,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-checkbox-checked.mat-primary .mat-checkbox-background, .mat-checkbox-indeterminate.mat-primary .mat-checkbox-background {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
@@ -1295,7 +1295,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
-    background-color: #3D9BE9;
+    background-color: #305BA5;
     color: #fff
 }
 
@@ -1398,7 +1398,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-calendar-body-selected {
-    background-color: #3D9BE9;
+    background-color: #305BA5;
     color: #fff
 }
 
@@ -1442,7 +1442,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-datepicker-toggle-active {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-datepicker-toggle-active.mat-accent {
@@ -1510,7 +1510,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-form-field.mat-focused .mat-form-field-label.mat-accent {
@@ -1530,7 +1530,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-form-field.mat-focused .mat-form-field-ripple.mat-accent {
@@ -1614,7 +1614,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-form-field-appearance-outline.mat-focused.mat-accent .mat-form-field-outline-thick {
@@ -1638,7 +1638,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-icon.mat-primary {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-icon.mat-accent {
@@ -1654,7 +1654,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-input-element {
-    caret-color: #3D9BE9
+    caret-color: #305BA5
 }
 
 .mat-input-element::placeholder {
@@ -1752,7 +1752,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-progress-bar-fill::after {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-progress-bar.mat-accent .mat-progress-bar-background {
@@ -1780,7 +1780,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-progress-spinner circle, .mat-spinner circle {
-    stroke: #3D9BE9;
+    stroke: #305BA5;
 }
 
 .mat-progress-spinner.mat-accent circle, .mat-spinner.mat-accent circle {
@@ -1796,11 +1796,11 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #3D9BE9
+    border-color: #305BA5
 }
 
 .mat-radio-button.mat-primary .mat-radio-inner-circle {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element {
@@ -1868,7 +1868,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
-    color: #3D9BE9
+    color: #305BA5
 }
 
 .mat-form-field.mat-focused.mat-accent .mat-select-arrow {
@@ -1922,7 +1922,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
@@ -1974,7 +1974,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-primary .mat-slider-thumb, .mat-primary .mat-slider-thumb-label, .mat-primary .mat-slider-track-fill {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-primary .mat-slider-thumb-label-text {
@@ -2060,7 +2060,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-step-header .mat-step-icon {
-    background-color: #3D9BE9;
+    background-color: #305BA5;
     color: #fff
 }
 
@@ -2124,7 +2124,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-tab-group.mat-primary.mat-background-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary.mat-background-primary .mat-ink-bar {
@@ -2160,7 +2160,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-tab-group.mat-background-primary .mat-tab-header, .mat-tab-group.mat-background-primary .mat-tab-links, .mat-tab-nav-bar.mat-background-primary .mat-tab-header, .mat-tab-nav-bar.mat-background-primary .mat-tab-links {
-    background-color: #3D9BE9
+    background-color: #305BA5
 }
 
 .mat-tab-group.mat-background-primary .mat-tab-label, .mat-tab-group.mat-background-primary .mat-tab-link, .mat-tab-nav-bar.mat-background-primary .mat-tab-label, .mat-tab-nav-bar.mat-background-primary .mat-tab-link {
@@ -2245,7 +2245,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-toolbar.mat-primary {
-    background: #3D9BE9;
+    background: #305BA5;
     color: #fff
 }
 

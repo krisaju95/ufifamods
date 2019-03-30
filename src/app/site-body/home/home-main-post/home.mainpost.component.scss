@@ -1,151 +1,76 @@
 @import "../../../variables.scss";
 
-@media only screen and (min-width: 800px) {
+.home-page-featured-posts-container {
+    display: inline-table;
+    width: calc(100% - 80px);
+    background-color: $site-colour-second-primary;
+    padding: 20px 40px;
 
-    .home-main-posts-container {
-        padding: 40px 0;
+    .main-post-display-container {
+        height: 500px;
         margin-bottom: 40px;
+        background-size: cover;
+        background-position: top left;
+        background-repeat: no-repeat;
+        position: relative;
+        display: table-cell;
+        vertical-align: top;
+
+        ::ng-deep .post-card{
+            .post-text-content {
+                .post-title {
+                    font-size: 28px;
+                }
+            }
+        }
+    }
+
+    .aside-posts-container {
+        display: table-cell;
+        width: 400px;
         background: $site-colour-second-primary;
+        padding-left: 20px;
+        vertical-align: top;
 
-        .posts-container {
-            display: inline-table;
-            height: 480px;
-            width: 100%;
-            border-spacing: 20px;
-        
-            .post-container-cell {
-                display: table-cell;
-                width: 33%;
-                height: 100%;
-                vertical-align: top;
-
-                &.cell-1 {
-                    width: 50%;
-
-                    .card-1 {
-                        position: relative;
-
-                        &:hover, &:focus {
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                height: 100%;
-                                width: 100%;
-                                background: rgba(22, 31, 48, 0.2);
-                            }
-                        }
-
-                        .post-image {
-                            height: 100%;
-                        }
-
-                        .post-text-content {
-                            padding: 40px 20px;
-                            color: $site-colour-white !important;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            background-image: linear-gradient(transparent, $site-colour-second-primary);
-                            line-height: 36px;
-                            margin-bottom: 0;
-
-                            .post-title {
-                                color: $site-colour-white !important;
-                            }
-                        }
-                    }
-                }
-
-                &.cell-2 {
-                    width: 25%;
-
-                    .card-2 {
-                        .post-image {
-                            height: 65%;
-                        }
-                    }
-                }
-
-                &.cell-3 {
-                    width: 25%;
-
-                    .card-3 {
-                        height: 100%;
-
-                        .post-image {
-                            height: 65%;
-                        }
-                    }
-                }
+        .aside-post-container {
+            ~.aside-post-container {
+                margin-top: 20px;
             }
         }
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 1024px) {
+    .home-page-featured-posts-container {
+        display: block;
+        width: calc(100% - 40px);
+        padding: 20px;
     
-    .home-main-posts-container {
-        padding: 15px;
-        background: $site-colour-second-primary;
+        .main-post-display-container {
+            margin-bottom: 20px;
+            display: block;
 
-        .posts-container {
+            ::ng-deep .post-card{
+                .post-text-content {
+                    .post-title {
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+    
+        .aside-posts-container {
+            display: inline-table;
             width: 100%;
-        
-            .post-container-cell {
-                &.cell-1 {
-                    height: 350px;
+            padding-left: 0;
 
-                    .card-1 {
-                        position: relative;
-                        border-radius: 5px 5px 0 0;
+            .aside-post-container {
+                display: table-cell;
+                width: 50px;
 
-                        &:hover, &:focus {
-                            &:before {
-                                content: "";
-                                position: absolute;
-                                height: 100%;
-                                width: 100%;
-                                background: rgba(22, 31, 48, 0.2);
-                            }
-                        }
-
-                        .post-image {
-                            height: 100%;
-                        }
-
-                        .post-text-content {
-                            width: calc(100% - 35px);
-                            padding: 40px 20px;
-                            color: $site-colour-white !important;
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            background-image: linear-gradient(transparent, $site-colour-second-primary);
-                            margin-bottom: 0;
-
-                            .post-title {
-                                color: $site-colour-white !important;
-                            }
-                        }
-                    }
-                }
-
-                &.cell-2 {
-                    .card-2 {
-                        .post-image {
-                            height: 65%;
-                        }
-                    }
-                }
-
-                &.cell-3 {
-                    .card-3 {
-                        height: 100%;
-
-                        .post-image {
-                            height: 65%;
-                        }
-                    }
+                ~.aside-post-container {
+                    margin-top: 0;
+                    padding-left: 20px;
                 }
             }
         }

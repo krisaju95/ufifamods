@@ -2,10 +2,12 @@
 @import './wwt-mat-theme.css';
 @import '../node_modules/ngx-sharebuttons/styles/share-buttons.scss';
 @import '../node_modules/ngx-sharebuttons/styles/themes/modern/modern-dark-theme.scss';
+@import './styles/typography/typography.scss';
 
 body {
     font-family: Raleway,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
     margin: 0;
+    background: #F1F3F4;
 
     a, input, .post-card {
         outline: 0;
@@ -16,71 +18,12 @@ body {
     }
 }
 
-.post-container-cell {
-    @media only screen and (max-width: 1024px) {
-        margin-bottom: 15px;
-    }
-}
-
-.post-card {
-    font-family: Raleway,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-    overflow: hidden;
-    cursor: pointer;
-    height: 100%;
-    background-color: #F1F3F4;
-    position: relative;
-    border-radius: 5px;
-
-    &:hover, &:focus {
-        background-color: #E9E9E9;
-    }
-
-    .post-category {
-        text-transform: uppercase;
-        font-size: 14px;
-        letter-spacing: 2px;
-        font-weight: 600;
-        margin-bottom: 5px;
-        display: inline-block;
-    }
-
-    .post-image {
-        width: 100%;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-color: #2f2e2e;
-        min-height: 200px;
-    }
-
-    .post-text-content {
-        width: calc(100% - 40px);
-        padding: 20px;
-
-        .post-title {
-            font-weight: bold;
-            font-size: 24px;
-            color: #1F2C45;
-
-            @media only screen and (max-width: 1024px) {
-                font-size: 20px;
-            }
-        }
-
-        .post-date {
-            font-size: 14px;
-            font-weight: 300;
-            text-align: right;
-        }
-
-        .post-description {
-            margin-top: 15px;
-        }
-    }
-}
-
-.wwt-mat-dialog {
-    .mat-dialog-actions {
-        padding: 24px 0;
-    }
+.no-highlight {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome and Opera */
 }

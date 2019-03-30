@@ -1,18 +1,20 @@
-<div class="site-header-container" *ngIf="isDesktopViewport">
+<div class="site-header-container" *ngIf="isDesktopViewPort">
 	<div class="site-logo-wrapper">
 		<img class="site-logo-image" alt="WWT FIFA Mods Logo" src="https://i.imgur.com/w9ZdFrZ.png">
 		<div class="site-title">
 			<span class="site-title-primary">WWT</span><span class="site-title-secondary">FIFA</span><span class="site-title-primary">MODS</span>
 		</div>
 	</div>
-	<div class="site-navbar">
-		<a href="#" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-		<a href="#" routerLink="/blog" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Blog</a>
-		<a href="#" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Downloads</a>
-		<a href="#" routerLink="/search" class="site-navigation-item" routerLinkActive="site-navigation-icon-active"><mat-icon>search</mat-icon></a>
+	<div class="site-navbar-container">
+		<div class="site-navbar">
+			<a href="#" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+			<a href="#" routerLink="/blog" class="site-navigation-item" routerLinkActive="site-navigation-item-active">Blog</a>
+			<a href="#" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Downloads</a>
+			<a href="#" routerLink="/search" class="site-navigation-item site-search-button" routerLinkActive="site-navigation-icon-active"><mat-icon>search</mat-icon></a>
+		</div>
 	</div>
 </div>
-<div class="mobile-site-navbar" *ngIf="isMobileViewport">
+<div class="mobile-site-navbar" *ngIf="isMobileViewPort || isTabViewPort">
 	<div class="site-logo-container">
 		<img class="site-logo-image" alt="WWT FIFA Mods Logo" src="https://i.imgur.com/w9ZdFrZ.png">
 	</div>

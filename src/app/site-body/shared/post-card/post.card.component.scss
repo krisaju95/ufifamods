@@ -1,0 +1,133 @@
+.post-card {
+    overflow: hidden;
+    cursor: pointer;
+    height: 100%;
+    background-color: #FFFFFF;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
+    transition: box-shadow ease 300ms;
+
+    &:hover, &:focus {
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        background-color: #FAFAFA;
+
+        .post-text-content {
+            background-color: #FAFAFA;
+
+            .post-title {
+                text-decoration-color: #1F2C45;
+            }
+        }
+    }
+
+    .post-image {
+        width: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-color: #DDDDDD;
+        height: 200px;
+    }
+
+    .post-text-content {
+        width: calc(100% - 40px);
+        padding: 20px;
+        background-color: #FFFFFF;
+        min-height: 50px;
+        transition: background-color ease 300ms;
+
+        .post-title {
+            font-weight: bold;
+            font-size: 21px;
+            text-decoration: underline;
+            text-decoration-color: transparent;
+            transition: text-decoration-color 100ms ease;
+
+            @media only screen and (max-width: 1024px) {
+                font-size: 20px;
+            }
+        }
+
+        .post-description {
+            font-size: 14px;
+            margin-top: 15px;
+        }
+
+        .post-footer-text {
+            margin-top: 30px;
+            font-size: 12px;
+            line-height: 18px;
+
+            .post-category {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-weight: 800;
+                margin-bottom: 5px;
+                display: inline-block;
+                color: #305BA5;
+            }
+
+            .post-date {
+                color: #777777;
+                font-weight: normal;
+                float: right;
+            }
+        }
+    }
+
+    &.post-card-dark-theme {
+        background: #1F2C45;
+        color: #FFFFFF;
+        border: none;
+
+        .post-text-content {
+            background: #1F2C45;
+            transition: background ease 300ms;
+
+            .post-footer-text {
+                .post-category {
+                    color: #FFC145;
+                }
+    
+                .post-date {
+                    color: #CCCCCC;
+                }
+            }
+        }
+
+        &:hover, &:focus {
+            background: rgb(40, 55, 83);
+            
+            .post-text-content {
+                background: rgb(40, 55, 83);
+
+                .post-title {
+                    text-decoration-color: #FFFFFF;
+                }
+            }
+        }
+    }
+
+    &.post-card-position-absolute {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        .post-image {
+            height: calc(100% - 50px);
+        }
+
+        .post-text-content {
+            position: absolute;
+            width: calc(100% - 40px);
+            left: 0;
+            bottom: 0;
+        }
+    }
+
+    &.post-card-full-width {
+        width: 100%;
+    }
+}

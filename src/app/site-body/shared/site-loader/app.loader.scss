@@ -24,12 +24,12 @@
         height: 100%;
         position: fixed;
         z-index: 1000;
-        background: white;
-        top: 100px;
+        background: $site-colour-white;
+        top: 0;
         left: 0;
 
         mat-spinner {
-            top: calc(50% - 150px);
+            top: calc(50% - 120px);
             left: calc(50% - 50px);
         }
 
@@ -39,7 +39,7 @@
             width: 100%;
             text-align: center;
             position: absolute;
-            bottom: calc(50% - 50px);
+            bottom: calc(50% - 40px);
             color: $site-colour-primary;
         }
     }
@@ -69,7 +69,7 @@
         position: fixed;
         z-index: 1000;
         background: white;
-        top: 75px;
+        top: 0;
         left: 0;
 
         mat-spinner {
