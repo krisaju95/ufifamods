@@ -494,10 +494,10 @@ input.mat-input-element {
 }
 
 .mat-tooltip {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
-    font-size: 10px;
-    padding-top: 6px;
-    padding-bottom: 6px;
+    font-size: 12px;
+    padding: 10px 5px;
+    background: #333333;
+    color: #FFFFFF;
 }
 
 .mat-tooltip-handset {
@@ -1783,14 +1783,6 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
     stroke: #305BA5;
 }
 
-.mat-progress-spinner.mat-accent circle, .mat-spinner.mat-accent circle {
-    stroke: #ff4081
-}
-
-.mat-progress-spinner.mat-warn circle, .mat-spinner.mat-warn circle {
-    stroke: #f44336
-}
-
 .mat-radio-outer-circle {
     border-color: rgba(0, 0, 0, .54)
 }
@@ -2269,10 +2261,6 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 
 .mat-toolbar .mat-input-element {
     caret-color: currentColor
-}
-
-.mat-tooltip {
-    background: rgba(97, 97, 97, .9)
 }
 
 .mat-tree {

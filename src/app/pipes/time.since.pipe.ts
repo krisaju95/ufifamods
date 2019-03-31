@@ -19,7 +19,7 @@ export class TimeSincePipe implements PipeTransform {
 		let currentTime = new Date().getTime();
 		let seconds = Math.floor(currentTime - timeInPast) / 1000;
 		let interval = Math.floor(seconds / 31536000);
-		let timeIcon = '<i class="fa fa-clock-o"></i>&nbsp;&nbsp;';
+		let timeIcon = '<i class="far fa-clock"></i>&nbsp;&nbsp;';
 		if (interval > 1) {
 			return timeIcon + this.datePipe.transform(date, 'd MMM yy');
 		}

@@ -1,5 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { UtilitiesService } from '../../../services/utilities.service';
 import { Router } from '@angular/router';
 
@@ -26,7 +26,10 @@ export class FeaturedPostsSidebarComponent {
 	isMobileViewport: boolean = false;
 
 	ngOnInit() {
-		this.http.get(this.service.getCSLP() +  "eb4b2165-a94f-11e8-9e97-a58df81c0425")
+		let requestHeaders = new HttpHeaders();
+		requestHeaders.append('pragma', 'no-cache');
+		requestHeaders.append('cache-control', 'no-cache');
+		this.http.get(this.service.getCSLP() + "/blog-posts-list", {headers: requestHeaders})
 			.subscribe((data) => {
 				this.responseLoading = false;
 				this.setBlogPostsArray(data);
@@ -34,8 +37,9 @@ export class FeaturedPostsSidebarComponent {
 	}
 
 	setBlogPostsArray(blogPostsObject) {
-		for (let postObject of blogPostsObject) {
-			if(postObject['featured'] == 'TRUE') {
+		for (let postUrl in blogPostsObject) {
+			let postObject = blogPostsObject[postUrl];
+			if(postObject['isFeatured']) {
 				this.postsData.push(postObject);
 			}
 			if(this.postsData.length == 4) {

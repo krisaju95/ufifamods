@@ -58,18 +58,8 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     border: 1px solid #DDDDDD;
     border-bottom: 4px solid #E8E8E8;
 
-    &.remove-margins {
-        margin: 0;
-        margin-bottom: 20px;
-    }
-
-    &.site-footer-ad {
-        margin: 20px;
-    }
-
     &.site-sidebar-ad {
         min-height: 160px;
         padding-top: calc(50% - 78px);
     }
-
 }

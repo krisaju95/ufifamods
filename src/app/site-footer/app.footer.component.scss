@@ -1,67 +1,125 @@
 @import "../variables.scss";
 
-@media only screen and (min-width: 800px) {
-    .footer-container {
-        background-color: $site-colour-second-primary;
-        color: $site-colour-white;
-        display: table;
-        width: 100%;
-        font-size: 14px;
-        font-weight: 300;
-        padding-bottom: 20px;
-    
-        .footer-row {
-            display: table-row;
+.footer-container {
+    background-color: $site-colour-second-primary;
+    border-top: 5px solid $site-colour-blue;
+    color: $site-colour-white;
+    width: 100%;
+    font-size: 14px;
+    font-weight: 300;
+    padding-top: 20px;
+
+    .footer-row {
+        .site-map {
+            display: inline-table;
             width: 100%;
     
-            .footer-ad-placeholder {
-                margin: 20px;
-                display: block;
+            .site-map-list {
+                display: table-cell;
+                list-style: none;
+                width: 25%;
+                vertical-align: top;
+                padding-right: 20px;
+
+                .site-map-list-header {
+                    color: $site-colour-yellow;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    margin: 20px 0;
+                    font-size: 16px;
+                }
+
+                .site-map-list-item-group {
+                    padding-left: 20px;
+                    border-left: 1px solid $site-colour-yellow;
+                    margin-left: 20px;
+                }
+
+                .site-map-list-group-header {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-left: 10px;
+                }
+
+                .site-map-list-item {
+                    margin: 15px 0;
+                }
             }
+        }
+
+        &.bottom-section {
+            padding: 40px 0;
+            margin-top: 20px;
+            text-align: center;
+            background-color: $site-colour-primary;
+
+            .main-section {
+                margin-bottom: 40px;
+
+                .contact-us-button, .bug-report-button {
+                    display: inline-block;
+                    margin-right: 20px;
+                    vertical-align: top;
+                }
     
-            .site-map {
-                width: 100%;
-        
-                .uk-list {
-                    .list-header {
-                        color: $site-colour-blue;
-                        font-weight: 600;
+                .social-media-icons {
+                    display: inline-block;
+                    padding-top: 5px;
+    
+                    &:hover {
+                        color: $site-colour-disabled-light;
+    
+                        .fas, .fab {
+                            &:hover {
+                                color: $site-colour-yellow;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+    
+                    .fas, .fab {
+                        font-size: 28px;
+                        transition: color ease 300ms;
+    
+                        ~.fas, ~.fab {
+                            margin-left: 15px;
+                        }
                     }
                 }
             }
+
+            .copyright-section {
+                border-top: 1px solid $site-colour-blue;
+                margin: 0 40px;
+                padding-top: 40px;
+
+                .as-roma-disclaimer {
+                    padding-bottom: 20px;
+                    font-size: 12px;
+                }
+    
+                .cc-copyright-logo {
+                    height: 30px;
+                    vertical-align: top;
+                }
+    
+                .copyright-text {
+                    line-height: 30px;
+                    display: inline-block;
+                    padding-left: 10px;
+                    vertical-align: top;
+                    font-weight: 600;
+                }
+            }
+        }
+
+        .fa-asterisk {
+            color: $site-colour-pink;
         }
     }
 }
 
-@media only screen and (max-width: 800px) {
-    .footer-container {
-        background-color: $site-colour-second-primary;
-        color: $site-colour-white;
-        display: table;
-        width: 100%;
-        font-size: 14px;
-        font-weight: 300;
-        padding-bottom: 20px;
+@media only screen and (min-width: 1023px) {
     
-        .footer-row {
-            display: table-row;
-            width: 100%;
-    
-            .footer-ad-placeholder {
-                margin: 10px;
-                display: block;
-            }
-    
-            .site-map {
-                width: 100%;
-        
-                .uk-list {
-                    .list-header {
-                        color: $site-colour-blue;
-                        font-weight: 600;
-                    }
-                }
-            }
-        }
-    }
 }

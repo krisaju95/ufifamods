@@ -9,10 +9,21 @@ a {
         text-decoration-color: #1F2C45;
     }
 
+    &.link-light {
+        color: #F5F5F5;
+        font-weight: 300;
+
+        &:hover, &:focus {
+            color: #FFFFFF;
+            text-decoration-color: #FFFFFF;
+        }
+    }
+
     &.button-link {
         display: inline-block;
         padding: 10px 30px;
         border-radius: 20px;
+        border: 2px solid transparent;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
 
         &:hover, &:focus {
@@ -21,6 +32,7 @@ a {
 
         &.primary-button-link {
             background-color: #305BA5;
+            border: 2px solid #305BA5;
             color: #FFFFFF;
 
             &:hover, &:focus {
@@ -32,11 +44,36 @@ a {
 
         &.secondary-button-link {
             background-color: #FFFFFF;
+            border: 2px solid #FFFFFF;
 
             &:hover, &:focus {
                 background-color: #FAFAFA;
                 box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
             }
+        }
+
+        &.ghost-button-link-light {
+            background-color: transparent;
+            border: 2px solid #FFFFFF;
+            color: #FFFFFF;
+
+            &:hover, &:focus {
+                border: 2px solid #FFC145;
+                color: #FFC145;
+                box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+            }
+        }
+    }
+
+    &.link-icon-left {
+        i {
+            margin-right: 5px;
+        }
+    }
+
+    &.link-icon-right {
+        i {
+            margin-left: 5px;
         }
     }
 }

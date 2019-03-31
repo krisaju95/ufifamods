@@ -2,14 +2,8 @@
     <div class="featured-posts-title">
         Featured Posts
     </div>
-    <div *ngFor="let postData of postsData">
-        <div class="post-card featured-post" matRipple (click)="routeToPost(postData['post-link'])">
-            <span class="post-category" [innerHTML]="postData['post-category']"></span>
-            <div class="post-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
-            <div class="post-text-content">
-                <div class="post-title" [innerHTML]="postData['post-title']"></div>
-            </div>
-        </div>
+    <div class="post-card-container" *ngFor="let postData of postsData">
+        <post-card [post]="postData"></post-card>
     </div>
 </div>
 <site-ad-placeholder [adZone]="3" [removeMargins]="true"></site-ad-placeholder>
