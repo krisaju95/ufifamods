@@ -1,18 +1,20 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router } from '@angular/router';
 
 @Injectable()
 export class UtilitiesService {
 
 	constructor(
-		private title: Title
+		private title: Title,
+		private router: Router
 	) { }
 
 	CSLP: string = "https://raw.githubusercontent.com/krisaju95/WWT-FIFA-Mods-Blog/cloud-storage";
 
 	siteDomain: string = "http://wwtfifamods.com/";
 
-	siteTitle: string = "WWT FIFA MODS | FIFA 19 News, Media, Mods and Tutorials";
+	siteTitle: string = "Ultimate FIFA Mods | FIFA 19 News, Media, Mods and Tutorials";
 
 	categoryColourMap: Object = {
 		"fut": "blue",
@@ -66,6 +68,10 @@ export class UtilitiesService {
 		else {
 			this.title.setTitle(this.getSiteTitle());
 		}
+	}
+	
+	routeToState(state: string) {
+		this.router.navigate(['/' + state]);
 	}
 
 	isMobileViewPort() {

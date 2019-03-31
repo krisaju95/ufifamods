@@ -24,6 +24,7 @@ export class HomeComponent {
 		let requestHeaders = new HttpHeaders();
 		requestHeaders.append('pragma', 'no-cache');
 		requestHeaders.append('cache-control', 'no-cache');
+		this.setFallbackState();
 		this.http.get(this.service.getCSLP() + "/blog-posts-list", {headers: requestHeaders})
 			.subscribe((data) => {
 				this.setBlogPostsArray(data);
@@ -45,5 +46,13 @@ export class HomeComponent {
 			postObject["post-link"] = blogPost;
 			this.blogPosts.push(postObject);
 		}
+	}
+
+	setFallbackState() {
+		setTimeout(() => {
+			if(this.responseLoading) {
+				this.service.routeToState('404');
+			}
+		}, 10000);
 	}
 }

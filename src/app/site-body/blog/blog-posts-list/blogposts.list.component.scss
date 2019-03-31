@@ -1,50 +1,39 @@
 @import '../../../variables.scss';
 
-@media only screen and (min-width: 800px) {
-    .blog-posts-page-container {
-        .blog-posts-page-header {
-            background-color: $site-colour-second-primary;
-            color: $site-colour-white;
-            font-size: 36px;
-            font-weight: bold;
-            padding: 40px 0;
-            padding-left: 10%;
-        }
-    
-        .blog-posts-list-container {
-            padding-left: 10%;
-            width: 50%;
-    
-            .blog-post {
-                width: 100%;
-                margin: 20px 0;
-    
-                .post-card {
-                    display: inline-table;
-                    width: 100%;
-                    height: 250px;
-    
-                    .post-image {
-                        display: table-cell;
-                        width: 30%;
-                    }
-    
-                    .post-text-content {
-                        display: table-cell;
-                        width: 70%;
-    
-                        .post-date {
-                            margin: 10px 0
-                        }
-                    }
+.blog-posts-page-container {
+    .blog-posts-page-header {
+        background-color: $site-colour-second-primary;
+        color: $site-colour-white;
+        font-size: 36px;
+        font-weight: bold;
+        padding: 60px;
+    }
+
+    .blog-posts-list-container {
+        padding: 0 60px;
+        width: calc(100% - 120px);
+
+        .blog-post {
+            width: 100%;
+            margin: 20px 0;
+            display: inline-table;
+
+            .post-card-container {
+                display: table-cell;
+                width: 33.33%;
+
+                ~.post-card-container {
+                    padding-left: 20px;
                 }
             }
-    
-            .pagination-controls {
-                text-align: right;
-                padding: 20px 0;
-    
-                button {
+        }
+
+        .pagination-controls {
+            text-align: center;
+            padding: 20px 0;
+
+            a {
+                ~a {
                     margin-left: 20px;
                 }
             }
@@ -53,31 +42,5 @@
 }
 
 @media only screen and (max-width: 800px) {
-    .blog-posts-page-container {
-        .blog-posts-page-header {
-            background-color: $site-colour-second-primary;
-            color: $site-colour-white;
-            font-size: 24px;
-            font-weight: bold;
-            padding: 20px 15px;
-        }
-    
-        .blog-posts-list-container {
-            padding: 0 15px;
-    
-            .blog-post {
-                width: 100%;
-                margin: 20px 0;
-            }
-    
-            .pagination-controls {
-                text-align: right;
-                padding: 20px 0;
-    
-                button {
-                    margin-left: 20px;
-                }
-            }
-        }
-    }
+
 }

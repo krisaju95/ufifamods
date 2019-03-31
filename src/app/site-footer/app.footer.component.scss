@@ -66,6 +66,7 @@
                 .social-media-icons {
                     display: inline-block;
                     padding-top: 5px;
+                    vertical-align: top;
     
                     &:hover {
                         color: $site-colour-disabled-light;
@@ -120,6 +121,29 @@
     }
 }
 
-@media only screen and (min-width: 1023px) {
+@media only screen and (max-width: 900px) {
+    .footer-container {    
+        .footer-row {
+            .site-map {
+                display: block;
+                width: 100%;
+        
+                .site-map-list {
+                    display: block;
+                    width: calc(100% - 80px);
+                    padding-left: 40px;
+                    margin-bottom: 40px;
+                }
+            }
     
+            &.bottom-section {    
+                .main-section {
+                    .social-media-icons {
+                        display: block;
+                        padding-top: 30px;
+                    }
+                }
+            }
+        }
+    }
 }

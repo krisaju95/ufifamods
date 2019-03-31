@@ -1,0 +1,18 @@
+<div class="error-page-container">
+    <div class="text-content">
+        <div class="error-code" [innerHTML]="errorCode"></div>
+        <div class="oops-text">Oops!</div>
+        <div class="error-description-text">
+            <div class="text-line-1">
+                Looks like something went wrong!
+            </div>
+            <div *ngIf="errorCode == '404'" class="text-line-2">
+                We can't find that page you're looking for. Please check if you have entered the URL correctly and contact us if the problem persists.
+            </div>
+            <div *ngIf="errorCode == '7'" class="text-line-2">
+                There was a problem with the request you made. This could be caused due to a network issue or if the site is under maintenance. Please contact us for further assistance.
+            </div>
+        </div>
+    </div>
+    <div class="griffin-art error-{{errorCode}}"></div>
+</div>

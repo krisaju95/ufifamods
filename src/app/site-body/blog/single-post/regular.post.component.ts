@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
 import { UtilitiesService } from '../../../services/utilities.service';
-import { Title } from '@angular/platform-browser';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 
 @Component({

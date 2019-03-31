@@ -7,11 +7,11 @@ import { BlogPageModule } from './blog/app.module';
 
 import { DatePipe } from '@angular/common';
 
-import { PageNotFoundComponent } from './pagenotfound/pagenotfound.component'
+import { ErrorPageComponent } from './error-page/error.page.component'
 
 @NgModule({
 	declarations: [
-		PageNotFoundComponent
+		ErrorPageComponent
 	],
 	imports: [
 		BrowserModule,

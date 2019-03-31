@@ -27,7 +27,7 @@ export class HomeMainPostComponent {
 			if(postObject["isFeatured"]) {
 				this.postsData.push(postObject);
 			}
-			if(this.postsData.length == 4) {
+			if(this.postsData.length == 5) {
 				break;
 			}
 		}
