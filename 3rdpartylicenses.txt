@@ -370,8 +370,6 @@ MIT
 
 @angular/material/button
 
-@angular/material/icon
-
 @angular/material/grid-list
 
 @angular/forms
@@ -614,6 +612,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 @angular/material/checkbox
 
 @angular/material/dialog
+
+@angular/material/tooltip
 
 @angular/material/sidenav
 
