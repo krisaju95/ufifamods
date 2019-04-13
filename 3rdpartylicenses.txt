@@ -204,9 +204,6 @@ Apache-2.0
  
 
 
-@angular/core
-MIT
-
 tslib
 Apache-2.0
 Apache License
@@ -367,8 +364,6 @@ THE SOFTWARE.
 MIT
 
 @angular/material/progress-spinner
-
-@angular/material/button
 
 @angular/material/grid-list
 
@@ -615,6 +610,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 @angular/material/tooltip
 
+@angular/material/button
+
+@angular/material/datepicker
+
 @angular/material/sidenav
 
 @fortawesome/fontawesome-svg-core
@@ -656,6 +655,9 @@ to represent the company, product, or service to which they refer.**
 
 
 @fortawesome/angular-fontawesome
+MIT
+
+@angular/core
 MIT
 
 core-js
