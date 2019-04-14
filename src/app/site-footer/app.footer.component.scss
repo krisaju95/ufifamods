@@ -65,7 +65,7 @@
     
                 .social-media-icons {
                     display: inline-block;
-                    padding-top: 5px;
+                    margin-top: 5px;
                     vertical-align: top;
     
                     &:hover {
@@ -135,12 +135,23 @@
                     margin-bottom: 40px;
                 }
             }
+
+            @media only screen and (max-width: 600px) {
+                &.bottom-section {
+                    .main-section {
+                        .contact-us-button, .bug-report-button {
+                            margin-right: 0;
+                            display: block;
+                        }
     
-            &.bottom-section {    
-                .main-section {
-                    .social-media-icons {
-                        display: block;
-                        padding-top: 30px;
+                        .bug-report-button {
+                            margin-top: 30px;
+                        }
+    
+                        .social-media-icons {
+                            display: block;
+                            margin-top: 30px;
+                        }
                     }
                 }
             }

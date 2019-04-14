@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, HostListener } from '@angular/core';
 import { UtilitiesService } from '../services/utilities.service';
+import { environment } from '../../environments/environment';
 
 @Component({
 	selector: 'site-header',
@@ -15,15 +16,17 @@ export class AppHeaderComponent {
 
 	@Output() showMobileNavbar: EventEmitter<boolean> = new EventEmitter<boolean>();
 
-	lightTheme: boolean = this.service.isTargetted();
+	showSearchDialog: boolean = false;
 	isDesktopViewPort: boolean = false;
 	isTabViewPort: boolean = false;
 	isMobileViewPort: boolean = false;
+	isProdMode: boolean = false;
 
 	ngOnInit() {
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isTabViewPort = this.service.isTabViewPort();
 		this.isMobileViewPort = this.service.isMobileViewPort();
+		this.isProdMode = environment.production;
 	}
 
 	showNavbar() {

@@ -1,39 +1,45 @@
 <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
-    <div class="blog-post-header" *ngIf="isDesktopViewPort">
+    <div class="blog-post-header" *ngIf="!isMobileViewPort">
         <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
         <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
         <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
     </div>
     <div class="blog-post-container">
         <div class="blog-post-content">
-            <div class="blog-post-header-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
-            <div class="blog-post-header-text" *ngIf="isMobileViewport">
-                <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
-                <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
-                <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
+            <div class="blog-post-main-content">
+                <div class="blog-post-header-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
+                <div class="blog-post-text-content">
+                    <div class="blog-post-header-text" *ngIf="isMobileViewPort">
+                        <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
+                        <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
+                        <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
+                    </div>
+                    <div class="blog-post-intro-text" [innerHTML]="postData['post-intro-text']"></div>
+                    <div class="blog-post-main-text">
+                        <div *ngFor="let para of postMainText" class="blog-post-para" [innerHTML]="para"></div>
+                    </div>
+                    <site-ad-placeholder class="blog-post-ad-placeholder" [removeMargins]="true" [adZone]="1"></site-ad-placeholder>
+                    <div class="blog-post-main-text">
+                        <div *ngFor="let para of postMainText2" class="blog-post-para" [innerHTML]="para"></div>
+                    </div>
+                    <contributors-panel [contributorsList]="contributorsList"></contributors-panel>
+                    <faces-included-panel [facesIncludedList]="facesIncludedList"></faces-included-panel>
+                    <screenshots-panel [screenshotsList]="screenshotsList"></screenshots-panel>
+                    <div class="mod-download-link-container" *ngIf="showModDisclaimer">
+                        <a class="button-link primary-button-link" href="javascript: void(0)" (click)="openDialog()">
+                            Download <i class="fas fa-cloud-download-alt"></i>
+                        </a>
+                    </div>
+                    <div class="blog-post-badges">
+                        <mat-chip-list>
+                            <mat-chip *ngFor="let category of categoryList">{{category}}</mat-chip>
+                        </mat-chip-list>
+                    </div>
+                    <div class="blog-post-outro-text" [innerHTML]="postData['post-last-para']"></div>
+                    <!-- <share-buttons [theme]="'modern-dark'" [include]="['facebook','twitter','google','pinterest','email']" [show]="5" [showCount]="true" [size]="0"></share-buttons> -->
+                </div>
             </div>
-            <div class="blog-post-intro-text" [innerHTML]="postData['post-intro-text']"></div>
-            <div class="blog-post-main-text">
-                <div *ngFor="let para of postMainText" class="blog-post-para" [innerHTML]="para"></div>
-            </div>
-            <site-ad-placeholder class="blog-post-ad-placeholder" [removeMargins]="true" [adZone]="1"></site-ad-placeholder>
-            <div class="blog-post-main-text">
-                <div *ngFor="let para of postMainText2" class="blog-post-para" [innerHTML]="para"></div>
-            </div>
-            <contributors-panel [contributorsList]="contributorsList"></contributors-panel>
-            <faces-included-panel [facesIncludedList]="facesIncludedList"></faces-included-panel>
-            <screenshots-panel [screenshotsList]="screenshotsList"></screenshots-panel>
-            <div class="mod-download-link-container" *ngIf="showModDisclaimer">
-                <button mat-flat-button color="primary" (click)="openDialog()">Download <i class="fas fa-cloud-download-alt"></i></button>
-            </div>
-            <div class="blog-post-badges">
-                <mat-chip-list>
-                    <mat-chip *ngFor="let category of categoryList">{{category}}</mat-chip>
-                </mat-chip-list>
-            </div>
-            <div class="blog-post-outro-text" [innerHTML]="postData['post-last-para']"></div>
-            <share-buttons [theme]="'modern-dark'" [include]="['facebook','twitter','google','pinterest','email']" [show]="5" [showCount]="true" [size]="0"></share-buttons>
             <disqus-thread class="disqus-thread-container" [page-identifier]="fileURL" [page-url]="siteURL + postURL"></disqus-thread>
         </div>
         <div class="blog-post-sidebar">

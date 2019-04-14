@@ -7,19 +7,29 @@
     padding: 20px 40px;
 
     .main-post-display-container {
-        height: 500px;
+        height: 720px;
         margin-bottom: 40px;
-        background-size: cover;
-        background-position: top left;
-        background-repeat: no-repeat;
         position: relative;
         display: table-cell;
         vertical-align: top;
 
-        ::ng-deep .post-card{
-            .post-text-content {
-                .post-title {
-                    font-size: 28px;
+        .hero-post-container {
+            position: relative;
+            height: calc(100% - 170px);
+            margin-bottom: 20px;
+        }
+
+        .bottom-posts-container {
+            display: inline-table;
+            width: 100%;
+
+            .bottom-post {
+                display: table-cell;
+                vertical-align: top;
+                width: 50%;
+
+                ~.bottom-post {
+                    padding-left: 20px;
                 }
             }
         }
@@ -48,12 +58,17 @@
     
         .main-post-display-container {
             margin-bottom: 20px;
+            height: auto;
             display: block;
 
-            ::ng-deep .post-card{
-                .post-text-content {
-                    .post-title {
-                        font-size: 24px;
+            .hero-post-container {
+                height: 420px;
+
+                ::ng-deep .post-card{
+                    .post-text-content {
+                        .post-title {
+                            font-size: 24px;
+                        }
                     }
                 }
             }
@@ -75,7 +90,24 @@
             }
         }
 
-        @media only screen and (max-width: 900px) {
+        @media only screen and (max-width: 768px) {
+            .main-post-display-container {
+                .bottom-posts-container {
+                    display: block;
+                    width: 100%;
+        
+                    .bottom-post {
+                        display: block;
+                        width: 100%;
+        
+                        ~.bottom-post {
+                            padding-left: 0;
+                            padding-top: 20px;
+                        }
+                    }
+                }
+            }
+
             .aside-posts-container {
                 display: block;
                 width: 100%;

@@ -1,5 +1,5 @@
 <div class="site-header-container" *ngIf="isDesktopViewPort">
-	<a matRipple class="site-logo-wrapper" href="javascript: void(0)" routerLink="/">
+	<a class="site-logo-wrapper" href="javascript: void(0)" routerLink="/">
 		<div class="site-title">
 			<div class="site-domain">
 				<span class="site-title-primary">u</span><span class="site-title-secondary">fifa</span><span class="site-title-primary">mods</span>
@@ -12,10 +12,11 @@
 	</a>
 	<div class="site-navbar-container">
 		<div class="site-navbar">
-			<a matRipple href="javascript: void(0)" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-			<a matRipple href="javascript: void(0)" routerLink="/blog" class="site-navigation-item" routerLinkActive="site-navigation-item-active">Blog</a>
-			<a matRipple href="javascript: void(0)" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Downloads</a>
-			<a matRipple href="javascript: void(0)" routerLink="/search" class="site-navigation-item site-search-button" routerLinkActive="site-navigation-icon-active"><i class="fas fa-search"></i></a>
+			<a href="javascript: void(0)" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+			<a href="javascript: void(0)" routerLink="/blog" class="site-navigation-item" routerLinkActive="site-navigation-item-active">Blog</a>
+			<a href="javascript: void(0)" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isProdMode">Downloads</a>
+			<a href="javascript: void(0)" routerLink="/admin" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isProdMode">Admin</a>
+			<a href="javascript: void(0)" class="site-navigation-item site-search-button" (click)="showSearchDialog = true"><i class="fas fa-search"></i></a>
 		</div>
 	</div>
 </div>
@@ -33,3 +34,5 @@
 	</div>
 	<i (click)="showNavbar()" class="fas fa-bars site-mobile-menu"></i>
 </div>
+
+<search-posts-dialog *ngIf="showSearchDialog" (dialogClosed)="showSearchDialog = false"></search-posts-dialog>

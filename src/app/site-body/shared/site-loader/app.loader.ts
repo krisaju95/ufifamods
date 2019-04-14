@@ -14,6 +14,7 @@ export class AppLoaderComponent {
 	) {}
 
 	@Input() fullScreenLoader: boolean;
+	@Input() absoluteLoader: boolean;
 
 	isDesktopViewport: boolean = this.service.isDesktopViewPort();
 	isMobileViewport: boolean = this.service.isMobileViewPort();

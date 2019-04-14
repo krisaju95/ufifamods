@@ -39,7 +39,8 @@ export class FeaturedPostsSidebarComponent {
 	setBlogPostsArray(blogPostsObject) {
 		for (let postUrl in blogPostsObject) {
 			let postObject = blogPostsObject[postUrl];
-			if(postObject['isFeatured']) {
+			if(postObject['isFeatured'] && postUrl != window.location.pathname) {
+				postObject['post-link'] = postUrl;
 				this.postsData.push(postObject);
 			}
 			if(this.postsData.length == 4) {

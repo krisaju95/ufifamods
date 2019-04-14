@@ -11,6 +11,8 @@ export class AppComponent {
 
 	@ViewChild('sidenav') sidenav: MatSidenav;
 
+	showSearchDialog: boolean = false;
+
 	openSideNav() {
 		document.body.style.overflow = "hidden";
 		this.sidenav.open()

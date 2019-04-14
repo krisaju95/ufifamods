@@ -31,13 +31,8 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     padding: 20px;
     padding-top: 10px;
     background-color: $site-colour-primary;
-    margin: 40px;
     border-radius: 5px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .5);
-
-    @media only screen and (max-width: 800px) {
-        margin: 0 20px;
-    }
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
 
     .ad-text {
         font-size: 12px;

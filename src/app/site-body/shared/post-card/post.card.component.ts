@@ -12,11 +12,13 @@ export class PostCardComponent {
     @Input() darkTheme: boolean;
 	@Input() hideDescription: boolean;
 	@Input() hideFooter: boolean;
-	@Input() position: string;
+	@Input() hideImage: boolean;
 	@Input() fullWidth: boolean;
 	@Input() textAlign: string;
+	@Input() cardStyle: string;
+	@Input() titleLineClamp: boolean;
 
 	ngOnInit() {
-
+		this.cardStyle = this.cardStyle || 'default';
 	}
 }

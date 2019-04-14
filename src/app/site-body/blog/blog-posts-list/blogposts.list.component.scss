@@ -15,7 +15,7 @@
 
         .blog-post {
             width: 100%;
-            margin: 20px 0;
+            margin-top: 20px;
             display: inline-table;
 
             .post-card-container {
@@ -30,7 +30,7 @@
 
         .pagination-controls {
             text-align: center;
-            padding: 20px 0;
+            padding: 40px 0;
 
             a {
                 ~a {
@@ -42,5 +42,19 @@
 }
 
 @media only screen and (max-width: 800px) {
-
+    .blog-posts-page-container {
+        .blog-posts-page-header {
+            font-size: 24px;
+            padding: 30px;
+        }
+    
+        .blog-posts-list-container {
+            padding: 0 20px;
+            width: calc(100% - 40px);
+    
+            .pagination-controls {
+                text-align: right;
+            }
+        }
+    }
 }

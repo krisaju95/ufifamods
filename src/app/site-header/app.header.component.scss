@@ -108,10 +108,10 @@
     
             &:hover {
                 .site-navigation-item {
-                    color: $site-colour-disabled-light;
+                    opacity: 0.5;
     
                     &:hover {
-                        color: $site-colour-white;
+                        opacity: 1;
                     }
                 }
             }
@@ -173,11 +173,12 @@
 
         .site-title {
             .site-domain {
+                font-size: 32px;
                 display: inline-block;
             }
         
             .site-tld {
-                font-size: 14px;
+                font-size: 12px;
                 display: inline-block;
             }
         }

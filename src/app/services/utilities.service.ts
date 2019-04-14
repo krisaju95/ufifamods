@@ -10,9 +10,9 @@ export class UtilitiesService {
 		private router: Router
 	) { }
 
-	CSLP: string = "https://raw.githubusercontent.com/krisaju95/WWT-FIFA-Mods-Blog/cloud-storage";
+	CSLP: string = "https://raw.githubusercontent.com/krisaju95/ufifamods/cloud-storage";
 
-	siteDomain: string = "http://wwtfifamods.com/";
+	siteDomain: string = "http://ufifamods.com/";
 
 	siteTitle: string = "Ultimate FIFA Mods | FIFA 19 News, Media, Mods and Tutorials";
 

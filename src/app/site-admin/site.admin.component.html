@@ -1,0 +1,107 @@
+<site-loader *ngIf="responseLoading" [fullScreenLoader]="true"></site-loader>
+<div class="site-admin-portal">
+    <div class="site-admin-portal-header">Admin Portal</div>
+    <div class="portal-body">
+        <div class="blog-post-form">
+            <form [formGroup]="blogPostForm" autocomplete="off" align="end">
+
+                <mat-form-field id="postTemplate" appearance="fill">
+                    <mat-label>Post Template</mat-label>
+                    <mat-select formControlName="postTemplate" disableOptionCentering="true">
+                        <mat-option value="fifa19:starheads">FIFA 19 Star Heads</mat-option>
+                        <mat-option value="fifa19:totw">FIFA 19 Team of the Week</mat-option>
+                        <mat-option value="fifa19:tots">FIFA 19 Team of the Season</mat-option>
+                        <mat-option value="fifa16:mods">FIFA 16 Mods</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field id="postDate" appearance="fill">
+                    <mat-label>Post Date</mat-label>
+                    <input matInput formControlName="postDate" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker></mat-datepicker>
+                </mat-form-field>
+
+                <mat-form-field id="postCategory" appearance="fill">
+                    <mat-label>Post Category</mat-label>
+                    <mat-select formControlName="postCategory" disableOptionCentering="true">
+                        <mat-option value="mods">Mods</mat-option>
+                        <mat-option value="totw">TOTW</mat-option>
+                        <mat-option value="tots">TOTS</mat-option>
+                        <mat-option value="fifa 18">FIFA 18</mat-option>
+                        <mat-option value="fifa 18">FIFA 16</mat-option>
+                        <mat-option value="player review">Player Review</mat-option>
+                        <mat-option value="career mode">Career Mode</mat-option>
+                        <mat-option value="fifa mods">FIFA Mods</mat-option>
+                        <mat-option value="fifa16 faces">FIFA 16 Faces</mat-option>
+                    </mat-select>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Title</mat-label>
+                    <input matInput formControlName="postTitle" placeholder="Enter the title of your post">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Description</mat-label>
+                    <input matInput formControlName="postDescription" placeholder="Enter the first line of your post">
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Content</mat-label>
+                    <textarea matInput cdkTextareaAutosize formControlName="postContent" cdkTextareaAutosize="true"
+                        cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10"></textarea>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Footer</mat-label>
+                    <input matInput formControlName="postFooterMessage" placeholder="Enter the last line of your post">
+                </mat-form-field>
+
+                <a class="button-link primary-button-link" href="javascript: void(0)" (click)="submitPost()">
+                    Generate Post
+                </a>
+
+            </form>
+        </div>
+        <div class="blog-post-output">
+            <div class="file-url-container">
+                <mat-form-field appearance="fill">
+                    <mat-label>Unique File Name</mat-label>
+                    <textarea id="uniqueFileURL" matInput cdkTextareaAutosize cdkTextareaAutosize="true"
+                        [(ngModel)]="uniqueFileURL" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="1"
+                        spellcheck="false"></textarea>
+                </mat-form-field>
+                <a class="button-link primary-button-link link-icon-right" href="javascript: void(0)"
+                    (click)="copyUniqueFileURL()">
+                    Copy File Name <i class="fas fa-copy"></i>
+                </a>
+            </div>
+            <div class="text-area-container" align="end">
+                <mat-form-field appearance="fill">
+                    <mat-label>Single Post JSON Output</mat-label>
+                    <textarea id="singlePostJSON" matInput cdkTextareaAutosize cdkTextareaAutosize="true"
+                        [(ngModel)]="blogPostJSON" cdkAutosizeMinRows="20" cdkAutosizeMaxRows="20"
+                        spellcheck="false"></textarea>
+                </mat-form-field>
+                <a class="button-link primary-button-link link-icon-right overlay-button-link"
+                    href="javascript: void(0)" (click)="copySinglePostJSON()">
+                    Copy JSON <i class="fas fa-copy"></i>
+                </a>
+            </div>
+
+            <div class="text-area-container" align="end">
+                <mat-form-field appearance="fill">
+                    <mat-label>Blog Posts List JSON Output</mat-label>
+                    <textarea id="blogPostsListJSON" matInput cdkTextareaAutosize cdkTextareaAutosize="true"
+                        [(ngModel)]="blogPostListJSON" cdkAutosizeMinRows="20" cdkAutosizeMaxRows="20"
+                        spellcheck="false"></textarea>
+                </mat-form-field>
+                <a class="button-link primary-button-link link-icon-right overlay-button-link"
+                    href="javascript: void(0)" (click)="copyBlogPostsListJSON()">
+                    Copy JSON <i class="fas fa-copy"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

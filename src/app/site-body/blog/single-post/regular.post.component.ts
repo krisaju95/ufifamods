@@ -1,4 +1,4 @@
-import { Component, Inject } from '@angular/core';
+import { Component, Inject, HostListener } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer } from '@angular/platform-browser';
@@ -36,24 +36,24 @@ export class RegularBlogPostComponent {
 	showModDisclaimer: boolean = false;
 	downloadText: string = "Download";
 	categoryList: Array<string> = [];
-	targettedPostHeader: number = 0;
 
 	isDesktopViewPort: boolean = false;
-	isMobileViewport: boolean = false;
+	isTabViewPort: boolean = false;
+	isMobileViewPort: boolean = false;
 
 	ngOnInit() {
 		this.siteURL = this.service.getSiteDomain();
 		this.postURL = this.getPostURL();
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
-		this.isMobileViewport = this.service.isMobileViewPort();
+		this.isTabViewPort = this.service.isTabViewPort();
+		this.isMobileViewPort = this.service.isMobileViewPort();
 		this.initialiseData(this.postURL);
 	}
 
-	initialiseData(postURL) {
+	initialiseData(postURL: string) {
 		this.postURL = postURL;
 		this.responseLoading = true;
 		this.getPostData();
-		this.targettedPostHeader = this.service.getTargettedBlogPostHeader();
 	}
 
 	getPostData() {
@@ -122,12 +122,25 @@ export class RegularBlogPostComponent {
 			data: {
 				url: this.postData['mod-download-link']
 			},
+			maxWidth: '500px',
 			panelClass: 'wwt-mat-dialog'
 		});
 	}
 
 	sanitizeURL(data) {
 		return this.sanitizer.bypassSecurityTrustHtml(data)
+	}
+
+	@HostListener('window:resize') onWindowResize() {
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isTabViewPort = this.service.isTabViewPort();
+		this.isMobileViewPort = this.service.isMobileViewPort();
+	}
+
+	@HostListener('window:orientationchange') onOrientationChange() {
+		this.isDesktopViewPort = this.service.isDesktopViewPort();
+		this.isTabViewPort = this.service.isTabViewPort();
+		this.isMobileViewPort = this.service.isMobileViewPort();
 	}
 
 }

@@ -1,0 +1,65 @@
+@import '../variables.scss';
+
+.site-admin-portal {
+    padding: 40px;
+    display: block;
+
+    .site-admin-portal-header {
+        font-size: 32px;
+        font-weight: 800;
+        color: $site-colour-blue;
+        margin-bottom: 40px;
+    }
+
+    .portal-body {
+        display: inline-table;
+        width: 100%;
+
+        .blog-post-form {
+            vertical-align: top;
+            display: table-cell;
+            width: 50%;
+            padding-right: 40px;
+
+            mat-form-field {
+                display: block;
+                width: 100%;
+
+                &#postDate, &#postCategory {
+                    display: inline-block;
+                    width: calc(50% - 10px);
+                }
+
+                &#postCategory {
+                    margin-left: 20px;
+                }
+            }
+        }
+
+        .blog-post-output {
+            vertical-align: top;
+            display: table-cell;
+            width: 50%;
+
+            .file-url-container {
+                mat-form-field {
+                    width: 380px;
+                }
+
+                a {
+                    margin: 10px 0;
+                    float: right;
+                }
+            }
+
+            .text-area-container {
+                position: relative;
+
+                mat-form-field {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

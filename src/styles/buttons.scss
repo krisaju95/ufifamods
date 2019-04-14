@@ -1,0 +1,25 @@
+button:not(.mat-icon-button) {
+    border: none;
+    background: #305BA5;
+    color: #F5F5F5;
+    font-weight: 600;
+    cursor: pointer;
+    min-height: 40px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
+    transition: all 300ms;
+
+    &:hover, &:focus {
+        background: #1F2C45;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    }
+
+    &.circular-button {
+        height: 50px;
+        width: 50px;
+        line-height: 50px;
+        border-radius: 100%;
+        padding: 0;
+    }
+}

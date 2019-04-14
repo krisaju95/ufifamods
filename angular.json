@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "wwt-fifa-mods-blog": {
+    "ufifamods": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/wwt-fifa-mods-blog",
+            "outputPath": "dist/ufifamods",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,18 +50,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "wwt-fifa-mods-blog:build"
+            "browserTarget": "ufifamods:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "wwt-fifa-mods-blog:build:production"
+              "browserTarget": "ufifamods:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "wwt-fifa-mods-blog:build"
+            "browserTarget": "ufifamods:build"
           }
         },
         "test": {
@@ -95,7 +95,7 @@
         }
       }
     },
-    "wwt-fifa-mods-blog-e2e": {
+    "ufifamods-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "architect": {
@@ -103,11 +103,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "wwt-fifa-mods-blog:serve"
+            "devServerTarget": "ufifamods:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "wwt-fifa-mods-blog:serve:production"
+              "devServerTarget": "ufifamods:serve:production"
             }
           }
         },
@@ -123,5 +123,5 @@
       }
     }
   },
-  "defaultProject": "wwt-fifa-mods-blog"
+  "defaultProject": "ufifamods"
 }

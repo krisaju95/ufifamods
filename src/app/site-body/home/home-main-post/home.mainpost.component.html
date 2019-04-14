@@ -1,13 +1,19 @@
 <div class="home-page-featured-posts-container">
     <div class="main-post-display-container">
-        <post-card [post]="postsData[0]" [darkTheme]="true" [position]="'absolute'" [fullWidth]="true"></post-card>
+        <div class="hero-post-container">
+            <post-card [post]="postsData[0]" cardStyle="hero" [darkTheme]="true" [fullWidth]="true"></post-card>
+        </div>
+        <div class="bottom-posts-container">
+            <post-card class="bottom-post" [post]="postsData[3]" [titleLineClamp]="true" [hideImage]="true" [hideDescription]="true" [darkTheme]="true"></post-card>
+            <post-card class="bottom-post" [post]="postsData[4]" [titleLineClamp]="true" [hideImage]="true" [hideDescription]="true" [darkTheme]="true"></post-card>
+        </div>
     </div>
     <div class="aside-posts-container">
         <div class="aside-post-container">
-            <post-card [post]="postsData[1]" [darkTheme]="true" [hideDescription]="true"></post-card>
+            <post-card [post]="postsData[1]" [darkTheme]="true" [titleLineClamp]="true" [hideDescription]="true"></post-card>
         </div>
         <div class="aside-post-container">
-            <post-card [post]="postsData[2]" [darkTheme]="true" [hideDescription]="true"></post-card>
+            <post-card [post]="postsData[2]" [darkTheme]="true" [titleLineClamp]="true" [hideDescription]="true"></post-card>
         </div>
     </div>
 </div>

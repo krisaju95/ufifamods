@@ -13,15 +13,16 @@
             </div>
         </div>
         <div class="pagination-controls">
-            <a *ngIf="startPostIndex != 0" class="button-link secondary-button-link" href="javascript: void(0)"
+            <a *ngIf="startPostIndex != 0" class="button-link primary-button-link" href="javascript: void(0)"
                 (click)="fetchSinglePageResults(currentPageNumber - 1)">
                 <i class="fas fa-chevron-left"></i>
             </a>
-            <a *ngFor="let pageNumber of pageNumbers; let pageIndex = index" class="button-link secondary-button-link" href="javascript: void(0)"
-                (click)="fetchSinglePageResults(pageNumber)">
-                {{pageNumber}}
-            </a>
-            <a *ngIf="endPostIndex != (numberOfPosts - 1)"  class="button-link secondary-button-link" href="javascript: void(0)"
+            <ng-container *ngIf="!isMobileViewPort">
+                <a *ngFor="let pageNumber of pageNumbers; let pageIndex = index" class="button-link secondary-button-link" [ngClass]="{'highlight-outline': pageNumber == currentPageNumber}" href="javascript: void(0)" (click)="fetchSinglePageResults(pageNumber)">
+                    {{pageNumber}}
+                </a>
+            </ng-container>
+            <a *ngIf="endPostIndex != (numberOfPosts - 1)"  class="button-link primary-button-link" href="javascript: void(0)"
                 (click)="fetchSinglePageResults(currentPageNumber + 1)">
                 <i class="fas fa-chevron-right"></i>
             </a>

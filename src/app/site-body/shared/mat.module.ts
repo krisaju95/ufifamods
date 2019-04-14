@@ -1,43 +1,52 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {
-	MatCardModule,
 	MatRippleModule,
 	MatChipsModule,
 	MatDialogModule,
 	MatButtonModule,
 	MatCheckboxModule,
 	MatGridListModule,
-	MatIconModule,
 	MatSidenavModule,
-	MatTooltipModule
+	MatTooltipModule,
+	MatInputModule,
+	MatDatepickerModule,
+	MatNativeDateModule,
+	MatSelectModule
 } from '@angular/material';
 
 @NgModule({
 	imports: [
 		BrowserModule,
-		MatCardModule,
 		MatRippleModule,
 		MatChipsModule,
 		MatDialogModule,
 		MatButtonModule,
 		MatCheckboxModule,
 		MatGridListModule,
-		MatIconModule,
 		MatSidenavModule,
-		MatTooltipModule
+		MatTooltipModule,
+		MatInputModule,
+		MatDatepickerModule,
+		MatNativeDateModule,
+		MatSelectModule
 	],
 	exports: [
-		MatCardModule,
 		MatRippleModule,
 		MatChipsModule,
 		MatDialogModule,
 		MatButtonModule,
 		MatCheckboxModule,
 		MatGridListModule,
-		MatIconModule,
 		MatSidenavModule,
-		MatTooltipModule
+		MatTooltipModule,
+		MatInputModule,
+		MatDatepickerModule,
+		MatNativeDateModule,
+		MatSelectModule
+	],
+	providers: [
+		MatDatepickerModule
 	]
 })
 

@@ -2,20 +2,22 @@
     <div class="mod-disclaimer-container">
         <div class="mod-disclaimer-header" mat-dialog-title>Important:</div>
         <mat-dialog-content class="mod-disclaimer">
-            This patch was created by the WWT Modding Team and is not available for re-distribution without prior
+            This patch was created by the UFM Modding Team and is not available for re-distribution without prior
             permission. Please refrain from re-publishing these mods on external sites for monetary reasons (or otherwise).
             For installation instructions, refer to the readme file provided in the patch. The patch is not compatible with
             console versions of FIFA like XBOX and PS. It is meant solely for PC users.
             <mat-checkbox class="tnc-checkbox" [(ngModel)]="tNcCheckbox">I have read and understood the Terms & Conditions</mat-checkbox>
         </mat-dialog-content>
         <mat-dialog-actions align="end">
-            <button mat-flat-button [disabled]="!tNcCheckbox" (click)="downloadFile()">Download File</button>
+            <a class="button-link primary-button-link" [attr.aria-disabled]="!tNcCheckbox" href="javascript: void(0)" (click)="downloadFile()">
+                Download File
+            </a>
         </mat-dialog-actions>
     </div>
 </ng-container>
 <ng-container *ngIf="downloadButtonClicked">
     <div class="thank-you-message">
-        Thank you for downloading from wwtfifamods.com. Your file will begin downloading in a few seconds...
+        Thank you for downloading from <a href="javascript: void(0)" routerLink="/">ufifamods.com</a>. Your file will begin downloading in a few seconds...
     </div>
     <div class="download-error-message">
         If you're download doesn't begin automatically,

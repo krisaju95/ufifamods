@@ -661,7 +661,8 @@ input.mat-input-element {
     top: 0;
     left: 0;
     height: 100%;
-    width: 100%
+    width: calc(100% - 20px);
+    padding: 0 10px;
 }
 
 .cdk-overlay-container {
@@ -1454,8 +1455,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-dialog-container {
-    background: #fff;
-    color: rgba(0, 0, 0, .87)
+    background: #F1F3F4;
 }
 
 .mat-divider {
@@ -1586,7 +1586,8 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field-appearance-fill .mat-form-field-flex {
-    background-color: rgba(0, 0, 0, .04)
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
 }
 
 .mat-form-field-appearance-fill.mat-form-field-disabled .mat-form-field-flex {
@@ -1853,6 +1854,13 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 
 .mat-select-arrow {
     color: rgba(0, 0, 0, .54)
+}
+
+.mat-select-panel {
+    background: white;
+    border-radius: 5px;
+    border: 1px solid #EFEFEF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
 }
 
 .mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple) {
@@ -2278,4 +2286,8 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 
 .mat-simple-snackbar-action {
     color: #ff4081
+}
+
+.mat-drawer-inner-container {
+    max-height: 100vh;
 }

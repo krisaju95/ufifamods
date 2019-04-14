@@ -22,7 +22,7 @@ export class BlogPostsListComponent {
 	blogPostsArray: Array<object> = [];
 	numberOfPosts: number = 0;
 	numberOfPages: number = 0;
-	currentPageNumber: number = 0;
+	currentPageNumber: number = 1;
 	startPostIndex: number = 0;
 	endPostIndex: number = 12;
 	numberOfPostsPerRow: number = 3;
@@ -52,9 +52,11 @@ export class BlogPostsListComponent {
 				this.numberOfPosts = Object.keys(this.blogPostsObject).length;
 				this.numberOfPages = Math.ceil(this.numberOfPosts / this.numberOfPostsPerPage);
 				this.convertObjectToArray();
-				let pageNumber: number = parseInt(this.route.snapshot.paramMap.get('pageNumber') || '1') - 1;
+				let pageNumber: number = parseInt(this.route.snapshot.paramMap.get('pageNumber') || '1');
 				if (typeof pageNumber == 'number' && pageNumber != NaN && pageNumber >= 0 && pageNumber < this.numberOfPages) {
 					this.fetchSinglePageResults(pageNumber);
+				} else {
+					this.service.routeToState('blog/pages/1');
 				}
 				if (timeDiff < 2000) {
 					setTimeout(() => {
@@ -75,6 +77,7 @@ export class BlogPostsListComponent {
 				'post-text-content': postObject['post-text-content'],
 				'post-image': postObject['post-image'],
 				'post-category': postObject['post-category'] ? postObject['post-category'] : postObject['post-category-list'].split(';')[0],
+				'post-link': post,
 				postURL: post,
 				postDate: this.getDate(post)
 			})
@@ -89,17 +92,38 @@ export class BlogPostsListComponent {
 
 	fetchSinglePageResults(pageNumber) {
 		window.scroll(0, 0);
-		if (pageNumber < this.currentPageNumber) {
-			this.startPostIndex = this.startPostIndex - this.numberOfPostsPerPage;
-			this.endPostIndex = this.endPostIndex - this.numberOfPostsPerPage;
-		}
-		else if (pageNumber > this.currentPageNumber) {
-			this.startPostIndex = this.startPostIndex + this.numberOfPostsPerPage;
-			this.endPostIndex = this.endPostIndex + this.numberOfPostsPerPage;
-		}
+		this.startPostIndex = this.numberOfPostsPerPage * (pageNumber - 1);
+		this.endPostIndex = this.numberOfPostsPerPage * (pageNumber);
 		this.currentPageNumber = pageNumber;
-		this.service.routeToState('blog/all/pages/' + pageNumber);
+		this.setPageNumbers();
+		if (pageNumber > 1 && pageNumber <= this.numberOfPages) {
+			this.service.routeToState('blog/pages/' + pageNumber);
+		} else {
+			this.service.routeToState('blog');
+		}
 		this.showLoader(2000);
+	}
+
+	setPageNumbers() {
+		if (this.currentPageNumber > 2 && this.currentPageNumber < (this.numberOfPages - 2)) {
+			this.pageNumbers = [
+				this.currentPageNumber - 2,
+				this.currentPageNumber - 1,
+				this.currentPageNumber,
+				this.currentPageNumber + 1,
+				this.currentPageNumber + 2
+			]
+		} else if (this.currentPageNumber > 0 && this.currentPageNumber < 3) {
+			this.pageNumbers = [1, 2, 3, 4, 5];
+		} else if (this.currentPageNumber > (this.numberOfPages - 2) && this.currentPageNumber <= this.numberOfPages) {
+			this.pageNumbers = [
+				this.numberOfPages - 4,
+				this.numberOfPages - 3,
+				this.numberOfPages - 2,
+				this.numberOfPages - 1,
+				this.numberOfPages
+			]
+		}
 	}
 
 	showLoader(loaderTime) {

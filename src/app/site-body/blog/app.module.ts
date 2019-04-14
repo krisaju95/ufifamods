@@ -12,7 +12,7 @@ import { ContributorsPanelComponent } from './contributors-panel/contributors.pa
 import { FacesIncludedPanelComponent } from './faces-included-panel/faces.included.panel.component';
 
 import { AppRoutingModule } from '../../app-routing.module';
-import { SearchPostsComponent } from './search-posts/search.posts.component';
+import { SearchPostsDialogComponent, SearchPostsDialog } from './search-posts/search.posts.dialog';
 
 import { MaterialModule } from '../shared/mat.module';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
@@ -27,7 +27,8 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 		ScreenShotsPanelComponent,
 		ContributorsPanelComponent,
 		FacesIncludedPanelComponent,
-		SearchPostsComponent
+		SearchPostsDialogComponent,
+		SearchPostsDialog
 	],
 	imports: [
 		BrowserModule,
@@ -49,10 +50,12 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 		ScreenShotsPanelComponent,
 		ContributorsPanelComponent,
 		FacesIncludedPanelComponent,
-		SearchPostsComponent
+		SearchPostsDialogComponent,
+		SearchPostsDialog
 	],
 	entryComponents: [
-		ModDownloadDialog
+		ModDownloadDialog,
+		SearchPostsDialog
 	]
 })
 

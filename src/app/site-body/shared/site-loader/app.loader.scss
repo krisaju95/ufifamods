@@ -29,7 +29,7 @@
         left: 0;
 
         mat-spinner {
-            top: calc(50% - 120px);
+            top: calc(50% - 100px);
             left: calc(50% - 50px);
         }
 
@@ -39,7 +39,7 @@
             width: 100%;
             text-align: center;
             position: absolute;
-            bottom: calc(50% - 40px);
+            bottom: calc(50% - 50px);
             color: $site-colour-primary;
         }
     }

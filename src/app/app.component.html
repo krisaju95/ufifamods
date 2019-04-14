@@ -18,7 +18,7 @@
             </div>
             <div class="button-text">Downloads</div>
         </button>
-        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/search" routerLinkActive="nav-drawer-button-active">
+        <button (click)="closeSideNav(); showSearchDialog = true" mat-button class="nav-drawer-button">
             <div class="button-icon">
                 <i class="fas fa-search"></i>
             </div>
@@ -31,3 +31,5 @@
         <site-footer></site-footer>
     </mat-sidenav-content>
 </mat-sidenav-container>
+
+<search-posts-dialog *ngIf="showSearchDialog" (dialogClosed)="showSearchDialog = false"></search-posts-dialog>

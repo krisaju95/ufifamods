@@ -1,19 +1,23 @@
 @import './wwt-mat-theme.css';
 @import '../node_modules/ngx-sharebuttons/styles/share-buttons.scss';
 @import '../node_modules/ngx-sharebuttons/styles/themes/modern/modern-dark-theme.scss';
-@import './styles/typography/typography.scss';
+@import './styles/main.scss';
 
 body {
     font-family: Raleway, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     margin: 0;
     background: #F1F3F4;
 
-    a, input, .post-card {
+    a, input, .post-card, textarea, button {
         outline: 0;
     }
 
     .mat-checkbox-label {
         white-space: normal;
+    }
+
+    .mat-drawer-container.mat-sidenav-container {
+        background-color: transparent;
     }
 }
 
@@ -25,4 +29,13 @@ body {
           -ms-user-select: none; /* Internet Explorer/Edge */
               user-select: none; /* Non-prefixed version, currently
                                     supported by Chrome and Opera */
+}
+
+.ad-placeholder-with-margin {
+    margin: 40px;
+    display: block;
+    
+    @media only screen and (max-width: 800px) {
+        margin: 20px;
+    }
 }

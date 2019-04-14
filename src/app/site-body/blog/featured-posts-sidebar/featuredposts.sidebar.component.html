@@ -3,7 +3,7 @@
         Featured Posts
     </div>
     <div class="post-card-container" *ngFor="let postData of postsData">
-        <post-card [post]="postData"></post-card>
+        <post-card (click)="routeToPost(postData['post-link'])" [post]="postData"></post-card>
     </div>
 </div>
-<site-ad-placeholder [adZone]="3" [removeMargins]="true"></site-ad-placeholder>
+<site-ad-placeholder [adZone]="3"></site-ad-placeholder>

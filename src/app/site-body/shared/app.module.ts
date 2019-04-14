@@ -7,6 +7,7 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { AppRoutingModule } from '../../app-routing.module';
 import { MaterialModule } from '../shared/mat.module';
 import { TimeSincePipe } from '../../pipes/time.since.pipe';
+import { MultiStringPipe } from '../../pipes/mutistring.pipe';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { TimeSincePipe } from '../../pipes/time.since.pipe';
 		AdPlaceholderComponent,
 		AppLoaderComponent,
 		PostCardComponent,
-		TimeSincePipe
+		TimeSincePipe,
+		MultiStringPipe
 	],
 	imports: [
 		BrowserModule,
@@ -29,7 +31,8 @@ import { TimeSincePipe } from '../../pipes/time.since.pipe';
 		AdPlaceholderComponent,
 		AppLoaderComponent,
 		PostCardComponent,
-		TimeSincePipe
+		TimeSincePipe,
+		MultiStringPipe
 	]
 })
 
