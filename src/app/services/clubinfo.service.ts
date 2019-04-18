@@ -7,6 +7,7 @@ export class ClubInfoService {
 		"epl": {
 			name: "English Premier League",
 			country: "England",
+			countryCode: "ENG",
 			clubs: {
 				"arsenal": {
 					name: "Arsenal F.C.",
@@ -107,6 +108,113 @@ export class ClubInfoService {
 					name: "Wolverhampton Wanderers F.C.",
 					league: "English Premier League",
 					country: "England"
+				}
+			}
+		},
+		"laliga": {
+			name: "Spanish La Liga",
+			country: "Spain",
+			countryCode: "ESP",
+			clubs: {
+				"alaves": {
+					name: "Deportivo Alavés, S.A.D.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"athletic": {
+					name: "Athletic Club de Bilbao",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"atletico": {
+					name: "Club Atlético de Madrid",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"barcelona": {
+					name: "Barcelona C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"celta": {
+					name: "Real Club Celta de Vigo",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"eibar": {
+					name: "Sociedad Deportiva Eibar",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"espanyol": {
+					name: "Real Club Espanyol",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"getafe": {
+					name: "Getafe C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"girona": {
+					name: "Girona C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"huesca": {
+					name: "Sociedad Deportiva Huesca",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"leganes": {
+					name: "Club Deportivo Leganés",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"levante": {
+					name: "Levante Unión Deportiva",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"rayo": {
+					name: "Rayo Vallecano",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"realbetis": {
+					name: "Real Betis Balompié",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"realmadrid": {
+					name: "Real Madrid C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"realsociedad": {
+					name: "Real Sociedad de Fútbol",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"sevilla": {
+					name: "Sevilla F.C.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"valencia": {
+					name: "Valencia C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"realvalladolid": {
+					name: "Real Valladolid C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
+				},
+				"villarreal": {
+					name: "Villarreal C.F.",
+					league: "Spanish La Liga",
+					country: "Spain"
 				}
 			}
 		}

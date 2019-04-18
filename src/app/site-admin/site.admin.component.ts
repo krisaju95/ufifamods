@@ -29,6 +29,7 @@ export class SiteAdminComponent {
 	blogPostListJSON: string;
 	blogPostJSON: string;
 	uniqueFileURL: string = '';
+	countriesList: Array<string> = this.constantsProviderService.getConstant('countries');
 	contributorsList: Array<string> = this.constantsProviderService.getConstant('contributorsList');
 	postCategories: Array<string> = this.constantsProviderService.getConstant('blogPostCategories');
 	selectedContributorsList: Array<string> = [];

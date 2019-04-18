@@ -81,6 +81,7 @@
                                                 {{getLeagueListObject(league).name}}
                                             </mat-option>
                                         </mat-select>
+                                        <span *ngIf="starHead.value.playerLeague" matSuffix class="nation-flag mat-input-suffix-flag {{getLeagueListObject(starHead.value.playerLeague).countryCode}}"></span>
                                     </mat-form-field>
                                     <mat-form-field *ngIf="starHead.value.playerLeague" class="player-club" appearance="fill">
                                         <mat-label>Club</mat-label>
@@ -89,13 +90,18 @@
                                                 {{getClubInfo(starHead.controls.playerLeague.value, club).name}}
                                             </mat-option>
                                         </mat-select>
+                                        <span *ngIf="starHead.value.playerClub" matSuffix class="club-crest mat-input-suffix-crest {{starHead.value.playerClub}}"></span>
                                     </mat-form-field>
                                 </div>
                                 <div class="player-info-row">
                                     <mat-form-field class="player-nationality" appearance="fill">
                                         <mat-label>Nationality</mat-label>
-                                        <input matInput formControlName="playerNationality"/>
-                                        <span matSuffix class="nation-flag" [background.src]="'https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/' + 'ARG'"></span>
+                                        <mat-select formControlName="playerNationality">
+                                            <mat-option *ngFor="let country of (countriesList | objectKeys)" [value]="country">
+                                                {{countriesList[country].name}}
+                                            </mat-option>
+                                        </mat-select>
+                                        <span *ngIf="starHead.value.playerNationality" matSuffix class="nation-flag mat-input-suffix-flag {{starHead.value.playerNationality}}"></span>
                                     </mat-form-field>
 
                                     <mat-form-field class="player-screenshot" appearance="fill">

@@ -1,0 +1,22 @@
+.club-crest {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+
+    &.mat-input-suffix-crest {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    &.arsenal {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/epl/arsenal.png');
+    }
+
+    &.barcelona {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/laliga/barcelona.png');
+    }
+}

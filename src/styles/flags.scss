@@ -1,0 +1,62 @@
+.nation-flag {
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 100%;
+
+    &.mat-input-suffix-flag {
+        display: block;
+        margin: auto;
+        margin-top: 20px;
+    }
+
+    &.ARG {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/ARG.png');
+    }
+
+    &.BEL {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/BEL.png');
+    }
+
+    &.BOS {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/BOS.png');
+    }
+
+    &.BRA {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/BRA.png');
+    }
+
+    &.ENG {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/ENG.png');
+    }
+
+    &.ESP {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/ESP.png');
+    }
+
+    &.FRA {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/FRA.png');
+    }
+
+    &.GER {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/GER.png');
+    }
+
+    &.ITA {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/ITA.png');
+    }
+
+    &.JAP {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/JAP.png');
+    }
+
+    &.POL {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/POL.png');
+    }
+
+    &.POR {
+        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/POR.png');
+    }
+}

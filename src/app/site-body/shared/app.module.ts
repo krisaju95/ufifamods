@@ -8,6 +8,7 @@ import { AppRoutingModule } from '../../app-routing.module';
 import { MaterialModule } from '../shared/mat.module';
 import { TimeSincePipe } from '../../pipes/time.since.pipe';
 import { MultiStringPipe } from '../../pipes/mutistring.pipe';
+import { ObjectKeysPipe } from '../../pipes/object-keys.pipe';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MultiStringPipe } from '../../pipes/mutistring.pipe';
 		AppLoaderComponent,
 		PostCardComponent,
 		TimeSincePipe,
-		MultiStringPipe
+		MultiStringPipe,
+		ObjectKeysPipe
 	],
 	imports: [
 		BrowserModule,
@@ -32,7 +34,8 @@ import { MultiStringPipe } from '../../pipes/mutistring.pipe';
 		AppLoaderComponent,
 		PostCardComponent,
 		TimeSincePipe,
-		MultiStringPipe
+		MultiStringPipe,
+		ObjectKeysPipe
 	]
 })
 
