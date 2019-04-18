@@ -1,11 +1,17 @@
 <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
-    <div class="blog-post-header" *ngIf="!isMobileViewPort">
-        <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
-        <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
-        <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
+    <div class="standard-site-section-container dark-theme-section-container">
+        <div class="standard-site-section">
+            <div class="blog-post-header" *ngIf="!isMobileViewPort">
+                <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
+                <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
+                <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
+            </div>
+        </div>
     </div>
-    <div class="blog-post-container">
+    <div class="standard-site-section-container">
+        <div class="standard-site-section">
+            <div class="blog-post-container">
         <div class="blog-post-content">
             <div class="blog-post-main-content">
                 <div class="blog-post-header-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
@@ -44,6 +50,8 @@
         </div>
         <div class="blog-post-sidebar">
             <featured-posts-sidebar (selectPostEvent)="initialiseData($event)"></featured-posts-sidebar>
+        </div>
+            </div>
         </div>
     </div>
 </div>

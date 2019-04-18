@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
+import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { DatePipe } from '@angular/common';
 import { UtilitiesService } from '../services/utilities.service';
+import { ClubInfoService } from '../services/clubinfo.service';
+import { ConstantsProviderService } from '../services/constants-provider.service';
+import { COMMA, ENTER } from '@angular/cdk/keycodes';
 
 @Component({
 	selector: 'site-admin',
@@ -15,7 +18,9 @@ export class SiteAdminComponent {
 	constructor(
 		private datePipe: DatePipe,
 		private http: HttpClient,
-		private service: UtilitiesService
+		private service: UtilitiesService,
+		private clubInfoService: ClubInfoService,
+		private constantsProviderService: ConstantsProviderService
 	) { }
 
 	responseLoading: boolean = true;
@@ -24,6 +29,11 @@ export class SiteAdminComponent {
 	blogPostListJSON: string;
 	blogPostJSON: string;
 	uniqueFileURL: string = '';
+	contributorsList: Array<string> = this.constantsProviderService.getConstant('contributorsList');
+	postCategories: Array<string> = this.constantsProviderService.getConstant('blogPostCategories');
+	selectedContributorsList: Array<string> = [];
+	selectedPostTags: Array<string> = [];
+	readonly separatorKeysCodes: number[] = [ENTER, COMMA];
 
 	ngOnInit() {
 		let requestHeaders = new HttpHeaders();
@@ -37,17 +47,26 @@ export class SiteAdminComponent {
 			});
 		this.blogPostForm = new FormGroup({
 			postTemplate: new FormControl(''),
-			postDate: new FormControl('', [Validators.required]),
-			postTitle: new FormControl('', [Validators.required]),
-			postCategory: new FormControl('', [Validators.required]),
-			morePostCategories: new FormControl('', [Validators.required]),
-			postDescription: new FormControl('', [Validators.required]),
-			postContent: new FormControl('', [Validators.required]),
-			postFooterMessage: new FormControl('', [Validators.required]),
+			postDate: new FormControl(''),
+			postTitle: new FormControl(''),
+			postCategory: new FormControl(''),
+			morePostCategories: new FormControl(''),
+			postDescription: new FormControl(''),
+			postContent: new FormControl(''),
+			postFooterMessage: new FormControl(''),
 			postMedia: new FormControl(''),
 			contributorsList: new FormControl(''),
 			showModDisclaimer: new FormControl(false),
-			starHeadsList: new FormControl(''),
+			starHeadsList: new FormArray([
+				new FormGroup({
+					playerName: new FormControl(''),
+					playerLeague: new FormControl(''),
+					playerClub: new FormControl(''),
+					playerNationality: new FormControl(''),
+					playerScreenshot: new FormControl('')
+				})
+			]),
+			formVersion: new FormControl('v2019'),
 			modDownloadLink: new FormControl('')
 		});
 
@@ -58,14 +77,25 @@ export class SiteAdminComponent {
 					this.blogPostForm.controls.postCategory.setValue('mods');
 					this.blogPostForm.controls.postDescription.setValue('features in this pack.');
 					this.blogPostForm.controls.postFooterMessage.setValue('Enjoying our content? Like, Share & Comment!');
+					this.selectedPostTags = ['fifa 19', 'fifa mods', 'fifa 19 faces']
 					this.blogPostForm.controls.showModDisclaimer.setValue(true);
+					break;
+				}
+				case 'fifa16:starheads': {
+					this.blogPostForm.controls.postTitle.setValue('FIFA 16: Custom Star-heads Patch - FP #');
+					this.blogPostForm.controls.postCategory.setValue('mods');
+					this.blogPostForm.controls.postDescription.setValue('features in this pack.');
+					this.blogPostForm.controls.postFooterMessage.setValue('Enjoying our content? Like, Share & Comment!');
+					this.selectedPostTags = ['fifa 16', 'fifa mods', 'fifa 16 faces']
+					this.blogPostForm.controls.showModDisclaimer.setValue(true);
+					break;
 				}
 			}
 		})
 	}
 
 	submitPost() {
-		// this.blogPostJSON = JSON.stringify(this.blogPostForm.value, null, 4);
+		console.log(this.blogPostForm);
 		this.blogPostJSON = JSON.stringify(this.generateModPost(), null, 5);
 		this.blogPostListRawJSON[this.generatePostLink()] = this.generateBlogPostListModPost();
 		this.blogPostListJSON = JSON.stringify(this.blogPostListRawJSON, null, 5);
@@ -91,26 +121,19 @@ export class SiteAdminComponent {
 
 	generateModPost() {
 		return {
-			"post-date": this.datePipe.transform(this.getFormElement('postDate'), 'yyyy-MM-dd'),
-			"post-category": this.getFormElement('postCategory'),
-			"post-title": this.getFormElement('postTitle'),
-			"post-intro-text": this.getFormElement('postDescription'),
+			"post-date": this.datePipe.transform(this.getFormElementValue('postDate'), 'yyyy-MM-dd'),
+			"post-category": this.getFormElementValue('postCategory'),
+			"post-title": this.getFormElementValue('postTitle'),
+			"post-intro-text": this.getFormElementValue('postDescription'),
 			"post-main-text-array": this.generateMainPostTextArray(),
-			"post-last-para": this.getFormElement('postFooterMessage'),
+			"post-last-para": this.getFormElementValue('postFooterMessage'),
 			"post-link": this.generatePostLink(),
-			"post-media": this.getFormElement('postMedia'),
-			"post-category-list": "",
-			"contributors-list": [
-				"karron97",
-				"krisaju95"
-			],
-			"show-mod-disclaimer": this.getFormElement('showModDisclaimer'),
-			"faces-included-list": [
-				"Cristian Zapata, AC Milan, Colombia NT",
-				"Alex Iwobi, Arsenal FC, Nigeria NT",
-				"Daniel Crowley, Willem II, England NT"
-			],
-			"mod-download-link": this.getFormElement('modDownloadLink')
+			"post-media": this.getFormElementValue('postMedia'),
+			"post-category-list": this.selectedPostTags,
+			"contributors-list": this.selectedContributorsList,
+			"show-mod-disclaimer": this.getFormElementValue('showModDisclaimer'),
+			"faces-included-list": this.getFormElementValue('starHeadsList'),
+			"mod-download-link": this.getFormElementValue('modDownloadLink')
 		}
 	}
 
@@ -120,26 +143,38 @@ export class SiteAdminComponent {
 			"post-json-url": this.getUniqueFileURL(),
 			"post-date": blogPostJSON['post-date'],
 			"post-category": blogPostJSON['post-category'],
-			"post-category-list": "fifa 16;fifa mods;fifa 16 faces",
+			"post-category-list": this.selectedPostTags,
 			"post-image": blogPostJSON['post-media'],
 			"post-title": blogPostJSON['post-title'],
-			"post-text-content": blogPostJSON['post-intro-text'] + ' ' + blogPostJSON['post-main-text-array'].join(' ') + ' ' + blogPostJSON['contributors-list'].join(', '),
+			"post-text-content": this.generateSearchTextContent(blogPostJSON),
 			"isFeatured": blogPostJSON['isFeatured']
 		}
 	}
 
-	getFormElement(formElementName: string): any {
+	getFormElementValue(formElementName: string): any {
 		return this.blogPostForm.controls[formElementName].value;
 	}
 
+	generateSearchTextContent(blogPostJSON) {
+		let searchTextContent = blogPostJSON['post-intro-text'] + ' ' + blogPostJSON['post-main-text-array'].join(' ') + ' ' + blogPostJSON['contributors-list'].join(', ');
+		if(blogPostJSON['faces-included-list']) {
+			searchTextContent = searchTextContent + '. Includes custom star-heads for ';
+			let starHeadList = [];
+			for(let starHead of blogPostJSON['faces-included-list']) {
+				starHeadList.push(starHead.playerName);
+			}
+			searchTextContent = searchTextContent + starHeadList.join(', ');
+		}
+	}
+
 	generatePostLink(): string {
-		let postDate: string = this.datePipe.transform(this.getFormElement('postDate'), 'yyyy-MM-dd');
-		let formattedPostTitle: string = this.getFormElement('postTitle').toLowerCase().replace(/[\-\:\'\#]/g, '').replace(/'  '/g, ' ').split(' ').join('-');
+		let postDate: string = this.datePipe.transform(this.getFormElementValue('postDate'), 'yyyy-MM-dd');
+		let formattedPostTitle: string = this.getFormElementValue('postTitle').toLowerCase().replace(/[\-\:\'\#]/g, '').replace(/\s\s/g, ' ').split(' ').join('-');
 		return '/blog/post/' + postDate.split('-').join('/') + '/' + formattedPostTitle;
 	}
 
 	generateMainPostTextArray() {
-		let mainPostContent: string = JSON.stringify(this.getFormElement('postContent'));
+		let mainPostContent: string = JSON.stringify(this.getFormElementValue('postContent'));
 		let mainPostContentArray: Array<string> = [];
 		let formattedMainPostContentArray: Array<string> = [];
 		mainPostContent = mainPostContent.replace(/\"/g, '');
@@ -165,11 +200,63 @@ export class SiteAdminComponent {
 			fileURLparts.push(fileURLpart)
 		}
 		let uniqueFileURL = fileURLparts.join('-');
-		if(!this.blogPostListRawJSON.hasOwnProperty(uniqueFileURL)) {
+		if (!this.blogPostListRawJSON.hasOwnProperty(uniqueFileURL)) {
 			this.uniqueFileURL = uniqueFileURL;
 			return uniqueFileURL;
 		} else {
 			return this.getUniqueFileURL();
 		}
+	}
+
+	addNewStarHeadRow() {
+		(<FormArray>this.blogPostForm.get('starHeadsList')).push(new FormGroup({
+			playerName: new FormControl(''),
+			playerLeague: new FormControl(''),
+			playerClub: new FormControl(''),
+			playerNationality: new FormControl(''),
+			playerScreenshot: new FormControl('')
+		}))
+	}
+
+	removePlayer(starHeadIndex: number) {
+		(<FormArray>this.blogPostForm.get('starHeadsList')).removeAt(starHeadIndex);
+	}
+
+	addContributor(event: any): void {
+		if (event && event.option && event.option.viewValue) {
+			this.selectedContributorsList.push(event.option.viewValue);
+			(<FormArray>this.blogPostForm.get('contributorsList')).setValue(null);
+		}
+	}
+
+	removeContributor(listIndex: number) {
+		this.selectedContributorsList.splice(listIndex, 1);
+	}
+
+	addTag(event: any): void {
+		if (event && event.option && event.option.viewValue) {
+			this.selectedPostTags.push(event.option.viewValue);
+			(<FormArray>this.blogPostForm.get('morePostCategories')).setValue(null);
+		}
+	}
+
+	removeTag(listIndex: number) {
+		this.selectedPostTags.splice(listIndex, 1);
+	}
+
+	getLeagueListKeys() {
+		return this.clubInfoService.getLeagueListKeys();
+	}
+
+	getLeagueListObject(leagueName: string) {
+		return this.clubInfoService.getLeagueInfo(leagueName);
+	}
+
+	getClubListKeys(leagueName: string) {
+		return this.clubInfoService.getClubListKeys(leagueName);
+	}
+
+	getClubInfo(leagueName: string, clubName: string) {
+		return this.clubInfoService.getClubInfo(leagueName, clubName);
 	}
 }

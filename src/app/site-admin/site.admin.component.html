@@ -3,7 +3,7 @@
     <div class="site-admin-portal-header">Admin Portal</div>
     <div class="portal-body">
         <div class="blog-post-form">
-            <form [formGroup]="blogPostForm" autocomplete="off" align="end">
+            <form [formGroup]="blogPostForm" autocomplete="off">
 
                 <mat-form-field id="postTemplate" appearance="fill">
                     <mat-label>Post Template</mat-label>
@@ -11,7 +11,7 @@
                         <mat-option value="fifa19:starheads">FIFA 19 Star Heads</mat-option>
                         <mat-option value="fifa19:totw">FIFA 19 Team of the Week</mat-option>
                         <mat-option value="fifa19:tots">FIFA 19 Team of the Season</mat-option>
-                        <mat-option value="fifa16:mods">FIFA 16 Mods</mat-option>
+                        <mat-option value="fifa16:starheads">FIFA 16 Star Heads</mat-option>
                     </mat-select>
                 </mat-form-field>
 
@@ -40,17 +40,123 @@
                 <mat-form-field appearance="fill">
                     <mat-label>Post Title</mat-label>
                     <input matInput formControlName="postTitle" placeholder="Enter the title of your post">
+                    <i matSuffix class="fas fa-heading"></i>
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
                     <mat-label>Post Description</mat-label>
                     <input matInput formControlName="postDescription" placeholder="Enter the first line of your post">
+                    <i matSuffix class="fas fa-certificate"></i>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Image</mat-label>
+                    <input matInput formControlName="postMedia" placeholder="Enter the URL of the post image">
+                    <i matSuffix class="fas fa-image"></i>
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
                     <mat-label>Post Content</mat-label>
                     <textarea matInput cdkTextareaAutosize formControlName="postContent" cdkTextareaAutosize="true"
                         cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10"></textarea>
+                    <i matSuffix class="fas fa-align-left"></i>
+                </mat-form-field>
+
+                <ng-container *ngIf="blogPostForm.controls.postTemplate.value == 'fifa19:starheads'">
+                    <div class="player-starhead-info">
+                        <div class="player-starhead-info-header">
+                            Custom Star-heads
+                        </div>
+                        <div class="player-starhead-info-row" *ngFor="let starHead of blogPostForm.controls.starHeadsList.controls; let i = index" [formGroup]="starHead">
+                            <div class="player-starhead-form">
+                                <mat-form-field class="player-name" appearance="fill">
+                                    <mat-label>Player Name</mat-label>
+                                    <input matInput formControlName="playerName"/>
+                                </mat-form-field>
+                                <div class="player-info-row">
+                                    <mat-form-field class="player-league" appearance="fill">
+                                        <mat-label>League</mat-label>
+                                        <mat-select formControlName="playerLeague">
+                                            <mat-option *ngFor="let league of getLeagueListKeys()" [value]="league">
+                                                {{getLeagueListObject(league).name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                    <mat-form-field *ngIf="starHead.value.playerLeague" class="player-club" appearance="fill">
+                                        <mat-label>Club</mat-label>
+                                        <mat-select formControlName="playerClub">
+                                            <mat-option *ngFor="let club of getClubListKeys(starHead.controls.playerLeague.value)" [value]="club">
+                                                {{getClubInfo(starHead.controls.playerLeague.value, club).name}}
+                                            </mat-option>
+                                        </mat-select>
+                                    </mat-form-field>
+                                </div>
+                                <div class="player-info-row">
+                                    <mat-form-field class="player-nationality" appearance="fill">
+                                        <mat-label>Nationality</mat-label>
+                                        <input matInput formControlName="playerNationality"/>
+                                        <span matSuffix class="nation-flag" [background.src]="'https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/flags/' + 'ARG'"></span>
+                                    </mat-form-field>
+
+                                    <mat-form-field class="player-screenshot" appearance="fill">
+                                        <mat-label>Screenshot</mat-label>
+                                        <input matInput formControlName="playerScreenshot"/>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="player-starhead-form-controls">
+                                <a class="button-link simple-button" href="javascript: void(0)" (click)="removePlayer(i)">
+                                    <i class="far fa-times-circle"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="add-another-player-link">
+                            <a class="button-link secondary-button-link link-icon-right" href="javascript: void(0)" (click)="addNewStarHeadRow()">
+                                Add another Player <i class="fas fa-plus"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Contributors</mat-label>
+                        <mat-chip-list #contributorsChipList>
+                            <mat-chip *ngFor="let contributor of selectedContributorsList; let i = index" [removable]="true" (removed)="removeContributor(i)">
+                                {{contributor}}
+                                <i matChipRemove class="far fa-times-circle"></i>
+                            </mat-chip>
+                            <input formControlName="contributorsList" [matAutocomplete]="contributorAutoComplete" [matChipInputFor]="contributorsChipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="addContributor($event)">
+                        </mat-chip-list>
+                        <mat-autocomplete #contributorAutoComplete="matAutocomplete" (optionSelected)="addContributor($event)">
+                            <mat-option *ngFor="let contributor of contributorsList" [value]="contributor">
+                                {{contributor}}
+                            </mat-option>
+                        </mat-autocomplete>
+                        <i matSuffix class="fas fa-people-carry"></i>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Download URL</mat-label>
+                        <input matInput formControlName="modDownloadLink" placeholder="Enter the file link">
+                        <i matSuffix class="fas fa-link"></i>
+                    </mat-form-field>
+
+                </ng-container>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Tags</mat-label>
+                    <mat-chip-list #tagsChipList>
+                        <mat-chip *ngFor="let contributor of selectedPostTags; let i = index" [removable]="true" (removed)="removeTag(i)">
+                            {{contributor}}
+                            <i matChipRemove class="far fa-times-circle"></i>
+                        </mat-chip>
+                        <input formControlName="morePostCategories" [matAutocomplete]="contributorAutoComplete" [matChipInputFor]="tagsChipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="addTag($event)">
+                    </mat-chip-list>
+                    <mat-autocomplete #contributorAutoComplete="matAutocomplete" (optionSelected)="addTag($event)">
+                        <mat-option *ngFor="let category of postCategories" [value]="category">
+                            {{category}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <i matSuffix class="fas fa-tags"></i>
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
@@ -71,6 +177,7 @@
                     <textarea id="uniqueFileURL" matInput cdkTextareaAutosize cdkTextareaAutosize="true"
                         [(ngModel)]="uniqueFileURL" cdkAutosizeMinRows="1" cdkAutosizeMaxRows="1"
                         spellcheck="false"></textarea>
+                    <i matSuffix class="fas fa-link"></i>
                 </mat-form-field>
                 <a class="button-link primary-button-link link-icon-right" href="javascript: void(0)"
                     (click)="copyUniqueFileURL()">
@@ -83,6 +190,7 @@
                     <textarea id="singlePostJSON" matInput cdkTextareaAutosize cdkTextareaAutosize="true"
                         [(ngModel)]="blogPostJSON" cdkAutosizeMinRows="20" cdkAutosizeMaxRows="20"
                         spellcheck="false"></textarea>
+                    <i matSuffix class="fas fa-indent"></i>
                 </mat-form-field>
                 <a class="button-link primary-button-link link-icon-right overlay-button-link"
                     href="javascript: void(0)" (click)="copySinglePostJSON()">
@@ -96,6 +204,7 @@
                     <textarea id="blogPostsListJSON" matInput cdkTextareaAutosize cdkTextareaAutosize="true"
                         [(ngModel)]="blogPostListJSON" cdkAutosizeMinRows="20" cdkAutosizeMaxRows="20"
                         spellcheck="false"></textarea>
+                    <i matSuffix class="fas fa-indent"></i>
                 </mat-form-field>
                 <a class="button-link primary-button-link link-icon-right overlay-button-link"
                     href="javascript: void(0)" (click)="copyBlogPostsListJSON()">

@@ -19,6 +19,20 @@ body {
     .mat-drawer-container.mat-sidenav-container {
         background-color: transparent;
     }
+
+    .standard-site-section-container {
+        display: block;
+
+        &.dark-theme-section-container {
+            background: #161F30;
+        }
+
+        .standard-site-section {
+            max-width: 1600px;
+            margin: 0 auto;
+            display: block;
+        }
+    }
 }
 
 .no-highlight {
@@ -36,6 +50,6 @@ body {
     display: block;
     
     @media only screen and (max-width: 800px) {
-        margin: 20px;
+        margin: 10px;
     }
 }

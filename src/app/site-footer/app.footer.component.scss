@@ -65,13 +65,11 @@
     
                 .social-media-icons {
                     display: inline-block;
-                    margin-top: 5px;
-                    vertical-align: top;
     
                     &:hover {
                         color: $site-colour-disabled-light;
     
-                        .fas, .fab {
+                        a {
                             &:hover {
                                 color: $site-colour-yellow;
                                 cursor: pointer;
@@ -79,11 +77,11 @@
                         }
                     }
     
-                    .fas, .fab {
+                    a {
                         font-size: 28px;
                         transition: color ease 300ms;
     
-                        ~.fas, ~.fab {
+                        ~a {
                             margin-left: 15px;
                         }
                     }

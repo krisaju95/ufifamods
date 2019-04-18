@@ -297,7 +297,32 @@
 
 .mat-form-field-prefix .mat-icon-button .mat-icon, .mat-form-field-suffix .mat-icon-button .mat-icon {
     height: 1.125em;
-    line-height: 1.125
+    line-height: 1.125;
+}
+
+.mat-form-field-flex .mat-form-field-suffix {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    line-height: 60px;
+    background: #FFFFFF;
+}
+
+.mat-form-field-flex .mat-input-element, .mat-form-field-flex .mat-select-value {
+    font-weight: 600;
+}
+
+.mat-datepicker-toggle {
+    transform: translateY(5px);
+    display: inline-block;
+}
+
+.mat-form-field-suffix .fa, .mat-form-field-suffix .fas, .mat-form-field-suffix .fab {
+    font-size: 18px;
+    color: #666;
 }
 
 .mat-form-field-infix {
@@ -1282,17 +1307,19 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-chip.mat-standard-chip {
-    background-color: #DEEFFF;
-    color: #2F2E2E;
+    background-color: #305BA5;
+    color: #F5F5F5;
 }
 
 .mat-chip.mat-standard-chip .mat-chip-remove {
-    color: rgba(0, 0, 0, .87);
-    opacity: .4
+    color: #F5F5F5;
+    font-size: 18px;
+    opacity: 1;
+    transition: opacity ease 300ms;
 }
 
 .mat-chip.mat-standard-chip .mat-chip-remove:hover {
-    opacity: .54
+    opacity: 0.5;
 }
 
 .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {

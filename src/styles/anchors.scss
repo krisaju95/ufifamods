@@ -87,6 +87,14 @@ a {
                 text-align: center;
             }
         }
+
+        &.simple-button {
+            padding: 0;
+
+            &.simple-button-light {
+                color: #F5F5F5;
+            }
+        }
     }
 
     &.link-icon-left {

@@ -1,4 +1,4 @@
-button:not(.mat-icon-button) {
+button:not(.mat-icon-button):not(.mat-button) {
     border: none;
     background: #305BA5;
     color: #F5F5F5;

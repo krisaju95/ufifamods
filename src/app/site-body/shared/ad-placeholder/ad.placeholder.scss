@@ -19,7 +19,7 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
         width: 100%;
         max-width: 728px;
 
-        @media only screen and (max-width: 800px) {
+        @media only screen and (max-width: 900px) and (max-width: 500px) {
             height: auto !important;
             width: 100% !important;
         }
@@ -33,6 +33,10 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     background-color: $site-colour-primary;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+
+    @media only screen and (max-width: 900px) and (max-width: 500px) {
+        padding: 10px;
+    }
 
     .ad-text {
         font-size: 12px;

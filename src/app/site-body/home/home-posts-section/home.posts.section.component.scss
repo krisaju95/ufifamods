@@ -56,15 +56,19 @@
     .home-page-posts-container {
         .home-page-section-header {
             .home-page-section-title {
-                font-size: 28px;
+                font-size: 24px;
+                padding-top: 20px;
+                border-top: 5px solid rgba(0, 0, 0, 0.05);
+                max-width: 80%;
+                margin: auto;
             }
         }
     
         .home-page-section-posts-container {
             .blog-posts-section-container {
                 display: block;
-                width: calc(100% - 40px);
-                padding: 0 20px;
+                width: calc(100% - 20px);
+                padding: 0 10px;
     
                 .post-section-container-row {
                     display: block;
@@ -75,7 +79,7 @@
                         width: 100%;
 
                         ~.post-container-cell {
-                            margin-top: 20px;
+                            margin-top: 10px;
                         }
     
                         .post-image {

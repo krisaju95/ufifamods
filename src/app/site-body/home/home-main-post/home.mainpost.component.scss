@@ -62,15 +62,7 @@
             display: block;
 
             .hero-post-container {
-                height: 420px;
-
-                ::ng-deep .post-card{
-                    .post-text-content {
-                        .post-title {
-                            font-size: 24px;
-                        }
-                    }
-                }
+                height: 380px;
             }
         }
     
@@ -90,7 +82,9 @@
             }
         }
 
-        @media only screen and (max-width: 768px) {
+        @media only screen and (max-width: 900px) and (max-height: 900px) {
+            width: calc(100% - 20px);
+            padding: 10px;
             .main-post-display-container {
                 .bottom-posts-container {
                     display: block;
@@ -102,7 +96,7 @@
         
                         ~.bottom-post {
                             padding-left: 0;
-                            padding-top: 20px;
+                            padding-top: 10px;
                         }
                     }
                 }
@@ -118,7 +112,7 @@
                     width: 100%;
     
                     ~.aside-post-container {
-                        margin-top: 20px;
+                        margin-top: 10px;
                         padding-left: 0;
                     }
                 }

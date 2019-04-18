@@ -12,7 +12,8 @@ import {
 	MatInputModule,
 	MatDatepickerModule,
 	MatNativeDateModule,
-	MatSelectModule
+	MatSelectModule,
+	MatAutocompleteModule
 } from '@angular/material';
 
 @NgModule({
@@ -29,7 +30,8 @@ import {
 		MatInputModule,
 		MatDatepickerModule,
 		MatNativeDateModule,
-		MatSelectModule
+		MatSelectModule,
+		MatAutocompleteModule
 	],
 	exports: [
 		MatRippleModule,
@@ -43,7 +45,8 @@ import {
 		MatInputModule,
 		MatDatepickerModule,
 		MatNativeDateModule,
-		MatSelectModule
+		MatSelectModule,
+		MatAutocompleteModule
 	],
 	providers: [
 		MatDatepickerModule
