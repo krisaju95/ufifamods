@@ -88,7 +88,11 @@ export class SearchPostsDialog {
                     postObject['search-result-snippet'] = this.getSearchSnippet(postObject['post-text-content'], searchIndex);
                     postObject['search-result-snippet'] = this.getHighlightedSnippet(postObject['search-result-snippet'])
                     postObject["post-link"] = postData;
-                    postObject["post-categories"] = postObject["post-category-list"].split(";");
+                    if (typeof postObject['post-category-list'] == 'string') {
+                        postObject["post-categories"] = postObject["post-category-list"].split(";");
+                    } else {
+                        postObject["post-categories"] = postObject["post-category-list"]
+                    }
                     this.postsData.push(postObject);
                 }
             }
