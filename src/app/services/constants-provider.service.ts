@@ -73,6 +73,9 @@ export class ConstantsProviderService {
 			POR: {
 				name: 'Portugal'
 			},
+			URU: {
+				name: 'Uruguay'
+			},
 		}
 	}
 

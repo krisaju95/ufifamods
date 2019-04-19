@@ -1,6 +1,6 @@
 <site-loader *ngIf="responseLoading" [fullScreenLoader]="true"></site-loader>
 <div class="site-admin-portal">
-    <div class="site-admin-portal-header">Admin Portal</div>
+    <div class="site-admin-portal-header">Create a new post</div>
     <div class="portal-body">
         <div class="blog-post-form">
             <form [formGroup]="blogPostForm" autocomplete="off">
@@ -44,15 +44,15 @@
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">
-                    <mat-label>Post Description</mat-label>
-                    <input matInput formControlName="postDescription" placeholder="Enter the first line of your post">
-                    <i matSuffix class="fas fa-certificate"></i>
-                </mat-form-field>
-
-                <mat-form-field appearance="fill">
                     <mat-label>Post Image</mat-label>
                     <input matInput formControlName="postMedia" placeholder="Enter the URL of the post image">
                     <i matSuffix class="fas fa-image"></i>
+                </mat-form-field>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Description</mat-label>
+                    <input matInput formControlName="postDescription" placeholder="Enter the first line of your post">
+                    <i matSuffix class="fas fa-certificate"></i>
                 </mat-form-field>
 
                 <mat-form-field appearance="fill">

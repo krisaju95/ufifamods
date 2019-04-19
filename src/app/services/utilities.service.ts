@@ -48,7 +48,12 @@ export class UtilitiesService {
 	filterPostsData(blogPosts, category) {
 		let filteredPostsData = [];
 		for (let postObject of blogPosts) {
-			let categoriesList = (postObject["post-category-list"].toLowerCase()).split(";");
+			let categoriesList: Array<string> = [];
+			if (typeof postObject['post-category-list'] == 'string') {
+				categoriesList = (postObject["post-category-list"].toLowerCase()).split(";");
+			} else {
+				categoriesList = postObject["post-category-list"];
+			}
 			if (categoriesList.indexOf(category.toLowerCase()) > -1) {
 				filteredPostsData.push(postObject);
 			}
@@ -69,7 +74,7 @@ export class UtilitiesService {
 			this.title.setTitle(this.getSiteTitle());
 		}
 	}
-	
+
 	routeToState(state: string) {
 		this.router.navigate(['/' + state]);
 	}

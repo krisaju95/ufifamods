@@ -29,7 +29,7 @@ export class TimeSincePipe implements PipeTransform {
 		}
 		interval = Math.floor(seconds / 86400);
 		if (interval > 1) {
-			return timeIcon + interval + "days ago";
+			return timeIcon + interval + " days ago";
 		} else if (interval == 1) {
 			return timeIcon + "Yesterday";
 		} else {

@@ -3,6 +3,13 @@
         Star-heads Included:
     </div>
     <ul class="faces-included-list">
-        <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
+        <ng-container *ngIf="!isNewJSONVersion">
+            <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
+        </ng-container>
+        <ng-container *ngIf="isNewJSONVersion">
+            <li class="faces-included-list-item" *ngFor="let face of facesIncludedList">
+                <span class="player-name" [innerHTML]="face.playerName"></span>
+            </li>
+        </ng-container>
     </ul>
 </div>

@@ -313,6 +313,7 @@
 
 .mat-form-field-flex .mat-input-element, .mat-form-field-flex .mat-select-value {
     font-weight: 600;
+    max-width: calc(100% - 60px);
 }
 
 .mat-datepicker-toggle {
