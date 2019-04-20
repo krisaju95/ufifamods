@@ -17,6 +17,7 @@ export class AdPlaceholderComponent {
 	@Input() removeMargins: boolean;
 
 	adBlockerUsed: boolean = false;
+	imageLoadCheckInterval: any;
 
 	adZoneMap: Object = {
 		1: "1443",
@@ -27,11 +28,26 @@ export class AdPlaceholderComponent {
 	ngAfterViewInit() {
 		this.loadAd()
 			.then(() => {
-				//
+				this.checkForFailedImageLoads();
 			})
 			.catch(() => {
 				this.adBlockerUsed = true;
 			});
+	}
+
+	checkForFailedImageLoads() {
+		this.imageLoadCheckInterval = setTimeout(() => {
+			let imagesArray = this.elementRef.nativeElement.querySelectorAll('img');
+			let insArray = this.elementRef.nativeElement.querySelectorAll('ins');
+			for (let image of imagesArray) {
+				image.addEventListener('error', (error) => {
+					image.src = "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/aderror/72890.jpg";
+				});
+			}
+			for (let ins of insArray) {
+				ins.style.display = "inline-block";
+			}
+		}, 500);
 	}
 
 	loadAd(): Promise<any> {
@@ -47,7 +63,7 @@ export class AdPlaceholderComponent {
 				let adDOMContainer = document.getElementById("adDOMContainer");
 				adDOMContainer.appendChild(script);
 			}
-			catch(e) {
+			catch (e) {
 				this.adBlockerUsed = true;
 			}
 		});
