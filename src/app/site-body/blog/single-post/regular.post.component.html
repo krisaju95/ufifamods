@@ -23,11 +23,11 @@
                     </div>
                     <div class="blog-post-intro-text" [innerHTML]="postData['post-intro-text']"></div>
                     <div class="blog-post-main-text">
-                        <div *ngFor="let para of postMainText" class="blog-post-para" [innerHTML]="para"></div>
+                        <div *ngFor="let para of (postMainTextArray | slice : 0 : 4)" class="blog-post-para" [innerHTML]="para"></div>
                     </div>
                     <site-ad-placeholder class="blog-post-ad-placeholder" [removeMargins]="true" [adZone]="1"></site-ad-placeholder>
                     <div class="blog-post-main-text">
-                        <div *ngFor="let para of postMainText2" class="blog-post-para" [innerHTML]="para"></div>
+                        <div *ngFor="let para of (postMainTextArray | slice : 4)" class="blog-post-para" [innerHTML]="para"></div>
                     </div>
                     <contributors-panel [contributorsList]="contributorsList"></contributors-panel>
                     <faces-included-panel [facesIncludedList]="facesIncludedList"></faces-included-panel>

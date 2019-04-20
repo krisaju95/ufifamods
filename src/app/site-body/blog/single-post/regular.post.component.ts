@@ -28,8 +28,6 @@ export class RegularBlogPostComponent {
 	fileURL: string = "";
 	postData: Object;
 	postMainTextArray: Array<string> = [];
-	postMainText: any;
-	postMainText2: any;
 	contributorsList: Array<string> = [];
 	facesIncludedList: Array<string> = [];
 	screenshotsList: Array<string> = [];
@@ -69,7 +67,6 @@ export class RegularBlogPostComponent {
 						this.facesIncludedList = this.postData['faces-included-list'] || [];
 						this.screenshotsList = this.postData['screenshots-list'] || [];
 						this.showModDisclaimer = (this.postData['show-mod-disclaimer'] == true || this.postData['show-mod-disclaimer'] == 'true')
-						this.processMainPostContent();
 						this.getPostCategories();
 						window.scroll(0, 0);
 						this.service.setPageTitle(this.postData['post-title'], false);
@@ -83,17 +80,6 @@ export class RegularBlogPostComponent {
 					window.location.href = "/404"
 				}
 			)
-	}
-
-	processMainPostContent() {
-		if (this.postMainTextArray.length > 4) {
-			this.postMainText = this.postMainTextArray.slice(0, Math.floor(this.postMainTextArray.length / 2));
-			this.postMainText2 = this.postMainTextArray.slice(Math.floor(this.postMainTextArray.length / 2), this.postMainTextArray.length);
-		}
-		else {
-			this.postMainText = this.postMainTextArray;
-			this.postMainText2 = [];
-		}
 	}
 
 	getPostURL() {

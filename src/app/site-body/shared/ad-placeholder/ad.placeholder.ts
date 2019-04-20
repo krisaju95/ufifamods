@@ -18,6 +18,7 @@ export class AdPlaceholderComponent {
 
 	adBlockerUsed: boolean = false;
 	imageLoadCheckInterval: any;
+	intervalCounter: number = 0;
 
 	adZoneMap: Object = {
 		1: "1443",
@@ -36,18 +37,24 @@ export class AdPlaceholderComponent {
 	}
 
 	checkForFailedImageLoads() {
-		this.imageLoadCheckInterval = setTimeout(() => {
+		this.imageLoadCheckInterval = setInterval(() => {
+			this.intervalCounter++;
 			let imagesArray = this.elementRef.nativeElement.querySelectorAll('img');
 			let insArray = this.elementRef.nativeElement.querySelectorAll('ins');
 			for (let image of imagesArray) {
-				image.addEventListener('error', (error) => {
-					image.src = "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/aderror/72890.jpg";
+				clearInterval(this.imageLoadCheckInterval);
+				image.addEventListener('error', () => {
+					image.src = "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/aderror/" + (this.adZone == 3 ? '300250' : '72890') + ".jpg";
 				});
 			}
 			for (let ins of insArray) {
 				ins.style.display = "inline-block";
+				clearInterval(this.imageLoadCheckInterval);
 			}
-		}, 500);
+			if(this.intervalCounter > 500) {
+				clearInterval(this.imageLoadCheckInterval);
+			}
+		}, 10);
 	}
 
 	loadAd(): Promise<any> {
@@ -69,4 +76,8 @@ export class AdPlaceholderComponent {
 		});
 		return scriptPromise;
 	};
+
+	ngOnDestroy() {
+		clearInterval(this.imageLoadCheckInterval);
+	}
 }

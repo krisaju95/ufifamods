@@ -10,7 +10,10 @@
 
 .starheads-included-list {
     padding: 0;
+    overflow: hidden;
     list-style: none;
+    position: relative;
+    transition: height ease 500ms;
 
     .starheads-included-list-row {
         display: inline-table;
@@ -56,6 +59,11 @@
                 }
             }
         }
+    }
+
+    .expand-link {
+        right: 10px;
+        bottom: 20px;
     }
 }
 

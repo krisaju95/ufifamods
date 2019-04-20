@@ -29,10 +29,10 @@ export class HomeComponent {
 			.subscribe((data) => {
 				this.setBlogPostsArray(data);
 				let timeDiff = new Date().getTime() - startTime;
-				if (timeDiff < 2000) {
+				if (timeDiff < 1000) {
 					setTimeout(() => {
 						this.responseLoading = false;
-					}, 2000 - timeDiff);
+					}, 1000 - timeDiff);
 				}
 				else {
 					this.responseLoading = false;

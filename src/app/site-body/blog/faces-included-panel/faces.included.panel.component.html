@@ -6,19 +6,34 @@
         <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
     </ul>
     <ul *ngIf="isNewJSONVersion" class="starheads-included-list">
-        <div class="starheads-included-list-row" [ngClass]="{'hide-list-row': faceIndex % numberOfStarheadsPerRow != 0}" *ngFor="let face of facesIncludedList; let faceIndex = index">
+        <div class="starheads-included-list-row" [ngClass]="{'hide-list-row': faceIndex % numberOfStarheadsPerRow != 0}"
+            *ngFor="let face of facesIncludedList; let faceIndex = index">
             <ng-container *ngIf="faceIndex % numberOfStarheadsPerRow == 0">
-                <li class="starheads-included-list-item" *ngFor="let num of [].constructor(numberOfStarheadsPerRow); let columnIndex = index">
+                <li class="starheads-included-list-item"
+                    *ngFor="let num of [].constructor(numberOfStarheadsPerRow); let columnIndex = index">
                     <div class="player-info-container">
                         <div class="player-main-info">
-                            <span class="player-name" [innerHTML]="facesIncludedList[faceIndex + columnIndex].playerName"></span>
-                            <span class="nation-flag {{facesIncludedList[faceIndex + columnIndex].playerNationality}}" [matTooltip]="facesIncludedList[faceIndex + columnIndex].playerNationality" matTooltipPosition="above"></span>
+                            <span class="player-name"
+                                [innerHTML]="facesIncludedList[faceIndex + columnIndex].playerName"></span>
+                            <span class="nation-flag {{facesIncludedList[faceIndex + columnIndex].playerNationality}}"
+                                [matTooltip]="facesIncludedList[faceIndex + columnIndex].playerNationality"
+                                matTooltipPosition="above"></span>
                         </div>
-                        <div class="player-club" [innerHTML]="facesIncludedList[faceIndex + columnIndex] | clubInfo : 'clubName'"></div>
-                        <div class="player-league" [innerHTML]="facesIncludedList[faceIndex + columnIndex] | clubInfo : 'leagueName'"></div>
+                        <div class="player-club"
+                            [innerHTML]="facesIncludedList[faceIndex + columnIndex] | clubInfo : 'clubName'"></div>
+                        <div class="player-league"
+                            [innerHTML]="facesIncludedList[faceIndex + columnIndex] | clubInfo : 'leagueName'"></div>
                     </div>
                 </li>
             </ng-container>
         </div>
+        <a *ngIf="showExpandLink" class="button-link secondary-button-link link-icon-right overlay-button-link expand-link" href="javascript: void(0)"(click)="setExpandedView()">
+            View <strong>{{numberOfStarHeads - (this.numberOfStarheadsPerRow * this.numberOfRowsDisplayed)}}</strong> more <i class="fas fa-angle-down"></i>
+        </a>
     </ul>
+    <div class="collapse-link-container" align="end">
+            <a *ngIf="showCollapseLink" class="button-link secondary-button-link link-icon-right" href="javascript: void(0)"(click)="setCollapsedView(true)">
+                View fewer <i class="fas fa-angle-up"></i>
+            </a>
+    </div>
 </div>
