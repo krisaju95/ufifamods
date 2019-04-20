@@ -16,4 +16,8 @@ $site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/
     &.FCB17 {
         background-image: url($site-cloud-path-prefix + 'FCB17.jpg');
     }
+
+    &.aNuK3, &.aNuk3, &.anuk3 {
+        background-image: url($site-cloud-path-prefix + 'aNuK3.jpg');
+    }
 }

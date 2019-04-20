@@ -19,6 +19,10 @@
             border: 1px solid #CCCCCC;
             display: inline-table;
 
+            ~.contributors-list-item {
+                margin-left: 10px;
+            }
+
             .contributor-image {
                 width: 30px;
                 height: 30px;
