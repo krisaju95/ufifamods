@@ -5,6 +5,8 @@
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 100%;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+    display: inline-block;
 
     &.mat-input-suffix-flag {
         display: block;

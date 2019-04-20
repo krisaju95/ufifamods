@@ -5,6 +5,7 @@ const laliga: string = 'La Liga Santander';
 const ligue1: string = 'Ligue 1 Conforama';
 const seriaA: string = 'Serie A TIM';
 const bundesliga: string = 'Bundesliga';
+const superlig: string = 'Süper Lig';
 
 @Injectable()
 export class ClubInfoService {
@@ -449,6 +450,18 @@ export class ClubInfoService {
 					country: "Germany"
 				}
 			}
+		},
+		"superlig": {
+			name: superlig + " (Turkey)",
+			country: "Turkey",
+			countryCode: "TUR",
+			clubs: {
+				"besiktas": {
+					name: "Beşiktaş J.K.",
+					league: superlig,
+					country: "Turkey"
+				}
+			}
 		}
 	}
 
@@ -465,10 +478,10 @@ export class ClubInfoService {
 	}
 
 	getClubInfo(leagueName: string, clubName: string): object {
-		return this.getLeagueInfo(leagueName)['clubs'][clubName];
+		return ((this.getLeagueInfo(leagueName) || {})['clubs'] || {})[clubName];
 	}
 
 	getClubListKeys(leagueName: string): Array<string> {
-		return Object.keys(this.clubList[leagueName]['clubs']);
+		return Object.keys((this.clubList[leagueName] || {})['clubs']);
 	}
 }

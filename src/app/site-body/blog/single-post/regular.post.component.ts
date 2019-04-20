@@ -114,7 +114,11 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostCategories() {
-		this.categoryList = this.postData["post-category-list"].split(";");
+		if(typeof this.postData["post-category-list"] == 'string') {
+			this.categoryList = this.postData["post-category-list"].split(";");
+		} else {
+			this.categoryList = this.postData["post-category-list"];
+		}
 	}
 
 	openDialog() {

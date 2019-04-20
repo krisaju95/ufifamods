@@ -2,14 +2,23 @@
     <div class="faces-included-list-heading">
         Star-heads Included:
     </div>
-    <ul class="faces-included-list">
-        <ng-container *ngIf="!isNewJSONVersion">
-            <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
-        </ng-container>
-        <ng-container *ngIf="isNewJSONVersion">
-            <li class="faces-included-list-item" *ngFor="let face of facesIncludedList">
-                <span class="player-name" [innerHTML]="face.playerName"></span>
-            </li>
-        </ng-container>
+    <ul *ngIf="!isNewJSONVersion" class="faces-included-list">
+        <li class="faces-included-list-item" *ngFor="let face of facesIncludedList" [innerHTML]="face"></li>
+    </ul>
+    <ul *ngIf="isNewJSONVersion" class="starheads-included-list">
+        <div class="starheads-included-list-row" [ngClass]="{'hide-list-row': faceIndex % numberOfPostsPerRow != 0}" *ngFor="let face of facesIncludedList; let faceIndex = index">
+            <ng-container *ngIf="faceIndex % numberOfPostsPerRow == 0">
+                <li class="starheads-included-list-item" *ngFor="let num of [].constructor(numberOfPostsPerRow); let columnIndex = index">
+                    <div class="player-info-container">
+                        <div class="player-main-info">
+                            <span class="player-name" [innerHTML]="facesIncludedList[faceIndex + columnIndex].playerName"></span>
+                            <span class="nation-flag {{facesIncludedList[faceIndex + columnIndex].playerNationality}}" [matTooltip]="facesIncludedList[faceIndex + columnIndex].playerNationality" matTooltipPosition="above"></span>
+                        </div>
+                        <div class="player-club" [innerHTML]="facesIncludedList[faceIndex + columnIndex] | clubInfo : 'clubName'"></div>
+                        <div class="player-league" [innerHTML]="facesIncludedList[faceIndex + columnIndex] | clubInfo : 'leagueName'"></div>
+                    </div>
+                </li>
+            </ng-container>
+        </div>
     </ul>
 </div>

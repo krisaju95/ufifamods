@@ -519,11 +519,13 @@ input.mat-input-element {
     margin: 0
 }
 
-.mat-tooltip {
+mat-tooltip-component .mat-tooltip {
     font-size: 12px;
-    padding: 10px 5px;
+    padding: 5px;
     background: #333333;
     color: #FFFFFF;
+    margin: 0;
+    margin-bottom: 5px;
 }
 
 .mat-tooltip-handset {

@@ -9,6 +9,7 @@ import { MaterialModule } from '../shared/mat.module';
 import { TimeSincePipe } from '../../pipes/time.since.pipe';
 import { MultiStringPipe } from '../../pipes/mutistring.pipe';
 import { ObjectKeysPipe } from '../../pipes/object-keys.pipe';
+import { ClubInfoPipe } from '../../pipes/club-info.pipe';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { ObjectKeysPipe } from '../../pipes/object-keys.pipe';
 		PostCardComponent,
 		TimeSincePipe,
 		MultiStringPipe,
-		ObjectKeysPipe
+		ObjectKeysPipe,
+		ClubInfoPipe
 	],
 	imports: [
 		BrowserModule,
@@ -35,7 +37,8 @@ import { ObjectKeysPipe } from '../../pipes/object-keys.pipe';
 		PostCardComponent,
 		TimeSincePipe,
 		MultiStringPipe,
-		ObjectKeysPipe
+		ObjectKeysPipe,
+		ClubInfoPipe
 	]
 })
 

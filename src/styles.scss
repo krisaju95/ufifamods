@@ -12,6 +12,46 @@ body {
         outline: 0;
     }
 
+    @media only screen and (min-width: 1025px) {
+        site-header {
+            display: block;
+            z-index: 1000000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    
+        site-body {
+            display: block;
+            z-index: 0;
+            margin-top: 100px;
+        }
+    }
+
+    @media only screen and (min-width: 900px) {
+        site-header {
+            display: block;
+            z-index: 1000000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+        }
+    
+        site-body {
+            display: block;
+            z-index: 0;
+            margin-top: 70px;
+        }
+
+        @media only screen and (min-width: 1025px) {
+            site-body {
+                margin-top: 100px;
+            }
+        }
+    }
+
     .mat-checkbox-label {
         white-space: normal;
     }
