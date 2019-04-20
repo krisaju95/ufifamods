@@ -1,0 +1,67 @@
+.fut-squad-container {
+    padding: 20px;
+
+    .fut-squad-row {
+        display: inline-table;
+
+        .fut-squad-player-card {
+            display: table-cell;
+            height: 200px;
+            width: 160px;
+            background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-totw_gold.png');
+            background-position: center;
+            background-size: contain;
+            background-repeat: no-repeat;
+            position: relative;
+            font-family: 'Dosis', sans-serif;
+
+            .fut-squad-player-image {
+                position: absolute;
+                bottom: 55px;
+                right: 0;
+                width: 110px;
+                height: 110px;
+                text-align: center;
+                background-image: url('https://cdn.sofifa.org/players/10/19/232432.png');
+                background-position: center bottom;
+                background-size: contain;
+                background-repeat: no-repeat;
+            }
+
+            .fut-squad-player-name {
+                position: absolute;
+                bottom: 30px;
+                left: 0;
+                text-align: center;
+                width: 100%;
+                color: #E9CC74;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+            }
+
+            .player-side-info {
+                display: inline-block;
+                width: 40px;
+                position: absolute;
+                top: 40px;
+                left: 15px;
+                height: 110px;
+                padding: 10px 0;
+                color: #E9CC74;
+                text-align: center;
+                background: linear-gradient(to bottom, rgba(15, 13, 8, 0) 0, rgba(15, 13, 8, 0) 8%, rgba(15, 13, 8, 0.6) 43%, rgba(15, 13, 8, 0.6) 56%, rgba(15, 13, 8, 0.6) 76%, rgba(15, 13, 8, 0) 100%);
+
+                .fut-squad-player-rating, .fut-squad-player-position {
+                    font-size: 21px;
+                    line-height: 21px;
+                }
+
+                .fut-squad-player-club {
+                    width: 100%;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

@@ -10,6 +10,7 @@ import { FeaturedPostsSidebarComponent } from './featured-posts-sidebar/featured
 import { ScreenShotsPanelComponent } from './screenshots-panel/screenshots.panel.component';
 import { ContributorsPanelComponent } from './contributors-panel/contributors.panel.component';
 import { FacesIncludedPanelComponent } from './faces-included-panel/faces.included.panel.component';
+import { FUTSquadPanelComponent } from './fut-squad-panel/fut-squad-panel.component';
 
 import { AppRoutingModule } from '../../app-routing.module';
 import { SearchPostsDialogComponent, SearchPostsDialog } from './search-posts/search.posts.dialog';
@@ -27,6 +28,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 		ScreenShotsPanelComponent,
 		ContributorsPanelComponent,
 		FacesIncludedPanelComponent,
+		FUTSquadPanelComponent,
 		SearchPostsDialogComponent,
 		SearchPostsDialog
 	],
@@ -50,6 +52,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 		ScreenShotsPanelComponent,
 		ContributorsPanelComponent,
 		FacesIncludedPanelComponent,
+		FUTSquadPanelComponent,
 		SearchPostsDialogComponent,
 		SearchPostsDialog
 	],

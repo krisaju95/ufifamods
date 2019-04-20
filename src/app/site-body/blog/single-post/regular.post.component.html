@@ -1,4 +1,4 @@
-<site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
+<!-- <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
     <div class="standard-site-section-container dark-theme-section-container blog-post-header-section">
         <div class="standard-site-section blog-post-section">
@@ -43,7 +43,6 @@
                         </mat-chip-list>
                     </div>
                     <div class="blog-post-outro-text" [innerHTML]="postData['post-last-para']"></div>
-                    <!-- <share-buttons [theme]="'modern-dark'" [include]="['facebook','twitter','google','pinterest','email']" [show]="5" [showCount]="true" [size]="0"></share-buttons> -->
                 </div>
             </div>
             <disqus-thread class="disqus-thread-container" [page-identifier]="fileURL" [page-url]="siteURL + postURL"></disqus-thread>
@@ -54,4 +53,6 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+
+<fut-squad-panel></fut-squad-panel>
