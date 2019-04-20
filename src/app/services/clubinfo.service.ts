@@ -6,6 +6,7 @@ const ligue1: string = 'Ligue 1 Conforama';
 const seriaA: string = 'Serie A TIM';
 const bundesliga: string = 'Bundesliga';
 const superlig: string = 'Süper Lig';
+const eredivisie: string = 'Eredivisie';
 
 @Injectable()
 export class ClubInfoService {
@@ -460,6 +461,18 @@ export class ClubInfoService {
 					name: "Beşiktaş J.K.",
 					league: superlig,
 					country: "Turkey"
+				}
+			}
+		},
+		"eredivisie": {
+			name: eredivisie + " (Netherlands)",
+			country: "Netherlands",
+			countryCode: "NLD",
+			clubs: {
+				"ajax": {
+					name: "Ajax Amsterdam",
+					league: eredivisie,
+					country: "Netherlands"
 				}
 			}
 		}

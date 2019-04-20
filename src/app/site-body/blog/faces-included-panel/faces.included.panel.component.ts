@@ -44,7 +44,8 @@ export class FacesIncludedPanelComponent {
 
 	setCollapsedView(buttonClick?: boolean) {
 		let starHeadsList = this.elementRef.nativeElement.querySelector('.starheads-included-list');
-		let scrollPosition = starHeadsList.offsetTop;
+		let starHeadsListContainer = this.elementRef.nativeElement.querySelector('.starheads-included-list-container');
+		let scrollPosition = starHeadsListContainer.offsetTop;
 		if (this.numberOfStarHeads > (this.numberOfStarheadsPerRow * this.numberOfRowsDisplayed)) {
 			this.totalNumberOfRows = Math.floor(this.numberOfStarHeads / this.numberOfStarheadsPerRow);
 			this.showExpandLink = true;
@@ -75,7 +76,7 @@ export class FacesIncludedPanelComponent {
 		let starHeadsList = this.elementRef.nativeElement.querySelector('.starheads-included-list');
 		this.showExpandLink = false;
 		this.showCollapseLink = true;
-		starHeadsList.style.height = (10 + this.totalHeight + (this.totalNumberOfRows - 1) * 15) + 'px';
+		starHeadsList.style.height = (20 + this.totalHeight + (this.totalNumberOfRows - 1) * 15) + 'px';
 	}
 
 	setNumberOfStarHeadsPerRow() {

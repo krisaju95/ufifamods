@@ -8,62 +8,74 @@
     }
 }
 
-.starheads-included-list {
-    padding: 0;
-    overflow: hidden;
-    list-style: none;
+.starheads-included-list-container {
     position: relative;
-    transition: height ease 500ms;
 
-    .starheads-included-list-row {
-        display: inline-table;
-        width: 100%;
-        margin-bottom: 15px;
-
-        &.hide-list-row {
-            display: none;
-        }
-
-        .starheads-included-list-item {
-            display: table-cell;
-            vertical-align: top;
-            width: 33%;
-
-            ~.starheads-included-list-item {
-                padding-left: 15px;
-            }
-
-            .player-info-container {
-                padding: 10px;
-                background: #EEEEEE;
-                border-radius: 5px;
-
-                .player-main-info {
-                    margin-bottom: 10px;
-
-                    .player-name {
-                        font-size: 18px;
-                        font-weight: 600;
-                        line-height: 20px;
-                        vertical-align: top;
-                        margin-right: 10px;
-                    }
-
-                    .nation-flag {
-                        vertical-align: top;
-                    }
-                }
-
-                .player-league {
-                    font-size: 12px;
-                }
-            }
+    &.collpased-view {
+        &:after {
+            content: '';
+            width: 100%;
+            position: absolute;
+            height: 30px;
+            bottom: 10px;
+            background: linear-gradient(to top, white, transparent);
+            left: 0;
         }
     }
 
-    .expand-link {
-        right: 10px;
-        bottom: 20px;
+    .starheads-included-list {
+        padding: 0;
+        overflow: hidden;
+        list-style: none;
+        position: relative;
+        margin-bottom: 0;
+        transition: height ease 500ms;
+    
+        .starheads-included-list-row {
+            display: inline-table;
+            width: 100%;
+            margin-bottom: 15px;
+    
+            &.hide-list-row {
+                display: none;
+            }
+    
+            .starheads-included-list-item {
+                display: table-cell;
+                vertical-align: top;
+                width: 33%;
+    
+                ~.starheads-included-list-item {
+                    padding-left: 15px;
+                }
+    
+                .player-info-container {
+                    padding: 10px;
+                    background: #EEEEEE;
+                    border-radius: 5px;
+    
+                    .player-main-info {
+                        margin-bottom: 10px;
+    
+                        .player-name {
+                            font-size: 18px;
+                            font-weight: 600;
+                            line-height: 20px;
+                            vertical-align: top;
+                            margin-right: 10px;
+                        }
+    
+                        .nation-flag {
+                            vertical-align: top;
+                        }
+                    }
+    
+                    .player-league {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
     }
 }
 

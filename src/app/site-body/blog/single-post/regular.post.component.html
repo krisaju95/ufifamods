@@ -33,9 +33,9 @@
                     <faces-included-panel [facesIncludedList]="facesIncludedList"></faces-included-panel>
                     <screenshots-panel [screenshotsList]="screenshotsList"></screenshots-panel>
                     <div class="mod-download-link-container" *ngIf="showModDisclaimer">
-                        <a class="button-link primary-button-link" href="javascript: void(0)" (click)="openDialog()">
+                        <button (click)="openDialog()">
                             Download <i class="fas fa-cloud-download-alt"></i>
-                        </a>
+                        </button>
                     </div>
                     <div class="blog-post-badges">
                         <mat-chip-list>

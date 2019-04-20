@@ -76,6 +76,12 @@ export class ConstantsProviderService {
 			URU: {
 				name: 'Uruguay'
 			},
+			COL: {
+				name: 'Colombia'
+			},
+			MAR: {
+				name: 'Morocco'
+			}
 		}
 	}
 
