@@ -1,4 +1,4 @@
-<!-- <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
+<site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
     <div class="standard-site-section-container dark-theme-section-container blog-post-header-section">
         <div class="standard-site-section blog-post-section">
@@ -29,9 +29,10 @@
                     <div class="blog-post-main-text">
                         <div *ngFor="let para of (postMainTextArray | slice : 4)" class="blog-post-para" [innerHTML]="para"></div>
                     </div>
-                    <contributors-panel [contributorsList]="contributorsList"></contributors-panel>
-                    <faces-included-panel [facesIncludedList]="facesIncludedList"></faces-included-panel>
-                    <screenshots-panel [screenshotsList]="screenshotsList"></screenshots-panel>
+                    <contributors-panel *ngIf="contributorsList" [contributorsList]="contributorsList"></contributors-panel>
+                    <faces-included-panel *ngIf="facesIncludedList" [facesIncludedList]="facesIncludedList"></faces-included-panel>
+                    <screenshots-panel *ngIf="screenshotsList" [screenshotsList]="screenshotsList"></screenshots-panel>
+                    <fut-squad-panel *ngIf="futSquadInfo" [futSquadInfo]="futSquadInfo"></fut-squad-panel>
                     <div class="mod-download-link-container" *ngIf="showModDisclaimer">
                         <button (click)="openDialog()">
                             Download <i class="fas fa-cloud-download-alt"></i>
@@ -53,6 +54,4 @@
             </div>
         </div>
     </div>
-</div> -->
-
-<fut-squad-panel></fut-squad-panel>
+</div>

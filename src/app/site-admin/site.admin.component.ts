@@ -48,7 +48,7 @@ export class SiteAdminComponent {
 			});
 		this.blogPostForm = new FormGroup({
 			postTemplate: new FormControl(''),
-			postDate: new FormControl(''),
+			postDate: new FormControl(new Date()),
 			postTitle: new FormControl(''),
 			postCategory: new FormControl(''),
 			morePostCategories: new FormControl(''),
@@ -65,6 +65,19 @@ export class SiteAdminComponent {
 					playerClub: new FormControl(''),
 					playerNationality: new FormControl(''),
 					playerScreenshot: new FormControl('')
+				})
+			]),
+			squadType: new FormControl(''),
+			fifaVersion: new FormControl(''),
+			squadPlayers: new FormArray([
+				new FormGroup({
+					name: new FormControl(''),
+					id: new FormControl(''),
+					position: new FormControl(''),
+					rating: new FormControl(''),
+					club: new FormControl(''),
+					nationality: new FormControl(''),
+					quality: new FormControl('')
 				})
 			]),
 			formVersion: new FormControl('v2019'),
@@ -89,6 +102,14 @@ export class SiteAdminComponent {
 					this.blogPostForm.controls.postFooterMessage.setValue('Enjoying our content? Like, Share & Comment!');
 					this.selectedPostTags = ['fifa 16', 'fifa mods', 'fifa 16 faces']
 					this.blogPostForm.controls.showModDisclaimer.setValue(true);
+					break;
+				}
+				case 'fifa19:totw': {
+					this.blogPostForm.controls.postTitle.setValue('FIFA 19: Team of the Week - TOTW #');
+					this.blogPostForm.controls.postCategory.setValue('totw');
+					this.blogPostForm.controls.postDescription.setValue("feature in this week's team of in-forms.");
+					this.blogPostForm.controls.postFooterMessage.setValue('Enjoying our content? Like, Share & Comment!');
+					this.selectedPostTags = ['fifa 19', 'fut', 'fifa 19 totw']
 					break;
 				}
 			}
@@ -158,10 +179,10 @@ export class SiteAdminComponent {
 
 	generateSearchTextContent(blogPostJSON) {
 		let searchTextContent = blogPostJSON['post-intro-text'] + ' ' + blogPostJSON['post-main-text-array'].join(' ') + ' ' + blogPostJSON['contributors-list'].join(', ');
-		if(blogPostJSON['faces-included-list']) {
+		if (blogPostJSON['faces-included-list']) {
 			searchTextContent = searchTextContent + '. Includes custom star-heads for ';
 			let starHeadList = [];
-			for(let starHead of blogPostJSON['faces-included-list']) {
+			for (let starHead of blogPostJSON['faces-included-list']) {
 				starHeadList.push(starHead.playerName);
 			}
 			searchTextContent = searchTextContent + starHeadList.join(', ');

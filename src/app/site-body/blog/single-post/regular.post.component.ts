@@ -28,9 +28,10 @@ export class RegularBlogPostComponent {
 	fileURL: string = "";
 	postData: Object;
 	postMainTextArray: Array<string> = [];
-	contributorsList: Array<string> = [];
-	facesIncludedList: Array<string> = [];
-	screenshotsList: Array<string> = [];
+	contributorsList: Array<string>;
+	facesIncludedList: Array<string>;
+	screenshotsList: Array<string>;
+	futSquadInfo: object = {}
 	showModDisclaimer: boolean = false;
 	downloadText: string = "Download";
 	categoryList: Array<string> = [];
@@ -63,9 +64,10 @@ export class RegularBlogPostComponent {
 						this.responseLoading = false;
 						this.postData = postData;
 						this.postMainTextArray = this.postData['post-main-text-array'] || [];
-						this.contributorsList = this.postData['contributors-list'] || [];
-						this.facesIncludedList = this.postData['faces-included-list'] || [];
-						this.screenshotsList = this.postData['screenshots-list'] || [];
+						this.contributorsList = this.postData['contributors-list'];
+						this.facesIncludedList = this.postData['faces-included-list'];
+						this.screenshotsList = this.postData['screenshots-list'];
+						this.futSquadInfo = this.postData['fut-squad'];
 						this.showModDisclaimer = (this.postData['show-mod-disclaimer'] == true || this.postData['show-mod-disclaimer'] == 'true')
 						this.getPostCategories();
 						window.scroll(0, 0);
