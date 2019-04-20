@@ -1,3 +1,5 @@
+@import '../../../variables.scss';
+
 .contributor-list-container {
     margin: 30px 0;
     clear: both;
@@ -5,6 +7,34 @@
     .contributors-list-heading {
         font-weight: bold;
         font-size: 18px;
+    }
+
+    .contributors-list{
+        list-style: none;
+        padding: 0;
+
+        .contributors-list-item {
+            padding: 10px;
+            border-radius: 100px;
+            border: 1px solid #CCCCCC;
+            display: inline-table;
+
+            .contributor-image {
+                width: 30px;
+                height: 30px;
+                display: table-cell;
+                border-radius: 100%;
+                background: $site-colour-primary;
+                vertical-align: middle;
+            }
+
+            .contributor-name {
+                display: table-cell;
+                vertical-align: middle;
+                padding: 0 10px;
+                font-weight: 600;
+            }
+        }
     }
 }
 

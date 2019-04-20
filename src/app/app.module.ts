@@ -11,6 +11,7 @@ import { AppBodyModule } from './site-body/app.module';
 import { UtilitiesService } from './services/utilities.service';
 import { ClubInfoService } from './services/clubinfo.service';
 import { ConstantsProviderService } from './services/constants-provider.service';
+import { TeamInfoService } from './services/team-info.service';
 import { AppFooterComponent } from './site-footer/app.footer.component';
 import { SharedModule } from './site-body/shared/app.module';
 import { AppRoutingModule } from './app-routing.module';
@@ -43,6 +44,7 @@ enableProdMode()
 		UtilitiesService,
 		ClubInfoService,
 		ConstantsProviderService,
+		TeamInfoService,
 		Title
 	],
 	bootstrap: [AppComponent]

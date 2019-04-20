@@ -1,0 +1,19 @@
+$site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/team-members/';
+
+.team-member-dp {
+    width: 100px;
+    height: 100px;
+    background-image: url($site-cloud-path-prefix + 'NA.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+
+    &.krisaju95 {
+        background-image: url($site-cloud-path-prefix + 'krisaju95.jpg');
+    }
+
+    &.FCB17 {
+        background-image: url($site-cloud-path-prefix + 'FCB17.png');
+    }
+}

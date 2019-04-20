@@ -1,8 +1,11 @@
 <div class="contributor-list-container" *ngIf="contributorsList.length > 0">
     <div class="contributors-list-heading">
-        Contributors:
+        Contributor(s):
     </div>
     <ul class="contributors-list">
-        <li class="contributors-list-item" *ngFor="let contributor of contributorsList" [innerHTML]="contributor"></li>
+        <li class="contributors-list-item" *ngFor="let contributor of contributorsList">
+            <span class="contributor-image team-member-dp {{contributor}}"></span>
+            <span class="contributor-name" [innerHTML]="contributor"></span>
+        </li>
     </ul>
 </div>
