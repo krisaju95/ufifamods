@@ -16,7 +16,7 @@ export class FacesIncludedPanelComponent {
 	@Input() facesIncludedList: Array<any>;
 
 	isNewJSONVersion: boolean = false;
-	numberOfPostsPerRow: number = 3;
+	numberOfStarheadsPerRow: number = 3;
 
 	isDesktopViewPort: boolean = false;
 	isTabViewPort: boolean = false;
@@ -26,29 +26,27 @@ export class FacesIncludedPanelComponent {
 		this.isNewJSONVersion = (typeof this.facesIncludedList[0] != 'string');
 	}
 
+	setNumberOfStarHeadsPerRow() {
+		if (this.isMobileViewPort) {
+			this.numberOfStarheadsPerRow = 1;
+		} else if (this.isTabViewPort) {
+			this.numberOfStarheadsPerRow = 2;
+		} else {
+			this.numberOfStarheadsPerRow = 3;
+		}
+	}
+
 	@HostListener('window:resize') onWindowResize() {
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isTabViewPort = this.service.isTabViewPort();
 		this.isMobileViewPort = this.service.isMobileViewPort();
-		if (this.isMobileViewPort) {
-			this.numberOfPostsPerRow = 1;
-		} else if (this.isTabViewPort) {
-			this.numberOfPostsPerRow = 2;
-		} else {
-			this.numberOfPostsPerRow = 3;
-		}
+		this.setNumberOfStarHeadsPerRow();
 	}
 
 	@HostListener('window:orientationchange') onOrientationChange() {
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isTabViewPort = this.service.isTabViewPort();
 		this.isMobileViewPort = this.service.isMobileViewPort();
-		if (this.isMobileViewPort) {
-			this.numberOfPostsPerRow = 1;
-		} else if (this.isTabViewPort) {
-			this.numberOfPostsPerRow = 2;
-		} else {
-			this.numberOfPostsPerRow = 3;
-		}
+		this.setNumberOfStarHeadsPerRow();
 	}
 }
