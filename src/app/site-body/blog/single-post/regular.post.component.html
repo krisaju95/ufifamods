@@ -1,8 +1,8 @@
 <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
-    <div class="standard-site-section-container dark-theme-section-container">
-        <div class="standard-site-section">
-            <div class="blog-post-header" *ngIf="!isMobileViewPort">
+    <div class="standard-site-section-container dark-theme-section-container blog-post-header-section">
+        <div class="standard-site-section blog-post-section">
+            <div class="blog-post-header">
                 <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
                 <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
                 <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
@@ -10,16 +10,16 @@
         </div>
     </div>
     <div class="standard-site-section-container">
-        <div class="standard-site-section">
+        <div class="standard-site-section blog-post-section">
             <div class="blog-post-container">
         <div class="blog-post-content">
             <div class="blog-post-main-content">
                 <div class="blog-post-header-image" [style.background-image]="'url(' + postData['post-media'] + ')'"></div>
                 <div class="blog-post-text-content">
-                    <div class="blog-post-header-text" *ngIf="isMobileViewPort">
+                    <div class="blog-post-header-text">
                         <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>
                         <div class="post-title-container blog-post-width" [innerHTML]="postData['post-title']"></div>
-                        <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date']  | date: 'd MMM yyyy'"></div>
+                        <div class="blog-post-date blog-post-width" [innerHTML]="postData['post-date'] | date: 'd MMM yyyy'"></div>
                     </div>
                     <div class="blog-post-intro-text" [innerHTML]="postData['post-intro-text']"></div>
                     <div class="blog-post-main-text">

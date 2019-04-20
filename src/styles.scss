@@ -71,6 +71,10 @@ body {
             max-width: 1600px;
             margin: 0 auto;
             display: block;
+
+            &.blog-post-section {
+                max-width: 1280px;
+            }
         }
     }
 }

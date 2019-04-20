@@ -1,169 +1,133 @@
 @import "../../../variables.scss";
 
 @media only screen and (min-width: 900px) {
-    .blog-post-width {
-        width: 50%;
-        margin-left: 10%;
-    }
-    
     .blog-post-wrapper {
         min-height: 500px;
-    }
-    
-    .blog-post-header {
-        background: $site-colour-second-primary url("https://i.imgur.com/JU50qnR.jpg") center left no-repeat;
-        background-size: cover;
-        padding-top: 40px;
-        padding-bottom: 180px;
-        position: relative;
-    
-        .blog-post-category {
-            color: $site-colour-yellow;
-            margin-bottom: 5px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-    
-        .blog-post-date {
-            margin-top: 10px;
-            color: $site-colour-white;
-            font-size: 14px;
-            font-weight: 300;
-        }
-    
-        .post-title-container {
-            color: $site-colour-white;
-            font-size: 44px;
-            font-weight: bold;
-            line-height: 54px;
-        }
-    }
-    
 
-    .blog-post-container {
-        display: inline-table;
-        width: 80%;
-        padding: 0 10%;
-        margin-top: -130px;
-        margin-bottom: 30px;
-        transform: translateZ(1px);
+        .blog-post-header-section {
+            background: $site-colour-second-primary url("https://i.imgur.com/JU50qnR.jpg") center left no-repeat;
+            background-size: cover;
 
-        .blog-post-content, .blog-post-sidebar, .blog-post-right-spacer {
-            display: table-cell;
-        }
-
-        .blog-post-content {
-            width: calc(100% - 340px);
-
-            @media only screen and (max-width: 1280px) {
-                padding-left: 5%;
+            .blog-post-section {
+                .blog-post-header {
+                    padding-left: 40px;
+                    padding-top: 40px;
+                    padding-bottom: 180px;
+                    position: relative;
+                
+                    .blog-post-category {
+                        color: $site-colour-yellow;
+                        margin-bottom: 5px;
+                        font-weight: 600;
+                        text-transform: uppercase;
+                        letter-spacing: 2px;
+                    }
+                
+                    .blog-post-date {
+                        margin-top: 10px;
+                        color: $site-colour-white;
+                        font-size: 14px;
+                        font-weight: 300;
+                    }
+                
+                    .post-title-container {
+                        color: $site-colour-white;
+                        font-size: 44px;
+                        font-weight: bold;
+                        line-height: 54px;
+                    }
+                }
             }
+        }
 
-            .blog-post-main-content {
-                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
-                border-radius: 5px;
-                overflow: hidden;
-            }
-
-            .blog-post-text-content {
-                background: #FFFFFF;
-                padding: 30px 20px;
-            }
-
-            .blog-post-header-image {
-                height: 400px;
-                width: 100%;
-                background-position: center;
-                background-size: cover;
+        .blog-post-container {
+            display: inline-table;
+            width: calc(100% - 80px);
+            margin: 30px 40px;
+            margin-top: -130px;
+            transform: translateZ(1px);
+        
+            .blog-post-content, .blog-post-sidebar, .blog-post-right-spacer {
+                display: table-cell;
             }
         
-            .blog-post-intro-text {
-                font-size: 18px;
-                font-weight: bold;
-                color: $site-colour-primary;
-                margin-bottom: 20px;
-                position: relative;
-            }
-
-            .blog-post-ad-placeholder {
-                display: block;
-                margin-bottom: 20px;
-            }
+            .blog-post-content {
+                width: 840px;
         
-            .blog-post-main-text {
-                ::ng-deep .site-video-player {
-                    width: 100%;
+                .blog-post-main-content {
+                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+                    border-radius: 5px;
+                    overflow: hidden;
+                }
+        
+                .blog-post-text-content {
+                    background: #FFFFFF;
+                    padding: 30px 20px;
+
+                    .blog-post-header-text {
+                        display: none;
+                    }
+                }
+        
+                .blog-post-header-image {
                     height: 400px;
-                    margin-bottom: 20px;
-        
-                    @media only screen and (max-width: 1023px) {
-                        height: 280px;
-                    }
+                    width: 100%;
+                    background-position: center;
+                    background-size: cover;
                 }
-
-                .blog-post-para {
-                    margin-bottom: 20px;
+            
+                .blog-post-intro-text {
                     font-size: 18px;
-                    line-height: 1.5;
-                }
-        
-                .blog-post-last-para {
-                    font-weight: 600;
-                }
-            }
-
-            .mod-disclaimer-container {
-                margin: 30px 0;
-                clear: both;
-
-                .mod-disclaimer-header {
                     font-weight: bold;
-                    font-size: 18px;
+                    color: $site-colour-primary;
+                    margin-bottom: 20px;
+                    position: relative;
                 }
-            }
-
-            .mod-download-link-container {
-                text-align: center;
-                margin: 40px 0;
-
-                button {
-                    width: 40%;
-                    padding: 10px;
+        
+                .blog-post-ad-placeholder {
+                    display: block;
+                    margin-bottom: 20px;
                 }
-            }
-
-            .blog-post-outro-text {
-                font-size: 18px;
-                font-weight: bold;
-                margin: 10px 0;
-            }
-
-            ::ng-deep .sb-group {
-                .sb-button {
-                    margin-left: 0;
-
-                    ~.sb-button {
-                        margin-left: 0.3125em;
+            
+                .blog-post-main-text {
+                    .blog-post-para {
+                        margin-bottom: 20px;
+                        font-size: 18px;
+                        line-height: 1.5;
                     }
                 }
+        
+                .mod-download-link-container {
+                    text-align: center;
+                    margin: 40px 0;
+        
+                    button {
+                        width: 40%;
+                        padding: 10px;
+                    }
+                }
+        
+                .blog-post-outro-text {
+                    font-size: 18px;
+                    font-weight: bold;
+                    margin: 10px 0;
+                }
+        
+                .disqus-thread-container {
+                    display: block;
+                    margin: 40px 0;
+                }
             }
-
-            .disqus-thread-container {
-                display: block;
-                margin: 40px 0;
-            }
-        }
-
-        .blog-post-sidebar {
-            padding-left: 30px;
-            width: 340px;
-            vertical-align: top;
-            padding-top: 130px;
-
-            @media only screen and (max-width: 1280px) {
-                padding-left: 20px;
-                padding-right: 5%;
+        
+            .blog-post-sidebar {
+                padding-left: 30px;
+                width: 330px;
+                vertical-align: top;
+                padding-top: 130px;
+        
+                @media only screen and (max-width: 1280px) {
+                    padding-left: 20px;
+                }
             }
         }
     }
@@ -172,6 +136,10 @@
 @media only screen and (max-width: 900px) {
     .blog-post-wrapper {
         min-height: 500px;
+    }
+
+    .blog-post-header {
+        display: none;
     }
     
 
@@ -218,6 +186,10 @@
                 margin-bottom: 0px;
                 background-position: center;
                 background-size: cover;
+
+                @media only screen and (min-height: 900px) {
+                    height: 350px;
+                }
             }
         
             .blog-post-intro-text {

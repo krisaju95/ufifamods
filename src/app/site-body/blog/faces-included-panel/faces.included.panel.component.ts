@@ -18,13 +18,15 @@ export class FacesIncludedPanelComponent {
 	isNewJSONVersion: boolean = false;
 	numberOfStarheadsPerRow: number = 3;
 
-	isDesktopViewPort: boolean = false;
-	isTabViewPort: boolean = false;
-	isMobileViewPort: boolean = false;
+	isDesktopViewPort: boolean = this.service.isDesktopViewPort();
+	isTabViewPort: boolean = this.service.isTabViewPort();
+	isMobileViewPort: boolean = this.service.isMobileViewPort();
 
 	ngOnInit() {
 		this.isNewJSONVersion = (typeof this.facesIncludedList[0] != 'string');
+		this.setNumberOfStarHeadsPerRow();
 	}
+	
 
 	setNumberOfStarHeadsPerRow() {
 		if (this.isMobileViewPort) {

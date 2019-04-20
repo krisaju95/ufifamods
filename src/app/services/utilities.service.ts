@@ -80,7 +80,7 @@ export class UtilitiesService {
 	}
 
 	isMobileViewPort() {
-		return ((window.innerWidth < 900) && (window.innerHeight < 500) || (window.innerWidth < 500) && (window.innerHeight < 900));
+		return ((window.innerWidth < 900) && (window.innerHeight < 900));
 	}
 
 	isTabViewPort() {
