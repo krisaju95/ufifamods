@@ -27,6 +27,10 @@ $site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/
         background-image: url($site-cloud-path-prefix + 'ARG.png');
     }
 
+    &.AUT {
+        background-image: url($site-cloud-path-prefix + 'AUT.png');
+    }
+
     &.BEL {
         background-image: url($site-cloud-path-prefix + 'BEL.png');
     }
@@ -123,7 +127,7 @@ $site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/
         background-image: url($site-cloud-path-prefix + 'MEX.png');
     }
 
-    &.NLD {
+    &.NLD, &.NED {
         background-image: url($site-cloud-path-prefix + 'NLD.png');
     }
 
@@ -151,6 +155,10 @@ $site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/
         background-image: url($site-cloud-path-prefix + 'SCO.png');
     }
 
+    &.SEN {
+        background-image: url($site-cloud-path-prefix + 'SEN.png');
+    }
+
     &.SRB {
         background-image: url($site-cloud-path-prefix + 'SRB.png');
     }
@@ -165,6 +173,14 @@ $site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/
 
     &.URU {
         background-image: url($site-cloud-path-prefix + 'URU.png');
+    }
+
+    &.VEN {
+        background-image: url($site-cloud-path-prefix + 'VEN.png');
+    }
+
+    &.VNM {
+        background-image: url($site-cloud-path-prefix + 'VNM.png');
     }
 
     &.WAL {
