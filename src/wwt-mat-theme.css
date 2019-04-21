@@ -1310,9 +1310,8 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-chip.mat-standard-chip {
-    background-color: #F5F5F5;
+    background-color: #F0F0F0;
     color: #305BA5;
-    border: 1px solid #305BA5;
     font-weight: 600;
 }
 

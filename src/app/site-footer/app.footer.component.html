@@ -31,11 +31,11 @@
                         About Us
                     </a>
                 </li> -->
-                <!-- <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                <li class="site-map-list-item">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog()">
                         Search
                     </a>
-                </li> -->
+                </li>
                 <li class="site-map-list-item">
                     <a href="http://www.soccergaming.com/" target="_blank" class="link-light">
                         Forum
@@ -43,37 +43,37 @@
                 </li>
             </div>
         </ul>
-        <!-- <ul class="site-map-list">
+        <ul class="site-map-list">
             <li class="site-map-list-header">
                 FIFA 19
             </li>
             <div class="site-map-list-item-group">
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('fifa 19')">
                         News
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('the journey')">
                         The Journey
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('icons')">
                         FUT Icons
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('totw')">
                         Team of the Week TOTW
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
-                        Team of the Year TOTY
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('tots')">
+                        Team of the Season TOTS
                     </a>
                 </li>
-                <li class="site-map-list-item">
+                <!-- <li class="site-map-list-item">
                     <a href="javascript: void(0)" class="link-light">
                         FUT Card Creator
                     </a>
@@ -82,15 +82,15 @@
                     <a href="javascript: void(0)" class="link-light">
                         Online Tournaments
                     </a>
-                </li>
+                </li> -->
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('player reviews')">
                         FUT Player Reviews
                     </a>
                 </li>
             </div>
-        </ul> -->
-        <!-- <ul class="site-map-list">
+        </ul>
+        <ul class="site-map-list">
             <li class="site-map-list-header">
                 FIFA Mods
             </li>
@@ -99,10 +99,12 @@
             </li>
             <div class="site-map-list-item-group">
                 <li class="site-map-list-item">
-                    ...coming soon
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('fifa 19 faces')">
+                        Custom Star-heads
+                    </a>
                 </li>
             </div>
-            <li class="site-map-list-group-header">
+            <!-- <li class="site-map-list-group-header">
                 FIFA 17
             </li>
             <div class="site-map-list-item-group">
@@ -111,38 +113,38 @@
                         Launcher Themes
                     </a>
                 </li>
-            </div>
+            </div> -->
             <li class="site-map-list-group-header">
                 FIFA 16
             </li>
             <div class="site-map-list-item-group">
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('fifa 16 faces')">
                         Player Star-heads
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('fifa 16 kits')">
                         Team Kits
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('editing tools')">
                         Editing Tools
                     </a>
                 </li>
                 <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('fifa 16 mini-faces')">
                         Player Mini-photos
                     </a>
                 </li>
-                <li class="site-map-list-item">
-                    <a href="javascript: void(0)" class="link-light">
+                <!-- <li class="site-map-list-item">
+                    <a href="javascript: void(0)" class="link-light" (click)="toggleSearchDialog('editing tools')">
                         Manager Star-heads
                     </a>
-                </li>
+                </li> -->
             </div>
-        </ul> -->
+        </ul>
         <ul class="site-map-list">
             <li class="site-map-list-header">
                 Our Besties

@@ -1,5 +1,6 @@
 import { Component, Output, EventEmitter, HostListener } from '@angular/core';
 import { UtilitiesService } from '../services/utilities.service';
+import { Subscription } from 'rxjs/Subscription';
 import { environment } from '../../environments/environment';
 
 @Component({
@@ -12,9 +13,12 @@ export class AppHeaderComponent {
 
 	constructor(
 		private service: UtilitiesService
-	) {}
+	) { }
 
 	@Output() showMobileNavbar: EventEmitter<boolean> = new EventEmitter<boolean>();
+
+	searchTriggered: Subscription;
+	searchString: string = '';
 
 	showSearchDialog: boolean = false;
 	isDesktopViewPort: boolean = false;
@@ -27,6 +31,10 @@ export class AppHeaderComponent {
 		this.isTabViewPort = this.service.isTabViewPort();
 		this.isMobileViewPort = this.service.isMobileViewPort();
 		this.isProdMode = environment.production;
+		this.searchTriggered = this.service.searchTriggered.subscribe((searchString: string) => {
+			this.showSearchDialog = true;
+			this.searchString = searchString;
+		});
 	}
 
 	showNavbar() {

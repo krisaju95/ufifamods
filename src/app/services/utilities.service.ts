@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router } from '@angular/router';
+import { Subject } from 'rxjs/Subject';
 
 @Injectable()
 export class UtilitiesService {
@@ -9,6 +10,8 @@ export class UtilitiesService {
 		private title: Title,
 		private router: Router
 	) { }
+
+	searchTriggered: Subject<any> = new Subject();
 
 	CSLP: string = "https://raw.githubusercontent.com/krisaju95/ufifamods/cloud-storage";
 

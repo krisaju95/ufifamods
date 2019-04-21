@@ -31,7 +31,7 @@ export class FUTSquadPanelComponent {
 	}
 
 	setPitchHeight() {
-		// setTimeout(() => {
+		setTimeout(() => {
 			let wrapperElement = this.elementRef.nativeElement.querySelector('.squad-first-xi-wrapper');
 			let pitchWidth = wrapperElement.clientWidth;
 			let pitchElement = this.elementRef.nativeElement.querySelector('.fut-squad-container');
@@ -39,7 +39,7 @@ export class FUTSquadPanelComponent {
 			pitchElement.style.display = 'block';
 			pitchElement.style.transform = 'scale(' + transformScaleRatio + ')';
 			wrapperElement.style.height = (transformScaleRatio * 860) + 'px';
-		// }, 1000);
+		}, 2000);
 	}
 
 	@HostListener('window:resize') onWindowResize() {

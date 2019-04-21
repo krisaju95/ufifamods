@@ -38,12 +38,15 @@
                             Download <i class="fas fa-cloud-download-alt"></i>
                         </button>
                     </div>
+                    <div class="blog-post-outro-text" [innerHTML]="postData['post-last-para']"></div>
                     <div class="blog-post-badges">
+                        <div class="tags-header">
+                            Tags:
+                        </div>
                         <mat-chip-list>
                             <mat-chip *ngFor="let category of categoryList">{{category}}</mat-chip>
                         </mat-chip-list>
                     </div>
-                    <div class="blog-post-outro-text" [innerHTML]="postData['post-last-para']"></div>
                 </div>
             </div>
             <disqus-thread class="disqus-thread-container" [page-identifier]="fileURL" [page-url]="siteURL + postURL"></disqus-thread>

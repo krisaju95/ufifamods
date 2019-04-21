@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UtilitiesService } from '../services/utilities.service';
 
 @Component({
 	selector: 'site-footer',
@@ -8,4 +9,11 @@ import { Component } from '@angular/core';
 
 export class AppFooterComponent {
 
+	constructor(
+		private utils: UtilitiesService
+	) { }
+
+	toggleSearchDialog(searchString: string) {
+		this.utils.searchTriggered.next(searchString);
+	}
 }
