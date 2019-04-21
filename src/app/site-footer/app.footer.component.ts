@@ -13,7 +13,7 @@ export class AppFooterComponent {
 		private utils: UtilitiesService
 	) { }
 
-	toggleSearchDialog(searchString: string) {
+	toggleSearchDialog(searchString?: string) {
 		this.utils.searchTriggered.next(searchString);
 	}
 }
