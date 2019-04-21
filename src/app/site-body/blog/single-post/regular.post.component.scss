@@ -9,7 +9,7 @@
         }
 
         .blog-post-header-section {
-            background: $site-colour-second-primary url("https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/post-header.jpg") center left no-repeat;
+            background: $site-colour-second-primary url($site-cloud-storage-images + "blog/post-header.jpg") center left no-repeat;
             background-size: cover;
 
             .blog-post-section {

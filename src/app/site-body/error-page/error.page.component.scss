@@ -1,3 +1,5 @@
+@import '../../variables.scss';
+
 .error-page-container {
     padding: 150px 200px;
     padding-top: 100px;
@@ -41,11 +43,11 @@
         background-repeat: no-repeat;
 
         &.error-404 {
-            background-image: url('./../../../../media/images/error-page/404.jpg');
+            background-image: url($site-cloud-storage-images + 'error-page/404.jpg');
         }
 
         &.error-7 {
-            background-image: url('./../../../../media/images/error-page/7.jpg');
+            background-image: url($site-cloud-storage-images + 'error-page/7.jpg');
         }
     }
 }

@@ -18,3 +18,9 @@ $site-resolution-mobile-max:        767px;
 $site-resolution-tab-min:           768px;
 $site-resolution-desktop-medium:    1280px;
 $site-resolution-desktop-large:     1440px;
+
+// Cloud Storage URL Prefix
+$site-cloud-storage-images: 'https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/';
+$site-cloud-storage-images-flags: $site-cloud-storage-images + 'flags/';
+$site-cloud-storage-images-club-crests: $site-cloud-storage-images + 'club-crests/';
+$site-cloud-storage-images-team-members: $site-cloud-storage-images + 'team-members/';

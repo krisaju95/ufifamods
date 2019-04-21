@@ -1,23 +1,23 @@
-$site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/team-members/';
+@import '../app/variables.scss';
 
 .team-member-dp {
     width: 100px;
     height: 100px;
-    background-image: url($site-cloud-path-prefix + 'NA.jpg');
+    background-image: url($site-cloud-storage-images-team-members + 'NA.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     display: inline-block;
 
     &.krisaju95 {
-        background-image: url($site-cloud-path-prefix + 'krisaju95.jpg');
+        background-image: url($site-cloud-storage-images-team-members + 'krisaju95.jpg');
     }
 
     &.FCB17 {
-        background-image: url($site-cloud-path-prefix + 'FCB17.jpg');
+        background-image: url($site-cloud-storage-images-team-members + 'FCB17.jpg');
     }
 
     &.aNuK3, &.aNuk3, &.anuk3 {
-        background-image: url($site-cloud-path-prefix + 'aNuK3.jpg');
+        background-image: url($site-cloud-storage-images-team-members + 'aNuK3.jpg');
     }
 }

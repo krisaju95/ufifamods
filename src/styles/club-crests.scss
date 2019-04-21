@@ -1,10 +1,12 @@
+@import '../app/variables.scss';
+
 .club-crest {
     width: 20px;
     height: 20px;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/placeholder.png');
+    background-image: url($site-cloud-storage-images-club-crests + 'placeholder.png');
 
     &.mat-input-suffix-crest {
         display: block;
@@ -13,54 +15,54 @@
     }
 
     &.arsenal {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/epl/arsenal.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/arsenal.png');
     }
 
     &.bournemouth {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/epl/bournemouth.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/bournemouth.png');
     }
 
     &.mancity {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/epl/mancity.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/mancity.png');
     }
 
     &.newcastle {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/epl/newcastle.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/newcastle.png');
     }
 
     &.tottenham {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/epl/tottenham.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/tottenham.png');
     }
 
     &.athletic {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/laliga/athletic.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/athletic.png');
     }
 
     &.barcelona {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/laliga/barcelona.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/barcelona.png');
     }
 
     &.fcbayern {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/bundesliga/fcbayern.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'bundesliga/fcbayern.png');
     }
 
     &.inter {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/serieA/inter.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/inter.png');
     }
 
     &.milan {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/serieA/milan.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/milan.png');
     }
 
     &.napoli {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/serieA/napoli.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/napoli.png');
     }
 
     &.lille {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/ligue1/lille.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/lille.png');
     }
 
     &.saintettiene {
-        background-image: url('https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/club-crests/ligue1/saintettiene.png');
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/saintettiene.png');
     }
 }
