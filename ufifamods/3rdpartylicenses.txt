@@ -365,27 +365,6 @@ MIT
 
 @angular/material/progress-spinner
 
-@angular/material/grid-list
-
-@angular/forms
-MIT
-
-@angular/material/chips
-
-@angular/material/checkbox
-
-@angular/material/dialog
-
-@angular/material/tooltip
-
-@angular/material/button
-
-@angular/material/datepicker
-
-@angular/material/form-field
-
-@angular/material/sidenav
-
 rxjs-compat
 Apache-2.0
                                Apache License
@@ -591,6 +570,27 @@ Apache-2.0
  limitations under the License.
  
 
+
+@angular/material/grid-list
+
+@angular/forms
+MIT
+
+@angular/material/chips
+
+@angular/material/checkbox
+
+@angular/material/dialog
+
+@angular/material/tooltip
+
+@angular/material/button
+
+@angular/material/datepicker
+
+@angular/material/form-field
+
+@angular/material/sidenav
 
 ngx-sharebuttons
 MIT
