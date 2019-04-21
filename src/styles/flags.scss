@@ -24,54 +24,150 @@ $site-cloud-path-prefix: 'https://raw.githubusercontent.com/krisaju95/ufifamods/
     }
 
     &.ARG {
-        background-image: url($site-cloud-path-prefix + 'argentina.png');
+        background-image: url($site-cloud-path-prefix + 'ARG.png');
     }
 
     &.BEL {
-        background-image: url($site-cloud-path-prefix + 'belgium.png');
+        background-image: url($site-cloud-path-prefix + 'BEL.png');
     }
 
     &.BOS {
-        background-image: url($site-cloud-path-prefix + 'bosnia.png');
+        background-image: url($site-cloud-path-prefix + 'BOS.png');
     }
 
     &.BRA {
-        background-image: url($site-cloud-path-prefix + 'brazil.png');
+        background-image: url($site-cloud-path-prefix + 'BRA.png');
     }
 
-    &.ENG {
-        background-image: url($site-cloud-path-prefix + 'england.png');
+    &.CHL {
+        background-image: url($site-cloud-path-prefix + 'CHL.png');
+    }
+
+    &.CHN {
+        background-image: url($site-cloud-path-prefix + 'CHN.png');
+    }
+
+    &.CIV {
+        background-image: url($site-cloud-path-prefix + 'CIV.png');
+    }
+
+    &.COL {
+        background-image: url($site-cloud-path-prefix + 'COL.png');
+    }
+
+    &.CRI {
+        background-image: url($site-cloud-path-prefix + 'CRI.png');
+    }
+
+    &.DEN {
+        background-image: url($site-cloud-path-prefix + 'DEN.png');
+    }
+
+    &.EGY {
+        background-image: url($site-cloud-path-prefix + 'EGY.png');
+    }
+
+    &.ENG    {
+        background-image: url($site-cloud-path-prefix + 'ENG.png');
     }
 
     &.ESP {
-        background-image: url($site-cloud-path-prefix + 'spain.png');
+        background-image: url($site-cloud-path-prefix + 'ESP.png');
     }
 
     &.FRA {
-        background-image: url($site-cloud-path-prefix + 'france.png');
+        background-image: url($site-cloud-path-prefix + 'FRA.png');
     }
 
     &.GER {
-        background-image: url($site-cloud-path-prefix + 'germany.png');
+        background-image: url($site-cloud-path-prefix + 'GER.png');
+    }
+
+    &.GRC {
+        background-image: url($site-cloud-path-prefix + 'GRC.png');
+    }
+
+    &.HRV {
+        background-image: url($site-cloud-path-prefix + 'HRV.png');
+    }
+
+    &.IDN {
+        background-image: url($site-cloud-path-prefix + 'IDN.png');
+    }
+
+    &.IND {
+        background-image: url($site-cloud-path-prefix + 'IND.png');
+    }
+
+    &.IRN {
+        background-image: url($site-cloud-path-prefix + 'IRN.png');
+    }
+
+    &.ISL {
+        background-image: url($site-cloud-path-prefix + 'ISL.png');
     }
 
     &.ITA {
-        background-image: url($site-cloud-path-prefix + 'italy.png');
+        background-image: url($site-cloud-path-prefix + 'ITA.png');
     }
 
     &.JAP {
-        background-image: url($site-cloud-path-prefix + 'japan.png');
+        background-image: url($site-cloud-path-prefix + 'JAP.png');
+    }
+
+    &.MAR {
+        background-image: url($site-cloud-path-prefix + 'MAR.png');
+    }
+
+    &.MEX {
+        background-image: url($site-cloud-path-prefix + 'MEX.png');
+    }
+
+    &.NLD {
+        background-image: url($site-cloud-path-prefix + 'NLD.png');
+    }
+
+    &.NOR {
+        background-image: url($site-cloud-path-prefix + 'NOR.png');
     }
 
     &.POL {
-        background-image: url($site-cloud-path-prefix + 'poland.png');
+        background-image: url($site-cloud-path-prefix + 'POL.png');
     }
 
     &.POR {
-        background-image: url($site-cloud-path-prefix + 'portugal.png');
+        background-image: url($site-cloud-path-prefix + 'POR.png');
+    }
+
+    &.ROU {
+        background-image: url($site-cloud-path-prefix + 'ROU.png');
+    }
+
+    &.RUS {
+        background-image: url($site-cloud-path-prefix + 'RUS.png');
+    }
+
+    &.SCO {
+        background-image: url($site-cloud-path-prefix + 'SCO.png');
+    }
+
+    &.SRB {
+        background-image: url($site-cloud-path-prefix + 'SRB.png');
+    }
+
+    &.SUI {
+        background-image: url($site-cloud-path-prefix + 'SUI.png');
+    }
+
+    &.TUR {
+        background-image: url($site-cloud-path-prefix + 'TUR.png');
     }
 
     &.URU {
-        background-image: url($site-cloud-path-prefix + 'uruguay.png');
+        background-image: url($site-cloud-path-prefix + 'URU.png');
+    }
+
+    &.WAL {
+        background-image: url($site-cloud-path-prefix + 'WAL.png');
     }
 }
