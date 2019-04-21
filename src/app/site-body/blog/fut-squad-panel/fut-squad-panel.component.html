@@ -2,59 +2,61 @@
     <div class="squad-section-header">
         First XI
     </div>
-    <div class="fut-squad-container">
-        <div class="fut-squad-row-container">
-            <div class="fut-squad-row attackers">
-                <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.attackers; let playerIndex = index">
-                    <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
-                    <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
-                    <div class="player-side-info">
-                        <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
-                        <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
-                        <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
-                        <div class="fut-squad-player-club club-crest {{player.club}}"></div>
+    <div class="squad-first-xi-wrapper">
+        <div class="fut-squad-container">
+            <div class="fut-squad-row-container">
+                <div class="fut-squad-row attackers">
+                    <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.attackers; let playerIndex = index">
+                        <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
+                        <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
+                        <div class="player-side-info">
+                            <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
+                            <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
+                            <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
+                            <div class="fut-squad-player-club club-crest {{player.club}}"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="fut-squad-row-container">
-            <div class="fut-squad-row midfielders">
-                <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.midfielders; let playerIndex = index">
-                    <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
-                    <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
-                    <div class="player-side-info">
-                        <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
-                        <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
-                        <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
-                        <div class="fut-squad-player-club club-crest {{player.club}}"></div>
+            <div class="fut-squad-row-container">
+                <div class="fut-squad-row midfielders">
+                    <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.midfielders; let playerIndex = index">
+                        <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
+                        <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
+                        <div class="player-side-info">
+                            <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
+                            <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
+                            <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
+                            <div class="fut-squad-player-club club-crest {{player.club}}"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="fut-squad-row-container">
-            <div class="fut-squad-row defenders">
-                <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.defenders; let playerIndex = index">
-                    <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
-                    <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
-                    <div class="player-side-info">
-                        <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
-                        <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
-                        <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
-                        <div class="fut-squad-player-club club-crest {{player.club}}"></div>
+            <div class="fut-squad-row-container">
+                <div class="fut-squad-row defenders">
+                    <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.defenders; let playerIndex = index">
+                        <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
+                        <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
+                        <div class="player-side-info">
+                            <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
+                            <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
+                            <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
+                            <div class="fut-squad-player-club club-crest {{player.club}}"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="fut-squad-row-container">
-            <div class="fut-squad-row goalkeeper">
-                <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{futSquadInfo.players.goalkeeper.quality}}">
-                    <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + futSquadInfo.players.goalkeeper.id + '.png)'"></div>
-                    <div class="fut-squad-player-name" [innerHTML]="futSquadInfo.players.goalkeeper.name"></div>
-                    <div class="player-side-info">
-                        <div class="fut-squad-player-rating" [innerHTML]="futSquadInfo.players.goalkeeper.rating"></div>
-                        <div class="fut-squad-player-position" [innerHTML]="futSquadInfo.players.goalkeeper.position"></div>
-                        <div class="fut-squad-player-nationality nation-flag {{futSquadInfo.players.goalkeeper.nationality}}"></div>
-                        <div class="fut-squad-player-club club-crest {{futSquadInfo.players.goalkeeper.club}}"></div>
+            <div class="fut-squad-row-container">
+                <div class="fut-squad-row goalkeeper">
+                    <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{futSquadInfo.players.goalkeeper.quality}}">
+                        <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + futSquadInfo.players.goalkeeper.id + '.png)'"></div>
+                        <div class="fut-squad-player-name" [innerHTML]="futSquadInfo.players.goalkeeper.name"></div>
+                        <div class="player-side-info">
+                            <div class="fut-squad-player-rating" [innerHTML]="futSquadInfo.players.goalkeeper.rating"></div>
+                            <div class="fut-squad-player-position" [innerHTML]="futSquadInfo.players.goalkeeper.position"></div>
+                            <div class="fut-squad-player-nationality nation-flag {{futSquadInfo.players.goalkeeper.nationality}}"></div>
+                            <div class="fut-squad-player-club club-crest {{futSquadInfo.players.goalkeeper.club}}"></div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -63,45 +65,15 @@
     <div class="squad-section-header">
         Substitutes
     </div>
-    <div class="fut-squad-row-container">
-        <div class="fut-squad-row substitutes">
-            <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of (futSquadInfo.players.substitutes | slice : 0 : 5); let playerIndex = index">
-                <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
-                <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
-                <div class="player-side-info">
-                    <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
-                    <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
-                    <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
-                    <div class="fut-squad-player-club club-crest {{player.club}}"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fut-squad-row-container">
-        <div class="fut-squad-row substitutes">
-            <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of (futSquadInfo.players.substitutes | slice : 5 : 10); let playerIndex = index">
-                <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
-                <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
-                <div class="player-side-info">
-                    <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
-                    <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
-                    <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
-                    <div class="fut-squad-player-club club-crest {{player.club}}"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fut-squad-row-container">
-        <div class="fut-squad-row substitutes">
-            <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of (futSquadInfo.players.substitutes | slice : 10 : 15); let playerIndex = index">
-                <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
-                <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
-                <div class="player-side-info">
-                    <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
-                    <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
-                    <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
-                    <div class="fut-squad-player-club club-crest {{player.club}}"></div>
-                </div>
+    <div class="squad-substitutes-wrapper">
+        <div class="fut-squad-player-card {{futSquadInfo.fifaVersion}} {{squadType}} {{player.quality}}" *ngFor="let player of futSquadInfo.players.substitutes; let playerIndex = index">
+            <div class="fut-squad-player-image" [style.background-image]="'url(https://cdn.sofifa.org/players/10/19/' + player.id + '.png)'"></div>
+            <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
+            <div class="player-side-info">
+                <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>
+                <div class="fut-squad-player-position" [innerHTML]="player.position"></div>
+                <div class="fut-squad-player-nationality nation-flag {{player.nationality}}"></div>
+                <div class="fut-squad-player-club club-crest {{player.club}}"></div>
             </div>
         </div>
     </div>

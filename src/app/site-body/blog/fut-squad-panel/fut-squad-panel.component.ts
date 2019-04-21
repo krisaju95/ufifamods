@@ -1,4 +1,4 @@
-import { Component, Input, HostListener } from '@angular/core';
+import { Component, Input, ElementRef, HostListener } from '@angular/core';
 import { UtilitiesService } from '../../../services/utilities.service';
 
 @Component({
@@ -10,7 +10,8 @@ import { UtilitiesService } from '../../../services/utilities.service';
 export class FUTSquadPanelComponent {
 
 	constructor(
-		private service: UtilitiesService
+		private service: UtilitiesService,
+		private elementRef: ElementRef
 	) { }
 
 	@Input() futSquadInfo: Array<any>;
@@ -25,15 +26,33 @@ export class FUTSquadPanelComponent {
 
 	}
 
+	ngAfterViewInit() {
+		this.setPitchHeight();
+	}
+
+	setPitchHeight() {
+		// setTimeout(() => {
+			let wrapperElement = this.elementRef.nativeElement.querySelector('.squad-first-xi-wrapper');
+			let pitchWidth = wrapperElement.clientWidth;
+			let pitchElement = this.elementRef.nativeElement.querySelector('.fut-squad-container');
+			let transformScaleRatio = pitchWidth / 790;
+			pitchElement.style.display = 'block';
+			pitchElement.style.transform = 'scale(' + transformScaleRatio + ')';
+			wrapperElement.style.height = (transformScaleRatio * 860) + 'px';
+		// }, 1000);
+	}
+
 	@HostListener('window:resize') onWindowResize() {
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isTabViewPort = this.service.isTabViewPort();
 		this.isMobileViewPort = this.service.isMobileViewPort();
+		this.setPitchHeight();
 	}
 
 	@HostListener('window:orientationchange') onOrientationChange() {
 		this.isDesktopViewPort = this.service.isDesktopViewPort();
 		this.isTabViewPort = this.service.isTabViewPort();
 		this.isMobileViewPort = this.service.isMobileViewPort();
+		this.setPitchHeight();
 	}
 }

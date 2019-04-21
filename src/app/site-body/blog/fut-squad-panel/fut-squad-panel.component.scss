@@ -1,13 +1,20 @@
 .fut-squad-container {
+    display: none;
+    height: 820px;
+    width: 750px;
     padding: 20px;
     margin: 20px 0;
-    border-radius: 5px;
     text-align: center;
-    background: url(https://i.imgur.com/z4YWhrs.jpg);
+    background: url('https://i.imgur.com/j22ZeVd.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center bottom;
-    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    transform-origin: top left;
+
+    @media only screen and (min-width: 900px) {
+        border-radius: 5px;
+        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    }
 
     .fut-squad-row {
         display: inline-table;
@@ -35,10 +42,16 @@
     font-size: 21px;
     color: #305BA5;
     text-align: center;
+    margin-top: 30px;
+}
+
+.squad-substitutes-wrapper {
+    text-align: center;
 }
 
 .fut-squad-player-card {
-    display: table-cell;
+    display: inline-block;
+    margin-right: 10px;
     height: 180px;
     width: 140px;
     background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-totw_gold.png');
@@ -50,10 +63,10 @@
 
     .fut-squad-player-image {
         position: absolute;
-        bottom: 50px;
+        bottom: 27.5%;
         right: 8px;
-        width: 90px;
-        height: 90px;
+        width: 65%;
+        height: 50%;
         text-align: center;
         background-position: center bottom;
         background-size: contain;
@@ -74,11 +87,11 @@
 
     .player-side-info {
         display: inline-block;
-        width: 35px;
+        width: 25%;
         position: absolute;
-        top: 25px;
-        left: 15px;
-        height: 90px;
+        top: 15%;
+        left: 10%;
+        height: 50%;
         padding: 10px 0;
         color: #E9CC74;
         text-align: center;
