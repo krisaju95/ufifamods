@@ -13,7 +13,7 @@ export class UtilitiesService {
 
 	searchTriggered: Subject<any> = new Subject();
 
-	CSLP: string = "https://raw.githubusercontent.com/krisaju95/ufifamods/cloud-storage";
+	CSLP: string = "https://raw.githubusercontent.com/krisaju95/ufifamods/master/db";
 
 	siteDomain: string = "http://ufifamods.com/";
 
