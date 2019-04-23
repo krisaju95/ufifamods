@@ -77,6 +77,10 @@ body {
 .ad-placeholder-with-margin {
     margin: 40px;
     display: block;
+
+    &.footer-ad-placeholder {
+        margin-top: 0;
+    }
     
     @media only screen and (max-width: 800px) {
         margin: 10px;

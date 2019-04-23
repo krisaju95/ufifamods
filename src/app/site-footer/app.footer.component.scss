@@ -65,17 +65,8 @@
     
                 .social-media-icons {
                     display: inline-block;
-    
-                    &:hover {
-                        color: $site-colour-disabled-light;
-    
-                        a {
-                            &:hover {
-                                color: $site-colour-yellow;
-                                cursor: pointer;
-                            }
-                        }
-                    }
+                    height: 50px;
+                    line-height: 50px;
     
                     a {
                         font-size: 28px;

@@ -74,12 +74,12 @@ export class RegularBlogPostComponent {
 						this.service.setPageTitle(this.postData['post-title'], false);
 					},
 						() => {
-							window.location.href = "/404"
+							this.service.routeToState('404');
 						}
 					)
 			},
 				() => {
-					window.location.href = "/404"
+					this.service.routeToState('404');
 				}
 			)
 	}

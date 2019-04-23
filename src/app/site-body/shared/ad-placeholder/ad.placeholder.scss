@@ -30,6 +30,7 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
     text-align: center;
     padding: 20px;
     padding-top: 10px;
+    margin: 20px 0;
     background-color: $site-colour-primary;
     border-radius: 5px;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
@@ -46,19 +47,36 @@ div.adclerks_728 img, div.pc_block_active, div.adclerks_728 div {
 }
 
 .ad-blocker-used-text {
-    padding: 20px 20%;
     text-align: center;
-    font-size: 14px;
-    font-weight: 300;
-    margin: 20px;
-    color: #2f2e2e;
-    min-height: 30px;
-    background-color: #F5F5F5;
-    border: 1px solid #DDDDDD;
-    border-bottom: 4px solid #E8E8E8;
+    padding: 20px 30px;
+    margin: 20px 0;
+    background-color: $site-colour-primary;
+    border-radius: 5px;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .1);
+    color: $site-colour-white;
+    font-size: 16px;
+    font-weight: 400;
 
-    &.site-sidebar-ad {
-        min-height: 160px;
-        padding-top: calc(50% - 78px);
+    .ad-blocker-container {
+        display: inline-table;
+        width: 100%;
+        max-width: 728px;
+        height: 50px;
+
+        .exclamation-icon-container, .ad-blocker-content {
+            display: table-cell;
+            vertical-align: middle;
+        }
+
+        .exclamation-icon-container {
+            font-size: 21px;
+            color: $site-colour-pink;
+            border-right: 1px solid $site-colour-blue;
+            padding-right: 30px;
+        }
+
+        .ad-blocker-content {
+            padding-left: 30px;
+        }
     }
 }

@@ -22,23 +22,27 @@ a {
 
     &.button-link {
         display: inline-block;
-        padding: 10px 30px;
-        border-radius: 20px;
-        border: 2px solid transparent;
+        padding: 15px 30px;
+        border-radius: 30px;
+        border: 1px solid transparent;
         box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
 
         &:hover, &:focus {
             box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
         }
 
+        &.reduced-padding {
+            padding: 10px 15px;
+        }
+
         &.primary-button-link {
             background-color: #305BA5;
-            border: 2px solid #305BA5;
+            border: 1px solid #305BA5;
             color: #FFFFFF;
 
             &:hover, &:focus {
                 background-color: #1F2C45;
-                border: 2px solid #1F2C45;
+                border: 1px solid #1F2C45;
                 color: #FFFFFF;
                 text-decoration-color: #FFFFFF;
             }
@@ -46,32 +50,48 @@ a {
 
         &.secondary-button-link {
             background-color: #FFFFFF;
-            border: 2px solid #FFFFFF;
+            border: 1px solid #FFFFFF;
 
             &:hover, &:focus {
                 background-color: #FAFAFA;
-                border: 2px solid #FAFAFA;
-                box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+                border: 1px solid #FAFAFA;
             }
 
             &.highlight-outline {
-                border: 2px solid #305BA5;
+                border: 1px solid #305BA5;
 
                 &:hover, &:focus {
-                    border: 2px solid #1F2C45;
+                    border: 1px solid #1F2C45;
                 }
+            }
+        }
+
+        &.ghost-button-link {
+            background-color: transparent;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            color: #305BA5;
+            box-shadow: none;
+
+            &:hover, &:focus {
+                border: 1px solid rgba(48, 91, 165, 0.4);
+                background: rgba(0, 0, 0, 0.05);
+                color: #305BA5;
+                box-shadow: none;
             }
         }
 
         &.ghost-button-link-light {
             background-color: transparent;
-            border: 2px solid #FFFFFF;
+            border: 1px solid rgba(255, 255, 255, 0.4);
             color: #FFFFFF;
+            box-shadow: none;
 
             &:hover, &:focus {
-                border: 2px solid #FFC145;
+                border: 1px solid rgba(255, 193, 69, 0.4);
+                background: rgba(255, 255, 255, 0.05);
                 color: #FFC145;
-                box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+                text-decoration-color: #FFC145;
+                box-shadow: none;
             }
         }
 
@@ -91,9 +111,17 @@ a {
 
         &.simple-button {
             padding: 0;
+            border: none;
+            box-shadow: none;
 
             &.simple-button-light {
-                color: #F5F5F5;
+                color: #CCCCCC;
+
+                &:hover, &:focus {
+                    border: none;
+                    box-shadow: none;
+                    color: #F5F5F5;
+                }
             }
         }
     }

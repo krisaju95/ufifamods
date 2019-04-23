@@ -31,10 +31,10 @@
         </ul>
     </div>
     <div class="collapse-link-container" align="end">
-        <a *ngIf="showExpandLink" class="button-link primary-button-link link-icon-right" href="javascript: void(0)" (click)="setExpandedView()">
+        <a *ngIf="showExpandLink" class="button-link ghost-button-link reduced-padding link-icon-right" href="javascript: void(0)" (click)="setExpandedView()">
             View <strong>{{numberOfStarHeads - (this.numberOfStarheadsPerRow * this.numberOfRowsDisplayed)}}</strong> more <i class="fas fa-angle-down"></i>
         </a>
-        <a *ngIf="showCollapseLink" class="button-link primary-button-link link-icon-right" href="javascript: void(0)" (click)="setCollapsedView(true)">
+        <a *ngIf="showCollapseLink" class="button-link ghost-button-link reduced-padding link-icon-right" href="javascript: void(0)" (click)="setCollapsedView(true)">
             View fewer <i class="fas fa-angle-up"></i>
         </a>
     </div>

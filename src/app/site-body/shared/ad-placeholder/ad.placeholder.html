@@ -20,7 +20,14 @@
         </div>
     </ng-container>
 </div>
-<div *ngIf="adBlockerUsed" class="ad-blocker-used-text {{theme}}" [ngClass] = "{'site-footer-ad': adZone == 2, 'site-sidebar-ad': adZone == 3, 'remove-margins': removeMargins}">
-    It looks like you're using an adBlocker. Would you please consider white-listing our site?
+<div *ngIf="adBlockerUsed" class="ad-blocker-used-text {{theme}}">
+    <div class="ad-blocker-container">
+        <div class="exclamation-icon-container">
+            <i class="fas fa-exclamation-circle"></i>
+        </div>
+        <div class="ad-blocker-content">
+            It looks like you're using an adBlocker. Would you please consider white-listing our site?
+        </div>
+    </div>
 </div>
 <div id="adDOMContainer"></div>

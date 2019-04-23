@@ -67,7 +67,13 @@ export class FacesIncludedPanelComponent {
 				}
 			}
 			if (buttonClick) {
-				window.scroll({ top: scrollPosition, left: 0, behavior: 'smooth' });
+				if(this.isMobileViewPort) {
+					setTimeout(() => {
+						window.scroll({ top: scrollPosition, left: 0, behavior: 'smooth' });
+					}, 300);
+				} else {
+					window.scroll({ top: scrollPosition, left: 0, behavior: 'smooth' });
+				}
 			}
 		}
 	}
@@ -88,7 +94,7 @@ export class FacesIncludedPanelComponent {
 			this.numberOfRowsDisplayed = 4;
 		} else {
 			this.numberOfStarheadsPerRow = 3;
-			this.numberOfRowsDisplayed = 3;
+			this.numberOfRowsDisplayed = 4;
 		}
 	}
 

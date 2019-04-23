@@ -34,7 +34,7 @@
                     <screenshots-panel *ngIf="screenshotsList" [screenshotsList]="screenshotsList"></screenshots-panel>
                     <fut-squad-panel *ngIf="futSquadInfo" [futSquadInfo]="futSquadInfo"></fut-squad-panel>
                     <div class="mod-download-link-container" *ngIf="showModDisclaimer">
-                        <button (click)="openDialog()">
+                        <button mat-button (click)="openDialog()">
                             Download <i class="fas fa-cloud-download-alt"></i>
                         </button>
                     </div>

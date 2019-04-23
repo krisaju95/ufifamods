@@ -17,8 +17,32 @@ import { SharedModule } from './site-body/shared/app.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { MaterialModule } from './site-body/shared/mat.module';
-
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { environment } from '../environments/environment';
+
+let moduleImports = [
+	BrowserModule,
+	BrowserAnimationsModule,
+	AppBodyModule,
+	SiteAdminModule,
+	SharedModule,
+	AppRoutingModule,
+	MaterialModule,
+	FontAwesomeModule
+]
+
+if (environment.production) {
+	moduleImports = [
+		BrowserModule,
+		BrowserAnimationsModule,
+		AppBodyModule,
+		SharedModule,
+		AppRoutingModule,
+		MaterialModule,
+		FontAwesomeModule
+	]
+}
 
 
 enableProdMode()
@@ -31,14 +55,7 @@ enableProdMode()
 		AppFooterComponent
 	],
 	imports: [
-		BrowserModule,
-		BrowserAnimationsModule,
-		AppBodyModule,
-		SiteAdminModule,
-		SharedModule,
-		AppRoutingModule,
-		MaterialModule,
-		FontAwesomeModule
+		...moduleImports
 	],
 	providers: [
 		UtilitiesService,
@@ -49,4 +66,5 @@ enableProdMode()
 	],
 	bootstrap: [AppComponent]
 })
+
 export class AppModule { }

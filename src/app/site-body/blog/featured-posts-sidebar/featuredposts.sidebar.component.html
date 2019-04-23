@@ -2,8 +2,11 @@
     <div class="featured-posts-title">
         Featured Posts
     </div>
-    <div class="post-card-container" *ngFor="let postData of postsData">
-        <post-card (click)="routeToPost(postData['post-link'])" [post]="postData"></post-card>
+    <div class="post-card-container" *ngFor="let postData of (postsData | slice : 0 : 2)">
+        <post-card (click)="routeToPost(postData['post-link'])" [post]="postData" [hideDescription]="true"></post-card>
+    </div>
+    <site-ad-placeholder [adZone]="3"></site-ad-placeholder>
+    <div class="post-card-container" *ngFor="let postData of (postsData | slice : 2 : 4)">
+        <post-card (click)="routeToPost(postData['post-link'])" [post]="postData" [hideDescription]="true"></post-card>
     </div>
 </div>
-<site-ad-placeholder [adZone]="3"></site-ad-placeholder>
