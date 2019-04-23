@@ -56,10 +56,10 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostData() {
-		this.http.get(this.service.getCSLP() + "/blog-posts-list")
+		this.http.get(this.service.getCSLP() + '/blog-posts-list')
 			.subscribe((data) => {
 				this.fileURL = this.getFileURL(data);
-				this.http.get(this.service.getCSLP() + "/blog-posts/" + this.fileURL)
+				this.http.get(this.service.getCSLP() + '/blog-posts/' + this.getParam('year') + '/' + this.getParam('month') + '/' + this.fileURL)
 					.subscribe((postData) => {
 						this.responseLoading = false;
 						this.postData = postData;
@@ -102,7 +102,7 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostCategories() {
-		if(typeof this.postData["post-category-list"] == 'string') {
+		if (typeof this.postData["post-category-list"] == 'string') {
 			this.categoryList = this.postData["post-category-list"].split(";");
 		} else {
 			this.categoryList = this.postData["post-category-list"];
