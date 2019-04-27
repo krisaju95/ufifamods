@@ -15,15 +15,143 @@
                     </mat-select>
                 </mat-form-field>
 
+                <mat-form-field id="postDate" appearance="fill">
+                    <mat-label>Post Date</mat-label>
+                    <input matInput formControlName="postDate" [matDatepicker]="picker" placeholder="Choose a date">
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker touchUi #picker></mat-datepicker>
+                </mat-form-field>
+            
+                <mat-form-field id="postCategory" appearance="fill">
+                    <mat-label>Post Category</mat-label>
+                    <mat-select formControlName="postCategory" disableOptionCentering="true">
+                        <mat-option value="mods">Mods</mat-option>
+                        <mat-option value="totw">TOTW</mat-option>
+                        <mat-option value="tots">TOTS</mat-option>
+                        <mat-option value="fifa 18">FIFA 18</mat-option>
+                        <mat-option value="fifa 18">FIFA 16</mat-option>
+                        <mat-option value="player review">Player Review</mat-option>
+                        <mat-option value="career mode">Career Mode</mat-option>
+                        <mat-option value="fifa mods">FIFA Mods</mat-option>
+                        <mat-option value="fifa16 faces">FIFA 16 Faces</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Title</mat-label>
+                    <input matInput formControlName="postTitle" placeholder="Enter the title of your post">
+                    <i matSuffix class="fas fa-heading"></i>
+                </mat-form-field>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Image</mat-label>
+                    <input matInput formControlName="postMedia" placeholder="Enter the URL of the post image">
+                    <i matSuffix class="fas fa-image"></i>
+                </mat-form-field>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Description</mat-label>
+                    <input matInput formControlName="postDescription" placeholder="Enter the first line of your post">
+                    <i matSuffix class="fas fa-certificate"></i>
+                </mat-form-field>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Content</mat-label>
+                    <textarea matInput cdkTextareaAutosize formControlName="postContent" cdkTextareaAutosize="true"
+                        cdkAutosizeMinRows="10" cdkAutosizeMaxRows="10"></textarea>
+                    <i matSuffix class="fas fa-align-left"></i>
+                </mat-form-field>
+
                 <site-admin-custom-starheads
                     *ngIf="blogPostForm.controls.postTemplate.value == 'fifa16:starheads'
                         || blogPostForm.controls.postTemplate.value == 'fifa19:starheads'">
                 </site-admin-custom-starheads>
 
-                <site-admin-fut-squad
-                    *ngIf="blogPostForm.controls.postTemplate.value == 'fifa19:totw'
-                        || blogPostForm.controls.postTemplate.value == 'fifa19:tots'">
-                </site-admin-fut-squad>
+                <div class="fut-squad-info" *ngIf="blogPostForm.controls.postTemplate.value == 'fifa19:totw'
+                || blogPostForm.controls.postTemplate.value == 'fifa19:tots'">
+                    <div class="fut-squad-info-header">
+                        Custom Star-heads
+                    </div>
+                    <mat-form-field id="fifaVersion" appearance="fill">
+                        <mat-label>FIFA Version</mat-label>
+                        <mat-select formControlName="postTemplate" disableOptionCentering="true">
+                            <mat-option value="19">FIFA 19</mat-option>
+                        </mat-select>
+                        <i matSuffix class="fas fa-futbol"></i>
+                    </mat-form-field>
+                    <div class="fut-player-info-row" *ngFor="let player of blogPostForm.controls.squadPlayers.controls; let i = index" [formGroup]="player">
+                        <mat-form-field class="player-name" appearance="fill">
+                            <mat-label>Player Name</mat-label>
+                            <input matInput formControlName="name"/>
+                            <i matSuffix class="fas fa-signature"></i>
+                        </mat-form-field>
+                        <mat-form-field class="player-id" appearance="fill">
+                            <mat-label>Player ID</mat-label>
+                            <input matInput formControlName="id"/>
+                            <i matSuffix class="fas fa-id-card"></i>
+                        </mat-form-field>
+                        <mat-form-field class="player-position" appearance="fill">
+                            <mat-label>Player Position</mat-label>
+                            <input matInput formControlName="position"/>
+                            <i matSuffix class="fas fa-map-marker-alt"></i>
+                        </mat-form-field>
+                        <mat-form-field class="player-rating" appearance="fill">
+                            <mat-label>Player Rating</mat-label>
+                            <input matInput formControlName="rating"/>
+                            <i matSuffix class="fas fa-star-half-alt"></i>
+                        </mat-form-field>
+                        <mat-form-field class="player-nationality" appearance="fill">
+                            <mat-label>Player Nationality</mat-label>
+                            <input matInput formControlName="nationality"/>
+                            <i matSuffix class="fas fa-flag"></i>
+                        </mat-form-field>
+                        <mat-form-field class="player-quality" appearance="fill">
+                            <mat-label>Player Quality</mat-label>
+                            <mat-select formControlName="quality" disableOptionCentering="true">
+                                <mat-option value="gold">Gold</mat-option>
+                                <mat-option value="silver">Silver</mat-option>
+                                <mat-option value="bronze">Bronze</mat-option>
+                            </mat-select>
+                            <i matSuffix class="fas fa-coins"></i>
+                        </mat-form-field>
+                        <div class="player-starhead-form-controls">
+                            <a class="button-link simple-button" href="javascript: void(0)" (click)="removeFUTPlayer(i)">
+                                <i class="far fa-times-circle"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="add-another-player-link">
+                        <a class="button-link secondary-button-link link-icon-right" href="javascript: void(0)" (click)="addNewFUTPlayerRow()">
+                            Add another Player <i class="fas fa-plus"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <mat-form-field appearance="fill">
+                    <mat-label>Tags</mat-label>
+                    <mat-chip-list #tagsChipList>
+                        <mat-chip *ngFor="let contributor of selectedPostTags; let i = index" [removable]="true" (removed)="removeTag(i)">
+                            {{contributor}}
+                            <i matChipRemove class="far fa-times-circle"></i>
+                        </mat-chip>
+                        <input formControlName="morePostCategories" [matAutocomplete]="contributorAutoComplete" [matChipInputFor]="tagsChipList" [matChipInputSeparatorKeyCodes]="separatorKeysCodes" [matChipInputAddOnBlur]="true" (matChipInputTokenEnd)="addTag($event)">
+                    </mat-chip-list>
+                    <mat-autocomplete #contributorAutoComplete="matAutocomplete" (optionSelected)="addTag($event)">
+                        <mat-option *ngFor="let category of postCategories" [value]="category">
+                            {{category}}
+                        </mat-option>
+                    </mat-autocomplete>
+                    <i matSuffix class="fas fa-tags"></i>
+                </mat-form-field>
+            
+                <mat-form-field appearance="fill">
+                    <mat-label>Post Footer</mat-label>
+                    <input matInput formControlName="postFooterMessage" placeholder="Enter the last line of your post">
+                </mat-form-field>
+            
+                <a class="button-link primary-button-link" href="javascript: void(0)" (click)="submitPost()">
+                    Generate Post
+                </a>
 
             </form>
         </div>

@@ -4,9 +4,14 @@ const epl: string = 'Premier League';
 const laliga: string = 'La Liga Santander';
 const ligue1: string = 'Ligue 1 Conforama';
 const seriaA: string = 'Serie A TIM';
+const seriaB: string = 'Serie A';
 const bundesliga: string = 'Bundesliga';
 const superlig: string = 'Süper Lig';
 const eredivisie: string = 'Eredivisie';
+const aLeague: string = 'Australian Hyundai A-League';
+const mexicanLiga: string = 'Mexican Liga MX';
+const saudiLeague: string = 'Saudi Abdul L. Jameel League';
+const chileanLeague: string = 'Chilian Campeonato Nacional';
 
 @Injectable()
 export class ClubInfoService {
@@ -440,13 +445,40 @@ export class ClubInfoService {
 				}
 			}
 		},
+		"seriaB": {
+			name: seriaB + " (Italy)",
+			country: "Italy",
+			countryCode: "ITA",
+			clubs: {
+				"benevento": {
+					name: "Benevento",
+					league: seriaB,
+					country: "Italy"
+				}
+			}
+		},
 		"bundesliga": {
 			name: bundesliga + " (Germany)",
 			country: "Germany",
 			countryCode: "GER",
 			clubs: {
+				"dortmund": {
+					name: "Borussia Dortmund",
+					league: bundesliga,
+					country: "Germany"
+				},
+				"fcaugsburg": {
+					name: "F.C. Augsburg",
+					league: bundesliga,
+					country: "Germany"
+				},
 				"fcbayern": {
 					name: "F.C. Bayern München",
+					league: bundesliga,
+					country: "Germany"
+				},
+				"rbleipzig": {
+					name: "R.B. Leipzig",
 					league: bundesliga,
 					country: "Germany"
 				}
@@ -473,6 +505,71 @@ export class ClubInfoService {
 					name: "Ajax Amsterdam",
 					league: eredivisie,
 					country: "Netherlands"
+				},
+				"vitesse": {
+					name: "Vitesse",
+					league: eredivisie,
+					country: "Netherlands"
+				}
+			}
+		},
+		"a-league": {
+			name: aLeague + " (Australia)",
+			country: "Australia",
+			countryCode: "AUS",
+			clubs: {
+				"wellington": {
+					name: "Wellington Phoenix",
+					league: aLeague,
+					country: "Australia"
+				}
+			}
+		},
+		"mexicanLiga": {
+			name: mexicanLiga + " (Mexico)",
+			country: "Mexico",
+			countryCode: "MEX",
+			clubs: {
+				"clubleon": {
+					name: "Club León",
+					league: mexicanLiga,
+					country: "Mexico"
+				}
+			}
+		},
+		"saudiLeague": {
+			name: saudiLeague + " (Saudi Arabia)",
+			country: "Saudi Arabia",
+			countryCode: "SAU",
+			clubs: {
+				"alnassr": {
+					name: "Al-Nassr",
+					league: saudiLeague,
+					country: "Saudi Arabia"
+				}
+			}
+		},
+		"chileanLeague": {
+			name: chileanLeague + " (Chile)",
+			country: "Chile",
+			countryCode: "CHI",
+			clubs: {
+				"cdeverton": {
+					name: "CD Everton de Viña del Mar",
+					league: chileanLeague,
+					country: "Chile"
+				}
+			}
+		},
+		"restOfWorld": {
+			name: "Rest Of World",
+			country: "Rest Of World",
+			countryCode: "ROW",
+			clubs: {
+				"paok": {
+					name: "PAOK",
+					league: "Rest Of World",
+					country: "Rest Of World"
 				}
 			}
 		}

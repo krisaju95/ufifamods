@@ -18,6 +18,7 @@ import { SearchPostsDialogComponent, SearchPostsDialog } from './search-posts/se
 import { MaterialModule } from '../shared/mat.module';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
 import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
+import { FutCardModule } from '../shared/fut-card/app.module';
 
 @NgModule({
 	declarations: [
@@ -39,6 +40,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 		FormsModule,
 		DisqusModule,
 		MaterialModule,
+		FutCardModule,
 		ShareButtonsModule.forRoot(),
 		HttpClientModule,
 		HttpClientJsonpModule

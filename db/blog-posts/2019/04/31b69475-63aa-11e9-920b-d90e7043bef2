@@ -5,7 +5,7 @@
   "post-intro-text": "The latest FIFA 19 TOTW 31 squad has been officially revealed. FUT 19 Team of the Week 31 In-Form cards will be available in FUT packs from 6pm (UK time), Wednesday, April 17, 2019.",
   "post-main-text-array": [
     "The top players in this week's team are 92 rated Kalidou Koulibaly from Napoli, 92 Kevin De Bruyne from Manchester City, 88 Nicolas Pépé from LOSC Lille and 87 Radja Nainggolan from Inter Milan.",
-    "FUT players can obtain these players through packs and, of course, through the market with coins. With the team of the season coming out soon, and the major players listed above all exected to be a part of the TOTS of their respective leagues, it remains to be seen whether any of these players would be a worthy investment at this point in time."
+    "FUT players can obtain these players through packs and, of course, through the market with coins. With the team of the season coming out soon, and the major players listed above all expected to be a part of the TOTS of their respective leagues, it remains to be seen whether any of these players would be a worthy investment at this point in time."
   ],
   "post-last-para": "Enjoying our content? Like, Share & Comment!",
   "post-link": "/blog/post/2019/04/17/fifa-19-fut-totw-31",
@@ -28,7 +28,8 @@
           "position": "ST",
           "club": "tottenham",
           "nationality": "BRA",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Williams",
@@ -37,7 +38,8 @@
           "position": "ST",
           "club": "athletic",
           "nationality": "ESP",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         }
       ],
       "midfielders": [
@@ -48,7 +50,8 @@
           "position": "LW",
           "club": "fcbayern",
           "nationality": "FRA",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Fraser",
@@ -57,7 +60,8 @@
           "position": "LM",
           "club": "bournemouth",
           "nationality": "ENG",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Nainggolan",
@@ -66,7 +70,8 @@
           "position": "CAM",
           "club": "inter",
           "nationality": "BEL",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "De Bruyne",
@@ -75,7 +80,8 @@
           "position": "CM",
           "club": "mancity",
           "nationality": "BEL",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Pépé",
@@ -84,7 +90,8 @@
           "position": "RM",
           "club": "lille",
           "nationality": "CIV",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         }
       ],
       "defenders": [
@@ -95,7 +102,8 @@
           "position": "CB",
           "club": "newcastle",
           "nationality": "SUI",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Koulibaly",
@@ -104,7 +112,8 @@
           "position": "CB",
           "club": "napoli",
           "nationality": "SEN",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Debuchy",
@@ -113,7 +122,8 @@
           "position": "RWB",
           "club": "saintetienne",
           "nationality": "FRA",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         }
       ],
       "goalkeeper": {
@@ -123,7 +133,8 @@
         "position": "GK",
         "club": "milan",
         "nationality": "ESP",
-        "quality": "gold"
+        "quality": "gold",
+        "type": "totw"
       },
       "substitutes": [
         {
@@ -133,7 +144,8 @@
           "position": "GK",
           "club": "empoli",
           "nationality": "POL",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Funes Mori",
@@ -142,7 +154,8 @@
           "position": "CB",
           "club": "villarreal",
           "nationality": "ARG",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Rafa",
@@ -151,7 +164,8 @@
           "position": "LM",
           "club": "benfica",
           "nationality": "POR",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Gayle",
@@ -160,7 +174,8 @@
           "position": "ST",
           "club": "westbrom",
           "nationality": "ENG",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Funes Mori",
@@ -169,7 +184,8 @@
           "position": "ST",
           "club": "monterrey",
           "nationality": "ARG",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Huntelaar",
@@ -178,7 +194,8 @@
           "position": "ST",
           "club": "ajax",
           "nationality": "NED",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Machís",
@@ -187,7 +204,8 @@
           "position": "ST",
           "club": "cadiz",
           "nationality": "VEN",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Mount",
@@ -196,7 +214,8 @@
           "position": "CM",
           "club": "derby",
           "nationality": "ENG",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Cardona",
@@ -205,7 +224,8 @@
           "position": "CAM",
           "club": "pachuca",
           "nationality": "COL",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Hinterseer",
@@ -214,7 +234,8 @@
           "position": "ST",
           "club": "bochum",
           "nationality": "AUT",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Cano",
@@ -223,7 +244,8 @@
           "position": "ST",
           "club": "independiente",
           "nationality": "ARG",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         },
         {
           "name": "Đurić",
@@ -232,7 +254,8 @@
           "position": "ST",
           "club": "salernitana",
           "nationality": "BOS",
-          "quality": "gold"
+          "quality": "gold",
+          "type": "totw"
         }
       ]
     }

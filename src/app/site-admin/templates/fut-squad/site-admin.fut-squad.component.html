@@ -1,15 +1,5 @@
 <form [formGroup]="blogPostForm" autocomplete="off">
 
-    <mat-form-field id="postTemplate" appearance="fill">
-        <mat-label>Post Template</mat-label>
-        <mat-select formControlName="postTemplate" disableOptionCentering="true">
-            <mat-option value="fifa19:starheads">FIFA 19 Star Heads</mat-option>
-            <mat-option value="fifa19:totw">FIFA 19 Team of the Week</mat-option>
-            <mat-option value="fifa19:tots">FIFA 19 Team of the Season</mat-option>
-            <mat-option value="fifa16:starheads">FIFA 16 Star Heads</mat-option>
-        </mat-select>
-    </mat-form-field>
-
     <mat-form-field id="postDate" appearance="fill">
         <mat-label>Post Date</mat-label>
         <input matInput formControlName="postDate" [matDatepicker]="picker" placeholder="Choose a date">
@@ -141,5 +131,4 @@
     <a class="button-link primary-button-link" href="javascript: void(0)" (click)="submitPost()">
         Generate Post
     </a>
-
 </form>

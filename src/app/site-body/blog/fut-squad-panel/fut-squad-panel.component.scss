@@ -2,7 +2,7 @@
 
 .fut-squad-container {
     display: none;
-    height: 820px;
+    height: 750px;
     width: 750px;
     padding: 20px;
     margin: 20px 0;
@@ -26,7 +26,7 @@
             margin: auto;
         }
 
-        .fut-squad-player-card {
+        fut-card {
             display: table-cell;
         }
     }
@@ -49,79 +49,4 @@
 
 .squad-substitutes-wrapper {
     text-align: center;
-}
-
-.fut-squad-player-card {
-    display: inline-block;
-    position: relative;
-    margin-right: 10px;
-    height: 180px;
-    width: 140px;
-    background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-totw_gold.png');
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: relative;
-    font-family: 'Dosis', sans-serif;
-
-    .fut-squad-player-image {
-        position: absolute;
-        bottom: 27.5%;
-        right: 8px;
-        width: 65%;
-        height: 50%;
-        text-align: center;
-        background-position: center bottom;
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-    .fut-squad-player-name {
-        position: absolute;
-        bottom: 30px;
-        left: 0;
-        text-align: center;
-        width: 100%;
-        color: #E9CC74;
-        text-transform: uppercase;
-        font-size: 14px;
-        font-weight: 600;
-    }
-
-    .player-side-info {
-        display: inline-block;
-        width: 25%;
-        position: absolute;
-        top: 15%;
-        left: 10%;
-        height: 50%;
-        padding: 10px 0;
-        color: #E9CC74;
-        text-align: center;
-        background: linear-gradient(to bottom, rgba(15, 13, 8, 0) 0, rgba(15, 13, 8, 0) 8%, rgba(15, 13, 8, 0.6) 43%, rgba(15, 13, 8, 0.6) 56%, rgba(15, 13, 8, 0.6) 76%, rgba(15, 13, 8, 0) 100%);
-
-        .fut-squad-player-rating, .fut-squad-player-position {
-            font-size: 18px;
-            line-height: 21px;
-            font-weight: 600;
-        }
-
-        .fut-squad-player-nationality {
-            margin-top: 5px;
-        }
-
-        .fut-squad-player-club {
-            width: 100%;
-            background-size: contain;
-        }
-    }
-
-    &:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        left: 0;
-        top: 0;
-    }
 }

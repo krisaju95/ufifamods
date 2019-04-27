@@ -24,9 +24,21 @@ button, button.mat-button {
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     }
 
+    &.mat-icon-button {
+        min-height: auto;
+        box-shadow: none;
+
+        &:hover, &:focus {
+            background: none;
+            color: inherit;
+            box-shadow: none;
+        }
+    }
+
     &.circular-button {
         height: 50px;
         width: 50px;
+        min-height: 50px;
         line-height: 50px;
         border-radius: 100%;
         padding: 0;
