@@ -1,0 +1,21 @@
+@mixin serieA() {
+    &.inter {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/inter.png');
+    }
+
+    &.milan {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/milan.png');
+    }
+
+    &.napoli {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/napoli.png');
+    }
+
+    &.juventus {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/juventus.png');
+    }
+
+    &.torino {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/torino.png');
+    }
+}

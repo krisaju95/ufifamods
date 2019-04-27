@@ -1,0 +1,81 @@
+@mixin epl() {
+    &.arsenal {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/arsenal.png');
+    }
+
+    &.bournemouth {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/bournemouth.png');
+    }
+
+    &.brighton {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/brighton.png');
+    }
+
+    &.burnley {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/burnley.png');
+    }
+
+    &.cardiff {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/cardiff.png');
+    }
+
+    &.chelsea {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/chelsea.png');
+    }
+
+    &.crystalpalace {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/crystalpalace.png');
+    }
+
+    &.everton {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/everton.png');
+    }
+
+    &.fulham {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/fulham.png');
+    }
+
+    &.huddersfield {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/huddersfield.png');
+    }
+
+    &.leicester {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/leicester.png');
+    }
+
+    &.liverpool {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/liverpool.png');
+    }
+
+    &.mancity {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/mancity.png');
+    }
+
+    &.manutd {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/manutd.png');
+    }
+
+    &.newcastle {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/newcastle.png');
+    }
+
+    &.southampton {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/southampton.png');
+    }
+
+    &.tottenham {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/tottenham.png');
+    }
+
+    &.watford {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/watford.png');
+    }
+
+    &.westham {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/westham.png');
+    }
+
+    &.wolves {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/wolves.png');
+    }
+}

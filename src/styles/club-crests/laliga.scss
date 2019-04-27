@@ -1,0 +1,17 @@
+@mixin laliga() {
+    &.athletic {
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/athletic.png');
+    }
+
+    &.barcelona {
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/barcelona.png');
+    }
+
+    &.realmadrid {
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/realmadrid.png');
+    }
+
+    &.celta {
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/celta.png');
+    }
+}

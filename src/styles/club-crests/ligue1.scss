@@ -1,0 +1,13 @@
+@mixin ligue1() {
+    &.lille {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/lille.png');
+    }
+
+    &.saintettiene {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/saintettiene.png');
+    }
+
+    &.psg {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/psg.png');
+    }
+}
