@@ -37,6 +37,10 @@
 
     &.juventus {
         background-image: url($site-cloud-storage-images-club-crests + 'serieA/juventus.png');
+
+        &.totw {
+            background-image: url($site-cloud-storage-images-club-crests + 'serieA/light/juventus.png');
+        }
     }
 
     &.lazio {
