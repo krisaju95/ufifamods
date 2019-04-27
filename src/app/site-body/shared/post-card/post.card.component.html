@@ -3,7 +3,9 @@
                 'post-card-full-width': fullWidth}"
     matRipple
     [routerLink]="post['post-link']">
-    <div class="post-image" *ngIf="!hideImage" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
+    <div class="post-image-container">
+        <div class="post-image" *ngIf="!hideImage" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
+    </div>
     <div class="post-text-content">
         <div class="post-title" [ngClass]="{'post-title-line-clamp': titleLineClamp}" [innerHTML]="post['post-title']"></div>
         <div class="post-description" *ngIf="!hideDescription" [innerHTML]="((post['post-description'] ? post['post-description'] : post['post-text-content']) | slice : 0 : 100).trim() + '...'"></div>
@@ -23,6 +25,5 @@
     <div class="post-text-content">
         <span class="post-category" [innerHTML]="post['post-category'] ? post['post-category'] : post['post-category-list'].split(';')[0]"></span>
         <div class="post-title" [innerHTML]="(post['post-title'] | multistring : 5)"></div>
-        <!-- <span class="post-date" [innerHTML]="post['post-date'] | timeSince"></span> -->
     </div>
 </div>

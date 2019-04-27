@@ -13,6 +13,10 @@
         box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
         background-color: #FAFAFA;
 
+        .post-image {
+            transform: scale(1.1);
+        }
+
         .post-text-content {
             background-color: #FAFAFA;
 
@@ -22,6 +26,10 @@
         }
     }
 
+    .post-image-container {
+        overflow: hidden;
+    }
+
     .post-image {
         width: 100%;
         background-size: cover;
@@ -29,6 +37,7 @@
         background-position: center;
         background-color: #DDDDDD;
         height: 200px;
+        transition: transform ease 300ms;
     }
 
     .post-text-content {
