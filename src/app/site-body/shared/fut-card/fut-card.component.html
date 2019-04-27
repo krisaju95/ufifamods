@@ -1,5 +1,5 @@
 <div class="fut-squad-player-card fifa-{{fifaVersion}} {{player.type}} {{player.quality}}">
-    <div class="fut-squad-player-image" [style.background-image]="'url(https://www.fifarosters.com/assets/players/fifa19/faces/' + player.id + '.png)'"></div>
+    <div class="fut-squad-player-image" [style.background-image]="player | futCardPlayerImage"></div>
     <div class="fut-squad-player-name" [innerHTML]="player.name"></div>
     <div class="player-side-info">
         <div class="fut-squad-player-rating" [innerHTML]="player.rating"></div>

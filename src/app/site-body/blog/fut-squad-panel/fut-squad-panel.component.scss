@@ -1,6 +1,7 @@
 @import '../../../variables.scss';
 
 .fut-squad-container {
+    position: relative;
     display: none;
     height: 750px;
     width: 750px;
@@ -30,6 +31,29 @@
             display: table-cell;
         }
     }
+
+    .futsquad-credit {
+        display: inline-table;
+        font-size: 14px;
+        font-weight: 600;
+        color: $site-colour-black;
+        padding: 10px 20px;
+        background: $site-colour-white;
+        position: absolute;
+        right: 20px;
+        bottom: 25px;
+        border-radius: 50px;
+
+        .powered-by-text, .fifarosters-logo {
+            display: table-cell;
+            vertical-align: middle;
+            height: 20px;
+        }
+
+        .powered-by-text {
+            padding-right: 5px;
+        }
+    }
 }
 
 .fut-squad-row {
@@ -42,8 +66,9 @@
 .squad-section-header {
     font-weight: 800;
     font-size: 21px;
-    color: #305BA5;
+    color: $site-colour-blue;
     margin-top: 30px;
+    text-align: center;
 }
 
 .squad-substitutes-wrapper {

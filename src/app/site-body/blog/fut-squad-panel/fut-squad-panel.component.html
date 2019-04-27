@@ -1,9 +1,6 @@
 <div class="fut-pitch" *ngIf="futSquadInfo">
     <div class="squad-section-header">
         First XI
-        <div class="fifarosters-logo">
-            powered by <img class="" alt="FifaRosters" src="https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/fut/fifarosters-logo.png">
-        </div>
     </div>
     <div class="squad-first-xi-wrapper">
         <div class="fut-squad-container">
@@ -26,6 +23,14 @@
                 <div class="fut-squad-row goalkeeper">
                     <fut-card [squadType]="futSquadInfo.squadType" [player]="futSquadInfo.players.goalkeeper" [fifaVersion]="futSquadInfo.fifaVersion"></fut-card>
                 </div>
+            </div>
+            <div class="futsquad-credit">
+                <span class="powered-by-text">
+                    powered by
+                </span>
+                <a class="unstyled-link fifarosters-logo" href="https://fifarosters.com" target="_blank">
+                    <img alt="FifaRosters" src="https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/fut/fifarosters-logo.png" height="20px">
+                </a>
             </div>
         </div>
     </div>
