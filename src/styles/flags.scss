@@ -56,6 +56,10 @@
         background-image: url($site-cloud-storage-images-flags + 'CIV.png');
     }
 
+    &.COD {
+        background-image: url($site-cloud-storage-images-flags + 'COD.png');
+    }
+
     &.COL {
         background-image: url($site-cloud-storage-images-flags + 'COL.png');
     }
@@ -68,6 +72,10 @@
         background-image: url($site-cloud-storage-images-flags + 'DEN.png');
     }
 
+    &.ECU {
+        background-image: url($site-cloud-storage-images-flags + 'ECU.png');
+    }
+
     &.EGY {
         background-image: url($site-cloud-storage-images-flags + 'EGY.png');
     }
@@ -78,6 +86,10 @@
 
     &.ESP {
         background-image: url($site-cloud-storage-images-flags + 'ESP.png');
+    }
+
+    &.FJI {
+        background-image: url($site-cloud-storage-images-flags + 'FJI.png');
     }
 
     &.FRA {
@@ -170,6 +182,10 @@
 
     &.TUR {
         background-image: url($site-cloud-storage-images-flags + 'TUR.png');
+    }
+
+    &.UKR {
+        background-image: url($site-cloud-storage-images-flags + 'UKR.png');
     }
 
     &.URU {

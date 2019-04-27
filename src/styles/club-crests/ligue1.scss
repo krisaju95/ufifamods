@@ -1,13 +1,81 @@
 @mixin ligue1() {
-    &.lille {
-        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/lille.png');
+    &.amiens {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/amiens.png');
+    }
+
+    &.angers {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/angers.png');
+    }
+
+    &.bordeaux {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/bordeaux.png');
+    }
+
+    &.caen {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/caen.png');
+    }
+
+    &.dijon {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/dijon.png');
+    }
+
+    &.guingamp {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/guingamp.png');
     }
 
     &.saintettiene {
         background-image: url($site-cloud-storage-images-club-crests + 'ligue1/saintettiene.png');
     }
 
+    &.lille {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/lille.png');
+    }
+
+    &.lyon {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/lyon.png');
+    }
+
+    &.marseille {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/marseille.png');
+    }
+
+    &.monaco {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/monaco.png');
+    }
+
+    &.montpellier {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/montpellier.png');
+    }
+
+    &.nantes {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/nantes.png');
+    }
+
+    &.nimes {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/nimes.png');
+    }
+
     &.psg {
         background-image: url($site-cloud-storage-images-club-crests + 'ligue1/psg.png');
+    }
+
+    &.reims {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/reims.png');
+    }
+
+    &.rennes {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/rennes.png');
+    }
+
+    &.saintetienne {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/saintetienne.png');
+    }
+
+    &.strasbourg {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/strasbourg.png');
+    }
+
+    &.toulouse {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/toulouse.png');
     }
 }
