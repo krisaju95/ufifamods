@@ -1,0 +1,5 @@
+@mixin colombialiga() {
+    &.independientemedellin {
+        background-image: url($site-cloud-storage-images-club-crests + 'colombialiga/independientemedellin.png');
+    }
+}

@@ -1,0 +1,5 @@
+@mixin bundesliga2() {
+    &.bochum {
+        background-image: url($site-cloud-storage-images-club-crests + 'bundesliga2/bochum.png');
+    }
+}

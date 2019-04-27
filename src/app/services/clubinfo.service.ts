@@ -12,6 +12,11 @@ const aLeague: string = 'Australian Hyundai A-League';
 const mexicanLiga: string = 'Mexican Liga MX';
 const saudiLeague: string = 'Saudi Abdul L. Jameel League';
 const chileanLeague: string = 'Chilian Campeonato Nacional';
+const eflchampionship: string = 'EFL Championship';
+const ligaNOS: string = 'Liga NOS';
+const bundesliga2: string = '2. Bundesliga';
+const laligasegunda: string = 'Liga Segunda';
+const colombialiga: string = 'Colombia Liga Aguila';
 
 @Injectable()
 export class ClubInfoService {
@@ -454,6 +459,11 @@ export class ClubInfoService {
 					name: "Benevento",
 					league: seriaB,
 					country: "Italy"
+				},
+				"salernitana": {
+					name: "Salernitana",
+					league: seriaB,
+					country: "Italy"
 				}
 			}
 		},
@@ -534,6 +544,16 @@ export class ClubInfoService {
 					name: "Club León",
 					league: mexicanLiga,
 					country: "Mexico"
+				},
+				"monterrey": {
+					name: "Monterrey",
+					league: mexicanLiga,
+					country: "Mexico"
+				},
+				"pachuca": {
+					name: "Pachuca",
+					league: mexicanLiga,
+					country: "Mexico"
 				}
 			}
 		},
@@ -570,6 +590,71 @@ export class ClubInfoService {
 					name: "PAOK",
 					league: "Rest Of World",
 					country: "Rest Of World"
+				}
+			}
+		},
+		"eflchampionship": {
+			name: eflchampionship + '(England)',
+			country: "England",
+			countryCode: "ENG",
+			clubs: {
+				"derby": {
+					name: "Derby County F.C.",
+					league: eflchampionship,
+					country: "England"
+				},
+				"westbrom": {
+					name: "West Bromwich Albion F.C.",
+					league: eflchampionship,
+					country: "England"
+				}
+			}
+		},
+		"ligaNOS": {
+			name: ligaNOS + '(Portugal)',
+			country: "Portugal",
+			countryCode: "POR",
+			clubs: {
+				"benfica": {
+					name: "S.L. Benfica",
+					league: ligaNOS,
+					country: "Portugal"
+				}
+			}
+		},
+		"bundesliga2": {
+			name: bundesliga2 + '(Germany)',
+			country: "Germany",
+			countryCode: "GER",
+			clubs: {
+				"bochum": {
+					name: "V.F.L. Bochum",
+					league: bundesliga2,
+					country: "Germany"
+				}
+			}
+		},
+		"laligasegunda": {
+			name: laligasegunda + '(Spain)',
+			country: "Spain",
+			countryCode: "ESP",
+			clubs: {
+				"bochum": {
+					name: "V.F.L. Bochum",
+					league: laligasegunda,
+					country: "Spain"
+				}
+			}
+		},
+		"colombialiga": {
+			name: colombialiga + '(Colombia)',
+			country: "Colombia",
+			countryCode: "COL",
+			clubs: {
+				"independientemedellin": {
+					name: "Independiente Medellín",
+					league: colombialiga,
+					country: "Colombia"
 				}
 			}
 		}

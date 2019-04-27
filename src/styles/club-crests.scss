@@ -1,9 +1,22 @@
 @import '../app/variables.scss';
-@import './club-crests/epl.scss';
-@import './club-crests/laliga.scss';
+@import './club-crests/a-league.scss';
 @import './club-crests/bundesliga.scss';
-@import './club-crests/seriaA.scss';
+@import './club-crests/bundesliga2.scss';
+@import './club-crests/chileanLeague.scss';
+@import './club-crests/colombialiga.scss';
+@import './club-crests/eflchampionship.scss';
+@import './club-crests/epl.scss';
+@import './club-crests/eredivisie.scss';
+@import './club-crests/laliga.scss';
+@import './club-crests/laligasegunda.scss';
+@import './club-crests/ligaNOS.scss';
 @import './club-crests/ligue1.scss';
+@import './club-crests/mexicanLiga.scss';
+@import './club-crests/restOfWorld.scss';
+@import './club-crests/saudiLeague.scss';
+@import './club-crests/seriaA.scss';
+@import './club-crests/seriaB.scss';
+@import './club-crests/superlig.scss';
 
 .club-crest {
     width: 20px;
@@ -19,13 +32,22 @@
         margin-top: 20px;
     }
 
-    @include epl();
-
-    @include laliga();
-
+    @include a-league();
     @include bundesliga();
-
-    @include serieA();
-
+    @include bundesliga2();
+    @include chileanLeague();
+    @include colombialiga();
+    @include eflchampionship();
+    @include epl();
+    @include eredivisie();
+    @include laliga();
+    @include laligasegunda();
+    @include ligaNOS();
     @include ligue1();
+    @include mexicanLiga();
+    @include restOfWorld();
+    @include saudiLeague();
+    @include serieA();
+    @include serieB();
+    @include superlig();
 }

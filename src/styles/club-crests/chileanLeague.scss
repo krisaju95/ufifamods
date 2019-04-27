@@ -1,0 +1,5 @@
+@mixin chileanLeague() {
+    &.cdeverton {
+        background-image: url($site-cloud-storage-images-club-crests + 'chileanLeague/cdeverton.png');
+    }
+}

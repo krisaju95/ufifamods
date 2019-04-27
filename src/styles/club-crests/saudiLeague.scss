@@ -1,0 +1,5 @@
+@mixin saudiLeague() {
+    &.alnassr {
+        background-image: url($site-cloud-storage-images-club-crests + 'saudiLeague/alnassr.png');
+    }
+}

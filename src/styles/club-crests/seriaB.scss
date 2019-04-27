@@ -1,0 +1,9 @@
+@mixin serieB() {
+    &.benevento {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieB/benevento.png');
+    }
+
+    &.salernitana {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieB/salernitana.png');
+    }
+}

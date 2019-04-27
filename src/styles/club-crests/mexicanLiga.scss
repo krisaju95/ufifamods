@@ -1,0 +1,13 @@
+@mixin mexicanLiga() {
+    &.clubleon {
+        background-image: url($site-cloud-storage-images-club-crests + 'mexicanLiga/clubleon.png');
+    }
+
+    &.monterrey {
+        background-image: url($site-cloud-storage-images-club-crests + 'mexicanLiga/monterrey.png');
+    }
+
+    &.pachuca {
+        background-image: url($site-cloud-storage-images-club-crests + 'mexicanLiga/pachuca.png');
+    }
+}
