@@ -639,8 +639,8 @@ export class ClubInfoService {
 			country: "Spain",
 			countryCode: "ESP",
 			clubs: {
-				"bochum": {
-					name: "V.F.L. Bochum",
+				"cadiz": {
+					name: "Cádiz F.C.",
 					league: laligasegunda,
 					country: "Spain"
 				}
