@@ -4,13 +4,16 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { FutCardComponent } from './fut-card.component';
 
+import { SharedModule } from '../app.module';
+
 @NgModule({
 	declarations: [
 		FutCardComponent
 	],
 	imports: [
 		BrowserModule,
-		HttpClientModule
+		HttpClientModule,
+		SharedModule
 	],
 	exports: [
 		FutCardComponent

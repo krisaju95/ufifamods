@@ -31,7 +31,7 @@
 					"club": "psg",
 					"nationality": "FRA",
 					"quality": "gold",
-					"imageType": "dynamic",
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
@@ -42,7 +42,7 @@
 					"club": "realmadrid",
 					"nationality": "FRA",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -53,7 +53,7 @@
 					"club": "wellington",
 					"nationality": "FJI",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				}
 			],
@@ -66,7 +66,7 @@
 					"club": "fcaugsburg",
 					"nationality": "GER",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -77,7 +77,7 @@
 					"club": "dortmund",
 					"nationality": "GER",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -88,7 +88,7 @@
 					"club": "everton",
 					"nationality": "ISL",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -99,7 +99,7 @@
 					"club": "clubleon",
 					"nationality": "ECU",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				}
 			],
@@ -112,7 +112,7 @@
 					"club": "rbleipzig",
 					"nationality": "GER",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -123,7 +123,7 @@
 					"club": "juventus",
 					"nationality": "BRA",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -134,7 +134,7 @@
 					"club": "barcelona",
 					"nationality": "ESP",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				}
 			],
@@ -146,7 +146,7 @@
 				"club": "mancity",
 				"nationality": "BRA",
 				"quality": "gold",
-				"imageType": "normal",
+				"dynamicImage": false,
 				"type": "totw"
 			},
 			"substitutes": [
@@ -158,7 +158,7 @@
 					"club": "torino",
 					"nationality": "ITA",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -169,7 +169,7 @@
 					"club": "nantes",
 					"nationality": "BRA",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -180,7 +180,7 @@
 					"club": "celta",
 					"nationality": "MAR",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -191,7 +191,7 @@
 					"club": "alnassr",
 					"nationality": "MAR",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "rb"
 				},
 				{
@@ -202,7 +202,7 @@
 					"club": "crystalpalace",
 					"nationality": "BEL",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -213,7 +213,7 @@
 					"club": "newcastle",
 					"nationality": "ESP",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -224,7 +224,7 @@
 					"club": "spal",
 					"nationality": "ITA",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -235,7 +235,7 @@
 					"club": "caen",
 					"nationality": "COD",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -246,7 +246,7 @@
 					"club": "paok",
 					"nationality": "UKR",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -257,7 +257,7 @@
 					"club": "vitesse",
 					"nationality": "NLD",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -268,7 +268,7 @@
 					"club": "benevento",
 					"nationality": "ITA",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				},
 				{
@@ -279,7 +279,7 @@
 					"club": "cdeverton",
 					"nationality": "CHL",
 					"quality": "gold",
-					"imageType": "normal",
+					"dynamicImage": false,
 					"type": "totw"
 				}
 			]

@@ -6,14 +6,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 export class FutCardPlayerImagePipe implements PipeTransform {
 	transform(playerInfo: object): string {
-		if(playerInfo) {
-			switch (playerInfo['imageType']) {
-				case 'normal': {
-					return 'url(https://www.fifarosters.com/assets/players/fifa19/faces/' + playerInfo['id'] + '.png';
-				}
-				case 'dynamic': {
-					return 'url(https://www.fifarosters.com/assets/players/fifa19/dynamic/' + playerInfo['dynamicImageId'] + '.png';
-				}
+		if (playerInfo) {
+			if(playerInfo['dynamicImage']) {
+				return 'url(https://www.fifarosters.com/assets/players/fifa19/dynamic/' + playerInfo['dynamicImageId'] + '.png)';
+			} else {
+				return 'url(https://www.fifarosters.com/assets/players/fifa19/faces/' + playerInfo['id'] + '.png)';
 			}
 		}
 	}
