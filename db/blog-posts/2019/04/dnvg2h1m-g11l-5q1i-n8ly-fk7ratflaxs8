@@ -37,23 +37,25 @@
 				{
 					"name": "Benzema",
 					"id": 165153,
+					"dynamicImageId": 151160097,
 					"rating": 88,
 					"position": "ST",
 					"club": "realmadrid",
 					"nationality": "FRA",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
 					"name": "Krishna",
 					"id": 195620,
+					"dynamicImageId": 84081700,
 					"rating": 82,
 					"position": "ST",
 					"club": "wellington",
 					"nationality": "FJI",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				}
 			],
@@ -61,45 +63,49 @@
 				{
 					"name": "Max",
 					"id": 212187,
+					"dynamicImageId": 50543835,
 					"rating": 82,
 					"position": "LM",
 					"club": "fcaugsburg",
 					"nationality": "GER",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
 					"name": "Reus",
 					"id": 188350,
+					"dynamicImageId": 235069374,
 					"rating": 86,
 					"position": "CAM",
 					"club": "dortmund",
 					"nationality": "GER",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
 					"name": "Sigurðsson",
 					"id": 184484,
+					"dynamicImageId": 100847780,
 					"rating": 87,
 					"position": "CAM",
 					"club": "everton",
 					"nationality": "ISL",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
 					"name": "Mena",
 					"id": 223053,
+					"dynamicImageId": 134440781,
 					"rating": 84,
 					"position": "RM",
 					"club": "clubleon",
 					"nationality": "ECU",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				}
 			],
@@ -107,46 +113,50 @@
 				{
 					"name": "Halstenberg",
 					"id": 210665,
+					"dynamicImageId": 50542313,
 					"rating": 82,
 					"position": "LWB",
 					"club": "rbleipzig",
 					"nationality": "GER",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
 					"name": "Sandro",
 					"id": 191043,
+					"dynamicImageId": 151185987,
 					"rating": 89,
 					"position": "LB",
 					"club": "juventus",
 					"nationality": "BRA",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				},
 				{
 					"name": "Lenglet",
 					"id": 220440,
+					"dynamicImageId": 67329304,
 					"rating": 84,
 					"position": "CB",
 					"club": "barcelona",
 					"nationality": "ESP",
 					"quality": "gold",
-					"dynamicImage": false,
+					"dynamicImage": true,
 					"type": "totw"
 				}
 			],
 			"goalkeeper": {
 				"name": "Ederson",
 				"id": 210257,
+				"dynamicImageId": 67319121,
 				"rating": 87,
 				"position": "GK",
 				"club": "mancity",
 				"nationality": "BRA",
 				"quality": "gold",
-				"dynamicImage": false,
+				"dynamicImage": true,
 				"type": "totw"
 			},
 			"substitutes": [

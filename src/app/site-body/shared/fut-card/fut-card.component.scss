@@ -90,6 +90,13 @@
         background-position: center bottom;
         background-size: contain;
         background-repeat: no-repeat;
+
+        &.dynamic-image {
+            bottom: 10%;
+            right: 10px;
+            width: 75%;
+            height: 75%;
+        }
     }
 
     .fut-squad-player-name {
