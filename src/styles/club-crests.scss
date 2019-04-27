@@ -14,12 +14,22 @@
         margin-top: 20px;
     }
 
+    // Barclays PL
+
     &.arsenal {
         background-image: url($site-cloud-storage-images-club-crests + 'epl/arsenal.png');
     }
 
     &.bournemouth {
         background-image: url($site-cloud-storage-images-club-crests + 'epl/bournemouth.png');
+    }
+
+    &.crystalpalace {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/crystalpalace.png');
+    }
+
+    &.everton {
+        background-image: url($site-cloud-storage-images-club-crests + 'epl/everton.png');
     }
 
     &.mancity {
@@ -38,13 +48,39 @@
         background-image: url($site-cloud-storage-images-club-crests + 'laliga/athletic.png');
     }
 
+    // La Liga
+
     &.barcelona {
         background-image: url($site-cloud-storage-images-club-crests + 'laliga/barcelona.png');
     }
 
+    &.realmadrid {
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/realmadrid.png');
+    }
+
+    &.celta {
+        background-image: url($site-cloud-storage-images-club-crests + 'laliga/celta.png');
+    }
+
+    // Bundesliga
+
     &.fcbayern {
         background-image: url($site-cloud-storage-images-club-crests + 'bundesliga/fcbayern.png');
     }
+
+    &.rbleipzig {
+        background-image: url($site-cloud-storage-images-club-crests + 'bundesliga/rbleipzig.png');
+    }
+
+    &.dortmund {
+        background-image: url($site-cloud-storage-images-club-crests + 'bundesliga/dortmund.png');
+    }
+
+    &.fcaugsburg {
+        background-image: url($site-cloud-storage-images-club-crests + 'bundesliga/fcaugsburg.png');
+    }
+
+    // Serie A
 
     &.inter {
         background-image: url($site-cloud-storage-images-club-crests + 'serieA/inter.png');
@@ -58,11 +94,25 @@
         background-image: url($site-cloud-storage-images-club-crests + 'serieA/napoli.png');
     }
 
+    &.juventus {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/juventus.png');
+    }
+
+    &.torino {
+        background-image: url($site-cloud-storage-images-club-crests + 'serieA/torino.png');
+    }
+
+    // Ligue 1
+
     &.lille {
         background-image: url($site-cloud-storage-images-club-crests + 'ligue1/lille.png');
     }
 
     &.saintettiene {
         background-image: url($site-cloud-storage-images-club-crests + 'ligue1/saintettiene.png');
+    }
+
+    &.psg {
+        background-image: url($site-cloud-storage-images-club-crests + 'ligue1/psg.png');
     }
 }

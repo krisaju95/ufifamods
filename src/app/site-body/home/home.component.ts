@@ -53,6 +53,6 @@ export class HomeComponent {
 			if(this.responseLoading) {
 				this.service.routeToState('404');
 			}
-		}, 10000);
+		}, 90000);
 	}
 }

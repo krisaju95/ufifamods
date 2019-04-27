@@ -72,6 +72,12 @@
                 background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-totw_bronze.png');
             }
         }
+        &.rb {
+            .fut-squad-player-name, .player-side-info {
+                color: #B5FA10;
+            }
+            background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-recordbreaker.png');
+        }
     }
 
     .fut-squad-player-image {
