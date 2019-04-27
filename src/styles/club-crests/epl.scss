@@ -65,6 +65,10 @@
 
     &.tottenham {
         background-image: url($site-cloud-storage-images-club-crests + 'epl/tottenham.png');
+
+        &.totw {
+            background-image: url($site-cloud-storage-images-club-crests + 'epl/light/tottenham.png');
+        }
     }
 
     &.watford {

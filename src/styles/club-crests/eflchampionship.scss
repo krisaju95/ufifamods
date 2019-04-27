@@ -1,6 +1,10 @@
 @mixin eflchampionship() {
     &.derby {
         background-image: url($site-cloud-storage-images-club-crests + 'eflchampionship/derby.png');
+
+        &.totw {
+            background-image: url($site-cloud-storage-images-club-crests + 'eflchampionship/light/derby.png');
+        }
     }
 
     &.westbrom {
