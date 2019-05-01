@@ -72,6 +72,10 @@
         background-image: url($site-cloud-storage-images-flags + 'DEN.png');
     }
 
+    &.DZA {
+        background-image: url($site-cloud-storage-images-flags + 'DZA.png');
+    }
+
     &.ECU {
         background-image: url($site-cloud-storage-images-flags + 'ECU.png');
     }
@@ -124,6 +128,10 @@
         background-image: url($site-cloud-storage-images-flags + 'ISL.png');
     }
 
+    &.ISR {
+        background-image: url($site-cloud-storage-images-flags + 'ISR.png');
+    }
+
     &.ITA {
         background-image: url($site-cloud-storage-images-flags + 'ITA.png');
     }
@@ -138,6 +146,10 @@
 
     &.MEX {
         background-image: url($site-cloud-storage-images-flags + 'MEX.png');
+    }
+
+    &.NGA {
+        background-image: url($site-cloud-storage-images-flags + 'NGA.png');
     }
 
     &.NLD, &.NED {
