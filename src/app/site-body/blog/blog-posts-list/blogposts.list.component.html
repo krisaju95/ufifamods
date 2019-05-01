@@ -14,7 +14,7 @@
                     <div class="blog-post" *ngIf="postIndex % numberOfPostsPerRow == 0">
                         <div class="post-card-container"
                             *ngFor="let num of [].constructor(numberOfPostsPerRow); let columnIndex = index">
-                            <post-card [post]="blogPostsArray[postIndex + startPostIndex + columnIndex]"></post-card>
+                            <post-card *ngIf="blogPostsArray[postIndex + startPostIndex + columnIndex]" [post]="blogPostsArray[postIndex + startPostIndex + columnIndex]"></post-card>
                         </div>
                     </div>
                 </div>

@@ -199,7 +199,7 @@
                 height: 250px;
                 width: 100%;
                 margin-bottom: 0px;
-                background-position: center;
+                background-position: center top;
                 background-size: cover;
 
                 @media only screen and (min-height: 900px) {
@@ -209,7 +209,7 @@
         
             .blog-post-intro-text {
                 font-size: 18px;
-                font-weight: bold;
+                font-weight: 600;
                 color: $site-colour-primary;
                 padding: 0 15px;
                 margin-bottom: 20px;
@@ -257,7 +257,7 @@
 
             .blog-post-outro-text {
                 font-size: 18px;
-                font-weight: bold;
+                font-weight: 600;
                 margin: 0;
                 padding: 20px 15px;
             }
@@ -282,7 +282,16 @@
             }
 
             .blog-post-badges {
-                padding: 15px;
+                margin: 0 15px;
+                padding: 20px 0;
+                margin-top: 20px;
+                border-top: 1px solid rgba(48, 91, 165, 0.4);
+
+                .tags-header {
+                    font-weight: bold;
+                    font-size: 16px;
+                    margin-bottom: 10px;
+                }
             }
         }
 

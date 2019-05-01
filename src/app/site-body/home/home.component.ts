@@ -37,6 +37,9 @@ export class HomeComponent {
 				else {
 					this.responseLoading = false;
 				}
+			}, (error) => {
+				console.log("An error occurred while trying to load the home page: " + error);
+				this.service.routeToState('404');
 			});
 	}
 
@@ -53,6 +56,6 @@ export class HomeComponent {
 			if(this.responseLoading) {
 				this.service.routeToState('404');
 			}
-		}, 90000);
+		}, 180000);
 	}
 }

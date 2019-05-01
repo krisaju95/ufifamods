@@ -1,24 +1,24 @@
 <mat-sidenav-container>
     <mat-sidenav #sidenav [mode]="'push'" position="end" (closedStart)="closeSideNav()">
-        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/" routerLinkActive="nav-drawer-button-active" [routerLinkActiveOptions]="{exact: true}">
+        <button (click)="closeSideNav()" mat-button class="nav-drawer-button unstyled-button" routerLink="/" routerLinkActive="nav-drawer-button-active" [routerLinkActiveOptions]="{exact: true}">
             <div class="button-icon">
                 <i class="fas fa-home"></i>
             </div>
             <div class="button-text">Home</div>
         </button>
-        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/blog" routerLinkActive="nav-drawer-button-active">
+        <button (click)="closeSideNav()" mat-button class="nav-drawer-button unstyled-button" routerLink="/blog" routerLinkActive="nav-drawer-button-active">
             <div class="button-icon">
                 <i class="fas fa-blog"></i>
             </div>
             <div class="button-text">Blog</div>
         </button>
-        <button (click)="closeSideNav()" mat-button class="nav-drawer-button" routerLink="/downloads" routerLinkActive="nav-drawer-button-active">
+        <!-- <button (click)="closeSideNav()" mat-button class="nav-drawer-button unstyled-button" routerLink="/downloads" routerLinkActive="nav-drawer-button-active">
             <div class="button-icon">
                 <i class="fas fa-cloud-download-alt"></i>
             </div>
             <div class="button-text">Downloads</div>
-        </button>
-        <button (click)="closeSideNav(); showSearchDialog = true" mat-button class="nav-drawer-button">
+        </button> -->
+        <button (click)="closeSideNav(); showSearchDialog = true" mat-button class="nav-drawer-button unstyled-button">
             <div class="button-icon">
                 <i class="fas fa-search"></i>
             </div>

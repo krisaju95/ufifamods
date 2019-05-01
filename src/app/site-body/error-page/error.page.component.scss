@@ -51,6 +51,48 @@
         }
     }
 }
-@media only screen and (max-width: 800px) {
 
+@media only screen and (max-width: 1280px) {
+    .error-page-container {
+        padding: 60px;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .error-page-container {
+        padding: 40px;
+    }
+}
+
+@media only screen and (max-width: 900px) and (max-width: 900px) {
+    .error-page-container {
+        padding: 20px;
+
+        .text-content {
+            .error-code {
+                font-size: 30px;
+            }
+        
+            .oops-text {
+                font-size: 40px;
+            }
+        
+            .error-description-text {
+                font-size: 21px;
+    
+                .text-line-1 {
+                    margin-bottom: 10px;
+                }
+    
+                .text-line-2 {
+                    font-size: 21px;
+                    font-weight: 300;
+                }
+            }
+        }
+    
+        .griffin-art {
+            display: none;
+        }
+    }
 }

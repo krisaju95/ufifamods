@@ -155,6 +155,7 @@
         background: $site-colour-primary;
         height: 75px;
         width: 100%;
+        box-shadow: 0 0 10px rgba(0, 0, 0 , 0.4);
 
         .site-logo-container, .site-title {
             display: table-cell;
@@ -175,6 +176,10 @@
             .site-domain {
                 font-size: 32px;
                 display: inline-block;
+
+                @media only screen and (max-width: 900px) {
+                    font-size: 28px;
+                }
             }
         
             .site-tld {

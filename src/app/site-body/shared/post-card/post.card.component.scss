@@ -34,7 +34,7 @@
         width: 100%;
         background-size: cover;
         background-repeat: no-repeat;
-        background-position: center;
+        background-position: center top;
         background-color: #DDDDDD;
         height: 200px;
         transition: transform ease 300ms;
@@ -44,8 +44,11 @@
         width: calc(100% - 40px);
         padding: 20px;
         background-color: #FFFFFF;
-        min-height: 110px;
         transition: background-color ease 300ms;
+
+        @media only screen and (min-width: 768px) and (min-height: 768px) {
+            min-height: 110px;
+        }
 
         .post-title {
             font-weight: bold;

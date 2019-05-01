@@ -3,8 +3,19 @@
     <div class="site-loader-text">Loading...</div>
 </div>
 
-<div *ngIf="fullScreenLoader" class="site-fs-loader">
-    <mat-spinner *ngIf="isDesktopViewport"></mat-spinner>
-    <mat-spinner *ngIf="isMobileViewport" [diameter]="70" [strokeWidth]="5"></mat-spinner>
+<!-- <div *ngIf="fullScreenLoader" class="site-fs-loader">
+    <mat-spinner *ngIf="true"></mat-spinner>
+    <mat-spinner *ngIf="false" [diameter]="70" [strokeWidth]="5"></mat-spinner>
     <div class="site-loader-text">Loading...</div>
+</div> -->
+
+
+<div *ngIf="fullScreenLoader" class="loader-container">
+    <div class="loader-ripple">
+        <div></div>
+        <div></div>
+    </div>
+    <div class="loading-text">
+        Loading...
+    </div>
 </div>

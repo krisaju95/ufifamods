@@ -1,4 +1,4 @@
-button, button.mat-button {
+button:not(.unstyled-button), button.mat-button:not(.unstyled-button) {
     border: none;
     background: linear-gradient(to right, #305BA5, #1F2C45, #161F30, rgb(175, 15, 55));
     color: #FFC145;
