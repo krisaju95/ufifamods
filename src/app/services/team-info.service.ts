@@ -21,7 +21,7 @@ export class TeamInfoService {
 				"arsenal"
 			],
 			kitNumber: 10,
-			kitName: "KRIS",
+			kitName: "kris",
 			title: "Captain"
 		},
 		"xyrho_44": {
@@ -37,13 +37,13 @@ export class TeamInfoService {
 				"videoGames"
 			],
 			kitNumber: 44,
-			kitName: "XYRHO",
+			kitName: "xyrho",
 			title: "Vice-Captain"
 		},
 		"FCB17": {
 			handle: "FCB17",
-			realName: "",
-			nationality: "",
+			realName: "Perry",
+			nationality: "TTO",
 			roles: [
 				"Star-head Designer"
 			],
@@ -52,8 +52,8 @@ export class TeamInfoService {
 				"football",
 				"videoGames"
 			],
-			kitNumber: 7,
-			kitName: "FCB",
+			kitNumber: 26,
+			kitName: "Perry",
 			title: "Super-star"
 		},
 		"aNuK3": {
