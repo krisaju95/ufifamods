@@ -112,7 +112,8 @@ export class RegularBlogPostComponent {
 	openDialog() {
 		this.dialog.open(ModDownloadDialog, {
 			data: {
-				url: this.postData['mod-download-link']
+				url: this.postData['mod-download-link'],
+				downloadLink: this.postData['download-link']
 			},
 			maxWidth: '500px',
 			panelClass: 'wwt-mat-dialog'
@@ -150,6 +151,14 @@ export class ModDownloadDialog {
 	) { }
 
 	downloadButtonClicked: boolean = false;
+	downloadDataVersion: string = '2018';
+
+	downloadURL: string = this.data.url;
+	downloadURLArray: Array<object> = this.data.downloadLink;
+
+	ngOnInit() {
+		this.downloadDataVersion = !!this.downloadURL ? '2019' : '2018';
+	}
 
 	downloadFile() {
 		this.downloadButtonClicked = true;

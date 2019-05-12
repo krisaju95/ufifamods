@@ -1,348 +1,348 @@
 {
-     "post-date": "2019-04-17",
-     "post-category": "mods",
-     "post-title": "FIFA 19: Custom Star-heads Patch - FP #1",
-     "post-intro-text": "Our first patch for FIFA 19 features star players like Neymar, Cristiano Ronaldo and Lionel Messi",
-     "post-main-text-array": [
-          "With the recent release of the Frosty suite of modding tools for FIFA 19, credit to @GalaxyMan2015 and his team of developers, we are proud to announce that modding is back. It may not be at the level of the good old days of FIFA 16 and the years before that, but this still sheds positive light for the future of modding.",
-          "Our first pack features some amazing new custom star-heads designed by our newest member FCB17, also known as Perry in the SG Forums. This pack features players from the top leagues in European football, with our personal favourites being Radja Nainggolan and Neymar. Let us know which of these you liked the best!"
-     ],
-     "post-last-para": "Enjoying our content? Like, Share & Comment!",
-     "post-link": "/blog/post/2019/04/17/fifa-19-custom-starheads-patch-fp-1",
-     "post-media": "https://i.imgur.com/V6tZfCl.jpg",
-     "post-category-list": [
-          "fifa 19",
-          "fifa mods",
-          "fifa 19 faces"
-     ],
-     "contributors-list": [
-          "FCB17"
-     ],
-     "show-mod-disclaimer": true,
-     "faces-included-list": [
-          {
-               "playerName": "Gianluigi Buffon",
-               "playerLeague": "ligue1",
-               "playerClub": "psg",
-               "playerNationality": "ITA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Dani Alves",
-               "playerLeague": "ligue1",
-               "playerClub": "psg",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Gerard Pique",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Lionel Messi",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "ARG",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Hatem Ben Arfa",
-               "playerLeague": "ligue1",
-               "playerClub": "rennes",
-               "playerNationality": "FRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Luis Suarez",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "URU",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Marcelo",
-               "playerLeague": "laliga",
-               "playerClub": "realmadrid",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Dmitri Payet",
-               "playerLeague": "ligue1",
-               "playerClub": "marseille",
-               "playerNationality": "FRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Radja Nainggolan",
-               "playerLeague": "seriaA",
-               "playerClub": "inter",
-               "playerNationality": "BEL",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Miralem Pjanic",
-               "playerLeague": "seriaA",
-               "playerClub": "juventus",
-               "playerNationality": "BOS",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Toni Kroos",
-               "playerLeague": "laliga",
-               "playerClub": "realmadrid",
-               "playerNationality": "GER",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Robert Lewandowski",
-               "playerLeague": "bundesliga",
-               "playerClub": "fcbayern",
-               "playerNationality": "POL",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Philippe Coutinho",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Jordi Alba",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Shinji Kagawa",
-               "playerLeague": "superlig",
-               "playerClub": "besiktas",
-               "playerNationality": "JAP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Sergio Busquets",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Neymar",
-               "playerLeague": "ligue1",
-               "playerClub": "psg",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Ciro Immobile",
-               "playerLeague": "seriaA",
-               "playerClub": "lazio",
-               "playerNationality": "ITA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "David de Gea",
-               "playerLeague": "epl",
-               "playerClub": "manutd",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Andre Schurrle",
-               "playerLeague": "epl",
-               "playerClub": "fulham",
-               "playerNationality": "GER",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Antoine Griezmann",
-               "playerLeague": "laliga",
-               "playerClub": "atletico",
-               "playerNationality": "FRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Isco",
-               "playerLeague": "laliga",
-               "playerClub": "realmadrid",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Lorenzo Insigne",
-               "playerLeague": "seriaA",
-               "playerClub": "napoli",
-               "playerNationality": "ITA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Roberto Firmino",
-               "playerLeague": "epl",
-               "playerClub": "liverpool",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Cristiano Ronaldo",
-               "playerLeague": "seriaA",
-               "playerClub": "juventus",
-               "playerNationality": "POR",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Samuel Umtiti",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "FRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Kenedy",
-               "playerLeague": "epl",
-               "playerClub": "newcastle",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Gianluigi Donnarumma",
-               "playerLeague": "seriaA",
-               "playerClub": "milan",
-               "playerNationality": "ITA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Gabriel Jesus",
-               "playerLeague": "epl",
-               "playerClub": "mancity",
-               "playerNationality": "BRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Ousmane Dembele",
-               "playerLeague": "laliga",
-               "playerClub": "barcelona",
-               "playerNationality": "FRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Juanfran",
-               "playerLeague": "laliga",
-               "playerClub": "atletico",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Ashley Young",
-               "playerLeague": "epl",
-               "playerClub": "manutd",
-               "playerNationality": "ENG",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Radamel Falcao",
-               "playerLeague": "ligue1",
-               "playerClub": "monaco",
-               "playerNationality": "COL",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Gonzalo Higuain",
-               "playerLeague": "epl",
-               "playerClub": "chelsea",
-               "playerNationality": "ARG",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Dries Mertens",
-               "playerLeague": "seriaA",
-               "playerClub": "napoli",
-               "playerNationality": "BEL",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Mesut Ozil",
-               "playerLeague": "epl",
-               "playerClub": "arsenal",
-               "playerNationality": "GER",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Ilkay Gundogan",
-               "playerLeague": "epl",
-               "playerClub": "mancity",
-               "playerNationality": "GER",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Pedro",
-               "playerLeague": "epl",
-               "playerClub": "chelsea",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Romelu Lukaku",
-               "playerLeague": "epl",
-               "playerClub": "manutd",
-               "playerNationality": "BEL",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Alexandre Lacazette",
-               "playerLeague": "epl",
-               "playerClub": "arsenal",
-               "playerNationality": "FRA",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Luis Alberto",
-               "playerLeague": "seriaA",
-               "playerClub": "lazio",
-               "playerNationality": "ESP",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Harry Kane",
-               "playerLeague": "epl",
-               "playerClub": "tottenham",
-               "playerNationality": "ENG",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Julian Draxler",
-               "playerLeague": "epl",
-               "playerClub": "tottenham",
-               "playerNationality": "ENG",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Julian Draxler",
-               "playerLeague": "ligue1",
-               "playerClub": "psg",
-               "playerNationality": "GER",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Hakim Ziyech",
-               "playerLeague": "eredivisie",
-               "playerClub": "ajax",
-               "playerNationality": "MAR",
-               "playerScreenshot": ""
-          },
-          {
-               "playerName": "Ruben Loftus-Cheek",
-               "playerLeague": "epl",
-               "playerClub": "chelsea",
-               "playerNationality": "ENG",
-               "playerScreenshot": ""
-          }
-     ],
-     "mod-download-link": "https://drive.google.com/uc?export=download&id=1ZwdYWVXUZUc8_G6b5UDNO0aCbTyrH_6g",
-     "isFeatured": true
+	"post-date": "2019-04-17",
+	"post-category": "mods",
+	"post-title": "FIFA 19: Custom Star-heads Patch - FP #1",
+	"post-intro-text": "Our first patch for FIFA 19 features star players like Neymar, Cristiano Ronaldo and Lionel Messi",
+	"post-main-text-array": [
+		"With the recent release of the Frosty suite of modding tools for FIFA 19, credit to @GalaxyMan2015 and his team of developers, we are proud to announce that modding is back. It may not be at the level of the good old days of FIFA 16 and the years before that, but this still sheds positive light for the future of modding.",
+		"Our first pack features some amazing new custom star-heads designed by our newest member FCB17, also known as Perry in the SG Forums. This pack features players from the top leagues in European football, with our personal favourites being Radja Nainggolan and Neymar. Let us know which of these you liked the best!"
+	],
+	"post-last-para": "Enjoying our content? Like, Share & Comment!",
+	"post-link": "/blog/post/2019/04/17/fifa-19-custom-starheads-patch-fp-1",
+	"post-media": "https://i.imgur.com/V6tZfCl.jpg",
+	"post-category-list": [
+		"fifa 19",
+		"fifa mods",
+		"fifa 19 faces"
+	],
+	"contributors-list": [
+		"FCB17"
+	],
+	"show-mod-disclaimer": true,
+	"faces-included-list": [
+		{
+			"playerName": "Gianluigi Buffon",
+			"playerLeague": "ligue1",
+			"playerClub": "psg",
+			"playerNationality": "ITA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Dani Alves",
+			"playerLeague": "ligue1",
+			"playerClub": "psg",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Gerard Pique",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Lionel Messi",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "ARG",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Hatem Ben Arfa",
+			"playerLeague": "ligue1",
+			"playerClub": "rennes",
+			"playerNationality": "FRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Luis Suarez",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "URU",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Marcelo",
+			"playerLeague": "laliga",
+			"playerClub": "realmadrid",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Dmitri Payet",
+			"playerLeague": "ligue1",
+			"playerClub": "marseille",
+			"playerNationality": "FRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Radja Nainggolan",
+			"playerLeague": "seriaA",
+			"playerClub": "inter",
+			"playerNationality": "BEL",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Miralem Pjanic",
+			"playerLeague": "seriaA",
+			"playerClub": "juventus",
+			"playerNationality": "BOS",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Toni Kroos",
+			"playerLeague": "laliga",
+			"playerClub": "realmadrid",
+			"playerNationality": "GER",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Robert Lewandowski",
+			"playerLeague": "bundesliga",
+			"playerClub": "fcbayern",
+			"playerNationality": "POL",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Philippe Coutinho",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Jordi Alba",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Shinji Kagawa",
+			"playerLeague": "superlig",
+			"playerClub": "besiktas",
+			"playerNationality": "JAP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Sergio Busquets",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Neymar",
+			"playerLeague": "ligue1",
+			"playerClub": "psg",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Ciro Immobile",
+			"playerLeague": "seriaA",
+			"playerClub": "lazio",
+			"playerNationality": "ITA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "David de Gea",
+			"playerLeague": "epl",
+			"playerClub": "manutd",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Andre Schurrle",
+			"playerLeague": "epl",
+			"playerClub": "fulham",
+			"playerNationality": "GER",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Antoine Griezmann",
+			"playerLeague": "laliga",
+			"playerClub": "atletico",
+			"playerNationality": "FRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Isco",
+			"playerLeague": "laliga",
+			"playerClub": "realmadrid",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Lorenzo Insigne",
+			"playerLeague": "seriaA",
+			"playerClub": "napoli",
+			"playerNationality": "ITA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Roberto Firmino",
+			"playerLeague": "epl",
+			"playerClub": "liverpool",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Cristiano Ronaldo",
+			"playerLeague": "seriaA",
+			"playerClub": "juventus",
+			"playerNationality": "POR",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Samuel Umtiti",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "FRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Kenedy",
+			"playerLeague": "epl",
+			"playerClub": "newcastle",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Gianluigi Donnarumma",
+			"playerLeague": "seriaA",
+			"playerClub": "milan",
+			"playerNationality": "ITA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Gabriel Jesus",
+			"playerLeague": "epl",
+			"playerClub": "mancity",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Ousmane Dembele",
+			"playerLeague": "laliga",
+			"playerClub": "barcelona",
+			"playerNationality": "FRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Juanfran",
+			"playerLeague": "laliga",
+			"playerClub": "atletico",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Ashley Young",
+			"playerLeague": "epl",
+			"playerClub": "manutd",
+			"playerNationality": "ENG",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Radamel Falcao",
+			"playerLeague": "ligue1",
+			"playerClub": "monaco",
+			"playerNationality": "COL",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Gonzalo Higuain",
+			"playerLeague": "epl",
+			"playerClub": "chelsea",
+			"playerNationality": "ARG",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Dries Mertens",
+			"playerLeague": "seriaA",
+			"playerClub": "napoli",
+			"playerNationality": "BEL",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Mesut Ozil",
+			"playerLeague": "epl",
+			"playerClub": "arsenal",
+			"playerNationality": "GER",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Ilkay Gundogan",
+			"playerLeague": "epl",
+			"playerClub": "mancity",
+			"playerNationality": "GER",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Pedro",
+			"playerLeague": "epl",
+			"playerClub": "chelsea",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Romelu Lukaku",
+			"playerLeague": "epl",
+			"playerClub": "manutd",
+			"playerNationality": "BEL",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Alexandre Lacazette",
+			"playerLeague": "epl",
+			"playerClub": "arsenal",
+			"playerNationality": "FRA",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Luis Alberto",
+			"playerLeague": "seriaA",
+			"playerClub": "lazio",
+			"playerNationality": "ESP",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Harry Kane",
+			"playerLeague": "epl",
+			"playerClub": "tottenham",
+			"playerNationality": "ENG",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Julian Draxler",
+			"playerLeague": "epl",
+			"playerClub": "tottenham",
+			"playerNationality": "ENG",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Julian Draxler",
+			"playerLeague": "ligue1",
+			"playerClub": "psg",
+			"playerNationality": "GER",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Hakim Ziyech",
+			"playerLeague": "eredivisie",
+			"playerClub": "ajax",
+			"playerNationality": "MAR",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Ruben Loftus-Cheek",
+			"playerLeague": "epl",
+			"playerClub": "chelsea",
+			"playerNationality": "ENG",
+			"playerScreenshot": ""
+		}
+	],
+	"mod-download-link": "https://drive.google.com/uc?export=download&id=1ZwdYWVXUZUc8_G6b5UDNO0aCbTyrH_6g",
+	"isFeatured": true
 }
