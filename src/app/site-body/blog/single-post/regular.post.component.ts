@@ -157,7 +157,7 @@ export class ModDownloadDialog {
 	downloadURLArray: Array<object> = this.data.downloadLink;
 
 	ngOnInit() {
-		this.downloadDataVersion = !!this.downloadURL ? '2019' : '2018';
+		this.downloadDataVersion = !!this.downloadURL ? '2018' : '2019';
 	}
 
 	downloadFile() {

@@ -48,16 +48,18 @@
             <div class="mod-disclaimer-header" mat-dialog-title>Important:</div>
             <mat-dialog-content class="mod-disclaimer">
                 <div class="mod-disclaimer-content">
-                    This patch was created by {{downloadURLArray[0].author}}. You will be re-directed to an external site when you click on the Download button.
+                    This patch was created by <strong [innerHTML]="downloadURLArray[0].author | teamInfo : 'handle'"></strong>. You will be re-directed to an external site when you click on the Download button.
                 
                     The patch is not compatible with console versions of FIFA like XBOX and PS. It is meant solely for PC users.
                 </div>
                 <div class="mod-download-links">
                     <div class="mod-download-link" *ngFor="let downloadURL of downloadURLArray">
                         <div class="mod-description" *ngIf="downloadURL.description" [innerHTML]="downloadURL.description"></div>
-                        <a class="button-link secondary-button-link" [href]="downloadURL.url">
-                            Download File
-                        </a>
+                        <div class="download-link-container">
+                            <a class="button-link secondary-button-link" [href]="downloadURL.url" target="_blank">
+                                Download File
+                            </a>
+                        </div>
                     </div>
                 </div>
             </mat-dialog-content>

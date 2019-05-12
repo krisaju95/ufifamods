@@ -319,11 +319,26 @@ export class TeamInfoService {
 		},
 	}
 
+	partners: object = {
+		"fifermods": {
+			handle: "FIFER Mods",
+			website: "https://www.fifermods.com"
+		}
+	}
+
 	getTeamMembersList(): object {
 		return Object.keys(this.teamMembers);
 	}
 
 	getTeamMemberInfo(teamMemberName: string): object {
 		return this.teamMembers[teamMemberName] || {};
+	}
+
+	getPartnersList(): object {
+		return Object.keys(this.partners);
+	}
+
+	getPartnerInfo(partnerName: string): object {
+		return this.partners[partnerName] || {};
 	}
 }

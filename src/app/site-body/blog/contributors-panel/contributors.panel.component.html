@@ -5,7 +5,7 @@
     <ul class="contributors-list">
         <li class="contributors-list-item" *ngFor="let contributor of contributorsList">
             <span class="contributor-image team-member-dp {{contributor}}"></span>
-            <span class="contributor-name" [innerHTML]="contributor"></span>
+            <span class="contributor-name" [innerHTML]="contributor | teamInfo : 'handle'"></span>
         </li>
     </ul>
 </div>

@@ -10,6 +10,7 @@ import { TimeSincePipe } from '../../pipes/time.since.pipe';
 import { MultiStringPipe } from '../../pipes/mutistring.pipe';
 import { ObjectKeysPipe } from '../../pipes/object-keys.pipe';
 import { ClubInfoPipe } from '../../pipes/club-info.pipe';
+import { TeamInfoPipe } from '../../pipes/team-info.pipe';
 import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
 
 
@@ -22,6 +23,7 @@ import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
 		MultiStringPipe,
 		ObjectKeysPipe,
 		ClubInfoPipe,
+		TeamInfoPipe,
 		FutCardPlayerImagePipe
 	],
 	imports: [
@@ -41,6 +43,7 @@ import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
 		MultiStringPipe,
 		ObjectKeysPipe,
 		ClubInfoPipe,
+		TeamInfoPipe,
 		FutCardPlayerImagePipe
 	]
 })

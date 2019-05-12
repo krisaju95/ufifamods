@@ -14,3 +14,24 @@
     font-size: 14px;
     margin-top: 20px;
 }
+
+.mod-download-links {
+    .mod-download-link {
+        display: inline-table;
+        width: 100%;
+        margin-top: 15px;
+
+        .mod-description, .download-link-container {
+            display: table-cell;
+            width: 50%;
+        }
+
+        .mod-description {
+            font-weight: 600;
+        }
+
+        .download-link-container {
+            text-align: right;
+        }
+    }
+}
