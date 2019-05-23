@@ -1,0 +1,299 @@
+{
+	"post-date": "2019-05-22",
+	"post-category": "totw",
+	"post-title": "FIFA 19: Team of the Week - TOTW #36",
+	"post-intro-text": "Hakim Ziyech stars in this week's FIFA Ultimate Team of the Week.",
+	"post-main-text-array": [
+		 "EA have officially revealed this week's in-form squad and as per usual, it has some exquisite picks. Enjoy them while you can though, because the domestic seasons are coming to a close in most countries and these team's are going to be extremely boring in the coming weeks.",
+		 "Serie A defences can be beefed up with the presence of Kalidou Koulibaly, who gets his 4th IF card of the year, and also Gianluigi Donnarumma who bagged his 5th. Rodrigo de Paul of Udinese also features from the Italian League.",
+		 "David Alaba has earned himself a special HERO card, a fairly decent idea for a BuLi LB despite his mediocre defensive stats. Hakim Ziyech gets his 3rd IF of the season, rated at 91 with although he's balance could be way better, currently standing at 66. Nicolas Pepe also makes his way into this week's team with his 6th IF! This guy has been a beast all year and it'll be interesting to see where he plies his trade next season."
+	],
+	"post-last-para": "Did someone miss out in this squad? Manage to pack these guys in your recent packs? Let us know in the comments below!",
+	"post-link": "/blog/post/2019/05/22/fifa-19-team-of-the-week-totw-36",
+	"post-media": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/05/22/totw.jpg",
+	"post-category-list": [
+		"fifa 19",
+		"fut",
+		"totw",
+		"fifa 19 totw"
+	],
+	"fut-squad": {
+		"fifaVersion": 19,
+		"squadType": "totw",
+		"players": {
+			"attackers": [
+				{
+					"name": "Ben Yedder",
+					"id": 199451,
+					"dynamicImageId": 134417179,
+					"rating": 87,
+					"position": "ST",
+					"club": "sevilla",
+					"nationality": "FRA",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				},
+				{
+					"name": "Weghorst",
+					"id": 223689,
+					"dynamicImageId": 117664201,
+					"rating": 86,
+					"position": "ST",
+					"club": "wolfsburg",
+					"nationality": "NLD",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				},
+				{
+					"name": "Djaniny",
+					"id": 205427,
+					"dynamicImageId": 117645939,
+					"rating": 86,
+					"position": "ST",
+					"club": "alahli",
+					"nationality": "CPV",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				}
+			],
+			"midfielders": [
+				{
+					"name": "Pépé",
+					"id": 226110,
+					"dynamicImageId": 318993214,
+					"rating": 89,
+					"position": "RM",
+					"club": "lille",
+					"nationality": "CIV",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				},
+				{
+					"name": "De Paul",
+					"id": 212616,
+					"dynamicImageId": 212616,
+					"rating": 86,
+					"position": "CM",
+					"club": "udinese",
+					"nationality": "ARG",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				},
+				{
+					"name": "Sanson",
+					"id": 210896,
+					"dynamicImageId": 67319760,
+					"rating": 83,
+					"position": "CM",
+					"club": "marseille",
+					"nationality": "FRA",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				},
+				{
+					"name": "Ziyech",
+					"id": 208670,
+					"dynamicImageId": 235089694,
+					"rating": 91,
+					"position": "RM",
+					"club": "ajax",
+					"nationality": "MAR",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				}
+			],
+			"defenders": [
+				{
+					"name": "Firpo",
+					"id": 241184,
+					"dynamicImageId": 117681696,
+					"rating": 85,
+					"position": "LWB",
+					"club": "realbetis",
+					"nationality": "BRA",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				},
+				{
+					"name": "Alaba",
+					"id": 197445,
+					"dynamicImageId": 84083525,
+					"rating": 86,
+					"position": "LB",
+					"club": "fcbayern",
+					"nationality": "AUT",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "hero"
+				},
+				{
+					"name": "Koulibaly",
+					"id": 201024,
+					"dynamicImageId": 218304832,
+					"rating": 93,
+					"position": "CB",
+					"club": "napoli",
+					"nationality": "SEN",
+					"quality": "gold",
+					"dynamicImage": true,
+					"type": "totw"
+				}
+			],
+			"goalkeeper": {
+				"name": "Donnarumma",
+				"id": 230621,
+				"dynamicImageId": 218334429,
+				"rating": 90,
+				"position": "GK",
+				"club": "milan",
+				"nationality": "ITA",
+				"quality": "gold",
+				"dynamicImage": true,
+				"type": "totw"
+			},
+			"substitutes": [
+				{
+					"name": "Guzmán",
+					"id": 176919,
+					"rating": 81,
+					"position": "GK",
+					"club": "tigres",
+					"nationality": "ARG",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Rosales",
+					"id": 182896,
+					"rating": 81,
+					"position": "RB",
+					"club": "espanyol",
+					"nationality": "VEN",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Marin",
+					"id": 235813,
+					"rating": 81,
+					"position": "CM",
+					"club": "liege",
+					"nationality": "ROU",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Cornet",
+					"id": 215798,
+					"rating": 81,
+					"position": "RM",
+					"club": "lyon",
+					"nationality": "CIV",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Alario",
+					"id": 175254,
+					"rating": 82,
+					"position": "ST",
+					"club": "leverkusen",
+					"nationality": "ARG",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Petersen",
+					"id": 183580,
+					"rating": 82,
+					"position": "ST",
+					"club": "freiburg",
+					"nationality": "GER",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Angulo",
+					"id": 138306,
+					"rating": 82,
+					"position": "ST",
+					"club": "zabrze",
+					"nationality": "ESP",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Alfaro",
+					"id": 171315,
+					"rating": 77,
+					"position": "RM",
+					"club": "cordoba",
+					"nationality": "ESP",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Atik",
+					"id": 233520,
+					"rating": 74,
+					"position": "CAM",
+					"club": "dresden",
+					"nationality": "TUR",
+					"quality": "silver",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Wondolowski",
+					"id": 164559,
+					"rating": 78,
+					"position": "ST",
+					"club": "sanjose",
+					"nationality": "USA",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "RB"
+				},
+				{
+					"name": "Gomis",
+					"id": 234972,
+					"rating": 76,
+					"position": "ST",
+					"club": "lens",
+					"nationality": "SEN",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Cooke",
+					"id": 243964,
+					"rating": 68,
+					"position": "ST",
+					"club": "stmirren",
+					"nationality": "ENG",
+					"quality": "silver",
+					"dynamicImage": false,
+					"type": "totw"
+				}
+			]
+		}
+	},
+	"isFeatured": true
+}
