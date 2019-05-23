@@ -78,6 +78,12 @@
             }
             background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-recordbreaker.png');
         }
+        &.hero {
+            .fut-squad-player-name, .player-side-info {
+                color: #CBB8F9;
+            }
+            background-image: url('https://www.fifarosters.com/assets/cards/fifa19/mini/hd-purple.png');
+        }
     }
 
     .fut-squad-player-image {

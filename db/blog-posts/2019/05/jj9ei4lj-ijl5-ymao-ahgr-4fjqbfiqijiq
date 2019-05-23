@@ -75,7 +75,7 @@
 				{
 					"name": "De Paul",
 					"id": 212616,
-					"dynamicImageId": 212616,
+					"dynamicImageId": 151207560,
 					"rating": 86,
 					"position": "CM",
 					"club": "udinese",
@@ -268,7 +268,7 @@
 					"nationality": "USA",
 					"quality": "gold",
 					"dynamicImage": false,
-					"type": "RB"
+					"type": "rb"
 				},
 				{
 					"name": "Gomis",
