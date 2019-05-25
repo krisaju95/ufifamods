@@ -12,14 +12,14 @@ export class TimeSincePipe implements PipeTransform {
 	) { }
 
 	transform(date: string): string {
+		let timeIcon = '<i class="far fa-clock"></i>&nbsp;&nbsp;';
 		if(!date) {
-			return '';
+			return timeIcon + "a long time ago";
 		}
 		let timeInPast = new Date(date).getTime();
 		let currentTime = new Date().getTime();
 		let seconds = Math.floor(currentTime - timeInPast) / 1000;
 		let interval = Math.floor(seconds / 31536000);
-		let timeIcon = '<i class="far fa-clock"></i>&nbsp;&nbsp;';
 		if (interval > 1) {
 			return timeIcon + this.datePipe.transform(date, 'd MMM yy');
 		}

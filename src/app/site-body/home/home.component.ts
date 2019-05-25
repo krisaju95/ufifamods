@@ -52,10 +52,10 @@ export class HomeComponent {
 	}
 
 	setFallbackState() {
-		setTimeout(() => {
-			if(this.responseLoading) {
-				this.service.routeToState('404');
-			}
-		}, 180000);
+		// setTimeout(() => {
+		// 	if(this.responseLoading) {
+		// 		this.service.routeToState('404');
+		// 	}
+		// }, 180000);
 	}
 }
