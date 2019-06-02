@@ -169,4 +169,8 @@ export class ModDownloadDialog {
 		fileElement.style.display = "none";
 		downloadIframeContainer.appendChild(fileElement);
 	}
+
+	tryDownloadAgain() {
+		window.open(this.data.url, '_blank');
+	}
 }
