@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 const epl: string = 'Premier League';
 const laliga: string = 'La Liga Santander';
 const ligue1: string = 'Ligue 1 Conforama';
-const seriaA: string = 'Serie A TIM';
-const seriaB: string = 'Serie A';
+const serieA: string = 'Serie A TIM';
+const serieB: string = 'Serie A';
 const bundesliga: string = 'Bundesliga';
 const superlig: string = 'Süper Lig';
 const eredivisie: string = 'Eredivisie';
@@ -343,126 +343,126 @@ export class ClubInfoService {
 				}
 			}
 		},
-		"seriaA": {
-			name: seriaA + " (Italy)",
+		"serieA": {
+			name: serieA + " (Italy)",
 			country: "Italy",
 			countryCode: "ITA",
 			clubs: {
 				"atalanta": {
 					name: "Atalanta B.C.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"bologna": {
 					name: "Bologna F.C.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"cagliari": {
 					name: "Cagliari Calcio",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"chievo": {
 					name: "A.C. Chievo Verona",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"empoli": {
 					name: "Empoli F.C.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"fiorentina": {
 					name: "A.C.F. Fiorentina",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"frosinone": {
 					name: "Frosinone Calcio",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"genoa": {
 					name: "Genoa F.C.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"inter": {
 					name: "F.C. Internazionale Milano",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"juventus": {
 					name: "Juventus F.C.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"lazio": {
 					name: "S.S. Lazio",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"milan": {
 					name: "A.C. Milan",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"napoli": {
 					name: "S.S.C. Napoli",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"parma": {
 					name: "Parma Calcio",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"roma": {
 					name: "A.S. Roma",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"sampdoria": {
 					name: "U.C. Sampdoria",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"sassuolo": {
 					name: "U.S. Sassuolo",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"spal": {
 					name: "S.P.A.L.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"torino": {
 					name: "Torino F.C.",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				},
 				"udinese": {
 					name: "Udinese Calcio",
-					league: seriaA,
+					league: serieA,
 					country: "Italy"
 				}
 			}
 		},
-		"seriaB": {
-			name: seriaB + " (Italy)",
+		"serieB": {
+			name: serieB + " (Italy)",
 			country: "Italy",
 			countryCode: "ITA",
 			clubs: {
 				"benevento": {
 					name: "Benevento",
-					league: seriaB,
+					league: serieB,
 					country: "Italy"
 				},
 				"salernitana": {
 					name: "Salernitana",
-					league: seriaB,
+					league: serieB,
 					country: "Italy"
 				}
 			}
