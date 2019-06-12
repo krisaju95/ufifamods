@@ -1,0 +1,83 @@
+{
+	"post-date": "2019-06-12",
+	"post-category": "mods",
+	"post-author": "FCB17",
+	"post-title": "FIFA 19: Custom Star-heads Patch - FP #3",
+	"post-intro-text": "Several Premier League stars feature in FCB17's latest pack, with Bernardo Silva and Ayoze Perez our clear favourites.",
+	"post-main-text-array": [
+		"Our latest custom star-heads patch contains faces for Man City stars Bernardo Silva and Gabriel Jesus. Newcastle United players also feature in this pack, front-men Ayoze Perez and Salomon Rondon. Kieran Trippier and Ryan Babel complete the set of EPL players in the pack.",
+		"Other players in this pack are Napoli's Senegalese defender Kalidou Koulibaly and PSG's Brazilian centre-half Marquinhos."
+	],
+	"post-last-para": "Enjoying our content? Like, Share & Comment!",
+	"post-link": "/blog/post/2019/06/12/fifa-19-custom-starheads-patch-fp-3",
+	"post-media": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/06/12/fcb17fp3.jpg",
+	"post-category-list": [
+		"fifa 19",
+		"fifa mods",
+		"fifa 19 faces"
+	],
+	"contributors-list": [
+		"FCB17"
+	],
+	"show-mod-disclaimer": true,
+	"faces-included-list": [
+		{
+			"playerName": "Ayoze Perez",
+			"playerLeague": "epl",
+			"playerClub": "newcastle",
+			"playerNationality": "ESP",
+			"playerScreenshot": "https://pbs.twimg.com/media/D8oIDE0VsAE83cL?format=jpg&name=large"
+		},
+		{
+			"playerName": "Salomon Rondon",
+			"playerLeague": "epl",
+			"playerClub": "newcastle",
+			"playerNationality": "VEN",
+			"playerScreenshot": "https://pbs.twimg.com/media/D8oID7-WkAAjaOy?format=jpg&name=large"
+		},
+		{
+			"playerName": "Gabriel Jesus",
+			"playerLeague": "epl",
+			"playerClub": "mancity",
+			"playerNationality": "BRA",
+			"playerScreenshot": "https://pbs.twimg.com/media/D8a6xxTWsAAJXeD?format=jpg&name=large"
+		},
+		{
+			"playerName": "Bernardo Silva",
+			"playerLeague": "epl",
+			"playerClub": "mancity",
+			"playerNationality": "POR",
+			"playerScreenshot": "https://pbs.twimg.com/media/D78O_7FWwAE_SBg?format=jpg&name=large"
+		},
+		{
+			"playerName": "Kalidou Koulibaly",
+			"playerLeague": "serieA",
+			"playerClub": "napoli",
+			"playerNationality": "SEN",
+			"playerScreenshot": "https://pbs.twimg.com/media/D73OmAAXYAApHVZ?format=jpg&name=large"
+		},
+		{
+			"playerName": "Kieran Trippier",
+			"playerLeague": "epl",
+			"playerClub": "tottenham",
+			"playerNationality": "ENG",
+			"playerScreenshot": "https://pbs.twimg.com/media/D8pU8TCXsAE_m3A?format=jpg&name=large"
+		},
+		{
+			"playerName": "Ryan Babel",
+			"playerLeague": "epl",
+			"playerClub": "fulham",
+			"playerNationality": "NLD",
+			"playerScreenshot": ""
+		},
+		{
+			"playerName": "Marquinhos",
+			"playerLeague": "ligue1",
+			"playerClub": "psg",
+			"playerNationality": "BRA",
+			"playerScreenshot": ""
+		}
+	],
+	"mod-download-link": "https://drive.google.com/uc?export=download&id=1RFvpBkK479MkvTvqj5Y1NSTV4QjrrBq0",
+	"isFeatured": true
+}
