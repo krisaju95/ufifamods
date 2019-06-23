@@ -14,14 +14,14 @@
         background-color: #FAFAFA;
 
         .post-image {
-            transform: scale(1.05);
+            transform: scale(1.025);
         }
 
         .post-text-content {
             background-color: #FAFAFA;
 
             .post-title {
-                text-decoration-color: #1F2C45;
+                text-decoration-color: #171E26;
             }
         }
     }
@@ -37,7 +37,7 @@
         background-position: center top;
         background-color: #DDDDDD;
         height: 200px;
-        transition: transform ease 300ms;
+        transition: transform ease 500ms;
     }
 
     .post-text-content {
@@ -82,6 +82,8 @@
 
         .post-description {
             font-size: 14px;
+            font-weight: 300;
+            line-height: 1.3em;
             margin-top: 15px;
             padding-bottom: 20px;
             margin-bottom: 20px;
@@ -102,7 +104,7 @@
                 font-weight: 800;
                 margin-bottom: 5px;
                 display: inline-block;
-                color: #305BA5;
+                color: #333333;
             }
 
             .post-date {
@@ -129,15 +131,15 @@
                     display: table-cell;
                     vertical-align: middle;
                     letter-spacing: 1px;
-                    font-weight: 600;
+                    font-weight: 400;
                 }
             }
         }
     }
 
     &.post-card-dark-theme {
-        background: #1F2C45;
-        color: #FFFFFF;
+        background: #171E26;
+        color: #E5E5E5;
         border: none;
 
         .post-image {
@@ -145,8 +147,12 @@
         }
 
         .post-text-content {
-            background: #1F2C45;
+            background: #171E26;
             transition: background ease 300ms;
+
+            .post-description {
+                border-bottom: 1px solid rgb(42, 56, 70);
+            }
 
             .post-footer-text {
                 .post-category {
@@ -160,10 +166,10 @@
         }
 
         &:hover, &:focus {
-            background: rgb(40, 55, 83);
+            background: rgb(30, 39, 49);
             
             .post-text-content {
-                background: rgb(40, 55, 83);
+                background: rgb(30, 39, 49);
 
                 .post-title {
                     text-decoration-color: #FFFFFF;
@@ -213,8 +219,7 @@
                 ::ng-deep span {
                     display: inline-block;
                     padding: 10px;
-                    background: #1F2C45;
-                    text-transform: uppercase;
+                    background: #171E26;
 
                     ~span {
                         margin-top: 2px;

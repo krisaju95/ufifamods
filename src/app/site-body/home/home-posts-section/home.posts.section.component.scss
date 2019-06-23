@@ -4,12 +4,17 @@
     .home-page-section-header {
         vertical-align: top;
         margin: 20px;
-        text-align: center;
+        padding: 0 20px;
 
         .home-page-section-title {
             font-weight: 900;
             font-size: 32px;
-            color: $site-colour-blue;
+            color: $site-colour-yellow;
+            display: inline-block;
+        }
+
+        .button-link {
+            float: right;
         }
 
         .home-page-section-description {

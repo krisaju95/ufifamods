@@ -28,20 +28,17 @@ export class TimeSincePipe implements PipeTransform {
 			return timeIcon + this.datePipe.transform(date, 'd MMM yy');
 		}
 		interval = Math.floor(seconds / 86400);
-		if (interval > 1) {
-			return timeIcon + interval + " days ago";
+		let months = Math.floor(interval / 30);
+		if (months > 1) {
+			return timeIcon + months + " months ago";
+		} else if (months == 1) {
+			return timeIcon + months + " month ago";
+		} else if (interval > 1) {
+			
 		} else if (interval == 1) {
 			return timeIcon + "Yesterday";
 		} else {
 			return timeIcon + "Today";
 		}
-		// interval = Math.floor(seconds / 3600);
-		// if (interval > 1) {
-		// 	return timeIcon + interval + " hours ago";
-		// }
-		// interval = Math.floor(seconds / 60);
-		// if (interval > 1) {
-		// 	return timeIcon + interval + " minutes ago";
-		// }
 	}
 }

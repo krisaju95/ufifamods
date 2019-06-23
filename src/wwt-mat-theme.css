@@ -101,7 +101,7 @@
 .mat-badge-content {
     font-weight: 600;
     font-size: 12px;
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-badge-small .mat-badge-content {
@@ -113,41 +113,41 @@
 }
 
 .mat-h1, .mat-headline, .mat-typography h1 {
-    font: 400 24px/32px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 24px/32px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 16px
 }
 
 .mat-h2, .mat-title, .mat-typography h2 {
-    font: 500 20px/32px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 500 20px/32px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 16px
 }
 
 .mat-h3, .mat-subheading-2, .mat-typography h3 {
-    font: 400 16px/28px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 16px/28px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 16px
 }
 
 .mat-h4, .mat-subheading-1, .mat-typography h4 {
-    font: 400 15px/24px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 15px/24px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 16px
 }
 
 .mat-h5, .mat-typography h5 {
-    font: 400 11.62px/20px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 11.62px/20px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 12px
 }
 
 .mat-h6, .mat-typography h6 {
-    font: 400 9.38px/20px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 9.38px/20px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 12px
 }
 
 .mat-body-2, .mat-body-strong {
-    font: 500 14px/24px Raleway, Roboto, "Helvetica Neue", sans-serif
+    font: 500 14px/24px Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-body, .mat-body-1, .mat-typography {
-    font: 400 14px/20px Raleway, Roboto, "Helvetica Neue", sans-serif
+    font: 400 14px/20px Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-body p, .mat-body-1 p, .mat-typography p {
@@ -155,50 +155,50 @@
 }
 
 .mat-caption, .mat-small {
-    font: 400 12px/20px Raleway, Roboto, "Helvetica Neue", sans-serif
+    font: 400 12px/20px Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-display-4, .mat-typography .mat-display-4 {
-    font: 300 112px/112px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 300 112px/112px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 56px;
     letter-spacing: -.05em
 }
 
 .mat-display-3, .mat-typography .mat-display-3 {
-    font: 400 56px/56px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 56px/56px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 64px;
     letter-spacing: -.02em
 }
 
 .mat-display-2, .mat-typography .mat-display-2 {
-    font: 400 45px/48px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 45px/48px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 64px;
     letter-spacing: -.005em
 }
 
 .mat-display-1, .mat-typography .mat-display-1 {
-    font: 400 34px/40px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 400 34px/40px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0 0 64px
 }
 
 .mat-bottom-sheet-container {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 16px;
     font-weight: 400
 }
 
 .mat-button, .mat-fab, .mat-flat-button, .mat-icon-button, .mat-mini-fab, .mat-raised-button, .mat-stroked-button {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 14px;
     font-weight: 500
 }
 
 .mat-button-toggle {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-card {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-card-title {
@@ -211,7 +211,7 @@
 }
 
 .mat-checkbox {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-checkbox-layout .mat-checkbox-label {
@@ -228,7 +228,7 @@
 }
 
 .mat-table {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-header-cell {
@@ -241,7 +241,7 @@
 }
 
 .mat-calendar {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-calendar-body {
@@ -261,24 +261,24 @@
 .mat-dialog-title {
     font-size: 24px;
     font-weight: 800;
-    color: #305BA5;
+    color: #333333;
 }
 
 .mat-expansion-panel-header {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 15px;
     font-weight: 400
 }
 
 .mat-expansion-panel-content {
-    font: 400 14px/20px Raleway, Roboto, "Helvetica Neue", sans-serif
+    font: 400 14px/20px Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-form-field {
     font-size: inherit;
     font-weight: 400;
     line-height: 1.125;
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-form-field-wrapper {
@@ -458,22 +458,22 @@ input.mat-input-element {
 }
 
 .mat-menu-item {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 16px;
     font-weight: 400
 }
 
 .mat-paginator, .mat-paginator-page-size .mat-select-trigger {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 12px
 }
 
 .mat-radio-button {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-select {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-select-trigger {
@@ -481,17 +481,17 @@ input.mat-input-element {
 }
 
 .mat-slide-toggle-content {
-    font: 400 14px/20px Raleway, Roboto, "Helvetica Neue", sans-serif
+    font: 400 14px/20px Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-slider-thumb-label-text {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 12px;
     font-weight: 500
 }
 
 .mat-stepper-horizontal, .mat-stepper-vertical {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-step-label {
@@ -505,17 +505,17 @@ input.mat-input-element {
 }
 
 .mat-tab-group {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-tab-label, .mat-tab-link {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 14px;
     font-weight: 500
 }
 
 .mat-toolbar, .mat-toolbar h1, .mat-toolbar h2, .mat-toolbar h3, .mat-toolbar h4, .mat-toolbar h5, .mat-toolbar h6 {
-    font: 500 20px/32px Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font: 500 20px/32px Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     margin: 0
 }
 
@@ -535,11 +535,11 @@ mat-tooltip-component .mat-tooltip {
 }
 
 .mat-list-item {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-list-option {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-list .mat-list-item, .mat-nav-list .mat-list-item, .mat-selection-list .mat-list-item {
@@ -575,7 +575,7 @@ mat-tooltip-component .mat-tooltip {
 }
 
 .mat-list .mat-subheader, .mat-nav-list .mat-subheader, .mat-selection-list .mat-subheader {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 14px;
     font-weight: 500
 }
@@ -613,22 +613,22 @@ mat-tooltip-component .mat-tooltip {
 }
 
 .mat-list[dense] .mat-subheader, .mat-nav-list[dense] .mat-subheader, .mat-selection-list[dense] .mat-subheader {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 12px;
     font-weight: 500
 }
 
 .mat-option {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 16px
 }
 
 .mat-optgroup-label {
-    font: 500 14px/24px Raleway, Roboto, "Helvetica Neue", sans-serif
+    font: 500 14px/24px Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-simple-snackbar {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif;
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif;
     font-size: 14px
 }
 
@@ -640,7 +640,7 @@ mat-tooltip-component .mat-tooltip {
 }
 
 .mat-tree {
-    font-family: Raleway, Roboto, "Helvetica Neue", sans-serif
+    font-family: Ubuntu, Roboto, "Helvetica Neue", sans-serif
 }
 
 .mat-tree-node {
@@ -817,7 +817,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-primary .mat-option.mat-selected:not(.mat-option-disabled) {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-accent .mat-option.mat-selected:not(.mat-option-disabled) {
@@ -849,7 +849,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-primary .mat-pseudo-checkbox-checked, .mat-primary .mat-pseudo-checkbox-indeterminate {
-    background: #305BA5
+    background: #333333
 }
 
 .mat-warn .mat-pseudo-checkbox-checked, .mat-warn .mat-pseudo-checkbox-indeterminate {
@@ -884,7 +884,7 @@ textarea.cdk-textarea-autosize-measuring {
 
 .mat-badge-content {
     color: #fff;
-    background: #305BA5
+    background: #333333
 }
 
 .mat-badge-accent .mat-badge-content {
@@ -1104,7 +1104,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-button.mat-primary, .mat-icon-button.mat-primary, .mat-stroked-button.mat-primary {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-button.mat-accent, .mat-icon-button.mat-accent, .mat-stroked-button.mat-accent {
@@ -1169,7 +1169,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-fab.mat-primary, .mat-flat-button.mat-primary, .mat-mini-fab.mat-primary, .mat-raised-button.mat-primary {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-fab.mat-accent, .mat-flat-button.mat-accent, .mat-mini-fab.mat-accent, .mat-raised-button.mat-accent {
@@ -1262,7 +1262,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-checkbox-checked.mat-primary .mat-checkbox-background, .mat-checkbox-indeterminate.mat-primary .mat-checkbox-background {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-checkbox-checked.mat-accent .mat-checkbox-background, .mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
@@ -1311,12 +1311,12 @@ textarea.cdk-textarea-autosize-measuring {
 
 .mat-chip.mat-standard-chip {
     background-color: #F0F0F0;
-    color: #305BA5;
+    color: #333333;
     font-weight: 600;
 }
 
 .mat-chip.mat-standard-chip .mat-chip-remove {
-    color: #305BA5;
+    color: #333333;
     font-size: 18px;
     opacity: 1;
     transition: opacity ease 300ms;
@@ -1327,7 +1327,7 @@ textarea.cdk-textarea-autosize-measuring {
 }
 
 .mat-chip.mat-standard-chip.mat-chip-selected.mat-primary {
-    background-color: #305BA5;
+    background-color: #333333;
     color: #fff
 }
 
@@ -1430,7 +1430,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-calendar-body-selected {
-    background-color: #305BA5;
+    background-color: #333333;
     color: #fff
 }
 
@@ -1474,7 +1474,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-datepicker-toggle-active {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-datepicker-toggle-active.mat-accent {
@@ -1541,7 +1541,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field.mat-focused .mat-form-field-label {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-form-field.mat-focused .mat-form-field-label.mat-accent {
@@ -1561,7 +1561,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field.mat-focused .mat-form-field-ripple {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-form-field.mat-focused .mat-form-field-ripple.mat-accent {
@@ -1646,7 +1646,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline-thick {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-form-field-appearance-outline.mat-focused.mat-accent .mat-form-field-outline-thick {
@@ -1670,7 +1670,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-icon.mat-primary {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-icon.mat-accent {
@@ -1686,7 +1686,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-input-element {
-    caret-color: #305BA5
+    caret-color: #333333
 }
 
 .mat-input-element::placeholder {
@@ -1784,7 +1784,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-progress-bar-fill::after {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-progress-bar.mat-accent .mat-progress-bar-background {
@@ -1812,7 +1812,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-progress-spinner circle, .mat-spinner circle {
-    stroke: #305BA5;
+    stroke: #333333;
 }
 
 .mat-radio-outer-circle {
@@ -1820,11 +1820,11 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-radio-button.mat-primary.mat-radio-checked .mat-radio-outer-circle {
-    border-color: #305BA5
+    border-color: #333333
 }
 
 .mat-radio-button.mat-primary .mat-radio-inner-circle {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-radio-button.mat-primary .mat-radio-ripple .mat-ripple-element {
@@ -1899,7 +1899,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-form-field.mat-focused.mat-primary .mat-select-arrow {
-    color: #305BA5
+    color: #333333
 }
 
 .mat-form-field.mat-focused.mat-accent .mat-select-arrow {
@@ -1953,7 +1953,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-thumb {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-slide-toggle.mat-primary.mat-checked:not(.mat-disabled) .mat-slide-toggle-bar {
@@ -2005,7 +2005,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-primary .mat-slider-thumb, .mat-primary .mat-slider-thumb-label, .mat-primary .mat-slider-track-fill {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-primary .mat-slider-thumb-label-text {
@@ -2091,7 +2091,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-step-header .mat-step-icon {
-    background-color: #305BA5;
+    background-color: #333333;
     color: #fff
 }
 
@@ -2155,7 +2155,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-tab-group.mat-primary.mat-background-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary.mat-background-primary .mat-ink-bar {
@@ -2191,7 +2191,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-tab-group.mat-background-primary .mat-tab-header, .mat-tab-group.mat-background-primary .mat-tab-links, .mat-tab-nav-bar.mat-background-primary .mat-tab-header, .mat-tab-nav-bar.mat-background-primary .mat-tab-links {
-    background-color: #305BA5
+    background-color: #333333
 }
 
 .mat-tab-group.mat-background-primary .mat-tab-label, .mat-tab-group.mat-background-primary .mat-tab-link, .mat-tab-nav-bar.mat-background-primary .mat-tab-label, .mat-tab-nav-bar.mat-background-primary .mat-tab-link {
@@ -2276,7 +2276,7 @@ mat-footer-row, mat-header-row, mat-row, td.mat-cell, td.mat-footer-cell, th.mat
 }
 
 .mat-toolbar.mat-primary {
-    background: #305BA5;
+    background: #333333;
     color: #fff
 }
 
