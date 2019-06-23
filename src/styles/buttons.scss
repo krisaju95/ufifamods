@@ -1,8 +1,9 @@
 button:not(.unstyled-button), button.mat-button:not(.unstyled-button) {
     border: none;
-    background: linear-gradient(to right, #333333, #171E26, #0B121A, rgb(175, 15, 55));
-    color: #FFC145;
-    font-family: 'Dosis', sans-serif;
+    // background: linear-gradient(to right, #333333, #171E26, #0B121A, rgb(175, 15, 55));
+    background: #ffc145;
+    color: #2f2e2e;
+    // font-family: 'Dosis', sans-serif;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
@@ -11,7 +12,7 @@ button:not(.unstyled-button), button.mat-button:not(.unstyled-button) {
     min-height: 60px;
     padding: 15px;
     border-radius: 50px;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
+    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
     transition: all 300ms;
 
     i {
@@ -19,9 +20,10 @@ button:not(.unstyled-button), button.mat-button:not(.unstyled-button) {
     }
 
     &:hover, &:focus {
-        background: linear-gradient(to right, rgb(68, 114, 194), rgb(53, 72, 107), rgb(43, 58, 87), rgb(182, 31, 69));
-        color: #F5F5F5;
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+        // background: linear-gradient(to right, rgb(68, 114, 194), rgb(53, 72, 107), rgb(43, 58, 87), rgb(182, 31, 69));
+        // color: #F5F5F5;
+        background: #f5f5f5;
+        // box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
     }
 
     &.mat-icon-button {

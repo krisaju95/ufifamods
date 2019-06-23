@@ -6,11 +6,11 @@
     position: relative;
     border-radius: 2.5px;
     border: 1px solid #EFEFEF;
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
+    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
     transition: box-shadow ease 300ms;
 
     &:hover, &:focus {
-        box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
+        // box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.1);
         background-color: #FAFAFA;
 
         .post-image {
