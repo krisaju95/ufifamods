@@ -1,9 +1,14 @@
 @import "../../../variables.scss";
 
+.standard-site-section-container {
+    background-image: url($site-cloud-storage-images + "generic/home-mainpost-background");
+    background-size: cover;
+}
+
 .home-page-featured-posts-container {
     display: inline-table;
     width: calc(100% - 80px);
-    background-color: $site-colour-second-primary;
+    // background-color: $site-colour-second-primary;
     padding: 20px 40px;
 
     .main-post-display-container {
