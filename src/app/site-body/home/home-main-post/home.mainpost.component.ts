@@ -24,7 +24,7 @@ export class HomeMainPostComponent {
 
 	setPostData() {
 		for(let postObject of this.blogPosts) {
-			if(postObject["isFeatured"]) {
+			if(postObject["is-featured"]) {
 				this.postsData.push(postObject);
 			}
 			if(this.postsData.length == 5) {

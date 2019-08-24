@@ -1,5 +1,30 @@
-<div class="site-header-container" *ngIf="isDesktopViewPort">
-	<a class="site-logo-wrapper" href="javascript: void(0)" routerLink="/">
+<div class="site-header-main-container">
+	<div class="site-header-container" *ngIf="isDesktopViewPort">
+		<a class="site-logo-wrapper" href="javascript: void(0)" routerLink="/">
+			<div class="site-title">
+				<div class="site-domain">
+					<span class="site-title-primary">u</span><span class="site-title-secondary">fifa</span><span class="site-title-primary">mods</span>
+				</div>
+				<div class="site-tld">
+					.com
+				</div>
+			</div>
+			<img class="site-logo-image" alt="Ultimate FIFA Mods Logo" src="https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/header/logo.png">
+		</a>
+		<div class="site-navbar-container">
+			<div class="site-navbar">
+				<a href="javascript: void(0)" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+				<a href="javascript: void(0)" routerLink="/blog" class="site-navigation-item" routerLinkActive="site-navigation-item-active">Blog</a>
+				<!-- <a href="javascript: void(0)" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isProdMode">Downloads</a>
+				<a href="javascript: void(0)" routerLink="/admin" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isProdMode">Admin</a> -->
+				<a href="javascript: void(0)" class="site-navigation-item site-search-button" (click)="showSearchDialog = true"><i class="fas fa-search"></i></a>
+			</div>
+		</div>
+	</div>
+	<div class="mobile-site-navbar" *ngIf="isMobileViewPort || isTabViewPort">
+		<a class="site-logo-container unstyled-link" href="javascript: void(0)" routerLink="/">
+			<img class="site-logo-image" alt="Ultimate FIFA Mods Logo" src="https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/header/logo.png">
+		</a>
 		<div class="site-title">
 			<div class="site-domain">
 				<span class="site-title-primary">u</span><span class="site-title-secondary">fifa</span><span class="site-title-primary">mods</span>
@@ -8,31 +33,8 @@
 				.com
 			</div>
 		</div>
-		<img class="site-logo-image" alt="Ultimate FIFA Mods Logo" src="https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/header/logo.png">
-	</a>
-	<div class="site-navbar-container">
-		<div class="site-navbar">
-			<a href="javascript: void(0)" routerLink="/" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-			<a href="javascript: void(0)" routerLink="/blog" class="site-navigation-item" routerLinkActive="site-navigation-item-active">Blog</a>
-			<a href="javascript: void(0)" routerLink="/downloads" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isProdMode">Downloads</a>
-			<a href="javascript: void(0)" routerLink="/admin" class="site-navigation-item" routerLinkActive="site-navigation-item-active" [routerLinkActiveOptions]="{exact: true}" *ngIf="!isProdMode">Admin</a>
-			<a href="javascript: void(0)" class="site-navigation-item site-search-button" (click)="showSearchDialog = true"><i class="fas fa-search"></i></a>
-		</div>
+		<i (click)="showNavbar()" class="fas fa-bars site-mobile-menu"></i>
 	</div>
+	
+	<search-posts-dialog *ngIf="showSearchDialog" (dialogClosed)="showSearchDialog = false"></search-posts-dialog>
 </div>
-<div class="mobile-site-navbar" *ngIf="isMobileViewPort || isTabViewPort">
-	<a class="site-logo-container unstyled-link" href="javascript: void(0)" routerLink="/">
-		<img class="site-logo-image" alt="Ultimate FIFA Mods Logo" src="https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/header/logo.png">
-	</a>
-	<div class="site-title">
-		<div class="site-domain">
-			<span class="site-title-primary">u</span><span class="site-title-secondary">fifa</span><span class="site-title-primary">mods</span>
-		</div>
-		<div class="site-tld">
-			.com
-		</div>
-	</div>
-	<i (click)="showNavbar()" class="fas fa-bars site-mobile-menu"></i>
-</div>
-
-<search-posts-dialog *ngIf="showSearchDialog" (dialogClosed)="showSearchDialog = false"></search-posts-dialog>

@@ -1,21 +1,16 @@
 <div class="standard-site-section-container">
     <div class="standard-site-section">
-        <div class="home-page-featured-posts-container">
-            <div class="main-post-display-container">
-                <div class="hero-post-container">
-                    <post-card [post]="postsData[0]" cardStyle="hero" [darkTheme]="true" [fullWidth]="true"></post-card>
-                </div>
-                <div class="bottom-posts-container">
-                    <post-card class="bottom-post" [post]="postsData[3]" [titleLineClamp]="true" [hideImage]="true" [hideDescription]="true" [darkTheme]="true"></post-card>
-                    <post-card class="bottom-post" [post]="postsData[4]" [titleLineClamp]="true" [hideImage]="true" [hideDescription]="true" [darkTheme]="true"></post-card>
-                </div>
-            </div>
-            <div class="aside-posts-container">
-                <div class="aside-post-container">
-                    <post-card [post]="postsData[1]" [darkTheme]="true" [titleLineClamp]="true" [hideDescription]="true"></post-card>
-                </div>
-                <div class="aside-post-container">
-                    <post-card [post]="postsData[2]" [darkTheme]="true" [titleLineClamp]="true" [hideDescription]="true"></post-card>
+        <div class="main-post-container" [style.background-image]="'url(' + postsData[0]['feature-image'] + ')'">
+            <div class="main-post-text-content">
+                <span class="post-category" [innerHTML]="postsData[0]['post-category']"></span>
+                <div class="post-title" [ngClass]="{'post-title-line-clamp': titleLineClamp}" [innerHTML]="postsData[0]['post-title']"></div>
+                <div class="post-description" *ngIf="!hideDescription" [innerHTML]="(postsData[0]['post-text-content'] | slice : 0 : 300).trim() + '...'"></div>
+                <div class="post-footer-text" *ngIf="!hideFooter">
+                    <span class="post-contributor">
+                        <span class="contributor-image team-member-dp {{postsData[0]['post-author'] || 'krisaju95'}}"></span>
+                        <span class="contributor-name" [innerHTML]="(postsData[0]['post-author'] || 'krisaju95') | teamInfo : 'handle'"></span>
+                    </span>
+                    <span class="post-date" [innerHTML]="postsData[0]['post-date'] | timeSince"></span>
                 </div>
             </div>
         </div>

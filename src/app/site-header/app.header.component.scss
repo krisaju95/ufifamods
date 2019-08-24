@@ -1,15 +1,21 @@
 @import "../variables.scss";
 
+.site-header-main-container {
+    background: $site-colour-primary;
+    text-align: center;
+}
+
 .site-header-container {
-    background: #0D162B url($site-cloud-storage-images + "header/header-art.jpg") no-repeat top right;
-    background-size: contain;
-    box-shadow: 0 0 10px rgba(0, 0, 0 , 0.4);
+    background: $site-colour-primary url($site-cloud-storage-images + "header/header-art.jpg") no-repeat center right;
+    background-size: cover;
     color: $site-colour-white;
     position: relative;
     vertical-align: middle;
     display: inline-table;
     width: 100%;
     height: 100px;
+    max-width: 1600px;
+    text-align: left;
 
     .site-logo-wrapper {
         display: table-cell;

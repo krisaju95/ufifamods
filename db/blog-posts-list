@@ -12,7 +12,8 @@
 		"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/06/12/fcb17fp3.jpg",
 		"post-title": "FIFA 19: Custom Star-heads Patch - FP #3",
 		"post-text-content": "Several Premier League stars feature in FCB17's latest pack, with Bernardo Silva and Ayoze Perez our clear favourites. Our latest custom star-heads patch contains faces for Man City stars Bernardo Silva and Gabriel Jesus. Newcastle United players also feature in this pack, front-men Ayoze Perez and Salomon Rondon. Kieran Trippier and Ryan Babel complete the set of EPL players in the pack. Other players in this pack are Napoli's Senegalese defender Kalidou Koulibaly and PSG's Brazilian centre-half Marquinhos.",
-		"isFeatured": true
+		"is-featured": true,
+		feature-image: "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/06/12/fcb17fp3feature.jpg"
 	},
 	"/blog/post/2019/05/22/fifa-19-team-of-the-week-totw-36": {
 		"post-json-url": "jj9ei4lj-ijl5-ymao-ahgr-4fjqbfiqijiq",
@@ -27,7 +28,7 @@
 		"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/05/22/totw.jpg",
 		"post-title": "FUT: Team of the Week - TOTW #36",
 		"post-text-content": "Hakim Ziyech stars in this week's FIFA Ultimate Team of the Week. EA have officially revealed this week's in-form squad and as per usual, it has some exquisite picks. Enjoy them while you can though, because the domestic seasons are coming to a close in most countries and these team's are going to be extremely boring in the coming weeks. Serie A defences can be beefed up with the presence of Kalidou Koulibaly, who gets his 4th IF card of the year, and also Gianluigi Donnarumma who bagged his 5th. Rodrigo de Paul of Udinese also features from the Italian League. David Alaba has earned himself a special HERO card, a fairly decent idea for a BuLi LB despite his mediocre defensive stats. Hakim Ziyech gets his 3rd IF of the season, rated at 91 with although he's balance could be way better, currently standing at 66. Nicolas Pepe also makes his way into this week's team with his 6th IF! This guy has been a beast all year and it'll be interesting to see where he plies his trade next season.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2019/05/13/fifa-19-custom-starheads-patch-fp-2": {
 		"post-json-url": "959ytlqi-5pzx-babu-wmb9-ur8f83ckctm3",
@@ -42,7 +43,7 @@
 		"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/05/13/fcb17fp2.jpg",
 		"post-title": "FIFA 19: Custom Star-heads Patch - FP #2",
 		"post-text-content": "This patch contains updated star-heads for Chelsea's Eden Hazard, Man. United's David De Gea and Man City's David Silva, among others. La Liga players dominate this patch with new custom faces for players from FC Barcelona and the Madrid sides. 3 Barcelona players feature in this pack - Chile's Arturo Vidal, Germany's Marc Andre Ter Stegen and French centre-half Clement Lenglet. Real Madrid's Sergio Ramos and Atletico's Koke are also included in this pack. Other players in this pack are David De Gea, David Silva, Sergio Aguero, Eden Hazard, Jordan Henderson, Andy Robertson and Alexis Sanchez. Ajax's Matthijs de Ligt and Juve's Federico Bernardeschi are the last players included.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2019/05/12/fifa-19-custom-starheads-liverpool-fc": {
 		"post-json-url": "w61itglj-e530-1mpb-mgeg-5qctxcxme1cl",
@@ -57,7 +58,7 @@
 		"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/05/12/fifer.jpg",
 		"post-title": "FIFA 19: Custom Star-heads - Liverpool FC",
 		"post-text-content": "Andy Robertson, who's arguably been the best left-back in the PL this season, is one of the faces to feature in FIFER's latest work. His fellow full-back and the guy who assisted THAT corner against FC Barcelona in the UCL semi-final second-leg has also got a new face. The other players included are Alex Oxlade-Chamberlain, Xherdan Shaqiri and Joe Gomez. Nathaniel Clyne, who is currently loaned to AFC Bournemouth, is also part of the list of players to get a new face from FIFER.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2019/05/01/fifa-19-team-of-the-week-totw-33": {
 		"post-json-url": "940jbr8w-egyi-73av-yr74-l6kfpw2b31kc",
@@ -72,7 +73,7 @@
 		"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/05/01/totw.jpg",
 		"post-title": "FUT: Team of the Week - TOTW #33",
 		"post-text-content": "FIFA 19 Team of the Week 33 has been revealed and it features the likes of Andy Robertson, Callum Wilson and Jan Oblak. FUT 19 Team of the Week 33 In-Form cards will be available in FUT packs from 6pm (UK time), Wednesday, May 1, 2019. Liverpool's Andy Robertson bags his third IF card for the season, rated at 88. His stand-out attribute? That 99 crossing! He's also got stamina for days with a rating of 96. Atletico Madrid's Jan Oblak is in between the sticks for this week's TOTW which also features three players from the Chinese League in Graziano Pelle (remember him?) and Jonathan Viera. Lyon captain Nabil Fekir plays the number 10 role with a well rounded 88-rated card. Kevin Volland als earns himself an IF for his performances over the week, albeit with an LM position. He's not gifted with the kind of pace you would look for a winger and his stats would be better suited as a CF or a CAM, but maybe you guys can still make him work in your formation.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2019/04/24/fifa-19-fut-totw-32": {
 		"post-json-url": "dnvg2h1m-g11l-5q1i-n8ly-fk7ratflaxs8",
@@ -87,7 +88,7 @@
 		"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/04/24/totw.jpg",
 		"post-title": "FUT: Team of the Week - TOTW #32",
 		"post-text-content": "FIFA 19 Team of the Week 32 has been officially revealed with some stunners. FUT 19 Team of the Week 32 In-Form cards will be available in FUT packs from 6pm (UK time), Wednesday, April 24, 2019. PSG's teenage sensation has set the world on fire since his arrival on the scene and he has got his third in-form card of the year. Rated at 91, he features a mouth-watering 99 pace rating along with 95 finishing. Borussia Dortmund captain Marco Reus also receives his third in-form card, rated at 91 as well, to go with his three Bundesliga POTM cards. This week's squad see's EA release their first Record-Breaker card of the year with Abderrazak Hamdallah of Al-Nassr who recently broke the record for most goals scored in a league season in Saudi Arabia. Manchester City's Ederson also features in this week's squad, as do Real Madrid's Benzema, Barcelona's Lenglet and Juventus' Alex Sandro. Other notable players are Everton's Gylfi Sigurdsson, Torino's Salvatore Sirigu and who'd have thunk it, Christian Benteke's got an IF card too. FUT players can obtain these players through packs and, of course, through the market with coins. With the team of the season coming out soon, and the major players listed above all expected to be a part of the TOTS of their respective leagues, it remains to be seen whether any of these players would be a worthy investment at this point in time.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2019/04/17/fifa-19-custom-starheads-patch-fp-1": {
 		"post-json-url": "1ppdsjwj-my3i-tabj-j4uu-x4b8jd2gmvwo",
@@ -102,7 +103,7 @@
 		"post-image": "https://i.imgur.com/V6tZfCl.jpg",
 		"post-title": "FIFA 19: Custom Star-heads Patch - FP #1",
 		"post-text-content": "Our first patch for FIFA 19 features star players like Neymar, Cristiano Ronaldo and Lionel Messi With the recent release of the Frosty suite of modding tools for FIFA 19, credit to @GalaxyMan2015 and his team of developers, we are proud to announce that modding is back. It may not be at the level of the good old days of FIFA 16 and the years before that, but this still sheds positive light for the future of modding. Our first pack features some amazing new custom star-heads designed by our newest member FCB17, also known as Perry in the SG Forums. This pack features players from the top leagues in European football, with our personal favourites being Radja Nainggolan and Neymar. Let us know which of these you liked the best! FCB17. Includes custom star-heads for Gianluigi Buffon, Dani Alves, Gerard Pique, Lionel Messi, Hatem Ben Arfa, Luis Suarez, Marcelo, Dmitri Payet, Radja Nainggolan, Miralem Pjanic, Toni Kroos, Robert Lewandowski, Philippe Coutinho, Jordi Alba, Shinji Kagawa, Sergio Busquets, Neymar, Ciro Immobile, David de Gea, Andre Schurrle, Antoine Griezmann, Isco, Lorenzo Insigne, Roberto Firmino, Cristiano Ronaldo, Samuel Umtiti, Kenedy, Gianluigi Donnarumma, Gabriel Jesus, Ousmane Dembele",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2019/04/17/fifa-19-fut-totw-31": {
 		"post-json-url": "31b69475-63aa-11e9-920b-d90e7043bef2",
@@ -117,7 +118,7 @@
 		"post-image": "https://i.imgur.com/zQnbK2p.jpg",
 		"post-title": "FUT: Team of the Week - TOTW #31",
 		"post-text-content": "The latest FIFA 19 TOTW 31 squad has been officially revealed. FUT 19 Team of the Week 31 In-Form cards will be available in FUT packs from 6pm (UK time), Wednesday, April 17, 2019. The top players in this week's team are 92 rated Kalidou Koulibaly from Napoli, 92 Kevin De Bruyne from Manchester City, 88 Nicolas Pépé from LOSC Lille and 87 Radja Nainggolan from Inter Milan. FUT players can obtain these players through packs and, of course, through the market with coins. With the team of the season coming out soon, and the major players listed above all exected to be a part of the TOTS of their respective leagues, it remains to be seen whether any of these players would be a worthy investment at this point in time.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2018/08/19/fifa-16-custom-faces-patch-fp-134": {
 		"post-json-url": "a9f0488d-bf47-11e8-80ef-31855f0b2840",
@@ -127,7 +128,7 @@
 		"post-image": "https://i.imgur.com/wUyISUv.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #134",
 		"post-text-content": "  Arsenal's young  French teenage midfielder Matteo Guendouzi features in this pack. Arsenal  surprised quite a few people when new manager Unai Emery decided to name the  young and inexperienced Guendouzi, a new signing this summer from Lorient,  against defending champions Manchester City. However, he proved to be the  only bright spark in an otherwise lack-luster performance from the Arsenal  side as they lost in their opening day fixture. He also played in their  second fixture as they traveled to Chelsea and once again put in an assured  display in the heart of the midfield. This pack also features fellow Arsenal  youngster Reiss Nelson, who broke into the scene last year with some  wonderful displays and had a fairly decent pre-season this year as well. It remains  to be seen how he develops under Unai Emery. The final player in the pack is  FC Barcelona's Ousmane Dembele, who endured a torrid first season after  joining in a whopping deal from Borussia Dortmund. Expected to gradually fill  the boots of the departing superstar Neymar, Dembele had a decent start in  his debut but suffered a long term injury and was out for most of last  season. This year, Valverde could move back to Barcelona's preferred 4-3-3  system, in which Dembele would slot in well in either wide-forward position.  Contributors: krisaju95 Faces Included: Matteo Guendouzi, Arsenal FC, France  NT Reiss Nelson, Arsenal FC, England NT Ousmane Dembele, Arsenal FC, France  NT",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2018/07/02/fifa-16-custom-faces-patch-fp-133": {
 		"post-json-url": "ec567573-b8c4-11e8-9d42-391cc9df7cdb",
@@ -136,7 +137,7 @@
 		"post-image": "https://i.imgur.com/y1tw3Ek.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #133",
 		"post-text-content": "Mexico star Hirving Lozano features in our latest pack. Mexico shocked fans world-wide when they beat defending champions Germany in their World Cup opener in Russia. The only goal in that game was scored by Hirving Lozano. It's only fitting if he has a top quality face in FIFA. This pack also features custom star-heads for Peruvian veteran Paolo Guerrero, Brazil and Manchester City shot-stopper Ederson, Spanish winger Suso and fellow Milan team-mates Alessio Romagnoli and Gianluigi Donnarumma. Contributors: karron97, krisaju95 Faces Included: Alessio Romagnoli, AC Milan, Italy NT Ederson, Manchester City, Brazil NT Gianluigi Donnarumma, AC Milan, Italy NT Hirving Lozano, PSV, Mexico NT Paolo Guerrero, Flamengo, Peru NT Suso, AC Milan, Spain NT",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2018/06/23/fifa-16-custom-faces-patch-fp-132": {
 		"post-json-url": "0e5035e5-bf4b-11e8-80ef-bbda01dfa8fe",
@@ -145,7 +146,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_b04f1fae55924e5e9dfad9db09bf3a91~mv2_d_2420_1287_s_2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #132",
 		"post-text-content": "The FIFA World Cup is well underway but we're still finding time to work on some new faces! Our latest patch contains some awesome faces for top players. Uruguay's defender Jose Maria Gimenez from Atletico Madrid features in the pack alongside compatriot Lucas Torreira, who could be on his way to Arsenal this summer. He'll look good alongside Pierre Emerick Aubameyang, another major addition to this pack (his awful star-head in FIFA just had to be updated). The patch also features Nice midfielder Jean Michael Seri, and Italy forwards Ciro Immobile and Patrick Cutrone. Pierre-Emerick Aubameyang, Arsenal FC, Gabon, Patrick Cutrone, AC Milan, Italy, Lucas Torreira, Sampdoria, Uruguay, Jose Maria Gimenez, Atletico Madrid, Uruguay, Ciro Immobile, Lazio, Italy, Jean Michael Seri, OGC Nice, Cote d'Ivoire",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2018/04/11/fifa-16-custom-faces-patch-fp-131": {
 		"post-json-url": "0281385a-bf4d-11e8-80ef-55f66060e561",
@@ -154,7 +155,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_a7e3bb03dfb64da197878f989805ed5a~mv2_d_2439_1355_s_2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #132",
 		"post-text-content": "We're back with another huge patch! It's been a long time since we've had a release and we're back with 9 amazing new top-quality faces. The patch includes custom star-heads for AC Milan players Andrea Conti, Franck Kessie, Hakan Calhonoglu, Leonardo Bonucci & Nikola Kalinic. Also featuring in this pack are PSG's Julian Draxler, Real's Theo Hernandez, Barca's Yerry Mina and Lazio's Milinkovic-Savic. Andrea Conti, AC Milan, Italy, Franck Kessie, AC Milan, Ivory Coast, Hakan Calhanoglu, AC Milan, Turkey, Leonardo Bonucci, AC Milan, Italy, Nikola Kalinic, AC Milan, Croatia, Julian Draxler, PSG, Germany, Theo Hernandez, Real Madrid CF, France, Sergej Milinkovic-Savic, Lazio, Serbia, Yerry Mina, FC Barcelona, Colombia",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/12/25/fifa-16-custom-faces-patch-xmas-2017": {
 		"post-json-url": "802f122b-bf4f-11e8-80ef-07972691030e",
@@ -163,7 +164,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_8e147ba86d634851b4df5c34e8cb152c~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - Christmas Pack",
 		"post-text-content": "Season's Greetings to one and all. To celebrate the festive period of Christmas and New Year 2018, we have put together a special pack of custom star-heads with faces for Arsenal's Jack Wilshere, Theo Walcott & Reiss Nelson, and Atletico's Yannick Ferreira Carrasco. Jack Wilshere, Arsenal FC, England, Theo Walcott, Arsenal FC, England, Reiss Nelson, Arsenal FC, England, Yannick Carrasco, Club Atletico Madrid, Belgium",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/11/11/fifa-16-custom-faces-patch-fp-130": {
 		"post-json-url": "06692e20-bf52-11e8-80ef-772da21bd4d4",
@@ -172,7 +173,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_dde591573ebc46f3a6afea57fcd56fab~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #130",
 		"post-text-content": "This patch contains a custom star-head for Arsenal's star forward Alexandre Lacazette, and a few faces converted from FIFA18 including LA's Gyasi Zardes, Watford's Roberto Pereyra and Man City's Claudio Bravo.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/10/29/fifa-16-custom-faces-patch-fp-129": {
 		"post-json-url": "a0616bfe-bf53-11e8-80ef-f7a0384c0b50",
@@ -181,7 +182,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_d0bfdd21c01b46fabb53635baa1e665f~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #129",
 		"post-text-content": "Here are the next batch of converted FIFA 18 faces for FIFA 16. This patch includes Burnley's Steven Defour, Everton's Dominic Calvert-Lewin, Spur's Marcus Edwards and FC Porto's Ricardo Pereira.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/10/20/fifa-16-custom-faces-patch-fp-128": {
 		"post-json-url": "beead8c9-bf54-11e8-80ef-3f3919f437dd",
@@ -190,7 +191,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_ca20df626d8a43199986e4e1b1180277~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #128",
 		"post-text-content": "With the release of FIFA18, we've been able to convert a lot of the amazing new faces for FIFA16. Here is the first few faces from that process. It includes Nathaniel Chalobah, Rob Holding, Shkodran Mustafi and Sofiane Boufal.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/09/30/fifa-16-custom-faces-patch-fp-127": {
 		"post-json-url": "68970e94-bf57-11e8-80ef-e3f463d8cb28",
@@ -199,7 +200,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_18ac2331b36f404784d804764bbdb1c7~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #127",
 		"post-text-content": "And yet another long break, it's been a dry spell at WWT but we're back with a new release. This patch contains high quality faces for 7 players including Federico Bernardeschi, Dani Carvajal, Edin Dzeko, Marek Hamsik, James Rodriguez, Kylian Mbappe & Corentin Tolisso.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/07/01/fifa-16-custom-faces-patch-ac-milan-pack": {
 		"post-json-url": "9b273ff8-bf5b-11e8-80ef-41c1003a2571",
@@ -208,7 +209,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_1c4d2ecc1e734da59bf50014a37d2ef5~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - AC Milan Pack",
 		"post-text-content": "After a very long break, we are releasing our first patch with custom faces. This patch contains high quality faces for 8 players from AC Milan. These include Suso, Andrea Conti, Gianluca Lapadula, Gianluigi Donnarumma, Franck Kessie, Manuel Locatelli, Mario Pasalic and Mattia De Sciglio.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/05/12/fifa-16-custom-faces-patch-fp-126": {
 		"post-json-url": "06c249e7-bf5d-11e8-80ef-93a0a042b800",
@@ -217,7 +218,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_ac989b2b16ef4c5fb155add33333994d~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #126",
 		"post-text-content": "This patch contains custom FIFA16 faces for French sensation Kylian Mbappe, Real Madrid's Marco Asensio, Arsenal's young defender Rob Holding and Middlesbrough's Adam Forshaw.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/04/21/fifa-16-custom-faces-patch-fp-125": {
 		"post-json-url": "4599abba-bf5e-11e8-80ef-f74a1e9be81f",
@@ -226,7 +227,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_e3658dfc17b24ab4b12069219dd837de~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #125",
 		"post-text-content": "This patch contains custom FIFA16 faces for English midfielder Jack Wilshere, Schalke's full-back Sead Kolasinac, Arsenal's Olivier Giroud and Oldham Athletic loanee Aiden O'Neill",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/04/10/fifa-16-custom-faces-patch-fp-124": {
 		"post-json-url": "d6305489-bf5f-11e8-80ef-7726e567579a",
@@ -235,7 +236,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_293a6b78c92b453ebebeaf89ca149668~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #124",
 		"post-text-content": "This patch contains custom FIFA16 faces for Watford defender Craig Cathcart, Hull City's Shaun Maloney, Middlesbrough's Christian Stuani and Chilean forward Alexis Sanchez from Arsenal.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/04/01/fifa-16-custom-faces-patch-fp-123": {
 		"post-json-url": "a3ad3338-bf61-11e8-80ef-dd36e419fc56",
@@ -244,7 +245,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_afc740d3dcad4fc0808d6b625d4e2ba6~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #123",
 		"post-text-content": "This patch contains custom FIFA16 faces for Valencia defenders, Joao Cancelo of Portugal and Ezequiel Garay of Argentina, Alessio Romagnoli of AC Milan and Luis Suarez of FC Barcelona.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/03/27/fifa-16-custom-faces-patch-fp-122": {
 		"post-json-url": "fa7c4b91-bf62-11e8-80ef-05279a97461d",
@@ -253,7 +254,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_a87c6fe5c7974c5f957009d4696f4718~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #122",
 		"post-text-content": "This patch contains custom FIFA16 faces for Belgian wonder-kid Youri Tielemans, Milan stopper Gianluigi Donnarumma, Tottenham youth defender Cameron Carter-Vickers and Hull City's keeper Eldin Jakupovic.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/03/18/fifa-16-custom-faces-patch-fp-121": {
 		"post-json-url": "91405575-bf63-11e8-80ef-efcc2b4a1c3c",
@@ -262,7 +263,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_2d13a40f2b0347a1868012c80d093a99~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #121",
 		"post-text-content": "This patch contains custom FIFA16 faces for Valencia's Simone Zaza, Hull City striker Adama Diomande, Borussia M'Gladbach's German talent Mahmoud Dhoud and \"the new Thierry Henry\", Kylian Mbappe.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/03/15/fifa-16-custom-faces-patch-fp-120": {
 		"post-json-url": "93aea12c-bf64-11e8-80ef-df230fb4f781",
@@ -271,7 +272,7 @@
 		"post-image": "https://static.wixstatic.com/media/727d0c_88a8c571c1214c1dbc77e5efc358313e~mv2.jpg",
 		"post-title": "FIFA 16: Custom Faces Patch - FP #120",
 		"post-text-content": "This patch contains custom FIFA16 faces for Hull City's Harry Maguire, Atletico's super-star Antoine Griezmann, Liverpool's Daniel Sturridge and Swiss full-back Ricardo Rodriguez from Vfl Wolfsburg.",
-		"isFeatured": true
+		"is-featured": true
 	},
 	"/blog/post/2017/03/09/fifa-16-custom-faces-patch-fp-119": {
 		"post-json-url": "68e8165c-bf66-11e8-80ef-95ad7ef9b96e",

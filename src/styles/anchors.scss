@@ -6,8 +6,8 @@ a:not(.unstyled-link) {
     transition: all 300ms;
 
     &:hover, &:focus {
-        color: #171E26;
-        text-decoration-color: #171E26;
+        color: #0D162B;
+        text-decoration-color: #0D162B;
     }
 
     &.link-light {
@@ -42,8 +42,8 @@ a:not(.unstyled-link) {
             color: #FFFFFF;
 
             &:hover, &:focus {
-                background-color: #171E26;
-                border: 1px solid #171E26;
+                background-color: #0D162B;
+                border: 1px solid #0D162B;
                 color: #FFFFFF;
                 text-decoration-color: #FFFFFF;
             }
@@ -62,7 +62,7 @@ a:not(.unstyled-link) {
                 border: 1px solid #333333;
 
                 &:hover, &:focus {
-                    border: 1px solid #171E26;
+                    border: 1px solid #0D162B;
                 }
             }
         }

@@ -21,7 +21,7 @@
             background-color: #FAFAFA;
 
             .post-title {
-                text-decoration-color: #171E26;
+                text-decoration-color: #0D162B;
             }
         }
     }
@@ -152,7 +152,7 @@
     }
 
     &.post-card-dark-theme {
-        background: #171E26;
+        background: #0D162B;
         color: #E5E5E5;
         border: none;
 
@@ -161,7 +161,7 @@
         }
 
         .post-text-content {
-            background: #171E26;
+            background: #0D162B;
             transition: background ease 300ms;
 
             .post-description {
@@ -180,10 +180,10 @@
         }
 
         &:hover, &:focus {
-            background: rgb(30, 39, 49);
+            background: #111B32;
             
             .post-text-content {
-                background: rgb(30, 39, 49);
+                background: #111B32;
 
                 .post-title {
                     text-decoration-color: #FFFFFF;
@@ -233,7 +233,7 @@
                 ::ng-deep span {
                     display: inline-block;
                     padding: 10px;
-                    background: #171E26;
+                    background: #0D162B;
 
                     ~span {
                         margin-top: 2px;

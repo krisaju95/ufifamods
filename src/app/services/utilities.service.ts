@@ -51,14 +51,20 @@ export class UtilitiesService {
 	filterPostsData(blogPosts, category) {
 		let filteredPostsData = [];
 		for (let postObject of blogPosts) {
-			let categoriesList: Array<string> = [];
-			if (typeof postObject['post-category-list'] == 'string') {
-				categoriesList = (postObject["post-category-list"].toLowerCase()).split(";");
+			if (category == 'featured') {
+				if (postObject['is-featured']) {
+					filteredPostsData.push(postObject);
+				}
 			} else {
-				categoriesList = postObject["post-category-list"];
-			}
-			if (categoriesList.indexOf(category.toLowerCase()) > -1) {
-				filteredPostsData.push(postObject);
+				let categoriesList: Array<string> = [];
+				if (typeof postObject['post-category-list'] == 'string') {
+					categoriesList = (postObject["post-category-list"].toLowerCase()).split(";");
+				} else {
+					categoriesList = postObject["post-category-list"];
+				}
+				if (categoriesList.indexOf(category.toLowerCase()) > -1) {
+					filteredPostsData.push(postObject);
+				}
 			}
 		}
 		return filteredPostsData;

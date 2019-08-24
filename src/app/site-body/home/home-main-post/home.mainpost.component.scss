@@ -1,129 +1,106 @@
 @import "../../../variables.scss";
 
 .standard-site-section-container {
-    // background-image: url($site-cloud-storage-images + "generic/home-mainpost-background.jpg");
     background-color: $site-colour-second-primary;
     background-size: cover;
     background-position: center;
     position: relative;
-    padding-bottom: 50px;
-}
 
-.home-page-featured-posts-container {
-    display: inline-table;
-    width: calc(100% - 80px);
-    // background-color: $site-colour-second-primary;
-    padding: 20px 40px;
-
-    .main-post-display-container {
-        height: 720px;
-        margin-bottom: 40px;
+    .main-post-container {
+        height: 500px;
+        background-repeat: no-repeat;
+        background-position: top left;
+        background-size: cover;
         position: relative;
-        display: table-cell;
-        vertical-align: top;
-
-        .hero-post-container {
-            position: relative;
-            height: calc(100% - 170px);
-            margin-bottom: 20px;
-        }
-
-        .bottom-posts-container {
-            display: inline-table;
-            width: 100%;
-
-            .bottom-post {
-                display: table-cell;
-                vertical-align: top;
-                width: 50%;
-
-                ~.bottom-post {
-                    padding-left: 20px;
-                }
-            }
-        }
-    }
-
-    .aside-posts-container {
-        display: table-cell;
-        width: 400px;
-        background: $site-colour-second-primary;
-        padding-left: 20px;
-        vertical-align: top;
-
-        .aside-post-container {
-            ~.aside-post-container {
-                margin-top: 20px;
-            }
-        }
-    }
-}
-
-@media only screen and (max-width: 1024px) {
-    .home-page-featured-posts-container {
-        display: block;
-        width: calc(100% - 40px);
-        padding: 20px;
+        padding: 0 5%;
+        width: 100%;
+        margin-left: -5%;
     
-        .main-post-display-container {
-            margin-bottom: 20px;
-            height: auto;
-            display: block;
-
-            .hero-post-container {
-                height: 380px;
-            }
+        &:before {
+            content: '';
+            width: 40%;
+            height: 100%;
+            position: absolute;
+            left: -1px;
+            top: 0;
+            background: linear-gradient(to right, $site-colour-second-primary, rgba(7, 15, 32, 0.7), transparent);
         }
     
-        .aside-posts-container {
-            display: inline-table;
-            width: 100%;
-            padding-left: 0;
-
-            .aside-post-container {
-                display: table-cell;
-                width: 50%;
-
-                ~.aside-post-container {
-                    margin-top: 0;
-                    padding-left: 20px;
-                }
-            }
+        &:after {
+            content: '';
+            width: 15%;
+            height: 100%;
+            position: absolute;
+            right: -1px;
+            top: 0;
+            background: linear-gradient(to left, $site-colour-second-primary, transparent);
         }
 
-        @media only screen and (max-width: 900px) and (max-height: 900px) {
-            width: calc(100% - 20px);
-            padding: 10px;
-            .main-post-display-container {
-                .bottom-posts-container {
-                    display: block;
-                    width: 100%;
-        
-                    .bottom-post {
-                        display: block;
-                        width: 100%;
-        
-                        ~.bottom-post {
-                            padding-left: 0;
-                            padding-top: 10px;
-                        }
+        .main-post-text-content {
+            position: absolute;
+            z-index: 1;
+            color: #F5F5F5;
+            width: 35%;
+            height: calc(100% - 100px);
+            padding: 50px;
+
+            .post-category {
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 5px 15px;
+                background: $site-colour-yellow;
+                color: $site-colour-black;
+                border-radius: 50px;
+                letter-spacing: 1px;
+                font-weight: 600;
+            }
+
+            .post-title {
+                margin: 15px 0 25px 0;
+                font-weight: 800;
+                font-size: 28px;
+            }
+
+            .post-description {
+                font-weight: 300;
+                line-height: 1.6em;
+                letter-spacing: 1px;
+            }
+
+            .post-footer-text {
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                font-size: 14px;
+
+                .post-contributor {
+                    display: inline-table;
+                    vertical-align: top;
+                    font-weight: 600;
+                    
+                    .contributor-image {
+                        display: table-cell;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 100%;
+                        vertical-align: middle;
+                    }
+
+                    .contributor-name {
+                        display: table-cell;
+                        vertical-align: middle;
+                        padding-left: 10px;
                     }
                 }
-            }
 
-            .aside-posts-container {
-                display: block;
-                width: 100%;
-                padding-left: 0;
-    
-                .aside-post-container {
-                    display: block;
-                    width: 100%;
-    
-                    ~.aside-post-container {
-                        margin-top: 10px;
-                        padding-left: 0;
-                    }
+                .post-date {
+                    display: inline-block;
+                    line-height: 30px;
+                    vertical-align: top;
+                    padding-left: 20px;
+                    margin-left: 20px;
+                    border-left: 1px solid $site-colour-light-blue;
+                    font-weight: 300;
                 }
             }
         }

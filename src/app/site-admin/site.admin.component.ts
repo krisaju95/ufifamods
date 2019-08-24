@@ -169,7 +169,7 @@ export class SiteAdminComponent {
 			"post-image": blogPostJSON['post-media'],
 			"post-title": blogPostJSON['post-title'],
 			"post-text-content": this.generateSearchTextContent(blogPostJSON),
-			"isFeatured": blogPostJSON['isFeatured']
+			"is-featured": blogPostJSON['is-featured']
 		}
 	}
 
