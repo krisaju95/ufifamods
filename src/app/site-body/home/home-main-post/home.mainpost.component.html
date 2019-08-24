@@ -3,9 +3,9 @@
         <div class="main-post-container" [style.background-image]="'url(' + postsData[0]['feature-image'] + ')'">
             <div class="main-post-text-content">
                 <span class="post-category" [innerHTML]="postsData[0]['post-category']"></span>
-                <div class="post-title" [ngClass]="{'post-title-line-clamp': titleLineClamp}" [innerHTML]="postsData[0]['post-title']"></div>
-                <div class="post-description" *ngIf="!hideDescription" [innerHTML]="(postsData[0]['post-text-content'] | slice : 0 : 300).trim() + '...'"></div>
-                <div class="post-footer-text" *ngIf="!hideFooter">
+                <div class="post-title" [innerHTML]="postsData[0]['post-title']"></div>
+                <div class="post-description" [innerHTML]="(postsData[0]['post-text-content'] | slice : 0 : 300).trim() + '...'"></div>
+                <div class="post-footer-text">
                     <span class="post-contributor">
                         <span class="contributor-image team-member-dp {{postsData[0]['post-author'] || 'krisaju95'}}"></span>
                         <span class="contributor-name" [innerHTML]="(postsData[0]['post-author'] || 'krisaju95') | teamInfo : 'handle'"></span>
