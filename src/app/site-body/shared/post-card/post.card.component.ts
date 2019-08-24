@@ -19,7 +19,7 @@ export class PostCardComponent {
 	@Input() titleLineClamp: boolean;
 
 	ngOnInit() {
-		this.darkTheme = (this.darkTheme == false) ? false : true;
+		// this.darkTheme = (this.darkTheme == false) ? false : true;
 		this.cardStyle = this.cardStyle || 'default';
 	}
 }

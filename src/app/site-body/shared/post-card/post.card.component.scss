@@ -5,8 +5,8 @@
     background-color: #FFFFFF;
     position: relative;
     border-radius: 2.5px;
-    border: 1px solid #EFEFEF;
-    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
+    // border: 1px solid #EFEFEF;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
     transition: box-shadow ease 300ms;
 
     &:hover, &:focus {
@@ -38,6 +38,21 @@
         background-color: #DDDDDD;
         height: 200px;
         transition: transform ease 500ms;
+    }
+
+    .post-category {
+        position: absolute;
+        top: 15px;
+        left: 15px;
+        padding: 5px 15px;
+        background: #FFC145;
+        border-radius: 50px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 600;
+        display: inline-block;
+        color: #2F2E2E;
     }
 
     .post-text-content {
@@ -98,25 +113,24 @@
             width: calc(100% - 40px);
             bottom: 20px;
 
-            .post-category {
-                text-transform: uppercase;
-                letter-spacing: 2px;
-                font-weight: 800;
-                margin-bottom: 5px;
-                display: inline-block;
-                color: #333333;
-            }
-
             .post-date {
                 color: #777777;
                 font-weight: normal;
-                float: right;
-                margin-top: 10px;
+                // float: right;
+                margin-left: 15px;
+                display: inline-block;
+                vertical-align: top;
+                line-height: 30px;
+
+                ::ng-deep .fa-clock {
+                    font-weight: 600;
+                }
             }
 
             .post-contributor {
                 display: inline-table;
                 border-spacing: 0;
+                vertical-align: top;
 
                 .contributor-image {
                     width: 30px;

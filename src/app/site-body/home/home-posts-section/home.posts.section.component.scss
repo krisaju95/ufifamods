@@ -1,6 +1,7 @@
 @import "../../../variables.scss";
 
 .home-page-posts-container {
+    padding: 20px 0;
     .home-page-section-header {
         vertical-align: top;
         margin: 20px;
@@ -9,7 +10,7 @@
         .home-page-section-title {
             font-weight: 900;
             font-size: 32px;
-            color: $site-colour-yellow;
+            color: $site-colour-primary;
             display: inline-block;
         }
 

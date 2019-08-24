@@ -321,7 +321,7 @@ export class TeamInfoService {
 
 	partners: object = {
 		"fifermods": {
-			handle: "FIFER Mods",
+			handle: "Fifer Mods",
 			website: "https://www.fifermods.com"
 		}
 	}

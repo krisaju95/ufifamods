@@ -12,7 +12,7 @@ export class TimeSincePipe implements PipeTransform {
 	) { }
 
 	transform(date: string): string {
-		let timeIcon = '<i class="far fa-clock"></i>&nbsp;&nbsp;';
+		let timeIcon = '<i class="fas fa-calendar-day"></i>&nbsp;&nbsp;';
 		if(!date) {
 			return timeIcon + "a long time ago";
 		}

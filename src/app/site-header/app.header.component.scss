@@ -1,7 +1,7 @@
 @import "../variables.scss";
 
 .site-header-container {
-    background: $site-colour-primary url($site-cloud-storage-images + "header/header-art.jpg") no-repeat top right;
+    background: #0D162B url($site-cloud-storage-images + "header/header-art.jpg") no-repeat top right;
     background-size: contain;
     box-shadow: 0 0 10px rgba(0, 0, 0 , 0.4);
     color: $site-colour-white;
@@ -20,43 +20,9 @@
         transition: background-color ease 300ms;
         position: relative;
 
-        &:before {
-            position: absolute;
-            content: '';
-            left: 0;
-            bottom: 30px;
-            height: 10px;
-            width: 0;
-            transition: all ease 300ms;
-            background-color: $site-colour-blue;
-        }
-
-        &:after {
-            position: absolute;
-            content: '';
-            right: 0;
-            top: 5px;
-            height: 15px;
-            width: 0;
-            transition: all ease 300ms;
-            background-color: $site-colour-pink;
-        }
-
         &:hover {
             background-color: rgba(255, 255, 255, 0.05);
             cursor: pointer;
-
-            &:before {
-                position: absolute;
-                content: '';
-                width: 40px;
-            }
-    
-            &:after {
-                position: absolute;
-                content: '';
-                width: 15px;
-            }
         }
 
         .site-logo-image {
