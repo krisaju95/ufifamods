@@ -41,8 +41,8 @@
             z-index: 1;
             color: #F5F5F5;
             width: 35%;
-            height: calc(100% - 100px);
-            padding: 50px;
+            height: calc(100% - 150px);
+            padding: 75px 50px;
 
             .post-category {
                 display: inline-block;
@@ -56,7 +56,7 @@
             }
 
             .post-title {
-                margin: 15px 0 25px 0;
+                margin: 25px 0;
                 font-weight: 800;
                 font-size: 28px;
             }
