@@ -5,7 +5,7 @@
     [routerLink]="post['post-link']">
     <div class="post-image-container" *ngIf="!hideImage">
         <div class="post-image" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
-        <span class="post-category" [innerHTML]="post['post-category'] || post['post-category-list'].split(';')[0]"></span>
+        <span class="post-category {{post['post-category'] || post['post-category-list'].split(';')[0]}}" [innerHTML]="post['post-category'] || post['post-category-list'].split(';')[0]"></span>
     </div>
     <div class="post-text-content">
         <div class="post-title" [ngClass]="{'post-title-line-clamp': titleLineClamp}" [innerHTML]="post['post-title']"></div>

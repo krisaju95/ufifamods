@@ -1,0 +1,10 @@
+@mixin post-categories() {
+    &.mods {
+        background: #3D9BE9;
+        color: #F5F5F5;
+    }
+    &.totw {
+        background: #FF4A77;
+        color: #F5F5F5;
+    }
+}

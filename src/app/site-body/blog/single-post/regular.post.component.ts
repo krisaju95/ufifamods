@@ -56,32 +56,36 @@ export class RegularBlogPostComponent {
 	}
 
 	getPostData() {
+		let startTime = new Date().getTime();
 		this.http.get(this.service.getCSLP() + '/blog-posts-list')
 			.subscribe((data) => {
 				this.fileURL = this.getFileURL(data);
 				this.http.get(this.service.getCSLP() + '/blog-posts/' + this.getParam('year') + '/' + this.getParam('month') + '/' + this.fileURL)
 					.subscribe((postData) => {
-						this.responseLoading = false;
-						this.postData = postData;
-						this.postMainTextArray = this.postData['post-main-text-array'] || [];
-						this.contributorsList = this.postData['contributors-list'];
-						this.facesIncludedList = this.postData['faces-included-list'];
-						this.screenshotsList = this.postData['screenshots-list'];
-						this.futSquadInfo = this.postData['fut-squad'];
-						this.showModDisclaimer = (this.postData['show-mod-disclaimer'] == true || this.postData['show-mod-disclaimer'] == 'true')
-						this.getPostCategories();
-						window.scroll(0, 0);
-						this.service.setPageTitle(this.postData['post-title'], false);
-					},
-						() => {
-							this.service.routeToState('404');
+						let timeDiff = new Date().getTime() - startTime;
+						if (timeDiff < 1500) {
+							setTimeout(() => {
+								this.responseLoading = false;
+								this.postData = postData;
+								this.postMainTextArray = this.postData['post-main-text-array'] || [];
+								this.contributorsList = this.postData['contributors-list'];
+								this.facesIncludedList = this.postData['faces-included-list'];
+								this.screenshotsList = this.postData['screenshots-list'];
+								this.futSquadInfo = this.postData['fut-squad'];
+								this.showModDisclaimer = (this.postData['show-mod-disclaimer'] == true || this.postData['show-mod-disclaimer'] == 'true')
+								this.getPostCategories();
+								window.scroll(0, 0);
+								this.service.setPageTitle(this.postData['post-title'], false);
+							}, 1500 - timeDiff);
+						} else {
+							this.responseLoading = false;
 						}
-					)
-			},
-				() => {
-					this.service.routeToState('404');
-				}
-			)
+					}, () => {
+						this.service.routeToState('404');
+					})
+			}, () => {
+				this.service.routeToState('404');
+			})
 	}
 
 	getPostURL() {

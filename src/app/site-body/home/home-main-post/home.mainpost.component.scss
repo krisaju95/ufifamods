@@ -1,10 +1,12 @@
 @import "../../../variables.scss";
+@import "../../shared/post-card/post-categories.scss";
 
 .standard-site-section-container {
     background-color: $site-colour-second-primary;
     background-size: cover;
     background-position: center;
     position: relative;
+    overflow-x: hidden;
 
     .main-post-container {
         height: 500px;
@@ -60,7 +62,7 @@
             position: absolute;
             z-index: 1;
             color: #F5F5F5;
-            width: 35%;
+            width: 30%;
             height: calc(100% - 150px);
             padding: 75px 50px;
 
@@ -73,18 +75,22 @@
                 border-radius: 50px;
                 letter-spacing: 1px;
                 font-weight: 600;
+
+                @include post-categories();
             }
 
             .post-title {
                 margin: 25px 0;
                 font-weight: 800;
                 font-size: 28px;
+                line-height: 1.4em;
                 text-decoration: underline;
                 text-decoration-color: transparent;
                 transition: text-decoration-color 300ms ease;
             }
 
             .post-description {
+                font-size: 14px;
                 font-weight: 300;
                 line-height: 1.6em;
                 letter-spacing: 1px;

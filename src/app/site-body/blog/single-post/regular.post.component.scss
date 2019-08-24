@@ -3,6 +3,7 @@
 @media only screen and (min-width: 900px) {
     .blog-post-wrapper {
         min-height: 500px;
+        background: #FFFFFF;
 
         .blog-post-width {
             max-width: 750px;
@@ -58,12 +59,12 @@
         
             .blog-post-content {
                 width: 830px;
-                color: $site-colour-white;
+                color: $site-colour-black;
                 font-weight: 300;
         
                 .blog-post-main-content {
-                    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
-                    border-radius: 5px;
+                    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+                    // border-radius: 5px;
                     overflow: hidden;
 
                     .blog-post-badges {
@@ -97,7 +98,7 @@
                 .blog-post-intro-text {
                     font-size: 18px;
                     font-weight: bold;
-                    color: $site-colour-white;
+                    color: $site-colour-primary;
                     margin-bottom: 20px;
                     position: relative;
                 }
@@ -133,7 +134,7 @@
                 .disqus-thread-container {
                     display: block;
                     padding: 20px;
-                    background-color: $site-colour-primary;
+                    background-color: $site-colour-white;
                     border-radius: 2.5px;
                 }
             }

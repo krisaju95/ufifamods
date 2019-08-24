@@ -20,21 +20,24 @@ export class TimeSincePipe implements PipeTransform {
 		let currentTime = new Date().getTime();
 		let seconds = Math.floor(currentTime - timeInPast) / 1000;
 		let interval = Math.floor(seconds / 31536000);
+		let dateString: string = timeIcon + this.datePipe.transform(date, 'MMMM d, yyyy');
 		if (interval > 1) {
-			return timeIcon + this.datePipe.transform(date, 'MMMM d, yyyy');
+			return dateString;
 		}
 		interval = Math.floor(seconds / 2592000);
 		if (interval > 1) {
-			return timeIcon + this.datePipe.transform(date, 'MMMM d, yyyy');
+			return dateString;
 		}
 		interval = Math.floor(seconds / 86400);
 		let months = Math.floor(interval / 30);
 		if (months > 1) {
-			return timeIcon + months + " months ago";
+			// return timeIcon + months + " months ago";
+			return dateString;
 		} else if (months == 1) {
-			return timeIcon + months + " month ago";
+			// return timeIcon + months + " month ago";
+			return dateString;
 		} else if (interval > 1) {
-			
+			return dateString;
 		} else if (interval == 1) {
 			return timeIcon + "Yesterday";
 		} else {

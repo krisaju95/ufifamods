@@ -19,13 +19,6 @@ export class UtilitiesService {
 
 	siteTitle: string = "Ultimate FIFA Mods | FIFA 19 News, Media, Mods and Tutorials";
 
-	categoryColourMap: Object = {
-		"fut": "blue",
-		"mods": "yellow",
-		"youtube": "pink",
-		"career": "purple"
-	}
-
 	getSiteDomain() {
 		return this.siteDomain;
 	}
@@ -38,22 +31,19 @@ export class UtilitiesService {
 		return this.siteTitle;
 	}
 
-	getCategoryColourTheme(category) {
-		let categoryString = (category.split(" ")[0]).toLowerCase();
-		return this.categoryColourMap[categoryString] || "blue";
-	}
-
-	isTargetted() {
-		let num = parseInt((Math.random() * 100).toString()) % 2;
-		return (num == 0);
-	}
-
 	filterPostsData(blogPosts, category) {
 		let filteredPostsData = [];
+		let numberOfFeaturedPosts: number = 0;
 		for (let { postObject, postIndex } of blogPosts.map((postObject, postIndex) => ({ postObject, postIndex }))) {
-			if (category == 'featured') {
+			if (category == 'featured/!first') {
 				if (postIndex != 0 && postObject['is-featured']) {
 					filteredPostsData.push(postObject);
+				}
+			} else if (category == '!featured') {
+				if (!postObject['is-featured'] || numberOfFeaturedPosts >= 5) {
+					filteredPostsData.push(postObject);
+				} else {
+					numberOfFeaturedPosts++;
 				}
 			} else {
 				let categoriesList: Array<string> = [];
@@ -68,11 +58,6 @@ export class UtilitiesService {
 			}
 		}
 		return filteredPostsData;
-	}
-
-	getTargettedBlogPostHeader() {
-		let num = parseInt((Math.random() * 100).toString()) % 4;
-		return num;
 	}
 
 	setPageTitle(pageTitle, isBase) {

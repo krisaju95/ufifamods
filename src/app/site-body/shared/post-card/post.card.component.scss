@@ -1,3 +1,5 @@
+@import './post-categories.scss'; 
+
 .post-card {
     overflow: hidden;
     cursor: pointer;
@@ -5,7 +7,7 @@
     background-color: #FFFFFF;
     position: relative;
     border-radius: 2.5px;
-    // border: 1px solid #EFEFEF;
+    border: 1px solid #EFEFEF;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .06);
     transition: box-shadow ease 300ms;
 
@@ -45,7 +47,7 @@
         top: 15px;
         left: 15px;
         padding: 5px 15px;
-        background: #FFC145;
+        background: #EEEEEE;
         border-radius: 50px;
         font-size: 12px;
         text-transform: uppercase;
@@ -53,6 +55,8 @@
         font-weight: 600;
         display: inline-block;
         color: #2F2E2E;
+
+        @include post-categories();
     }
 
     .post-text-content {

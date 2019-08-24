@@ -29,17 +29,17 @@ export class HomeComponent {
 			.subscribe((data) => {
 				this.setBlogPostsArray(data);
 				let timeDiff = new Date().getTime() - startTime;
-				if (timeDiff < 1000) {
+				if (timeDiff < 1500) {
 					setTimeout(() => {
 						this.responseLoading = false;
-					}, 1000 - timeDiff);
+					}, 1500 - timeDiff);
 				}
 				else {
 					this.responseLoading = false;
 				}
 			}, (error) => {
 				console.log("An error occurred while trying to load the home page: " + error);
-				this.service.routeToState('404');
+				this.service.routeToState('7');
 			});
 	}
 
@@ -52,10 +52,10 @@ export class HomeComponent {
 	}
 
 	setFallbackState() {
-		// setTimeout(() => {
-		// 	if(this.responseLoading) {
-		// 		this.service.routeToState('404');
-		// 	}
-		// }, 180000);
+		setTimeout(() => {
+			if(this.responseLoading) {
+				this.service.routeToState('error/7');
+			}
+		}, 240000);
 	}
 }
