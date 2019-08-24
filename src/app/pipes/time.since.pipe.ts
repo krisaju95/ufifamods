@@ -12,7 +12,7 @@ export class TimeSincePipe implements PipeTransform {
 	) { }
 
 	transform(date: string): string {
-		let timeIcon = '<i class="fas fa-calendar-day"></i>&nbsp;&nbsp;';
+		let timeIcon = ''; // '<i class="fas fa-calendar-day"></i>&nbsp;&nbsp;';
 		if(!date) {
 			return timeIcon + "a long time ago";
 		}
@@ -21,11 +21,11 @@ export class TimeSincePipe implements PipeTransform {
 		let seconds = Math.floor(currentTime - timeInPast) / 1000;
 		let interval = Math.floor(seconds / 31536000);
 		if (interval > 1) {
-			return timeIcon + this.datePipe.transform(date, 'd MMM yy');
+			return timeIcon + this.datePipe.transform(date, 'MMMM d, yyyy');
 		}
 		interval = Math.floor(seconds / 2592000);
 		if (interval > 1) {
-			return timeIcon + this.datePipe.transform(date, 'd MMM yy');
+			return timeIcon + this.datePipe.transform(date, 'MMMM d, yyyy');
 		}
 		interval = Math.floor(seconds / 86400);
 		let months = Math.floor(interval / 30);

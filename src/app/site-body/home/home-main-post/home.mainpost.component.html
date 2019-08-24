@@ -10,6 +10,7 @@
                         <span class="contributor-image team-member-dp {{postsData[0]['post-author'] || 'krisaju95'}}"></span>
                         <span class="contributor-name" [innerHTML]="(postsData[0]['post-author'] || 'krisaju95') | teamInfo : 'handle'"></span>
                     </span>
+                    <span class="footer-content-separator">&bull;</span>
                     <span class="post-date" [innerHTML]="postsData[0]['post-date'] | timeSince"></span>
                 </div>
             </div>

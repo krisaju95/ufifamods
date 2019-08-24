@@ -15,6 +15,7 @@
                 <span class="contributor-image team-member-dp {{post['post-author'] || 'krisaju95'}}"></span>
                 <span class="contributor-name" [innerHTML]="(post['post-author'] || 'krisaju95') | teamInfo : 'handle'"></span>
             </span>
+            <span class="footer-content-separator">&bull;</span>
             <span class="post-date" [innerHTML]="post['post-date'] | timeSince"></span>
         </div>
     </div>

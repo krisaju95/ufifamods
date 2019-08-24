@@ -116,8 +116,6 @@
             .post-date {
                 color: #777777;
                 font-weight: normal;
-                // float: right;
-                margin-left: 15px;
                 display: inline-block;
                 vertical-align: top;
                 line-height: 30px;
@@ -131,6 +129,7 @@
                 display: inline-table;
                 border-spacing: 0;
                 vertical-align: top;
+                position: relative;
 
                 .contributor-image {
                     width: 30px;
@@ -147,6 +146,16 @@
                     letter-spacing: 1px;
                     font-weight: 400;
                 }
+            }
+
+            .footer-content-separator {
+                color: #3D9BE9;
+                display: inline-block;
+                vertical-align: top;
+                line-height: 30px;
+                padding: 0 10px;
+                font-size: 18px;
+                opacity: 0.5;
             }
         }
     }
