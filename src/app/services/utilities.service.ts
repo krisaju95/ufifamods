@@ -50,9 +50,9 @@ export class UtilitiesService {
 
 	filterPostsData(blogPosts, category) {
 		let filteredPostsData = [];
-		for (let postObject of blogPosts) {
+		for (let { postObject, postIndex } of blogPosts.map((postObject, postIndex) => ({ postObject, postIndex }))) {
 			if (category == 'featured') {
-				if (postObject['is-featured']) {
+				if (postIndex != 0 && postObject['is-featured']) {
 					filteredPostsData.push(postObject);
 				}
 			} else {
