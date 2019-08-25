@@ -72,15 +72,10 @@ export class BlogPostsListComponent {
 	convertObjectToArray() {
 		for (let post in this.blogPostsObject) {
 			let postObject = this.blogPostsObject[post];
-			this.blogPostsArray.push({
-				'post-title': postObject['post-title'],
-				'post-text-content': postObject['post-text-content'],
-				'post-image': postObject['post-image'],
-				'post-category': postObject['post-category'] ? postObject['post-category'] : postObject['post-category-list'].split(';')[0],
-				'post-link': post,
-				postURL: post,
-				postDate: this.getDate(post)
-			})
+			postObject['postURL'] = post;
+			postObject['postDate'] = this.getDate(post);
+			postObject['post-link'] = post;
+			this.blogPostsArray.push(postObject);
 		}
 	}
 

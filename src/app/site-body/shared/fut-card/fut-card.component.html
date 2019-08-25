@@ -15,7 +15,7 @@
     <div class="player-side-info">
         <div class="fut-squad-player-rating" [innerHTML]="player['rating']"></div>
         <div class="fut-squad-player-position" [innerHTML]="player['position']"></div>
-        <div class="fut-squad-player-nationality nation-flag" [style.background-image]="'https://www.fifarosters.com/assets/nations/fifa17/' + player['nationality'] + '.png'"></div>
-        <div class="fut-squad-player-club club-crest {{player['type']}}" [style.background-image]="'https://www.fifarosters.com/assets/clubs/fifa' + fifaVersion + '/dark/' + player['club'] + '.png'"></div>
+        <div class="fut-squad-player-nationality nation-flag" [style.background-image]="'url(https://www.fifarosters.com/assets/nations/fifa17/' + player['nationality'] + '.png)'"></div>
+        <div class="fut-squad-player-club club-crest {{player['type']}}" [style.background-image]="'url(https://www.fifarosters.com/assets/clubs/fifa' + fifaVersion + '/dark/' + player['club'] + '.png)'"></div>
     </div>
 </div>

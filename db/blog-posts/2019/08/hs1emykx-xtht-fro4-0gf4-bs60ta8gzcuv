@@ -193,17 +193,6 @@
 					"type": "totw"
 				},
 				{
-					"name": "Alario",
-					"id": 175254,
-					"rating": 82,
-					"position": "ST",
-					"club": "leverkusen",
-					"nationality": "ARG",
-					"quality": "gold",
-					"dynamicImage": false,
-					"type": "totw"
-				},
-				{
 					"name": "Samatta",
 					"id": 218066,
 					"rating": 82,

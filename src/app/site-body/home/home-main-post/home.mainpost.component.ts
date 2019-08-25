@@ -16,6 +16,7 @@ export class HomeMainPostComponent {
 	selectedPostIndex: number = 0;
 	showImage: boolean = false;
 	currentDate: Date = new Date();
+	titleLineClamp: number = 6;
 
 	ngOnInit() {
 		this.setPostData();
@@ -23,13 +24,18 @@ export class HomeMainPostComponent {
 	}
 
 	setPostData() {
-		for(let postObject of this.blogPosts) {
-			if(postObject["is-featured"]) {
+		for (let postObject of this.blogPosts) {
+			if (postObject["is-featured"]) {
 				this.postsData.push(postObject);
 			}
-			if(this.postsData.length == 5) {
+			if (this.postsData.length == 5) {
 				break;
 			}
+		}
+		if (this.postsData[0]['post-category'] == 'mods') {
+			this.titleLineClamp = 5
+		} else {
+			this.titleLineClamp = 6;
 		}
 	}
 }
