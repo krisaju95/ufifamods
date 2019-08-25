@@ -7,8 +7,8 @@
     }
 
     &.totw {
-        background: $site-colour-pink;
-        color: $site-colour-white;
+        background: $site-colour-yellow;
+        color: $site-colour-black;
     }
 
     &.youtube {
@@ -16,10 +16,8 @@
         color: $site-colour-white;
     }
 
-    &.fifa {
-        &.20 {
-            background: $site-colour-yellow;
-            color: $site-colour-white;
-        }
+    &.fifa20 {
+        background: $site-colour-pink;
+        color: $site-colour-black;
     }
 }
