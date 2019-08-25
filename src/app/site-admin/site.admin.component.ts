@@ -150,7 +150,7 @@ export class SiteAdminComponent {
 			"post-main-text-array": this.generateMainPostTextArray(),
 			"post-last-para": this.getFormElementValue('postFooterMessage'),
 			"post-link": this.generatePostLink(),
-			"post-media": this.getFormElementValue('postMedia'),
+			"post-image": this.getFormElementValue('postMedia'),
 			"post-category-list": this.selectedPostTags,
 			"contributors-list": this.selectedContributorsList,
 			"show-mod-disclaimer": this.getFormElementValue('showModDisclaimer'),
@@ -166,7 +166,7 @@ export class SiteAdminComponent {
 			"post-date": blogPostJSON['post-date'],
 			"post-category": blogPostJSON['post-category'],
 			"post-category-list": this.selectedPostTags,
-			"post-image": blogPostJSON['post-media'],
+			"post-image": blogPostJSON['post-image'],
 			"post-title": blogPostJSON['post-title'],
 			"post-text-content": this.generateSearchTextContent(blogPostJSON),
 			"is-featured": blogPostJSON['is-featured']
