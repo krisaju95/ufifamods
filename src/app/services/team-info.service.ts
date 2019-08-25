@@ -323,6 +323,10 @@ export class TeamInfoService {
 		"fifermods": {
 			handle: "Fifer Mods",
 			website: "https://www.fifermods.com"
+		},
+		"EA": {
+			handle: "EA Sports",
+			website: "https://www.ea.com/games/fifa"
 		}
 	}
 
