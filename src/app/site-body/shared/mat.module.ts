@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {
-	MatRippleModule,
 	MatChipsModule,
 	MatDialogModule,
 	MatButtonModule,
@@ -19,7 +18,6 @@ import {
 @NgModule({
 	imports: [
 		BrowserModule,
-		MatRippleModule,
 		MatChipsModule,
 		MatDialogModule,
 		MatButtonModule,
@@ -34,7 +32,6 @@ import {
 		MatAutocompleteModule
 	],
 	exports: [
-		MatRippleModule,
 		MatChipsModule,
 		MatDialogModule,
 		MatButtonModule,

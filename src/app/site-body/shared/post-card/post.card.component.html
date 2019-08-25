@@ -1,8 +1,4 @@
-<div *ngIf="cardStyle == 'default'" class="post-card card-style-default no-highlight" 
-    [ngClass]="{'post-card-dark-theme': darkTheme,
-                'post-card-full-width': fullWidth}"
-    matRipple
-    [routerLink]="post['post-link']">
+<div *ngIf="cardStyle == 'default'" class="post-card card-style-default no-highlight" [ngClass]="{'post-card-dark-theme': darkTheme, 'post-card-full-width': fullWidth}" [routerLink]="post['post-link']">
     <div class="post-image-container" *ngIf="!hideImage">
         <div class="post-image" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
         <span class="post-category {{post['post-category'] || post['post-category-list'].split(';')[0]}}" [innerHTML]="post['post-category'] || post['post-category-list'].split(';')[0]"></span>
@@ -18,17 +14,5 @@
             <span class="footer-content-separator">&bull;</span>
             <span class="post-date" [innerHTML]="post['post-date'] | timeSince"></span>
         </div>
-    </div>
-</div>
-<div *ngIf="cardStyle == 'hero'" class="post-card card-style-hero no-highlight" 
-    [ngClass]="{'post-card-dark-theme': darkTheme,
-                'post-card-full-width': fullWidth}"
-    matRipple
-    [routerLink]="post['post-link']">
-    <div class="post-image" [style.background-image]="'url(' + post['post-image'] + ')'"></div>
-    <div class="post-image-overlay"></div>
-    <div class="post-text-content">
-        <span class="post-category" [innerHTML]="post['post-category'] ? post['post-category'] : post['post-category-list'].split(';')[0]"></span>
-        <div class="post-title" [innerHTML]="(post['post-title'] | multistring : 5)"></div>
     </div>
 </div>
