@@ -6,22 +6,22 @@
         <div class="fut-squad-container">
             <div class="fut-squad-row-container">
                 <div class="fut-squad-row attackers">
-                    <fut-card *ngFor="let player of futSquadInfo.players.attackers; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion"></fut-card>
+                    <fut-card *ngFor="let player of futSquadInfo.players.attackers; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion" [useUFMCloudImages]="futSquadInfo.useUFMCloudImages"></fut-card>
                 </div>
             </div>
             <div class="fut-squad-row-container">
                 <div class="fut-squad-row midfielders">
-                    <fut-card *ngFor="let player of futSquadInfo.players.midfielders; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion"></fut-card>
+                    <fut-card *ngFor="let player of futSquadInfo.players.midfielders; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion" [useUFMCloudImages]="futSquadInfo.useUFMCloudImages"></fut-card>
                 </div>
             </div>
             <div class="fut-squad-row-container">
                 <div class="fut-squad-row defenders">
-                    <fut-card *ngFor="let player of futSquadInfo.players.defenders; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion"></fut-card>
+                    <fut-card *ngFor="let player of futSquadInfo.players.defenders; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion" [useUFMCloudImages]="futSquadInfo.useUFMCloudImages"></fut-card>
                 </div>
             </div>
             <div class="fut-squad-row-container">
                 <div class="fut-squad-row goalkeeper">
-                    <fut-card [squadType]="futSquadInfo.squadType" [player]="futSquadInfo.players.goalkeeper" [fifaVersion]="futSquadInfo.fifaVersion"></fut-card>
+                    <fut-card [squadType]="futSquadInfo.squadType" [player]="futSquadInfo.players.goalkeeper" [fifaVersion]="futSquadInfo.fifaVersion" [useUFMCloudImages]="futSquadInfo.useUFMCloudImages"></fut-card>
                 </div>
             </div>
             <div class="futsquad-credit">
@@ -35,9 +35,9 @@
         </div>
     </div>
     <div class="squad-section-header">
-        Substitutes
+        Substitutes & Reserves
     </div>
     <div class="squad-substitutes-wrapper">
-        <fut-card *ngFor="let player of futSquadInfo.players.substitutes; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion"></fut-card>
+        <fut-card *ngFor="let player of futSquadInfo.players.substitutes; let playerIndex = index" [squadType]="futSquadInfo.squadType" [player]="player" [fifaVersion]="futSquadInfo.fifaVersion" [useUFMCloudImages]="futSquadInfo.useUFMCloudImages"></fut-card>
     </div>
 </div>

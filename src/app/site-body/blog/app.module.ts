@@ -14,6 +14,7 @@ import { FUTSquadPanelComponent } from './fut-squad-panel/fut-squad-panel.compon
 
 import { AppRoutingModule } from '../../app-routing.module';
 import { SearchPostsDialogComponent, SearchPostsDialog } from './search-posts/search.posts.dialog';
+import { VideoPlayerComponent } from './video-player/video-player.component';
 
 import { MaterialModule } from '../shared/mat.module';
 import { ShareButtonsModule } from 'ngx-sharebuttons';
@@ -31,7 +32,8 @@ import { FutCardModule } from '../shared/fut-card/app.module';
 		FacesIncludedPanelComponent,
 		FUTSquadPanelComponent,
 		SearchPostsDialogComponent,
-		SearchPostsDialog
+		SearchPostsDialog,
+		VideoPlayerComponent
 	],
 	imports: [
 		BrowserModule,
@@ -56,7 +58,8 @@ import { FutCardModule } from '../shared/fut-card/app.module';
 		FacesIncludedPanelComponent,
 		FUTSquadPanelComponent,
 		SearchPostsDialogComponent,
-		SearchPostsDialog
+		SearchPostsDialog,
+		VideoPlayerComponent
 	],
 	entryComponents: [
 		ModDownloadDialog,

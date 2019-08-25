@@ -7,9 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 
 export class FutCardComponent {
-
 	@Input() player: object;
 	@Input() squadType: object;
 	@Input() fifaVersion: object;
-
+	@Input() useUFMCloudImages: boolean = true;
 }

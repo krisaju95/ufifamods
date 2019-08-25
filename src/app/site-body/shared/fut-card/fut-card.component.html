@@ -1,4 +1,4 @@
-<div class="fut-squad-player-card fifa-{{fifaVersion}} {{player['type']}} {{player['quality']}}">
+<div *ngIf="useUFMCloudImages" class="fut-squad-player-card fifa-{{fifaVersion}} {{player['type']}} {{player['quality']}}">
     <div class="fut-squad-player-image" [ngClass]="{'dynamic-image': player['dynamicImage']}" [style.background-image]="player | futCardPlayerImage"></div>
     <div class="fut-squad-player-name" [innerHTML]="player['name']"></div>
     <div class="player-side-info">
@@ -6,5 +6,16 @@
         <div class="fut-squad-player-position" [innerHTML]="player['position']"></div>
         <div class="fut-squad-player-nationality nation-flag {{player['nationality']}}"></div>
         <div class="fut-squad-player-club club-crest {{player['club']}} {{player['type']}}"></div>
+    </div>
+</div>
+
+<div *ngIf="!useUFMCloudImages" class="fut-squad-player-card fifa-{{fifaVersion}} {{player['type']}} {{player['quality']}}">
+    <div class="fut-squad-player-image" [ngClass]="{'dynamic-image': player['dynamicImage']}" [style.background-image]="player | futCardPlayerImage"></div>
+    <div class="fut-squad-player-name" [innerHTML]="player['name']"></div>
+    <div class="player-side-info">
+        <div class="fut-squad-player-rating" [innerHTML]="player['rating']"></div>
+        <div class="fut-squad-player-position" [innerHTML]="player['position']"></div>
+        <div class="fut-squad-player-nationality nation-flag" [style.background-image]="'https://www.fifarosters.com/assets/nations/fifa17/' + player['nationality'] + '.png'"></div>
+        <div class="fut-squad-player-club club-crest {{player['type']}}" [style.background-image]="'https://www.fifarosters.com/assets/clubs/fifa' + fifaVersion + '/dark/' + player['club'] + '.png'"></div>
     </div>
 </div>
