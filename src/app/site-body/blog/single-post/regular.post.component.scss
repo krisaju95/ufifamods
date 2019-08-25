@@ -10,7 +10,6 @@
         }
 
         .blog-post-header-section {
-            // background: $site-colour-second-primary url($site-cloud-storage-images + "blog/post-header.jpg") center left no-repeat;
             background: #161F30;
             background-size: cover;
 
@@ -63,8 +62,6 @@
                 font-weight: 300;
         
                 .blog-post-main-content {
-                    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
-                    // border-radius: 5px;
                     overflow: hidden;
 
                     .blog-post-badges {
@@ -101,6 +98,7 @@
                     color: $site-colour-primary;
                     margin-bottom: 20px;
                     position: relative;
+                    line-height: 1.4;
                 }
         
                 .blog-post-ad-placeholder {
