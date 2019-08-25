@@ -1,10 +1,18 @@
+@import "../../../variables.scss";
+
 @mixin post-categories() {
     &.mods {
-        background: #3D9BE9;
-        color: #F5F5F5;
+        background: $site-colour-light-blue;
+        color: $site-colour-white;
     }
+
     &.totw {
-        background: #FF4A77;
-        color: #F5F5F5;
+        background: $site-colour-pink;
+        color: $site-colour-white;
+    }
+
+    &.youtube {
+        background: $site-colour-red;
+        color: $site-colour-white;
     }
 }
