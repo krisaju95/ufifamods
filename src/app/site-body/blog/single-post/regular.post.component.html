@@ -1,6 +1,6 @@
 <site-loader *ngIf="responseLoading || !postData" [fullScreenLoader]="true"></site-loader>
 <div class="blog-post-wrapper" *ngIf="!responseLoading && postData">
-    <div class="standard-site-section-container dark-theme-section-container blog-post-header-section">
+    <div class="standard-site-section-container blog-post-header-section">
         <div class="standard-site-section blog-post-section">
             <div class="blog-post-header">
                 <div class="blog-post-category blog-post-width" [innerHTML]="postData['post-category']"></div>

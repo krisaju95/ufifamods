@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { HomePageModule } from './home/app.module';
 import { BlogPageModule } from './blog/app.module';
+import { FIFAModule } from './fifa/app.module';
 
 import { DatePipe } from '@angular/common';
 
@@ -17,7 +18,8 @@ import { ErrorPageComponent } from './error-page/error.page.component'
 		BrowserModule,
 		HttpClientModule,
 		HomePageModule,
-		BlogPageModule
+		BlogPageModule,
+		FIFAModule
 	],
 	providers: [
 		DatePipe

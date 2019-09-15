@@ -8,7 +8,7 @@ import { AppRoutingModule } from '../../app-routing.module';
 import { MaterialModule } from '../shared/mat.module';
 import { TimeSincePipe } from '../../pipes/time.since.pipe';
 import { MultiStringPipe } from '../../pipes/mutistring.pipe';
-import { ObjectKeysPipe } from '../../pipes/object-keys.pipe';
+import { ObjectKeysPipeModule } from '../../pipes/object-keys/app.module';
 import { ClubInfoPipe } from '../../pipes/club-info.pipe';
 import { TeamInfoPipe } from '../../pipes/team-info.pipe';
 import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
@@ -21,7 +21,6 @@ import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
 		PostCardComponent,
 		TimeSincePipe,
 		MultiStringPipe,
-		ObjectKeysPipe,
 		ClubInfoPipe,
 		TeamInfoPipe,
 		FutCardPlayerImagePipe
@@ -30,7 +29,8 @@ import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
 		BrowserModule,
 		MatProgressSpinnerModule,
 		AppRoutingModule,
-		MaterialModule
+		MaterialModule,
+		ObjectKeysPipeModule
 	],
 	providers: [
 
@@ -41,7 +41,6 @@ import { FutCardPlayerImagePipe } from '../../pipes/fut-card-player-image.pipe';
 		PostCardComponent,
 		TimeSincePipe,
 		MultiStringPipe,
-		ObjectKeysPipe,
 		ClubInfoPipe,
 		TeamInfoPipe,
 		FutCardPlayerImagePipe

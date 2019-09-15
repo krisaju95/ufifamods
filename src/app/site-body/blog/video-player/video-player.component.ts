@@ -15,13 +15,27 @@ export class VideoPlayerComponent {
 
     @Input() videoProvider: string;
     @Input() videoURL: string;
+    @Input() hideTitle: boolean;
+    @Input() autoPlay: boolean;
 
     sanitizedURL: any;
 
     ngOnInit() {
+        this.init();
+    }
+
+    ngOnChanges() {
+        this.init();
+    }
+
+    init() {
         if (this.videoProvider == 'youtube') {
             const videoID: string = (this.videoURL.split('?v=') || [])[1] || '';
-            this.sanitizedURL = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + videoID);
+            const modiferParams: Array<string> = [
+                this.autoPlay ? 'autoplay=1' : 'autoplay=0'
+            ]
+            const modifierParamString: string = '?' + modiferParams.join('&');
+            this.sanitizedURL = this.sanitizer.bypassSecurityTrustResourceUrl('https://www.youtube.com/embed/' + videoID + modifierParamString);
         }
     }
 }
