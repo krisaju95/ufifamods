@@ -1,9 +1,0 @@
-@mixin eredivisie() {
-    &.ajax {
-        background-image: url($site-cloud-storage-images-club-crests + 'eredivisie/ajax.png');
-    }
-
-    &.vitesse {
-        background-image: url($site-cloud-storage-images-club-crests + 'eredivisie/vitesse.png');
-    }
-}
