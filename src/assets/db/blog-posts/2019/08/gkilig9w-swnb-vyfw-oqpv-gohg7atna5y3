@@ -7,14 +7,14 @@
 	"post-main-text-array": [],
 	"post-last-para": "What teams are you going to use in Career Mode? Like, Share & Comment!",
 	"post-link": "/blog/post/2019/08/19/fifa-20-10-rtg-teams-for-career-mode",
-	"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/19/rtg.jpg",
+	"post-image": "/assets/images/blog/posts/2019/08/19/rtg.jpg",
 	"post-category-list": [
         "youtube",
         "career mode",
         "fifa20"
 	],
 	"is-featured": true,
-    "feature-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/19/rth.jpg",
+    "feature-image": "/assets/images/blog/posts/2019/08/19/rth.jpg",
     "featured-video": "https://www.youtube.com/watch?v=s2ynETmbQIY",
     "video-provider": "youtube"
 }

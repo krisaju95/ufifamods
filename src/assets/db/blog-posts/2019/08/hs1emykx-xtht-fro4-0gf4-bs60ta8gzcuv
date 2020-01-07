@@ -10,7 +10,7 @@
      ],
      "post-last-para": "Did someone miss out in this squad? Manage to pack these guys in your recent packs? Let us know in the comments below!",
      "post-link": "/blog/post/2019/08/21/fifa-19-team-of-the-week-totw-43",
-     "post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/21/totw.jpg",
+     "post-image": "/assets/images/blog/posts/2019/08/21/totw.jpg",
      "post-category-list": [
           "fifa19",
           "fut",
@@ -285,5 +285,5 @@
         "useUFMCloudImages": false
 	},
     "is-featured": true,
-    "feature-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/21/totw-fi.jpg"
+    "feature-image": "/assets/images/blog/posts/2019/08/21/totw-fi.jpg"
 }

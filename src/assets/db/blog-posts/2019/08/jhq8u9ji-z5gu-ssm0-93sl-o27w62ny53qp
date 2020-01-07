@@ -7,14 +7,14 @@
 	"post-main-text-array": [],
 	"post-last-para": "What do you guys think about VAR? Tell us what you think! Like, Share & Comment!",
 	"post-link": "/blog/post/2019/08/21/football-this-week-var-has-been-exposed-and-heres-proof",
-	"post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/21/ftw.jpg",
+	"post-image": "/assets/images/blog/posts/2019/08/21/ftw.jpg",
 	"post-category-list": [
         "youtube",
         "ftw",
         "football"
 	],
 	"is-featured": true,
-    "feature-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/21/ftw.jpg",
+    "feature-image": "/assets/images/blog/posts/2019/08/21/ftw.jpg",
     "featured-video": "https://www.youtube.com/watch?v=i3zcVeURMH4",
     "video-provider": "youtube"
 }
