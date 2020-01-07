@@ -10,6 +10,13 @@ import { UFMWebAppComponent } from './ufm-web-app.component';
 
 // Additional Modules
 import { WAHeaderComponent, WAFooterComponent } from '../components';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+// Page Modules
+import { WAPageHomeModule } from '../components/pages/home';
+
+// Service Modules
+import { WADBServiceModule } from '../services/database';
 
 @NgModule({
 	declarations: [
@@ -19,7 +26,10 @@ import { WAHeaderComponent, WAFooterComponent } from '../components';
 	],
 	imports: [
 		BrowserModule,
-		UFMWebAppRoutingModule
+		UFMWebAppRoutingModule,
+		FontAwesomeModule,
+		WAPageHomeModule,
+		WADBServiceModule
 	],
 	providers: [],
 	bootstrap: [UFMWebAppComponent]

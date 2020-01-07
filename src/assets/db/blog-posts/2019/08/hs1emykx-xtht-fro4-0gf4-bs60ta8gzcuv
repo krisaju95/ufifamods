@@ -1,0 +1,289 @@
+{
+     "post-date": "2019-08-21",
+     "post-category": "totw",
+     "post-title": "FIFA 19: Team of the Week - TOTW #43",
+     "post-intro-text": "​We're approaching the final stages of FIFA 19's FUT cycle, but EA are looking to go out with a bang with the latest Team of the Week in FUT.",
+     "post-main-text-array": [
+          "With the European leagues under-way for the new season, we have already got a few great informs. Arsenal's new loan signing Dani Ceballos announced himself to the Premier League with a Man of the Match performance against Burnley, in which he ran the midfield and notched two assists. He struggled at Real Madrid last season and has already started winning over fans at his new club with his performance earning him his first IF card for the year.",
+          "Kevin De Bruyne also registered two assists in Manchester City's game against 2-2 draw with Tottenham Hotspur. As a rewards, he has picked up a huge 94-rated card, which boasts an utterly ludicrous 98 passing. With 90 shooting and 92 dribbling to go along with his 81 pace, there's not a lot this De Bruyne card can't do.​",
+          "Other notable mentions include Zlatan Ibrahimovic, Teemu Puki, Karim Benzema and Aritz Aduriz. Check out the rest of the team below."
+     ],
+     "post-last-para": "Did someone miss out in this squad? Manage to pack these guys in your recent packs? Let us know in the comments below!",
+     "post-link": "/blog/post/2019/08/21/fifa-19-team-of-the-week-totw-43",
+     "post-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/21/totw.jpg",
+     "post-category-list": [
+          "fifa19",
+          "fut",
+          "fifa 19 totw"
+     ],
+     "fut-squad": {
+		"fifaVersion": 19,
+		"squadType": "totw",
+		"players": {
+			"attackers": [
+				{
+					"name": "Ibrahimović",
+					"id": 41236,
+					"rating": 86,
+					"position": "ST",
+					"club": "697",
+					"nationality": "46",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Benzema",
+					"id": 165153,
+					"rating": 89,
+					"position": "ST",
+					"club": "243",
+					"nationality": "18",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Alcácer",
+					"id": 200454,
+					"rating": 84,
+					"position": "ST",
+					"club": "22",
+					"nationality": "45",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				}
+			],
+			"midfielders": [
+				{
+					"name": "Rafa",
+					"id": 216547,
+					"rating": 84,
+					"position": "LM",
+					"club": "234",
+					"nationality": "38",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "De Bruyne",
+					"id": 192985,
+					"rating": 94,
+					"position": "CM",
+					"club": "10",
+					"nationality": "7",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Ceballos",
+					"id": 222509,
+					"rating": 84,
+					"position": "CAM",
+					"club": "1",
+					"nationality": "45",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Sabitzer",
+					"id": 204923,
+					"rating": 86,
+					"position": "CAM",
+					"club": "112172",
+					"nationality": "4",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				}
+			],
+			"defenders": [
+				{
+					"name": "Hinteregger",
+					"id": 201922,
+					"rating": 84,
+					"position": "CB",
+					"club": "1824",
+					"nationality": "4",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Mina",
+					"id": 220523,
+					"rating": 82,
+					"position": "CB",
+					"club": "7",
+					"nationality": "56",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Layun",
+					"id": 178322,
+					"rating": 93,
+					"position": "RWB",
+					"club": "1032",
+					"nationality": "83",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				}
+			],
+			"goalkeeper": {
+				"name": "Mandanda",
+				"id": 163705,
+				"rating": 85,
+				"position": "GK",
+				"club": "219",
+				"nationality": "18",
+				"quality": "gold",
+				"dynamicImage": false,
+				"type": "totw"
+			},
+			"substitutes": [
+				{
+					"name": "Steffen",
+					"id": 234777,
+					"rating": 84,
+					"position": "GK",
+					"club": "110636",
+					"nationality": "95",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Gigot",
+					"id": 219581,
+					"rating": 81,
+					"position": "CB",
+					"club": "100767",
+					"nationality": "18",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Aouar",
+					"id": 234906,
+					"rating": 82,
+					"position": "CM",
+					"club": "66",
+					"nationality": "18",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Aduriz",
+					"id": 106231,
+					"rating": 85,
+					"position": "ST",
+					"club": "448",
+					"nationality": "45",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Samatta",
+					"id": 218066,
+					"rating": 82,
+					"position": "ST",
+					"club": "673",
+					"nationality": "143",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Zé Luís",
+					"id": 203757,
+					"rating": 82,
+					"position": "ST",
+					"club": "236",
+					"nationality": "104",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Pukki",
+					"id": 190362,
+					"rating": 82,
+					"position": "ST",
+					"club": "1792",
+					"nationality": "17",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Reguilón",
+					"id": 245279,
+					"rating": 74,
+					"position": "LB",
+					"club": "481",
+					"nationality": "45",
+					"quality": "silver",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Cohade",
+					"id": 112365,
+					"rating": 80,
+					"position": "CM",
+					"club": "68",
+					"nationality": "18",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Taggart",
+					"id": 202676,
+					"rating": 77,
+					"position": "ST",
+					"club": "983",
+					"nationality": "195",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Songkrasin",
+					"id": 234698,
+					"rating": 75,
+					"position": "LF",
+					"club": "112444",
+					"nationality": "188",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				},
+				{
+					"name": "Tadić",
+					"id": 201891,
+					"rating": 81,
+					"position": "ST",
+					"club": "2017",
+					"nationality": "4",
+					"quality": "gold",
+					"dynamicImage": false,
+					"type": "totw"
+				}
+			]
+        },
+        "useUFMCloudImages": false
+	},
+    "is-featured": true,
+    "feature-image": "https://raw.githubusercontent.com/krisaju95/ufifamods/master/media/images/blog/posts/2019/08/21/totw-fi.jpg"
+}

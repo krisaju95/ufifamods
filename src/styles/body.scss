@@ -1,0 +1,9 @@
+@import 'variables.scss';
+
+html, body {
+    font-size: 62.5%;
+    font-family: $site-font-family;
+    margin: 0;
+    scroll-behavior: smooth;
+    color: $color-code-text;
+}

@@ -1,0 +1,41 @@
+@import 'variables.scss';
+
+// Colour Codes
+$text-color-primary: $color-code-white;
+$background-color-primary: $color-code-light-blue;
+$background-color-primary-hover: rgb(13, 152, 177);
+
+
+.wa-button {
+    background-color: $color-code-darkgray;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    color: $color-code-text;
+    padding: 15px 40px;
+    font-family: $site-font-family;
+    font-size: 1.4rem;
+    font-weight: $font-weight-medium;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all ease 200ms;
+
+    &.wa-ghost-button {
+        background-color: transparent;
+        border-color: $background-color-primary;
+        color: $background-color-primary;
+
+        &:hover, &:focus {
+            border-color: $background-color-primary-hover;
+            color: $background-color-primary-hover;
+        }
+    }
+
+    &.wa-primary-button {
+        background-color: $background-color-primary;
+        color: $text-color-primary;
+
+        &:hover, &:focus {
+            background-color: $background-color-primary-hover;
+        }
+    }
+}

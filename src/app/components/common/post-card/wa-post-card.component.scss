@@ -1,0 +1,219 @@
+@import 'variables.scss';
+
+.wa-post-card-container {
+    height: 100%;
+    position: relative;
+    background-color: $color-code-white;
+    border: 1px solid $color-code-gray;
+    border-radius: 0 0 5px 5px;
+    overflow: hidden;
+    transition: border-color ease 300ms;
+
+    .wa-post-card-loading-view {
+        background-color: #F3F3F3;
+        background-image: linear-gradient(to right, #F3F3F3 0%, #EAEAEA 20%, #F3F3F3 50%, #F3F3F3 100%);
+        background-repeat: no-repeat;
+        -webkit-animation: placeholderShimmer 1.5s linear infinite;
+        animation: placeholderShimmer 1.5s linear infinite;
+
+        .wa-post-card-image {
+            position: relative;
+            height: 20rem;
+        }
+
+        .wa-post-card-text {
+            border: 2rem solid $color-code-white;
+            
+            .wa-post-card-title {
+                height: 2rem;
+            }
+
+            .wa-post-card-description {
+                position: relative;
+                height: 4rem;
+                border-top: 2rem solid $color-code-white;
+                border-bottom: 1rem solid $color-code-white;
+
+                &:before {
+                    position: absolute;
+                    content: '';
+                    top: calc(50% - 0.4rem);
+                    left: 0;
+                    width: 100%;
+                    height: 0.8rem;
+                    background-color: $color-code-white;
+                }
+
+                &:after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    right: 0;
+                    width: 50%;
+                    height: 2rem;
+                    background-color: $color-code-white;
+                }
+            }
+        }
+
+        .wa-post-card-footer {
+            border: 2rem solid $color-code-white;
+            height: 2.8rem;
+            position: relative;
+
+            &:before {
+                position: absolute;
+                content: '';
+                top: -2.1rem;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color-code-lightgray;
+            }
+
+            .wa-post-credit {
+                display: inline-block;
+
+                .wa-profile-dp-loading {
+                    border: 2rem solid $color-code-white;
+                    border-radius: 100%;
+                    width: 2.5rem;
+                    height: 2.5rem;
+                    position: relative;
+                    top: -2rem;
+                    left: -2rem;
+                    display: inline-block;
+                }
+
+                .wa-post-author {
+                    border: 2rem solid $color-code-white;
+                    height: 1.4rem;
+                    width: 10rem;
+                    display: inline-block;
+                    vertical-align: top;
+                    position: relative;
+                    top: -1.4rem;
+                    left: -3.5rem;
+                }
+            }
+
+            .wa-post-date {
+                display: inline-block;
+                width: 5rem;
+                border: 2rem solid $color-code-white;
+                border-left-width: 16rem;
+                height: 1.4rem;
+                vertical-align: top;
+                position: absolute;
+                right: -2rem;
+                top: -1.4rem;
+            }
+        }
+    }
+
+    .wa-post-card-loaded-view {
+        cursor: pointer;
+        padding-bottom: 6.5rem;
+
+        .wa-post-card-image-container {
+            position: relative;
+            background-color: $color-code-lightgray;
+            height: 20rem;
+        }
+
+        .wa-post-card-image {
+            position: absolute;
+            background-color: $color-code-lightgray;
+            background-image: linear-gradient($color-code-lightgray, $color-code-lightgray);
+            background-size: cover;
+            background-position: center;
+            height: 20rem;
+            width: 100%;
+            opacity: 0;
+            transition: all ease 350ms;
+
+            &:after {
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                opacity: 0;
+                background-color: $color-code-gray;
+                transition: all ease 250ms;
+            }
+
+            &.loaded {
+                opacity: 1;
+            }
+        }
+
+        .wa-post-card-text {
+            padding: 2rem;
+            padding-bottom: 3rem;
+
+            .wa-post-card-title {
+                font-size: 1.8rem;
+                font-weight: $font-weight-medium;
+                margin-bottom: 2rem;
+                transition: color ease 300ms;
+            }
+
+            .wa-post-card-description {
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+            }
+        }
+
+        .wa-post-card-footer {
+            font-size: 1.4rem;
+            padding: 2rem;
+            border-top: 1px solid $color-code-lightgray;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: calc(100% - 4rem);
+            height: 2.5rem;
+
+            .wa-post-credit {
+                display: flex;
+                align-items: center;
+
+                .wa-profile-dp {
+                    height: 2.5rem;
+                    width: 2.5rem;
+                    border-radius: 100%;
+                }
+
+                .wa-post-author {
+                    padding-left: 1rem;
+                }
+            }
+
+            .wa-post-date {
+                font-weight: $font-weight-light;
+            }
+        }
+
+        &:hover {
+            border-color: $color-code-darkgray;
+
+            .wa-post-card-image {
+                &:after {
+                    opacity: 1;
+                    background-color: $color-code-light-blue;
+                }
+            }
+
+            .wa-post-card-text {
+                .wa-post-card-title {
+                    color: $color-code-light-blue;
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { IconDefinition, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'ufm-wa-header',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
     styleUrls: ['./wa-header.component.scss']
 })
 
-export class WAHeaderComponent { }
+export class WAHeaderComponent {
+    faSearch: IconDefinition = faSearch;
+}

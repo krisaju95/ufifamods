@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+.wa-footer-container {
+    border-top: 1px solid $color-code-gray;
+
+    .wa-footer-wrapper {
+        min-height: 40rem;
+    }
+}
+
+.wa-copyright-bar {
+    background-color: $color-code-lightgray;
+    text-align: center;
+    font-size: 1.4rem;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        margin-right: 15px;
+        height: 25px;
+    }
+}

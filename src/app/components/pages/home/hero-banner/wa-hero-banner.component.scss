@@ -1,0 +1,123 @@
+@import 'variables.scss';
+
+.wa-hero-banner-container {
+    background-color: $color-code-white;
+
+    .wa-hero-banner-wrapper {
+        background-image: url('/assets/images/hero-banner/hero-background-min.jpg');
+        background-position: bottom center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        align-items: flex-end;
+        padding: 4rem;
+        min-height: 35rem;
+        position: relative;
+
+        .wa-hero-banner-content {
+            max-width: 500px;
+
+            .wa-hero-banner-post-info {
+                display: flex;
+                align-items: center;
+                margin-bottom: 1rem;
+                font-size: 1.4rem;
+
+                .wa-profile-dp {
+                    width: 3rem;
+                    height: 3rem;
+                    border-radius: 100%;
+                }
+
+                .wa-profile-name {
+                    margin-left: 1rem;
+                }
+
+                .wa-post-date {
+                    position: relative;
+                    margin-left: 2rem;
+                    padding-left: 2rem;
+                    font-weight: $font-weight-light;
+
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0.45rem;
+                        border-radius: 100%;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        background-color: $color-code-light-blue;
+                        opacity: 0.25;
+                    }
+                }
+            }
+
+            .wa-hero-banner-text {
+                position: relative;
+                z-index: 1;
+
+                .wa-hero-banner-title {
+                    line-height: 4.8rem;
+                    font-size: 3.6rem;
+                    font-weight: $font-weight-medium;
+                    margin-bottom: 2rem;
+                }
+    
+                .wa-hero-banner-description {
+                    line-height: 3rem;
+                    font-size: 1.6rem;
+                    font-weight: $font-weight-light;
+                }
+
+                .wa-title-highlight {
+                    color: $color-code-light-blue;
+                }
+            }
+
+            .wa-hero-banner-cta{
+                margin-top: 4rem;
+            }
+        }
+
+        .wa-hero-banner-image-container {
+            position: absolute;
+            height: 100%;
+            width: 640px;
+            max-width: 100%;
+            right: 40px;
+            top: 20px;
+            padding: 30px;
+            transform: translateX(-3rem) rotate(1deg);
+
+            &::before, &::after {
+                position: absolute;
+                content: '';
+                width: 10rem;
+                height: 10rem;
+            }
+
+            &::before {
+                top: 0.5rem;
+                left: 0.5rem;
+                border-top: 3px solid $color-code-light-blue;
+                border-left: 3px solid $color-code-light-blue;
+            }
+
+            &::after {
+                bottom: 0.5rem;
+                right: 0.5rem;
+                border-bottom: 3px solid $color-code-light-blue;
+                border-right: 3px solid $color-code-light-blue;
+            }
+
+            .wa-hero-banner-image {
+                height: 100%;
+                background-image: url(https://www.foxsportsasia.com/uploads/2020/01/jesus.jpg);
+                background-size: cover;
+                background-position: center;
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+            }
+        }
+    }
+}

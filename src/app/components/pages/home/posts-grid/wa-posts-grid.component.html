@@ -1,0 +1,12 @@
+<div class="wa-container wa-posts-grid-container">
+    <div class="wa-wrapper wa-posts-grid-wrapper">
+        <div class="wa-posts-grid-content">
+            <div class="wa-posts-grid-title"> {{title}} </div>
+            <div class="wa-posts-grid-tiles">
+                <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-posts-grid-tile">
+                    <ufm-wa-post-card [loading]="loading" [post]="filteredBlogPosts[postIndex]"></ufm-wa-post-card>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

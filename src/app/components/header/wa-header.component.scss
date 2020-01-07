@@ -1,0 +1,44 @@
+@import 'variables.scss';
+
+.wa-header-container {
+    border-bottom: 1px solid $color-code-gray;
+
+    .wa-header-wrapper {
+        height: 7.5rem;
+        display: flex;
+        align-items: center;
+
+        .wa-title {
+            flex: 1;
+            font-size: 3.2rem;
+            font-weight: $font-weight-bold;
+            color: $color-code-tertiary;
+        }
+
+        .wa-logo {
+            height: 5rem;
+        }
+
+        .wa-navbar {
+            flex: 1;
+            font-weight: $font-weight-bold;
+
+            .wa-navbar-list {
+                list-style: none;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+
+                .wa-navbar-list-item {
+                    font-size: 1.4rem;
+                    padding: 0 2rem;
+                    text-transform: uppercase;
+
+                    &.active {
+                        color: $color-code-light-blue;
+                    }
+                }
+            }
+        }
+    }
+}

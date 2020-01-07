@@ -1,0 +1,28 @@
+// Font Family
+$site-font-family: Ubuntu, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+
+// Font Weights
+$font-weight-light:     300;
+$font-weight-normal:    400;
+$font-weight-medium:    500;
+$font-weight-bold:      700;
+
+// Color Codes
+$color-code-primary:            #0D162B;
+$color-code-secondary:          #FFC145;
+$color-code-tertiary:           #070F20;
+$color-code-text:               #2F2E2E;
+$color-code-yellow:             #FFC145;
+$color-code-blue:               #333333;
+$color-code-light-blue:         #09C0E2;
+$color-code-pink:               #FF4A77;
+$color-code-gray:               #DDDDDD;
+$color-code-lightgray:          #EEEEEE;
+$color-code-darkgray:           #CCCCCC;
+$color-code-white:              #FFFFFF;
+
+// Cloud Storage URL Prefix
+$site-cloud-storage-images: '/assets/images/';
+$site-cloud-storage-images-flags: $site-cloud-storage-images + 'flags/';
+$site-cloud-storage-images-club-crests: $site-cloud-storage-images + 'club-crests/';
+$site-cloud-storage-images-team-members: $site-cloud-storage-images + 'team-members/';
