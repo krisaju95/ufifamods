@@ -17,6 +17,7 @@ import { WAPageHomeModule } from '../components/pages/home';
 
 // Service Modules
 import { WADBServiceModule } from '../services/database';
+import { WALoaderServiceModule } from '../services/loader';
 
 @NgModule({
 	declarations: [
@@ -29,7 +30,8 @@ import { WADBServiceModule } from '../services/database';
 		UFMWebAppRoutingModule,
 		FontAwesomeModule,
 		WAPageHomeModule,
-		WADBServiceModule
+		WADBServiceModule,
+		WALoaderServiceModule
 	],
 	providers: [],
 	bootstrap: [UFMWebAppComponent]

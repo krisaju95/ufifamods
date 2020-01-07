@@ -55,6 +55,12 @@ export class WADBService {
                 featuredPostsData.push(blogPost);
             }
             switch (category) {
+                case 'featured': {
+                    if (blogPost['is-featured']) {
+                        filteredPostsData.push(blogPost);
+                    }
+                    break;
+                }
                 case 'featured|!first': {
                     if (featuredPostsData.length > 1 && blogPost['is-featured']) {
                         filteredPostsData.push(blogPost);

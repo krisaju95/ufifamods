@@ -1,7 +1,13 @@
 @import 'variables.scss';
 
 .wa-header-container {
+    background-color: $color-code-white;
     border-bottom: 1px solid $color-code-gray;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+    left: 0;
 
     .wa-header-wrapper {
         height: 7.5rem;
@@ -15,8 +21,24 @@
             color: $color-code-tertiary;
         }
 
-        .wa-logo {
-            height: 5rem;
+        .wa-logo-container {
+            position: relative;
+
+            .wa-logo {
+                height: 5rem;
+                transition: all ease 300ms;
+
+                &.hidden {
+                    transform: scale(0);
+                }
+
+                &.loader {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    filter: invert(1);
+                }
+            }
         }
 
         .wa-navbar {

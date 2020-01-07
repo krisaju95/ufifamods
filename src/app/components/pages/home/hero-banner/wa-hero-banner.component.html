@@ -1,26 +1,24 @@
 <div class="wa-container wa-hero-banner-container">
     <div class="wa-wrapper wa-hero-banner-wrapper">
         <div class="wa-hero-banner-content">
-            <div class="wa-hero-banner-post-info">
-                <span class="wa-profile-dp krisaju95"></span>
-                <span class="wa-profile-name">krisaju95</span>
-                <span class="wa-post-date">23 Jan</span>
+            <div *ngIf="heroBannerPost['post-author'] || heroBannerPost['post-date']" class="wa-hero-banner-post-info">
+                <span class="wa-profile-dp {{heroBannerPost['post-author']}}"></span>
+                <span class="wa-profile-name">{{heroBannerPost['post-author']}}</span>
+                <span class="wa-post-date">{{heroBannerPost['post-date'] | date : 'dd MMM'}}</span>
             </div>
             <div class="wa-hero-banner-text">
-                <div class="wa-hero-banner-title">
-                    <span class="wa-title-highlight">FIFA 20</span> Team of the Week 17 Predictions
+                <div class="wa-hero-banner-title" [innerHTML]="heroBannerPost['post-title']">
+                    <!-- <span class="wa-title-highlight">FIFA 20</span> Team of the Week 17 Predictions -->
                 </div>
-                <div class="wa-hero-banner-description">
-                   SIF Varane, IF Sokratis or OTW Pepe? Kieron digs deep to give us his opinion on who makes he cut this week
-                </div>
+                <div class="wa-hero-banner-description" [innerHTML]="((heroBannerPost['post-description'] || heroBannerPost['post-text-content'] || '') | slice : 0 : 100).trim() + '...'"></div>
             </div>
-            <div class="wa-hero-banner-cta">
+            <div *ngIf="heroBannerPost['post-link']" class="wa-hero-banner-cta">
                 <button class="wa-button wa-ghost-button">Read More</button>
             </div>
         </div>
         <div class="wa-hero-banner-image-container">
             <div class="wa-hero-banner-image-wrapper">
-                <div imageLoader class="wa-hero-banner-image wa-lazy-loaded-img" [attr.image-src]="'/assets/images/temp/jesus.jpg'" [attr.image-load-delay]="1500"></div>
+                <div *ngIf="heroBannerPost['post-image']" imageLoader class="wa-hero-banner-image wa-lazy-loaded-img" [attr.image-src]="heroBannerPost['post-image']" [attr.image-load-delay]="1500"></div>
             </div>
         </div>
     </div>

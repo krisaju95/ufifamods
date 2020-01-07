@@ -1,7 +1,10 @@
 <div class="wa-container wa-header-container">
     <div class="wa-wrapper wa-header-wrapper">
         <div class="wa-title">ufifamods</div>
-        <img class="wa-logo" alt="Ultimate FIFA Mods Logo" src="/assets/images/header/logo.png">
+        <div class="wa-logo-container">
+            <img class="wa-logo logo" [class.hidden]="loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/header/logo.png">
+            <img class="wa-logo loader" [class.hidden]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
+        </div>
         <div class="wa-navbar">
             <ul class="wa-navbar-list">
                 <li class="wa-navbar-list-item active">Home</li>
