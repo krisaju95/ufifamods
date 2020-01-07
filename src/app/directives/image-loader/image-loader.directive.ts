@@ -14,10 +14,11 @@ export class WAImageLoaderDirective {
     ngAfterViewInit() {
         const elementRef: HTMLElement = this.elementRef.nativeElement as HTMLElement;
         const imageURL: string = elementRef.getAttribute('image-src');
+        const imageLoadDelay: number = parseInt(elementRef.getAttribute('image-load-delay') || '100');
         const imageProperty: string = "url(" + imageURL + ")";
         this.http.get(imageURL, { responseType: 'blob' }).subscribe(() => {
             elementRef.style.setProperty('background-image', imageProperty);
-            elementRef.classList.add('loaded');
+            setTimeout(() => { elementRef.classList.add('loaded'); }, imageLoadDelay);
         });
     }
 }

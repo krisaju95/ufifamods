@@ -1,0 +1,8 @@
+.wa-lazy-loaded-img {
+    opacity: 0;
+    transition: all ease 350ms;
+
+    &.loaded {
+        opacity: 1;
+    }
+}

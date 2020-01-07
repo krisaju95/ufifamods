@@ -129,8 +129,6 @@
             background-position: center;
             height: 20rem;
             width: 100%;
-            opacity: 0;
-            transition: all ease 350ms;
 
             &:after {
                 position: absolute;
@@ -142,10 +140,6 @@
                 opacity: 0;
                 background-color: $color-code-gray;
                 transition: all ease 250ms;
-            }
-
-            &.loaded {
-                opacity: 1;
             }
         }
 

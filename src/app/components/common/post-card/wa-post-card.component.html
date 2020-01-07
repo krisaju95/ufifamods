@@ -15,7 +15,7 @@
     </div>
     <div *ngIf="!loading" class="wa-post-card-loaded-view">
         <div *ngIf="image" class="wa-post-card-image-container">
-            <div imageLoader class="wa-post-card-image" [attr.image-src]="image"></div>
+            <div imageLoader class="wa-post-card-image wa-lazy-loaded-img" [attr.image-src]="image"></div>
         </div>
         <div class="wa-post-card-text">
             <div class="wa-post-card-title" [innerHTML]="title"></div>
