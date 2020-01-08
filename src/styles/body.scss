@@ -6,4 +6,5 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
     color: $color-code-text;
+    overflow: overlay;
 }

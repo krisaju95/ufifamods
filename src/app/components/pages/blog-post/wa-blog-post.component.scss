@@ -11,12 +11,16 @@
                 font-weight: $font-weight-bold;
                 margin: 0 auto;
                 max-width: 70rem;
+                line-height: 4rem;
             }
 
             .wa-blog-post-date {
                 font-size: 1.6rem;
                 font-weight: $font-weight-light;
                 margin: 1rem 0;
+                line-height: 2rem;
+                display: inline-block;
+                padding: 0 2rem;
             }
 
             .wa-blog-post-intro {
@@ -66,6 +70,35 @@
                 .wa-blog-post-para {
                     clear: both;
                     margin: 5rem 0;
+                }
+            }
+
+            &.loading {
+                .wa-blog-post-title, .wa-blog-post-date, .wa-blog-post-intro, .wa-blog-post-body {
+                    background-color: $color-code-gray;
+                    background-color: $color-code-gray;
+                    background-image: linear-gradient(to right, $color-code-gray 0%, #D0D0D0 20%, $color-code-gray 50%, $color-code-gray 100%);
+                    background-repeat: no-repeat;
+                    -webkit-animation: placeholderShimmer 1.5s linear infinite;
+                    animation: placeholderShimmer 1.5s linear infinite;
+                }
+
+                .wa-blog-post-title {
+                    max-width: 60rem;
+                    height: 4rem;
+                }
+
+                .wa-blog-post-date {
+                    min-width: 10rem;
+                    height: 2rem;
+                }
+
+                .wa-blog-post-intro {
+                    height: 4rem;
+                }
+
+                .wa-blog-post-body {
+                    min-height: 40rem;
                 }
             }
         }

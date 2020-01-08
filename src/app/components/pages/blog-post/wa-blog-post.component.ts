@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
 import { WADBService } from '../../../services/database/wa-db.service';
 import { WALoaderService } from '../../../services/loader/wa-loader.service';
 
@@ -13,25 +12,29 @@ import { WALoaderService } from '../../../services/loader/wa-loader.service';
 export class WABlogPostComponent {
 
     loading: boolean = true;
+
     siteURL: string = "";
+
     postURL: string = "";
+
     postMap: Array<object>;
+
     fileURL: string = "";
-    postData: object = {};
+
+    title: string = '';
+
+    date: string = '';
+
+    intro: string = '';
+
+    imageURL: string = '';
+
     postMainTextArray: Array<string> = [];
-    contributorsList: Array<string>;
-    facesIncludedList: Array<string>;
-    screenshotsList: Array<string>;
-    futSquadInfo: object = {}
-    showModDisclaimer: boolean = false;
-    downloadText: string = "Download";
-    categoryList: Array<string> = [];
 
     constructor(
         private WADBService: WADBService,
         private WALoaderService: WALoaderService,
-        private route: ActivatedRoute,
-        private http: HttpClient,
+        private route: ActivatedRoute
     ) { }
 
     ngOnInit() {
@@ -40,51 +43,24 @@ export class WABlogPostComponent {
             if (!state) {
                 this.fileURL = this.getFileURL(this.WADBService.getBlogData());
                 this.WADBService.getSinglePost(this.getParam('year') + '/' + this.getParam('month') + '/' + this.fileURL).subscribe((post: any) => {
-                    this.postData = post;
-                    this.postMainTextArray = this.postData['post-main-text-array'] || [];
-                    this.contributorsList = this.postData['contributors-list'];
-                    this.facesIncludedList = this.postData['faces-included-list'];
-                    this.screenshotsList = this.postData['screenshots-list'];
-                    this.futSquadInfo = this.postData['fut-squad'];
                     this.loading = false;
+                    this.setPostData(post);
                     pageLoadingStateChange.unsubscribe();
                 });
             }
         })
     }
 
-    initialiseData(postURL: string) {
-        this.postURL = postURL;
-        this.loading = true;
-        this.getPostData();
-    }
-
-    getPostData() {
-        let startTime = new Date().getTime();
-        this.http.get('/assets/db/blog-posts-list')
-            .subscribe((data) => {
-                this.fileURL = this.getFileURL(data);
-                this.http.get('/assets/db/blog-posts/' + this.getParam('year') + '/' + this.getParam('month') + '/' + this.fileURL)
-                    .subscribe((postData) => {
-                        let timeDiff = new Date().getTime() - startTime;
-                        if (timeDiff < 1500) {
-                            setTimeout(() => {
-                                this.loading = false;
-                                this.postData = postData;
-                                this.postMainTextArray = this.postData['post-main-text-array'] || [];
-                                this.contributorsList = this.postData['contributors-list'];
-                                this.facesIncludedList = this.postData['faces-included-list'];
-                                this.screenshotsList = this.postData['screenshots-list'];
-                                this.futSquadInfo = this.postData['fut-squad'];
-                                this.showModDisclaimer = (this.postData['show-mod-disclaimer'] == true || this.postData['show-mod-disclaimer'] == 'true')
-                                this.getPostCategories();
-                                window.scroll(0, 0);
-                            }, 1500 - timeDiff);
-                        } else {
-                            this.loading = false;
-                        }
-                    });
-            });
+    setPostData(post: any) {
+        this.title = post['post-title'] || '';
+        this.date = post['post-date'] || '';
+        this.intro = post['post-intro-text'] || '';
+        this.imageURL = post['post-image'] || '';
+        this.postMainTextArray = post['post-main-text-array'] || [];
+        if (this.intro && this.postMainTextArray.length == 0) {
+            this.postMainTextArray = [this.intro];
+            this.intro = '';
+        }
     }
 
     getPostURL() {
@@ -102,13 +78,5 @@ export class WABlogPostComponent {
 
     getParam(paramName) {
         return this.route.snapshot.paramMap.get(paramName);
-    }
-
-    getPostCategories() {
-        if (typeof this.postData["post-category-list"] == 'string') {
-            this.categoryList = this.postData["post-category-list"].split(";");
-        } else {
-            this.categoryList = this.postData["post-category-list"];
-        }
     }
 }
