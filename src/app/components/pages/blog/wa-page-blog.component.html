@@ -3,47 +3,14 @@
         <h1 class="wa-page-title"> Blog </h1>
         <div class="wa-blog-page-tiles">
             <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-blog-page-tile">
-                <ufm-wa-post-card [loading]="loading" [post]="blogPostList[postIndex]"></ufm-wa-post-card>
+                <ufm-wa-post-card [loading]="loading && (postIndex >= (numberOfPosts - 9))" [post]="blogPostList[postIndex]"></ufm-wa-post-card>
             </div>
+        </div>
+        <div class="wa-blog-page-footer">
+            <button *ngIf="blogPostList.length > 0" class="wa-button wa-primary-button" (click)="loadMoreResults()" [disabled]="numberOfPosts == blogPostList.length">
+                <ng-container *ngIf="numberOfPosts != blogPostList.length">Load more results</ng-container>
+                <ng-container *ngIf="numberOfPosts == blogPostList.length">No more results</ng-container>
+            </button>
         </div>
     </div>
 </div>
-
-<!-- <div class="blog-posts-page-container">
-    <div class="standard-site-section-container">
-        <div class="standard-site-section">
-            <div class="blog-posts-page-header">
-                Blog
-            </div>
-        </div>
-    </div>
-    <div class="standard-site-section-container">
-        <div class="standard-site-section">
-            <div class="blog-posts-list-container">
-                <div *ngFor="let post of (blogPostsArray | slice : startPostIndex : endPostIndex); let postIndex = index">
-                    <div class="blog-post" *ngIf="postIndex % numberOfPostsPerRow == 0">
-                        <div class="post-card-container"
-                            *ngFor="let num of [].constructor(numberOfPostsPerRow); let columnIndex = index">
-                            <post-card *ngIf="blogPostsArray[postIndex + startPostIndex + columnIndex]" [post]="blogPostsArray[postIndex + startPostIndex + columnIndex]"></post-card>
-                        </div>
-                    </div>
-                </div>
-                <div class="pagination-controls">
-                    <a *ngIf="startPostIndex != 0" class="button-link primary-button-link" href="javascript: void(0)"
-                        (click)="fetchSinglePageResults(currentPageNumber - 1)">
-                        <i class="fas fa-chevron-left"></i>
-                    </a>
-                    <ng-container *ngIf="!isMobileViewPort">
-                        <a *ngFor="let pageNumber of pageNumbers; let pageIndex = index" class="button-link secondary-button-link" [ngClass]="{'highlight-outline': pageNumber == currentPageNumber}" href="javascript: void(0)" (click)="fetchSinglePageResults(pageNumber)">
-                            {{pageNumber}}
-                        </a>
-                    </ng-container>
-                    <a *ngIf="endPostIndex != (numberOfPosts - 1)"  class="button-link primary-button-link" href="javascript: void(0)"
-                        (click)="fetchSinglePageResults(currentPageNumber + 1)">
-                        <i class="fas fa-chevron-right"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div> -->

@@ -8,17 +8,16 @@
             </div>
             <div class="wa-hero-banner-text">
                 <div class="wa-hero-banner-title" [innerHTML]="heroBannerPost['post-title']">
-                    <!-- <span class="wa-title-highlight">FIFA 20</span> Team of the Week 17 Predictions -->
                 </div>
-                <div class="wa-hero-banner-description" [innerHTML]="((heroBannerPost['post-description'] || heroBannerPost['post-text-content'] || '') | slice : 0 : 100).trim() + '...'"></div>
+                <div *ngIf="(heroBannerPost['post-description'] || heroBannerPost['post-text-content'] || '')" class="wa-hero-banner-description" [innerHTML]="((heroBannerPost['post-description'] || heroBannerPost['post-text-content'] || '') | slice : 0 : 100).trim() + '...'"></div>
             </div>
             <div *ngIf="heroBannerPost['post-link']" class="wa-hero-banner-cta">
-                <button class="wa-button wa-ghost-button">Read More</button>
+                <button class="wa-button wa-ghost-button" [routerLink]="heroBannerPost['post-link']">Read More</button>
             </div>
         </div>
         <div class="wa-hero-banner-image-container">
             <div class="wa-hero-banner-image-wrapper">
-                <div *ngIf="heroBannerPost['post-image']" imageLoader class="wa-hero-banner-image wa-lazy-loaded-img" [attr.image-src]="heroBannerPost['feature-image']" [attr.image-load-delay]="500"></div>
+                <div *ngIf="heroBannerPost['post-image']" [routerLink]="heroBannerPost['post-link']" imageLoader class="wa-hero-banner-image wa-lazy-loaded-img" [attr.image-src]="heroBannerPost['feature-image']" [attr.image-load-delay]="500"></div>
             </div>
         </div>
     </div>

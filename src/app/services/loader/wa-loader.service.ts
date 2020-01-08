@@ -13,11 +13,11 @@ export class WALoaderService {
     pageLoaderTimeoutRef: any;
 
     togglePageLoadingState(state: boolean): void {
+        this.clearPageLoaderTimeoutRef();
         if (state) {
             this.pageLoaderStartTime = new Date().getTime();
             this.pageLoadingStateChange.next(true);
         } else {
-            this.clearPageLoaderTimeoutRef();
             const currentTime: number = new Date().getTime();
             const elapsedTime: number = currentTime - (this.pageLoaderStartTime || currentTime);
             const stateChangeDelay: number = (elapsedTime < this.minimumLoaderTime) ? (this.minimumLoaderTime - elapsedTime) : 0;

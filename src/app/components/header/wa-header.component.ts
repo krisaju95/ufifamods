@@ -23,7 +23,8 @@ export class WAHeaderComponent {
 
     ngOnInit() {
         this.WALoaderService.pageLoadingStateChange.subscribe((state) => {
-            this.loading = state;
+            const waitTime: number = state ? 0 : 1500;
+            setTimeout(() => this.loading = state, waitTime);
         });
     }
 }

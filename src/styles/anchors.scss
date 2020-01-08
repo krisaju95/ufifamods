@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+a {
+    color: $color-code-blue;
+    transition: color ease 250ms;
+
+    &:hover {
+        color: $color-code-darkblue;
+    }
+}

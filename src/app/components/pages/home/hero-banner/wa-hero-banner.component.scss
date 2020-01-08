@@ -10,13 +10,15 @@
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
-        align-items: flex-end;
+        align-items: stretch;
         padding: 4rem;
         min-height: 35rem;
         position: relative;
 
         .wa-hero-banner-content {
             max-width: 500px;
+            margin-top: auto;
+            flex: 1;
 
             .wa-hero-banner-post-info {
                 display: flex;
@@ -48,7 +50,7 @@
                         border-radius: 100%;
                         width: 0.5rem;
                         height: 0.5rem;
-                        background-color: $color-code-light-blue;
+                        background-color: $color-code-blue;
                         opacity: 0.25;
                     }
                 }
@@ -71,8 +73,8 @@
                     font-weight: $font-weight-light;
                 }
 
-                .wa-title-highlight {
-                    color: $color-code-light-blue;
+                ::ng-deep .wa-title-highlight {
+                    color: $color-code-blue;
                 }
             }
 
@@ -82,41 +84,19 @@
         }
 
         .wa-hero-banner-image-container {
-            position: absolute;
-            height: 100%;
+            position: relative;
+            flex: 1;
+            min-height: 400px;
             width: 640px;
             max-width: 100%;
-            right: 40px;
-            top: 20px;
-            padding: 30px;
-            transform: translateX(-3rem) rotate(1deg);
-
-            &::before, &::after {
-                position: absolute;
-                content: '';
-                width: 10rem;
-                height: 10rem;
-            }
-
-            &::before {
-                top: 0.5rem;
-                left: 0.5rem;
-                border-top: 3px solid $color-code-light-blue;
-                border-left: 3px solid $color-code-light-blue;
-            }
-
-            &::after {
-                bottom: 0.5rem;
-                right: 0.5rem;
-                border-bottom: 3px solid $color-code-light-blue;
-                border-right: 3px solid $color-code-light-blue;
-            }
+            padding: 0 30px;
 
             .wa-hero-banner-image-wrapper {
                 height: 100%;
                 position: relative;
                 background-color: $color-code-lightgray;
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
+                transform: translateX(3rem);
 
                 .wa-hero-banner-image {
                     position: absolute;
@@ -126,6 +106,40 @@
                     width: 100%;
                     background-size: cover;
                     background-position: center;
+
+                    &::before, &::after {
+                        position: absolute;
+                        content: '';
+                        width: 5rem;
+                        height: 5rem;
+                        transition: transform ease 500ms;
+                    }
+        
+                    &::before {
+                        top: 0;
+                        left: 0;
+                        border-top: 5px solid $color-code-blue;
+                        border-left: 5px solid $color-code-blue;
+                    }
+        
+                    &::after {
+                        bottom: 0;
+                        right: 0;
+                        border-bottom: 5px solid $color-code-blue;
+                        border-right: 5px solid $color-code-blue;
+                    }
+
+                    &.loaded {
+                        cursor: pointer;
+                        
+                        &::before {
+                            transform: translate(-2.5rem, -2.5rem);
+                        }
+            
+                        &::after {
+                            transform: translate(2.5rem, 2.5rem);
+                        }
+                    }
                 }
             }
         }

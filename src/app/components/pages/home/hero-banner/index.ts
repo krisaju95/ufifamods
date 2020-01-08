@@ -1,6 +1,7 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 // Main Web App Component
 import { WAHeroBannerComponent } from './wa-hero-banner.component';
@@ -14,6 +15,7 @@ import { WAImageLoaderDirectiveModule } from '../../../../directives/image-loade
     ],
     imports: [
         BrowserModule,
+        RouterModule,
         WAImageLoaderDirectiveModule
     ],
     exports: [WAHeroBannerComponent]

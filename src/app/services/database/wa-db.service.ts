@@ -89,4 +89,8 @@ export class WADBService {
         });
         return filteredPostsData;
     }
+
+    getSinglePost(url: string) {
+        return this.http.get('/assets/db/blog-posts/' + url);
+    }
 }

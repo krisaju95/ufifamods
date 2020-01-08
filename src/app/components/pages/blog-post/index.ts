@@ -8,13 +8,17 @@ import { WABlogPostComponent } from './wa-blog-post.component';
 // Additional Modules
 import { WAPostCardModule } from '../../common/post-card';
 
+// Directives
+import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
+
 @NgModule({
     declarations: [
         WABlogPostComponent
     ],
     imports: [
         BrowserModule,
-        WAPostCardModule
+        WAPostCardModule,
+        WAImageLoaderDirectiveModule
     ],
     exports: [WABlogPostComponent]
 })

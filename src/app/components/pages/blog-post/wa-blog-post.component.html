@@ -1,5 +1,15 @@
 <div class="wa-container wa-blog-post-container">
     <div class="wa-wrapper wa-blog-post-wrapper">
-
+        <div class="wa-blog-post-content">
+            <div class="wa-blog-post-title" [innerHTML]="postData['post-title']"></div>
+            <div class="wa-blog-post-date" [innerHTML]="postData['post-date']  | date: 'd MMMM, yyyy'"></div>
+            <div class="wa-blog-post-intro" [innerHTML]="postData['post-intro-text']"></div>
+            <div class="wa-blog-post-image-container">
+                <div *ngIf="postData['post-image']" class="wa-blog-post-image wa-lazy-loaded-img" imageLoader [attr.image-src]="postData['post-image']"></div>
+            </div>
+            <div class="wa-blog-post-body">
+                <div *ngFor="let para of postMainTextArray" class="wa-blog-post-para" [innerHTML]="para"></div>
+            </div>
+        </div>
     </div>
 </div>

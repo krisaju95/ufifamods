@@ -14,9 +14,9 @@ export class WAPageBlogComponent {
 
     loading: boolean = true;
 
-	blogPostList: Array<any> = [];
+    blogPostList: Array<any> = [];
 
-	filteredBlogPosts: Array<any> = [];
+    filteredBlogPosts: Array<any> = [];
 
     constructor(
         private WADBService: WADBService,
@@ -24,12 +24,22 @@ export class WAPageBlogComponent {
     ) { }
 
     ngOnInit() {
-        const pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
+        this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
             if (!state) {
                 this.blogPostList = this.WADBService.getBlogPostsList();
                 this.loading = false;
-                pageLoadingStateChange.unsubscribe();
             }
-        })
+        });
+    }
+
+    loadMoreResults() {
+        this.loading = true;
+        this.WALoaderService.togglePageLoadingState(true);
+        this.WALoaderService.togglePageLoadingState(false);
+        if ((this.blogPostList.length - this.numberOfPosts) >= 9) {
+            this.numberOfPosts += 9;
+        } else {
+            this.numberOfPosts = this.blogPostList.length;
+        }
     }
 }

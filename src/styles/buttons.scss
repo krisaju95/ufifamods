@@ -2,9 +2,9 @@
 
 // Colour Codes
 $text-color-primary: $color-code-white;
-$background-color-primary: $color-code-light-blue;
-$background-color-primary-hover: rgb(13, 152, 177);
-
+$background-color-primary: $color-code-blue;
+$background-color-primary-hover: $color-code-darkblue;
+$background-color-disabled: $color-code-darkergray;
 
 .wa-button {
     background-color: $color-code-darkgray;
@@ -36,6 +36,16 @@ $background-color-primary-hover: rgb(13, 152, 177);
 
         &:hover, &:focus {
             background-color: $background-color-primary-hover;
+        }
+    }
+
+    &[disabled], .wa-disabled-button {
+        background-color: $color-code-darkergray;
+        color: $text-color-primary;
+        cursor: not-allowed;
+
+        &:hover, &:focus {
+            background-color: $color-code-darkergray;
         }
     }
 }

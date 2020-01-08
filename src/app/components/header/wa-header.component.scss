@@ -19,6 +19,10 @@
             font-size: 3.2rem;
             font-weight: $font-weight-bold;
             color: $color-code-tertiary;
+
+            span {
+                cursor: pointer;
+            }
         }
 
         .wa-logo-container {
@@ -30,6 +34,10 @@
 
                 &.hidden {
                     transform: scale(0);
+                }
+
+                &.logo {
+                    cursor: pointer;
                 }
 
                 &.loader {
@@ -61,7 +69,7 @@
                         color: $color-code-primary;
                         
                         &.active {
-                            color: $color-code-light-blue;
+                            color: $color-code-blue;
                         }
                     }
                 }
