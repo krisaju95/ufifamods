@@ -1,5 +1,5 @@
 .wa-body {
     margin-top: 7.5rem;
-    min-height: 500px;
+    min-height: calc(100vh - 13.5rem);
     background: linear-gradient(to right, white, rgba(0, 0, 0, 0.05), white);
 }

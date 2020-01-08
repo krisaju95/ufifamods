@@ -1,0 +1,24 @@
+@import 'variables.scss';
+
+.wa-blog-page-container {
+    .wa-blog-page-wrapper {
+        .wa-blog-page-tiles {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .wa-blog-page-tile {
+                width: calc(33.33333% - 1rem);
+                padding-bottom: 2rem;
+
+                @media only screen and (max-width: 920px) {
+                    width: calc(50% - 1rem);
+                }
+
+                @media only screen and (max-width: 768px) {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

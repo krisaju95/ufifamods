@@ -21,6 +21,8 @@ export class WAPostCardComponent implements OnChanges {
 
 	date: string;
 
+	link: string;
+
 	ngOnChanges() {
 		this.post = this.post || {};
 		this.image = this.post['post-image'];
@@ -28,5 +30,6 @@ export class WAPostCardComponent implements OnChanges {
 		this.description = this.post['post-description'] || this.post['post-text-content'];
 		this.author = this.post['post-author'];
 		this.date = this.post['post-date'];
+		this.link = this.post['post-link'];
 	}
 }

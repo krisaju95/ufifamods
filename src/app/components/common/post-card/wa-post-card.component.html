@@ -13,7 +13,7 @@
             <div class="wa-post-date"></div>
         </div>
     </div>
-    <div *ngIf="!loading" class="wa-post-card-loaded-view">
+    <div *ngIf="!loading" class="wa-post-card-loaded-view" [routerLink]="link">
         <div *ngIf="image" class="wa-post-card-image-container">
             <div imageLoader class="wa-post-card-image wa-lazy-loaded-img" [attr.image-src]="image"></div>
         </div>

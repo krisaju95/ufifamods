@@ -5,7 +5,7 @@
     border-bottom: 1px solid $color-code-gray;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
     top: 0;
     left: 0;
 
@@ -56,8 +56,13 @@
                     padding: 0 2rem;
                     text-transform: uppercase;
 
-                    &.active {
-                        color: $color-code-light-blue;
+                    .wa-navbar-list-item-link {
+                        text-decoration: none;
+                        color: $color-code-primary;
+                        
+                        &.active {
+                            color: $color-code-light-blue;
+                        }
                     }
                 }
             }

@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IconDefinition, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { WALoaderService } from '../../services/loader/wa-loader.service';
+import { WAFeatureSwitches } from '../../constants/wa-feature-switches';
 
 @Component({
     selector: 'ufm-wa-header',
@@ -9,6 +10,8 @@ import { WALoaderService } from '../../services/loader/wa-loader.service';
 })
 
 export class WAHeaderComponent {
+
+    WAFeatureSwitches: any = WAFeatureSwitches;
 
     faSearch: IconDefinition = faSearch;
 

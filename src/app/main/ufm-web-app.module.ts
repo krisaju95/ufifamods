@@ -14,6 +14,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Page Modules
 import { WAPageHomeModule } from '../components/pages/home';
+import { WAPageBlogModule } from '../components/pages/blog';
+import { WABlogPostModule } from '../components/pages/blog-post';
 
 // Service Modules
 import { WADBServiceModule } from '../services/database';
@@ -30,6 +32,8 @@ import { WALoaderServiceModule } from '../services/loader';
 		UFMWebAppRoutingModule,
 		FontAwesomeModule,
 		WAPageHomeModule,
+		WAPageBlogModule,
+		WABlogPostModule,
 		WADBServiceModule,
 		WALoaderServiceModule
 	],

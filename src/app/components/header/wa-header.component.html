@@ -7,9 +7,16 @@
         </div>
         <div class="wa-navbar">
             <ul class="wa-navbar-list">
-                <li class="wa-navbar-list-item active">Home</li>
-                <li class="wa-navbar-list-item">Blog</li>
-                <li class="wa-navbar-list-item"><fa-icon [icon]="faSearch"></fa-icon></li>
+                <li class="wa-navbar-list-item">
+                    <a href="javascript: void(0)" routerLink="/" class="wa-navbar-list-item-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+                </li>
+                <li class="wa-navbar-list-item">
+                    <a href="javascript: void(0)" routerLink="/blog" class="wa-navbar-list-item-link" routerLinkActive="active">Blog</a>
+                </li>
+                <li *ngIf="WAFeatureSwitches.aboutUs" class="wa-navbar-list-item">
+                    <a href="javascript: void(0)" routerLink="/about-us" class="wa-navbar-list-item-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About Us</a>
+                </li>
+                <li *ngIf="WAFeatureSwitches.siteSearch" class="wa-navbar-list-item"><fa-icon [icon]="faSearch"></fa-icon></li>
             </ul>
         </div>
     </div>
