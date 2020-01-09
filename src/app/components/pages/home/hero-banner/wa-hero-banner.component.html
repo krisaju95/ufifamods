@@ -9,7 +9,7 @@
             <div class="wa-hero-banner-text">
                 <div class="wa-hero-banner-title" [innerHTML]="heroBannerPost['post-title']">
                 </div>
-                <div *ngIf="(heroBannerPost['post-description'] || heroBannerPost['post-text-content'] || '')" class="wa-hero-banner-description" [innerHTML]="((heroBannerPost['post-description'] || heroBannerPost['post-text-content'] || '') | slice : 0 : 100).trim() + '...'"></div>
+                <div *ngIf="description" class="wa-hero-banner-description" [innerHTML]="description + '...'"></div>
             </div>
             <div *ngIf="heroBannerPost['post-link']" class="wa-hero-banner-cta">
                 <button class="wa-button wa-ghost-button" [routerLink]="heroBannerPost['post-link']">Read More</button>
