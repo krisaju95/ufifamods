@@ -2,7 +2,7 @@
     <div class="wa-wrapper wa-hero-banner-wrapper">
         <div class="wa-hero-banner-content">
             <div *ngIf="heroBannerPost['post-author'] || heroBannerPost['post-date']" class="wa-hero-banner-post-info">
-                <span class="wa-profile-dp {{heroBannerPost['post-author']}}"></span>
+                <span class="wa-profile-dp  rounded {{heroBannerPost['post-author']}}"></span>
                 <span class="wa-profile-name">{{heroBannerPost['post-author']}}</span>
                 <span class="wa-post-date">{{heroBannerPost['post-date'] | date : 'dd MMM'}}</span>
             </div>

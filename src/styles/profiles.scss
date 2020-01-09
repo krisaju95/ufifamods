@@ -9,6 +9,10 @@
     background-repeat: no-repeat;
     display: inline-block;
 
+    &.rounded {
+        border-radius: 100%;
+    }
+
     &.krisaju95 {
         background-image: url($site-cloud-storage-images-team-members + 'krisaju95.jpg');
     }

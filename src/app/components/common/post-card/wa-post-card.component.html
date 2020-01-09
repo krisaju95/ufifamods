@@ -23,7 +23,7 @@
         </div>
         <div *ngIf="author || date" class="wa-post-card-footer">
             <div *ngIf="author" class="wa-post-credit">
-                <div class="wa-profile-dp {{author}}"></div>
+                <div class="wa-profile-dp rounded {{author}}"></div>
                 <div class="wa-post-author">{{author}}</div>
             </div>
             <div *ngIf="date" class="wa-post-date">{{date | date : 'dd MMM'}}</div>

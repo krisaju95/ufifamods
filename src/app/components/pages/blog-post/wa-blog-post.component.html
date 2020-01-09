@@ -7,6 +7,12 @@
             <div class="wa-blog-post-image-container">
                 <div *ngIf="imageURL" class="wa-blog-post-image wa-lazy-loaded-img" imageLoader [attr.image-src]="imageURL"></div>
             </div>
+            <div class="wa-blog-author-info-container">
+                <div class="wa-blog-author-info">
+                    <div class="wa-profile-dp rounded {{author}}"></div>
+                    <div class="wa-profile-handle" [innerHTML]="author"></div>
+                </div>
+            </div>
             <div class="wa-blog-post-body">
                 <div *ngFor="let para of postMainTextArray" class="wa-blog-post-para" [innerHTML]="para"></div>
             </div>

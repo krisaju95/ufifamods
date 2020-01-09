@@ -25,6 +25,8 @@ export class WABlogPostComponent {
 
     date: string = '';
 
+    author: string = '';
+
     intro: string = '';
 
     imageURL: string = '';
@@ -54,6 +56,7 @@ export class WABlogPostComponent {
     setPostData(post: any) {
         this.title = post['post-title'] || '';
         this.date = post['post-date'] || '';
+        this.author = post['post-author'] || 'krisaju95';
         this.intro = post['post-intro-text'] || '';
         this.imageURL = post['post-image'] || '';
         this.postMainTextArray = post['post-main-text-array'] || [];
