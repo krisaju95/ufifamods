@@ -1,0 +1,290 @@
+{
+    "post-date": "2019-08-28",
+    "post-category": "totw",
+    "post-title": "FIFA 19: Team of the Week - TOTW #44",
+    "post-intro-text": "​EA Sports have released the new Team of the Week for FIFA 19 Ultimate Team, and there are some fantastic inclusions.",
+    "post-main-text-array": [
+        "Some cards have 'quick sell' written all over them, but there are some which would likely be an upgrade in any team.",
+        "​Bayern Munich have scored five goals this season, and Robert Lewandowski has netted all five. He managed two on opening weekend, and added another three last time out against ​Schalke. The pick of the bunch was certainly his second - a delicious free-kick which flew right into the top corner.​",
+        "With ​Lionel Messi, ​Luis Suarez and ​Ousmane Dembele all out injured, ​Barcelona needed a hero against Real Betis. Fortunately, new signing Antoine Griezmann stepped up to net twice and grab an assist in their 5-2 victory.",
+        "On his 400th appearance for ​Manchester City, ​David Silva stole the show. The Spaniard created two goals and was heavily involved in another in their 3-1 win over ​Bournemouth, and he just looked to be on a completely different level."
+    ],
+    "post-last-para": "Did someone miss out in this squad? Manage to pack these guys in your recent packs? Let us know in the comments below!",
+    "post-link": "/blog/post/2019/08/28/fifa-19-team-of-the-week-totw-44",
+    "post-image": "/assets/images/blog/posts/2019/08/28/totw.jpg",
+    "post-category-list": [
+        "fifa19",
+        "fut",
+        "fifa 19 totw"
+    ],
+    "fut-squad": {
+        "fifaVersion": 19,
+        "squadType": "totw",
+        "players": {
+            "attackers": [
+                {
+                    "name": "Lewandowski",
+                    "id": 188545,
+                    "rating": 95,
+                    "position": "ST",
+                    "club": "21",
+                    "nationality": "37",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Griezmann",
+                    "id": 194765,
+                    "rating": 92,
+                    "position": "ST",
+                    "club": "241",
+                    "nationality": "18",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Muriel",
+                    "id": 199110,
+                    "rating": 85,
+                    "position": "ST",
+                    "club": "39",
+                    "nationality": "56",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                }
+            ],
+            "midfielders": [
+                {
+                    "name": "Insigne",
+                    "id": 198219,
+                    "rating": 90,
+                    "position": "LM",
+                    "club": "48",
+                    "nationality": "27",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Silva",
+                    "id": 168542,
+                    "rating": 91,
+                    "position": "CM",
+                    "club": "10",
+                    "nationality": "45",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Alberto",
+                    "id": 198706,
+                    "rating": 87,
+                    "position": "CM",
+                    "club": "46",
+                    "nationality": "45",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Carcela-González",
+                    "id": 184089,
+                    "rating": 84,
+                    "position": "RM",
+                    "club": "232",
+                    "nationality": "129",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                }
+            ],
+            "defenders": [
+                {
+                    "name": "Giménez",
+                    "id": 216460,
+                    "rating": 87,
+                    "position": "CB",
+                    "club": "240",
+                    "nationality": "60",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Matip",
+                    "id": 197061,
+                    "rating": 86,
+                    "position": "CB",
+                    "club": "9",
+                    "nationality": "103",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Guilavogui",
+                    "id": 198118,
+                    "rating": 82,
+                    "position": "CB",
+                    "club": "175",
+                    "nationality": "18",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                }
+            ],
+            "goalkeeper": {
+                "name": "Sirigu",
+                "id": 168435,
+                "rating": 87,
+                "position": "GK",
+                "club": "54",
+                "nationality": "27",
+                "quality": "gold",
+                "dynamicImage": false,
+                "type": "totw"
+            },
+            "substitutes": [
+                {
+                    "name": "Corona",
+                    "id": 156412,
+                    "rating": 81,
+                    "position": "GK",
+                    "club": "1878",
+                    "nationality": "83",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Erkin",
+                    "id": 171875,
+                    "rating": 81,
+                    "position": "LB",
+                    "club": "327",
+                    "nationality": "48",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Capelle",
+                    "id": 209781,
+                    "rating": 81,
+                    "position": "LM",
+                    "club": "1530",
+                    "nationality": "18",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Haller",
+                    "id": 205693,
+                    "rating": 84,
+                    "position": "ST",
+                    "club": "19",
+                    "nationality": "18",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Jesús Imaz",
+                    "id": 224146,
+                    "rating": 82,
+                    "position": "ST",
+                    "club": "110745",
+                    "nationality": "45",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Choupo-Moting",
+                    "id": 183569,
+                    "rating": 81,
+                    "position": "ST",
+                    "club": "73",
+                    "nationality": "103",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Cavaleiro",
+                    "id": 212267,
+                    "rating": 81,
+                    "position": "LW",
+                    "club": "110",
+                    "nationality": "38",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Dummett",
+                    "id": 204355,
+                    "rating": 80,
+                    "position": "CB",
+                    "club": "13",
+                    "nationality": "50",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Wanderson",
+                    "id": 229343,
+                    "rating": 79,
+                    "position": "RM",
+                    "club": "1474",
+                    "nationality": "54",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Yamaguchi",
+                    "id": 222987,
+                    "rating": 78,
+                    "position": "CDM",
+                    "club": "101146",
+                    "nationality": "163",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Maguire",
+                    "id": 167841,
+                    "rating": 75,
+                    "position": "CAM",
+                    "club": "106",
+                    "nationality": "42",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                },
+                {
+                    "name": "Strandberg",
+                    "id": 215965,
+                    "rating": 79,
+                    "position": "ST",
+                    "club": "705",
+                    "nationality": "46",
+                    "quality": "gold",
+                    "dynamicImage": false,
+                    "type": "totw"
+                }
+            ]
+        },
+        "useUFMCloudImages": false
+    },
+    "is-featured": true,
+    "feature-image": "/assets/images/blog/posts/2019/08/28/totw-fi.jpg"
+}
