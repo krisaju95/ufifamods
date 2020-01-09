@@ -7,6 +7,8 @@ import { WABlogPostComponent } from './wa-blog-post.component';
 
 // Additional Modules
 import { WAPostCardModule } from '../../common/post-card';
+import { WAProfileInfoPipeModule } from '../../../pipes/profile-info';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Directives
 import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
@@ -18,7 +20,9 @@ import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
     imports: [
         BrowserModule,
         WAPostCardModule,
-        WAImageLoaderDirectiveModule
+        WAImageLoaderDirectiveModule,
+        WAProfileInfoPipeModule,
+        FontAwesomeModule
     ],
     exports: [WABlogPostComponent]
 })

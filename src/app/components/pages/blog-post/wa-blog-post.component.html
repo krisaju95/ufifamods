@@ -10,11 +10,18 @@
             <div class="wa-blog-author-info-container">
                 <div class="wa-blog-author-info">
                     <div class="wa-profile-dp rounded {{author}}"></div>
-                    <div class="wa-profile-handle" [innerHTML]="author"></div>
+                    <div class="wa-profile-handle" [innerHTML]="author | profileInfo : 'handle'"></div>
+                    <div class="wa-profile-social-links">
+                        <fa-icon *ngIf="author | profileInfo : 'twitter'" [icon]="faTwitter"></fa-icon>
+                        <fa-icon *ngIf="author | profileInfo : 'website'" [icon]="faGlobe"></fa-icon>
+                    </div>
                 </div>
             </div>
             <div class="wa-blog-post-body">
                 <div *ngFor="let para of postMainTextArray" class="wa-blog-post-para" [innerHTML]="para"></div>
+            </div>
+            <div class="wa-cta-section" *ngIf="hasModDownloadLink">
+                <button class="wa-button wa-primary-button" (click)=download()>Download</button>
             </div>
         </div>
     </div>

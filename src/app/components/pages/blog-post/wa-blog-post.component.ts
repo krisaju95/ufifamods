@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WADBService } from '../../../services/database/wa-db.service';
 import { WALoaderService } from '../../../services/loader/wa-loader.service';
+import { IconDefinition, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
     selector: 'ufm-wa-blog-post',
@@ -33,6 +35,14 @@ export class WABlogPostComponent {
 
     postMainTextArray: Array<string> = [];
 
+    hasModDownloadLink: boolean = false;
+
+    downloadURL: string = '';
+
+    faTwitter: IconDefinition = faTwitter;
+
+    faGlobe: IconDefinition = faGlobe;
+
     constructor(
         private WADBService: WADBService,
         private WALoaderService: WALoaderService,
@@ -60,6 +70,8 @@ export class WABlogPostComponent {
         this.intro = post['post-intro-text'] || '';
         this.imageURL = post['post-image'] || '';
         this.postMainTextArray = post['post-main-text-array'] || [];
+        this.hasModDownloadLink = (post['show-mod-disclaimer'] == true || post['show-mod-disclaimer'] == 'true');
+        this.downloadURL = post['mod-download-link'];
         if (this.intro && this.postMainTextArray.length == 0) {
             this.postMainTextArray = [this.intro];
             this.intro = '';
@@ -81,5 +93,9 @@ export class WABlogPostComponent {
 
     getParam(paramName) {
         return this.route.snapshot.paramMap.get(paramName);
+    }
+
+    download() {
+        window.open(this.downloadURL, '_blank');
     }
 }
