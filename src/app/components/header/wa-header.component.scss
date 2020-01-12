@@ -140,7 +140,11 @@
                         padding: 0;
                         background-color: #F9F9F9;
                         margin-top: 0.5px;
-                        animation: mobileNavbarListItem ease 300ms;
+                        @include warpSpeedAhead();
+                        opacity: 0;
+                        transform: scale(0);
+                        animation: mobileNavbarListItem ease 300ms forwards;
+                        animation-delay: 300ms;
 
                         .wa-navbar-list-item-link {
                             display: block;
