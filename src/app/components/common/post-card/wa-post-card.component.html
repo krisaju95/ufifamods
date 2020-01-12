@@ -1,32 +1,36 @@
 <div class="wa-post-card-container">
     <div *ngIf="loading" class="wa-post-card-loading-view">
         <div class="wa-post-card-image"></div>
-        <div class="wa-post-card-text">
-            <div class="wa-post-card-title"></div>
-            <div class="wa-post-card-description"></div>
-        </div>
-        <div class="wa-post-card-footer">
-            <div class="wa-post-credit">
-                <div class="wa-profile-dp-loading"></div>
-                <div class="wa-post-author"></div>
+        <div class="wa-post-card-text-content">
+            <div class="wa-post-card-text">
+                <div class="wa-post-card-title"></div>
+                <div class="wa-post-card-description"></div>
             </div>
-            <div class="wa-post-date"></div>
+            <div class="wa-post-card-footer">
+                <div class="wa-post-credit">
+                    <div class="wa-profile-dp-loading"></div>
+                    <div class="wa-post-author"></div>
+                </div>
+                <div class="wa-post-date"></div>
+            </div>
         </div>
     </div>
     <div *ngIf="!loading" class="wa-post-card-loaded-view" [routerLink]="link">
         <div *ngIf="image" class="wa-post-card-image-container">
             <div imageLoader class="wa-post-card-image wa-lazy-loaded-img" [attr.image-src]="image"></div>
         </div>
-        <div class="wa-post-card-text">
-            <div class="wa-post-card-title" [innerHTML]="title"></div>
-            <div class="wa-post-card-description" [innerHTML]="(description | slice : 0 : 100).trim() + '...'"></div>
-        </div>
-        <div *ngIf="author || date" class="wa-post-card-footer">
-            <div *ngIf="author" class="wa-post-credit">
-                <div class="wa-profile-dp rounded {{author}}"></div>
-                <div class="wa-post-author">{{author}}</div>
+        <div class="wa-post-card-text-content">
+            <div class="wa-post-card-text">
+                <div class="wa-post-card-title" [innerHTML]="title"></div>
+                <div class="wa-post-card-description" [innerHTML]="(description | slice : 0 : 100).trim() + '...'"></div>
             </div>
-            <div *ngIf="date" class="wa-post-date">{{date | date : 'dd MMM'}}</div>
+            <div *ngIf="author || date" class="wa-post-card-footer">
+                <div *ngIf="author" class="wa-post-credit">
+                    <div class="wa-profile-dp rounded {{author}}"></div>
+                    <div class="wa-post-author">{{author}}</div>
+                </div>
+                <div *ngIf="date" class="wa-post-date">{{date | date : 'dd MMM'}}</div>
+            </div>
         </div>
     </div>
 </div>

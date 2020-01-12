@@ -21,4 +21,24 @@
             }
         }
     }
+
+    @media only screen and (max-width: 1023px) {
+        .wa-posts-grid-wrapper {
+            .wa-posts-grid-content {
+                padding: 2.5rem 0;
+                
+                .wa-posts-grid-title {
+                    text-align: center;
+                }
+    
+                .wa-posts-grid-tiles {
+                    display: block;
+    
+                    .wa-posts-grid-tile {
+                        width: 100%
+                    }
+                }
+            }
+        }
+    }
 }

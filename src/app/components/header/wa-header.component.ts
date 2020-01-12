@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import { IconDefinition, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition, faSearch, faBars } from '@fortawesome/free-solid-svg-icons';
 import { WALoaderService } from '../../services/loader/wa-loader.service';
+import { WARootScope } from '../../services/globals/wa-rootscope';
 import { WAFeatureSwitches } from '../../constants/wa-feature-switches';
 
 @Component({
@@ -15,10 +16,13 @@ export class WAHeaderComponent {
 
     faSearch: IconDefinition = faSearch;
 
+    faBars: IconDefinition = faBars;
+
     loading: boolean = true;
 
     constructor(
-        private WALoaderService: WALoaderService
+        private WALoaderService: WALoaderService,
+        public WARootScope: WARootScope
     ) { }
 
     ngOnInit() {
@@ -26,5 +30,9 @@ export class WAHeaderComponent {
             const waitTime: number = state ? 0 : 1500;
             setTimeout(() => this.loading = state, waitTime);
         });
+    }
+
+    toggleNavbar(state: boolean): void {
+        this.WARootScope.set('mobileNavbarOpened', state);
     }
 }

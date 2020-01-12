@@ -8,7 +8,8 @@
             <img class="wa-logo loader" [class.hidden]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
         </div>
         <div class="wa-navbar">
-            <ul class="wa-navbar-list">
+            <fa-icon [icon]="faBars" *ngIf="WARootScope.isMobileViewport" (click)="toggleNavbar(!WARootScope.mobileNavbarOpened)"></fa-icon>
+            <ul class="wa-navbar-list" *ngIf="WARootScope.isDesktopViewport || WARootScope.mobileNavbarOpened">
                 <li class="wa-navbar-list-item">
                     <a href="javascript: void(0)" routerLink="/" class="wa-navbar-list-item-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
                 </li>

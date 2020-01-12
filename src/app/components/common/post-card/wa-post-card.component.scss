@@ -109,11 +109,52 @@
                 top: -1.4rem;
             }
         }
+
+        @media only screen and (max-width: 1023px) {
+            display: flex;
+
+            .wa-post-card-image {
+                width: 40%;
+                height: 13.5rem;
+            }
+
+            .wa-post-card-text-content {
+                padding-bottom: 6.5rem;
+                position: relative;
+                flex: 1;
+
+                .wa-post-card-text {
+                    min-height: 45%;
+
+                    .wa-post-card-description {
+                        display: none;
+                    }
+                }
+
+                .wa-post-card-footer {
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: calc(100% - 4rem);
+
+                    .wa-post-credit {
+                        display: inline-block;
+        
+                        .wa-post-author {
+                            width: 5rem;
+                        }
+                    }
+
+                    .wa-post-date {
+                        border-left-width: 4rem;
+                    }
+                }
+            }
+        }
     }
 
     .wa-post-card-loaded-view {
         cursor: pointer;
-        padding-bottom: 6.5rem;
 
         .wa-post-card-image-container {
             position: relative;
@@ -126,7 +167,7 @@
             background-color: $color-code-lightgray;
             background-image: linear-gradient($color-code-lightgray, $color-code-lightgray);
             background-size: cover;
-            background-position: center;
+            background-position: center center;
             height: 20rem;
             width: 100%;
 
@@ -143,52 +184,57 @@
             }
         }
 
-        .wa-post-card-text {
-            padding: 2rem;
-            padding-bottom: 3rem;
+        .wa-post-card-text-content {
+            position: relative;
+            padding-bottom: 6.5rem;
 
-            .wa-post-card-title {
-                font-size: 1.8rem;
-                font-weight: $font-weight-medium;
-                margin-bottom: 2rem;
-                transition: color ease 300ms;
+            .wa-post-card-text {
+                padding: 2rem;
+                padding-bottom: 3rem;
+    
+                .wa-post-card-title {
+                    font-size: 1.8rem;
+                    font-weight: $font-weight-medium;
+                    transition: color ease 300ms;
+                }
+    
+                .wa-post-card-description {
+                    font-size: 1.4rem;
+                    line-height: 2.1rem;
+                    margin-top: 2rem;
+                }
             }
-
-            .wa-post-card-description {
+    
+            .wa-post-card-footer {
                 font-size: 1.4rem;
-                line-height: 2.1rem;
-            }
-        }
-
-        .wa-post-card-footer {
-            font-size: 1.4rem;
-            padding: 2rem;
-            border-top: 1px solid $color-code-lightgray;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: calc(100% - 4rem);
-            height: 2.5rem;
-
-            .wa-post-credit {
+                padding: 2rem;
+                border-top: 1px solid $color-code-lightgray;
                 display: flex;
                 align-items: center;
-
-                .wa-profile-dp {
-                    height: 2.5rem;
-                    width: 2.5rem;
+                justify-content: space-between;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: calc(100% - 4rem);
+                height: 2.5rem;
+    
+                .wa-post-credit {
+                    display: flex;
+                    align-items: center;
+    
+                    .wa-profile-dp {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                    }
+    
+                    .wa-post-author {
+                        padding-left: 1rem;
+                    }
                 }
-
-                .wa-post-author {
-                    padding-left: 1rem;
+    
+                .wa-post-date {
+                    font-weight: $font-weight-light;
                 }
-            }
-
-            .wa-post-date {
-                font-weight: $font-weight-light;
             }
         }
 
@@ -205,6 +251,51 @@
             .wa-post-card-text {
                 .wa-post-card-title {
                     color: $color-code-blue;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        margin-bottom: 2rem;
+
+        .wa-post-card-loaded-view {
+            display: flex;
+
+            .wa-post-card-image-container {
+                max-width: 40%;
+                flex: 1;
+                height: 100%;
+
+                .wa-post-card-image {
+                    height: 16rem;
+
+                    &:after {
+                        top: 0;
+                        left: 100%;
+                        width: 2px;
+                        height: 100%;
+                    }
+                }
+            }
+
+            .wa-post-card-text-content {
+                flex: 1;
+
+                .wa-post-card-text {
+                    padding: 1.5rem;
+        
+                    .wa-post-card-title {
+                        font-size: 1.6rem;
+                    }
+
+                    .wa-post-card-description {
+                        display: none;
+                    }
+                }
+
+                .wa-post-card-footer {
+                    padding: 1.5rem;
                 }
             }
         }

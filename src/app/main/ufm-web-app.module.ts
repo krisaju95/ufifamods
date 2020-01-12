@@ -20,6 +20,7 @@ import { WABlogPostModule } from '../components/pages/blog-post';
 // Service Modules
 import { WADBServiceModule } from '../services/database';
 import { WALoaderServiceModule } from '../services/loader';
+import { WARootScopeModule } from '../services/globals';
 
 @NgModule({
 	declarations: [
@@ -35,7 +36,8 @@ import { WALoaderServiceModule } from '../services/loader';
 		WAPageBlogModule,
 		WABlogPostModule,
 		WADBServiceModule,
-		WALoaderServiceModule
+		WALoaderServiceModule,
+		WARootScopeModule
 	],
 	providers: [],
 	bootstrap: [UFMWebAppComponent]
