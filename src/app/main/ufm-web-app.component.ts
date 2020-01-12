@@ -33,4 +33,8 @@ export class UFMWebAppComponent {
 			}
 		})
 	}
+
+	closeNavbar() {
+		this.WARootScope.set('mobileNavbarOpened', false);
+	}
 }

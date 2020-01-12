@@ -5,6 +5,17 @@
     transition: all ease 300ms;
 
     &.blur {
+        background: rgba(0, 0, 0, 0.1);
         filter: blur(5px);
+        position: relative;
+
+        .wa-body-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
     }
 }

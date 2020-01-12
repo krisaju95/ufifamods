@@ -10,20 +10,27 @@
             .wa-blog-page-tile {
                 width: calc(33.33333% - 1rem);
                 padding-bottom: 2rem;
-
-                @media only screen and (max-width: 920px) {
-                    width: calc(50% - 1rem);
-                }
-
-                @media only screen and (max-width: 768px) {
-                    width: 100%;
-                }
             }
         }
 
         .wa-blog-page-footer {
             text-align: center;
             padding: 5rem 0;
+        }
+    }
+
+    @media only screen and (max-width: 1023px) {
+        .wa-blog-page-wrapper {
+            .wa-blog-page-tiles {
+                display: block;
+                flex-wrap: nowrap;
+                justify-content: unset;
+    
+                .wa-blog-page-tile {
+                    width: 100%;
+                    padding-bottom: 0;
+                }
+            }
         }
     }
 }

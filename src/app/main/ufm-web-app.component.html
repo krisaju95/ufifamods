@@ -2,6 +2,7 @@
     <ufm-wa-header></ufm-wa-header>
 </div>
 <div class="wa-body" [class.blur]="WARootScope.mobileNavbarOpened">
+    <div class="wa-body-overlay" (click)="closeNavbar()"></div>
     <router-outlet></router-outlet>
 </div>
 <div class="wa-footer">

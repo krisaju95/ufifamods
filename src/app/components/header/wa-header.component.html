@@ -7,8 +7,11 @@
             <img class="wa-logo logo" [class.hidden]="loading" routerLink="/" alt="Ultimate FIFA Mods Logo" src="/assets/images/header/logo.png">
             <img class="wa-logo loader" [class.hidden]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
         </div>
-        <div class="wa-navbar">
-            <fa-icon [icon]="faBars" *ngIf="WARootScope.isMobileViewport" (click)="toggleNavbar(!WARootScope.mobileNavbarOpened)"></fa-icon>
+        <div class="wa-navbar" [tabindex]="WARootScope.isMobileViewport ? 0 : -1">
+            <div class="wa-navbar-toggle" *ngIf="WARootScope.isMobileViewport" (click)="toggleNavbar(!WARootScope.mobileNavbarOpened)">
+                <fa-icon [icon]="faBars" [class.hidden]="WARootScope.mobileNavbarOpened"></fa-icon>
+                <fa-icon [icon]="faTimes" class="wa-navbar-close-icon" [class.hidden]="!WARootScope.mobileNavbarOpened"></fa-icon>
+            </div>
             <ul class="wa-navbar-list" *ngIf="WARootScope.isDesktopViewport || WARootScope.mobileNavbarOpened">
                 <li class="wa-navbar-list-item">
                     <a href="javascript: void(0)" routerLink="/" class="wa-navbar-list-item-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
