@@ -1,4 +1,5 @@
 @import 'variables.scss';
+@import 'animations.scss';
 
 .wa-header-container {
     background-color: $color-code-white;
@@ -132,11 +133,13 @@
                     display: block;
                     top: 7.5rem;
                     left: 0;
+                    @include warpSpeedAhead();
                     filter: drop-shadow(0px 15px 5px rgba(0, 0, 0, 0.1));
 
                     .wa-navbar-list-item {
                         padding: 0;
                         background-color: #F9F9F9;
+                        margin-top: 0.5px;
                         animation: mobileNavbarListItem ease 300ms;
 
                         .wa-navbar-list-item-link {
