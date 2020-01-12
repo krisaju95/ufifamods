@@ -7,6 +7,8 @@ export class WARootScope {
 
     isMobileViewport: boolean = false;
 
+    mobileNavbarOpened: boolean = false;
+
     constructor() {
         this.setViewportIdentifiers();
         this.initViewportChangeListeners();
