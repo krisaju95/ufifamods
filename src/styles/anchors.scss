@@ -1,10 +1,31 @@
 @import 'variables.scss';
 
 a {
+    position: relative;
     color: $color-code-blue;
+    outline: none;
     transition: color ease 250ms;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: -1rem;
+        top: -1rem;
+        width: calc(100% + 2rem);
+        height: calc(100% + 2rem);
+        background-color: rgba(255, 255, 255, 0.2);
+        border-radius: 1000px;
+        transform: scale(0);
+        transition: transform ease 200ms;
+    }
 
     &:hover {
         color: $color-code-darkblue;
+    }
+
+    &:focus {
+        &:before {
+            transform: scale(1);
+        }
     }
 }

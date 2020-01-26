@@ -28,7 +28,7 @@ export class WAPostCardComponent implements OnChanges {
 		this.image = this.post['post-image'];
 		this.title = this.post['post-title'];
 		this.description = this.post['post-description'] || this.post['post-text-content'];
-		this.author = this.post['post-author'];
+		this.author = this.post['author'];
 		this.date = this.post['post-date'];
 		this.link = this.post['post-link'];
 	}

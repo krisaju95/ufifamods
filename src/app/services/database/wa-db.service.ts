@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { WALoaderService } from '../loader/wa-loader.service';
+import { Airtable, Base } from 'ngx-airtable';
+import { WABlogPost } from '../../interfaces/blog-post.interface';
+import { Subscription } from 'rxjs';
 
 @Injectable()
 export class WADBService {
@@ -11,22 +14,49 @@ export class WADBService {
 
     constructor(
         private http: HttpClient,
+        private airtable: Airtable,
         private WALoaderService: WALoaderService
     ) { }
 
     loadBlogData(): void {
-        const requestHeaders: HttpHeaders = new HttpHeaders();
-        requestHeaders.append('pragma', 'no-cache');
-        requestHeaders.append('cache-control', 'no-cache');
-        this.WALoaderService.togglePageLoadingState(true);
-        this.http.get("/assets/db/blog-posts-list", { headers: requestHeaders }).subscribe((data: Response) => {
-            this.blogData = data;
-            this.blogPostsList = this.createBlogPostsArray(data);
+        const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
+        const table: Subscription = base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
+            pageSize: 20,
+            sort: [{
+                field: 'Date',
+                direction: 'desc'
+            }]
+        }).firstPage().subscribe((data) => {
+            console.log(data);
+            this.blogPostsList = this.createBlogPostList(data);
             this.WALoaderService.togglePageLoadingState(false);
-        }, (error: Response) => {
-            console.log(error);
+            table.unsubscribe();
         });
+    }
 
+    createBlogPostList(records: any): WABlogPost[] {
+        const blogPostList: WABlogPost[] = [];
+        for (let record of records) {
+            const post: any = record['fields'];
+            const blogPost: WABlogPost = {
+                public: post['Public'],
+                featured: post['Featured'],
+                url: post['URL'],
+                title: post['Title'],
+                date: post['Date'],
+                thumbnail: post['Thumbnail'],
+                category: post['Primary Category'],
+                tags: post['Categories'],
+                description: post['Brief Description'],
+                body: post['Post Body'],
+                author: post['Author'],
+                contributors: post['Contributors'],
+                downloadink: post['Download Link'],
+                starheads: post['Custom Star-head(s)']
+            };
+            blogPostList.push(blogPost);
+        }
+        return blogPostList;
     }
 
     getBlogData(): object {

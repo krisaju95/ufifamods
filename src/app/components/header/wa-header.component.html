@@ -1,29 +1,25 @@
 <div class="wa-container wa-header-container">
     <div class="wa-wrapper wa-header-wrapper">
-        <div class="wa-title">
-            <span routerLink="/">ufifamods</span>
-        </div>
-        <div class="wa-logo-container">
-            <img class="wa-logo logo" [class.hidden]="loading" routerLink="/" alt="Ultimate FIFA Mods Logo" src="/assets/images/header/logo.png">
-            <img class="wa-logo loader" [class.hidden]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
-        </div>
-        <div class="wa-navbar" [tabindex]="WARootScope.isMobileViewport ? 0 : -1">
-            <div class="wa-navbar-toggle" *ngIf="WARootScope.isMobileViewport" (click)="toggleNavbar(!WARootScope.mobileNavbarOpened)">
-                <fa-icon [icon]="faBars" [class.hidden]="WARootScope.mobileNavbarOpened"></fa-icon>
-                <fa-icon [icon]="faTimes" class="wa-navbar-close-icon" [class.hidden]="!WARootScope.mobileNavbarOpened"></fa-icon>
+        <div class="wa-header-content">
+            <div class="wa-title">
+                <a class="wa-logo" routerLink="/">
+                    <img alt="Ultimate FIFA Mods" src="/assets/images/header/logo-min.png">
+                </a>
             </div>
-            <ul class="wa-navbar-list" *ngIf="WARootScope.isDesktopViewport || WARootScope.mobileNavbarOpened">
-                <li class="wa-navbar-list-item">
-                    <a href="javascript: void(0)" routerLink="/" class="wa-navbar-list-item-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-                </li>
-                <li class="wa-navbar-list-item">
-                    <a href="javascript: void(0)" routerLink="/blog" class="wa-navbar-list-item-link" routerLinkActive="active">Blog</a>
-                </li>
-                <li *ngIf="WAFeatureSwitches.aboutUs" class="wa-navbar-list-item">
-                    <a href="javascript: void(0)" routerLink="/about-us" class="wa-navbar-list-item-link" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">About Us</a>
-                </li>
-                <li *ngIf="WAFeatureSwitches.siteSearch" class="wa-navbar-list-item"><fa-icon [icon]="faSearch"></fa-icon></li>
-            </ul>
+            <div class="wa-loader-container">
+                <img class="wa-loader" [class.hidden]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
+            </div>
+            <div class="wa-navbar">
+                <div class="wa-navbar-toggle" (click)="toggleNavbar(!WARootScope.mobileNavbarOpened)">
+                    <ng-container *ngIf="WARootScope.isMobileViewport">
+                        <fa-icon [icon]="faBars" [class.hidden]="WARootScope.mobileNavbarOpened"></fa-icon>
+                        <fa-icon [icon]="faTimes" class="wa-navbar-close-icon" [class.hidden]="!WARootScope.mobileNavbarOpened"></fa-icon>
+                    </ng-container>
+                    <ng-container *ngIf="WARootScope.isDesktopViewport">
+                        MENU
+                    </ng-container>
+                </div>
+            </div>
         </div>
     </div>
 </div>
