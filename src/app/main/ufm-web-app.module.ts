@@ -11,6 +11,8 @@ import { UFMWebAppComponent } from './ufm-web-app.component';
 // Additional Modules
 import { WAHeaderComponent, WAFooterComponent } from '../components';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { NgxAirtableModule } from 'ngx-airtable';
+import { HttpModule } from "@angular/http";
 
 // Page Modules
 import { WAPageHomeModule } from '../components/pages/home';
@@ -37,7 +39,9 @@ import { WARootScopeModule } from '../services/globals';
 		WABlogPostModule,
 		WADBServiceModule,
 		WALoaderServiceModule,
-		WARootScopeModule
+		WARootScopeModule,
+		HttpModule,
+		NgxAirtableModule.forRoot({ apiKey: "keyopGfRO9giAuXLj" })
 	],
 	providers: [],
 	bootstrap: [UFMWebAppComponent]

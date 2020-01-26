@@ -4,6 +4,7 @@ import { WALoaderService } from '../services/loader/wa-loader.service';
 import { WARootScope } from '../services/globals/wa-rootscope';
 import { Router, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { Airtable } from 'ngx-airtable';
 
 @Component({
 	selector: 'ufm-web-app',
@@ -16,11 +17,18 @@ export class UFMWebAppComponent {
 		private WADBService: WADBService,
 		private WALoaderService: WALoaderService,
 		public WARootScope: WARootScope,
-		private router: Router
+		private router: Router,
+		private airtable: Airtable
 	) { }
 
 	ngOnInit() {
 		let routerEventSubscription: Subscription;
+		let base = this.airtable.base('appGpn6FEIJsIQem3');
+		let table = base.table({
+			tableId: "tblOmzCatsiKekwAX"
+		}).select().all().subscribe((data) => {
+			console.log(data);
+		});
 		this.WADBService.loadBlogData();
 		this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
 			if (!state && !routerEventSubscription) {
