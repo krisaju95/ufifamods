@@ -1,3 +1,32 @@
+@import 'variables.scss';
+
+h1, h2, h3 {
+    font-family: 'Teko', sans-serif;
+    font-weight: $font-weight-normal;
+    text-transform: uppercase;
+
+    .wa-title-bold, &.wa-title-bold {
+        font-weight: $font-weight-bold;
+    }
+
+    .wa-title-highlight, &.wa-title-highlight {
+        color: $color-code-blue;
+    }
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
 .wa-page-title {
     font-size: 3.2rem;
     text-align: center;

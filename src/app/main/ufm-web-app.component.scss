@@ -1,23 +1,5 @@
 @import 'animations.scss';
 
 .wa-body {
-    min-height: calc(100vh - 13.5rem);
-    background: linear-gradient(to right, white, rgba(0, 0, 0, 0.05), white);
-    @include warpSpeedAhead();
     transition: all ease 300ms;
-
-    &.blur {
-        filter: blur(5px);
-        position: relative;
-
-        .wa-body-overlay {
-            background: rgba(0, 0, 0, 0.1);
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-        }
-    }
 }

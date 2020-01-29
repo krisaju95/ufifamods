@@ -27,7 +27,6 @@ export class WADBService {
                 direction: 'desc'
             }]
         }).firstPage().subscribe((data) => {
-            console.log(data);
             this.blogPostsList = this.createBlogPostList(data);
             this.WALoaderService.togglePageLoadingState(false);
             table.unsubscribe();
@@ -81,24 +80,24 @@ export class WADBService {
         const filteredPostsData: Array<any> = [];
         const featuredPostsData: Array<any> = [];
         blogPosts.some((blogPost: any) => {
-            if (blogPost['is-featured']) {
+            if (blogPost['featured']) {
                 featuredPostsData.push(blogPost);
             }
             switch (category) {
                 case 'featured': {
-                    if (blogPost['is-featured']) {
+                    if (blogPost['featured']) {
                         filteredPostsData.push(blogPost);
                     }
                     break;
                 }
                 case 'featured|!first': {
-                    if (featuredPostsData.length > 1 && blogPost['is-featured']) {
+                    if (featuredPostsData.length > 1 && blogPost['featured']) {
                         filteredPostsData.push(blogPost);
                     }
                     break;
                 }
                 case '!featured': {
-                    if (!blogPost['is-featured'] || featuredPostsData.length > 4) {
+                    if (!blogPost['featured'] || featuredPostsData.length > 4) {
                         filteredPostsData.push(blogPost);
                     }
                     break;
