@@ -25,7 +25,8 @@ export class WADBService {
             sort: [{
                 field: 'Date',
                 direction: 'desc'
-            }]
+            }],
+            filterByFormula: "Public=TRUE()"
         }).firstPage().subscribe((data) => {
             this.blogPostsList = this.createBlogPostList(data);
             this.WALoaderService.togglePageLoadingState(false);
@@ -36,26 +37,33 @@ export class WADBService {
     createBlogPostList(records: any): WABlogPost[] {
         const blogPostList: WABlogPost[] = [];
         for (let record of records) {
-            const post: any = record['fields'];
-            const blogPost: WABlogPost = {
-                public: post['Public'],
-                featured: post['Featured'],
-                url: post['URL'],
-                title: post['Title'],
-                date: post['Date'],
-                thumbnail: post['Thumbnail'],
-                category: post['Primary Category'],
-                tags: post['Categories'],
-                description: post['Brief Description'],
-                body: post['Post Body'],
-                author: post['Author'],
-                contributors: post['Contributors'],
-                downloadink: post['Download Link'],
-                starheads: post['Custom Star-head(s)']
-            };
+            const blogPost: WABlogPost = this.createBlogPost(record);
             blogPostList.push(blogPost);
         }
         return blogPostList;
+    }
+
+    createBlogPost(record: any): WABlogPost {
+        const post: any = record['fields'];
+        return {
+            id: record['id'],
+            public: post['Public'],
+            featured: post['Featured'],
+            url: post['URL'],
+            title: post['Title'],
+            date: post['Date'],
+            thumbnail: post['Thumbnail'],
+            category: post['Primary Category'],
+            tags: post['Categories'],
+            description: post['Brief Description'],
+            body: post['Post Body'],
+            author: post['Author'],
+            contributors: post['Contributors'],
+            downloadLink: post['Download Link'],
+            linkType: post['Link Type'],
+            starheads: post['Custom Star-head(s)'],
+            screenshots: post['Screenshots']
+        };
     }
 
     getBlogData(): object {
@@ -120,6 +128,14 @@ export class WADBService {
     }
 
     getSinglePost(url: string) {
-        return this.http.get('/assets/db/blog-posts/' + url);
+        const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
+        return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
+            pageSize: 1,
+            filterByFormula: ("AND(url='" + url + "', Public=TRUE())")
+        }).firstPage().map((posts: Array<any>) => {
+            return posts.map((post: any) => {
+                return this.createBlogPost(post);
+            })
+        });
     }
 }

@@ -9,7 +9,7 @@ const routes: Routes = [
 	{ path: 'home', redirectTo: '' },
 	{ path: 'blog', pathMatch: 'full', component: WAPageBlogComponent },
 	{ path: 'blog/pages/:pageNumber', pathMatch: 'full', component: WAPageBlogComponent },
-	{ path: 'blog/post/:year/:month/:date/:title', component: WABlogPostComponent },
+	{ path: 'blog/post/:year/:month/:day/:title', component: WABlogPostComponent },
 ];
 
 @NgModule({

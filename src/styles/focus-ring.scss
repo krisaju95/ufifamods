@@ -1,0 +1,43 @@
+@import 'variables.scss';
+
+a, button {
+    position: relative;
+
+    &:after {
+        content: "";
+        pointer-events: none;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 2px solid $color-code-yellow;
+        border-radius: 0.5rem;
+        box-sizing: border-box;
+        opacity: 0;
+        transform: scale(1);
+        transition: all ease 200ms;
+    }
+
+    &:focus {
+        &:after {
+            opacity: 1;
+            transform: scale(1.025);
+        }
+    }
+
+    &.wa-rounded-focus-ring {
+        &:after {
+            border-radius: 10rem;
+        }
+    }
+}
+
+button {
+    &:after {
+        left: -0.5rem;
+        top: -0.5rem;
+        width: calc(100% + 1rem);
+        height: calc(100% + 1rem);
+    }
+}

@@ -1,5 +1,7 @@
 @import 'variables.scss';
 
+$blog-content-width: 800px;
+
 .wa-blog-post-hero-container {
     background-color: #0B1218;
     background-image: url('/assets/images/hero-banner/hero-banner-min.jpg');
@@ -7,26 +9,48 @@
     background-size: cover;
     background-repeat: no-repeat;
     padding-top: 20rem;
-    margin-bottom: 25rem;
+    margin-bottom: 15rem;
     color: $color-code-white;
 
     .wa-blog-post-hero-wrapper {
         position: relative;
-        min-height: calc(100vh - 35rem);
+        min-height: calc(100vh - 20rem);
 
         .wa-blog-post-hero-content {
-            .wa-blog-post-hero-title {
+            padding-bottom: 30rem;
+
+            .wa-blog-post-primary-category {
+                color: $color-code-white;
+                display: inline-block;
+                text-transform: uppercase;
+                padding: 1rem 2rem;
+                font-size: 1.8rem;
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 5rem;
+                font-weight: 600;
+            }
+
+            ::ng-deep  .wa-blog-post-hero-title {
+                margin-top: 4rem;
+                font-weight: 300;
+
+                span {
+                    display: inline-block;
+                    margin-right: 1rem;
+                }
+
                 .wa-title-highlight {
                     font-size: 7.5rem;
+                    font-weight: 400;
                     letter-spacing: 0.5rem;
-                    font-style: italic;;
+                    font-style: italic;
                 }
             }
 
             .wa-blog-post-hero-image {
                 position: absolute;
-                top: calc(100% - 20rem);
-                max-width: 800px;
+                top: calc(100% - 30rem);
+                max-width: $blog-content-width;
                 width: calc(100% - 4rem);
                 height: 45rem;
                 background-size: cover;
@@ -41,7 +65,84 @@
     .wa-blog-post-body-wrapper {
         .wa-blog-post-body-content {
             padding: 2.5rem 0;
-            max-width: 800px;
+            max-width: $blog-content-width;
+
+            .wa-blog-post-info {
+                font-size: 1.6rem;
+                padding-bottom: 2rem;
+
+                .wa-blog-post-author {
+                    font-weight: $font-weight-medium;
+                }
+
+                .wa-blog-post-date {
+                    color: $color-code-darkergray;
+                }
+            }
+
+            .wa-blog-post-contributors-wrapper {
+                margin: 5rem 0;
+
+                .wa-blog-post-contributors {
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    .wa-blog-post-contributor {
+                        font-size: 1.6rem;
+                        font-weight: $font-weight-medium;
+                        padding: 2rem;
+                        margin-right: 1.5rem;
+                        border-radius: 0.5rem;
+                        background-color: $color-code-white;
+                        border: 1px solid $color-code-lightgray;
+                        text-align: center;
+                        line-height: 3rem;
+                        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+
+            .wa-blog-post-screenshots-wrapper {
+                margin: 5rem 0;
+
+                .wa-blog-post-screenshots {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .wa-blog-post-screenshot {
+                        display: inline-block;
+                        margin-bottom: 0.25rem;
+                        width: 33%;
+    
+                        img {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+
+            .wa-blog-post-download-wrapper {
+                text-align: right;
+
+                .wa-blog-post-download-link-type {
+                    padding: 1rem;
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
+.wa-blog-post-disqus-container {
+    .wa-blog-post-disqus-wrapper {
+        .wa-blog-post-disqus-thread {
+            padding: 2.5rem;
+            max-width: $blog-content-width;
+            border-radius: 5px;
+            background-color: $color-code-white;
+            border: 1px solid $color-code-gray;
+            box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.1);
         }
     }
 }

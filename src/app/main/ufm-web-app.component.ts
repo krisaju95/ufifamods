@@ -12,6 +12,8 @@ import { Subscription } from 'rxjs';
 })
 export class UFMWebAppComponent {
 
+	showFocusRing: boolean = false;
+
 	constructor(
 		private WADBService: WADBService,
 		private WALoaderService: WALoaderService,

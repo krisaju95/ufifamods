@@ -1,12 +1,14 @@
 @import 'variables.scss';
 
 h1, h2, h3 {
+    margin: 0;
+    margin-bottom: 2rem;
     font-family: 'Teko', sans-serif;
-    font-weight: $font-weight-normal;
+    font-weight: 400;
     text-transform: uppercase;
 
     .wa-title-bold, &.wa-title-bold {
-        font-weight: $font-weight-bold;
+        font-weight: 500;
     }
 
     .wa-title-highlight, &.wa-title-highlight {

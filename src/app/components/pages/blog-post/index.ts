@@ -9,9 +9,12 @@ import { WABlogPostComponent } from './wa-blog-post.component';
 import { WAPostCardModule } from '../../common/post-card';
 import { WAProfileInfoPipeModule } from '../../../pipes/profile-info';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WAPostsGridModule } from '../home/posts-grid';
+import { DisqusModule } from "ngx-disqus";
 
 // Directives
 import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
+import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
 
 @NgModule({
     declarations: [
@@ -22,7 +25,10 @@ import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
         WAPostCardModule,
         WAImageLoaderDirectiveModule,
         WAProfileInfoPipeModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        WAPostsGridModule,
+        WABlogPostFormatPipeModule,
+        DisqusModule.forRoot('ufifamods')
     ],
     exports: [WABlogPostComponent]
 })
