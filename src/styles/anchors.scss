@@ -1,12 +1,13 @@
 @import 'variables.scss';
 
 a {
+    cursor: pointer;
     position: relative;
-    color: $color-code-blue;
+    color: $color-code-primary;
     outline: none;
     transition: color ease 250ms;
 
     &:hover {
-        color: $color-code-darkblue;
+        color: $color-code-tertiary;
     }
 }

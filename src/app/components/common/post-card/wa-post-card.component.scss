@@ -198,6 +198,22 @@
             .wa-post-card-text {
                 padding: 2rem;
                 padding-bottom: 3rem;
+
+                .wa-post-card-tags {
+                    display: flex;
+                    color: $color-code-yellow;
+                    font-size: 1.4rem;
+                    margin-bottom: 2rem;
+                    font-weight: $font-weight-medium;
+                    text-transform: uppercase;
+
+                    .wa-post-card-tag {
+                        padding: 0.5rem 1.5rem;
+                        margin-right: 1rem;
+                        background-color: $color-code-primary;
+                        border-radius: 5rem;
+                    }
+                }
     
                 .wa-post-card-title {
                     font-size: 2.4rem;

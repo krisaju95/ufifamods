@@ -4,7 +4,7 @@
             <h2 class="wa-posts-grid-title"> {{title}} </h2>
             <div class="wa-posts-grid-tiles">
                 <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-posts-grid-tile">
-                    <ufm-wa-post-card [loading]="loading" [post]="filteredBlogPosts[postIndex]"></ufm-wa-post-card>
+                    <ufm-wa-post-card [loading]="loading" [post]="filteredBlogPosts[postIndex]" (postCardClicked)="navigateToPost($event)"></ufm-wa-post-card>
                 </div>
             </div>
         </div>

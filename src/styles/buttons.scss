@@ -67,6 +67,17 @@ $background-color-disabled: $color-code-darkergray;
         }
     }
 
+    &.wa-secondary-button {
+        background-color: $color-code-tertiary;
+        border-color: $color-code-tertiary;
+        color: $color-code-white;
+
+        &:hover, &:focus {
+            border-color: $background-color-primary-hover;
+            background-color: $background-color-primary-hover;
+        }
+    }
+
     &[disabled], .wa-disabled-button {
         background-color: $color-code-darkergray;
         color: $text-color-primary;

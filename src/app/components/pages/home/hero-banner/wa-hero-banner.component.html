@@ -1,16 +1,16 @@
 <div class="wa-container wa-hero-banner-container">
     <div class="wa-wrapper wa-hero-banner-wrapper">
-        <div class="wa-hero-banner-player-image">
+        <div class="wa-hero-banner-player-image" [class.data-loading]="loading">
             <img src="/assets/images/hero-banner/player-image-min-4.png">
         </div>
         <div class="wa-hero-banner-content">
-            <div class="wa-hero-banner-text-content">
+            <div class="wa-hero-banner-text-content" [class.data-loading]="loading">
                 <div>The road to</div> <br>
                 <div>Changing FIFA</div> <br>
                 <div>One Mod at a Time</div> <br>
             </div>
         </div>
-        <div class="wa-scroll-cta-container" (click)="scrollCTAClicked()">
+        <div class="wa-scroll-cta-container" (click)="scrollCTAClicked()" [class.data-loading]="loading">
             <div class="wa-scroll-cta">
                 <fa-icon [icon]="faMouse"></fa-icon>
                 Scroll down

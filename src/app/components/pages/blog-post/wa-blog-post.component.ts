@@ -31,26 +31,25 @@ export class WABlogPostComponent {
     ) { }
 
     ngOnInit() {
+        this.fileURL = this.WADBService.getActivePostURL(this.route);
+        this.loadPost(this.fileURL);
+    }
+
+    loadPost(url: string) {
+        this.loading = true;
+        this.fileURL = url;
         const pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
             if (!state) {
-                this.fileURL = this.getFileURL();
                 this.WADBService.getSinglePost(this.fileURL).subscribe((posts: WABlogPost[]) => {
                     if (posts && posts[0]) {
                         this.loading = false;
+                        this.WALoaderService.togglePageLoadingState(false);
                         this.post = posts[0] || ({} as WABlogPost);
                         pageLoadingStateChange.unsubscribe();
                     }
                 });
             }
         })
-    }
-
-    getFileURL() {
-        return "/blog/post/" + this.getParam("year") + '/' + this.getParam("month") + '/' + this.getParam("day") + '/' + this.getParam("title");
-    }
-
-    getParam(paramName) {
-        return this.route.snapshot.paramMap.get(paramName);
     }
 
     download(downloadLink: string) {

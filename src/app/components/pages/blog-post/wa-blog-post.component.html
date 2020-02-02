@@ -17,7 +17,7 @@
             </div>
             <p class="highlight" [innerHTML]="post.description"></p>
             <div [innerHTML]="post.body | postFormatter : 'body'"></div>
-            <div class="wa-blog-post-contributors-wrapper">
+            <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
                 <h3>Contributors</h3>
                 <div class="wa-blog-post-contributors">
                     <div class="wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
@@ -26,7 +26,7 @@
                     </div>
                 </div>
             </div>
-            <div class="wa-blog-post-screenshots-wrapper">
+            <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">
                 <h3>Screenshots</h3>
                 <div class="wa-blog-post-screenshots">
                     <div class="wa-blog-post-screenshot" *ngFor="let screenshot of (post.screenshots | postFormatter : 'screenshots')">
@@ -44,7 +44,7 @@
         </div>
     </div>
 </div>
-<ufm-posts-grid [title]="'Related Articles'" [category]="'featured'" [numberOfPosts]="3"></ufm-posts-grid>
+<ufm-posts-grid [title]="'Related Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
 <div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
     <div class="wa-wrapper wa-blog-post-disqus-wrapper">
         <h2>Comment Below</h2>

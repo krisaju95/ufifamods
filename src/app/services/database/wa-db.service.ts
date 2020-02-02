@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { WALoaderService } from '../loader/wa-loader.service';
 import { Airtable, Base } from 'ngx-airtable';
 import { WABlogPost } from '../../interfaces/blog-post.interface';
 import { Subscription } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 
 @Injectable()
 export class WADBService {
@@ -13,25 +13,28 @@ export class WADBService {
     blogPostsList: Array<any> = [];
 
     constructor(
-        private http: HttpClient,
         private airtable: Airtable,
         private WALoaderService: WALoaderService
     ) { }
 
-    loadBlogData(): void {
+    loadBlogData(pageSize: number = 20): void {
+        const table: Subscription = this.getBlogPage(pageSize, "firstPage").subscribe((data) => {
+            this.blogPostsList = this.createBlogPostList(data);
+            this.WALoaderService.togglePageLoadingState(false);
+            table.unsubscribe();
+        });
+    }
+
+    getBlogPage(pageSize: number, retrieveMethod: string) {
         const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
-        const table: Subscription = base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
-            pageSize: 20,
+        return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
+            pageSize: pageSize,
             sort: [{
                 field: 'Date',
                 direction: 'desc'
             }],
             filterByFormula: "Public=TRUE()"
-        }).firstPage().subscribe((data) => {
-            this.blogPostsList = this.createBlogPostList(data);
-            this.WALoaderService.togglePageLoadingState(false);
-            table.unsubscribe();
-        });
+        })[retrieveMethod]();
     }
 
     createBlogPostList(records: any): WABlogPost[] {
@@ -84,41 +87,17 @@ export class WADBService {
         return blogPostsArray;
     }
 
-    filterPostsData(blogPosts: Array<any>, category: string, numberOfPosts: number): Array<any> {
+    filterPostsData(blogPosts: Array<any>, category: string, numberOfPosts: number, route: ActivatedRoute): Array<any> {
         const filteredPostsData: Array<any> = [];
-        const featuredPostsData: Array<any> = [];
-        blogPosts.some((blogPost: any) => {
-            if (blogPost['featured']) {
-                featuredPostsData.push(blogPost);
-            }
-            switch (category) {
-                case 'featured': {
-                    if (blogPost['featured']) {
-                        filteredPostsData.push(blogPost);
-                    }
-                    break;
-                }
-                case 'featured|!first': {
-                    if (featuredPostsData.length > 1 && blogPost['featured']) {
-                        filteredPostsData.push(blogPost);
-                    }
-                    break;
-                }
-                case '!featured': {
-                    if (!blogPost['featured'] || featuredPostsData.length > 4) {
-                        filteredPostsData.push(blogPost);
-                    }
-                    break;
-                }
-                default: {
-                    let categoriesList: Array<string> = [];
-                    if (typeof blogPost['post-category-list'] == 'string') {
-                        categoriesList = (blogPost["post-category-list"].toLowerCase()).split(";");
-                    } else {
-                        categoriesList = blogPost["post-category-list"];
-                    }
-                    if (categoriesList.indexOf(category.toLowerCase()) > -1) {
-                        filteredPostsData.push(blogPost);
+        const activePostURL: string = this.getActivePostURL(route);
+        blogPosts.some((post: WABlogPost) => {
+            if (activePostURL != post.url) {
+                switch (category) {
+                    case 'featured': {
+                        if (post.featured) {
+                            filteredPostsData.push(post);
+                        }
+                        break;
                     }
                 }
             }
@@ -137,5 +116,13 @@ export class WADBService {
                 return this.createBlogPost(post);
             })
         });
+    }
+
+    getActivePostURL(route?: ActivatedRoute) {
+        return "/blog/post/" + this.getParam("year", route) + '/' + this.getParam("month", route) + '/' + this.getParam("day", route) + '/' + this.getParam("title", route);
+    }
+
+    getParam(paramName: string, route: ActivatedRoute) {
+        return route.snapshot.paramMap.get(paramName);
     }
 }

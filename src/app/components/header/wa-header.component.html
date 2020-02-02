@@ -10,14 +10,19 @@
                 <img class="wa-loader" [class.hidden]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
             </div>
             <div class="wa-navbar">
-                <div class="wa-navbar-toggle" (click)="toggleNavbar(!WARootScope.mobileNavbarOpened)">
-                    <ng-container *ngIf="WARootScope.isMobileViewport">
-                        <fa-icon [icon]="faBars" [class.hidden]="WARootScope.mobileNavbarOpened"></fa-icon>
-                        <fa-icon [icon]="faTimes" class="wa-navbar-close-icon" [class.hidden]="!WARootScope.mobileNavbarOpened"></fa-icon>
-                    </ng-container>
-                    <ng-container *ngIf="WARootScope.isDesktopViewport">
-                        MENU
-                    </ng-container>
+                <div class="wa-navbar-toggle">
+                    <button class="wa-button wa-navbar-button" [class.navbar-opened]="navbarOpened" (click)="toggleNavbar()">Menu</button>
+                </div>
+                <div class="wa-navbar-menu">
+                    <div class="wa-navbar-overlay" [class.navbar-opened]="navbarOpened" (click)="toggleNavbar()"></div>
+                    <ul [class.navbar-opened]="navbarOpened">
+                        <li>
+                            <a (click)="routeToPage()" routerLink="/" [tabindex]="navbarOpened ? 0 : -1">Home</a>
+                        </li>
+                        <li>
+                            <a (click)="routeToPage()" routerLink="/blog" [tabindex]="navbarOpened ? 0 : -1">Blog</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
