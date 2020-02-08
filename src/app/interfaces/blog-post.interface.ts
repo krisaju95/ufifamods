@@ -15,5 +15,5 @@ export interface WABlogPost {
 	downloadLink?: string,
 	linkType?: string,
 	starheads?: string[],
-	screenshots?: string[]
+	screenshots?: string
 }
