@@ -1,30 +1,55 @@
-<div class="wa-container wa-blog-post-container">
-    <div class="wa-wrapper wa-blog-post-wrapper">
-        <div class="wa-blog-post-content" [class.loading]="loading">
-            <div class="wa-blog-post-title" [innerHTML]="title"></div>
-            <div class="wa-blog-post-date" [innerHTML]="date  | date: 'd MMMM, yyyy'"></div>
-            <div class="wa-blog-post-intro" [innerHTML]="intro"></div>
-            <div class="wa-blog-post-image-container">
-                <div *ngIf="imageURL" class="wa-blog-post-image wa-lazy-loaded-img" imageLoader [attr.image-src]="imageURL"></div>
+<div class="wa-container wa-blog-post-hero-container">
+    <div class="wa-wrapper wa-blog-post-hero-wrapper">
+        <div class="wa-blog-post-hero-content">
+            <button class="wa-button wa-rounded-focus-ring wa-blog-post-primary-category" [class.data-loading]="loading">
+                {{ post.category }}
+            </button>
+            <h1 class="wa-blog-post-hero-title" [class.data-loading]="loading" [innerHTML]="post.title | postFormatter : 'title'"></h1>
+            <div class="wa-blog-post-hero-image" [style.background-image]="'url(' + post.thumbnail + ')'" [class.data-loading]="loading"></div>
+        </div>
+    </div>
+</div>
+<div class="wa-container wa-blog-post-body-container">
+    <div class="wa-wrapper wa-blog-post-body-wrapper">
+        <div class="wa-blog-post-body-content" [class.data-loading]="loading">
+            <div class="wa-blog-post-info">
+                Article by <span class="wa-blog-post-author">{{post.author}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="wa-blog-post-date">{{post.date | date : 'd MMMM, yyyy'}}</span>
             </div>
-            <div class="wa-blog-post-body">
-                <div class="wa-blog-author-info-container">
-                    <div class="wa-blog-author-info">
-                        <div class="wa-profile-dp rounded {{author}}"></div>
-                        <div class="wa-profile-handle" [innerHTML]="author | profileInfo : 'handle'"></div>
-                        <div class="wa-profile-social-links">
-                            <fa-icon *ngIf="author | profileInfo : 'twitter'" [icon]="faTwitter"></fa-icon>
-                            <fa-icon *ngIf="author | profileInfo : 'website'" [icon]="faGlobe"></fa-icon>
-                        </div>
+            <p class="highlight" [innerHTML]="post.description"></p>
+            <div [innerHTML]="post.body | postFormatter : 'body'"></div>
+            <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
+                <h3>Contributors</h3>
+                <div class="wa-blog-post-contributors">
+                    <div class="wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
+                        <div class="wa-profile-dp {{contributor}}"></div>
+                        <div>{{contributor}}</div>
                     </div>
                 </div>
-                <div class="wa-blog-post-text">
-                    <div *ngFor="let para of postMainTextArray" class="wa-blog-post-para" [innerHTML]="para"></div>
+            </div>
+            <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">
+                <h3>Screenshots</h3>
+                <div class="wa-blog-post-screenshots">
+                    <div class="wa-blog-post-screenshot" *ngFor="let screenshot of (post.screenshots | postFormatter : 'screenshots')">
+                        <img [src]="screenshot">
+                    </div>
                 </div>
             </div>
-            <div class="wa-cta-section" *ngIf="hasModDownloadLink">
-                <button class="wa-button wa-primary-button" (click)=download()>Download</button>
+            <div class="wa-blog-post-download-wrapper">
+                <button class="wa-button wa-primary-button" (click)="download(post.downloadLink)">
+                    <span class="wa-button-text">Download</span>
+                    <fa-icon [icon]="faCloudDownloadAlt"></fa-icon>
+                </button>
+                <div class="wa-blog-post-download-link-type"> powered by {{post.linkType}}</div>
             </div>
+        </div>
+    </div>
+</div>
+<ufm-posts-grid [title]="'Related Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
+<div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
+    <div class="wa-wrapper wa-blog-post-disqus-wrapper">
+        <h2>Comment Below</h2>
+        <div class="wa-blog-post-disqus-thread">
+            <disqus [identifier]="post.id" [url]="siteURL + post.url"></disqus>
         </div>
     </div>
 </div>

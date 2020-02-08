@@ -2,154 +2,147 @@
 @import 'animations.scss';
 
 .wa-header-container {
-    background-color: $color-code-white;
-    border-bottom: 1px solid $color-code-gray;
-    position: fixed;
+    position: absolute;
     width: 100%;
     z-index: 2;
     top: 0;
     left: 0;
 
     .wa-header-wrapper {
-        height: 7.5rem;
-        display: flex;
-        align-items: center;
-
-        .wa-title {
-            flex: 1;
-            font-size: 3.2rem;
-            font-weight: $font-weight-bold;
-            color: $color-code-tertiary;
-
-            span {
-                cursor: pointer;
-            }
-        }
-
-        .wa-logo-container {
-            position: relative;
-
-            .wa-logo {
-                height: 5rem;
-                transition: all ease 300ms;
-
-                &.hidden {
-                    transform: scale(0);
-                }
-
-                &.logo {
-                    cursor: pointer;
-                }
-
-                &.loader {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    filter: invert(1);
-                }
-            }
-        }
-
-        .wa-navbar {
-            flex: 1;
-            font-size: 1.4rem;
-            font-weight: $font-weight-bold;
-            text-align: right;
-
-            .wa-navbar-list {
-                list-style: none;
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-
-                .wa-navbar-list-item {
-                    padding: 0 2rem;
-                    text-transform: uppercase;
-
-                    .wa-navbar-list-item-link {
-                        text-decoration: none;
-                        color: $color-code-primary;
-                        
-                        &.active {
-                            color: $color-code-blue;
-                        }
-                    }
-                }
-            }
-        }
-
-        @media only screen and (max-width: 1023px) {
-            padding-left: 0.5rem;
+        .wa-header-content {
+            height: 7rem;
+            padding-top: 5rem;
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.25);
 
             .wa-title {
-                font-size: 2.4rem;
-                order: 2;
-                text-align: center;
-            }
+                flex: 1;
+                font-size: 3.2rem;
+                font-weight: $font-weight-bold;
+                color: $color-code-tertiary;
+                position: relative;
 
-            .wa-logo-container {
-                order: 3;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    bottom: -1.5rem;
+                    height: 2px;
+                    width: 17rem;
+                    background-color: $color-code-blue;
+                }
 
                 .wa-logo {
-                    height: 4.5rem;
+                    display: inline-block;
+                    height: 3.5rem;
+
+                    img {
+                        height: 3.5rem;
+                    }
                 }
             }
-
+    
+            .wa-loader-container {
+                height: 7rem;
+                position: relative;
+    
+                .wa-loader {
+                    height: 5rem;
+                    transition: all ease 300ms;
+    
+                    &.hidden {
+                        transform: scale(0);
+                    }
+    
+                    &.logo {
+                        cursor: pointer;
+                    }
+                }
+            }
+    
             .wa-navbar {
-                order: 1;
-                flex: none;
-                font-size: 1.8rem;
-                width: 50px;
-                height: 50px;
-                line-height: 50px;
-                text-align: center;
-
+                flex: 1;
+                font-size: 1.4rem;
+                font-weight: $font-weight-bold;
+                text-align: right;
+    
                 .wa-navbar-toggle {
-                    position: relative;
-                    
-                    fa-icon {
-                        display: inline-block;
-                        width: 50px;
-                        height: 50px;
-                        transition: all ease 300ms;
+                    color: $color-code-white;
+                    letter-spacing: 2px;
 
-                        &.hidden {
-                            transform: scale(0);
+                    .wa-navbar-button {
+                        font-size: 1.4rem;
+                        font-weight: $font-weight-bold;
+                        color: $color-code-white;
+                        background-color: transparent;
+                        padding: 1rem;
+
+                        &.navbar-opened {
+                            position: relative;
+                            z-index: 1;
                         }
 
-                        &.wa-navbar-close-icon {
-                            position: absolute;
-                            top: 0;
-                            left: 0;
+                        &:hover, &:focus {
+                            background-color: rgba(255, 255, 255, 0.15);
                         }
                     }
                 }
 
-                .wa-navbar-list {
-                    width: 100%;
-                    margin: 0;
-                    position: absolute;
-                    padding: 0;
-                    display: block;
-                    top: 7.5rem;
-                    left: 0;
-                    @include warpSpeedAhead();
-                    filter: drop-shadow(0px 15px 5px rgba(0, 0, 0, 0.1));
+                .wa-navbar-menu {
+                    position: relative;
+                    text-align: center;
 
-                    .wa-navbar-list-item {
-                        padding: 0;
-                        background-color: #F9F9F9;
-                        margin-top: 0.5px;
-                        @include warpSpeedAhead();
+                    .wa-navbar-overlay {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 100%;
+                        pointer-events: none;
+                        background-color: rgba(0, 0, 0, 0);
+                        transition: all ease 300ms;
+
+                        &.navbar-opened {
+                            pointer-events: all;
+                            background-color: rgba(0, 0, 0, 0.5);
+                        }
+                    }
+
+                    ul {
+                        padding: 1rem;
+                        margin: 0;
+                        position: absolute;
+                        top: 1rem;
+                        right: 0;
+                        background-color: $color-code-white;
+                        border-radius: 5px;
+                        color: $color-code-primary;
+                        list-style: none;
                         opacity: 0;
-                        transform: scale(0);
-                        animation: mobileNavbarListItem ease 300ms forwards;
-                        animation-delay: 300ms;
+                        transform: scale(0.8);
+                        pointer-events: none;
+                        transition: all ease 300ms;
 
-                        .wa-navbar-list-item-link {
-                            display: block;
-                            height: 100%;
-                            padding: 1rem;
+                        &.navbar-opened {
+                            pointer-events: all;
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+
+                        li {
+                            ~li {
+                                border-top: 1px solid $color-code-lightgray;
+                            }
+
+                            a {
+                                text-decoration: none;
+                                display: inline-block;
+                                padding: 1.5rem 2rem;
+                                height: 100%;
+                                font-size: 1.8rem;
+                                width: calc(100% - 4rem);
+                            }
                         }
                     }
                 }

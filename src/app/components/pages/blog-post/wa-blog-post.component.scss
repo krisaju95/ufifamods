@@ -1,201 +1,149 @@
 @import 'variables.scss';
 
-.wa-blog-post-container {
-    .wa-blog-post-wrapper {
-        .wa-blog-post-content {
-            text-align: center;
-            padding: 5rem 0;
+$blog-content-width: 800px;
 
-            .wa-blog-post-title {
-                font-size: 3.2rem;
-                font-weight: $font-weight-bold;
-                margin: 0 auto;
-                max-width: 70rem;
-                line-height: 4rem;
-            }
+.wa-blog-post-hero-container {
+    background-color: #0B1218;
+    background-image: url('/assets/images/hero-banner/hero-banner-min.jpg');
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    padding-top: 20rem;
+    margin-bottom: 15rem;
+    color: $color-code-white;
 
-            .wa-blog-post-date {
-                font-size: 1.6rem;
-                font-weight: $font-weight-light;
-                margin: 1rem 0;
-                line-height: 2rem;
+    .wa-blog-post-hero-wrapper {
+        position: relative;
+        min-height: calc(100vh - 20rem);
+
+        .wa-blog-post-hero-content {
+            padding-bottom: 30rem;
+
+            .wa-blog-post-primary-category {
+                color: $color-code-white;
                 display: inline-block;
-                padding: 0 2rem;
-            }
-
-            .wa-blog-post-intro {
-                font-style: italic;
+                text-transform: uppercase;
+                padding: 1rem 2rem;
                 font-size: 1.8rem;
-                font-weight: $font-weight-light;
-                margin: 4rem auto;
-                max-width: 50rem;
+                background-color: rgba(255, 255, 255, 0.15);
+                border-radius: 5rem;
+                font-weight: 600;
             }
 
-            .wa-blog-post-image-container {
-                height: 55rem;
-                background-color: $color-code-gray;
-                margin: 5rem 0;
-                position: relative;
+            ::ng-deep  .wa-blog-post-hero-title {
+                margin-top: 4rem;
+                font-weight: 300;
 
-                .wa-blog-post-image {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 100%;
-                    background-position: center center;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                span {
+                    display: inline-block;
+                    margin-right: 1rem;
+                }
+
+                .wa-title-highlight {
+                    font-size: 7.5rem;
+                    font-weight: 400;
+                    letter-spacing: 0.5rem;
+                    font-style: italic;
                 }
             }
 
-            .wa-blog-post-body {
-                margin: 5rem auto;
-                text-align: left;
-                max-width: 75rem;
+            .wa-blog-post-hero-image {
+                position: absolute;
+                top: calc(100% - 30rem);
+                max-width: $blog-content-width;
+                width: calc(100% - 4rem);
+                height: 45rem;
+                background-size: cover;
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+        }
+    }
+}
+
+.wa-blog-post-body-container {
+    .wa-blog-post-body-wrapper {
+        .wa-blog-post-body-content {
+            padding: 2.5rem 0;
+            max-width: $blog-content-width;
+
+            .wa-blog-post-info {
                 font-size: 1.6rem;
-                line-height: 2.4rem;
-                min-height: 15rem;
+                padding-bottom: 2rem;
 
-                .wa-blog-author-info-container {
-                    position: relative;
-                    float: left;
-                    margin-right: 2rem;
-                    margin-left: -6rem;
-                    text-align: center;
-    
-                    .wa-blog-author-info {
-                        font-size: 1.6rem;
-                        border: 1px solid $color-code-gray;
-                        width: 120px;
-                        padding: 2rem;
-                        border-radius: 5px;
-    
-                        .wa-profile-handle {
-                            margin-top: 1rem;
-                        }
-    
-                        .wa-profile-social-links {
-                            padding: 1rem;
-    
-                            fa-icon {
-                                padding: 1rem;
-                                display: inline-block;
-                            }
-                        }
-                    }
-                }
-
-                .wa-blog-post-text {
-                    &::first-letter {
-                        float: left;
-                        position: relative;
-                        font-size: 8rem;
-                        line-height: 6.5rem;
-                        font-weight: $font-weight-medium;
-                        color: $color-code-blue;
-                        padding-right: 0.5rem;
-                        margin-top: 0.2rem;
-                    }
-
-                    .wa-blog-post-para {
-                        margin: 5rem 0;
-                    }
-                }
-            }
-
-            &.loading {
-                .wa-blog-post-title, .wa-blog-post-date, .wa-blog-post-intro, .wa-blog-post-body {
-                    background-color: $color-code-gray;
-                    background-image: linear-gradient(to right, $color-code-gray 0%, #D0D0D0 20%, $color-code-gray 50%, $color-code-gray 100%);
-                    background-repeat: no-repeat;
-                    -webkit-animation: placeholderShimmer 1.5s linear infinite;
-                    animation: placeholderShimmer 1.5s linear infinite;
-                }
-
-                .wa-blog-post-title {
-                    max-width: 60rem;
-                    height: 4rem;
+                .wa-blog-post-author {
+                    font-weight: $font-weight-medium;
                 }
 
                 .wa-blog-post-date {
-                    min-width: 10rem;
-                    height: 2rem;
+                    color: $color-code-darkergray;
                 }
+            }
 
-                .wa-blog-author-info-container {
-                    .wa-blog-author-info {
-                        .wa-profile-handle {
-                            background-color: $color-code-gray;
-                            height: 2rem;
+            .wa-blog-post-contributors-wrapper {
+                margin: 5rem 0;
+
+                .wa-blog-post-contributors {
+                    display: flex;
+                    flex-wrap: wrap;
+                    
+                    .wa-blog-post-contributor {
+                        font-size: 1.6rem;
+                        font-weight: $font-weight-medium;
+                        padding: 2rem;
+                        margin-right: 1.5rem;
+                        border-radius: 0.5rem;
+                        background-color: $color-code-white;
+                        border: 1px solid $color-code-lightgray;
+                        text-align: center;
+                        line-height: 3rem;
+                        box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.05);
+                    }
+                }
+            }
+
+            .wa-blog-post-screenshots-wrapper {
+                margin: 5rem 0;
+
+                .wa-blog-post-screenshots {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+
+                    .wa-blog-post-screenshot {
+                        display: inline-block;
+                        margin-bottom: 0.25rem;
+                        width: 33%;
+    
+                        img {
+                            width: 100%;
                         }
                     }
                 }
+            }
 
-                .wa-blog-post-intro {
-                    height: 4rem;
-                }
+            .wa-blog-post-download-wrapper {
+                text-align: right;
 
-                .wa-blog-post-body {
-                    min-height: 40rem;
+                .wa-blog-post-download-link-type {
+                    padding: 1rem;
+                    font-size: 1.4rem;
                 }
             }
         }
     }
+}
 
-    @media only screen and (max-width: 1023px) {
-        .wa-blog-post-wrapper {
-            .wa-blog-post-content {
-                .wa-blog-post-title {
-                    font-size: 2.8rem;
-                    line-height: 3.6rem;
-                }
-    
-                .wa-blog-post-image-container {
-                    height: 25rem;
-                }
-    
-                .wa-blog-post-body {
-                    .wa-blog-author-info-container {
-                        margin-left: 0;
-
-                        .wa-blog-author-info {
-                            padding: 1rem;
-                            width: 90px;
-
-                            .wa-profile-dp {
-                                width: 8rem;
-                                height: 8rem;
-                            }
-
-                            .wa-profile-handle {
-                                font-size: 1.4rem;
-                            }
-        
-                            .wa-profile-social-links {
-                                padding: 0.5rem;
-
-                                fa-icon {
-                                    padding: 0.5rem;
-                                }
-                            }
-                        }
-                    }
-                }
-    
-                &.loading {
-                    .wa-blog-post-body {
-                        .wa-blog-author-info-container {
-                            background-color: $color-code-white;
-                            border-radius: 0;
-
-                            .wa-blog-author-info {
-                                border: none;
-                            }
-                        }
-                    }
-                }
-            }
+.wa-blog-post-disqus-container {
+    .wa-blog-post-disqus-wrapper {
+        .wa-blog-post-disqus-thread {
+            padding: 2.5rem;
+            max-width: $blog-content-width;
+            border-radius: 5px;
+            background-color: $color-code-white;
+            border: 1px solid $color-code-gray;
+            box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.1);
         }
     }
 }

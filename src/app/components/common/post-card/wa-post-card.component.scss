@@ -5,9 +5,13 @@
     position: relative;
     background-color: $color-code-white;
     border: 1px solid $color-code-gray;
+    box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 5px 5px;
-    overflow: hidden;
-    transition: border-color ease 300ms;
+    transition: transform ease 250ms;
+
+    &:hover, &:focus {
+        transform: translateY(-0.5rem);
+    }
 
     .wa-post-card-loading-view {
         background-color: #F3F3F3;
@@ -155,6 +159,10 @@
 
     .wa-post-card-loaded-view {
         cursor: pointer;
+        height: 100%;
+        display: block;
+        text-decoration: none;
+        color: $color-code-text;
 
         .wa-post-card-image-container {
             position: relative;
@@ -185,28 +193,46 @@
         }
 
         .wa-post-card-text-content {
-            position: relative;
             padding-bottom: 6.5rem;
 
             .wa-post-card-text {
                 padding: 2rem;
                 padding-bottom: 3rem;
+
+                .wa-post-card-tags {
+                    display: flex;
+                    color: $color-code-yellow;
+                    font-size: 1.4rem;
+                    margin-bottom: 2rem;
+                    font-weight: $font-weight-medium;
+                    text-transform: uppercase;
+
+                    .wa-post-card-tag {
+                        padding: 0.5rem 1.5rem;
+                        margin-right: 1rem;
+                        background-color: $color-code-primary;
+                        border-radius: 5rem;
+                    }
+                }
     
                 .wa-post-card-title {
-                    font-size: 1.8rem;
-                    font-weight: $font-weight-medium;
+                    font-size: 2.4rem;
+                    font-weight: $font-weight-bold;
+                    text-transform: uppercase;
                     transition: color ease 300ms;
                 }
     
                 .wa-post-card-description {
-                    font-size: 1.4rem;
-                    line-height: 2.1rem;
+                    font-size: 1.8rem;
+                    font-weight: $font-weight-light;
+                    line-height: 2.4rem;
                     margin-top: 2rem;
                 }
             }
     
             .wa-post-card-footer {
                 font-size: 1.4rem;
+                font-weight: $font-weight-medium;
                 padding: 2rem;
                 border-top: 1px solid $color-code-lightgray;
                 display: flex;
@@ -230,27 +256,6 @@
                     .wa-post-author {
                         padding-left: 1rem;
                     }
-                }
-    
-                .wa-post-date {
-                    font-weight: $font-weight-light;
-                }
-            }
-        }
-
-        &:hover {
-            border-color: $color-code-darkgray;
-
-            .wa-post-card-image {
-                &:after {
-                    opacity: 1;
-                    background-color: $color-code-blue;
-                }
-            }
-
-            .wa-post-card-text {
-                .wa-post-card-title {
-                    color: $color-code-blue;
                 }
             }
         }

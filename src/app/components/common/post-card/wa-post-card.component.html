@@ -15,22 +15,29 @@
             </div>
         </div>
     </div>
-    <div *ngIf="!loading" class="wa-post-card-loaded-view" [routerLink]="link">
-        <div *ngIf="image" class="wa-post-card-image-container">
-            <div imageLoader class="wa-post-card-image wa-lazy-loaded-img" [attr.image-src]="image"></div>
-        </div>
-        <div class="wa-post-card-text-content">
-            <div class="wa-post-card-text">
-                <div class="wa-post-card-title" [innerHTML]="title"></div>
-                <div class="wa-post-card-description" [innerHTML]="(description | slice : 0 : 100).trim() + '...'"></div>
+    <a *ngIf="!loading" class="wa-post-card-loaded-view" [routerLink]="post.url" (click)="navigateToPost(post.url)">
+        <div class="wa-post-card-content">
+            <div *ngIf="post.thumbnail" class="wa-post-card-image-container">
+                <div imageLoader class="wa-post-card-image wa-lazy-loaded-img" [attr.image-src]="post.thumbnail"></div>
             </div>
-            <div *ngIf="author || date" class="wa-post-card-footer">
-                <div *ngIf="author" class="wa-post-credit">
-                    <div class="wa-profile-dp rounded {{author}}"></div>
-                    <div class="wa-post-author">{{author}}</div>
+            <div class="wa-post-card-text-content">
+                <div class="wa-post-card-text">
+                    <div *ngIf="post.tags" class="wa-post-card-tags">
+                        <div *ngFor="let tag of post.tags" class="wa-post-card-tag">
+                            {{tag}}
+                        </div>
+                    </div>
+                    <div class="wa-post-card-title" [innerHTML]="post.title"></div>
+                    <div *ngIf="post.description" class="wa-post-card-description" [innerHTML]="(post.description | slice : 0 : 100).trim() + '...'"></div>
                 </div>
-                <div *ngIf="date" class="wa-post-date">{{date | date : 'dd MMM'}}</div>
+                <div *ngIf="post.author || post.date" class="wa-post-card-footer">
+                    <div *ngIf="post.author" class="wa-post-credit">
+                        <div class="wa-profile-dp rounded {{post.author}}"></div>
+                        <div class="wa-post-author">{{post.author}}</div>
+                    </div>
+                    <div *ngIf="post.date" class="wa-post-date">{{post.date | date : 'dd MMM'}}</div>
+                </div>
             </div>
         </div>
-    </div>
+    </a>
 </div>

@@ -2,8 +2,9 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WADBService } from '../../../services/database/wa-db.service';
 import { WALoaderService } from '../../../services/loader/wa-loader.service';
-import { IconDefinition, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faGlobe } from '@fortawesome/free-solid-svg-icons';
+import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
+import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
+import { WABlogPost } from 'src/app/interfaces/blog-post.interface';
 
 @Component({
     selector: 'ufm-wa-blog-post',
@@ -13,35 +14,17 @@ import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 
 export class WABlogPostComponent {
 
+    siteURL: string = "http://ufifamods.com/";
+
+    loadingTimeoutRef: any;
+
     loading: boolean = true;
 
-    siteURL: string = "";
-
-    postURL: string = "";
-
-    postMap: Array<object>;
+    post: WABlogPost = ({} as WABlogPost);
 
     fileURL: string = "";
 
-    title: string = '';
-
-    date: string = '';
-
-    author: string = '';
-
-    intro: string = '';
-
-    imageURL: string = '';
-
-    postMainTextArray: Array<string> = [];
-
-    hasModDownloadLink: boolean = false;
-
-    downloadURL: string = '';
-
-    faTwitter: IconDefinition = faTwitter;
-
-    faGlobe: IconDefinition = faGlobe;
+    faCloudDownloadAlt: IconDefinition = faCloudDownloadAlt;
 
     constructor(
         private WADBService: WADBService,
@@ -50,52 +33,40 @@ export class WABlogPostComponent {
     ) { }
 
     ngOnInit() {
-        this.postURL = this.getPostURL();
+        this.fileURL = this.WADBService.getActivePostURL(this.route);
+        this.loadPost(this.fileURL);
+    }
+
+    loadPost(url: string) {
+        this.toggleLoadingState(true);
+        this.fileURL = url;
         const pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
             if (!state) {
-                this.fileURL = this.getFileURL(this.WADBService.getBlogData());
-                this.WADBService.getSinglePost(this.getParam('year') + '/' + this.getParam('month') + '/' + this.fileURL).subscribe((post: any) => {
-                    this.loading = false;
-                    this.setPostData(post);
-                    pageLoadingStateChange.unsubscribe();
+                this.WADBService.getSinglePost(this.fileURL).subscribe((posts: WABlogPost[]) => {
+                    if (posts && posts[0]) {
+                        this.toggleLoadingState(false);
+                        this.WALoaderService.togglePageLoadingState(false);
+                        this.post = posts[0] || ({} as WABlogPost);
+                        pageLoadingStateChange.unsubscribe();
+                    }
                 });
             }
         })
     }
 
-    setPostData(post: any) {
-        this.title = post['post-title'] || '';
-        this.date = post['post-date'] || '';
-        this.author = post['post-author'] || 'krisaju95';
-        this.intro = post['post-intro-text'] || '';
-        this.imageURL = post['post-image'] || '';
-        this.postMainTextArray = post['post-main-text-array'] || [];
-        this.hasModDownloadLink = (post['show-mod-disclaimer'] == true || post['show-mod-disclaimer'] == 'true');
-        this.downloadURL = post['mod-download-link'];
-        if (this.intro && this.postMainTextArray.length == 0) {
-            this.postMainTextArray = [this.intro];
-            this.intro = '';
+    toggleLoadingState(state: boolean): void {
+        if (this.loadingTimeoutRef || state) {
+            clearTimeout(this.loadingTimeoutRef);
+            this.loadingTimeoutRef = false;
+            this.loading = true;
+        } else {
+            this.loadingTimeoutRef = setTimeout(() => {
+                this.loading = false;
+            }, 500);
         }
     }
 
-    getPostURL() {
-        let postParameters = [this.getParam("year"), this.getParam("month"), this.getParam("date"), this.getParam("title")]
-        return "/blog/post/" + postParameters.join("/");
-    }
-
-    getFileURL(data) {
-        let postObject = data[this.postURL];
-        if (postObject) {
-            return postObject["post-json-url"];
-        }
-        return "";
-    }
-
-    getParam(paramName) {
-        return this.route.snapshot.paramMap.get(paramName);
-    }
-
-    download() {
-        window.open(this.downloadURL, '_blank');
+    download(downloadLink: string) {
+        window.open(downloadLink, "blank");
     }
 }

@@ -1,23 +1,18 @@
 <div class="wa-container wa-hero-banner-container">
     <div class="wa-wrapper wa-hero-banner-wrapper">
+        <div class="wa-hero-banner-player-image" [class.data-loading]="loading">
+            <img [src]="heroBanner.image">
+        </div>
         <div class="wa-hero-banner-content">
-            <div *ngIf="heroBannerPost['post-author'] || heroBannerPost['post-date']" class="wa-hero-banner-post-info">
-                <span class="wa-profile-dp  rounded {{heroBannerPost['post-author']}}"></span>
-                <span class="wa-profile-name">{{heroBannerPost['post-author']}}</span>
-                <span class="wa-post-date">{{heroBannerPost['post-date'] | date : 'dd MMM'}}</span>
-            </div>
-            <div class="wa-hero-banner-text">
-                <div class="wa-hero-banner-title" [innerHTML]="heroBannerPost['post-title']">
-                </div>
-                <div *ngIf="description" class="wa-hero-banner-description" [innerHTML]="description + '...'"></div>
-            </div>
-            <div *ngIf="heroBannerPost['post-link']" class="wa-hero-banner-cta">
-                <button class="wa-button wa-ghost-button" [routerLink]="heroBannerPost['post-link']">Read More</button>
+            <div class="wa-hero-banner-text-content" [class.data-loading]="loading">
+                <div><span class="wa-text-light">#</span><span>CHANGE</span><span class="wa-text-blue">THE</span><span>GAME</span></div> <br>
+                <div>One Mod at a Time</div>
             </div>
         </div>
-        <div class="wa-hero-banner-image-container">
-            <div class="wa-hero-banner-image-wrapper">
-                <div *ngIf="heroBannerPost['post-image']" [routerLink]="heroBannerPost['post-link']" imageLoader class="wa-hero-banner-image wa-lazy-loaded-img" [attr.image-src]="heroBannerPost['feature-image']" [attr.image-load-delay]="500"></div>
+        <div class="wa-scroll-cta-container" (click)="scrollCTAClicked()" [class.data-loading]="loading">
+            <div class="wa-scroll-cta">
+                <img class="wa-scroll-cta-icon" src="/assets/images/hero-banner/scroll-cta-icon.svg">
+                Scroll down
             </div>
         </div>
     </div>
