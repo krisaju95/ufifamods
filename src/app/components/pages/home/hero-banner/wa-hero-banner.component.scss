@@ -38,11 +38,10 @@
             cursor: pointer;
 
             .wa-scroll-cta{
-                fa-icon {
-                    transform: rotateX(180deg);
-                    display: inline-block;
-                    color: #FFF;
-                    filter: drop-shadow(0 0 1px black);
+                display: flex;
+                align-items: center;
+                
+                .wa-scroll-cta-icon {
                     margin-right: 1.5rem;
                 }
             }

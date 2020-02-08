@@ -16,6 +16,8 @@ export class WABlogPostComponent {
 
     siteURL: string = "http://ufifamods.com/";
 
+    loadingTimeoutRef: any;
+
     loading: boolean = true;
 
     post: WABlogPost = ({} as WABlogPost);
@@ -36,13 +38,13 @@ export class WABlogPostComponent {
     }
 
     loadPost(url: string) {
-        this.loading = true;
+        this.toggleLoadingState(true);
         this.fileURL = url;
         const pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
             if (!state) {
                 this.WADBService.getSinglePost(this.fileURL).subscribe((posts: WABlogPost[]) => {
                     if (posts && posts[0]) {
-                        this.loading = false;
+                        this.toggleLoadingState(false);
                         this.WALoaderService.togglePageLoadingState(false);
                         this.post = posts[0] || ({} as WABlogPost);
                         pageLoadingStateChange.unsubscribe();
@@ -50,6 +52,18 @@ export class WABlogPostComponent {
                 });
             }
         })
+    }
+
+    toggleLoadingState(state: boolean): void {
+        if (this.loadingTimeoutRef || state) {
+            clearTimeout(this.loadingTimeoutRef);
+            this.loadingTimeoutRef = false;
+            this.loading = true;
+        } else {
+            this.loadingTimeoutRef = setTimeout(() => {
+                this.loading = false;
+            }, 500);
+        }
     }
 
     download(downloadLink: string) {

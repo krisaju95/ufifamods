@@ -1,7 +1,7 @@
 <div class="wa-container wa-hero-banner-container">
     <div class="wa-wrapper wa-hero-banner-wrapper">
         <div class="wa-hero-banner-player-image" [class.data-loading]="loading">
-            <img src="/assets/images/hero-banner/hero-banner-player-1-min.png">
+            <img [src]="heroBanner.image">
         </div>
         <div class="wa-hero-banner-content">
             <div class="wa-hero-banner-text-content" [class.data-loading]="loading">
@@ -11,7 +11,7 @@
         </div>
         <div class="wa-scroll-cta-container" (click)="scrollCTAClicked()" [class.data-loading]="loading">
             <div class="wa-scroll-cta">
-                <fa-icon [icon]="faMouse"></fa-icon>
+                <img class="wa-scroll-cta-icon" src="/assets/images/hero-banner/scroll-cta-icon.svg">
                 Scroll down
             </div>
         </div>
