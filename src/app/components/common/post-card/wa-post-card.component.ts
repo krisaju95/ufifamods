@@ -1,4 +1,5 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { WABlogPost } from 'src/app/interfaces/blog-post.interface';
 
 @Component({
 	selector: 'ufm-wa-post-card',
@@ -7,7 +8,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class WAPostCardComponent {
 	
-	@Input() post: any;
+	@Input() post: WABlogPost;
 
 	@Input() loading: boolean;
 
