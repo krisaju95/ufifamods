@@ -17,10 +17,6 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "include": [
-      "./src",
-      "node_modules/ngx-airtable"
     ]
   },
   "angularCompilerOptions": {
