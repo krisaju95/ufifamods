@@ -33,3 +33,12 @@
     -ms-transform: translateZ(0);
     transform: translateZ(0);
 }
+
+div, span {
+    transition: opacity ease 300ms;
+}
+
+.data-loading {
+    opacity: 0;
+    pointer-events: none;
+}

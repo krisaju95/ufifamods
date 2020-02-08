@@ -1,238 +1,87 @@
 @import 'variables.scss';
 
 .wa-hero-banner-container {
-    background-color: $color-code-white;
+    background-color: #0B1218;
+    background-image: url('/assets/images/hero-banner/hero-banner-min.jpg');
+    background-position: bottom right;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     margin-bottom: 5rem;
+    padding-top: 12rem;
 
     .wa-hero-banner-wrapper {
-        background-image: url('/assets/images/hero-banner/hero-background-min.jpg');
-        background-position: bottom center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        display: flex;
-        align-items: stretch;
-        padding: 4rem;
-        min-height: 35rem;
+        padding: 8rem 4rem 0 4rem;
+        min-height: calc(100vh - 20rem);
         position: relative;
 
-        .wa-hero-banner-content {
-            max-width: 500px;
-            margin-top: auto;
-            flex: 1;
+        .wa-hero-banner-player-image {
+            height: calc(100vh - 15rem);
+            text-align: right;
+            position: absolute;
+            right: 0;
+            bottom: 0;
 
-            .wa-hero-banner-post-info {
+            img {
+                height: calc(100vh - 15rem);
+            }
+        }
+
+        .wa-scroll-cta-container {
+            position: absolute;
+            bottom: 0;
+            left: 5rem;
+            font-size: 1.8rem;
+            background: #FFF;
+            padding: 2.5rem;
+            padding-right: 20rem;
+            cursor: pointer;
+
+            .wa-scroll-cta{
                 display: flex;
                 align-items: center;
-                margin-bottom: 1rem;
-                font-size: 1.4rem;
-
-                .wa-profile-dp {
-                    width: 3rem;
-                    height: 3rem;
+                
+                .wa-scroll-cta-icon {
+                    margin-right: 1.5rem;
                 }
-
-                .wa-profile-name {
-                    margin-left: 1rem;
-                }
-
-                .wa-post-date {
-                    position: relative;
-                    margin-left: 2rem;
-                    padding-left: 2rem;
-                    font-weight: $font-weight-light;
-
-                    &:before {
-                        content: '';
-                        position: absolute;
-                        left: 0;
-                        top: 0.45rem;
-                        border-radius: 100%;
-                        width: 0.5rem;
-                        height: 0.5rem;
-                        background-color: $color-code-blue;
-                        opacity: 0.25;
-                    }
-                }
-            }
-
-            .wa-hero-banner-text {
-                position: relative;
-                z-index: 1;
-
-                .wa-hero-banner-title {
-                    line-height: 4.8rem;
-                    font-size: 3.6rem;
-                    font-weight: $font-weight-medium;
-                    margin-bottom: 2rem;
-                }
-    
-                .wa-hero-banner-description {
-                    line-height: 3rem;
-                    font-size: 1.6rem;
-                    font-weight: $font-weight-light;
-                }
-
-                ::ng-deep .wa-title-highlight {
-                    color: $color-code-blue;
-                }
-            }
-
-            .wa-hero-banner-cta{
-                margin-top: 4rem;
             }
         }
 
-        .wa-hero-banner-image-container {
+        .wa-hero-banner-content {
+            display: flex;
+            align-items: stretch;
             position: relative;
-            flex: 1;
-            min-height: 400px;
-            width: 640px;
-            max-width: 100%;
-            padding: 0 30px;
 
-            .wa-hero-banner-image-wrapper {
-                height: 100%;
-                position: relative;
-                background-color: $color-code-lightgray;
-                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 0 5px 10px rgba(0, 0, 0, 0.1);
-                transform: translateX(3rem);
+            .wa-hero-banner-text-content {
+                flex: 1;
+                padding-top: 10rem;
+                text-transform: uppercase;
+    
+                div {
+                    font-weight: $font-weight-normal;
+                    color: $color-code-white;
+                    font-size: 8rem;
+                    line-height: 8rem;
+                    font-family: 'Teko', sans-serif;
+                    margin-bottom: 0;
 
-                .wa-hero-banner-image {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    height: 100%;
-                    width: 100%;
-                    background-size: cover;
-                    background-position: center;
-
-                    &::before, &::after {
-                        position: absolute;
-                        content: '';
-                        width: 5rem;
-                        height: 5rem;
-                        transition: transform ease 500ms;
-                    }
-        
-                    &::before {
-                        top: 0;
-                        left: 0;
-                        border-top: 5px solid $color-code-blue;
-                        border-left: 5px solid $color-code-blue;
-                    }
-        
-                    &::after {
-                        bottom: 0;
-                        right: 0;
-                        border-bottom: 5px solid $color-code-blue;
-                        border-right: 5px solid $color-code-blue;
-                    }
-
-                    &.loaded {
-                        cursor: pointer;
-                        
-                        &::before {
-                            transform: translate(-2.5rem, -2.5rem);
-                        }
-            
-                        &::after {
-                            transform: translate(2.5rem, 2.5rem);
-                        }
+                    ~div {
+                        color: $color-code-darkgray;
+                        font-weight: 300;
                     }
                 }
-            }
-        }
-    }
 
-    @media only screen and (max-width: 1023px) {
-        .wa-hero-banner-wrapper {
-            flex-direction: column;
+                @media only screen and (max-width: 1023px) {
+                    padding-top: 25rem;
 
-            .wa-hero-banner-content {
-                order: 2;
-                padding-top: 5rem;
-                min-height: 30rem;
-                
-                .wa-hero-banner-post-info {
-                    .wa-profile-dp {
-                        width: 3rem;
-                        height: 3rem;
-                    }
-    
-                    .wa-profile-name {
-                        margin-left: 1rem;
-                    }
-    
-                    .wa-post-date {
-                        position: relative;
-                        margin-left: 2rem;
-                        padding-left: 2rem;
-                        font-weight: $font-weight-light;
-    
-                        &:before {
-                            content: '';
-                            position: absolute;
-                            left: 0;
-                            top: 0.45rem;
-                            border-radius: 100%;
-                            width: 0.5rem;
-                            height: 0.5rem;
-                            background-color: $color-code-blue;
-                            opacity: 0.25;
-                        }
-                    }
-                }
-    
-                .wa-hero-banner-text {
-                    position: relative;
-                    z-index: 1;
-    
-                    .wa-hero-banner-title {
-                        line-height: 4.8rem;
-                        font-size: 3.6rem;
-                        font-weight: $font-weight-medium;
-                        margin-bottom: 2rem;
-                    }
-        
-                    .wa-hero-banner-description {
-                        line-height: 3rem;
+                    div {
+                        padding: 1rem 2rem 0 2rem;
+                        background-color: rgba(0, 0, 0, 0.75);
                         font-size: 1.6rem;
-                        font-weight: $font-weight-light;
-                    }
-    
-                    ::ng-deep .wa-title-highlight {
-                        color: $color-code-blue;
-                    }
-                }
-    
-                .wa-hero-banner-cta{
-                    margin-top: 4rem;
-                }
-            }
-    
-            .wa-hero-banner-image-container {
-                order: 1;
-                min-height: 1rem;
-                height: 40rem;
-                width: 100%;
-                padding: 0;
 
-                @media only screen and (max-width: 800px) {
-                    height: 25rem;
-                }
-    
-                .wa-hero-banner-image-wrapper {
-                    transform: none;
-
-                    .wa-hero-banner-image {
-                        &.loaded {
-                            &::before {
-                                transform: translate(-2rem, -2rem);
-                            }
-                
-                            &::after {
-                                transform: translate(2rem, 2rem);
-                            }
+                        ~div {
+                            font-size: 6rem;
+                            line-height: 6rem;
                         }
                     }
                 }

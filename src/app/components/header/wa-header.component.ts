@@ -22,6 +22,8 @@ export class WAHeaderComponent {
 
     loading: boolean = true;
 
+    navbarOpened: boolean = false;
+
     constructor(
         private WALoaderService: WALoaderService,
         public WARootScope: WARootScope
@@ -34,7 +36,12 @@ export class WAHeaderComponent {
         });
     }
 
-    toggleNavbar(state: boolean): void {
-        this.WARootScope.set('mobileNavbarOpened', state);
+    toggleNavbar(): void {
+        this.navbarOpened = !this.navbarOpened;
+    }
+
+    routeToPage(): void {
+        this.navbarOpened = false;
+        this.WALoaderService.togglePageLoadingState(true);
     }
 }

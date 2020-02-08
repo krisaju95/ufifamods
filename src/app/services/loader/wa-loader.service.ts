@@ -4,7 +4,7 @@ import { Subject } from 'rxjs';
 @Injectable()
 export class WALoaderService {
 
-    minimumLoaderTime: number = 1500;
+    minimumLoaderTime: number = 2000;
 
     pageLoadingStateChange: Subject<boolean> = new Subject();
 

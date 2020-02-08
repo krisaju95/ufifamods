@@ -1,6 +1,35 @@
-.wa-page-title {
-    font-size: 3.2rem;
-    text-align: center;
+@import 'variables.scss';
+
+h1, h2, h3 {
     margin: 0;
-    padding: 3rem;
+    margin-bottom: 2rem;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+
+    .wa-title-bold, &.wa-title-bold {
+        font-weight: 500;
+    }
+
+    .wa-title-highlight, &.wa-title-highlight {
+        color: $color-code-blue;
+    }
+}
+
+h1 {
+    font-size: 6rem;
+    line-height: 7rem;
+}
+
+h2 {
+    font-size: 4rem;
+}
+
+h3 {
+    font-size: 3rem;
+}
+
+.wa-page-title {
+    font-size: 6rem;
+    margin: 0;
 }

@@ -6,8 +6,8 @@ import { RouterModule } from '@angular/router';
 // Main Web App Component
 import { WAHeroBannerComponent } from './wa-hero-banner.component';
 
-// Directives
-import { WAImageLoaderDirectiveModule } from '../../../../directives/image-loader';
+// Additional Modules
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
     declarations: [
@@ -16,7 +16,7 @@ import { WAImageLoaderDirectiveModule } from '../../../../directives/image-loade
     imports: [
         BrowserModule,
         RouterModule,
-        WAImageLoaderDirectiveModule
+        FontAwesomeModule
     ],
     exports: [WAHeroBannerComponent]
 })

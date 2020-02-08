@@ -1,6 +1,15 @@
 import { Component } from '@angular/core';
-import { WADBService } from '../../../../services/database/wa-db.service';
+import { IconDefinition, faMouse } from '@fortawesome/free-solid-svg-icons';
 import { WALoaderService } from '../../../../services/loader/wa-loader.service';
+
+const heroBanners: Array<any> = [
+	{
+		image: "/assets/images/hero-banner/hero-banner-player-1-min.png"
+	},
+	{
+		image: "/assets/images/hero-banner/hero-banner-player-2-min.png"
+	}
+]
 
 @Component({
 	selector: 'ufm-wa-hero-banner',
@@ -9,36 +18,30 @@ import { WALoaderService } from '../../../../services/loader/wa-loader.service';
 })
 export class WAHeroBannerComponent {
 
+	faMouse: IconDefinition = faMouse;
+
 	loading: boolean = true;
 
-	blogPostList: Array<any> = [];
-
-	filteredBlogPosts: Array<any> = [];
-
-	heroBannerPost: any = {};
-
-	description: string = '';
+	heroBanner: any = {};
 
 	constructor(
-		private WADBService: WADBService,
 		private WALoaderService: WALoaderService
 	) { }
 
 	ngOnInit() {
-		const pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
-			if (!state) {
-				this.blogPostList = this.WADBService.getBlogPostsList();
-				this.filteredBlogPosts = this.WADBService.filterPostsData(this.blogPostList, 'featured', 1);
-				this.heroBannerPost = this.filteredBlogPosts[0];
-				this.description = ((this.heroBannerPost['post-description'] || this.heroBannerPost['post-text-content'] || '') as string).slice(0, 100).trim();
-				const matches: RegExpMatchArray = (this.heroBannerPost['post-title'] as string).match(new RegExp(/^FIFA\s[0-9]+\:/)) || [];
-				if (matches[0]) {
-					this.heroBannerPost['post-title'] = this.heroBannerPost['post-title'].replace(matches[0], '<span class="wa-title-highlight">' + matches[0] + '</span>');
-					this.heroBannerPost['post-title'] = this.heroBannerPost['post-title'].replace(':', '');
-				}
-				this.loading = false;
-				pageLoadingStateChange.unsubscribe();
-			}
+		this.setHeroBanner();
+		this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
+			this.loading = state;
 		})
+	}
+
+	setHeroBanner() {
+		const randomIndex: number = Math.floor(Math.random() * Math.floor(heroBanners.length));
+		this.heroBanner = heroBanners[randomIndex];
+	}
+
+	scrollCTAClicked() {
+		const CTAContainer: HTMLElement = document.querySelector('.wa-scroll-cta-container') as HTMLElement;
+		window.scrollBy(0, (CTAContainer.clientHeight + CTAContainer.getBoundingClientRect().top));
 	}
 }

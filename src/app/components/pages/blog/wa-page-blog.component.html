@@ -1,15 +1,20 @@
+<div class="wa-container wa-blog-page-hero-container">
+    <div class="wa-wrapper wa-blog-page-hero-wrapper">
+        <h1 class="wa-page-title"> Blog </h1>
+    </div>
+</div>
 <div class="wa-container wa-blog-page-container">
     <div class="wa-wrapper wa-blog-page-wrapper">
-        <h1 class="wa-page-title"> Blog </h1>
-        <div class="wa-blog-page-tiles">
-            <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-blog-page-tile">
-                <ufm-wa-post-card [loading]="loading && (postIndex >= (numberOfPosts - 9))" [post]="blogPostList[postIndex]"></ufm-wa-post-card>
-            </div>
+        <div class="wa-blog-page-tiles" *ngFor="let page of pages; let pageIndex = index">
+            <ng-container *ngIf="(pageIndex == activePageIndex)">
+                <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-blog-page-tile">
+                    <ufm-wa-post-card *ngIf="loading || (page[postOffset + postIndex])" [loading]="loading" [post]="page[postOffset + postIndex]"></ufm-wa-post-card>
+                </div>
+            </ng-container>
         </div>
-        <div class="wa-blog-page-footer">
-            <button *ngIf="blogPostList.length > 0" class="wa-button wa-primary-button" (click)="loadMoreResults()" [disabled]="numberOfPosts == blogPostList.length">
-                <ng-container *ngIf="numberOfPosts != blogPostList.length">Load more results</ng-container>
-                <ng-container *ngIf="numberOfPosts == blogPostList.length">No more results</ng-container>
+        <div class="wa-blog-page-footer" [class.data-loading]="!showPagination">
+            <button class="wa-button" [class.wa-ghost-button]="pageIndex != activePageIndex" [class.wa-secondary-button]="pageIndex == activePageIndex" *ngFor="let page of pages; let pageIndex = index" (click)="loadPage(pageIndex)">
+                {{pageIndex + 1}}
             </button>
         </div>
     </div>
