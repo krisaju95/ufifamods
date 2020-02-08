@@ -28,7 +28,7 @@
                         </div>
                     </div>
                     <div class="wa-post-card-title" [innerHTML]="post.title"></div>
-                    <div *ngIf="post.description" class="wa-post-card-description" [innerHTML]="(post.description | slice : 0 : 100)"></div>
+                    <div *ngIf="post.description" class="wa-post-card-description" [innerHTML]="post.description"></div>
                 </div>
                 <div *ngIf="post.author || post.date" class="wa-post-card-footer">
                     <div *ngIf="post.author" class="wa-post-credit">
