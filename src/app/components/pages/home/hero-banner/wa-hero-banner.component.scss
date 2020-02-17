@@ -27,6 +27,19 @@
             }
         }
 
+        @media screen and (min-height: 745px) {
+            min-height: 550px;
+
+            .wa-hero-banner-player-image {
+                height: 600px;
+                width: 70%;
+    
+                img {
+                    height: 100%;
+                }
+            }
+        }
+
         .wa-scroll-cta-container {
             position: absolute;
             bottom: 0;

@@ -5,8 +5,6 @@ import { WABlogPost } from '../../interfaces/blog-post.interface';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 
-const publicPostQuery: string = "OR(Public=TRUE(), Public=FALSE())";
-
 @Injectable()
 export class WADBService {
 
@@ -34,8 +32,7 @@ export class WADBService {
             sort: [{
                 field: 'Date',
                 direction: 'desc'
-            }],
-            filterByFormula: publicPostQuery
+            }]
         })[retrieveMethod]();
     }
 
@@ -52,7 +49,7 @@ export class WADBService {
         const post: any = record['fields'];
         return {
             id: record['id'],
-            public: post['Public'],
+            public: post['Public'] != false,
             featured: post['Featured'],
             url: post['URL'],
             title: post['Title'],
@@ -112,7 +109,7 @@ export class WADBService {
         const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
         return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
             pageSize: 1,
-            filterByFormula: ("AND(url='" + url + "', " + publicPostQuery + ")")
+            filterByFormula: ("url=" + url)
         }).firstPage().map((posts: Array<any>) => {
             return posts.map((post: any) => {
                 return this.createBlogPost(post);
