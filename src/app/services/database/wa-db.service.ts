@@ -109,7 +109,7 @@ export class WADBService {
         const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
         return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
             pageSize: 1,
-            filterByFormula: ("url=" + url)
+            filterByFormula: "URL='" + url + "'"
         }).firstPage().map((posts: Array<any>) => {
             return posts.map((post: any) => {
                 return this.createBlogPost(post);
