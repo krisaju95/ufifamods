@@ -2,14 +2,7 @@ import { Component } from '@angular/core';
 import { IconDefinition, faMouse } from '@fortawesome/free-solid-svg-icons';
 import { WALoaderService } from '../../../../services/loader/wa-loader.service';
 
-const heroBanners: Array<any> = [
-	{
-		image: "/assets/images/hero-banner/hero-banner-player-1-min.png"
-	},
-	{
-		image: "/assets/images/hero-banner/hero-banner-player-2-min.png"
-	}
-]
+const numberOfHeroBannerImages: number = 6
 
 @Component({
 	selector: 'ufm-wa-hero-banner',
@@ -36,8 +29,8 @@ export class WAHeroBannerComponent {
 	}
 
 	setHeroBanner() {
-		const randomIndex: number = Math.floor(Math.random() * Math.floor(heroBanners.length));
-		this.heroBanner = heroBanners[randomIndex];
+		const randomIndex: number = Math.floor(Math.random() * Math.floor(numberOfHeroBannerImages)) + 1;
+		this.heroBanner = "/assets/images/hero-banner/hero-banner-image-" + randomIndex + ".png";
 	}
 
 	scrollCTAClicked() {

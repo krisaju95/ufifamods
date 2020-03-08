@@ -1,41 +1,55 @@
 @import 'variables.scss';
 
 .wa-hero-banner-container {
-    background-color: #0B1218;
+    background-color: $color-code-primary;
     background-image: url('/assets/images/hero-banner/hero-banner-min.jpg');
     background-position: bottom right;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-blend-mode: luminosity;
     margin-bottom: 5rem;
-    padding-top: 12rem;
 
     .wa-hero-banner-wrapper {
-        padding: 8rem 4rem 0 4rem;
-        min-height: calc(100vh - 20rem);
+        height: calc(100vh - 5rem);
+        max-height: 65rem;
         position: relative;
 
-        .wa-hero-banner-player-image {
-            height: calc(100vh - 15rem);
-            text-align: right;
-            position: absolute;
-            right: 0;
-            bottom: 0;
+        .wa-hero-banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 100%;
+            width: 100%;
 
-            img {
-                height: calc(100vh - 15rem);
+            .wa-hero-banner-text-content {
+                width: 40%;
             }
-        }
-
-        @media screen and (min-height: 745px) {
-            min-height: 550px;
-
+    
+            .wa-hero-banner-text-content {
+                color: $color-code-white;
+    
+                .wa-hero-banner-text-heading {
+                    color: $color-code-white;
+                    text-transform: none;
+                    font-size: 5rem;
+                }
+    
+                .wa-hero-banner-text-description {
+                    max-width: 45rem;
+                    letter-spacing: 1px;
+                    line-height: 1.5;
+                }
+            }
+    
             .wa-hero-banner-player-image {
-                height: 600px;
-                width: 70%;
+                width: 60%;
+                height: 100%;
+                padding: 0 2rem;
+                pointer-events: none;
     
                 img {
-                    height: 100%;
+                    height: calc(100% + 4rem);
                 }
             }
         }
@@ -43,60 +57,19 @@
         .wa-scroll-cta-container {
             position: absolute;
             bottom: 0;
-            left: 5rem;
-            font-size: 1.8rem;
-            background: #FFF;
-            padding: 2.5rem;
-            padding-right: 20rem;
+            left: 3rem;
+            padding: 2rem 10rem 2rem 4rem;
+            background: $color-code-white;
+            border-radius: 4rem 4rem 0 0;
             cursor: pointer;
 
-            .wa-scroll-cta{
+            .wa-scroll-cta {
+                font-size: 1.6rem;
                 display: flex;
                 align-items: center;
-                
+
                 .wa-scroll-cta-icon {
-                    margin-right: 1.5rem;
-                }
-            }
-        }
-
-        .wa-hero-banner-content {
-            display: flex;
-            align-items: stretch;
-            position: relative;
-
-            .wa-hero-banner-text-content {
-                flex: 1;
-                padding-top: 10rem;
-                text-transform: uppercase;
-    
-                div {
-                    font-weight: $font-weight-normal;
-                    color: $color-code-white;
-                    font-size: 8rem;
-                    line-height: 8rem;
-                    font-family: 'Teko', sans-serif;
-                    margin-bottom: 0;
-
-                    ~div {
-                        color: $color-code-darkgray;
-                        font-weight: 300;
-                    }
-                }
-
-                @media only screen and (max-width: 1023px) {
-                    padding-top: 25rem;
-
-                    div {
-                        padding: 1rem 2rem 0 2rem;
-                        background-color: rgba(0, 0, 0, 0.75);
-                        font-size: 1.6rem;
-
-                        ~div {
-                            font-size: 6rem;
-                            line-height: 6rem;
-                        }
-                    }
+                    margin-right: 1rem;
                 }
             }
         }

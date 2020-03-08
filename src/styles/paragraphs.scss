@@ -1,8 +1,9 @@
 @import 'variables.scss';
 
 p {
-    font-size: 2.1rem;
+    font-size: 1.6rem;
     font-weight: $font-weight-light;
+    line-height: 1.4;
 
     .highlight, &.highlight {
         font-weight: $font-weight-medium;
