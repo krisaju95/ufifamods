@@ -1,12 +1,13 @@
 @import 'variables.scss';
 
 .wa-blog-page-hero-container {
-    background-color: #0B1218;
     background-image: url('/assets/images/hero-banner/hero-banner-min.jpg');
     background-position: bottom right;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-color: $color-code-primary;
+    background-blend-mode: luminosity;
     padding-top: 20rem;
     margin-bottom: 5rem;
     color: $color-code-white;
@@ -14,6 +15,10 @@
     .wa-blog-page-hero-wrapper {
         position: relative;
         min-height: 10rem;
+
+        .wa-page-title {
+            color: $color-code-white;
+        }
     }
 }
 

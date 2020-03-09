@@ -10,10 +10,19 @@
     background-blend-mode: luminosity;
     margin-bottom: 5rem;
 
+    @media only screen and (max-width: 920px) {
+        margin-bottom: 2.5rem;
+    }
+
     .wa-hero-banner-wrapper {
         height: calc(100vh - 5rem);
         max-height: 65rem;
         position: relative;
+
+        @media only screen and (max-width: 920px) {
+            height: auto;
+            max-height: none;
+        }
 
         .wa-hero-banner-content {
             display: flex;
@@ -22,8 +31,17 @@
             height: 100%;
             width: 100%;
 
+            @media only screen and (max-width: 920px) {
+                flex-direction: column-reverse;
+            }
+
             .wa-hero-banner-text-content {
                 width: 40%;
+
+                @media only screen and (max-width: 920px) {
+                    width: 100%;
+                    padding-bottom: 5rem;
+                }
             }
     
             .wa-hero-banner-text-content {
@@ -33,6 +51,10 @@
                     color: $color-code-white;
                     text-transform: none;
                     font-size: 5rem;
+
+                    @media only screen and (max-width: 920px) {
+                        font-size: 3rem;
+                    }
                 }
     
                 .wa-hero-banner-text-description {
@@ -51,6 +73,15 @@
                 img {
                     height: calc(100% + 4rem);
                 }
+
+                @media only screen and (max-width: 920px) {
+                    width: 100%;
+
+                    img {
+                        height: auto;
+                        width: 100%;
+                    }
+                }
             }
         }
 
@@ -58,10 +89,14 @@
             position: absolute;
             bottom: 0;
             left: 3rem;
-            padding: 2rem 10rem 2rem 4rem;
+            padding: 2rem 10rem 2rem 3rem;
             background: $color-code-white;
             border-radius: 4rem 4rem 0 0;
             cursor: pointer;
+
+            @media only screen and (max-width: 920px) {
+                display: none;
+            }
 
             .wa-scroll-cta {
                 font-size: 1.6rem;
@@ -69,7 +104,7 @@
                 align-items: center;
 
                 .wa-scroll-cta-icon {
-                    margin-right: 1rem;
+                    margin-right: 2rem;
                 }
             }
         }

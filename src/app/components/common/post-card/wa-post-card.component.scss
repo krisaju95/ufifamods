@@ -4,7 +4,6 @@
     height: 100%;
     position: relative;
     background-color: $color-code-white;
-    border: 1px solid $color-code-gray;
     box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.1);
     border-radius: 0 0 5px 5px;
     transition: transform ease 250ms;
@@ -13,213 +12,94 @@
         transform: translateY(-0.5rem);
     }
 
-    .wa-post-card-loading-view {
-        background-color: #F3F3F3;
-        background-image: linear-gradient(to right, #F3F3F3 0%, #EAEAEA 20%, #F3F3F3 50%, #F3F3F3 100%);
-        background-repeat: no-repeat;
-        -webkit-animation: placeholderShimmer 1.5s linear infinite;
-        animation: placeholderShimmer 1.5s linear infinite;
-
-        .wa-post-card-image {
-            position: relative;
-            height: 20rem;
-        }
-
-        .wa-post-card-text {
-            border: 2rem solid $color-code-white;
-            
-            .wa-post-card-title {
-                height: 2rem;
-            }
-
-            .wa-post-card-description {
-                position: relative;
-                height: 4rem;
-                border-top: 2rem solid $color-code-white;
-                border-bottom: 1rem solid $color-code-white;
-
-                &:before {
-                    position: absolute;
-                    content: '';
-                    top: calc(50% - 0.4rem);
-                    left: 0;
-                    width: 100%;
-                    height: 0.8rem;
-                    background-color: $color-code-white;
-                }
-
-                &:after {
-                    position: absolute;
-                    content: '';
-                    bottom: 0;
-                    right: 0;
-                    width: 50%;
-                    height: 2rem;
-                    background-color: $color-code-white;
-                }
-            }
-        }
-
-        .wa-post-card-footer {
-            border: 2rem solid $color-code-white;
-            height: 2.8rem;
-            position: relative;
-
-            &:before {
-                position: absolute;
-                content: '';
-                top: -2.1rem;
-                left: 0;
-                width: 100%;
-                height: 1px;
-                background-color: $color-code-lightgray;
-            }
-
-            .wa-post-credit {
-                display: inline-block;
-
-                .wa-profile-dp-loading {
-                    border: 2rem solid $color-code-white;
-                    border-radius: 100%;
-                    width: 2.5rem;
-                    height: 2.5rem;
-                    position: relative;
-                    top: -2rem;
-                    left: -2rem;
-                    display: inline-block;
-                }
-
-                .wa-post-author {
-                    border: 2rem solid $color-code-white;
-                    height: 1.4rem;
-                    width: 10rem;
-                    display: inline-block;
-                    vertical-align: top;
-                    position: relative;
-                    top: -1.4rem;
-                    left: -3.5rem;
-                }
-            }
-
-            .wa-post-date {
-                display: inline-block;
-                width: 5rem;
-                border: 2rem solid $color-code-white;
-                border-left-width: 16rem;
-                height: 1.4rem;
-                vertical-align: top;
-                position: absolute;
-                right: -2rem;
-                top: -1.4rem;
-            }
-        }
-
-        @media only screen and (max-width: 1023px) {
-            display: flex;
-
-            .wa-post-card-image {
-                width: 40%;
-                height: 13.5rem;
-            }
-
-            .wa-post-card-text-content {
-                padding-bottom: 6.5rem;
-                position: relative;
-                flex: 1;
-
-                .wa-post-card-text {
-                    min-height: 45%;
-
-                    .wa-post-card-description {
-                        display: none;
-                    }
-                }
-
-                .wa-post-card-footer {
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: calc(100% - 4rem);
-
-                    .wa-post-credit {
-                        display: inline-block;
-        
-                        .wa-post-author {
-                            width: 5rem;
-                        }
-                    }
-
-                    .wa-post-date {
-                        border-left-width: 4rem;
-                    }
-                }
-            }
-        }
-    }
-
     .wa-post-card-loaded-view {
-        cursor: pointer;
+        display: flex;
+        flex-direction: column;
         height: 100%;
-        display: block;
+        width: 100%;
         text-decoration: none;
         color: $color-code-text;
+
+        @media only screen and (max-width: 920px) {
+            flex-direction: row;
+        }
 
         .wa-post-card-image-container {
             position: relative;
             background-color: $color-code-lightgray;
             height: 20rem;
-        }
 
-        .wa-post-card-image {
-            position: absolute;
-            background-color: $color-code-lightgray;
-            background-image: linear-gradient($color-code-lightgray, $color-code-lightgray);
-            background-size: cover;
-            background-position: center center;
-            height: 20rem;
-            width: 100%;
-
-            &:after {
+            @media only screen and (max-width: 920px) {
+                width: 12.5rem;
                 position: absolute;
-                content: '';
-                bottom: 0;
                 left: 0;
+                top: 0;
+                height: 100%;
+            }
+
+            .wa-post-card-image {
+                position: absolute;
+                background-color: $color-code-lightgray;
+                background-image: linear-gradient($color-code-lightgray, $color-code-lightgray);
+                background-size: cover;
+                background-position: center center;
+                height: 20rem;
                 width: 100%;
-                height: 2px;
-                opacity: 0;
-                background-color: $color-code-gray;
-                transition: all ease 250ms;
+
+                @media only screen and (max-width: 920px) {
+                    height: 100%;
+                }
+    
+                &:after {
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    opacity: 0;
+                    background-color: $color-code-gray;
+                    transition: all ease 250ms;
+                }
             }
         }
 
         .wa-post-card-text-content {
-            padding-bottom: 6.5rem;
-
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+            
             .wa-post-card-text {
+                flex: 1;
                 padding: 2rem;
                 padding-bottom: 3rem;
 
-                .wa-post-card-tags {
-                    display: flex;
-                    color: $color-code-yellow;
-                    font-size: 1.4rem;
-                    margin-bottom: 2rem;
+                @media only screen and (max-width: 920px) {
+                    padding: 1.5rem;
+                    padding-bottom: 1.5rem;
+                    padding-left: 14rem;
+                }
+    
+                .wa-post-card-category {
+                    display: inline-flex;
+                    color: $color-code-pink;
+                    font-family: $headings-font-family;
+                    font-size: 1.6rem;
+                    margin-bottom: 1.5rem;
                     font-weight: $font-weight-medium;
                     text-transform: uppercase;
-
-                    .wa-post-card-tag {
-                        padding: 0.5rem 1.5rem;
-                        margin-right: 1rem;
-                        background-color: $color-code-primary;
-                        border-radius: 5rem;
-                    }
                 }
     
                 .wa-post-card-title {
+                    font-family: $site-font-family;
                     font-size: 2.4rem;
                     font-weight: $font-weight-bold;
-                    text-transform: uppercase;
+                    text-transform: none;
                     transition: color ease 300ms;
+
+                    @media only screen and (max-width: 920px) {
+                        font-size: 1.6rem;
+                    }
                 }
     
                 .wa-post-card-description {
@@ -227,22 +107,26 @@
                     font-weight: $font-weight-light;
                     line-height: 2.4rem;
                     margin-top: 2rem;
+
+                    @media only screen and (max-width: 920px) {
+                        display: none;
+                    }
                 }
             }
     
             .wa-post-card-footer {
                 font-size: 1.4rem;
-                font-weight: $font-weight-medium;
+                font-weight: $font-weight-normal;
                 padding: 2rem;
                 border-top: 1px solid $color-code-lightgray;
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                width: calc(100% - 4rem);
                 height: 2.5rem;
+
+                @media only screen and (max-width: 920px) {
+                    display: none;
+                }
     
                 .wa-post-credit {
                     display: flex;
@@ -256,51 +140,6 @@
                     .wa-post-author {
                         padding-left: 1rem;
                     }
-                }
-            }
-        }
-    }
-
-    @media only screen and (max-width: 1023px) {
-        margin-bottom: 2rem;
-
-        .wa-post-card-loaded-view {
-            display: flex;
-
-            .wa-post-card-image-container {
-                max-width: 40%;
-                flex: 1;
-                height: 100%;
-
-                .wa-post-card-image {
-                    height: 16rem;
-
-                    &:after {
-                        top: 0;
-                        left: 100%;
-                        width: 2px;
-                        height: 100%;
-                    }
-                }
-            }
-
-            .wa-post-card-text-content {
-                flex: 1;
-
-                .wa-post-card-text {
-                    padding: 1.5rem;
-        
-                    .wa-post-card-title {
-                        font-size: 1.6rem;
-                    }
-
-                    .wa-post-card-description {
-                        display: none;
-                    }
-                }
-
-                .wa-post-card-footer {
-                    padding: 1.5rem;
                 }
             }
         }

@@ -3,13 +3,14 @@
 $blog-content-width: 800px;
 
 .wa-blog-post-hero-container {
-    background-color: #0B1218;
+    background-color: $color-code-primary;
     background-image: url('/assets/images/hero-banner/hero-banner-min.jpg');
     background-position: bottom right;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    padding-top: 20rem;
+    background-blend-mode: luminosity;
+    padding-top: 7.5rem;
     margin-bottom: 15rem;
     color: $color-code-white;
 
@@ -38,6 +39,8 @@ $blog-content-width: 800px;
             ::ng-deep  .wa-blog-post-hero-title {
                 margin-top: 4rem;
                 font-weight: 300;
+                color: $color-code-white;
+                font-family: $site-font-family;
 
                 span {
                     display: inline-block;
@@ -45,10 +48,9 @@ $blog-content-width: 800px;
                 }
 
                 .wa-title-highlight {
-                    font-size: 7.5rem;
+                    font-size: 5rem;
                     font-weight: 400;
                     letter-spacing: 0.5rem;
-                    font-style: italic;
                 }
             }
 

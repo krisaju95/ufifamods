@@ -9,7 +9,7 @@ h1, h2, h3 {
     color: $color-code-primary;
 
     .wa-title-bold, &.wa-title-bold {
-        font-weight: 500;
+        font-weight: 600;
     }
 
     .wa-title-highlight, &.wa-title-highlight {
@@ -20,14 +20,26 @@ h1, h2, h3 {
 h1 {
     font-size: 4.2rem;
     line-height: 7rem;
+
+    @media only screen and (max-width: 920px) {
+        font-size: 3.2rem;
+    }
 }
 
 h2 {
     font-size: 3.6rem;
+
+    @media only screen and (max-width: 920px) {
+        font-size: 2.4rem;
+    }
 }
 
 h3 {
     font-size: 2.8rem;
+
+    @media only screen and (max-width: 920px) {
+        font-size: 2.1rem;
+    }
 }
 
 .wa-page-title {
