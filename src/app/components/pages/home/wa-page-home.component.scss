@@ -1,0 +1,56 @@
+@import 'variables';
+
+.wa-discord-container {
+    background-color: #26262B;
+
+    .wa-discord-wrapper {
+        color: $color-code-white;
+        background-image: url("/assets/images/home/discordbg.png");
+        background-repeat: no-repeat;
+        background-position: center right;
+        background-size: contain;
+
+        @media only screen and (max-width: 920px) {
+            background: none;
+        }
+
+        .wa-discord-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 15rem 0;
+
+            @media only screen and (max-width: 920px) {
+                padding: 5rem 0;
+            }
+
+            .wa-discord-text-content {
+                max-width: 50rem;
+
+                @media only screen and (max-width: 920px) {
+                    max-width: calc(100vw - 20rem);
+                }
+
+                h2 {
+                    color: $color-code-white;
+                }
+            }
+
+            .wa-discord-logo-container {
+                padding: 0 20rem;
+
+                @media only screen and (max-width: 920px) {
+                    padding: 0 2rem;
+                }
+
+                img {
+                    height: 20rem;
+
+                    @media only screen and (max-width: 920px) {
+                        height: 15rem;
+                    }
+                }
+            }
+        }
+    }
+}
