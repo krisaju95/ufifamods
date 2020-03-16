@@ -29,10 +29,10 @@ export class WARootScope {
     }
 
     checkIfDesktopViewPort() {
-        return window.innerWidth >= 1024;
+        return window.innerWidth >= 920;
     }
 
     checkIfMobileViewport() {
-        return window.innerWidth < 1024;
+        return window.innerWidth < 920;
     }
 }

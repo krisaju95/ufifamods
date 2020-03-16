@@ -7,7 +7,7 @@ $font-weight-light:     300;
 $font-weight-normal:    400;
 $font-weight-medium:    600;
 $font-weight-bold:      900;
-$font-weight-heading:   800;
+$font-weight-heading:   600;
 
 // Color Codes
 $color-code-primary:            #28314D;
@@ -28,4 +28,4 @@ $color-code-white:              #FFFFFF;
 $site-cloud-storage-images: '/assets/images/';
 $site-cloud-storage-images-flags: $site-cloud-storage-images + 'flags/';
 $site-cloud-storage-images-club-crests: $site-cloud-storage-images + 'club-crests/';
-$site-cloud-storage-images-team-members: $site-cloud-storage-images + 'team-members/';
+$site-cloud-storage-images-team-members: $site-cloud-storage-images + 'profiles/';

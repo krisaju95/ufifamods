@@ -12,6 +12,8 @@ export class WAPostCardComponent {
 
 	@Input() loading: boolean;
 
+	@Input() showDescription: boolean = true;
+
 	@Output() postCardClicked: EventEmitter<any> = new EventEmitter<any>();
 
 	navigateToPost(link: string) {

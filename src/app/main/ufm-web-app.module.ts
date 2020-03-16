@@ -16,6 +16,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WAPageHomeModule } from '../components/pages/home';
 import { WAPageBlogModule } from '../components/pages/blog';
 import { WABlogPostModule } from '../components/pages/blog-post';
+import { CreateFUTCardModule } from '../components/pages/create-fut-card';
 
 // Service Modules
 import { WADBServiceModule } from '../services/database';
@@ -35,6 +36,7 @@ import { WARootScopeModule } from '../services/globals';
 		WAPageHomeModule,
 		WAPageBlogModule,
 		WABlogPostModule,
+		CreateFUTCardModule,
 		WADBServiceModule,
 		WALoaderServiceModule,
 		WARootScopeModule

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { IconDefinition, faSearch, faBars, faTimes } from '@fortawesome/free-solid-svg-icons';
 import { WALoaderService } from '../../services/loader/wa-loader.service';
 import { WARootScope } from '../../services/globals/wa-rootscope';
 import { WAFeatureSwitches } from '../../constants/wa-feature-switches';
@@ -13,12 +12,6 @@ import { WAFeatureSwitches } from '../../constants/wa-feature-switches';
 export class WAHeaderComponent {
 
     WAFeatureSwitches: any = WAFeatureSwitches;
-
-    faSearch: IconDefinition = faSearch;
-
-    faBars: IconDefinition = faBars;
-
-    faTimes: IconDefinition = faTimes;
 
     loading: boolean = true;
 

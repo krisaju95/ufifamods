@@ -9,7 +9,7 @@ $background-color-disabled: $color-code-darkergray;
 .wa-button {
     display: inline-block;
     position: relative;
-    background-color: $color-code-darkgray;
+    background-color: $color-code-white;
     border: 2px solid transparent;
     color: $color-code-text;
     padding: 2rem 5rem;
@@ -19,6 +19,7 @@ $background-color-disabled: $color-code-darkergray;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     text-decoration: none;
+    text-align: center;
     letter-spacing: 1px;
     cursor: pointer;
     outline: 0;
@@ -32,9 +33,18 @@ $background-color-disabled: $color-code-darkergray;
         }
     }
 
+    @media only screen and (max-width: 920px) {
+        padding: 1.5rem;
+        font-size: 1.6rem;
+
+        &.wa-single-cta {
+            display: block;
+        }
+    }
+
     &:hover, &:focus {
-        background-color: #F5F5F5;
-        color: #000000;
+        background-color: $color-code-gray;
+        color: $color-code-text;
     }
 
     &.wa-ghost-button {

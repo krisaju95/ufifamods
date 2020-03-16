@@ -12,9 +12,18 @@
     margin-bottom: 5rem;
     color: $color-code-white;
 
+    @media only screen and (max-width: 920px) {
+        padding: 3rem 0;
+        margin-bottom: 3rem;
+    }
+
     .wa-blog-page-hero-wrapper {
         position: relative;
         min-height: 10rem;
+
+        @media only screen and (max-width: 920px) {
+            min-height: auto;
+        }
 
         .wa-page-title {
             color: $color-code-white;
@@ -49,7 +58,7 @@
         }
     }
 
-    @media only screen and (max-width: 1023px) {
+    @media only screen and (max-width: 920px) {
         .wa-blog-page-wrapper {
             .wa-blog-page-tiles {
                 display: block;
@@ -58,7 +67,7 @@
     
                 .wa-blog-page-tile {
                     width: 100%;
-                    padding-bottom: 0;
+                    padding-bottom: 1.5rem;
                 }
             }
         }

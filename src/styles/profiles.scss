@@ -42,6 +42,10 @@
     }
 
     &.FNG {
-        background-image: url($site-cloud-storage-images-team-members + 'FNG.png');
+        background-image: url($site-cloud-storage-images-team-members + 'FNG.jpg');
+    }
+
+    &.KieronSFF {
+        background-image: url($site-cloud-storage-images-team-members + 'KieronSFF.jpg');
     }
 }

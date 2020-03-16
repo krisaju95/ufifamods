@@ -15,6 +15,7 @@ import { DisqusModule } from "ngx-disqus";
 // Directives
 import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
 import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
+import { SafePipeModule } from 'safe-pipe';
 
 @NgModule({
     declarations: [
@@ -22,6 +23,7 @@ import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-f
     ],
     imports: [
         BrowserModule,
+        SafePipeModule,
         WAPostCardModule,
         WAImageLoaderDirectiveModule,
         WAProfileInfoPipeModule,

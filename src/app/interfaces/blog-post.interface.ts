@@ -6,6 +6,7 @@ export interface WABlogPost {
 	title?: string,
 	date?: Date,
 	thumbnail?: string,
+	postPageThumbnail?: string,
 	category?: string,
 	tags?: string[],
 	description?: string,
@@ -15,5 +16,6 @@ export interface WABlogPost {
 	downloadLink?: string,
 	linkType?: string,
 	starheads?: string[],
-	screenshots?: string
+	screenshots?: string,
+	video?: string
 }

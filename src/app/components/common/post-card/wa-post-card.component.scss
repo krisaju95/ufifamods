@@ -4,8 +4,6 @@
     height: 100%;
     position: relative;
     background-color: $color-code-white;
-    box-shadow: 0 0 50px 0px rgba(0, 0, 0, 0.1);
-    border-radius: 0 0 5px 5px;
     transition: transform ease 250ms;
 
     &:hover, &:focus {
@@ -27,7 +25,7 @@
         .wa-post-card-image-container {
             position: relative;
             background-color: $color-code-lightgray;
-            height: 20rem;
+            height: 22.5rem;
 
             @media only screen and (max-width: 920px) {
                 width: 12.5rem;
@@ -43,7 +41,7 @@
                 background-image: linear-gradient($color-code-lightgray, $color-code-lightgray);
                 background-size: cover;
                 background-position: center center;
-                height: 20rem;
+                height: 22.5rem;
                 width: 100%;
 
                 @media only screen and (max-width: 920px) {
@@ -68,6 +66,10 @@
             display: flex;
             flex-direction: column;
             flex: 1;
+
+            @media only screen and (max-width: 920px) {
+                min-height: 10rem;
+            }
             
             .wa-post-card-text {
                 flex: 1;
@@ -88,6 +90,11 @@
                     margin-bottom: 1.5rem;
                     font-weight: $font-weight-medium;
                     text-transform: uppercase;
+
+                    @media only screen and (max-width: 920px) {
+                        font-size: 1.2rem;
+                        margin-bottom: 0.5rem;
+                    }
                 }
     
                 .wa-post-card-title {
@@ -96,6 +103,7 @@
                     font-weight: $font-weight-bold;
                     text-transform: none;
                     transition: color ease 300ms;
+                    margin: 0;
 
                     @media only screen and (max-width: 920px) {
                         font-size: 1.6rem;

@@ -1,35 +1,14 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
-@Pipe({
-	name: 'postFormatter'
-})
-
+@Pipe({ name: 'postFormatter' })
 export class WABlogPostFormatPipe implements PipeTransform {
 	transform(content: string = '', contentType: string = ''): any {
 		switch (contentType) {
 			case "title": {
-				const regexArray: Array<RegExp> = [/FIFA\s[0-9]{2}\:/, /FIFA[0-9]{2}\:/, /FIFA\s[0-9]{2}/, /FIFA[0-9]{2}/];
-				let fifaVersionMatches: RegExpMatchArray;
-				let fifaVersionText: string = '';
-				let formattedFifaVersionText: string = '';
-				for (let regex of regexArray) {
-					fifaVersionMatches = content.match(regex);
-					if (fifaVersionMatches && fifaVersionMatches.index == 0) {
-						fifaVersionText = fifaVersionMatches[0];
-						formattedFifaVersionText = fifaVersionText.replace(':', '');
-						formattedFifaVersionText = '<span class="wa-title-bold">' + formattedFifaVersionText + '</span>';
-						break;
-					}
-				}
-				if (fifaVersionText) {
-					content = content.replace(fifaVersionText, formattedFifaVersionText);
-				}
-				let contentParts: Array<string> = content.split(" - ");
-				if (contentParts[1]) {
-					contentParts[1] = '<span class="wa-title-highlight">' + contentParts[1] + '</span>';
-				}
-				content = contentParts.join('<br>');
-				return content;
+				const titleTextParts: Array<string> = (content || '').split(':');
+				const titlePart1: string = titleTextParts[1] ? ("<span class='wa-title-bold wa-title-highlight'>" + titleTextParts[0].trim() + "<span class='wa-title-separator'>/</span></span>") : titleTextParts[0].trim();
+				const titlePart2: string = titleTextParts[1] ? (" " + titleTextParts.slice(1).join(' - ')) : "";
+				return titlePart1 + titlePart2;
 			}
 			case "body": {
 				content = content.replace(/\n\n/g, "\n");
@@ -43,6 +22,13 @@ export class WABlogPostFormatPipe implements PipeTransform {
 				content = content.replace(/\n\n/g, "\n");
 				const contentParts: Array<any> = content.split("\n");
 				return contentParts;
+			}
+			case "youtube": {
+				const videoID: string = (content || '').split("?v=")[1] || "";
+				return "https://www.youtube.com/embed/" + videoID + "?controls=0";
+			}
+			default: {
+				return content;
 			}
 		}
 	}

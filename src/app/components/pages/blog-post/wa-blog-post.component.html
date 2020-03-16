@@ -1,17 +1,17 @@
-<div class="wa-container wa-blog-post-hero-container">
+<div class="wa-container wa-blog-post-hero-container" [class.data-loading]="loading">
     <div class="wa-wrapper wa-blog-post-hero-wrapper">
         <div class="wa-blog-post-hero-content">
-            <button class="wa-button wa-rounded-focus-ring wa-blog-post-primary-category" [class.data-loading]="loading">
+            <span class="wa-blog-post-primary-category">
                 {{ post.category }}
-            </button>
-            <h1 class="wa-blog-post-hero-title" [class.data-loading]="loading" [innerHTML]="post.title | postFormatter : 'title'"></h1>
-            <div class="wa-blog-post-hero-image" [style.background-image]="'url(' + post.thumbnail + ')'" [class.data-loading]="loading"></div>
+            </span>
+            <h1 class="wa-blog-post-hero-title" [innerHTML]="post.title | postFormatter : 'title'"></h1>
         </div>
     </div>
 </div>
 <div class="wa-container wa-blog-post-body-container">
     <div class="wa-wrapper wa-blog-post-body-wrapper">
         <div class="wa-blog-post-body-content" [class.data-loading]="loading">
+            <div class="wa-blog-post-hero-image" [style.background-image]="'url(' + (post.postPageThumbnail || post.thumbnail) + ')'" [class.data-loading]="loading"></div>
             <div class="wa-blog-post-info">
                 Article by <span class="wa-blog-post-author">{{post.author}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="wa-blog-post-date">{{post.date | date : 'd MMMM, yyyy'}}</span>
             </div>
@@ -20,7 +20,7 @@
             <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
                 <h3>Contributors</h3>
                 <div class="wa-blog-post-contributors">
-                    <div class="wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
+                    <div class="wa-blog-post-contributor wa-raised-container" *ngFor="let contributor of post.contributors">
                         <div class="wa-profile-dp {{contributor}}"></div>
                         <div>{{contributor}}</div>
                     </div>
@@ -34,21 +34,25 @@
                     </div>
                 </div>
             </div>
-            <div class="wa-blog-post-download-wrapper">
+            <div *ngIf="post.downloadLink" class="wa-blog-post-download-wrapper">
                 <button class="wa-button wa-primary-button" (click)="download(post.downloadLink)">
                     <span class="wa-button-text">Download</span>
                     <fa-icon [icon]="faCloudDownloadAlt"></fa-icon>
                 </button>
                 <div class="wa-blog-post-download-link-type"> powered by {{post.linkType}}</div>
             </div>
+            <div *ngIf="post.video" class="wa-blog-post-video-wrapper">
+                <p>Watch the video below.</p>
+                <iframe class="wa-blog-post-video-iframe" [src]="post.video | postFormatter : (post.videoHost || 'youtube') | safe : 'resourceUrl'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
         </div>
     </div>
 </div>
-<ufm-posts-grid [title]="'Related Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
+<ufm-posts-grid [title]="'Featured Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
 <div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
     <div class="wa-wrapper wa-blog-post-disqus-wrapper">
-        <h2>Comment Below</h2>
-        <div class="wa-blog-post-disqus-thread">
+        <h2 class="wa-section-heading">Comment Below</h2>
+        <div class="wa-blog-post-disqus-thread wa-raised-container">
             <disqus [identifier]="post.id" [url]="siteURL + post.url"></disqus>
         </div>
     </div>

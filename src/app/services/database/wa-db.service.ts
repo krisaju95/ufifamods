@@ -55,6 +55,7 @@ export class WADBService {
             title: post['Title'],
             date: post['Date'],
             thumbnail: post['Thumbnail'],
+            postPageThumbnail: post['Post Page Thumbnail'],
             category: post['Primary Category'],
             tags: post['Categories'],
             description: post['Brief Description'],
@@ -64,7 +65,8 @@ export class WADBService {
             downloadLink: post['Download Link'],
             linkType: post['Link Type'],
             starheads: post['Custom Star-head(s)'],
-            screenshots: post['Screenshots']
+            screenshots: post['Screenshots'],
+            video: post['Video']
         };
     }
 
@@ -97,6 +99,11 @@ export class WADBService {
                             filteredPostsData.push(post);
                         }
                         break;
+                    }
+                    default: {
+                        if (post.tags.indexOf(category) > -1) {
+                            filteredPostsData.push(post);
+                        }
                     }
                 }
             }

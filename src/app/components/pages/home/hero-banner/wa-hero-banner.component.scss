@@ -75,7 +75,7 @@
                 }
 
                 @media only screen and (max-width: 920px) {
-                    width: 100%;
+                    width: calc(100% - 4rem);
 
                     img {
                         height: auto;
@@ -89,7 +89,7 @@
             position: absolute;
             bottom: 0;
             left: 3rem;
-            padding: 2rem 10rem 2rem 3rem;
+            padding: 2rem 10rem 1rem 3rem;
             background: $color-code-white;
             border-radius: 4rem 4rem 0 0;
             cursor: pointer;
