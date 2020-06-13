@@ -8,7 +8,6 @@ import { WABlogPostComponent } from './wa-blog-post.component';
 // Additional Modules
 import { WAPostCardModule } from '../../common/post-card';
 import { WAProfileInfoPipeModule } from '../../../pipes/profile-info';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { WAPostsGridModule } from '../home/posts-grid';
 import { DisqusModule } from "ngx-disqus";
 
@@ -27,7 +26,6 @@ import { SafePipeModule } from 'safe-pipe';
         WAPostCardModule,
         WAImageLoaderDirectiveModule,
         WAProfileInfoPipeModule,
-        FontAwesomeModule,
         WAPostsGridModule,
         WABlogPostFormatPipeModule,
         DisqusModule.forRoot('ufifamods')

@@ -6,12 +6,18 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
     color: $color-code-text;
+    background-color: $color-code-darkblue;
+    overflow-x: hidden;
 
     .wa-text-blue {
         color: $color-code-blue;
     }
 
+    .wa-text-normal {
+        font-weight: $font-weight-normal;
+    }
+
     .wa-text-light {
-        font-weight: 300;
+        font-weight: $font-weight-light;
     }
 }

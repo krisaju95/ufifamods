@@ -4,6 +4,7 @@ export interface WABlogPost {
 	featured?: boolean,
 	url?: string,
 	title?: string,
+	shortTitle?: string,
 	date?: Date,
 	thumbnail?: string,
 	postPageThumbnail?: string,

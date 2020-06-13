@@ -10,7 +10,6 @@ import { UFMWebAppComponent } from './ufm-web-app.component';
 
 // Additional Modules
 import { WAHeaderComponent, WAFooterComponent } from '../components';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 // Page Modules
 import { WAPageHomeModule } from '../components/pages/home';
@@ -32,7 +31,6 @@ import { WARootScopeModule } from '../services/globals';
 	imports: [
 		BrowserModule,
 		UFMWebAppRoutingModule,
-		FontAwesomeModule,
 		WAPageHomeModule,
 		WAPageBlogModule,
 		WABlogPostModule,

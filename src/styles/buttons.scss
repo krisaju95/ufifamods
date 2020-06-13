@@ -1,21 +1,20 @@
 @import 'variables.scss';
 
 // Colour Codes
-$text-color-primary: $color-code-white;
-$background-color-primary: $color-code-primary;
-$background-color-primary-hover: $color-code-tertiary;
+$text-color-primary: $color-code-primary;
+$background-color-primary: $color-code-white;
+$background-color-primary-hover: $color-code-yellow;
 $background-color-disabled: $color-code-darkergray;
 
 .wa-button {
     display: inline-block;
     position: relative;
     background-color: $color-code-white;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     color: $color-code-text;
-    padding: 2rem 5rem;
-    border-radius: 0.5rem;
+    padding: 2rem 4rem;
     font-family: $site-font-family;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     text-decoration: none;
@@ -59,39 +58,24 @@ $background-color-disabled: $color-code-darkergray;
     }
 
     &.wa-primary-button {
-        border: none;
+        border-color: $background-color-primary;
         background-color: $background-color-primary;
         color: $text-color-primary;
-
-        &::before {
-            position: absolute;
-            content: '';
-            top: 0;
-            right: 0;
-            width: 0;
-            height: 100%;
-            border-radius: 0.5rem;
-            opacity: 0;
-            transition: all ease 300ms;
-            background-image: linear-gradient(to right, $color-code-primary 40%, $color-code-tertiary 80%, $color-code-blue);
-        }
-
-        &:hover, &:focus {
-            &::before {
-                opacity: 1;
-                width: 100%;
-            }
-        }
-    }
-
-    &.wa-secondary-button {
-        background-color: $color-code-tertiary;
-        border-color: $color-code-tertiary;
-        color: $color-code-white;
 
         &:hover, &:focus {
             border-color: $background-color-primary-hover;
             background-color: $background-color-primary-hover;
+        }
+    }
+
+    &.wa-secondary-button {
+        border-color: $background-color-primary;
+        background-color: transparent;
+        color: $background-color-primary;
+
+        &:hover, &:focus {
+            border-color: $background-color-primary-hover;
+            color: $background-color-primary-hover;
         }
     }
 

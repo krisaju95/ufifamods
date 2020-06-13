@@ -2,8 +2,6 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { WADBService } from '../../../services/database/wa-db.service';
 import { WALoaderService } from '../../../services/loader/wa-loader.service';
-import { IconDefinition } from '@fortawesome/free-brands-svg-icons';
-import { faCloudDownloadAlt } from '@fortawesome/free-solid-svg-icons';
 import { WABlogPost } from 'src/app/interfaces/blog-post.interface';
 
 @Component({
@@ -23,8 +21,6 @@ export class WABlogPostComponent {
     post: WABlogPost = ({} as WABlogPost);
 
     fileURL: string = "";
-
-    faCloudDownloadAlt: IconDefinition = faCloudDownloadAlt;
 
     constructor(
         private WADBService: WADBService,

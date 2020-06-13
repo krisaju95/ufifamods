@@ -1,154 +1,99 @@
-@import 'variables.scss';
-@import 'animations.scss';
+@import "variables";
 
-.wa-header-container {
-    position: relative;
-    border-radius: 0;
+.wa-container {
+    border-bottom: 1px solid $border-color;
+}
+
+.wa-loader-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0 1.5rem;
+    width: calc(100% - 3rem);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media only screen and (max-width: 920px) {
+        justify-content: flex-end;
+    }
     
-    .wa-header-wrapper {
-        position: relative;
+    .wa-loader {
+        height: 4rem;
+        transition: transform ease 500ms;
 
-        .wa-loading-element {
+        @media only screen and (max-width: 920px) {
+            height: 3rem;
+        }
+
+        &.wa-loading-element {
             transform: scale(0);
-            display: block;
         }
+    }
+}
 
-        .wa-header-content {
-            height: 7.5rem;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+.wa-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 0;
 
-            .wa-logo {
-                padding: 1rem;
+    .wa-logo {
+        height: 3rem;
 
-                @media only screen and (max-width: 920px) {
-                    margin-left: -1rem;
-                }
-
-                .wa-logo-img {
-                    height: 2.5rem;
-
-                    @media only screen and (max-width: 920px) {
-                        height: 2rem;
-                    }
-                }
-            }
-
-            .wa-navbar {
-                .wa-navbar-overlay {
-                    position: fixed;
-                    top: 0;
-                    right: 0;
-                    width: 100%;
-                    height: 100%;
-                    z-index: 99999;
-                    background-color: $color-code-primary;
-                    opacity: 0;
-                    pointer-events: none;
-                    will-change: opacity;
-                    transition: opacity ease 300ms;
-
-                    &.wa-navbar-overlay-visible {
-                        opacity: 0.75;
-                        pointer-events: all;
-                    }
-                }
-
-                .wa-navbar-toggle {
-                    padding: 0.5rem;
-                    font-size: 2rem;
-                    transition: transform ease 500ms;
-                    display: flex;
-                    border: none;
-                }
-
-                .wa-navbar-menu {
-                    list-style: none;
-                    display: flex;
-                    align-items: center;
-                    padding: 0;
-                    margin: 0;
-
-                    @media only screen and (max-width: 920px) {
-                        flex-direction: column;
-                        position: fixed;
-                        top: 0;
-                        right: -100%;
-                        height: 100%;
-                        max-width: 40%;
-                        z-index: 99999;
-                        background-color: $color-code-white;
-                        will-change: right;
-                        transition: right ease 300ms;
-
-                        &.wa-navbar-menu-visible {
-                            right: 0;
-                        }
-                    }
-
-                    .wa-navbar-menu-item {
-                        width: 100%;
-
-                        .wa-navbar-menu-link {
-                            padding: 1rem 2rem;
-                            font-size: 1.6rem;
-                            text-decoration: none;
-                            display: block;
-
-                            .wa-navbar-menu-icon {
-                                display: none;
-                            }
-
-                            @media only screen and (min-width: 920px) {
-                                box-shadow: none;
-                                border-radius: 0;
-                            }
-                            
-                            @media only screen and (max-width: 920px) {
-                                display: flex;
-                                flex-direction: column;
-                                justify-content: center;
-                                align-items: center;
-                                margin: 1rem;
-                                margin-bottom: 0;
-                                padding: 1rem;
-                                color: inherit;
-
-                                .wa-navbar-menu-icon {
-                                    display: block;
-                                    margin-bottom: 0.5rem;
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .wa-loader-container {
-            position: absolute;
-            top: 0;
-            left: 0;
-            padding: 0 1.5rem;
-            width: calc(100% - 3rem);
+        img {
             height: 100%;
+        }
+    }
+
+    .wa-navbar {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .wa-navbar-section {
             display: flex;
-            align-items: center;
-            justify-content: center;
+            justify-content: flex-end;
+            list-style: none;
+            font-size: 1.6rem;
+            margin: 0;
+            padding: 0;
+            font-weight: $font-weight-light;
+            color: $color-code-gray;
+            text-transform: uppercase;
 
-            @media only screen and (max-width: 920px) {
-                justify-content: flex-end;
-            }
-            
-            .wa-loader {
-                height: 4rem;
-                filter: invert(1);
-                transition: transform ease 500ms;
+            .wa-navbar-item a {
+                color: $color-code-text;
+                font-weight: $font-weight-normal;
 
-                @media only screen and (max-width: 920px) {
-                    height: 3rem;
+                &:hover {
+                    color: $color-code-secondary;
+                    text-decoration: none;
                 }
+            }
+
+            &.wa-primary-navbar {
+                .wa-navbar-item ~.wa-navbar-item {
+                    margin-left: 5rem;
+                }
+            }
+
+            &.wa-secondary-navbar {
+                .wa-navbar-separator {
+                    margin-left: 2rem;
+                    margin-right: 0.5rem;
+                    opacity: 0.25;
+                }
+                .wa-navbar-item {
+                    ~.wa-navbar-item {
+                        margin-left: 1.5rem;
+                    }
+                }
+            }
+
+            ~.wa-navbar-section {
+                margin-top: 3rem;
             }
         }
     }

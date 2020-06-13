@@ -1,9 +1,14 @@
-<div class="wa-header">
-    <ufm-wa-header></ufm-wa-header>
-</div>
-<div class="wa-body">
-    <router-outlet></router-outlet>
-</div>
-<div class="wa-footer">
-    <ufm-wa-footer></ufm-wa-footer>
+<div [class.show-focus-ring]="showFocusRing">
+    <div class="wa-hero-banner-image-container">
+        <div class="wa-hero-banner-image"></div>
+    </div>
+    <div class="wa-header">
+        <ufm-wa-header></ufm-wa-header>
+    </div>
+    <div class="wa-body">
+        <router-outlet></router-outlet>
+    </div>
+    <div class="wa-footer">
+        <ufm-wa-footer></ufm-wa-footer>
+    </div>
 </div>

@@ -6,8 +6,7 @@ import { RouterModule } from '@angular/router';
 // Main Web App Component
 import { WAPostCardComponent } from './wa-post-card.component';
 
-// Directives
-import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
+import { WABlogPostFormatPipeModule } from '../../../pipes/blog-posts/blog-post-formatter';
 
 @NgModule({
     declarations: [
@@ -16,7 +15,7 @@ import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
     imports: [
         BrowserModule,
         RouterModule,
-        WAImageLoaderDirectiveModule
+        WABlogPostFormatPipeModule
     ],
     exports: [WAPostCardComponent]
 })

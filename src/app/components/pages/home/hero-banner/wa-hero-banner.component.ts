@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
-import { IconDefinition, faMouse } from '@fortawesome/free-solid-svg-icons';
 import { WALoaderService } from '../../../../services/loader/wa-loader.service';
+import { WADBService } from 'src/app/services/database/wa-db.service';
+import { ActivatedRoute } from '@angular/router';
+import { WABlogPost } from 'src/app/interfaces/blog-post.interface';
 
 const numberOfHeroBannerImages: number = 6
 
@@ -11,30 +13,23 @@ const numberOfHeroBannerImages: number = 6
 })
 export class WAHeroBannerComponent {
 
-	faMouse: IconDefinition = faMouse;
-
 	loading: boolean = true;
 
-	heroBanner: any = {};
+	heroPost: WABlogPost[] = [];
 
 	constructor(
-		private WALoaderService: WALoaderService
+		private WALoaderService: WALoaderService,
+		private WADBService: WADBService,
+		private route: ActivatedRoute
 	) { }
 
 	ngOnInit() {
-		this.setHeroBanner();
 		this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
 			this.loading = state;
+			if (!state) {
+				this.heroPost = this.WADBService.filterPostsData(this.WADBService.getBlogPostsList(), "featured", 1, this.route)[0];
+				console.log(this.heroPost, "booo");
+			}
 		})
-	}
-
-	setHeroBanner() {
-		const randomIndex: number = Math.floor(Math.random() * Math.floor(numberOfHeroBannerImages)) + 1;
-		this.heroBanner = "/assets/images/hero-banner/hero-banner-image-" + randomIndex + ".png";
-	}
-
-	scrollCTAClicked() {
-		const CTAContainer: HTMLElement = document.querySelector('.wa-scroll-cta-container') as HTMLElement;
-		window.scrollBy(0, (CTAContainer.clientHeight + CTAContainer.getBoundingClientRect().top));
 	}
 }

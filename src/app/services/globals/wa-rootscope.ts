@@ -9,6 +9,11 @@ export class WARootScope {
 
     mobileNavbarOpened: boolean = false;
 
+    socials: any = {
+        twitter: "https://twitter.com/TheOfficialUFM",
+        youtube: "https://www.youtube.com/ufifamods"
+    }
+
     constructor() {
         this.setViewportIdentifiers();
         this.initViewportChangeListeners();

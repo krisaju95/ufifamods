@@ -53,6 +53,7 @@ export class WADBService {
             featured: post['Featured'],
             url: post['URL'],
             title: post['Title'],
+            shortTitle: post['Short Title'],
             date: post['Date'],
             thumbnail: post['Thumbnail'],
             postPageThumbnail: post['Post Page Thumbnail'],
@@ -98,6 +99,10 @@ export class WADBService {
                         if (post.featured) {
                             filteredPostsData.push(post);
                         }
+                        break;
+                    }
+                    case 'all' : {
+                        filteredPostsData.push(post);
                         break;
                     }
                     default: {

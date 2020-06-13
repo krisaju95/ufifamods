@@ -13,31 +13,31 @@
         <div class="wa-blog-post-body-content" [class.data-loading]="loading">
             <div class="wa-blog-post-hero-image" [style.background-image]="'url(' + (post.postPageThumbnail || post.thumbnail) + ')'" [class.data-loading]="loading"></div>
             <div class="wa-blog-post-info">
-                Article by <span class="wa-blog-post-author">{{post.author}}</span>&nbsp;&nbsp;|&nbsp;&nbsp;<span class="wa-blog-post-date">{{post.date | date : 'd MMMM, yyyy'}}</span>
+                <span class="wa-blog-post-auther-info">
+                    <div>Article by</div>
+                    <span class="wa-blog-post-author">{{post.author}} <div class="wa-profile-dp {{post.author}}"></div></span></span>
+                <span class="wa-blog-post-date">{{post.date | date : 'd MMMM, yyyy'}}</span>
             </div>
             <p class="highlight" [innerHTML]="post.description"></p>
             <div [innerHTML]="post.body | postFormatter : 'body'"></div>
             <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
-                <h3>Contributors</h3>
+                <h3>Contributor(s)</h3>
                 <div class="wa-blog-post-contributors">
-                    <div class="wa-blog-post-contributor wa-raised-container" *ngFor="let contributor of post.contributors">
+                    <div class="wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
                         <div class="wa-profile-dp {{contributor}}"></div>
                         <div>{{contributor}}</div>
                     </div>
                 </div>
             </div>
             <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">
-                <h3>Screenshots</h3>
+                <h3>Screenshot(s)</h3>
                 <div class="wa-blog-post-screenshots">
-                    <div class="wa-blog-post-screenshot" *ngFor="let screenshot of (post.screenshots | postFormatter : 'screenshots')">
-                        <img [src]="screenshot">
-                    </div>
+                    <div class="wa-blog-post-screenshot" *ngFor="let screenshot of (post.screenshots | postFormatter : 'screenshots').slice(0, 3)" [style.background-image]="'url(' + screenshot + ')'"></div>
                 </div>
             </div>
             <div *ngIf="post.downloadLink" class="wa-blog-post-download-wrapper">
                 <button class="wa-button wa-primary-button" (click)="download(post.downloadLink)">
-                    <span class="wa-button-text">Download</span>
-                    <fa-icon [icon]="faCloudDownloadAlt"></fa-icon>
+                    <span class="wa-button-text">Download now</span>
                 </button>
                 <div class="wa-blog-post-download-link-type"> powered by {{post.linkType}}</div>
             </div>
@@ -52,7 +52,7 @@
 <div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
     <div class="wa-wrapper wa-blog-post-disqus-wrapper">
         <h2 class="wa-section-heading">Comment Below</h2>
-        <div class="wa-blog-post-disqus-thread wa-raised-container">
+        <div class="wa-blog-post-disqus-thread">
             <disqus [identifier]="post.id" [url]="siteURL + post.url"></disqus>
         </div>
     </div>

@@ -1,28 +1,50 @@
-<div class="wa-container wa-header-container wa-raised-container">
-    <div class="wa-wrapper wa-header-wrapper">
+<div class="wa-container">
+    <div class="wa-wrapper">
         <div class="wa-loader-container">
             <img class="wa-loader" [class.wa-loading-element]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
         </div>
-        <div class="wa-header-content">
+        <div class="wa-content">
             <a class="wa-logo" routerLink="/">
-                <img class="wa-logo-img" alt="Ultimate FIFA Mods" src="/assets/images/logo/wa-full-logo-dark-horizontal.png">
+                <img class="wa-logo-img" alt="Ultimate FIFA Mods" src="/assets/images/logo/site-logo-light-v1.png">
             </a>
             <div class="wa-navbar">
-                <button class="wa-ghost-button wa-button wa-navbar-toggle" [class.wa-loading-element]="loading" *ngIf="WARootScope.isMobileViewport" (click)="toggleNavbar()">
-                    <img src="/assets/images/icons/hamburger-menu.svg">
-                </button>
-                <div class="wa-navbar-overlay" [class.wa-navbar-overlay-visible]="WARootScope.isMobileViewport && navbarOpened" (click)="navbarOpened = false"></div>
-                <ul class="wa-navbar-menu" [class.wa-navbar-menu-visible]="WARootScope.isDesktopViewport || navbarOpened">
-                    <li class="wa-navbar-menu-item">
-                        <a class="wa-navbar-menu-link wa-raised-container" (click)="routeToPage()" routerLink="/">
-                            <img class="wa-navbar-menu-icon" src="/assets/images/icons/homepage.svg">
-                            <span>Home</span>
+                <ul class="wa-navbar-section wa-secondary-navbar">
+                    <li class="wa-navbar-item">
+                        <a href="javascript: void(0)">
+                            <i class="fas fa-search"></i>
                         </a>
                     </li>
-                    <li class="wa-navbar-menu-item">
-                        <a class="wa-navbar-menu-link wa-raised-container" (click)="routeToPage()" routerLink="/blog">
-                            <img class="wa-navbar-menu-icon" src="/assets/images/icons/blogging.svg">
-                            <span>Blog</span>
+                    <span class="wa-navbar-separator">|</span>
+                    <li class="wa-navbar-item">
+                        <a [href]="WARootScope.socials.twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li class="wa-navbar-item">
+                        <a [href]="WARootScope.socials.youtube" target="_blank">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                </ul>
+                <ul class="wa-navbar-section wa-primary-navbar">
+                    <li class="wa-navbar-item">
+                        <a href="javascript: void(0)">
+                            Home
+                        </a>
+                    </li>
+                    <li class="wa-navbar-item">
+                        <a href="javascript: void(0)">
+                            Blog
+                        </a>
+                    </li>
+                    <li class="wa-navbar-item">
+                        <a href="javascript: void(0)">
+                            Downloads
+                        </a>
+                    </li>
+                    <li class="wa-navbar-item">
+                        <a href="javascript: void(0)">
+                            About Us
                         </a>
                     </li>
                 </ul>

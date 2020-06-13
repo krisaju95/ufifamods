@@ -1,22 +1,23 @@
-<div class="wa-container wa-hero-banner-container">
-    <div class="wa-wrapper wa-hero-banner-wrapper">
+<div class="wa-container">
+    <div class="wa-wrapper">
         <div class="wa-hero-banner-content">
-            <div class="wa-hero-banner-text-content">
-                <h2 class="wa-hero-banner-text-heading">
-                    <span class="wa-text-light">#</span>change<span class="wa-text-blue">The</span>Game
-                </h2>
-                <p class="wa-hero-banner-text-description">
-                    Get the best FIFA mods out there, created by our talented UFM team. Read up on the latest FIFA news, and enjoy some brilliant content from our partners!
-                </p>
-            </div>
-            <div class="wa-hero-banner-player-image">
-                <img [src]="heroBanner">
+            <div class="wa-hero-banner-text-1">We're the <span class="wa-text-blue wa-text-normal">Ultimate FIFA Mods</span> team</div>
+            <div class="wa-hero-banner-text-2">And we create free custom graphic mods for FIFA</div>
+            <div class="wa-hero-banner-cta-container">
+                <button class="wa-button wa-primary-button">Download Center</button>
+                <button class="wa-button wa-secondary-button">About Us</button>
             </div>
         </div>
-        <div class="wa-scroll-cta-container" (click)="scrollCTAClicked()">
-            <div class="wa-scroll-cta">
-                <img class="wa-scroll-cta-icon" src="/assets/images/hero-banner/scroll-cta-icon.svg">
-                Scroll down
+        <div class="wa-hero-post">
+            <div id="waHero_DA3_TR_W" class="wa-design-asset-3 wa-design-asset-white"></div>
+            <div id="waHero_DA1_TR_W" class="wa-design-asset-1 wa-design-asset-white"></div>
+            <div id="waHero_DA1_TR_Y" class="wa-design-asset-1 wa-design-asset-yellow"></div>
+            <div id="waHero_DA2_TR_W" class="wa-design-asset-2 wa-design-asset-white"></div>
+            <div id="waHero_DA1_BL_W" class="wa-design-asset-1 wa-design-asset-white"></div>
+            <div id="waHero_DA1_BL_Y" class="wa-design-asset-1 wa-design-asset-yellow"></div>
+            <div id="waHero_DA2_BL_W" class="wa-design-asset-2 wa-design-asset-white"></div>
+            <div class="wa-hero-post-thumbnail" [style.background-image]="'url(' + heroPost.thumbnail + ')'">
+                <h2 *ngIf="(heroPost.shortTitle || heroPost.title)" class="wa-hero-post-text" [innerHTML]="(heroPost.shortTitle || heroPost.title) | postFormatter : 'heroPostTitle'"></h2>
             </div>
         </div>
     </div>

@@ -7,14 +7,16 @@
             <div class="wa-post-card-text">
                 <div *ngIf="post.category" class="wa-post-card-category">{{post.category}}</div>
                 <h3 class="wa-post-card-title" [innerHTML]="post.title"></h3>
-                <div *ngIf="showDescription && post.description" class="wa-post-card-description" [innerHTML]="(post.description | slice : 0 : 100).trim() + '...'"></div>
+                <div *ngIf="showDescription && post.description" class="wa-post-card-description" [innerHTML]="(post.description | postFormatter : 'postDescription')"></div>
             </div>
             <div *ngIf="post.author || post.date" class="wa-post-card-footer">
                 <div *ngIf="post.author" class="wa-post-credit">
                     <div class="wa-profile-dp rounded {{post.author}}"></div>
                     <div class="wa-post-author">{{post.author}}</div>
                 </div>
-                <div *ngIf="post.date" class="wa-post-date">{{post.date | date : 'dd MMM'}}</div>
+                <div *ngIf="post.date" class="wa-post-date">
+                    {{post.date | date : 'dd MMM, yyyy'}}
+                </div>
             </div>
         </div>
     </a>

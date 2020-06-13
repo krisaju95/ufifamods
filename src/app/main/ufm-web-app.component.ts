@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { WADBService } from '../services/database/wa-db.service';
 import { WALoaderService } from '../services/loader/wa-loader.service';
 import { WARootScope } from '../services/globals/wa-rootscope';
@@ -12,6 +12,8 @@ import { Subscription } from 'rxjs';
 })
 export class UFMWebAppComponent {
 
+	showFocusRing: boolean = false;
+
 	constructor(
 		private WADBService: WADBService,
 		private WALoaderService: WALoaderService,
@@ -20,6 +22,7 @@ export class UFMWebAppComponent {
 	) { }
 
 	ngOnInit() {
+		history.scrollRestoration = "manual";
 		let routerEventSubscription: Subscription;
 		this.WADBService.loadBlogData();
 		this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
@@ -36,5 +39,19 @@ export class UFMWebAppComponent {
 
 	closeNavbar() {
 		this.WARootScope.set('mobileNavbarOpened', false);
+	}
+
+	@HostListener("keyup", ["$event"])
+	onKeyDown(event: KeyboardEvent) {
+		if (event && event.keyCode == 9) {
+			this.showFocusRing = true;
+		} else if (!event.shiftKey && !event.altKey && !event.metaKey && event.keyCode != 16) {
+			this.showFocusRing = false;
+		}
+	}
+
+	@HostListener("click", ["$event"])
+	onClick(_event: MouseEvent) {
+		this.showFocusRing = false;
 	}
 }

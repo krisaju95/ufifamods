@@ -5,9 +5,7 @@ import { RouterModule } from '@angular/router';
 
 // Main Web App Component
 import { WAHeroBannerComponent } from './wa-hero-banner.component';
-
-// Additional Modules
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
 
 @NgModule({
     declarations: [
@@ -16,7 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     imports: [
         BrowserModule,
         RouterModule,
-        FontAwesomeModule
+        WABlogPostFormatPipeModule
     ],
     exports: [WAHeroBannerComponent]
 })

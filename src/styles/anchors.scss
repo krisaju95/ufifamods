@@ -3,11 +3,12 @@
 a {
     cursor: pointer;
     position: relative;
-    color: $color-code-primary;
+    display: inline-block;
+    color: $color-code-secondary;
     outline: none;
-    transition: color ease 250ms;
+    text-decoration: none;
 
     &:hover {
-        color: $color-code-tertiary;
+        text-decoration: underline;
     }
 }
