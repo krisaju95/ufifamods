@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { WALoaderService } from '../../services/loader/wa-loader.service';
 import { WARootScope } from '../../services/globals/wa-rootscope';
 import { WAFeatureSwitches } from '../../constants/wa-feature-switches';
+import { WARouterService } from 'src/app/services/router/wa-router.service';
 
 @Component({
     selector: 'ufm-wa-header',
@@ -19,7 +20,8 @@ export class WAHeaderComponent {
 
     constructor(
         private WALoaderService: WALoaderService,
-        public WARootScope: WARootScope
+        public WARootScope: WARootScope,
+        private WARouterService: WARouterService
     ) { }
 
     ngOnInit() {
@@ -33,8 +35,11 @@ export class WAHeaderComponent {
         this.navbarOpened = !this.navbarOpened;
     }
 
-    routeToPage(): void {
-        this.navbarOpened = false;
-        this.WALoaderService.togglePageLoadingState(true);
+    routeToPage(pageName: string): void {
+        if (!this.WARootScope.pageLoading) {
+            this.navbarOpened = false;
+            this.WALoaderService.togglePageLoadingState(true);
+            this.WARouterService.routeToPage(pageName);
+        }
     }
 }

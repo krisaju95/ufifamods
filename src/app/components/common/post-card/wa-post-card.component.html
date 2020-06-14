@@ -1,5 +1,5 @@
 <div *ngIf="post" class="wa-post-card-container wa-raised-container">
-    <a class="wa-post-card-loaded-view" [routerLink]="post.url" (click)="navigateToPost(post.url)">
+    <a class="wa-post-card-loaded-view" href="javascript: void(0)" (click)="navigateToPost(post.url)">
         <div *ngIf="post.thumbnail" class="wa-post-card-image-container">
             <div class="wa-post-card-image" [style.background-image]="'url(' + post.thumbnail + ')'"></div>
         </div>

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
+import { WARootScope } from '../globals/wa-rootscope';
 
 @Injectable()
 export class WALoaderService {
@@ -11,6 +12,10 @@ export class WALoaderService {
     pageLoaderStartTime: number;
 
     pageLoaderTimeoutRef: any;
+
+    constructor(
+        private WARootScope: WARootScope
+    ) { }
 
     togglePageLoadingState(state: boolean): void {
         this.clearPageLoaderTimeoutRef();
@@ -24,6 +29,7 @@ export class WALoaderService {
             this.pageLoaderTimeoutRef = setTimeout(() => {
                 this.pageLoadingStateChange.next(false);
                 this.clearPageLoaderTimeoutRef();
+                this.WARootScope.pageLoading = false;
             }, stateChangeDelay);
         }
     }

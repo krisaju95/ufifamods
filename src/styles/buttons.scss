@@ -44,6 +44,7 @@ $background-color-disabled: $color-code-darkergray;
     &:hover, &:focus {
         background-color: $color-code-gray;
         color: $color-code-text;
+        text-decoration: none;
     }
 
     &.wa-ghost-button {

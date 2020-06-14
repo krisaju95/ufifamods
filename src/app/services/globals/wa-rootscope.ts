@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class WARootScope {
 
+    pageLoading: boolean = true;
+
     isDesktopViewport: boolean = false;
 
     isMobileViewport: boolean = false;

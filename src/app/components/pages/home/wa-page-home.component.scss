@@ -1,0 +1,28 @@
+@import 'variables';
+
+.wa-discord-container {
+    background-color: $color-code-primary;
+    background-image: url("/assets/images/home/discordbg.png");
+    background-blend-mode: luminosity;
+
+    .wa-discord-wrapper {
+        padding-top: 10rem;
+        padding-bottom: 10rem;
+
+        .wa-discord-content {
+            display: flex;
+            align-items: center;
+
+            .wa-discord-text-content {
+                .wa-discord-text-description {
+                    max-width: 60rem;
+                }
+            }
+
+            .wa-discord-logo-container {
+                text-align: right;
+                flex: 1;
+            }
+        }
+    }
+}

@@ -4,6 +4,7 @@ import { WALoaderService } from '../services/loader/wa-loader.service';
 import { WARootScope } from '../services/globals/wa-rootscope';
 import { Router, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
+import { WAFIFADBService } from '../services/database/wa-fifa-db.service';
 
 @Component({
 	selector: 'ufm-web-app',
@@ -14,8 +15,29 @@ export class UFMWebAppComponent {
 
 	showFocusRing: boolean = false;
 
+	heroBannerImageIndex: number = 0;
+
+	heroBannerImages: Array<any> = [
+		{
+			"image": "/assets/images/hero-banner/hero-banner-1.jpg"
+		},
+		{
+			"image": "/assets/images/hero-banner/hero-banner-2.jpg"
+		},
+		{
+			"image": "/assets/images/hero-banner/hero-banner-3.jpg"
+		},
+		{
+			"image": "/assets/images/hero-banner/hero-banner-4.jpg"
+		},
+		{
+			"image": "/assets/images/hero-banner/hero-banner-5.jpg"
+		}
+	]
+
 	constructor(
 		private WADBService: WADBService,
+		public WAFIFADBService: WAFIFADBService,
 		private WALoaderService: WALoaderService,
 		public WARootScope: WARootScope,
 		private router: Router
@@ -25,6 +47,7 @@ export class UFMWebAppComponent {
 		history.scrollRestoration = "manual";
 		let routerEventSubscription: Subscription;
 		this.WADBService.loadBlogData();
+		this.setRandomHeroBannerImage();
 		this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
 			if (!state && !routerEventSubscription) {
 				routerEventSubscription = this.router.events.subscribe((_event: RouterEvent) => {
@@ -32,9 +55,21 @@ export class UFMWebAppComponent {
 					this.WARootScope.set('mobileNavbarOpened', false);
 					this.WALoaderService.togglePageLoadingState(true);
 					this.WALoaderService.togglePageLoadingState(false);
+					this.setRandomHeroBannerImage();
 				});
+			} else if (state) {
+				this.WARootScope.pageLoading = true;
 			}
 		})
+	}
+
+	setRandomHeroBannerImage() {
+		const index: number = Math.floor(Math.random() * Math.floor(this.heroBannerImages.length));
+		if (index != this.heroBannerImageIndex) {
+			this.heroBannerImageIndex = index;
+		} else {
+			this.setRandomHeroBannerImage();
+		}
 	}
 
 	closeNavbar() {

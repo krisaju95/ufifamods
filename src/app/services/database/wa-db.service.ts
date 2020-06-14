@@ -101,6 +101,11 @@ export class WADBService {
                         }
                         break;
                     }
+                    case 'fifa20mods': {
+                        if (post.tags.includes("mods") && post.tags.includes("fifa 20")) {
+                            filteredPostsData.push(post);
+                        }
+                    }
                     case 'all' : {
                         filteredPostsData.push(post);
                         break;
@@ -112,7 +117,7 @@ export class WADBService {
                     }
                 }
             }
-            return (filteredPostsData.length == numberOfPosts);
+            return numberOfPosts && (filteredPostsData.length == numberOfPosts);
         });
         return filteredPostsData;
     }

@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 // Service
 import { WADBService } from './wa-db.service';
+import { WAFIFADBService } from './wa-fifa-db.service';
 
 // Service Modules
 import { WALoaderServiceModule } from '../loader';
@@ -19,6 +20,6 @@ import { HttpModule } from "@angular/http";
         HttpModule,
         NgxAirtableModule.forRoot({ apiKey: "keyopGfRO9giAuXLj" })
     ],
-    providers: [WADBService]
+    providers: [WADBService, WAFIFADBService]
 })
 export class WADBServiceModule { }

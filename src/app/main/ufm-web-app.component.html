@@ -1,11 +1,13 @@
 <div [class.show-focus-ring]="showFocusRing">
     <div class="wa-hero-banner-image-container">
-        <div class="wa-hero-banner-image"></div>
+        <ng-container *ngFor="let heroBannerImage of heroBannerImages; let index = index">
+            <div class="wa-hero-banner-image" [style.background-image]="'url(' + heroBannerImage.image + ')'" [class.active-image]="index == heroBannerImageIndex"></div>
+        </ng-container>
     </div>
     <div class="wa-header">
         <ufm-wa-header></ufm-wa-header>
     </div>
-    <div class="wa-body">
+    <div class="wa-body" [class.wa-page-loading]="WARootScope.pageLoading">
         <router-outlet></router-outlet>
     </div>
     <div class="wa-footer">

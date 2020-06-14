@@ -1,0 +1,7002 @@
+[
+ {
+   "leagueid": 1,
+   "teamid": 269
+ },
+ {
+   "leagueid": 1,
+   "teamid": 270
+ },
+ {
+   "leagueid": 1,
+   "teamid": 271
+ },
+ {
+   "leagueid": 1,
+   "teamid": 272
+ },
+ {
+   "leagueid": 1,
+   "teamid": 819
+ },
+ {
+   "leagueid": 1,
+   "teamid": 820
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1445
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1446
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1447
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1516
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1786
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1788
+ },
+ {
+   "leagueid": 1,
+   "teamid": 15001
+ },
+ {
+   "leagueid": 1,
+   "teamid": 112425
+ },
+ {
+   "leagueid": 4,
+   "teamid": 229
+ },
+ {
+   "leagueid": 4,
+   "teamid": 230
+ },
+ {
+   "leagueid": 4,
+   "teamid": 231
+ },
+ {
+   "leagueid": 4,
+   "teamid": 232
+ },
+ {
+   "leagueid": 4,
+   "teamid": 670
+ },
+ {
+   "leagueid": 4,
+   "teamid": 673
+ },
+ {
+   "leagueid": 4,
+   "teamid": 674
+ },
+ {
+   "leagueid": 4,
+   "teamid": 680
+ },
+ {
+   "leagueid": 4,
+   "teamid": 682
+ },
+ {
+   "leagueid": 4,
+   "teamid": 1750
+ },
+ {
+   "leagueid": 4,
+   "teamid": 2013
+ },
+ {
+   "leagueid": 4,
+   "teamid": 15005
+ },
+ {
+   "leagueid": 4,
+   "teamid": 100081
+ },
+ {
+   "leagueid": 4,
+   "teamid": 110724
+ },
+ {
+   "leagueid": 4,
+   "teamid": 110913
+ },
+ {
+   "leagueid": 4,
+   "teamid": 111560
+ },
+ {
+   "leagueid": 7,
+   "teamid": 517
+ },
+ {
+   "leagueid": 7,
+   "teamid": 567
+ },
+ {
+   "leagueid": 7,
+   "teamid": 568
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1035
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1039
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1048
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1053
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1598
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1629
+ },
+ {
+   "leagueid": 7,
+   "teamid": 111042
+ },
+ {
+   "leagueid": 7,
+   "teamid": 111052
+ },
+ {
+   "leagueid": 7,
+   "teamid": 111059
+ },
+ {
+   "leagueid": 7,
+   "teamid": 111976
+ },
+ {
+   "leagueid": 7,
+   "teamid": 112476
+ },
+ {
+   "leagueid": 7,
+   "teamid": 113677
+ },
+ {
+   "leagueid": 10,
+   "teamid": 245
+ },
+ {
+   "leagueid": 10,
+   "teamid": 246
+ },
+ {
+   "leagueid": 10,
+   "teamid": 247
+ },
+ {
+   "leagueid": 10,
+   "teamid": 634
+ },
+ {
+   "leagueid": 10,
+   "teamid": 650
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1903
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1905
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1906
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1907
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1908
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1909
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1913
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1914
+ },
+ {
+   "leagueid": 10,
+   "teamid": 1915
+ },
+ {
+   "leagueid": 10,
+   "teamid": 100628
+ },
+ {
+   "leagueid": 10,
+   "teamid": 100634
+ },
+ {
+   "leagueid": 10,
+   "teamid": 100646
+ },
+ {
+   "leagueid": 10,
+   "teamid": 100651
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1
+ },
+ {
+   "leagueid": 13,
+   "teamid": 2
+ },
+ {
+   "leagueid": 13,
+   "teamid": 5
+ },
+ {
+   "leagueid": 13,
+   "teamid": 7
+ },
+ {
+   "leagueid": 13,
+   "teamid": 9
+ },
+ {
+   "leagueid": 13,
+   "teamid": 10
+ },
+ {
+   "leagueid": 13,
+   "teamid": 11
+ },
+ {
+   "leagueid": 13,
+   "teamid": 13
+ },
+ {
+   "leagueid": 13,
+   "teamid": 17
+ },
+ {
+   "leagueid": 13,
+   "teamid": 18
+ },
+ {
+   "leagueid": 13,
+   "teamid": 19
+ },
+ {
+   "leagueid": 13,
+   "teamid": 95
+ },
+ {
+   "leagueid": 13,
+   "teamid": 110
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1792
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1794
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1795
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1796
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1799
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1808
+ },
+ {
+   "leagueid": 13,
+   "teamid": 1943
+ },
+ {
+   "leagueid": 14,
+   "teamid": 3
+ },
+ {
+   "leagueid": 14,
+   "teamid": 8
+ },
+ {
+   "leagueid": 14,
+   "teamid": 12
+ },
+ {
+   "leagueid": 14,
+   "teamid": 14
+ },
+ {
+   "leagueid": 14,
+   "teamid": 15
+ },
+ {
+   "leagueid": 14,
+   "teamid": 88
+ },
+ {
+   "leagueid": 14,
+   "teamid": 89
+ },
+ {
+   "leagueid": 14,
+   "teamid": 91
+ },
+ {
+   "leagueid": 14,
+   "teamid": 97
+ },
+ {
+   "leagueid": 14,
+   "teamid": 109
+ },
+ {
+   "leagueid": 14,
+   "teamid": 144
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1793
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1801
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1806
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1807
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1917
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1919
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1923
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1925
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1932
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1939
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1952
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1960
+ },
+ {
+   "leagueid": 14,
+   "teamid": 1961
+ },
+ {
+   "leagueid": 16,
+   "teamid": 59
+ },
+ {
+   "leagueid": 16,
+   "teamid": 65
+ },
+ {
+   "leagueid": 16,
+   "teamid": 66
+ },
+ {
+   "leagueid": 16,
+   "teamid": 68
+ },
+ {
+   "leagueid": 16,
+   "teamid": 69
+ },
+ {
+   "leagueid": 16,
+   "teamid": 70
+ },
+ {
+   "leagueid": 16,
+   "teamid": 71
+ },
+ {
+   "leagueid": 16,
+   "teamid": 72
+ },
+ {
+   "leagueid": 16,
+   "teamid": 73
+ },
+ {
+   "leagueid": 16,
+   "teamid": 74
+ },
+ {
+   "leagueid": 16,
+   "teamid": 76
+ },
+ {
+   "leagueid": 16,
+   "teamid": 219
+ },
+ {
+   "leagueid": 16,
+   "teamid": 224
+ },
+ {
+   "leagueid": 16,
+   "teamid": 378
+ },
+ {
+   "leagueid": 16,
+   "teamid": 379
+ },
+ {
+   "leagueid": 16,
+   "teamid": 1530
+ },
+ {
+   "leagueid": 16,
+   "teamid": 1809
+ },
+ {
+   "leagueid": 16,
+   "teamid": 1816
+ },
+ {
+   "leagueid": 16,
+   "teamid": 1819
+ },
+ {
+   "leagueid": 16,
+   "teamid": 110569
+ },
+ {
+   "leagueid": 17,
+   "teamid": 57
+ },
+ {
+   "leagueid": 17,
+   "teamid": 62
+ },
+ {
+   "leagueid": 17,
+   "teamid": 64
+ },
+ {
+   "leagueid": 17,
+   "teamid": 210
+ },
+ {
+   "leagueid": 17,
+   "teamid": 212
+ },
+ {
+   "leagueid": 17,
+   "teamid": 217
+ },
+ {
+   "leagueid": 17,
+   "teamid": 226
+ },
+ {
+   "leagueid": 17,
+   "teamid": 294
+ },
+ {
+   "leagueid": 17,
+   "teamid": 614
+ },
+ {
+   "leagueid": 17,
+   "teamid": 1738
+ },
+ {
+   "leagueid": 17,
+   "teamid": 1739
+ },
+ {
+   "leagueid": 17,
+   "teamid": 1805
+ },
+ {
+   "leagueid": 17,
+   "teamid": 1813
+ },
+ {
+   "leagueid": 17,
+   "teamid": 1815
+ },
+ {
+   "leagueid": 17,
+   "teamid": 1823
+ },
+ {
+   "leagueid": 17,
+   "teamid": 110456
+ },
+ {
+   "leagueid": 17,
+   "teamid": 111659
+ },
+ {
+   "leagueid": 17,
+   "teamid": 111817
+ },
+ {
+   "leagueid": 17,
+   "teamid": 112276
+ },
+ {
+   "leagueid": 17,
+   "teamid": 112627
+ },
+ {
+   "leagueid": 19,
+   "teamid": 21
+ },
+ {
+   "leagueid": 19,
+   "teamid": 22
+ },
+ {
+   "leagueid": 19,
+   "teamid": 23
+ },
+ {
+   "leagueid": 19,
+   "teamid": 25
+ },
+ {
+   "leagueid": 19,
+   "teamid": 31
+ },
+ {
+   "leagueid": 19,
+   "teamid": 32
+ },
+ {
+   "leagueid": 19,
+   "teamid": 34
+ },
+ {
+   "leagueid": 19,
+   "teamid": 38
+ },
+ {
+   "leagueid": 19,
+   "teamid": 166
+ },
+ {
+   "leagueid": 19,
+   "teamid": 169
+ },
+ {
+   "leagueid": 19,
+   "teamid": 175
+ },
+ {
+   "leagueid": 19,
+   "teamid": 1824
+ },
+ {
+   "leagueid": 19,
+   "teamid": 1831
+ },
+ {
+   "leagueid": 19,
+   "teamid": 10029
+ },
+ {
+   "leagueid": 19,
+   "teamid": 10030
+ },
+ {
+   "leagueid": 19,
+   "teamid": 100409
+ },
+ {
+   "leagueid": 19,
+   "teamid": 110636
+ },
+ {
+   "leagueid": 19,
+   "teamid": 112172
+ },
+ {
+   "leagueid": 20,
+   "teamid": 28
+ },
+ {
+   "leagueid": 20,
+   "teamid": 36
+ },
+ {
+   "leagueid": 20,
+   "teamid": 159
+ },
+ {
+   "leagueid": 20,
+   "teamid": 160
+ },
+ {
+   "leagueid": 20,
+   "teamid": 165
+ },
+ {
+   "leagueid": 20,
+   "teamid": 171
+ },
+ {
+   "leagueid": 20,
+   "teamid": 485
+ },
+ {
+   "leagueid": 20,
+   "teamid": 487
+ },
+ {
+   "leagueid": 20,
+   "teamid": 492
+ },
+ {
+   "leagueid": 20,
+   "teamid": 503
+ },
+ {
+   "leagueid": 20,
+   "teamid": 506
+ },
+ {
+   "leagueid": 20,
+   "teamid": 543
+ },
+ {
+   "leagueid": 20,
+   "teamid": 576
+ },
+ {
+   "leagueid": 20,
+   "teamid": 1832
+ },
+ {
+   "leagueid": 20,
+   "teamid": 110178
+ },
+ {
+   "leagueid": 20,
+   "teamid": 110329
+ },
+ {
+   "leagueid": 20,
+   "teamid": 110502
+ },
+ {
+   "leagueid": 20,
+   "teamid": 111235
+ },
+ {
+   "leagueid": 31,
+   "teamid": 39
+ },
+ {
+   "leagueid": 31,
+   "teamid": 44
+ },
+ {
+   "leagueid": 31,
+   "teamid": 46
+ },
+ {
+   "leagueid": 31,
+   "teamid": 47
+ },
+ {
+   "leagueid": 31,
+   "teamid": 48
+ },
+ {
+   "leagueid": 31,
+   "teamid": 50
+ },
+ {
+   "leagueid": 31,
+   "teamid": 52
+ },
+ {
+   "leagueid": 31,
+   "teamid": 54
+ },
+ {
+   "leagueid": 31,
+   "teamid": 55
+ },
+ {
+   "leagueid": 31,
+   "teamid": 189
+ },
+ {
+   "leagueid": 31,
+   "teamid": 190
+ },
+ {
+   "leagueid": 31,
+   "teamid": 206
+ },
+ {
+   "leagueid": 31,
+   "teamid": 347
+ },
+ {
+   "leagueid": 31,
+   "teamid": 1837
+ },
+ {
+   "leagueid": 31,
+   "teamid": 1842
+ },
+ {
+   "leagueid": 31,
+   "teamid": 110374
+ },
+ {
+   "leagueid": 31,
+   "teamid": 110556
+ },
+ {
+   "leagueid": 31,
+   "teamid": 111974
+ },
+ {
+   "leagueid": 31,
+   "teamid": 112791
+ },
+ {
+   "leagueid": 31,
+   "teamid": 114153
+ },
+ {
+   "leagueid": 32,
+   "teamid": 192
+ },
+ {
+   "leagueid": 32,
+   "teamid": 199
+ },
+ {
+   "leagueid": 32,
+   "teamid": 200
+ },
+ {
+   "leagueid": 32,
+   "teamid": 205
+ },
+ {
+   "leagueid": 32,
+   "teamid": 1746
+ },
+ {
+   "leagueid": 32,
+   "teamid": 1844
+ },
+ {
+   "leagueid": 32,
+   "teamid": 1847
+ },
+ {
+   "leagueid": 32,
+   "teamid": 110373
+ },
+ {
+   "leagueid": 32,
+   "teamid": 110734
+ },
+ {
+   "leagueid": 32,
+   "teamid": 110738
+ },
+ {
+   "leagueid": 32,
+   "teamid": 110741
+ },
+ {
+   "leagueid": 32,
+   "teamid": 111434
+ },
+ {
+   "leagueid": 32,
+   "teamid": 111657
+ },
+ {
+   "leagueid": 32,
+   "teamid": 111993
+ },
+ {
+   "leagueid": 32,
+   "teamid": 112026
+ },
+ {
+   "leagueid": 32,
+   "teamid": 112124
+ },
+ {
+   "leagueid": 32,
+   "teamid": 112168
+ },
+ {
+   "leagueid": 32,
+   "teamid": 112410
+ },
+ {
+   "leagueid": 32,
+   "teamid": 113147
+ },
+ {
+   "leagueid": 32,
+   "teamid": 113958
+ },
+ {
+   "leagueid": 39,
+   "teamid": 687
+ },
+ {
+   "leagueid": 39,
+   "teamid": 688
+ },
+ {
+   "leagueid": 39,
+   "teamid": 689
+ },
+ {
+   "leagueid": 39,
+   "teamid": 691
+ },
+ {
+   "leagueid": 39,
+   "teamid": 693
+ },
+ {
+   "leagueid": 39,
+   "teamid": 694
+ },
+ {
+   "leagueid": 39,
+   "teamid": 695
+ },
+ {
+   "leagueid": 39,
+   "teamid": 696
+ },
+ {
+   "leagueid": 39,
+   "teamid": 697
+ },
+ {
+   "leagueid": 39,
+   "teamid": 698
+ },
+ {
+   "leagueid": 39,
+   "teamid": 101112
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111065
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111138
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111139
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111140
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111144
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111651
+ },
+ {
+   "leagueid": 39,
+   "teamid": 111928
+ },
+ {
+   "leagueid": 39,
+   "teamid": 112134
+ },
+ {
+   "leagueid": 39,
+   "teamid": 112606
+ },
+ {
+   "leagueid": 39,
+   "teamid": 112828
+ },
+ {
+   "leagueid": 39,
+   "teamid": 112885
+ },
+ {
+   "leagueid": 39,
+   "teamid": 112996
+ },
+ {
+   "leagueid": 39,
+   "teamid": 113149
+ },
+ {
+   "leagueid": 41,
+   "teamid": 298
+ },
+ {
+   "leagueid": 41,
+   "teamid": 299
+ },
+ {
+   "leagueid": 41,
+   "teamid": 300
+ },
+ {
+   "leagueid": 41,
+   "teamid": 417
+ },
+ {
+   "leagueid": 41,
+   "teamid": 418
+ },
+ {
+   "leagueid": 41,
+   "teamid": 917
+ },
+ {
+   "leagueid": 41,
+   "teamid": 918
+ },
+ {
+   "leagueid": 41,
+   "teamid": 919
+ },
+ {
+   "leagueid": 41,
+   "teamid": 920
+ },
+ {
+   "leagueid": 41,
+   "teamid": 922
+ },
+ {
+   "leagueid": 41,
+   "teamid": 1456
+ },
+ {
+   "leagueid": 41,
+   "teamid": 1463
+ },
+ {
+   "leagueid": 41,
+   "teamid": 112199
+ },
+ {
+   "leagueid": 41,
+   "teamid": 112200
+ },
+ {
+   "leagueid": 41,
+   "teamid": 112420
+ },
+ {
+   "leagueid": 41,
+   "teamid": 113459
+ },
+ {
+   "leagueid": 50,
+   "teamid": 77
+ },
+ {
+   "leagueid": 50,
+   "teamid": 78
+ },
+ {
+   "leagueid": 50,
+   "teamid": 80
+ },
+ {
+   "leagueid": 50,
+   "teamid": 81
+ },
+ {
+   "leagueid": 50,
+   "teamid": 82
+ },
+ {
+   "leagueid": 50,
+   "teamid": 83
+ },
+ {
+   "leagueid": 50,
+   "teamid": 86
+ },
+ {
+   "leagueid": 50,
+   "teamid": 184
+ },
+ {
+   "leagueid": 50,
+   "teamid": 621
+ },
+ {
+   "leagueid": 50,
+   "teamid": 631
+ },
+ {
+   "leagueid": 50,
+   "teamid": 100804
+ },
+ {
+   "leagueid": 50,
+   "teamid": 100805
+ },
+ {
+   "leagueid": 53,
+   "teamid": 240
+ },
+ {
+   "leagueid": 53,
+   "teamid": 241
+ },
+ {
+   "leagueid": 53,
+   "teamid": 243
+ },
+ {
+   "leagueid": 53,
+   "teamid": 448
+ },
+ {
+   "leagueid": 53,
+   "teamid": 449
+ },
+ {
+   "leagueid": 53,
+   "teamid": 450
+ },
+ {
+   "leagueid": 53,
+   "teamid": 452
+ },
+ {
+   "leagueid": 53,
+   "teamid": 453
+ },
+ {
+   "leagueid": 53,
+   "teamid": 457
+ },
+ {
+   "leagueid": 53,
+   "teamid": 461
+ },
+ {
+   "leagueid": 53,
+   "teamid": 462
+ },
+ {
+   "leagueid": 53,
+   "teamid": 463
+ },
+ {
+   "leagueid": 53,
+   "teamid": 467
+ },
+ {
+   "leagueid": 53,
+   "teamid": 479
+ },
+ {
+   "leagueid": 53,
+   "teamid": 481
+ },
+ {
+   "leagueid": 53,
+   "teamid": 483
+ },
+ {
+   "leagueid": 53,
+   "teamid": 1853
+ },
+ {
+   "leagueid": 53,
+   "teamid": 1860
+ },
+ {
+   "leagueid": 53,
+   "teamid": 100888
+ },
+ {
+   "leagueid": 53,
+   "teamid": 110832
+ },
+ {
+   "leagueid": 54,
+   "teamid": 242
+ },
+ {
+   "leagueid": 54,
+   "teamid": 244
+ },
+ {
+   "leagueid": 54,
+   "teamid": 260
+ },
+ {
+   "leagueid": 54,
+   "teamid": 456
+ },
+ {
+   "leagueid": 54,
+   "teamid": 459
+ },
+ {
+   "leagueid": 54,
+   "teamid": 468
+ },
+ {
+   "leagueid": 54,
+   "teamid": 469
+ },
+ {
+   "leagueid": 54,
+   "teamid": 472
+ },
+ {
+   "leagueid": 54,
+   "teamid": 477
+ },
+ {
+   "leagueid": 54,
+   "teamid": 480
+ },
+ {
+   "leagueid": 54,
+   "teamid": 573
+ },
+ {
+   "leagueid": 54,
+   "teamid": 1854
+ },
+ {
+   "leagueid": 54,
+   "teamid": 1861
+ },
+ {
+   "leagueid": 54,
+   "teamid": 1968
+ },
+ {
+   "leagueid": 54,
+   "teamid": 2023
+ },
+ {
+   "leagueid": 54,
+   "teamid": 100831
+ },
+ {
+   "leagueid": 54,
+   "teamid": 110062
+ },
+ {
+   "leagueid": 54,
+   "teamid": 110065
+ },
+ {
+   "leagueid": 54,
+   "teamid": 110069
+ },
+ {
+   "leagueid": 54,
+   "teamid": 110827
+ },
+ {
+   "leagueid": 54,
+   "teamid": 110831
+ },
+ {
+   "leagueid": 54,
+   "teamid": 110839
+ },
+ {
+   "leagueid": 56,
+   "teamid": 319
+ },
+ {
+   "leagueid": 56,
+   "teamid": 320
+ },
+ {
+   "leagueid": 56,
+   "teamid": 432
+ },
+ {
+   "leagueid": 56,
+   "teamid": 433
+ },
+ {
+   "leagueid": 56,
+   "teamid": 700
+ },
+ {
+   "leagueid": 56,
+   "teamid": 702
+ },
+ {
+   "leagueid": 56,
+   "teamid": 705
+ },
+ {
+   "leagueid": 56,
+   "teamid": 708
+ },
+ {
+   "leagueid": 56,
+   "teamid": 710
+ },
+ {
+   "leagueid": 56,
+   "teamid": 711
+ },
+ {
+   "leagueid": 56,
+   "teamid": 1439
+ },
+ {
+   "leagueid": 56,
+   "teamid": 1596
+ },
+ {
+   "leagueid": 56,
+   "teamid": 112169
+ },
+ {
+   "leagueid": 56,
+   "teamid": 112171
+ },
+ {
+   "leagueid": 56,
+   "teamid": 113173
+ },
+ {
+   "leagueid": 56,
+   "teamid": 113458
+ },
+ {
+   "leagueid": 60,
+   "teamid": 4
+ },
+ {
+   "leagueid": 60,
+   "teamid": 94
+ },
+ {
+   "leagueid": 60,
+   "teamid": 106
+ },
+ {
+   "leagueid": 60,
+   "teamid": 127
+ },
+ {
+   "leagueid": 60,
+   "teamid": 142
+ },
+ {
+   "leagueid": 60,
+   "teamid": 149
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1790
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1797
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1798
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1800
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1802
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1926
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1933
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1938
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1951
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1954
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1955
+ },
+ {
+   "leagueid": 60,
+   "teamid": 1962
+ },
+ {
+   "leagueid": 60,
+   "teamid": 15015
+ },
+ {
+   "leagueid": 60,
+   "teamid": 15048
+ },
+ {
+   "leagueid": 60,
+   "teamid": 110313
+ },
+ {
+   "leagueid": 60,
+   "teamid": 112259
+ },
+ {
+   "leagueid": 60,
+   "teamid": 112260
+ },
+ {
+   "leagueid": 61,
+   "teamid": 92
+ },
+ {
+   "leagueid": 61,
+   "teamid": 121
+ },
+ {
+   "leagueid": 61,
+   "teamid": 143
+ },
+ {
+   "leagueid": 61,
+   "teamid": 357
+ },
+ {
+   "leagueid": 61,
+   "teamid": 361
+ },
+ {
+   "leagueid": 61,
+   "teamid": 561
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1480
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1803
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1804
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1920
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1928
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1929
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1930
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1934
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1935
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1936
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1940
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1944
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1949
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1958
+ },
+ {
+   "leagueid": 61,
+   "teamid": 1959
+ },
+ {
+   "leagueid": 61,
+   "teamid": 110890
+ },
+ {
+   "leagueid": 61,
+   "teamid": 112254
+ },
+ {
+   "leagueid": 61,
+   "teamid": 113926
+ },
+ {
+   "leagueid": 65,
+   "teamid": 305
+ },
+ {
+   "leagueid": 65,
+   "teamid": 306
+ },
+ {
+   "leagueid": 65,
+   "teamid": 422
+ },
+ {
+   "leagueid": 65,
+   "teamid": 423
+ },
+ {
+   "leagueid": 65,
+   "teamid": 445
+ },
+ {
+   "leagueid": 65,
+   "teamid": 563
+ },
+ {
+   "leagueid": 65,
+   "teamid": 753
+ },
+ {
+   "leagueid": 65,
+   "teamid": 837
+ },
+ {
+   "leagueid": 65,
+   "teamid": 111131
+ },
+ {
+   "leagueid": 65,
+   "teamid": 111132
+ },
+ {
+   "leagueid": 66,
+   "teamid": 420
+ },
+ {
+   "leagueid": 66,
+   "teamid": 873
+ },
+ {
+   "leagueid": 66,
+   "teamid": 1569
+ },
+ {
+   "leagueid": 66,
+   "teamid": 1871
+ },
+ {
+   "leagueid": 66,
+   "teamid": 1873
+ },
+ {
+   "leagueid": 66,
+   "teamid": 110745
+ },
+ {
+   "leagueid": 66,
+   "teamid": 110746
+ },
+ {
+   "leagueid": 66,
+   "teamid": 110747
+ },
+ {
+   "leagueid": 66,
+   "teamid": 110749
+ },
+ {
+   "leagueid": 66,
+   "teamid": 111082
+ },
+ {
+   "leagueid": 66,
+   "teamid": 111083
+ },
+ {
+   "leagueid": 66,
+   "teamid": 111085
+ },
+ {
+   "leagueid": 66,
+   "teamid": 111086
+ },
+ {
+   "leagueid": 66,
+   "teamid": 111091
+ },
+ {
+   "leagueid": 66,
+   "teamid": 111092
+ },
+ {
+   "leagueid": 66,
+   "teamid": 114326
+ },
+ {
+   "leagueid": 68,
+   "teamid": 325
+ },
+ {
+   "leagueid": 68,
+   "teamid": 326
+ },
+ {
+   "leagueid": 68,
+   "teamid": 327
+ },
+ {
+   "leagueid": 68,
+   "teamid": 436
+ },
+ {
+   "leagueid": 68,
+   "teamid": 741
+ },
+ {
+   "leagueid": 68,
+   "teamid": 1457
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101007
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101014
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101020
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101025
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101026
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101033
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101037
+ },
+ {
+   "leagueid": 68,
+   "teamid": 101041
+ },
+ {
+   "leagueid": 68,
+   "teamid": 110776
+ },
+ {
+   "leagueid": 68,
+   "teamid": 111339
+ },
+ {
+   "leagueid": 68,
+   "teamid": 113142
+ },
+ {
+   "leagueid": 68,
+   "teamid": 113259
+ },
+ {
+   "leagueid": 76,
+   "teamid": 211
+ },
+ {
+   "leagueid": 319,
+   "teamid": 266
+ },
+ {
+   "leagueid": 319,
+   "teamid": 267
+ },
+ {
+   "leagueid": 76,
+   "teamid": 278
+ },
+ {
+   "leagueid": 76,
+   "teamid": 280
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 315
+ },
+ {
+   "leagueid": 76,
+   "teamid": 393
+ },
+ {
+   "leagueid": 76,
+   "teamid": 1884
+ },
+ {
+   "leagueid": 76,
+   "teamid": 100325
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 100765
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 100767
+ },
+ {
+   "leagueid": 76,
+   "teamid": 101047
+ },
+ {
+   "leagueid": 76,
+   "teamid": 101059
+ },
+ {
+   "leagueid": 319,
+   "teamid": 110468
+ },
+ {
+   "leagueid": 76,
+   "teamid": 110929
+ },
+ {
+   "leagueid": 76,
+   "teamid": 110930
+ },
+ {
+   "leagueid": 76,
+   "teamid": 111596
+ },
+ {
+   "leagueid": 76,
+   "teamid": 111701
+ },
+ {
+   "leagueid": 76,
+   "teamid": 112190
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1318
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1322
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1325
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1327
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1330
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1331
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1334
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1335
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1337
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1338
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1341
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1343
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1352
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1353
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1354
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1355
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1356
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1357
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1359
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1361
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1362
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1363
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1364
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1365
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1367
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1369
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1370
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1375
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1377
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1386
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1387
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1395
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1413
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1415
+ },
+ {
+   "leagueid": 78,
+   "teamid": 1886
+ },
+ {
+   "leagueid": 78,
+   "teamid": 105035
+ },
+ {
+   "leagueid": 78,
+   "teamid": 110081
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111099
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111108
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111109
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111112
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111130
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111451
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111455
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111459
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111465
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111466
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111473
+ },
+ {
+   "leagueid": 78,
+   "teamid": 111487
+ },
+ {
+   "leagueid": 80,
+   "teamid": 191
+ },
+ {
+   "leagueid": 80,
+   "teamid": 209
+ },
+ {
+   "leagueid": 80,
+   "teamid": 252
+ },
+ {
+   "leagueid": 80,
+   "teamid": 254
+ },
+ {
+   "leagueid": 80,
+   "teamid": 256
+ },
+ {
+   "leagueid": 80,
+   "teamid": 1785
+ },
+ {
+   "leagueid": 80,
+   "teamid": 2017
+ },
+ {
+   "leagueid": 80,
+   "teamid": 15009
+ },
+ {
+   "leagueid": 80,
+   "teamid": 15040
+ },
+ {
+   "leagueid": 80,
+   "teamid": 111821
+ },
+ {
+   "leagueid": 80,
+   "teamid": 111822
+ },
+ {
+   "leagueid": 80,
+   "teamid": 112075
+ },
+ {
+   "leagueid": 83,
+   "teamid": 981
+ },
+ {
+   "leagueid": 83,
+   "teamid": 982
+ },
+ {
+   "leagueid": 83,
+   "teamid": 983
+ },
+ {
+   "leagueid": 83,
+   "teamid": 1473
+ },
+ {
+   "leagueid": 83,
+   "teamid": 1474
+ },
+ {
+   "leagueid": 83,
+   "teamid": 1477
+ },
+ {
+   "leagueid": 83,
+   "teamid": 1478
+ },
+ {
+   "leagueid": 83,
+   "teamid": 2055
+ },
+ {
+   "leagueid": 83,
+   "teamid": 2056
+ },
+ {
+   "leagueid": 83,
+   "teamid": 110765
+ },
+ {
+   "leagueid": 83,
+   "teamid": 111588
+ },
+ {
+   "leagueid": 83,
+   "teamid": 112115
+ },
+ {
+   "leagueid": 111,
+   "teamid": 111
+ },
+ {
+   "leagueid": 111,
+   "teamid": 112
+ },
+ {
+   "leagueid": 189,
+   "teamid": 324
+ },
+ {
+   "leagueid": 189,
+   "teamid": 435
+ },
+ {
+   "leagueid": 189,
+   "teamid": 894
+ },
+ {
+   "leagueid": 189,
+   "teamid": 896
+ },
+ {
+   "leagueid": 189,
+   "teamid": 897
+ },
+ {
+   "leagueid": 189,
+   "teamid": 898
+ },
+ {
+   "leagueid": 189,
+   "teamid": 900
+ },
+ {
+   "leagueid": 189,
+   "teamid": 1715
+ },
+ {
+   "leagueid": 189,
+   "teamid": 10032
+ },
+ {
+   "leagueid": 189,
+   "teamid": 110770
+ },
+ {
+   "leagueid": 308,
+   "teamid": 234
+ },
+ {
+   "leagueid": 308,
+   "teamid": 236
+ },
+ {
+   "leagueid": 308,
+   "teamid": 237
+ },
+ {
+   "leagueid": 308,
+   "teamid": 665
+ },
+ {
+   "leagueid": 308,
+   "teamid": 666
+ },
+ {
+   "leagueid": 308,
+   "teamid": 744
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1438
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1887
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1888
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1889
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1892
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1893
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1896
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1898
+ },
+ {
+   "leagueid": 308,
+   "teamid": 1900
+ },
+ {
+   "leagueid": 308,
+   "teamid": 10031
+ },
+ {
+   "leagueid": 308,
+   "teamid": 112516
+ },
+ {
+   "leagueid": 308,
+   "teamid": 112809
+ },
+ {
+   "leagueid": 330,
+   "teamid": 308
+ },
+ {
+   "leagueid": 330,
+   "teamid": 100757
+ },
+ {
+   "leagueid": 330,
+   "teamid": 100761
+ },
+ {
+   "leagueid": 330,
+   "teamid": 110752
+ },
+ {
+   "leagueid": 330,
+   "teamid": 110815
+ },
+ {
+   "leagueid": 330,
+   "teamid": 112637
+ },
+ {
+   "leagueid": 330,
+   "teamid": 112847
+ },
+ {
+   "leagueid": 330,
+   "teamid": 113180
+ },
+ {
+   "leagueid": 330,
+   "teamid": 113182
+ },
+ {
+   "leagueid": 330,
+   "teamid": 113378
+ },
+ {
+   "leagueid": 330,
+   "teamid": 113387
+ },
+ {
+   "leagueid": 330,
+   "teamid": 113391
+ },
+ {
+   "leagueid": 330,
+   "teamid": 114147
+ },
+ {
+   "leagueid": 330,
+   "teamid": 114385
+ },
+ {
+   "leagueid": 335,
+   "teamid": 101097
+ },
+ {
+   "leagueid": 335,
+   "teamid": 110975
+ },
+ {
+   "leagueid": 335,
+   "teamid": 110977
+ },
+ {
+   "leagueid": 335,
+   "teamid": 110978
+ },
+ {
+   "leagueid": 335,
+   "teamid": 111327
+ },
+ {
+   "leagueid": 335,
+   "teamid": 111328
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112116
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112531
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112533
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112534
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112535
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112584
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112655
+ },
+ {
+   "leagueid": 335,
+   "teamid": 112705
+ },
+ {
+   "leagueid": 335,
+   "teamid": 113826
+ },
+ {
+   "leagueid": 335,
+   "teamid": 114145
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101099
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101100
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101101
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101102
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101103
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101104
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101105
+ },
+ {
+   "leagueid": 336,
+   "teamid": 101106
+ },
+ {
+   "leagueid": 336,
+   "teamid": 111721
+ },
+ {
+   "leagueid": 336,
+   "teamid": 111722
+ },
+ {
+   "leagueid": 336,
+   "teamid": 111723
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112523
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112526
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112527
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112528
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112578
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112579
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112715
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112903
+ },
+ {
+   "leagueid": 336,
+   "teamid": 112992
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1028
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1032
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1878
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1879
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1880
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1881
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1882
+ },
+ {
+   "leagueid": 341,
+   "teamid": 1970
+ },
+ {
+   "leagueid": 341,
+   "teamid": 101114
+ },
+ {
+   "leagueid": 341,
+   "teamid": 101121
+ },
+ {
+   "leagueid": 341,
+   "teamid": 110144
+ },
+ {
+   "leagueid": 76,
+   "teamid": 110145
+ },
+ {
+   "leagueid": 341,
+   "teamid": 110147
+ },
+ {
+   "leagueid": 341,
+   "teamid": 110150
+ },
+ {
+   "leagueid": 341,
+   "teamid": 110152
+ },
+ {
+   "leagueid": 341,
+   "teamid": 110781
+ },
+ {
+   "leagueid": 341,
+   "teamid": 111678
+ },
+ {
+   "leagueid": 341,
+   "teamid": 112678
+ },
+ {
+   "leagueid": 341,
+   "teamid": 113134
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101144
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101146
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101147
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101148
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101149
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101150
+ },
+ {
+   "leagueid": 349,
+   "teamid": 101151
+ },
+ {
+   "leagueid": 349,
+   "teamid": 111575
+ },
+ {
+   "leagueid": 349,
+   "teamid": 111730
+ },
+ {
+   "leagueid": 349,
+   "teamid": 112092
+ },
+ {
+   "leagueid": 349,
+   "teamid": 112093
+ },
+ {
+   "leagueid": 349,
+   "teamid": 112444
+ },
+ {
+   "leagueid": 349,
+   "teamid": 112836
+ },
+ {
+   "leagueid": 349,
+   "teamid": 113157
+ },
+ {
+   "leagueid": 349,
+   "teamid": 113158
+ },
+ {
+   "leagueid": 349,
+   "teamid": 113160
+ },
+ {
+   "leagueid": 349,
+   "teamid": 113161
+ },
+ {
+   "leagueid": 349,
+   "teamid": 113183
+ },
+ {
+   "leagueid": 350,
+   "teamid": 605
+ },
+ {
+   "leagueid": 350,
+   "teamid": 607
+ },
+ {
+   "leagueid": 350,
+   "teamid": 111674
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112096
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112139
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112387
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112389
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112390
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112392
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112393
+ },
+ {
+   "leagueid": 350,
+   "teamid": 112408
+ },
+ {
+   "leagueid": 350,
+   "teamid": 113057
+ },
+ {
+   "leagueid": 350,
+   "teamid": 113058
+ },
+ {
+   "leagueid": 350,
+   "teamid": 113217
+ },
+ {
+   "leagueid": 350,
+   "teamid": 113222
+ },
+ {
+   "leagueid": 350,
+   "teamid": 113345
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111393
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111395
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111396
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111397
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111398
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111399
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111400
+ },
+ {
+   "leagueid": 351,
+   "teamid": 111766
+ },
+ {
+   "leagueid": 351,
+   "teamid": 112224
+ },
+ {
+   "leagueid": 351,
+   "teamid": 112427
+ },
+ {
+   "leagueid": 351,
+   "teamid": 114023
+ },
+ {
+   "leagueid": 353,
+   "teamid": 1013
+ },
+ {
+   "leagueid": 353,
+   "teamid": 101083
+ },
+ {
+   "leagueid": 353,
+   "teamid": 101084
+ },
+ {
+   "leagueid": 353,
+   "teamid": 101085
+ },
+ {
+   "leagueid": 353,
+   "teamid": 101088
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110093
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110394
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110395
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110396
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110404
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110406
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110580
+ },
+ {
+   "leagueid": 353,
+   "teamid": 110581
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111019
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111706
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111707
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111708
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111710
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111711
+ },
+ {
+   "leagueid": 353,
+   "teamid": 111716
+ },
+ {
+   "leagueid": 353,
+   "teamid": 112670
+ },
+ {
+   "leagueid": 353,
+   "teamid": 112965
+ },
+ {
+   "leagueid": 353,
+   "teamid": 114144
+ },
+ {
+   "leagueid": 353,
+   "teamid": 114149
+ },
+ {
+   "leagueid": 382,
+   "teamid": 111592
+ },
+ {
+   "leagueid": 7,
+   "teamid": 383
+ },
+ {
+   "leagueid": 7,
+   "teamid": 598
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1043
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 1876
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 1877
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 110980
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 111715
+ },
+ {
+   "leagueid": 7,
+   "teamid": 569
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 110955
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 111724
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 111768
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 111773
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 111774
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 111779
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 111839
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112162
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112165
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112378
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112429
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112537
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112540
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112541
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112978
+ },
+ {
+   "leagueid": 2012,
+   "teamid": 112983
+ },
+ {
+   "leagueid": 2028,
+   "teamid": 112264
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 27
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 29
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 33
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 167
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 172
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 507
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 531
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 1825
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110197
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110482
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110500
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110532
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110588
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110591
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110592
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110597
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110645
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 110679
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 111239
+ },
+ {
+   "leagueid": 2076,
+   "teamid": 111379
+ },
+ {
+   "leagueid": 2092,
+   "teamid": 112288
+ },
+ {
+   "leagueid": 2092,
+   "teamid": 112301
+ },
+ {
+   "leagueid": 2092,
+   "teamid": 112303
+ },
+ {
+   "leagueid": 2092,
+   "teamid": 112304
+ },
+ {
+   "leagueid": 2092,
+   "teamid": 114019
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 112998
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 112999
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113000
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113001
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113002
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113003
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113004
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113006
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113007
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113008
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113009
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113010
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113011
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113012
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113258
+ },
+ {
+   "leagueid": 2136,
+   "teamid": 113984
+ },
+ {
+   "leagueid": 383,
+   "teamid": 112428
+ },
+ {
+   "leagueid": 7,
+   "teamid": 1945
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113154
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113155
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113261
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113265
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113266
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113286
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113291
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113307
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113314
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113315
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113316
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113317
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113322
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113323
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113324
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113325
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113332
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113333
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113334
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113335
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113336
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113337
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113561
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113562
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113284
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113567
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113581
+ },
+ {
+   "leagueid": 3006,
+   "teamid": 113588
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113592
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113663
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113687
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113694
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113697
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113698
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113699
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113700
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113799
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113800
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113801
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113878
+ },
+ {
+   "leagueid": 319,
+   "teamid": 113879
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113939
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113684
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113937
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113574
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113929
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113930
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113685
+ },
+ {
+   "leagueid": 76,
+   "teamid": 113935
+ },
+ {
+   "leagueid": 76,
+   "teamid": 1937
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 101108
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 101110
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 110968
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 110974
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 110986
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 110989
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 111008
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 111010
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 111325
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 111332
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 112908
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 114580
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 114582
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 110967
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 110970
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 110984
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 110987
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 110992
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 111002
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 111006
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 111326
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 111331
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 111334
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112080
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112184
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112659
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112667
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112671
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112912
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 112916
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114024
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114511
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114575
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114577
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114581
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114598
+ },
+ {
+   "leagueid": 1014,
+   "teamid": 114623
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 110981
+ },
+ {
+   "leagueid": 1003,
+   "teamid": 111329
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ },
+ {
+   "leagueid": 1,
+   "teamid": 1
+ }
+]

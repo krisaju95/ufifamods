@@ -151,6 +151,8 @@
                 .wa-post-date {
                     text-transform: uppercase;
                     text-align: center;
+                    font-weight: $font-weight-light;
+                    opacity: 0.75;
                 }
             }
         }

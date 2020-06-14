@@ -28,7 +28,6 @@ export class WAHeroBannerComponent {
 			this.loading = state;
 			if (!state) {
 				this.heroPost = this.WADBService.filterPostsData(this.WADBService.getBlogPostsList(), "featured", 1, this.route)[0];
-				console.log(this.heroPost, "booo");
 			}
 		})
 	}
