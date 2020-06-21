@@ -1,7 +1,13 @@
 import { Pipe, PipeTransform } from '@angular/core';
+import { WADBService } from 'src/app/services/database/wa-db.service';
 
 @Pipe({ name: 'postFormatter' })
 export class WABlogPostFormatPipe implements PipeTransform {
+
+	constructor(
+		private WADBService: WADBService
+	) { }
+
 	transform(content: string = '', contentType: string = ''): any {
 		switch (contentType) {
 			case "heroPostTitle": {
@@ -44,6 +50,10 @@ export class WABlogPostFormatPipe implements PipeTransform {
 			case "youtube": {
 				const videoID: string = (content || '').split("?v=")[1] || "";
 				return "https://www.youtube.com/embed/" + videoID + "?controls=0";
+			}
+			case "number-of-posts": {
+				const numberOfPosts: number = this.WADBService.filterPostsData(this.WADBService.blogPostsList, content).length;
+				return numberOfPosts;
 			}
 			default: {
 				return content;

@@ -4,9 +4,8 @@ import { NgModule } from '@angular/core';
 
 // Main Web App Component
 import { WAPageDownloadCenterComponent } from './wa-page-download-center.component';
-
-// Additional Modules
-import { WAPostCardModule } from '../../common/post-card';
+import { WAPageHeaderModule } from '../../common/page-header';
+import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
 
 @NgModule({
     declarations: [
@@ -14,7 +13,8 @@ import { WAPostCardModule } from '../../common/post-card';
     ],
     imports: [
         BrowserModule,
-        WAPostCardModule
+        WAPageHeaderModule,
+        WABlogPostFormatPipeModule
     ],
     exports: [WAPageDownloadCenterComponent]
 })

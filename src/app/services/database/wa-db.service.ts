@@ -89,9 +89,9 @@ export class WADBService {
         return blogPostsArray;
     }
 
-    filterPostsData(blogPosts: Array<any>, category: string, numberOfPosts: number, route: ActivatedRoute): Array<any> {
+    filterPostsData(blogPosts: Array<any>, category: string, numberOfPosts?: number, route?: ActivatedRoute): Array<any> {
         const filteredPostsData: Array<any> = [];
-        const activePostURL: string = this.getActivePostURL(route);
+        const activePostURL: string = location.href.includes("/blog/") ? this.getActivePostURL(route) : "";
         blogPosts.some((post: WABlogPost) => {
             if (activePostURL != post.url) {
                 switch (category) {
@@ -101,8 +101,13 @@ export class WADBService {
                         }
                         break;
                     }
-                    case 'fifa20mods': {
+                    case 'fifa-20-mods': {
                         if (post.tags.includes("mods") && post.tags.includes("fifa 20")) {
+                            filteredPostsData.push(post);
+                        }
+                    }
+                    case 'fifa-16-mods': {
+                        if (post.tags.includes("mods") && post.tags.includes("fifa 16")) {
                             filteredPostsData.push(post);
                         }
                     }

@@ -7,6 +7,7 @@ import { WAPageBlogComponent } from './wa-page-blog.component';
 
 // Additional Modules
 import { WAPostCardModule } from '../../common/post-card';
+import { WAPageHeaderModule } from '../../common/page-header';
 
 @NgModule({
     declarations: [
@@ -14,7 +15,8 @@ import { WAPostCardModule } from '../../common/post-card';
     ],
     imports: [
         BrowserModule,
-        WAPostCardModule
+        WAPostCardModule,
+        WAPageHeaderModule
     ],
     exports: [WAPageBlogComponent]
 })

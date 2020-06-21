@@ -1,10 +1,18 @@
+<ufm-wa-page-header header="Download Center" description="Select one of the categories shown below to view all the posts associated to that category"></ufm-wa-page-header>
 <div class="wa-container">
     <div class="wa-wrapper">
-        <h1 class="wa-page-title"> Download Center </h1>
-    </div>
-</div>
-<div class="wa-container">
-    <div class="wa-wrapper">
-
+        <div class="wa-categories" *ngIf="!WARootScope.pageLoading">
+            <a class="wa-category" [class.wa-disabled-category]="((category.url | postFormatter : 'number-of-posts') == 0)" *ngFor="let category of categories; let index = index">
+                <div class="wa-category-cover" [style.background-image]="'url(' + category.thumbnail + ')'"></div>
+                <div class="wa-category-description">
+                    <div *ngIf="((category.url | postFormatter : 'number-of-posts') == 0)"> No posts under this category </div>
+                    <ng-template #categoryDescription>
+                        <div class="wa-category-description">
+                            {{(category.url | postFormatter : 'number-of-posts')}} post(s) in this category
+                        </div>
+                    </ng-template>
+                </div>
+            </a>
+        </div>
     </div>
 </div>
