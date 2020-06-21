@@ -1,9 +1,9 @@
 import { Injectable } from '@angular/core';
-import { WALoaderService } from '../loader/wa-loader.service';
-import { Airtable, Base } from 'ngx-airtable';
+// import { WALoaderService } from '../loader/wa-loader.service';
 import { WABlogPost } from '../../interfaces/blog-post.interface';
-import { Subscription } from 'rxjs';
+// import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+// import { HttpClient } from '@angular/common/http';
 
 @Injectable()
 export class WADBService {
@@ -12,21 +12,37 @@ export class WADBService {
 
     blogPostsList: Array<any> = [];
 
-    constructor(
-        private airtable: Airtable,
-        private WALoaderService: WALoaderService
-    ) { }
+    // constructor(
+    //     private WALoaderService: WALoaderService,
+    //     private http: HttpClient
+    // ) { }
 
     loadBlogData(pageSize: number = 20): void {
-        const table: Subscription = this.getBlogPage(pageSize, "firstPage").subscribe((data) => {
-            this.blogPostsList = this.createBlogPostList(data);
-            this.WALoaderService.togglePageLoadingState(false);
-            table.unsubscribe();
-        });
+        // const table: Subscription = this.getBlogPage(pageSize, "firstPage").subscribe((data) => {
+        //     this.blogPostsList = this.createBlogPostList(data);
+        //     this.WALoaderService.togglePageLoadingState(false);
+        //     table.unsubscribe();
+        // });
+
+        // this.http.get("https://docs.google.com/spreadsheets/d/1WXxmCBfEJt058umbg7LXy2bbINSTRbjKm5XH4wCyKis/gviz/tq?tqx=out:json&sheet=playerNames", { responseType: 'text'}).subscribe((response: any) => {
+        //     response = (response || "").split('setResponse(')[1] || "";
+        //     response = response.replace(");", "");
+        //     response = JSON.parse(response);
+        //     response = response.table;
+        //     const blogData: Array<any> = [];
+        //     const columns: Array<string> = [];
+        //     (<Array<any>>(response.cols)).forEach((col: any) => {
+        //         columns.push(col.id);
+        //     });
+        //     (<Array<any>>(response.rows)).forEach((row: any, rowIndex) => {
+        //         columns.push(col.id);
+        //     });
+        //     console.log(JSON.parse(response));
+        // });
     }
 
     getBlogPage(pageSize: number, retrieveMethod: string) {
-        const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
+        let base: any;//: Base = this.airtable.base('appGpn6FEIJsIQem3');
         return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
             pageSize: pageSize,
             sort: [{
@@ -111,7 +127,7 @@ export class WADBService {
                             filteredPostsData.push(post);
                         }
                     }
-                    case 'all' : {
+                    case 'all': {
                         filteredPostsData.push(post);
                         break;
                     }
@@ -128,7 +144,7 @@ export class WADBService {
     }
 
     getSinglePost(url: string) {
-        const base: Base = this.airtable.base('appGpn6FEIJsIQem3');
+        let base: any; //Base = this.airtable.base('appGpn6FEIJsIQem3');
         return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
             pageSize: 1,
             filterByFormula: "URL='" + url + "'"

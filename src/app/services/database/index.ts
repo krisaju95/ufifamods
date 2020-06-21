@@ -10,7 +10,6 @@ import { WAFIFADBService } from './wa-fifa-db.service';
 import { WALoaderServiceModule } from '../loader';
 
 // Additional Modules
-import { NgxAirtableModule } from 'ngx-airtable';
 import { HttpModule } from "@angular/http";
 
 @NgModule({
@@ -18,7 +17,7 @@ import { HttpModule } from "@angular/http";
         HttpClientModule,
         WALoaderServiceModule,
         HttpModule,
-        NgxAirtableModule.forRoot({ apiKey: "keyopGfRO9giAuXLj" })
+        // NgxAirtableModule.forRoot({ apiKey: "keyopGfRO9giAuXLj" })
     ],
     providers: [WADBService, WAFIFADBService]
 })

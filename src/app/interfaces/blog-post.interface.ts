@@ -18,5 +18,6 @@ export interface WABlogPost {
 	linkType?: string,
 	starheads?: string[],
 	screenshots?: string,
-	video?: string
+	video?: string,
+	videoHost?: string
 }

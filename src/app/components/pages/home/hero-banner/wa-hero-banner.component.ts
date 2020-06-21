@@ -15,7 +15,7 @@ export class WAHeroBannerComponent {
 
 	loading: boolean = true;
 
-	heroPost: WABlogPost[] = [];
+	heroPost: WABlogPost = ({} as WABlogPost);
 
 	constructor(
 		private WALoaderService: WALoaderService,
