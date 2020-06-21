@@ -8,8 +8,10 @@ import { UFMWebAppRoutingModule } from '../routing/ufm-web-app.routing-module';
 // Main Web App Component
 import { UFMWebAppComponent } from './ufm-web-app.component';
 
-// Additional Modules
+// Common Components & Modules
 import { WAHeaderComponent, WAFooterComponent } from '../components';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider, FacebookLoginProvider } from 'angularx-social-login';
 
 // Page Modules
 import { WAPageHomeModule } from '../components/pages/home';
@@ -41,9 +43,27 @@ import { WARouterServiceModule } from '../services/router';
 		WADBServiceModule,
 		WALoaderServiceModule,
 		WARootScopeModule,
-		WARouterServiceModule
+		WARouterServiceModule,
+		SocialLoginModule
 	],
-	providers: [],
+	providers: [
+		{
+			provide: 'SocialAuthServiceConfig',
+			useValue: {
+				autoLogin: false,
+				providers: [
+					{
+						id: GoogleLoginProvider.PROVIDER_ID,
+						provider: new GoogleLoginProvider('clientId'),
+					},
+					{
+						id: FacebookLoginProvider.PROVIDER_ID,
+						provider: new FacebookLoginProvider('clientId'),
+					}
+				],
+			} as SocialAuthServiceConfig,
+		}
+	],
 	bootstrap: [UFMWebAppComponent]
 })
 export class UFMWebAppModule { }

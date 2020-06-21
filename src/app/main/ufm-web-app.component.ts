@@ -5,6 +5,9 @@ import { WARootScope } from '../services/globals/wa-rootscope';
 import { Router, RouterEvent } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { WAFIFADBService } from '../services/database/wa-fifa-db.service';
+import { SocialAuthService } from "angularx-social-login";
+import { FacebookLoginProvider, GoogleLoginProvider } from "angularx-social-login";
+import { SocialUser } from "angularx-social-login";
 
 @Component({
 	selector: 'ufm-web-app',
@@ -33,14 +36,18 @@ export class UFMWebAppComponent {
 		{
 			"image": "/assets/images/hero-banner/hero-banner-5.jpg"
 		}
-	]
+	];
+
+	user: SocialUser;
+	loggedIn: boolean;
 
 	constructor(
 		private WADBService: WADBService,
 		public WAFIFADBService: WAFIFADBService,
 		private WALoaderService: WALoaderService,
 		public WARootScope: WARootScope,
-		private router: Router
+		private router: Router,
+		private authService: SocialAuthService
 	) { }
 
 	ngOnInit() {
@@ -60,7 +67,21 @@ export class UFMWebAppComponent {
 			} else if (state) {
 				this.WARootScope.pageLoading = true;
 			}
-		})
+		});
+
+		this.authService.authState.subscribe((user) => {
+			this.user = user;
+			this.loggedIn = (user != null);
+			console.log(this.user);
+		});
+	}
+
+	signInWithGoogle(): void {
+		this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
+	}
+
+	signInWithFB(): void {
+		this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
 	}
 
 	setRandomHeroBannerImage() {
