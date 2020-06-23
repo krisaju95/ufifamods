@@ -1,0 +1,47 @@
+<div class="wa-form-element-container {{appearance}}">
+    <ng-container *ngIf="design == 'material'">
+        <div
+            class="wa-form-element-wrapper wa-form-element-material-wrapper wa-form-element-input-wrapper"
+            [ngClass]="{
+                'wa-form-element-focussed': focussed,
+                'wa-form-element-invalid': (touched && (control.invalid || invalid)),
+                'wa-form-element-no-label': !label,
+                'wa-form-element-has-prefix': prefix,
+                'wa-form-element-has-suffix': suffix
+            }"
+            (click)="focusElement($event)">
+            <label class="wa-form-element-label no-highlight" [ngClass]="{'float': (!!value || focussed)}" [for]="name || id" aria-hidden="true">
+                <span class="wa-form-element-label-text" [innerHTML]="label"></span>
+            </label>
+            <span class="wa-form-element-prefix" *ngIf="prefix">
+                <img class="wa-form-element-prefix-img" *ngIf="prefix.imageSrc" [src]="prefix.imageSrc" [alt]="prefix.imageAlt">
+                <span class="wa-form-element-prefix-icon {{prefix.iconClass}}" *ngIf="prefix.iconClass"></span>
+            </span>
+            <input
+                class="wa-form-element-main wa-form-element-input text-transform-{{textTransform}}"
+                [id]="id"
+                [name]="name || id"
+                [type]="type"
+                [placeholder]="placeholder"
+                [minlength]="minlength"
+                [maxlength]="maxlength"
+                [(ngModel)]="value"
+                (ngModelChange)="modelChanged($event)"
+                (focus)="focusElement($event)"
+                (blur)="blurElement($event)"
+                [attr.aria-required]="required"
+                [attr.aria-invalid]="(touched && (control.invalid || invalid))"
+                [attr.aria-label]="(label || placeholder) + (error && (touched && (control.invalid || invalid)) ? (' ' + error) : '')"
+                autocorrect="off"
+                spellcheck="false"
+                autocomplete="off">
+            <span class="wa-form-element-suffix" *ngIf="suffix">
+                <img class="wa-form-element-suffix-img" *ngIf="suffix.imageSrc" [src]="suffix.imageSrc" [alt]="suffix.imageAlt">
+            </span>
+            <div class="wa-form-element-underline"></div>
+        </div>
+        <div class="wa-form-element-error-text wa-form-element-input-error-text wa-form-element-material-error-text-container">
+            <div [id]="id + '-error-text'" class="wa-form-element-material-error-text" *ngIf="error && (touched && (control.invalid || invalid))" aria-live="polite" aria-atomic="true" role="alert" [innerHTML]="error"></div>
+        </div>
+    </ng-container>
+</div>

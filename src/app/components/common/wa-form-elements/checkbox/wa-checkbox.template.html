@@ -1,0 +1,37 @@
+<div class="wa-form-element-container">
+    <div
+        class="wa-form-element-wrapper wa-form-element-{{design}}-wrapper wa-form-element-checkbox-wrapper"
+        [ngClass]="{
+            'wa-form-element-focussed': focussed,
+            'wa-form-element-invalid': ((control.touched || touched) && (control.invalid || invalid)),
+            'wa-form-element-disabled': disabled,
+            'wa-form-element-checked': value
+        }"
+        (click)="focusElement($event)">
+        <input
+            class="wa-form-element-main wa-form-element-checkbox"
+            [attr.id]="id"
+            type="checkbox"
+            role="checkbox"
+            [(ngModel)]="value"
+            (ngModelChange)="modelChanged($event)"
+            (focus)="focusElement($event)"
+            (blur)="blurElement($event)"
+            [disabled]="disabled"
+            [attr.aria-disabled]="disabled"
+            [attr.aria-checked]="value"
+            [attr.aria-required]="required"
+            [attr.aria-invalid]="((control.touched || touched) && (control.invalid || invalid))"
+            [attr.aria-label]="ariaLabel + (error && ((touched || control.touched) && (control.invalid || invalid)) ? (' ' + error) : '')">
+        <span class="wa-form-element-checkbox-container">
+            <span class="wa-icon wa-form-element-checkbox-icon"></span>
+        </span>
+        <label class="wa-form-element-label no-highlight text-transform-{{textTransform}}" [for]="id">
+            <span *ngIf="!labelTemplate" class="wa-form-element-label-text" [innerHTML]="label" aria-hidden="true"></span>
+            <ng-container *ngIf="labelTemplate" [ngTemplateOutlet]="labelTemplate"></ng-container>
+        </label>
+    </div>
+    <div class="wa-form-element-error-text wa-form-element-checkbox-error-text wa-form-element-material-error-text-container">
+        <div [id]="id + '-error-text'" class="wa-form-element-material-error-text" *ngIf="error && ((control.touched || touched) && (control.invalid || invalid))" [innerHTML]="error" aria-live="polite" aria-atomic="true" role="alert"></div>
+    </div>
+</div>

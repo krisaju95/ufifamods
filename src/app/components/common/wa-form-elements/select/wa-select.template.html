@@ -1,0 +1,88 @@
+<div class="wa-form-element-container {{appearance}}" [id]="id + 'Container'">
+    <ng-container *ngIf="design == 'material'">
+        <ng-container *ngIf="designModifier == 'native'">
+            <div class="wa-form-element-wrapper wa-form-element-material-wrapper wa-form-element-select-wrapper" [ngClass]="{'wa-form-element-focussed': focussed, 'wa-form-element-invalid': ((touched || control.touched) && (control.invalid || invalid)), 'ie': isIEBrowser}">
+                <label class="wa-form-element-label" [ngClass]="{'float': !!value}" [for]="id" aria-hidden="true">
+                    <span class="wa-form-element-label-text" [innerHTML]="label"></span>
+                </label>
+                <select class="wa-form-element-select wa-form-element-native-select no-highlight" [class.option-selected]="value" [id]="id" [name]="name" [(ngModel)]="value" (focus)="focusElement($event)" (blur)="blurElement($event)" [attr.aria-invalid]="((touched || control.touched) && (control.invalid || invalid))" [attr.aria-label]="label" [attr.aria-describedby]="id + 'ErrorText'" autocorrect="off" spellcheck="false" autocomplete="off">
+                    <option *ngIf="addResetOption || !value" value="" [innerHTML]="resetOptionText || ''"></option>
+                    <ng-container *ngFor="let option of options; let optionIndex = index">
+                        <option [value]="option.value" [disabled]="option.disabled" [innerHTML]="option.text"></option>
+                    </ng-container>
+                </select>
+                <span class="wa-icon wa-form-element-select-trigger" aria-hidden="true"></span>
+                <div class="wa-form-element-underline"></div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="designModifier == 'custom'">
+            <div class="wa-select-options-panel-overlay" [class.overlay-visible]="showOptionsPanel && !showOverlayOptionsPanel && isMobileView" (click)="toggleDropdown($event)"></div>
+            <div    [id]="id"
+                    class="wa-form-element-wrapper wa-form-element-material-wrapper wa-form-element-select-wrapper text-transform-{{textTransform}}"
+                    [ngClass]="{'wa-form-element-focussed': focussed || showOptionsPanel, 'wa-form-element-invalid': ((touched || control.touched) && (control.invalid || invalid)), 'wa-form-element-disabled': (control.disabled || disabled),
+                    'wa-form-element-show-default-overlay': (showOptionsPanel && !showOverlayOptionsPanel && isMobileView)}"
+                    (focus)="focusElement($event)"
+                    [tabindex]="((control.disabled || disabled) ? -1 : 0)"
+                    [attr.aria-label]="ariaLabel + (error && ((touched || control.touched) && (control.invalid || invalid)) ? (' ' + error) : '')"
+                    [attr.aria-invalid]="((touched || control.touched) && (control.invalid || invalid))"
+                    [attr.aria-disabled]="(control.disabled || disabled)"
+                    (keydown)="keyDown($event)"
+                    (blur)="blurElement($event)"
+                    role="combobox">
+                <div class="wa-form-element-label no-highlight" [ngClass]="{'default-float': defaultFloatingLabelState, 'float': !!selectedOption['value']}" aria-hidden="true">
+                    <span class="wa-form-element-label-text" [innerHTML]="label"></span>
+                </div>
+                <div class="wa-form-element-main wa-form-element-select wa-form-element-custom-select no-highlight" [class.option-selected]="!!selectedOption['value']" aria-hidden="true" (click)="toggleDropdown($event)">
+                    <div *ngIf="!!selectedOption['prefixIcon']" class="prefix-icon-container">
+                        <span [class]="selectedOption['prefixIcon']" aria-hidden="true"></span>
+                    </div>
+                    <div *ngIf="!!selectedOption['prefixImage']" class="prefix-image-container">
+                        <img [src]="selectedOption['prefixImage']" aria-hidden="true">
+                    </div>
+                    <div [innerHTML]="selectedOption['text'] || ''"></div>
+                    <div *ngIf="!!selectedOption['suffixIcon']" class="suffix-icon-container">
+                        <span [class]="selectedOption['suffixIcon']" aria-hidden="true"></span>
+                    </div>
+                    <div *ngIf="!!selectedOption['suffixImage']" class="suffix-image-container">
+                        <img [src]="selectedOption['suffixImage']" aria-hidden="true">
+                    </div>
+                </div>
+                <span class="wa-icon wa-form-element-select-trigger" [ngClass]="{'options-panel-displayed': showOptionsPanel}" aria-hidden="true"></span>
+                <div class="wa-form-element-underline"></div>
+                <div class="wa-form-element-options-panel-container no-highlight" *ngIf="initialised && (showOptionsPanel || true)" [hidden]="!showOptionsPanel" [ngClass]="{'overlay-options-panel': showOverlayOptionsPanel}">
+                    <div class="wa-form-element-options-panel no-highlight" [ngClass]="{'search-filter-present': enableSearchfilter}" aria-hidden="true">
+                        <div class="wa-form-element-options-panel-label" [innerHTML]="label" aria-hidden="true"></div>
+                        <div *ngIf="enableSearchfilter" class="option-search-filter-container">
+                            <input [id]="id + 'OptionSearchField'" class="option-search-filter-input no-focus-ring" tabindex="-1" type="text" [placeholder]="searchFilterPlaceHolder" (focus)="focusSearchBar($event)" (blur)="blurSearchBar($event)" [(ngModel)]="optionSearchText" (ngModelChange)="filterOptions(optionSearchText, true)" autocorrect="off" spellcheck="false" autocomplete="disabled">
+                            <span class="wa-icon search option-search-filter-icon"></span>
+                        </div>
+                        <ul class="wa-form-element-options-list no-highlight">
+                            <li *ngIf="addResetOption" [id]="id + 'Option--1'" class="wa-form-element-option no-highlight" [class.selected-option]="!!selectedOption['value']" (click)="setValue('', true)" (keydown.enter)="setValue('', true)" [innerHTML]="resetOptionText || '-'" [attr.aria-hidden]="true"></li>
+                            <ng-container *ngFor="let option of filteredOptions; let optionIndex = index">
+                                <li class="wa-form-element-option no-highlight" [id]="id + 'Option-' + optionIndex" [class.selected-option]="option.value == selectedOption['value']" (click)="setValue(option.value, true)" (keydown.enter)="setValue(option.value, true)" aria-hidden="true" [attr.option-value]="option.value">
+                                    <div *ngIf="!!option.prefixIcon" class="prefix-icon-container">
+                                        <span [class]="option.prefixIcon" aria-hidden="true"></span>
+                                    </div>
+                                    <div *ngIf="!!option.prefixImage" class="prefix-image-container">
+                                        <img [src]="option.prefixImage" aria-hidden="true">
+                                    </div>
+                                    <div [innerHTML]="option.text"></div>
+                                    <div *ngIf="!!option.suffixIcon" class="suffix-icon-container">
+                                        <span [class]="option.suffixIcon" aria-hidden="true"></span>
+                                    </div>
+                                    <div *ngIf="!!option.suffixImage" class="suffix-image-container">
+                                        <img [src]="option.suffixImage" aria-hidden="true">
+                                    </div>
+                                </li>
+                            </ng-container>
+                        </ul>
+                        <div class="no-results-found" *ngIf="filteredOptions.length == 0" [innerHTML]="searchFilterNoResultsText"></div>
+                    </div>
+                </div>
+            </div>
+        </ng-container>
+        <div *ngIf="!hideErrorMessage" class="wa-form-element-error-text wa-form-element-select-error-text wa-form-element-material-error-text-container">
+            <div [id]="id + 'ErrorText'" class="wa-form-element-material-error-text" *ngIf="error && ((touched || control.touched) && (control.invalid || invalid))" [innerHTML]="error" aria-live="polite" aria-atomic="true" role="alert"></div>
+        </div>
+    </ng-container>
+</div>

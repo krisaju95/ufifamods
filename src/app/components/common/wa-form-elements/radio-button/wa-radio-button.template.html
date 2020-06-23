@@ -1,0 +1,25 @@
+<div class="wa-form-element-container wa-radio-button-container">
+    <div 
+        class="wa-form-element-wrapper wa-form-element-{{design}}-wrapper wa-form-element-radio-button-wrapper"
+        [ngClass]="{
+            'wa-form-element-focussed': focussed,
+            'wa-form-element-selected': modelValue == value
+        }"
+        (click)="focusElement($event)">
+        <input
+            class="wa-form-element-main wa-form-element-radio-button"
+            [attr.name]="name"
+            [value]="value"
+            type="radio"
+            [(ngModel)]="modelValue"
+            (ngModelChange)="modelChanged($event)"
+            [attr.aria-checked]="modelValue == value">
+        <span class="wa-form-element-radio-button-container">
+            <span class="wa-form-element-radio-button-icon"></span>
+        </span>
+        <label class="wa-form-element-label no-highlight text-transform-{{textTransform}}" [for]="name" aria-hidden="true">
+            <span *ngIf="!labelTemplate" class="wa-form-element-label-text" [innerHTML]="label" aria-hidden="true"></span>
+            <ng-container *ngIf="labelTemplate" [ngTemplateOutlet]="labelTemplate"></ng-container>
+        </label>
+    </div>
+</div>

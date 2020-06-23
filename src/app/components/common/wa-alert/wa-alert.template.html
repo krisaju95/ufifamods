@@ -1,0 +1,14 @@
+<div
+    *ngIf="visible"
+    class="wa-theme-alert wa-theme-alert-type-{{type}}"
+    [class.wa-theme-toast-message]="isToastMessage"
+    [class.dismissing]="dismissingAlert"
+    role="alert"
+    tabindex="0"
+    aria-live="polite">
+    <span *ngIf="showIcon" class="wa-theme-alert-icon wa-icon {{icon}}" [class.use-default-icon]="!icon" aria-hidden="true"></span>
+    <div class="wa-theme-alert-message" [innerHTML]="message"></div>
+    <button *ngIf="dismissable" class="wa-theme-alert-close-button btn-ghost" (click)="dismissAlert()">
+        <span class="wa-icon wa-icon-close"></span>
+    </button>
+</div>
