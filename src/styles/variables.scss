@@ -7,15 +7,16 @@ $font-weight-light:     300;
 $font-weight-normal:    400;
 $font-weight-medium:    500;
 $font-weight-bold:      700;
-$font-weight-heading:   400;
+$font-weight-heading:   500;
 
 // Color Codes
 $color-code-primary:            #262542;
 $color-code-secondary:          #17C7FF;
 $color-code-tertiary:           #FFC145;
-$color-code-text:               #FFFFFF;
+$color-code-text:               #2A2A2A;
 $color-code-yellow:             #FFC145;
-$color-code-blue:               #17C7FF;
+$color-code-lightblue:          #17C7FF;
+$color-code-blue:               #1494E6;
 $color-code-darkblue:           #121025;
 $color-code-pink:               #FF4A77;
 $color-code-gray:               #DDDDDD;
@@ -24,7 +25,7 @@ $color-code-darkgray:           #CCCCCC;
 $color-code-darkergray:         #AAAAAA;
 $color-code-white:              #FFFFFF;
 
-$border-color: rgba(255, 255, 255, 0.15);
+$border-color: #EEEEEE;
 
 // Cloud Storage URL Prefix
 $site-cloud-storage-images: '/assets/images/';

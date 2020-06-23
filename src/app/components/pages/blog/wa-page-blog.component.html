@@ -3,8 +3,8 @@
     <div class="wa-wrapper wa-blog-page-wrapper">
         <div class="wa-blog-page-tiles" *ngFor="let page of pages; let pageIndex = index">
             <ng-container *ngIf="(pageIndex == activePageIndex)">
-                <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-blog-page-tile">
-                    <ufm-wa-post-card *ngIf="loading || (page[postOffset + postIndex])" [loading]="loading" [post]="page[postOffset + postIndex]"></ufm-wa-post-card>
+                <div *ngFor="let post of page; let postIndex = index" class="wa-blog-page-tile">
+                    <ufm-wa-post-card *ngIf="loading || (page[postIndex])" [loading]="loading" [post]="post"></ufm-wa-post-card>
                 </div>
             </ng-container>
         </div>

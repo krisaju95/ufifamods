@@ -6,11 +6,15 @@ html, body {
     margin: 0;
     scroll-behavior: smooth;
     color: $color-code-text;
-    background-color: $color-code-darkblue;
+    background-color: $color-code-white;
     overflow-x: hidden;
 
     .wa-text-blue {
         color: $color-code-blue;
+    }
+
+    .wa-text-lightblue {
+        color: $color-code-lightblue;
     }
 
     .wa-text-normal {

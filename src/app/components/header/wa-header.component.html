@@ -1,20 +1,17 @@
 <div class="wa-container">
     <div class="wa-wrapper">
-        <div class="wa-loader-container">
-            <img class="wa-loader" [class.wa-loading-element]="!loading" alt="Ultimate FIFA Mods Logo" src="/assets/images/loader/f20al.gif">
-        </div>
         <div class="wa-content">
             <a class="wa-logo" routerLink="/">
                 <img class="wa-logo-img" alt="Ultimate FIFA Mods" src="/assets/images/logo/site-logo-light-v1.png">
             </a>
             <div class="wa-navbar">
                 <ul class="wa-navbar-section wa-secondary-navbar">
-                    <li class="wa-navbar-item">
+                    <!-- <li class="wa-navbar-item">
                         <a href="javascript: void(0)">
                             <i class="fas fa-search"></i>
                         </a>
                     </li>
-                    <span class="wa-navbar-separator">|</span>
+                    <span class="wa-navbar-separator">|</span> -->
                     <li class="wa-navbar-item">
                         <a [href]="WARootScope.socials.twitter" target="_blank">
                             <i class="fab fa-twitter"></i>
@@ -36,17 +33,17 @@
                         <a href="javascript: void(0)" (click)="routeToPage('blog')">
                             Blog
                         </a>
-                    </li>
+                    <!-- </li>
                     <li class="wa-navbar-item">
                         <a href="javascript: void(0)" (click)="routeToPage('downloads')">
                             Downloads
                         </a>
-                    </li>
-                    <li class="wa-navbar-item">
+                    </li> -->
+                    <!-- <li class="wa-navbar-item">
                         <a href="javascript: void(0)" (click)="routeToPage('about-us')">
                             About Us
                         </a>
-                    </li>
+                    </li> -->
                 </ul>
             </div>
         </div>

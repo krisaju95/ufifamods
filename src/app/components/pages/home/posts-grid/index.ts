@@ -8,6 +8,7 @@ import { WAPostsGridComponent } from './wa-posts-grid.component';
 import { WAPostCardModule } from '../../../common/post-card';
 import { WALoaderServiceModule } from '../../../../services/loader';
 import { WADBServiceModule } from '../../../../services/database';
+import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { WADBServiceModule } from '../../../../services/database';
         BrowserModule,
         WAPostCardModule,
         WALoaderServiceModule,
-        WADBServiceModule
+        WADBServiceModule,
+        WABlogPostFormatPipeModule
     ],
     exports: [WAPostsGridComponent]
 })

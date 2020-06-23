@@ -1,9 +1,9 @@
 @import 'variables.scss';
 
 // Colour Codes
-$text-color-primary: $color-code-primary;
-$background-color-primary: $color-code-white;
-$background-color-primary-hover: $color-code-yellow;
+$text-color-primary: $color-code-white;
+$background-color-primary: $color-code-blue;
+$background-color-primary-hover: $color-code-primary;
 $background-color-disabled: $color-code-darkergray;
 
 .wa-button {
@@ -67,6 +67,17 @@ $background-color-disabled: $color-code-darkergray;
             border-color: $background-color-primary-hover;
             background-color: $background-color-primary-hover;
         }
+
+        &.dark-background {
+            border-color: $color-code-secondary;
+            background-color: $color-code-secondary;
+            color: $color-code-primary;
+
+            &:hover, &:focus {
+                border-color: $color-code-white;
+                background-color: $color-code-white;
+            }
+        }
     }
 
     &.wa-secondary-button {
@@ -77,6 +88,17 @@ $background-color-disabled: $color-code-darkergray;
         &:hover, &:focus {
             border-color: $background-color-primary-hover;
             color: $background-color-primary-hover;
+        }
+
+        &.dark-background {
+            border-color: $color-code-secondary;
+            background-color: transparent;
+            color: $color-code-secondary;
+
+            &:hover, &:focus {
+                border-color: $color-code-white;
+                color: $color-code-white;
+            }
         }
     }
 

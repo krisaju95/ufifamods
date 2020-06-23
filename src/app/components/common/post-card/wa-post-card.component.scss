@@ -22,7 +22,7 @@
 
         .wa-post-card-image-container {
             position: relative;
-            background-color: $color-code-darkblue;
+            background-color: $color-code-darkgray;
             height: 22.5rem;
 
             @media only screen and (max-width: 920px) {
@@ -35,7 +35,7 @@
 
             .wa-post-card-image {
                 position: absolute;
-                background-color: $color-code-darkblue;
+                background-color: $color-code-darkgray;
                 background-size: cover;
                 background-position: center center;
                 height: 22.5rem;
@@ -63,8 +63,8 @@
             display: flex;
             flex-direction: column;
             flex: 1;
-            background-color: $color-code-primary;
-            color: $color-code-white;
+            background-color: $color-code-white;
+            color: $color-code-text;
 
             @media only screen and (max-width: 920px) {
                 min-height: 10rem;
@@ -98,7 +98,6 @@
     
                 .wa-post-card-title {
                     font-size: 2.1rem;
-                    font-weight: $font-weight-normal;
                     text-transform: none;
                     transition: color ease 300ms;
                     margin: 0;
@@ -148,6 +147,104 @@
                     }
                 }
 
+                .wa-post-date {
+                    text-transform: uppercase;
+                    text-align: center;
+                    font-weight: $font-weight-light;
+                    opacity: 0.75;
+                }
+            }
+        }
+    }
+}
+
+.wa-main-post-card {
+    width: 100%;
+    margin-bottom: 2.5rem;
+    color: $color-code-text;
+    text-decoration: none;
+    transition: transform ease 250ms;
+
+    &:hover, &:focus {
+        transform: translateY(-0.5rem);
+    }
+
+    .wa-post-grid-main-tile {
+        background: $color-code-white;
+        display: flex;
+        height: 45rem;
+    
+        .wa-post-grid-main-tile-image {
+            width: 66.7%;
+            background-size: cover;
+            background-position: center center;
+        }
+    
+        .wa-post-grid-main-tile-content {
+            width: calc(33.3% + 10px);
+            display: flex;
+            flex-direction: column;
+    
+            .wa-post-grid-main-tile-text {
+                padding: 3.5rem 4.5rem 3.5rem 2.5rem;
+                flex: 1;
+    
+                .wa-post-card-category {
+                    display: inline-flex;
+                    color: $color-code-pink;
+                    font-family: $headings-font-family;
+                    font-size: 1.6rem;
+                    margin-bottom: 1.5rem;
+                    font-weight: $font-weight-medium;
+                    text-transform: uppercase;
+    
+                    @media only screen and (max-width: 920px) {
+                        font-size: 1.2rem;
+                        margin-bottom: 0.5rem;
+                    }
+                }
+
+                .wa-post-card-title {
+                    text-transform: none;
+                    font-size: 2.8rem;
+                }
+    
+                .wa-post-card-description {
+                    font-size: 1.6rem;
+                    font-weight: $font-weight-light;
+                    line-height: 2.4rem;
+                    margin-top: 2rem;
+                }
+            }
+    
+            .wa-post-grid-main-tile-footer {
+                font-size: 1.4rem;
+                font-weight: $font-weight-normal;
+                padding: 2rem 3rem;
+                border-top: 1px solid $border-color;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                height: 2.5rem;
+    
+                @media only screen and (max-width: 920px) {
+                    display: none;
+                }
+    
+                .wa-post-credit {
+                    display: flex;
+                    align-items: center;
+    
+                    .wa-profile-dp {
+                        height: 2.5rem;
+                        width: 2.5rem;
+                    }
+    
+                    .wa-post-author {
+                        padding-left: 1rem;
+                    }
+                }
+    
                 .wa-post-date {
                     text-transform: uppercase;
                     text-align: center;

@@ -1,55 +1,56 @@
 import { Injectable } from '@angular/core';
-// import { WALoaderService } from '../loader/wa-loader.service';
-import { WABlogPost } from '../../interfaces/blog-post.interface';
-// import { Subscription } from 'rxjs';
+import { WALoaderService } from '../loader/wa-loader.service';
+import { WABlogPost, WABlogPostAttributeMap } from '../../interfaces/blog-post.interface';
+import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
-// import { HttpClient } from '@angular/common/http';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { Observable } from 'rxjs';
+
+const numberOfSheets: number = 2;
 
 @Injectable()
 export class WADBService {
 
-    blogData: object = {};
+    blogPostsList: Array<WABlogPost> = [];
 
-    blogPostsList: Array<any> = [];
+    blogPosts$: Array<Observable<WABlogPost[]>> = [];
 
-    // constructor(
-    //     private WALoaderService: WALoaderService,
-    //     private http: HttpClient
-    // ) { }
+    constructor(
+        private WALoaderService: WALoaderService,
+        private googleSheetsDbService: GoogleSheetsDbService
+    ) { }
 
-    loadBlogData(pageSize: number = 20): void {
-        // const table: Subscription = this.getBlogPage(pageSize, "firstPage").subscribe((data) => {
-        //     this.blogPostsList = this.createBlogPostList(data);
-        //     this.WALoaderService.togglePageLoadingState(false);
-        //     table.unsubscribe();
-        // });
+    loadBlogData(): void {
+        for (let sheetIndex = 1; sheetIndex <= numberOfSheets; sheetIndex++) {
+            this.blogPosts$[sheetIndex] = this.googleSheetsDbService.get<WABlogPost>(
+                '1gM7dvuanzHj010o5jlnf8z3BjTWBlYBKYdJkPL5xOLc',
+                sheetIndex,
+                WABlogPostAttributeMap
+            );
 
-        // this.http.get("https://docs.google.com/spreadsheets/d/1WXxmCBfEJt058umbg7LXy2bbINSTRbjKm5XH4wCyKis/gviz/tq?tqx=out:json&sheet=playerNames", { responseType: 'text'}).subscribe((response: any) => {
-        //     response = (response || "").split('setResponse(')[1] || "";
-        //     response = response.replace(");", "");
-        //     response = JSON.parse(response);
-        //     response = response.table;
-        //     const blogData: Array<any> = [];
-        //     const columns: Array<string> = [];
-        //     (<Array<any>>(response.cols)).forEach((col: any) => {
-        //         columns.push(col.id);
-        //     });
-        //     (<Array<any>>(response.rows)).forEach((row: any, rowIndex) => {
-        //         columns.push(col.id);
-        //     });
-        //     console.log(JSON.parse(response));
-        // });
+            const table: Subscription = this.blogPosts$[sheetIndex].subscribe((data: WABlogPost[]) => {
+                this.blogPostsList = Array.prototype.concat(this.blogPostsList, this.createBlogPostList(data));
+                table.unsubscribe();
+
+                if (sheetIndex == numberOfSheets) {
+                    this.sortBlogPostList();
+                    this.WALoaderService.togglePageLoadingState(false);
+                }
+            });
+        }
     }
 
-    getBlogPage(pageSize: number, retrieveMethod: string) {
-        let base: any;//: Base = this.airtable.base('appGpn6FEIJsIQem3');
-        return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
-            pageSize: pageSize,
-            sort: [{
-                field: 'Date',
-                direction: 'desc'
-            }]
-        })[retrieveMethod]();
+    sortBlogPostList() {
+        this.blogPostsList = this.blogPostsList.sort((a: any, b: any) => b.date - a.date);
+    }
+
+    getBlogPages() {
+        const pages: Array<Array<WABlogPost>> = [];
+        let i: number, j: number, pageSize: number = 12;
+        for (i = 0, j = this.blogPostsList.length; i < j; i += pageSize) {
+            pages.push(this.blogPostsList.slice(i, i + pageSize));
+        }
+        return pages;
     }
 
     createBlogPostList(records: any): WABlogPost[] {
@@ -62,53 +63,57 @@ export class WADBService {
     }
 
     createBlogPost(record: any): WABlogPost {
-        const post: any = record['fields'];
-        return {
-            id: record['id'],
-            public: post['Public'] != false,
-            featured: post['Featured'],
-            url: post['URL'],
-            title: post['Title'],
-            shortTitle: post['Short Title'],
-            date: post['Date'],
-            thumbnail: post['Thumbnail'],
-            postPageThumbnail: post['Post Page Thumbnail'],
-            category: post['Primary Category'],
-            tags: post['Categories'],
-            description: post['Brief Description'],
-            body: post['Post Body'],
-            author: post['Author'],
-            contributors: post['Contributors'],
-            downloadLink: post['Download Link'],
-            linkType: post['Link Type'],
-            starheads: post['Custom Star-head(s)'],
-            screenshots: post['Screenshots'],
-            video: post['Video']
-        };
+        const post: any = record;
+        post.date = new Date(post.date);
+        this.formatBlogPostArrayAttributes(post);
+        this.generateBlogPostURL(post);
+        return post;
     }
 
-    getBlogData(): object {
-        return this.blogData;
+    formatBlogPostArrayAttributes(post: WABlogPost): void {
+        const delimiter: string = "!!!";
+        const attributes: Array<string> = ["starheads", "tags", "screenshots", "contributors"];
+        attributes.forEach((attribute: string) => {
+            let attributeValue: string = post[attribute];
+            if (attributeValue) {
+                let attributeList: Array<any> = [];
+                attributeValue = attributeValue.replace(/\n/g, delimiter);
+                attributeValue = attributeValue.replace(/, /g, delimiter);
+                attributeValue = attributeValue.replace(/,/g, delimiter);
+                attributeList = attributeValue.split(delimiter);
+                post[attribute] = attributeList;
+            }
+        })
+    }
+
+    generateBlogPostURL(post: WABlogPost): void {
+        const date: Date = new Date(post.date);
+        post.url =
+            "/blog/post/" +
+            date.getFullYear() + "/" +
+            (date.getMonth() + 1) + "/" +
+            date.getDate() + "/" +
+            this.getBlogPostURLTitle(post);
+    }
+
+    getBlogPostURLTitle(post: WABlogPost): string {
+        let title: string = post.title;
+        let titleParts: string[] = [];
+        title = title.replace(/[^\w\s]/gi, ' ');
+        title = title.toLowerCase();
+        titleParts = title.split(' ');
+        titleParts = titleParts.filter((value: string) => !!value);
+        return titleParts.join('-');
     }
 
     getBlogPostsList(): Array<any> {
         return this.blogPostsList;
     }
 
-    createBlogPostsArray(blogPostsObject: object): Array<any> {
-        const blogPostsArray: Array<any> = [];
-        for (let blogPost in blogPostsObject) {
-            let postObject: object = blogPostsObject[blogPost];
-            postObject["post-link"] = blogPost;
-            blogPostsArray.push(postObject);
-        }
-        return blogPostsArray;
-    }
-
-    filterPostsData(blogPosts: Array<any>, category: string, numberOfPosts?: number, route?: ActivatedRoute): Array<any> {
+    filterPostsData(category: string, numberOfPosts?: number, route?: ActivatedRoute): Array<any> {
         const filteredPostsData: Array<any> = [];
         const activePostURL: string = location.href.includes("/blog/") ? this.getActivePostURL(route) : "";
-        blogPosts.some((post: WABlogPost) => {
+        this.blogPostsList.some((post: WABlogPost) => {
             if (activePostURL != post.url) {
                 switch (category) {
                     case 'featured': {
@@ -143,16 +148,20 @@ export class WADBService {
         return filteredPostsData;
     }
 
-    getSinglePost(url: string) {
-        let base: any; //Base = this.airtable.base('appGpn6FEIJsIQem3');
-        return base.table({ tableId: "tblOmzCatsiKekwAX" }).select({
-            pageSize: 1,
-            filterByFormula: "URL='" + url + "'"
-        }).firstPage().map((posts: Array<any>) => {
-            return posts.map((post: any) => {
-                return this.createBlogPost(post);
-            })
-        });
+    getSingleBlogPostPost(url: string) {
+        for (let post of this.blogPostsList) {
+            if (post.url == url) {
+                return {
+                    exists: true,
+                    data: post
+                };
+            }
+        }
+
+        return {
+            exists: false,
+            data: {}
+        }
     }
 
     getActivePostURL(route?: ActivatedRoute) {

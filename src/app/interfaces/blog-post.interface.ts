@@ -21,3 +21,23 @@ export interface WABlogPost {
 	video?: string,
 	videoHost?: string
 }
+
+export const WABlogPostAttributeMap: any = {
+	featured: 'Featured',
+	title: 'Title',
+	shortTitle: 'Short Title',
+	date: 'Date',
+	thumbnail: 'Thumbnail',
+	postPageThumbnail: 'Post Page Thumbnail',
+	category: 'Primary Category',
+	tags: 'Categories',
+	description: 'Brief Description',
+	body: 'Post Body',
+	author: 'Author',
+	contributors: 'Contributors',
+	downloadLink: 'Download Link',
+	linkType: 'Link Type',
+	starheads: 'Custom Star-head(s)',
+	screenshots: 'Screenshots',
+	video: 'Video'
+}

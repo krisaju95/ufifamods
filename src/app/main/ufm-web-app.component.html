@@ -1,9 +1,4 @@
 <div [class.show-focus-ring]="showFocusRing">
-    <div class="wa-hero-banner-image-container">
-        <ng-container *ngFor="let heroBannerImage of heroBannerImages; let index = index">
-            <div class="wa-hero-banner-image" [style.background-image]="'url(' + heroBannerImage.image + ')'" [class.active-image]="index == heroBannerImageIndex"></div>
-        </ng-container>
-    </div>
     <div class="wa-header">
         <ufm-wa-header></ufm-wa-header>
     </div>
@@ -13,4 +8,7 @@
     <div class="wa-footer">
         <ufm-wa-footer></ufm-wa-footer>
     </div>
+</div>
+<div style="display: none;">
+    <button (click)="signInWithGoogle()">Test G</button> <button (click)="signInWithFB()">Test FB</button>
 </div>

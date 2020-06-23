@@ -1,23 +1,50 @@
-<div *ngIf="post" class="wa-post-card-container wa-raised-container">
-    <a class="wa-post-card-loaded-view" href="javascript: void(0)" (click)="navigateToPost(post.url)">
-        <div *ngIf="post.thumbnail" class="wa-post-card-image-container">
-            <div class="wa-post-card-image" [style.background-image]="'url(' + post.thumbnail + ')'"></div>
-        </div>
-        <div class="wa-post-card-text-content">
-            <div class="wa-post-card-text">
-                <div *ngIf="post.category" class="wa-post-card-category">{{post.category}}</div>
-                <h3 class="wa-post-card-title" [innerHTML]="post.title"></h3>
-                <div *ngIf="showDescription && post.description" class="wa-post-card-description" [innerHTML]="(post.description | postFormatter : 'postDescription')"></div>
-            </div>
-            <div *ngIf="post.author || post.date" class="wa-post-card-footer">
-                <div *ngIf="post.author" class="wa-post-credit">
-                    <div class="wa-profile-dp rounded {{post.author}}"></div>
-                    <div class="wa-post-author">{{post.author}}</div>
+<ng-container *ngIf="post">
+    <ng-container *ngIf="size == 'large'">
+        <a class="wa-main-post-card" href="javascript: void(0)" (click)="navigateToPost(post.url)">
+            <div class="wa-raised-container wa-post-grid-main-tile">
+                <div class="wa-post-grid-main-tile-image" [style.background-image]="'url(' + post.thumbnail + ')'"></div>
+                <div class="wa-post-grid-main-tile-content">
+                    <div class="wa-post-grid-main-tile-text">
+                        <div *ngIf="post.category" class="wa-post-card-category">{{post.category}}</div>
+                        <h3 class="wa-post-card-title" [innerHTML]="post.title"></h3>
+                        <div *ngIf="(post.description || post.body)" class="wa-post-card-description" [innerHTML]="((post.description || post.body) | postFormatter : 'postDescription')"></div>
+                    </div>
+                    <div class="wa-post-grid-main-tile-footer">
+                        <div *ngIf="post.author" class="wa-post-credit">
+                            <div class="wa-profile-dp rounded {{post.author}}"></div>
+                            <div class="wa-post-author">{{post.author}}</div>
+                        </div>
+                        <div *ngIf="post.date" class="wa-post-date">
+                            {{post.date | date : 'dd MMM, yyyy'}}
+                        </div>
+                    </div>
                 </div>
-                <div *ngIf="post.date" class="wa-post-date">
-                    {{post.date | date : 'dd MMM, yyyy'}}
-                </div>
             </div>
+        </a>
+    </ng-container>
+    <ng-container *ngIf="size == 'small'">
+        <div class="wa-post-card-container wa-raised-container">
+            <a class="wa-post-card-loaded-view" href="javascript: void(0)" (click)="navigateToPost(post.url)">
+                <div *ngIf="post.thumbnail" class="wa-post-card-image-container">
+                    <div class="wa-post-card-image" [style.background-image]="'url(' + post.thumbnail + ')'"></div>
+                </div>
+                <div class="wa-post-card-text-content">
+                    <div class="wa-post-card-text">
+                        <div *ngIf="post.category" class="wa-post-card-category">{{post.category}}</div>
+                        <h3 class="wa-post-card-title" [innerHTML]="post.title"></h3>
+                        <div *ngIf="showDescription && post.description" class="wa-post-card-description" [innerHTML]="(post.description | postFormatter : 'postDescription')"></div>
+                    </div>
+                    <div *ngIf="post.author || post.date" class="wa-post-card-footer">
+                        <div *ngIf="post.author" class="wa-post-credit">
+                            <div class="wa-profile-dp rounded {{post.author}}"></div>
+                            <div class="wa-post-author">{{post.author}}</div>
+                        </div>
+                        <div *ngIf="post.date" class="wa-post-date">
+                            {{post.date | date : 'dd MMM, yyyy'}}
+                        </div>
+                    </div>
+                </div>
+            </a>
         </div>
-    </a>
-</div>
+    </ng-container>
+</ng-container>

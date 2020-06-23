@@ -16,6 +16,8 @@ export class WAPostCardComponent {
 
 	@Input() showDescription: boolean = true;
 
+	@Input() size: string = "small";
+
 	@Output() postCardClicked: EventEmitter<any> = new EventEmitter<any>();
 
 	constructor(

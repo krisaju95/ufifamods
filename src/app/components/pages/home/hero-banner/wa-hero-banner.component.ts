@@ -27,7 +27,7 @@ export class WAHeroBannerComponent {
 		this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
 			this.loading = state;
 			if (!state) {
-				this.heroPost = this.WADBService.filterPostsData(this.WADBService.getBlogPostsList(), "featured", 1, this.route)[0];
+				this.heroPost = this.WADBService.filterPostsData("featured", 1, this.route)[0];
 			}
 		})
 	}

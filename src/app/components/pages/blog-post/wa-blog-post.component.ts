@@ -38,16 +38,15 @@ export class WABlogPostComponent {
         this.fileURL = url;
         const pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
             if (!state) {
-                this.WADBService.getSinglePost(this.fileURL).subscribe((posts: WABlogPost[]) => {
-                    if (posts && posts[0]) {
-                        this.toggleLoadingState(false);
-                        this.WALoaderService.togglePageLoadingState(false);
-                        this.post = posts[0] || ({} as WABlogPost);
-                        pageLoadingStateChange.unsubscribe();
-                    }
-                });
+                const post: any = this.WADBService.getSingleBlogPostPost(this.fileURL);
+                if (post.exists) {
+                    this.post = post.data;
+                    this.toggleLoadingState(false);
+                    this.WALoaderService.togglePageLoadingState(false);
+                    pageLoadingStateChange.unsubscribe();
+                }
             }
-        })
+        });
     }
 
     toggleLoadingState(state: boolean): void {

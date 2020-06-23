@@ -27,7 +27,6 @@ $blog-content-width: 800px;
             }
 
             .wa-blog-post-hero-title {
-                color: $color-code-white;
                 letter-spacing: -2px;
                 font-size: 5rem;
                 line-height: 6.5rem;
@@ -71,14 +70,12 @@ $blog-content-width: 800px;
                 border-bottom: 1px solid $border-color;
                 display: flex;
                 justify-content: space-between;
-                color: $color-code-secondary;
 
                 .wa-blog-post-author {
                     font-size: 2rem;
                     line-height: 1.4;
                     display: flex;
                     align-items: center;
-                    color: $color-code-white;
 
                     .wa-profile-dp {
                         height: 3rem;
@@ -90,7 +87,6 @@ $blog-content-width: 800px;
 
                 .wa-blog-post-date {
                     text-transform: uppercase;
-                    color: $color-code-white;
                 }
             }
 
@@ -106,7 +102,7 @@ $blog-content-width: 800px;
                         font-weight: $font-weight-medium;
                         padding: 2rem;
                         margin-right: 1.5rem;
-                        background-color: $color-code-primary;
+                        background-color: $color-code-white;
                         text-align: center;
                         line-height: 3rem;
                     }
@@ -172,7 +168,7 @@ $blog-content-width: 800px;
         .wa-blog-post-disqus-thread {
             padding: 3rem;
             max-width: $blog-content-width;
-            background-color: $color-code-primary;
+            background-color: $color-code-white;
         }
     }
 }

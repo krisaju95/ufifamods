@@ -1,36 +1,8 @@
 @import "variables";
 
 .wa-container {
-    border-bottom: 1px solid $border-color;
-}
-
-.wa-loader-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    padding: 0 1.5rem;
-    width: calc(100% - 3rem);
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @media only screen and (max-width: 920px) {
-        justify-content: flex-end;
-    }
-    
-    .wa-loader {
-        height: 4rem;
-        transition: transform ease 500ms;
-
-        @media only screen and (max-width: 920px) {
-            height: 3rem;
-        }
-
-        &.wa-loading-element {
-            transform: scale(0);
-        }
-    }
+    background-image: linear-gradient(to right, $color-code-darkblue, $color-code-primary);
+    color: $color-code-white;
 }
 
 .wa-content {
@@ -60,11 +32,11 @@
             margin: 0;
             padding: 0;
             font-weight: $font-weight-light;
-            color: $color-code-gray;
+            color: $color-code-white;
             text-transform: uppercase;
 
             .wa-navbar-item a {
-                color: $color-code-text;
+                color: $color-code-white;
                 font-weight: $font-weight-normal;
 
                 &:hover {

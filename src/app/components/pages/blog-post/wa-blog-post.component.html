@@ -1,59 +1,61 @@
-<div class="wa-container wa-blog-post-hero-container" [class.data-loading]="loading">
-    <div class="wa-wrapper wa-blog-post-hero-wrapper">
-        <div class="wa-blog-post-hero-content">
-            <span class="wa-blog-post-primary-category">
-                {{ post.category }}
-            </span>
-            <h1 class="wa-blog-post-hero-title" [innerHTML]="post.title | postFormatter : 'title'"></h1>
+<ng-container *ngIf="post">
+    <div class="wa-container wa-blog-post-hero-container" [class.data-loading]="loading">
+        <div class="wa-wrapper wa-blog-post-hero-wrapper">
+            <div class="wa-blog-post-hero-content">
+                <span class="wa-blog-post-primary-category">
+                    {{ post.category }}
+                </span>
+                <h1 class="wa-blog-post-hero-title" [innerHTML]="post.title | postFormatter : 'title'"></h1>
+            </div>
         </div>
     </div>
-</div>
-<div class="wa-container wa-blog-post-body-container">
-    <div class="wa-wrapper wa-blog-post-body-wrapper">
-        <div class="wa-blog-post-body-content" [class.data-loading]="loading">
-            <div class="wa-blog-post-hero-image" [style.background-image]="'url(' + (post.postPageThumbnail || post.thumbnail) + ')'" [class.data-loading]="loading"></div>
-            <div class="wa-blog-post-info">
-                <span class="wa-blog-post-auther-info">
-                    <div>Article by</div>
-                    <span class="wa-blog-post-author">{{post.author}} <div class="wa-profile-dp {{post.author}}"></div></span></span>
-                <span class="wa-blog-post-date">{{post.date | date : 'd MMMM, yyyy'}}</span>
-            </div>
-            <p class="highlight" [innerHTML]="post.description"></p>
-            <div [innerHTML]="post.body | postFormatter : 'body'"></div>
-            <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
-                <h3>Contributor(s)</h3>
-                <div class="wa-blog-post-contributors">
-                    <div class="wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
-                        <div class="wa-profile-dp {{contributor}}"></div>
-                        <div>{{contributor}}</div>
+    <div class="wa-container wa-blog-post-body-container">
+        <div class="wa-wrapper wa-blog-post-body-wrapper">
+            <div class="wa-blog-post-body-content" [class.data-loading]="loading">
+                <div class="wa-blog-post-hero-image" [style.background-image]="'url(' + (post.postPageThumbnail || post.thumbnail) + ')'" [class.data-loading]="loading"></div>
+                <div class="wa-blog-post-info">
+                    <span class="wa-blog-post-auther-info">
+                        <div>Article by</div>
+                        <span class="wa-blog-post-author">{{post.author}} <div class="wa-profile-dp {{post.author}}"></div></span></span>
+                    <span class="wa-blog-post-date">{{post.date | date : 'd MMMM, yyyy'}}</span>
+                </div>
+                <p class="highlight" [innerHTML]="post.description"></p>
+                <div [innerHTML]="post.body | postFormatter : 'body'"></div>
+                <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
+                    <h3>Contributor(s)</h3>
+                    <div class="wa-blog-post-contributors">
+                        <div class="wa-raised-container wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
+                            <div class="wa-profile-dp {{contributor}}"></div>
+                            <div>{{contributor}}</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">
-                <h3>Screenshot(s)</h3>
-                <div class="wa-blog-post-screenshots">
-                    <div class="wa-blog-post-screenshot" *ngFor="let screenshot of (post.screenshots | postFormatter : 'screenshots').slice(0, 3)" [style.background-image]="'url(' + screenshot + ')'"></div>
+                <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">
+                    <h3>Screenshot(s)</h3>
+                    <div class="wa-blog-post-screenshots">
+                        <div class="wa-blog-post-screenshot" *ngFor="let screenshot of post.screenshots" [style.background-image]="'url(' + screenshot + ')'"></div>
+                    </div>
+                </div>
+                <div *ngIf="post.downloadLink" class="wa-blog-post-download-wrapper">
+                    <button class="wa-button wa-primary-button" (click)="download(post.downloadLink)">
+                        <span class="wa-button-text">Download now</span>
+                    </button>
+                    <div class="wa-blog-post-download-link-type"> powered by {{post.linkType}}</div>
+                </div>
+                <div *ngIf="post.video" class="wa-blog-post-video-wrapper">
+                    <p>Watch the video below.</p>
+                    <iframe class="wa-blog-post-video-iframe" [src]="post.video | postFormatter : (post.videoHost || 'youtube') | safe : 'resourceUrl'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </div>
-            <div *ngIf="post.downloadLink" class="wa-blog-post-download-wrapper">
-                <button class="wa-button wa-primary-button" (click)="download(post.downloadLink)">
-                    <span class="wa-button-text">Download now</span>
-                </button>
-                <div class="wa-blog-post-download-link-type"> powered by {{post.linkType}}</div>
-            </div>
-            <div *ngIf="post.video" class="wa-blog-post-video-wrapper">
-                <p>Watch the video below.</p>
-                <iframe class="wa-blog-post-video-iframe" [src]="post.video | postFormatter : (post.videoHost || 'youtube') | safe : 'resourceUrl'" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </div>
+    <ufm-posts-grid [title]="'Featured Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
+    <div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
+        <div class="wa-wrapper wa-blog-post-disqus-wrapper">
+            <h2 class="wa-section-heading">Comment Below</h2>
+            <div class="wa-raised-container wa-blog-post-disqus-thread">
+                <disqus [identifier]="post.id" [url]="siteURL + post.url"></disqus>
             </div>
         </div>
     </div>
-</div>
-<ufm-posts-grid [title]="'Featured Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
-<div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
-    <div class="wa-wrapper wa-blog-post-disqus-wrapper">
-        <h2 class="wa-section-heading">Comment Below</h2>
-        <div class="wa-blog-post-disqus-thread">
-            <disqus [identifier]="post.id" [url]="siteURL + post.url"></disqus>
-        </div>
-    </div>
-</div>
+</ng-container>

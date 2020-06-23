@@ -1,6 +1,7 @@
 // Angular Modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 // Routing Module
 import { UFMWebAppRoutingModule } from '../routing/ufm-web-app.routing-module';
@@ -10,9 +11,10 @@ import { UFMWebAppComponent } from './ufm-web-app.component';
 
 // Common Components & Modules
 import { WAHeaderComponent, WAFooterComponent } from '../components';
+import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
 import {
-	// GoogleLoginProvider,
+	GoogleLoginProvider,
 	FacebookLoginProvider
 } from 'angularx-social-login';
 
@@ -47,18 +49,20 @@ import { WARouterServiceModule } from '../services/router';
 		WALoaderServiceModule,
 		WARootScopeModule,
 		WARouterServiceModule,
+		HttpClientModule,
 		SocialLoginModule
 	],
 	providers: [
+		GoogleSheetsDbService,
 		{
 			provide: 'SocialAuthServiceConfig',
 			useValue: {
 				autoLogin: false,
 				providers: [
-					// {
-					// 	id: GoogleLoginProvider.PROVIDER_ID,
-					// 	provider: new GoogleLoginProvider('clientId'),
-					// },
+					{
+						id: GoogleLoginProvider.PROVIDER_ID,
+						provider: new GoogleLoginProvider('clientId'),
+					},
 					{
 						id: FacebookLoginProvider.PROVIDER_ID,
 						provider: new FacebookLoginProvider('clientId'),

@@ -1,6 +1,7 @@
 @import 'variables';
 
 .wa-discord-container {
+    color: $color-code-white;
     background-color: $color-code-primary;
     background-image: url("/assets/images/home/discordbg.png");
     background-blend-mode: luminosity;

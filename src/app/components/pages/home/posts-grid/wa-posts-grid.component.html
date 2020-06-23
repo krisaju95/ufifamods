@@ -2,9 +2,10 @@
     <div class="wa-wrapper wa-posts-grid-wrapper">
         <div class="wa-posts-grid-content">
             <h2 *ngIf="title" class="wa-posts-grid-title wa-section-heading"> {{title}} </h2>
+            <ufm-wa-post-card *ngIf="showMainPost" [loading]="loading" [post]="filteredBlogPosts[0]" [showDescription]="true" size="large" (postCardClicked)="navigateToPost($event)"></ufm-wa-post-card>
             <div class="wa-posts-grid-tiles">
-                <div *ngFor="let post of [].constructor(numberOfPosts); let postIndex = index" class="wa-posts-grid-tile">
-                    <ufm-wa-post-card [loading]="loading" [post]="filteredBlogPosts[postIndex]" [showDescription]="true" (postCardClicked)="navigateToPost($event)"></ufm-wa-post-card>
+                <div *ngFor="let post of [].constructor(numberOfPosts - (showMainPost ? 1 : 0)); let postIndex = index" class="wa-posts-grid-tile">
+                    <ufm-wa-post-card [loading]="loading" [post]="filteredBlogPosts[postIndex + (showMainPost ? 1 : 0)]" [showDescription]="false" (postCardClicked)="navigateToPost($event)"></ufm-wa-post-card>
                 </div>
             </div>
         </div>

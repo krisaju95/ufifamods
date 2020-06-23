@@ -17,6 +17,8 @@ export class WAPostsGridComponent {
 
 	@Input() numberOfPosts: number;
 
+	@Input() showMainPost: boolean = false;
+
 	@Output() postCardClicked: EventEmitter<any> = new EventEmitter<any>();
 
 	loading: boolean = true;
@@ -37,7 +39,7 @@ export class WAPostsGridComponent {
 		this.pageLoadingStateChange = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
 			if (!state) {
 				this.blogPostList = this.WADBService.getBlogPostsList();
-				this.filteredBlogPosts = this.WADBService.filterPostsData(this.blogPostList, this.category, this.numberOfPosts, this.route);
+				this.filteredBlogPosts = this.WADBService.filterPostsData(this.category, this.numberOfPosts, this.route);
 				this.loading = false;
 			}
 		})

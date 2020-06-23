@@ -48,12 +48,10 @@ export class WAPageBlogComponent {
     }
 
     loadPages() {
-        this.WADBService.getBlogPage(9, "all").subscribe((posts: Array<any>) => {
-            this.loading = false;
-            this.pages.push(this.WADBService.createBlogPostList(posts));
-            this.WALoaderService.togglePageLoadingState(false);
-            this.handlePaginationDisplay();
-        });
+        this.loading = false;
+        this.pages = this.WADBService.getBlogPages()
+        this.WALoaderService.togglePageLoadingState(false);
+        this.showPagination = true;
     }
 
     loadPage(pageIndex: number) {
@@ -69,18 +67,5 @@ export class WAPageBlogComponent {
         });
         this.WALoaderService.togglePageLoadingState(true);
         this.WALoaderService.togglePageLoadingState(false);
-        this.postOffset = (this.pages[pageIndex].length > this.numberOfPosts) ? this.numberOfPosts : 0;
-    }
-
-    handlePaginationDisplay() {
-        if (!paginationTimeoutRef) {
-            paginationTimeoutRef = setTimeout(() => {
-                this.showPagination = true;
-            }, 2000);
-        } else {
-            clearTimeout(paginationTimeoutRef);
-            paginationTimeoutRef = null;
-            this.handlePaginationDisplay();
-        }
     }
 }

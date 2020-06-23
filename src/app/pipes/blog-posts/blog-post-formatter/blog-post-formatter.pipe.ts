@@ -22,6 +22,7 @@ export class WABlogPostFormatPipe implements PipeTransform {
 				return formattedTitleTextParts.join(" ");
 			}
 			case "postDescription": {
+				content = content.split("\\n")[0];
 				if (content.length > 100) {
 					return content.slice(0, 100) + "...";
 				}
@@ -37,6 +38,9 @@ export class WABlogPostFormatPipe implements PipeTransform {
 			case "body": {
 				content = content.replace(/\n\n/g, "\n");
 				let contentParts: Array<any> = content.split("\n");
+				if (contentParts.length == 1) {
+					contentParts = content.split("\\n");
+				}
 				contentParts = contentParts.map((part: string) => {
 					return "<p>" + part + "</p>";
 				});
@@ -52,7 +56,7 @@ export class WABlogPostFormatPipe implements PipeTransform {
 				return "https://www.youtube.com/embed/" + videoID + "?controls=0";
 			}
 			case "number-of-posts": {
-				const numberOfPosts: number = this.WADBService.filterPostsData(this.WADBService.blogPostsList, content).length;
+				const numberOfPosts: number = this.WADBService.filterPostsData(content).length;
 				return numberOfPosts;
 			}
 			default: {

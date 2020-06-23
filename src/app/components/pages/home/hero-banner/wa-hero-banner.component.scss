@@ -1,103 +1,62 @@
 @import 'variables.scss';
 
-#waHero_DA1_TR_W {
-    top: -10rem;
-    right: 2rem;
-    z-index: 0;
-}
+.wa-container {
+    color: $color-code-white;
+    background-image: linear-gradient(to right, $color-code-darkblue, $color-code-primary);
 
-#waHero_DA1_TR_Y {
-    top: -5rem;
-    right: 0;
-    z-index: 1;
-}
+    .wa-wrapper {
+        position: relative;
+        padding-bottom: 270px;
+        min-height: 500px;
 
-#waHero_DA1_BL_W {
-    bottom: -4rem;
-    left: -2rem;
-    z-index: 1;
-}
+        .wa-hero-player {
+            position: absolute;
+            bottom: 0;
+            height: 825px;
+            right: -70px;
 
-#waHero_DA1_BL_Y {
-    bottom: 0rem;
-    left: -4rem;
-    z-index: 1;
-}
+            img {
+                height: 100%;
+            }
+        }
 
-#waHero_DA2_TR_W {
-    top: -12rem;
-    right: 5rem;
-    transform: rotate(30deg);
+        .wa-hero-cutout {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 1280px;
+            height: 270px;
 
-    &::before {
-        position: absolute;
-        content: '';
-        top: -0.5rem;
-        left: -0.5rem;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 100%;
-        background-color: white;
+            img {
+                position: relative;
+                width: 1280px;
+                height: 270px;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &::before, &::after {
+                position: absolute;
+                content: "";
+                height: 207px;
+                width: 100%;
+                bottom: 0;
+                background-color: $color-code-white;
+            }
+
+            &::before {
+                right: 100%;
+            }
+
+            &::after {
+                left: 100%;
+            }
+        }
     }
-}
-
-#waHero_DA2_BL_W {
-    bottom: 10rem;
-    left: -2rem;
-    transform: rotate(30deg);
-
-    &::before {
-        position: absolute;
-        content: '';
-        bottom: -0.5rem;
-        left: -0.5rem;
-        height: 1rem;
-        width: 1rem;
-        border-radius: 100%;
-        background-color: white;
-    }
-}
-
-#waHero_DA3_TR_W {
-    top: -25rem;
-    left: calc(100% - 40rem);
-}
-
-.wa-design-asset-1 {
-    position: absolute;
-    width: 8rem;
-    height: 15rem;
-    transform: skew(-30deg, 0);
-
-    &.wa-design-asset-white {
-        background: $color-code-white;
-    }
-
-    &.wa-design-asset-yellow {
-        background: $color-code-yellow;
-    }
-}
-
-.wa-design-asset-2 {
-    border-left: 2px dashed transparent;
-    position: absolute;
-    width: 8rem;
-    height: 15rem;
-
-    &.wa-design-asset-white {
-        border-color: $color-code-white;
-    }
-}
-
-.wa-design-asset-3 {
-    border: 1px solid $border-color;
-    position: absolute;
-    width: 75rem;
-    height: 75rem;
-    border-radius: 100%;
 }
 
 .wa-hero-banner-content {
+    position: relative;
     padding: 10rem 3rem;
     font-size: 2.8rem;
     font-weight: $font-weight-light;
@@ -118,34 +77,6 @@
 
         .wa-button ~.wa-button {
             margin-left: 3rem;
-        }
-    }
-}
-
-.wa-hero-post {
-    margin-bottom: 5rem;
-    position: relative;
-
-    .wa-hero-post-thumbnail {
-        height: 60rem;
-        background-size: cover;
-        background-position: center center;
-        background-color: $color-code-primary;
-        position: relative;
-
-        .wa-hero-post-text {
-            color: $color-code-white;
-            background: $color-code-primary;
-            padding: 1.5rem 2rem;
-            font-size: 3.2rem;
-            max-width: 60%;
-            margin: 0;
-            text-transform: uppercase;
-            position: absolute;
-            bottom: 3rem;
-            line-height: 1;
-            left: 3rem;
-            z-index: 1;
         }
     }
 }
