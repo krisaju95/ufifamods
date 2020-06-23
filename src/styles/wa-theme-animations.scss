@@ -1,0 +1,95 @@
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+@mixin fadeAnimation($name: 'fadeIn', $from: 0, $to: 1) {
+    @include keyframes($name) {
+        from { opacity: $from; }
+        to { opacity: $to; }
+    }
+}
+
+@mixin scaleUpAnimation($name: 'scaleUp', $from: 0, $to: 1) {
+    @include keyframes($name) {
+        from { transform: scale($from); }
+        to { transform: scale($to); }
+    }
+}
+
+@mixin slideInAnimation($name: 'slideIn', $direction: 'up', $from: 100vh, $to: 0) {
+    @if ($direction == 'up') {
+        @include keyframes($name) {
+            from { top: $from; }
+            to { top: $to; }
+        }
+    }
+    @if ($direction == 'down') {
+        @include keyframes($name) {
+            from { bottom: $from; }
+            to { bottom: $to; }
+        }
+    }
+    @if ($direction == 'left') {
+        @include keyframes($name) {
+            from { left: $from; }
+            to { left: $to; }
+        }
+    }
+    @if ($direction == 'right') {
+        @include keyframes($name) {
+            from { right: $from; }
+            to { right: $to; }
+        }
+    }
+}
+
+@mixin spinAnimation($name: 'spin') {
+    @include keyframes($name) {
+        100% { transform: rotate(360deg); }
+    }
+}
+
+@mixin customAnimation($name: 'customAnimation') {
+    @include keyframes($name) {
+        @content;
+    }
+}
+
+@mixin animation($name, $animationDuration, $animationStyle: ease, $animationFillMode: none) {
+    -webkit-animation: $name $animationDuration $animationStyle $animationFillMode;
+    animation: $name $animationDuration $animationStyle $animationFillMode;
+}
+
+@mixin warpSpeedAhead($setTransform: true, $setBackfaceVisibility: true, $setPerspective: true) {
+    @if ($setBackfaceVisibility == true) {
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+        backface-visibility: hidden;
+    }
+
+    @if ($setPerspective == true) {
+        -webkit-perspective: 1000;
+        -moz-perspective: 1000;
+        -ms-perspective: 1000;
+        perspective: 1000;
+    }
+
+    @if ($setTransform == true) {
+        -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}

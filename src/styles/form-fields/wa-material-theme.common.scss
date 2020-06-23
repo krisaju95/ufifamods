@@ -1,0 +1,298 @@
+@mixin ACMaterialFormFieldContainer {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+@mixin ACMaterialFormFieldWrapper() {
+    position: relative;
+    background-color: getConstant($wa-material-formfield-colors, "background");
+    color: getConstant($wa-material-formfield-colors, "input");
+    border: 1px solid getConstant($wa-material-formfield-colors, "border");
+    height: calc(#{getConstant($wa-material-formfield-height, "default")} + 2px);
+    transition: all ease-in-out 0.2s;
+
+    &.wa-form-element-disabled {
+        pointer-events: none;
+        background-color: getConstant($wa-material-formfield-colors, "background-disabled");
+        border-color: transparent;
+        color: getConstant($wa-material-formfield-colors, "input-disabled");
+    }
+}
+
+@mixin ACMAterialErrorIconAnimation() {
+    @include scaleUpAnimation('errorIcon');
+    @include customAnimation('errorText') {
+        from { transform: translateY(-20px); opacity: 0.5; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+}
+
+@mixin ACMaterialErrorText() {
+    .wa-form-element-error-text {
+        overflow: hidden;
+
+        .wa-form-element-material-error-text {
+            padding: 5px 10px;
+            color: getConstant($wa-material-formfield-colors, "error");
+            font-size: 12px;
+            position: relative;
+            @include animation(errorText, 0.15s, ease);
+        }
+    }
+}
+
+@mixin ACMaterialFormUnderline() {
+    .wa-form-element-underline {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+        transition: background-color ease-in-out 0.2s;
+    }
+
+    &:hover {
+        .wa-form-element-underline {
+            background-color: getConstant($wa-material-formfield-colors, "underline");
+        }
+    }
+
+    &.wa-form-element-focussed {
+        .wa-form-element-underline {
+            background-color: getConstant($wa-material-formfield-colors, "underline-focus");
+        }
+    }
+
+    &.wa-form-element-invalid {
+        .wa-form-element-underline {
+            background-color: getConstant($wa-material-formfield-colors, "underline-invalid");
+        }
+
+        &:hover {
+            .wa-form-element-underline {
+                background-color: getConstant($wa-material-formfield-colors, "underline-invalid");
+            }
+        }
+    }
+}
+
+@mixin ACMaterialFormPrefixAndSuffix() {
+    .wa-form-element-prefix, .wa-form-element-suffix {
+        position: absolute;
+        top: 0;
+        height: getConstant($wa-material-formfield-height, "default");
+        text-align: center;
+        width: 40px;
+        line-height: getConstant($wa-material-formfield-height, "default");
+    }
+
+    .wa-form-element-prefix {
+        left: 0;
+        font-size: 21px;
+    }
+
+    .wa-form-element-suffix {
+        right: 0;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        width: 50px;
+        padding: 5px 10px;
+
+        .wa-form-element-suffix-img {
+            width: 100%;
+        }
+    }
+}
+
+@mixin ACMaterialFormFieldLabel() {
+    .wa-form-element-label {
+        height: getConstant($wa-material-formfield-height, "default");
+        max-width: calc(100% - 50px);
+        pointer-events: none;
+        position: absolute;
+        top: 0;
+        left: 10px;
+        font-size: 16px;
+        color: getConstant($wa-material-formfield-colors, "label");
+        line-height: getConstant($wa-material-formfield-height, "default");
+        font-weight: getConstant($font-weights, "regular");
+        will-change: transform;
+        transform-origin: top left;
+        transition: transform ease 200ms;
+        @include warpSpeedAhead();
+
+        &.float {
+            transform: scale(0.875) translate3d(0, -10px, 0);
+        }
+
+        .wa-form-element-label-text {
+            display: inline-block;
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+    }
+
+    &.wa-form-element-has-prefix {
+        .wa-form-element-label {
+            left: 40px;
+        }
+
+        .wa-form-element-input {
+            padding-left: 40px;
+        }
+    }
+
+    &.wa-form-element-has-suffix {
+        .wa-form-element-input {
+            padding-right: 50px;
+        }
+    }
+
+    &.wa-form-element-invalid {
+        border-bottom-color: getConstant($wa-material-formfield-colors, "underline-invalid");
+
+        .wa-form-element-label {
+            color: getConstant($wa-material-formfield-colors, "label-invalid");
+        }
+    }
+}
+
+@mixin ACMaterialOptionsPanelOverlay() {
+    .wa-select-options-panel-overlay {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: transparent;
+        z-index: 100;
+        pointer-events: none;
+        display: none;
+        transition: background ease 300ms;
+
+        &.overlay-visible {
+            pointer-events: all;
+
+            @media (max-width: getConstant($breakpoints, "max-mobile")) {
+                background:  getConstant($color-palette, "overlay");
+            }
+        }
+    }
+}
+
+@mixin ACMaterialAppearanceVariants() {
+    &.wa-form-element-material-appearance-borderless {
+        .wa-form-element-material-wrapper {
+            border-color: transparent;
+            border-bottom-color: getConstant($wa-material-formfield-colors, "borderless", "underline");
+
+            .wa-form-element-label {
+                left: 0;
+                color: getConstant($wa-material-formfield-colors, "borderless", "label");
+
+                &.float {
+                    color: getConstant($wa-material-formfield-colors, "borderless", "label-float");
+                    transform: scale(0.75) translate3d(0, -15px, 0);
+                }
+            }
+
+            .wa-form-element-main {
+                color: getConstant($wa-material-formfield-colors, "borderless", "input");
+                padding: 20px 10px 10px 0;
+            }
+
+            .wa-form-element-underline {
+                display: none;
+            }
+
+            &.wa-form-element-focussed {
+                border-bottom-color: getConstant($wa-material-formfield-colors, "borderless", "underline-focus");
+            }
+
+            &.wa-form-element-invalid {
+                border-bottom-color: getConstant($wa-material-formfield-colors, "underline-invalid");
+
+                .wa-form-element-label {
+                    color: getConstant($wa-material-formfield-colors, "borderless", "label-invalid");
+
+                    &.float {
+                        color: getConstant($wa-material-formfield-colors, "borderless", "label-invalid-float");
+                    }
+                }
+            }
+        }
+
+        &.wa-form-element-material-appearance-condensed {
+            .wa-form-element-material-wrapper {
+                .wa-form-element-label {
+                    left: 10px;
+                }
+
+                .wa-form-element-main {
+                    padding-left: 10px;
+                }
+            }
+        }
+
+        .wa-form-element-error-text .wa-form-element-material-error-text {
+            padding-left: 0;
+        }
+    }
+
+    &.wa-form-element-material-appearance-condensed {
+        .wa-form-element-material-wrapper {
+            height: calc(#{getConstant($wa-material-formfield-height, "condensed")} + 2px);
+
+            .wa-form-element-label {
+                height: getConstant($wa-material-formfield-height, "condensed");
+                line-height: getConstant($wa-material-formfield-height, "condensed");
+                transition: none;
+
+                &.float {
+                    opacity: 0;
+                    transform: none;
+                }
+            }
+
+            .wa-form-element-prefix, .wa-form-element-suffix {
+                height: getConstant($wa-material-formfield-height, "condensed");
+                line-height: getConstant($wa-material-formfield-height, "condensed");
+            }
+
+            .wa-form-element-main {
+                height: getConstant($wa-material-formfield-height, "condensed");
+                padding-top: 5px;
+                line-height: 30px;
+            }
+
+            .wa-form-element-select-trigger {
+                line-height: getConstant($wa-material-formfield-height, "condensed");
+            }
+
+            .wa-form-element-underline {
+                display: none;
+            }
+        }
+    }
+
+    &.wa-form-element-material-appearance-focusHighlight {
+        .wa-select-options-panel-overlay {
+            display: block;
+        }
+
+        .wa-form-element-material-wrapper {
+            &.wa-form-element-show-default-overlay {
+                z-index: 101;
+            }
+
+            &.wa-form-element-focussed {
+                background-color: getConstant($wa-material-formfield-colors, "focusHighlight", "background-focussed");
+                border-color: getConstant($wa-material-formfield-colors, "focusHighlight", "border-focussed");
+            }
+        }
+    }
+}

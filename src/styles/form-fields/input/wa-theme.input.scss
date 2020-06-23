@@ -1,0 +1,86 @@
+@include ACMAterialErrorIconAnimation();
+
+.wa-form-element-container {
+    @include ACMaterialFormFieldContainer();
+
+    .wa-form-element-material-wrapper {
+        @include ACMaterialFormFieldWrapper();
+
+        @include customPlaceholder() {
+            font-weight: 400;
+            opacity: 0;
+            text-overflow: ellipsis;
+            text-transform: none !important;
+            transition: all ease-in-out 0.2s;
+        }
+    
+        @include clearAutofillColor(".wa-form-element-input");
+    
+        &.wa-form-element-input-focussed {
+            @include customPlaceholder() {
+                opacity: 0.5;
+            }
+        }
+    
+        &.wa-form-element-no-label {
+            @include customPlaceholder() {
+                opacity: 1;
+                color: getConstant($wa-material-formfield-colors, "label");
+            }
+    
+            &.wa-form-element-input-focussed {
+                @include customPlaceholder() {
+                    opacity: 1;
+                }
+            }
+    
+            &.wa-form-element-input-wrapper {
+                .wa-form-element-input {
+                    line-height: 30px;
+                    padding: 10px;
+                    font-weight: getConstant($font-weights, "semi-bold");
+                }
+            }
+        }
+    
+        @include ACMaterialFormUnderline();
+    
+        &.wa-form-element-input-wrapper {
+            position: relative;
+
+            @include ACMaterialFormPrefixAndSuffix();
+
+            @include ACMaterialFormFieldLabel();
+
+            .wa-form-element-input {
+                width: 100%;
+                height: getConstant($wa-material-formfield-height, "default");
+                font-weight: 400;
+                font-size: 16px;
+                padding: 25px 10px 5px 10px;
+                background-color: transparent;
+                border: none;
+    
+                &::-ms-reveal, &::-ms-clear {
+                    display: none;
+                }
+            }
+    
+            &.wa-form-element-invalid-input {
+                .wa-form-element-input-label {
+                    .wa-form-element-input-label-text {
+                        color: getConstant($wa-material-formfield-colors, "label-invalid");
+                    }
+                }
+    
+                .wa-form-element-input {
+                    padding-right: 40px;
+                }
+            }
+        }
+    }
+
+    @include ACMaterialErrorText();
+
+    @include ACMaterialAppearanceVariants();
+}

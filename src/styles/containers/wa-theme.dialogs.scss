@@ -1,0 +1,390 @@
+@include scaleUpAnimation("dialogBodyAnimation", 0.9, 1);
+@include slideInAnimation("dialogBodyAnimationXS");
+@include fadeAnimation("dialogOverlayAnimation");
+@include fadeAnimation("dialogOverlayCloseAnimation", 1, 0);
+
+body.wa-dialog-open {
+	overflow: hidden;
+	touch-action: none;
+}
+
+wa-dialog:last-of-type {
+	.wa-dialog-overlay {
+		background: getConstant($color-palette, "overlay");
+	}
+}
+
+.wa-theme-dialog {
+	.wa-dialog-overlay {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		overflow-y: auto;
+		@include animation(dialogOverlayAnimation, 300ms, ease);
+	
+		&.wa-dialog-closing {
+			@include animation(dialogOverlayCloseAnimation, 300ms, ease, forwards);
+		}
+
+		@include isIOSDevice() {
+			touch-action: none;
+			overflow: hidden;
+		}
+	
+		.wa-dialog-wrapper {
+			width: 100%;
+			height: auto;
+			max-height: 70vh;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			@include animation(dialogBodyAnimation, 300ms, ease);
+
+			&.wa-dialog-size-480 {
+				max-width: 480px;
+			}
+
+			&.wa-dialog-size-560 {
+				max-width: 560px;
+			}
+
+			&.wa-dialog-size-640 {
+				max-width: 640px;
+			}
+
+			&.wa-dialog-size-720 {
+				max-width: 720px;
+			}
+
+			@media (max-width: getConstant($breakpoints, "max-mobile")) {
+				width: 100%;
+				height: 100%;
+				max-height: 100%;
+				justify-content: flex-end;
+				@include animation(dialogBodyAnimationXS, 300ms, ease);
+
+				&.wa-dialog-size-480,
+				&.wa-dialog-size-560,
+				&.wa-dialog-size-640,
+				&.wa-dialog-size-720 {
+					width: 100%;
+					max-height: 100%;
+					max-width: 100%;
+					margin-bottom: 0;
+				}
+			}
+	
+			.wa-dialog {
+				padding: 0;
+				background-color: getConstant($color-palette, "common", "white");
+				margin-bottom: 5vh;
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				position: relative;
+
+				@include isIEBrowser() {
+					display: block;
+					flex-direction: unset;
+					margin-bottom: 0;
+
+					.wa-dialog-footer {
+						margin-bottom: 5vh;
+					}
+				}
+	
+				&.wa-dialog-content-scrollbar-enabled {
+					max-height: 70vh;
+
+					@include isIEBrowser() {
+						.wa-dialog-footer {
+							margin-bottom: none;
+						}
+
+						.wa-dialog-body {
+							max-height: 40vh;
+						}
+					}
+				}
+	
+				@media (max-width: getConstant($breakpoints, "max-mobile")) {
+					width: 100%;
+					max-height: 100%;
+					max-width: 100%;
+					margin-bottom: 0;
+
+					&.wa-dialog-content-scrollbar-enabled {
+						width: 100%;
+						max-height: 100%;
+						max-width: 100%;
+						margin-bottom: 0;
+					}
+	
+					&.wa-dialog-full-screen-xs-enabled {
+						height: 100%;
+					}
+				}
+
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					background-color: getConstant($color-palette, "common", "white");
+					content: "";
+					opacity: 0;
+					pointer-events: none;
+					transition: opacity ease 300ms;
+				}
+	
+				&.show-dialog-overlay {
+					cursor: not-allowed;
+	
+					&::before {
+						pointer-events: all;
+						opacity: 0.75;
+						z-index: 1;
+					}
+	
+					.wa-button.has-inset-loader {
+						position: relative;
+						z-index: 1;
+					}
+				}
+
+				.wa-dialog-overlay-loader {
+					position: absolute;
+					top: 0;
+					left: 0;
+					transform: translateZ(0.001px);
+					z-index: 1;
+					background: getConstant($color-palette, "common", "white");
+					display: flex;
+					cursor: not-allowed;
+					height: 100%;
+					width: 100%;
+
+					&.animate-loader {
+						@include animation(dialogOverlayAnimation, 500ms, ease);
+					}
+
+					.wa-loader-wrapper .wa-loader-container {
+						padding: 10px 0;
+					}
+				}
+	
+				.wa-dialog-header {
+					background-color: getConstant($color-palette, "common", "dialog-header");
+					color: getConstant($color-palette, "common", "white");
+					line-height: 30px;
+					padding: 15px 10px;
+	
+					.wa-dialog-heading {
+						margin: 0 5px;
+						padding: 0 5px;
+						line-height: 30px;
+						max-width: calc(100% - 50px);
+					}
+				}
+	
+				.wa-dialog-body {
+					font-size: 14px;
+					padding: 20px;
+					overflow-y: auto;
+	
+					@media (max-width: getConstant($breakpoints, "max-mobile")) {
+						flex: 1;
+						-webkit-overflow-scrolling: touch;
+					}
+
+					&:not(.wa-dialog-body-no-shadow) {
+						background:
+							linear-gradient(white 30%, transparent),
+							linear-gradient(transparent, white 70%) 0 100%,
+							linear-gradient(rgba(0, 0, 0, 0.15), transparent),
+							linear-gradient(to top, rgba(0, 0, 0, 0.15), transparent) 0 100%;
+						background-repeat: no-repeat;
+						background-color: white;
+						background-size: 100% 40px, 100% 40px, 100% 10px, 100% 10px;
+						background-attachment: local, local, scroll, scroll;
+
+						@include isIOSDevice() {
+							background:
+								linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+								linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+								radial-gradient(50% 0, farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+								radial-gradient(50% 100%,farthest-side, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+							background:
+								linear-gradient(white 30%, rgba(255, 255, 255, 0)),
+								linear-gradient(rgba(255, 255, 255, 0), white 70%) 0 100%,
+								radial-gradient(farthest-side at 50% 0, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)),
+								radial-gradient(farthest-side at 50% 100%, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0)) 0 100%;
+							background-repeat: no-repeat;
+							background-color: white;
+							background-size: 100% 40px, 100% 40px, 100% 15px, 100% 15px;
+							background-attachment: local, local, scroll, scroll;
+						}
+					}
+				}
+	
+				.wa-dialog-footer {
+					padding: 20px;
+					position: relative;
+					background-color: #FFFFFF;
+					display: flex;
+					width: 100%;
+					min-height: 80px;
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+					margin-top: -1px;
+
+					&.wa-dialog-footer-border {
+						border-top: 1px solid getConstant($color-palette, "common", "border");
+					}
+	
+					.wa-dialog-footer-cta {
+						&:first-child {
+							text-align: right;
+						}
+	
+						&:last-child {
+							flex: 1;
+						}
+	
+						.wa-button-type-tertiary {
+							min-width: auto;
+							padding: 0 10px;
+						}
+	
+						@media (min-width: getConstant($breakpoints, "min-tablet")) {
+							~.wa-dialog-footer-cta {
+								padding-right: 20px;
+							}
+						}
+					}
+	
+					@media (max-width: getConstant($breakpoints, "max-mobile")) {
+						padding-bottom: 30px;
+						flex-direction: column;
+						align-items: stretch;
+	
+						.wa-dialog-footer-cta {
+							~.wa-dialog-footer-cta {
+								padding-top: 20px;
+							}
+						}
+					}
+				}
+	
+				.wa-dialog-close-button {
+					height: 30px;
+					width: 30px;
+					line-height: 30px;
+					background: transparent;
+					border: none;
+					color: inherit;
+					position: absolute;
+					top: 15px;
+					right: 15px;
+	
+					span {
+						font-size: 16px;
+						line-height: 30px;
+					}
+				}
+	
+				&.wa-dialog-theme-default {
+					@include customScrollBar(
+						'.wa-dialog-body',
+						10px,
+						getConstant($color-palette, "common", "light-gray"),
+						getConstant($color-palette, "common", "dark-gray"),
+						10px,
+						getConstant($color-palette, "common", "dark-gray")
+					);
+					
+					.wa-dialog-header .wa-dialog-heading {
+						font-size: 18px;
+						font-weight: getConstant($font-weights, "semi-bold");
+					}
+
+					.wa-dialog-body {
+						padding: 20px;
+					}
+
+					.wa-dialog-footer {
+						@media (max-width: getConstant($breakpoints, "max-mobile")) {
+							.wa-dialog-footer-cta ~.wa-dialog-footer-cta {
+								padding-top: 10px;
+							}
+						}
+					}
+	
+					.wa-dialog-close-button {
+						color: getConstant($color-palette, "common", "white");
+					}
+				}
+	
+				&.wa-dialog-theme-kilo {
+					@include customScrollBar(
+						'.wa-dialog-body',
+						15px,
+						getConstant($color-palette, "common", "white"),
+						getConstant($color-palette, "common", "dark-gray"),
+						10px,
+						getConstant($color-palette, "common", "blue-gray")
+					);
+
+					.wa-dialog-header {
+						background-color: getConstant($color-palette, "common", "white");
+						color: getConstant($color-palette, "common", "text");
+						line-height: 30px;
+						padding: 25px 20px;
+
+						.wa-dialog-heading {
+							margin-left: 10px;
+							padding-left: 10px;
+							position: relative;
+
+							&::before {
+								position: absolute;
+								content: "";
+								top: 7.5px;
+								left: 0;
+								height: 15px;
+								width: 2px;
+								background-color: getConstant($color-palette, "common", "brown");
+							}
+						}
+					}
+	
+					.wa-dialog-body {
+						padding: 30px;
+					}
+	
+					.wa-dialog-footer {
+						padding: 20px 30px 30px 30px;
+						min-height: 100px;
+					}
+	
+					.wa-dialog-close-button {
+						top: 25px;
+						right: 25px;
+
+						span {
+							font-weight: getConstant($font-weights, "semi-bold");
+						}
+					}
+				}
+			}
+		}
+	}
+}

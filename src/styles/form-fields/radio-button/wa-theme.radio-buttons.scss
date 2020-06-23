@@ -1,0 +1,154 @@
+$radio-button-constants: (
+    "common": (
+        "border-radius": 50%,
+        "transition-duration": 150ms
+    ),
+    "material": (
+        "height": 20px,
+        "width": 20px,
+        "border-width": 2px,
+        "unselected": (
+            "border-color": #C8C8C8,
+            "background-color": transparent
+        ),
+        "selected": (
+            "border-color": #00778F,
+            "background-color": #00778F
+        ),
+        "radio-icon": (
+            "height": 12px,
+            "width": 12px,
+            "background-color": #FFFFFF
+        ),
+        "label": (
+            "font-size": 14px,
+            "color": #2A2A2A,
+            "font-weight": normal
+        )
+    ),
+    "kilo": (
+        "height": 20px,
+        "width": 20px,
+        "border-width": 2px,
+        "unselected": (
+            "border-color": #C8C8C8,
+            "background-color": transparent
+        ),
+        "selected": (
+            "border-color": #005078,
+            "background-color": transparent
+        ),
+        "radio-icon": (
+            "height": 10px,
+            "width": 10px,
+            "background-color": #005078
+        ),
+        "label": (
+            "font-size": 14px,
+            "color": #2A2A2A,
+            "font-weight": normal
+        )
+    )
+);
+
+wa-radio-button ~wa-radio-button {
+    .wa-form-element-container {
+        margin-top: 10px;
+    }
+}
+
+.wa-radio-button-container {
+    margin-bottom: 10px;
+
+    .wa-form-element-radio-button-wrapper {
+        height: auto;
+        background-color: transparent;
+        border-color: transparent;
+        display: inline-flex;
+        align-items: flex-start;
+        position: relative;
+
+        .wa-form-element-radio-button {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .wa-form-element-radio-button-container {
+            height: calc(#{getConstant($radio-button-constants, "material", "height")} * 2);
+            width: calc(#{getConstant($radio-button-constants, "material", "width")} * 2);
+            border: calc(#{getConstant($radio-button-constants, "material", "border-width")} * 2) solid getConstant($radio-button-constants, "material", "unselected", "border-color");
+            background-color: getConstant($radio-button-constants, "material", "unselected", "background-color");
+            border-radius: getConstant($radio-button-constants, "common", "border-radius");
+            pointer-events: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform-origin: top left;
+            transform: scale(0.5);
+            transition: background-color ease getConstant($radio-button-constants, "common", "transition-duration"),
+                        border-color ease getConstant($radio-button-constants, "common", "transition-duration");
+
+            .wa-form-element-radio-button-icon {
+                position: absolute;
+                width: getConstant($radio-button-constants, "material", "radio-icon", "height");
+                height: getConstant($radio-button-constants, "material", "radio-icon", "width");
+                background: getConstant($radio-button-constants, "material", "radio-icon", "background-color");
+                border-radius: 50%;
+                top: 10px;
+                left: 10px;
+                transform: scale(0);
+                transition: transform ease getConstant($radio-button-constants, "common", "transition-duration");
+            }
+        }
+
+        .wa-form-element-label {
+            margin: 0;
+            font-size: getConstant($radio-button-constants, "material", "label", "font-size");
+            font-weight: getConstant($radio-button-constants, "material", "label", "font-weight");
+            color: getConstant($radio-button-constants, "material", "label", "color");
+            line-height: getConstant($radio-button-constants, "material", "height");
+            flex: 1;
+            padding-left: 30px;
+            pointer-events: none;
+        }
+
+        &.wa-form-element-selected {
+            .wa-form-element-radio-button-container {
+                border-color: getConstant($radio-button-constants, "material", "selected", "border-color");
+                background-color: getConstant($radio-button-constants, "material", "selected", "background-color");
+
+                .wa-form-element-radio-button-icon {
+                    transform: scale(1);
+                }
+            }
+        }
+
+        &.wa-form-element-kilo-wrapper {
+            .wa-form-element-radio-button-container {
+                height: calc(#{getConstant($radio-button-constants, "kilo", "height")} * 2);
+                width: calc(#{getConstant($radio-button-constants, "kilo", "width")} * 2);
+                border: calc(#{getConstant($radio-button-constants, "kilo", "border-width")} * 2) solid getConstant($radio-button-constants, "kilo", "unselected", "border-color");
+                background-color: getConstant($radio-button-constants, "kilo", "unselected", "background-color");
+
+                .wa-form-element-radio-button-icon {
+                    background: getConstant($radio-button-constants, "kilo", "radio-icon", "background-color");
+                    width: calc(#{getConstant($radio-button-constants, "kilo", "radio-icon", "height")} * 2);
+                    height: calc(#{getConstant($radio-button-constants, "kilo", "radio-icon", "width")} * 2);
+                    top: 6px;
+                    left: 6px;
+                }
+            }
+
+            &.wa-form-element-selected {
+                .wa-form-element-radio-button-container {
+                    border-color: getConstant($radio-button-constants, "kilo", "selected", "border-color");
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+$font-weights: (
+	"light": 300,
+	"regular": 400,
+	"semi-bold": 600,
+	"bold": 700
+);
+
+$breakpoints: (
+	"max-mobile": 767px,
+	"min-tablet": 767px,
+	"max-tablet": 1023px,
+	"min-desktop": 1024px,
+	"max-desktop": 1263px
+);
+
+$color-palette: (
+	"common": (
+		"white": #FFFFFF,
+		"black": #000000,
+		"red": #D8292F,
+		"dark-red": #B52327,
+		"darker-red": #780F12,
+		"blue": #005078,
+		"green": #108C0C,
+		"brown": #BAA88D,
+		"dark-brown": #664B23,
+		"light-brown": #E4DCCF,
+		"lighter-brown": #F9F8F6,
+		"gray": #EFEFEF,
+		"dark-gray": #C8C8C8,
+		"light-gray": #F9F9F9,
+		"blue-gray": #4A4F55,
+		"text": #2A2A2A,
+		"sub-text": #737373,
+		"border": #C8C8C8,
+		"dialog-header": #2A2A2A
+	),
+	"overlay": rgba(0, 0, 0, 0.7)
+);
+
+@function getConstant($map, $keys...) {
+	@each $key in $keys {
+    	$map: map-get($map, $key);
+	}
+	@return $map;
+}

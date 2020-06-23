@@ -1,0 +1,352 @@
+@include scaleUpAnimation('optionsPanelScaleUp', 0.8, 1);
+@include fadeAnimation('optionsPanelFadeIn', 0.5, 1);
+@include ACMAterialErrorIconAnimation();
+
+.wa-form-element-container {
+    @include ACMaterialFormFieldContainer();
+
+    @include customScrollBar(
+        '.wa-form-element-options-panel',
+        10px,
+        getConstant($color-palette, "common", "light-gray"),
+        getConstant($color-palette, "common", "gray"),
+        0,
+        getConstant($color-palette, "common", "dark-gray")
+    );
+
+    .wa-form-element-material-wrapper {
+        @include ACMaterialFormFieldWrapper();
+
+        .wa-form-element-select-trigger {
+            position: absolute;
+            right: 0;
+            top: -1px;
+            width: 30px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            transform: scaleY(1);
+            pointer-events: none;
+            transition: transform ease 300ms;
+
+            &::before {
+                content: "\e938";
+            }
+
+            &.options-panel-displayed {
+                transform: scaleY(-1);
+            }
+        }
+
+        @include ACMaterialFormUnderline();
+
+        .wa-form-element-options-panel-container {
+            .wa-form-element-options-panel {
+                position: absolute;
+                top: calc(#{getConstant($wa-material-formfield-height, "default")} + 2px);
+                left: 0;
+                width: 100%;
+                cursor: pointer;
+                z-index: 1000;
+                max-height: 300px;
+                display: flex;
+                flex-direction: column;
+                box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.1);
+                background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "background");
+                transform-origin: center 25px;
+                @include animation(optionsPanelFadeIn, 0.2s);
+
+                .wa-form-element-options-panel-label {
+                    display: none;
+                    padding: 10px;
+                    background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "label-background");
+                    color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "label-color");
+                }
+        
+                .wa-form-element-options-list {
+                    overflow-x: hidden;
+                    overflow-y: auto;
+                    padding: 0;
+                    margin: 0;
+                    position: relative;
+        
+                    .wa-form-element-option {
+                        list-style: none;
+                        padding: 15px 10px;
+                        margin: 0;
+                        font-size: 16px;
+                        color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "option-color");
+                        background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "background");
+                        font-weight: getConstant($font-weights, "regular");
+                        display: flex;
+                        align-items: center;
+                        width: 100%;
+
+                        ~.wa-form-element-option {
+                            border-top: 1px solid getConstant($color-palette, "common", "border");
+                        }
+            
+                        div {
+                            line-height: 16px;
+                            word-break: break-word;
+                        }
+            
+                        .suffix-icon-container,
+                        .prefix-icon-container {
+                            width: 30px;
+                            padding-right: 10px;
+                            background-position: left center;
+                        }
+
+                        .suffix-icon-container {
+                            padding-left: 10px;
+                            background-position: right center;
+                        }
+            
+                        .suffix-image-container,
+                        .prefix-image-container {
+                            padding-right: 10px;
+                            width: 30px;
+                            img {
+                                width: 25px;
+                            }
+                        }
+
+                        .suffix-image-container {
+                            padding-left: 10px;
+                        }
+            
+                        &:hover {
+                            background-color:  getConstant($color-palette, "common", "light-gray");
+                        }
+            
+                        &.selected-option {
+                            background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "selected");
+                        }
+                    }
+                }
+
+                .no-results-found {
+                    padding: 20px;
+                    text-align: center;
+                    font-style: italic;
+                    color: getConstant($wa-material-formfield-colors, "label");
+                    background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "background");
+                }
+
+                &.search-filter-present {
+                    .option-search-filter-container {
+                        padding: 5px;
+                        position: relative;
+                        background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "background");
+
+                        @include customPlaceholder() {
+                            opacity: 1;
+                        }
+            
+                        .option-search-filter-input {
+                            width: 100%;
+                            height: 45px;
+                            font-size: 14px;
+                            font-weight: getConstant($font-weights, "regular");
+                            color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "label");
+                            border: 1px solid getConstant($wa-material-formfield-colors, "border");
+                            border-radius: 3px;
+                            padding: 10px 30px 10px 10px;
+                            line-height: 25px;
+                            background-color: transparent;
+                            transition: border-color ease 200ms, background-color ease 200ms;
+
+                            &:focus {
+                                border-color: getConstant($wa-material-formfield-colors, "underline");
+                                background-color: getConstant($wa-material-formfield-colors, "focusHighlight", "background-focussed");
+                            }
+                        }
+
+                        .option-search-filter-icon {
+                            position: absolute;
+                            height: 45px;
+                            width: 30px;
+                            top: 5px;
+                            right: 5px;
+                            text-align: center;
+                            line-height: 45px;
+                            font-size: 14px;
+                            pointer-events: none;
+                        }
+                    }
+
+                    .wa-form-element-options-list {
+                        .wa-form-element-option {
+                            padding: 15px;
+                        }
+                    }
+                }
+            }
+
+            &.overlay-options-panel {
+                @media (max-width: getConstant($breakpoints, "max-mobile")) {
+                    position: fixed;
+                    padding: 20px;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    z-index: 100000;
+                    background:  getConstant($color-palette, "overlay");
+                    transform-origin: center center;
+                    @include animation(optionsPanelFadeIn, 0.2s);
+
+                    .wa-form-element-options-panel {
+                        position: absolute;
+                        top: 20px;
+                        left: 20px;
+                        max-height: calc(100% - 40px);
+                        height: calc(100% - 40px);
+                        width: calc(100% - 40px);
+                        background: transparent;
+                        transform-origin: center center;
+                        @include animation(optionsPanelScaleUp, 0.2s);
+
+                        &:not(.search-filter-present) {
+                            position: relative;
+                            top: calc(50% - 20px);
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            max-height: calc(100% - 40px);
+                            height: auto;
+                            width: auto;
+                        }
+
+                        .wa-form-element-options-panel-label {
+                            display: block;
+                        }
+
+                        .wa-form-element-options-list {
+                            max-height: calc(100% - 90px);
+                            background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "background");
+                        }
+                    }
+                }
+            }
+        }
+
+        @include clearAutofillColor(".wa-form-element-select");
+
+        &.wa-form-element-select-wrapper {
+            position: relative;
+
+            @include ACMaterialFormFieldLabel();
+
+            .wa-form-element-select {
+                width: 100%;
+                height: getConstant($wa-material-formfield-height, "default");
+                cursor: pointer;
+                font-weight: getConstant($font-weights, "regular");
+                font-size: 16px;
+                padding: 25px 45px 5px 10px;
+                background-color: transparent;
+                background-position: right top;
+                background-size: 38px;
+                background-repeat: no-repeat;
+                border: none;
+                transition: background-image ease-in-out .2s;
+
+                &::-ms-value {
+                    color: getConstant($wa-material-formfield-colors, "input");
+                    background: transparent;
+                }
+
+                &.wa-form-element-custom-select {
+                    color: transparent;
+
+                    div {
+                        overflow: hidden;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        &.suffix-icon-container, &.suffix-image-container,
+                        &.prefix-icon-container, &.prefix-image-container {
+                            width: 30px;
+                            img {
+                                width: 30px;
+                            }
+                        }
+                    }
+                }
+
+                &:not(.wa-form-element-custom-select) {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    -o-appearance: none;
+                }
+
+                &.option-selected {
+                    color: getConstant($wa-material-formfield-colors, "input");
+                    overflow: hidden;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                }
+
+                option {
+                    color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "option-color");
+                    
+                    &:disabled {
+                        background-color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "disabled-option-color");
+                        color: getConstant($wa-material-formfield-colors, "drop-down", "options-panel", "disabled-option-background");
+                    }
+                }
+            }
+
+            &.wa-form-element-invalid {
+                .wa-form-element-select-trigger {
+                    color: getConstant($wa-material-formfield-colors, "drop-down", "trigger-invalid");
+                }
+            }
+
+            &.wa-form-element-disabled-select {
+                .wa-form-element-select-trigger {
+                    opacity: 0.5;
+                }
+            }
+
+            @include ACMaterialFormUnderline();
+        }
+
+        &.ie {
+            .wa-form-element-select:not(.wa-form-element-custom-select) {
+                padding: 25px 50px 5px 0.5em !important;
+            }
+        }
+    }
+
+    @include ACMaterialOptionsPanelOverlay();
+
+    @include ACMaterialErrorText();
+
+    @include ACMaterialAppearanceVariants();
+}
+
+@-moz-document url-prefix() {
+    .wa-form-element-container {
+        .wa-form-element-wrapper {
+            &.wa-form-element-legacy-wrapper {
+                &.wa-form-element-select-wrapper {
+                    .wa-form-element-select {
+                        padding: 5px 30px 5px 5px !important;
+                    }
+                }
+            }
+    
+            &.wa-form-element-material-wrapper {
+                &.wa-form-element-select-wrapper {
+                    .wa-form-element-select:not(.wa-form-element-custom-select) {
+                        padding: 25px 50px 5px 5px !important;
+                    }
+                }
+            }
+        }
+    }
+}

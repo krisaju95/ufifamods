@@ -1,0 +1,45 @@
+$wa-material-formfield-height: (
+    "default": 50px,
+    "condensed": 40px
+);
+
+$wa-material-formfield-colors: (
+    "background": #FFFFFF,
+    "label": #737373,
+    "label-invalid": #D8292F,
+    "input": #2A2A2A,
+    "input-disabled": #C8C8C8,
+    "border": #C8C8C8,
+    "error": #D8292F,
+    "underline": #737373,
+    "underline-focus": #2A2A2A,
+    "underline-invalid": #D8292F,
+    "error-icon": #D8292F,
+    "background-disabled": #F9F9F9,
+    "borderless": (
+        "input": #000000,
+        "underline": #DCE0E4,
+        "underline-focus": #000000,
+        "label": #000000,
+        "label-float": #737373,
+        "label-invalid": #000000,
+        "label-invalid-float": #D7282F
+    ),
+    "focusHighlight": (
+        "background-focussed": #F9F9F9,
+        "border-focussed": #C8C8C8
+    ),
+    "drop-down": (
+        "trigger-invalid": #D8292F,
+        "options-panel": (
+            "background": #FFFFFF,
+            "label-background": #4A4F55,
+            "label-color": #FFFFFF,
+            "searchbox-placeholder": #737373,
+            "option-color": #2A2A2A,
+            "selected": #C8C8C8,
+            "disabled-option-color": #C8C8C8,
+            "disabled-option-background": #F9F9F9
+        )
+    )
+);
