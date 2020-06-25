@@ -5,6 +5,8 @@ export class WARootScope {
 
     pageLoading: boolean = true;
 
+    fifaDBGenerated: boolean = false;
+
     isDesktopViewport: boolean = false;
 
     isMobileViewport: boolean = false;

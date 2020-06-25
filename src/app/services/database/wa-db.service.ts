@@ -11,6 +11,8 @@ const numberOfSheets: number = 2;
 @Injectable()
 export class WADBService {
 
+    sheetsLoaded: number = 0;
+
     blogPostsList: Array<WABlogPost> = [];
 
     blogPosts$: Array<Observable<WABlogPost[]>> = [];
@@ -31,8 +33,8 @@ export class WADBService {
             const table: Subscription = this.blogPosts$[sheetIndex].subscribe((data: WABlogPost[]) => {
                 this.blogPostsList = Array.prototype.concat(this.blogPostsList, this.createBlogPostList(data));
                 table.unsubscribe();
-
-                if (sheetIndex == numberOfSheets) {
+                this.sheetsLoaded++;
+                if (this.sheetsLoaded == numberOfSheets) {
                     this.sortBlogPostList();
                     this.WALoaderService.togglePageLoadingState(false);
                 }
@@ -81,7 +83,11 @@ export class WADBService {
                 attributeValue = attributeValue.replace(/, /g, delimiter);
                 attributeValue = attributeValue.replace(/,/g, delimiter);
                 attributeList = attributeValue.split(delimiter);
-                post[attribute] = attributeList;
+                if (attribute == "starheads" && isNaN(parseInt(attributeList[0]))) {
+                    post[attribute] = null;
+                } else {
+                    post[attribute] = attributeList;
+                }
             }
         })
     }
@@ -124,6 +130,11 @@ export class WADBService {
                     }
                     case 'fifa-20-mods': {
                         if (post.tags.includes("mods") && post.tags.includes("fifa 20")) {
+                            filteredPostsData.push(post);
+                        }
+                    }
+                    case 'fifa-19-mods': {
+                        if (post.tags.includes("mods") && post.tags.includes("fifa 19")) {
                             filteredPostsData.push(post);
                         }
                     }

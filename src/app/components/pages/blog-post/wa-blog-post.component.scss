@@ -109,13 +109,100 @@ $blog-content-width: 800px;
                 }
             }
 
+            .wa-blog-post-starheads-wrapper {
+                margin: 5rem 0;
+
+                .wa-blog-post-starheads {
+                    display: flex;
+                    flex-wrap: wrap;
+                    align-items: center;
+
+                    .wa-blog-post-starhead {
+                        display: flex;
+                        align-items: center;
+                        font-size: 1.6rem;
+                        padding: 1rem 1.5rem;
+
+                        .wa-blog-post-starhead-image img {
+                            height: 8rem;
+                            width: 8rem;
+                        }
+
+                        .wa-blog-post-starhead-meta {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: column;
+                            font-weight: $font-weight-medium;
+
+                            .wa-blog-post-starhead-rating, .wa-blog-post-starhead-position {
+                                padding: 0.5rem 0;
+                                font-size: 1.2rem;
+                                width: 3rem;
+                                text-align: center;
+                            }
+
+                            .wa-blog-post-starhead-rating {
+                                background-color: $color-code-yellow;
+                                color: $color-code-primary;
+                            }
+
+                            .wa-blog-post-starhead-position {
+                                background-color: $color-code-primary;
+                                color: $color-code-white;
+                            }
+
+                            .wa-blog-post-starhead-nationality-logo {
+                                display: flex;
+                                align-items: center;
+                                padding: 0.5rem 0;
+
+                                img {
+                                    width: 3rem;
+                                }
+                            }
+
+                            .wa-blog-post-starhead-club-crest {
+                                display: flex;
+                                align-items: center;
+                                
+                                img {
+                                    height: 2.5rem;
+                                }
+                            }
+                        }
+
+                        .wa-blog-post-starhead-text {
+                            .wa-blog-post-starhead-name {
+                                text-transform: uppercase;
+                                margin-bottom: 0.5rem;
+
+                                .wa-blog-post-starhead-firstName {
+                                    font-size: 1.2rem;
+                                }
+                            }
+
+                            .wa-blog-post-starhead-club, .wa-blog-post-starhead-league {
+                                font-weight: $font-weight-light;
+                            }
+
+                            .wa-blog-post-starhead-club {
+                                font-size: 1.4rem;
+                            }
+
+                            .wa-blog-post-starhead-league {
+                                font-size: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+
             .wa-blog-post-screenshots-wrapper {
                 margin: 5rem 0;
 
                 .wa-blog-post-screenshots {
                     display: flex;
                     flex-wrap: wrap;
-                    height: 20rem;
 
                     @media only screen and (max-width: 920px) {
                         flex-direction: column;
@@ -125,6 +212,8 @@ $blog-content-width: 800px;
                         flex: 1;
                         background-size: cover;
                         background-position: center center;
+                        min-width: 20rem;
+                        height: 20rem;
                     }
                 }
             }

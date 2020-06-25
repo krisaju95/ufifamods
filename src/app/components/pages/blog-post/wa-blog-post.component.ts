@@ -3,6 +3,8 @@ import { ActivatedRoute } from '@angular/router';
 import { WADBService } from '../../../services/database/wa-db.service';
 import { WALoaderService } from '../../../services/loader/wa-loader.service';
 import { WABlogPost } from 'src/app/interfaces/blog-post.interface';
+import { WARootScope } from 'src/app/services/globals/wa-rootscope';
+import { WAFIFADBService } from 'src/app/services/database/wa-fifa-db.service';
 
 @Component({
     selector: 'ufm-wa-blog-post',
@@ -25,6 +27,8 @@ export class WABlogPostComponent {
     constructor(
         private WADBService: WADBService,
         private WALoaderService: WALoaderService,
+        public WARootScope: WARootScope,
+        public WAFIFADBService: WAFIFADBService,
         private route: ActivatedRoute
     ) { }
 

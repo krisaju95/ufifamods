@@ -19,7 +19,7 @@ export class WAPageDownloadCenterComponent {
             title: "FIFA 19",
             url: "fifa-19-mods",
             thumbnail: "/assets/images/download-center/fifa-covers/fifa-19.jpg",
-            enabled: false
+            enabled: true
         },
         {
             title: "FIFA 18",
