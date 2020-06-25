@@ -33,33 +33,35 @@
                 <div *ngIf="post.starheads" class="wa-blog-post-starheads-wrapper">
                     <h3>Included Star-head(s)</h3>
                     <div class="wa-blog-post-starheads">
-                        <div class="wa-raised-container wa-blog-post-starhead" *ngFor="let starhead of post.starheads">
-                            <ng-container *ngIf="WARootScope.fifaDBGenerated">
-                                <div class="wa-blog-post-starhead-meta">
-                                    <!-- <span class="wa-blog-post-starhead-rating" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].rating.base"></span> -->
-                                    <span class="wa-blog-post-starhead-position" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].position"></span>
-                                    <span class="wa-blog-post-starhead-nationality-logo">
-                                        <img [src]="WAFIFADBService.fifaDBPlayers[starhead].nationality.image">
-                                    </span>
-                                    <span class="wa-blog-post-starhead-club-crest">
-                                        <img [src]="WAFIFADBService.fifaDBPlayers[starhead].club.image">
-                                    </span>
-                                </div>
-                                <div class="wa-blog-post-starhead-image">
-                                    <img [src]="WAFIFADBService.fifaDBPlayers[starhead].image">
-                                </div>
-                                <div class="wa-blog-post-starhead-text">
-                                    <div class="wa-blog-post-starhead-name">
-                                        <div class="wa-blog-post-starhead-firstName" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].name.firstName"></div>
-                                        <div class="wa-blog-post-starhead-lastName" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].name.lastName"></div>
+                        <ng-container *ngFor="let starhead of post.starheads">
+                            <ng-container *ngIf="WARootScope.fifaDBGenerated && WAFIFADBService.fifaDBPlayers[starhead]">
+                                <div class="wa-raised-container wa-blog-post-starhead">
+                                    <div class="wa-blog-post-starhead-meta">
+                                        <!-- <span class="wa-blog-post-starhead-rating" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].rating.base"></span> -->
+                                        <span class="wa-blog-post-starhead-position" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].position"></span>
+                                        <span class="wa-blog-post-starhead-nationality-logo">
+                                            <img [src]="WAFIFADBService.fifaDBPlayers[starhead].nationality.image">
+                                        </span>
+                                        <span class="wa-blog-post-starhead-club-crest">
+                                            <img [src]="WAFIFADBService.fifaDBPlayers[starhead].club.image">
+                                        </span>
                                     </div>
-                                    <div class="wa-blog-post-starhead-team">
-                                        <div class="wa-blog-post-starhead-club" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].club.name"></div>
-                                        <div class="wa-blog-post-starhead-league" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].league.name"></div>
+                                    <div class="wa-blog-post-starhead-image">
+                                        <img [src]="WAFIFADBService.fifaDBPlayers[starhead].image">
+                                    </div>
+                                    <div class="wa-blog-post-starhead-text">
+                                        <div class="wa-blog-post-starhead-name">
+                                            <div class="wa-blog-post-starhead-firstName" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].name.firstName"></div>
+                                            <div class="wa-blog-post-starhead-lastName" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].name.commonName || WAFIFADBService.fifaDBPlayers[starhead].name.lastName"></div>
+                                        </div>
+                                        <div class="wa-blog-post-starhead-team">
+                                            <div class="wa-blog-post-starhead-club" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].club.name"></div>
+                                            <div class="wa-blog-post-starhead-league" [innerHTML]="WAFIFADBService.fifaDBPlayers[starhead].league.name"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </ng-container>
-                        </div>
+                        </ng-container>
                     </div>
                 </div>
                 <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">

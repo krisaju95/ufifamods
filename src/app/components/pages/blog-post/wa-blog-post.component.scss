@@ -119,9 +119,12 @@ $blog-content-width: 800px;
 
                     .wa-blog-post-starhead {
                         display: flex;
-                        align-items: center;
+                        align-items: flex-start;
                         font-size: 1.6rem;
                         padding: 1rem 1.5rem;
+                        width: calc(33.333% - 4rem);
+                        margin-bottom: 1rem;
+                        margin-right: 1rem;
 
                         .wa-blog-post-starhead-image img {
                             height: 8rem;

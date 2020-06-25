@@ -95,7 +95,8 @@ export class WAFIFADBService {
                     club: this.getPlayerClub(club),
                     nationality: this.getPlayerNationality(playerTuple),
                     league: this.getPlayerLeague(club),
-                    image: "https://www.fifarosters.com/assets/players/fifa20/faces/" + playerTuple.playerid + ".png"
+                    image: "https://www.fifaindex.com/static/FIFA20/images/players/10/" + playerTuple.playerid + ".webp"
+                    // image: "https://www.fifarosters.com/assets/players/fifa20/faces/" + playerTuple.playerid + ".png"
                 };
                 this.fifaDBPlayers[playerTuple.playerid] = player;
             });
@@ -138,8 +139,8 @@ export class WAFIFADBService {
 
     getPlayerRating(playerTuple: FIFADBPlayerTuple): FIFADBPlayerRating {
         return {
-            base: parseInt(playerTuple.overallrating),
-            potential: parseInt(playerTuple.potential)
+            base: parseInt(playerTuple.overallrating || ""),
+            potential: parseInt(playerTuple.potential || "")
         }
     }
 
