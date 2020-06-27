@@ -34,11 +34,13 @@ export interface FIFADBPlayerClub {
     id: number;
     name: string;
     image: string;
+    color: string;
 }
 
 export interface FIFADBPlayerLeague {
     id: number;
     name: string;
+    image: string;
 }
 
 export interface FIFADBPlayerTuple {
@@ -62,6 +64,9 @@ export interface FIFADBPlayerNamesTuple {
 export interface FIFADBTeamsTuple {
     teamid: string;
     teamname: string;
+    teamcolor1r: string;
+    teamcolor1g: string;
+    teamcolor1b: string;
 }
 
 export interface FIFADBTeamPlayerLinksTuple {
@@ -106,7 +111,10 @@ export const FIFADBTuple: any = {
     countryid: "countryid",
     nationid: "nationid",
     isocountrycode: "isocountrycode",
-    nationname: "nationname"
+    nationname: "nationname",
+    teamcolor1r: "teamcolor1r",
+    teamcolor1g: "teamcolor1g",
+    teamcolor1b: "teamcolor1b"
 }
 
 export const FIFADBPositionMap: any = {

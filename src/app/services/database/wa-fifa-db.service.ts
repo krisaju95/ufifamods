@@ -145,10 +145,13 @@ export class WAFIFADBService {
     }
 
     getPlayerClub(club: FIFADBTeamPlayerLinksTuple): FIFADBPlayerClub {
+        const teamID: string = club.teamid;
+        const teamData: FIFADBTeamsTuple = this.teamsMap[teamID];
         return {
-            id: parseInt(club.teamid),
-            name: (<FIFADBTeamsTuple>this.teamsMap[club.teamid]).teamname,
-            image: "https://www.fifarosters.com/assets/clubs/fifa20/" + club.teamid + ".png"
+            id: parseInt(teamID),
+            name: teamData.teamname,
+            image: "https://www.fifarosters.com/assets/clubs/fifa20/" + teamID + ".png",
+            color: "rgb(" + teamData.teamcolor1r + ", " + teamData.teamcolor1g + ", " + teamData.teamcolor1b + ")"
         }
     }
 
@@ -163,9 +166,11 @@ export class WAFIFADBService {
     getPlayerLeague(club: FIFADBTeamPlayerLinksTuple): FIFADBPlayerLeague {
         const leagueID: number = parseInt((<FIFADBLeaguesTuple>this.leagueTeamLinksMap[club.teamid]).leagueid);
         const leagueName: string = (<FIFADBLeaguesTuple>this.leaguesMap[leagueID]).leaguename || "";
+        const nationID: string = (<FIFADBLeaguesTuple>this.leaguesMap[leagueID]).countryid;
         return {
             id: leagueID,
-            name: leagueName.split(" (")[0] || ""
+            name: leagueName.split(" (")[0] || "",
+            image: "https://www.fifarosters.com/assets/nations/fifa17/" + nationID + ".png"
         }
     }
 

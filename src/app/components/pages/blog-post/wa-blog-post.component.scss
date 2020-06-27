@@ -115,85 +115,85 @@ $blog-content-width: 800px;
                 .wa-blog-post-starheads {
                     display: flex;
                     flex-wrap: wrap;
-                    align-items: center;
+                    align-items: stretch;
 
                     .wa-blog-post-starhead {
-                        display: flex;
-                        align-items: flex-start;
-                        font-size: 1.6rem;
-                        padding: 1rem 1.5rem;
-                        width: calc(33.333% - 4rem);
+                        width: calc(33.333% - 1rem);
                         margin-bottom: 1rem;
                         margin-right: 1rem;
 
-                        .wa-blog-post-starhead-image img {
-                            height: 8rem;
-                            width: 8rem;
-                        }
+                        .wa-starhead-card {
+                            font-size: 1.4rem;
 
-                        .wa-blog-post-starhead-meta {
-                            display: flex;
-                            align-items: center;
-                            flex-direction: column;
-                            font-weight: $font-weight-medium;
+                            .wa-starhead-card-header {
+                                height: 8rem;
 
-                            .wa-blog-post-starhead-rating, .wa-blog-post-starhead-position {
-                                padding: 0.5rem 0;
-                                font-size: 1.2rem;
-                                width: 3rem;
-                                text-align: center;
-                            }
-
-                            .wa-blog-post-starhead-rating {
-                                background-color: $color-code-yellow;
-                                color: $color-code-primary;
-                            }
-
-                            .wa-blog-post-starhead-position {
-                                background-color: $color-code-primary;
-                                color: $color-code-white;
-                            }
-
-                            .wa-blog-post-starhead-nationality-logo {
-                                display: flex;
-                                align-items: center;
-                                padding: 0.5rem 0;
-
-                                img {
-                                    width: 3rem;
+                                .wa-starhead-card-image {
+                                    border-radius: 100%;
+                                    border: 5px solid #FFFFFF;
+                                    background-color: #EEEEEE;
+                                    position: relative;
+                                    height: 10rem;
+                                    top: 2rem;
+                                    left: 2rem;
                                 }
                             }
 
-                            .wa-blog-post-starhead-club-crest {
+                            .wa-starhead-card-meta {
                                 display: flex;
                                 align-items: center;
-                                
-                                img {
-                                    height: 2.5rem;
+                                padding-left: 15rem;
+                                padding-right: 2rem;
+
+                                .wa-starhead-card-meta-item {
+                                    padding: 1rem;
+
+                                    .wa-starhead-card-meta-item-heading {
+                                        color: #777777;
+                                        font-size: 1.2rem;
+                                    }
+
+                                    .wa-starhead-card-meta-item-value {
+                                        font-size: 1.8rem;
+                                    }
                                 }
                             }
-                        }
 
-                        .wa-blog-post-starhead-text {
-                            .wa-blog-post-starhead-name {
-                                text-transform: uppercase;
-                                margin-bottom: 0.5rem;
+                            .wa-starhead-card-info-row {
+                                border-top: 1px solid $border-color;
+                                padding: 1rem 2rem;
 
-                                .wa-blog-post-starhead-firstName {
+                                .wa-starhead-card-info-row-heading {
+                                    text-transform: uppercase;
                                     font-size: 1.2rem;
+                                    color: $color-code-blue;
+                                    line-height: 1.5;
                                 }
-                            }
 
-                            .wa-blog-post-starhead-club, .wa-blog-post-starhead-league {
-                                font-weight: $font-weight-light;
-                            }
+                                .wa-starhead-card-info-row-value {
+                                    display: flex;
+                                    align-items: center;
+                                    line-height: 2rem;
+                                    
+                                    img {
+                                        width: 2rem;
+                                        margin-left: 1rem;
+                                    }
+                                }
 
-                            .wa-blog-post-starhead-club {
-                                font-size: 1.4rem;
-                            }
+                                &.wa-starhead-card-playername {
+                                    line-height: 1.5;
+                                    border-bottom: 1px solid $color-code-blue;
 
-                            .wa-blog-post-starhead-league {
-                                font-size: 1.2rem;
+                                    .wa-starhead-card-playername-small {
+                                        font-size: 1.2rem;
+                                    }
+
+                                    .wa-starhead-card-playername-large {
+                                        font-size: 1.6rem;
+                                        text-transform: uppercase;
+                                    }
+                                }
                             }
                         }
                     }
