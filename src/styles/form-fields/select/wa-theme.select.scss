@@ -28,11 +28,8 @@
             font-weight: 600;
             transform: scaleY(1);
             pointer-events: none;
+            color: $color-code-lighttext;
             transition: transform ease 300ms;
-
-            &::before {
-                content: "\e938";
-            }
 
             &.options-panel-displayed {
                 transform: scaleY(-1);

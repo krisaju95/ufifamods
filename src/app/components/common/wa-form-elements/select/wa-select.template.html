@@ -11,7 +11,7 @@
                         <option [value]="option.value" [disabled]="option.disabled" [innerHTML]="option.text"></option>
                     </ng-container>
                 </select>
-                <span class="wa-icon wa-form-element-select-trigger" aria-hidden="true"></span>
+                <i class="fas fa-chevron-down wa-form-element-select-trigger" aria-hidden="true"></i>
                 <div class="wa-form-element-underline"></div>
             </div>
         </ng-container>
@@ -47,7 +47,7 @@
                         <img [src]="selectedOption['suffixImage']" aria-hidden="true">
                     </div>
                 </div>
-                <span class="wa-icon wa-form-element-select-trigger" [ngClass]="{'options-panel-displayed': showOptionsPanel}" aria-hidden="true"></span>
+                <i class="fas fa-chevron-down wa-form-element-select-trigger" [ngClass]="{'options-panel-displayed': showOptionsPanel}" aria-hidden="true"></i>
                 <div class="wa-form-element-underline"></div>
                 <div class="wa-form-element-options-panel-container no-highlight" *ngIf="initialised && (showOptionsPanel || true)" [hidden]="!showOptionsPanel" [ngClass]="{'overlay-options-panel': showOverlayOptionsPanel}">
                     <div class="wa-form-element-options-panel no-highlight" [ngClass]="{'search-filter-present': enableSearchfilter}" aria-hidden="true">

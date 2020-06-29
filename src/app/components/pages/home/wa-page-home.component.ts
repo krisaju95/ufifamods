@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { WARootScope } from 'src/app/services/globals/wa-rootscope';
 
 @Component({
     selector: 'ufm-wa-page-home',
@@ -6,4 +7,6 @@ import { Component, ViewEncapsulation } from '@angular/core';
     styleUrls: ['./wa-page-home.component.scss'],
     encapsulation: ViewEncapsulation.None
 })
-export class WAPageHomeComponent { }
+export class WAPageHomeComponent {
+    constructor(public WARootScope: WARootScope) { }
+}

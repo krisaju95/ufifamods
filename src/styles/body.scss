@@ -9,6 +9,10 @@ html, body {
     background-color: $color-code-white;
     overflow-x: hidden;
 
+    * {
+        box-sizing: border-box;
+    }
+
     .wa-text-blue {
         color: $color-code-blue;
     }

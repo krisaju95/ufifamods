@@ -2,54 +2,25 @@
 
 .wa-container {
     color: $color-code-white;
-    background-image: linear-gradient(to right, $color-code-darkblue, $color-code-primary);
+    background-color: #1C1B38;
+    background-image: url("/assets/images/hero-banner/hero-banner-bg.jpg");
+    background-attachment: fixed;
+    background-position: bottom left;
+    background-size: 100%;
 
     .wa-wrapper {
         position: relative;
-        padding-bottom: 270px;
-        min-height: 500px;
+        padding-bottom: 5rem;
+        min-height: 50rem;
 
         .wa-hero-player {
             position: absolute;
             bottom: 0;
-            height: 825px;
-            right: -70px;
+            height: 60rem;
+            right: 10rem;
 
             img {
                 height: 100%;
-            }
-        }
-
-        .wa-hero-cutout {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 1280px;
-            height: 270px;
-
-            img {
-                position: relative;
-                width: 1280px;
-                height: 270px;
-                left: 50%;
-                transform: translateX(-50%);
-            }
-
-            &::before, &::after {
-                position: absolute;
-                content: "";
-                height: 207px;
-                width: 100%;
-                bottom: 0;
-                background-color: $color-code-white;
-            }
-
-            &::before {
-                right: 100%;
-            }
-
-            &::after {
-                left: 100%;
             }
         }
     }
@@ -57,7 +28,7 @@
 
 .wa-hero-banner-content {
     position: relative;
-    padding: 10rem 3rem;
+    padding: 15rem 3rem;
     font-size: 2.8rem;
     font-weight: $font-weight-light;
     line-height: 1.6;
@@ -79,4 +50,166 @@
             margin-left: 3rem;
         }
     }
+}
+
+
+$colorBg: #1c1b38;
+$colorOutline: #ffffff;
+$colorOutlineFade: #262542;
+
+$widthMouse: 40px;
+$heightMouse: 65px;
+$borderMouse: 5px;
+
+$posMouse: 10px;
+
+$sizeTrackball: 10px;
+$posTrackball: 20px;
+$shrinkTrackball: 0.4;
+
+$animDuration: 5s;
+
+@mixin bgGradient {
+  background:
+    $colorOutlineFade
+    linear-gradient(
+      transparent 0%,
+      transparent 50%,
+      $colorOutline 50%,
+      $colorOutline 100%
+    );
+}
+
+.wa-scroll-cta {
+  @include bgGradient;
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  width: $widthMouse;
+  height: $heightMouse;
+  border-radius: 100px;
+  background-size: 100% 200%;
+  animation: 
+    colorSlide $animDuration linear infinite,
+    nudgeMouse $animDuration ease-out infinite;
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    margin: auto;
+  }
+  &:before {
+    width: $widthMouse - $borderMouse;
+    height: $heightMouse - $borderMouse;
+    background-color: $colorBg;
+    border-radius: 100px;
+  }
+  &:after {
+    background-color: $colorOutline;
+    width: $sizeTrackball;
+    height: $sizeTrackball;
+    border-radius: 100%;
+    animation: trackBallSlide $animDuration linear infinite;
+  }
+}
+
+@keyframes colorSlide { 
+  0% { background-position: 0% 100%; }
+  20% { background-position: 0% 0%; }
+  21% { background-color: $colorOutlineFade; }
+  29.99% { 
+    background-color: $colorOutline;
+    background-position: 0% 0%;
+  }
+  30% { 
+    background-color: $colorOutlineFade;
+    background-position: 0% 100%;
+  }
+  50% { background-position: 0% 0%; }
+  51% { background-color: $colorOutlineFade; }
+  59% { 
+    background-color: $colorOutline;
+    background-position: 0% 0%;
+  }
+  60% { 
+    background-color: $colorOutlineFade;
+    background-position: 0% 100%;
+  }
+  80% { background-position: 0% 0%; }
+  81% { background-color: $colorOutlineFade; }
+  90%, 100% { background-color: $colorOutline; }
+}
+
+@keyframes trackBallSlide {
+  0% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  6% { 
+    opacity: 1;
+    transform: scale(0.9) translateY($posTrackball/4);
+  }
+  14% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+  }
+  15%, 19% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+  }
+  28%, 29.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  30% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  36% { 
+    opacity: 1;
+    transform: scale(0.9) translateY($posTrackball/4);
+  }
+  44% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+  }
+  45%, 49% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+  }
+  58%, 59.99% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+  66% { 
+    opacity: 1;
+    transform: scale(0.9) translateY($posTrackball/4);
+  }
+  74% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY($posTrackball*2);
+  }
+  75%, 79% {
+    opacity: 0;
+    transform: scale($shrinkTrackball) translateY(-$posTrackball);
+  }
+  88%, 100% {
+    opacity: 1;
+    transform: scale(1) translateY(-$posTrackball);
+  }
+}
+
+@keyframes nudgeMouse {
+  0% { transform: translateY(0); }
+  20% { transform: translateY($posMouse); }
+  30% { transform: translateY(0); }
+  50% { transform: translateY($posMouse); }
+  60% { transform: translateY(0); }
+  80% { transform: translateY($posMouse); }
+  90% { transform: translateY(0); }
 }

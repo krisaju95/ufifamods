@@ -1,7 +1,10 @@
 import { Injectable } from '@angular/core';
+import { environment } from '../../../environments/environment';
 
 @Injectable()
 export class WARootScope {
+
+    isDevMode: boolean = false;
 
     pageLoading: boolean = true;
 
@@ -15,16 +18,22 @@ export class WARootScope {
 
     socials: any = {
         twitter: "https://twitter.com/TheOfficialUFM",
-        youtube: "https://www.youtube.com/ufifamods"
+        youtube: "https://www.youtube.com/ufifamods",
+        discord: "https://discordapp.com/invite/pqCEFVf"
     }
 
     constructor() {
+        this.setEnvironment();
         this.setViewportIdentifiers();
         this.initViewportChangeListeners();
     }
 
     set(key: string, value: any): void {
         this[key] = value;
+    }
+
+    setEnvironment() {
+        this.isDevMode = !(environment.production && (window.location.href.indexOf("?enableBetaFeatures=true") == -1));
     }
 
     initViewportChangeListeners() {

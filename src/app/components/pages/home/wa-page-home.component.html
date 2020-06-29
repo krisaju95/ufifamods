@@ -1,6 +1,6 @@
 <ufm-wa-hero-banner></ufm-wa-hero-banner>
-<ufm-posts-grid category="featured" [numberOfPosts]="4" [showMainPost]="true"></ufm-posts-grid>
-<ufm-posts-grid title="Latest Mods" category="mods" [numberOfPosts]="4" [showMainPost]="true"></ufm-posts-grid>
+<ufm-posts-grid category="featured" [loading]="WARootScope.pageLoading" [numberOfPosts]="5" [showMainPost]="true"></ufm-posts-grid>
+<ufm-posts-grid title="Latest Mods" [loading]="WARootScope.pageLoading" category="mods" [numberOfPosts]="5" [showMainPost]="true"></ufm-posts-grid>
 <div class="wa-container wa-discord-container">
     <div class="wa-wrapper wa-discord-wrapper">
         <div class="wa-discord-content">
@@ -9,10 +9,10 @@
                 <p class="wa-discord-text-description">Get sneak peeks of our latest work before we release them. Talk to the <strong>FIFA Modding World</strong> community, get support from the helpful chaps on there and follow the works of some of the most talented modders out there, including people outside of the UFM team</p>
             </div>
             <div class="wa-discord-logo-container">
-                <img src="/assets/images/home/discord-logo.png">
+                <img src="https://discord.com/assets/e7a3b51fdac2aa5ec71975d257d5c405.png">
             </div>
         </div>
-        <a href="https://discordapp.com/invite/pqCEFVf" target="_blank" class="wa-button wa-primary-button dark-background wa-single-cta">Join now</a>
+        <a [href]="WARootScope.socials.discord" target="_blank" class="wa-button wa-primary-button dark-background wa-single-cta">Join now</a>
     </div>
 </div>
-<ufm-posts-grid title="YouTube" category="youtube" [numberOfPosts]="4" [showMainPost]="true"></ufm-posts-grid>
+<ufm-posts-grid title="YouTube" [loading]="WARootScope.pageLoading" category="youtube" [numberOfPosts]="5" [showMainPost]="true"></ufm-posts-grid>

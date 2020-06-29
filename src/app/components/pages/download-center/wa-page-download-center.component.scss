@@ -1,68 +1,15 @@
 @import 'variables.scss';
 
-.wa-categories {
+.wa-download-center-filters {
+    padding: 2rem;
     display: flex;
-    flex-wrap: wrap;
 
-    .wa-category {
+    .wa-download-center-filter {
         flex: 1;
-        min-width: 40rem;
-        max-width: 40rem;
-        margin: 1rem;
-        text-align: center;
-        text-decoration: none;
-        color: $color-code-text;
-        margin-bottom: 2rem;
-        position: relative;
+        padding-right: 2rem;
 
-        .wa-category-cover {
-            height: 50rem;
+        .wa-download-center-filter-element {
             width: 100%;
-            background-color: $color-code-primary;
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-
-        .wa-category-description {
-            position: absolute;
-            font-size: 1.8rem;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.75);
-
-            div {
-                padding: 1.5rem;
-            }
-        }
-
-        &::before {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: $color-code-secondary;
-            opacity: 0;
-            transition: opacity ease 300ms;
-        }
-
-        &.wa-disabled-category {
-            filter: grayscale(0.9);
-            cursor: not-allowed;
-
-            &::before {
-                background-color: $color-code-darkblue;
-                opacity: 0.5;
-            }
-        }
-
-        &:not(.wa-disabled-category) {
-            &:hover::before {
-                opacity: 0.5;
-            }
         }
     }
 }

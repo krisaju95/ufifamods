@@ -1,18 +1,35 @@
 <ufm-wa-page-header header="Download Center" description="Select one of the categories shown below to view all the posts associated to that category"></ufm-wa-page-header>
 <div class="wa-container">
     <div class="wa-wrapper">
-        <div class="wa-categories" *ngIf="!WARootScope.pageLoading">
-            <a class="wa-category" [class.wa-disabled-category]="((category.url | postFormatter : 'number-of-posts') == 0)" *ngFor="let category of categories; let index = index">
-                <div class="wa-category-cover" [style.background-image]="'url(' + category.thumbnail + ')'"></div>
-                <div class="wa-category-description">
-                    <div *ngIf="((category.url | postFormatter : 'number-of-posts') == 0)"> No posts under this category </div>
-                    <ng-template #categoryDescription>
-                        <div class="wa-category-description">
-                            {{(category.url | postFormatter : 'number-of-posts')}} post(s) in this category
-                        </div>
-                    </ng-template>
-                </div>
-            </a>
+        <div class="wa-download-center-filters wa-raised-container">
+            <div class="wa-download-center-filter">
+                <wa-select class="wa-download-center-filter-element" label="Game" [(ngModel)]="selectedGame">
+                    <wa-option text="FIFA 20" value="fifa20"></wa-option>
+                    <wa-option text="FIFA 16" value="fifa19"></wa-option>
+                    <wa-option text="FIFA 16" value="fifa18"></wa-option>
+                    <wa-option text="FIFA 16" value="fifa17"></wa-option>
+                    <wa-option text="FIFA 16" value="fifa16"></wa-option>
+                </wa-select>
+            </div>
+            <div class="wa-download-center-filter">
+                <wa-select class="wa-download-center-filter-element" label="League" [(ngModel)]="selectedLeague">
+                    <wa-option text="English Premier League" value="1"></wa-option>
+                    <wa-option text="Test" value="2"></wa-option>
+                    <wa-option text="Test" value="3"></wa-option>
+                    <wa-option text="Test" value="4"></wa-option>
+                    <wa-option text="Test" value="5"></wa-option>
+                </wa-select>
+            </div>
+            <div class="wa-download-center-filter">
+                <wa-select class="wa-download-center-filter-element" label="Club" [(ngModel)]="selectedClub">
+                    <wa-option text="Arsenal" value="1"></wa-option>
+                    <wa-option text="Chelsea" value="2"></wa-option>
+                    <wa-option text="Test" value="3"></wa-option>
+                    <wa-option text="Test" value="4"></wa-option>
+                    <wa-option text="Test" value="5"></wa-option>
+                </wa-select>
+            </div>
+            <button class="wa-button wa-primary-button">Apply</button>
         </div>
     </div>
 </div>

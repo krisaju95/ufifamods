@@ -1,12 +1,17 @@
 @import 'variables.scss';
 
-$focus-ring-margin-x: 10px;
-$focus-ring-margin-y: 10px;
+$focus-ring-margin-x: 7.5px;
+$focus-ring-margin-y: 7.5px;
 $focus-ring-border-radius: 0;
 
+a, button, div[tabindex="0"] {
+    outline: none;
+}
+
 .show-focus-ring {
-    a, button {
-        outline: none;
+    overflow: hidden;
+
+    a, button, div[tabindex="0"] {
         position: relative;
     
         &:after {

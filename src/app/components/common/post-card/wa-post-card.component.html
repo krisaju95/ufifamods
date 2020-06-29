@@ -1,7 +1,7 @@
 <ng-container *ngIf="post">
     <ng-container *ngIf="size == 'large'">
         <a class="wa-main-post-card" href="javascript: void(0)" (click)="navigateToPost(post.url)">
-            <div class="wa-raised-container wa-post-grid-main-tile">
+            <div class="wa-post-grid-main-tile">
                 <div class="wa-post-grid-main-tile-image" [style.background-image]="'url(' + post.thumbnail + ')'"></div>
                 <div class="wa-post-grid-main-tile-content">
                     <div class="wa-post-grid-main-tile-text">
@@ -23,7 +23,7 @@
         </a>
     </ng-container>
     <ng-container *ngIf="size == 'small'">
-        <div class="wa-post-card-container wa-raised-container">
+        <div class="wa-post-card-container">
             <a class="wa-post-card-loaded-view" href="javascript: void(0)" (click)="navigateToPost(post.url)">
                 <div *ngIf="post.thumbnail" class="wa-post-card-image-container">
                     <div class="wa-post-card-image" [style.background-image]="'url(' + post.thumbnail + ')'"></div>

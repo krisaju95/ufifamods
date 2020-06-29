@@ -48,7 +48,7 @@ export class WADBService {
 
     getBlogPages() {
         const pages: Array<Array<WABlogPost>> = [];
-        let i: number, j: number, pageSize: number = 12;
+        let i: number, j: number, pageSize: number = 16;
         for (i = 0, j = this.blogPostsList.length; i < j; i += pageSize) {
             pages.push(this.blogPostsList.slice(i, i + pageSize));
         }
@@ -65,7 +65,8 @@ export class WADBService {
     }
 
     createBlogPost(record: any): WABlogPost {
-        const post: any = record;
+        const post: WABlogPost = record;
+        post.title = post.title.toLowerCase();
         post.date = new Date(post.date);
         this.formatBlogPostArrayAttributes(post);
         this.generateBlogPostURL(post);

@@ -1,8 +1,7 @@
 @import "variables";
 
 .wa-container {
-    background-image: linear-gradient(to right, $color-code-darkblue, $color-code-primary);
-    color: $color-code-white;
+    position: relative;
 }
 
 .wa-content {
@@ -32,15 +31,15 @@
             margin: 0;
             padding: 0;
             font-weight: $font-weight-light;
-            color: $color-code-white;
+            color: $color-code-text;
             text-transform: uppercase;
 
             .wa-navbar-item a {
-                color: $color-code-white;
+                color: $color-code-text;
                 font-weight: $font-weight-normal;
 
                 &:hover {
-                    color: $color-code-secondary;
+                    color: $color-code-lighttext;
                     text-decoration: none;
                 }
             }
@@ -52,6 +51,9 @@
             }
 
             &.wa-secondary-navbar {
+                height: 2rem;
+                transition: height all 300ms;
+
                 .wa-navbar-separator {
                     margin-left: 2rem;
                     margin-right: 0.5rem;

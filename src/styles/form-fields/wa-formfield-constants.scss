@@ -1,18 +1,20 @@
+@import 'variables';
+
 $wa-material-formfield-height: (
     "default": 50px,
     "condensed": 40px
 );
 
 $wa-material-formfield-colors: (
-    "background": #FFFFFF,
-    "label": #737373,
+    "background": $color-code-container,
+    "label": $color-code-lighttext,
     "label-invalid": #D8292F,
-    "input": #2A2A2A,
+    "input": $color-code-text,
     "input-disabled": #C8C8C8,
-    "border": #C8C8C8,
+    "border": transparent,
     "error": #D8292F,
-    "underline": #737373,
-    "underline-focus": #2A2A2A,
+    "underline": $color-code-lighttext,
+    "underline-focus": $color-code-blue,
     "underline-invalid": #D8292F,
     "error-icon": #D8292F,
     "background-disabled": #F9F9F9,

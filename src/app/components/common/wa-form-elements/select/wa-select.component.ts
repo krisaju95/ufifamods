@@ -27,14 +27,6 @@ export class WASelectComponent implements ControlValueAccessor {
 	@ContentChildren(WAOptionComponent) optionsContent: QueryList<WAOptionComponent>;
 
 	/**
-	 * This adds a class to the selector of this component. This class ensures that any global CSS
-	 * we may have written for form fields does not override our custom CSS for this component.
-	 * Specifically, this helps in avoiding issues where the height, color and border of the field
-	 * gets changes due to global CSS.
-	 */
-	@HostBinding() class: string = "wa-pseudo-form-element";
-
-	/**
 	 * Pass a string which will be used as the unique identifier for this HTML element. If you do
 	 * not pass any value, a randomly generated ID will be attached to the form field element.
 	 */

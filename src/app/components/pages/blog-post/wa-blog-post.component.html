@@ -24,7 +24,7 @@
                 <div *ngIf="post.contributors" class="wa-blog-post-contributors-wrapper">
                     <h3>Contributor(s)</h3>
                     <div class="wa-blog-post-contributors">
-                        <div class="wa-raised-container wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
+                        <div class="wa-panel-container wa-blog-post-contributor" *ngFor="let contributor of post.contributors">
                             <div class="wa-profile-dp {{contributor}}"></div>
                             <div>{{contributor}}</div>
                         </div>
@@ -36,12 +36,15 @@
                         <ng-container *ngFor="let starhead of post.starheads">
                             <ng-container *ngIf="WARootScope.fifaDBGenerated && WAFIFADBService.fifaDBPlayers[starhead]">
                                 <div class="wa-blog-post-starhead">
-                                    <div class="wa-starhead-card wa-raised-container">
-                                        <div class="wa-starhead-card-header wa-raised-container" [style.background-color]="WAFIFADBService.fifaDBPlayers[starhead].club.color">
-                                            <img class="wa-starhead-card-image wa-raised-container" [src]="WAFIFADBService.fifaDBPlayers[starhead].image" onerror="
+                                    <div class="wa-starhead-card wa-panel-container">
+                                        <div class="wa-starhead-card-header" [style.background-color]="WAFIFADBService.fifaDBPlayers[starhead].club.color">
+                                            <img class="wa-starhead-card-image" [src]="WAFIFADBService.fifaDBPlayers[starhead].image" onerror="
                                                 this.onerror=null;
                                                 this.src='https://www.orbistechnologies.com/wp-content/uploads/2018/12/profile-placeholder-image-gray-silhouette-no-vector-21542863.jpg'
                                             ">
+                                            <div class="wa-starhead-card-position">
+                                                {{WAFIFADBService.fifaDBPlayers[starhead].position}}
+                                            </div>
                                         </div>
                                         <div class="wa-starhead-card-meta">
                                             <div class="wa-starhead-card-meta-item">
@@ -51,9 +54,9 @@
                                                 </div>
                                             </div>
                                             <div class="wa-starhead-card-meta-item">
-                                                <div class="wa-starhead-card-meta-item-heading">POS</div>
+                                                <div class="wa-starhead-card-meta-item-heading">POT</div>
                                                 <div class="wa-starhead-card-meta-item-value">
-                                                    {{WAFIFADBService.fifaDBPlayers[starhead].position}}
+                                                    {{WAFIFADBService.fifaDBPlayers[starhead].rating.potential}}
                                                 </div>
                                             </div>
                                         </div>
@@ -120,11 +123,11 @@
             </div>
         </div>
     </div>
-    <ufm-posts-grid [title]="'Featured Articles'" [category]="'featured'" [numberOfPosts]="3" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
+    <ufm-posts-grid *ngIf="post.category" [loading]="loading" [title]="'Related Articles'" [category]="post.category" [numberOfPosts]="4" (postCardClicked)="loadPost($event)"></ufm-posts-grid>
     <div *ngIf="!loading" class="wa-container wa-blog-post-disqus-container">
         <div class="wa-wrapper wa-blog-post-disqus-wrapper">
             <h2 class="wa-section-heading">Comment Below</h2>
-            <div class="wa-raised-container wa-blog-post-disqus-thread">
+            <div class="wa-panel-container wa-blog-post-disqus-thread">
                 <disqus [identifier]="post.id" [url]="siteURL + post.url"></disqus>
             </div>
         </div>

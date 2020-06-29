@@ -8,6 +8,12 @@ import { WARootScope } from 'src/app/services/globals/wa-rootscope';
 })
 export class WAPageDownloadCenterComponent {
 
+    selectedGame: string = "fifa20";
+
+    selectedClub: string;
+
+    selectedLeague: string;
+
     categories: Array<any> = [
         {
             title: "FIFA 20",

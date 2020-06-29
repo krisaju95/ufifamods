@@ -31,7 +31,7 @@ $blog-content-width: 800px;
                 font-size: 5rem;
                 line-height: 6.5rem;
                 max-width: $blog-content-width;
-                text-transform: none;
+                text-transform: capitalize;
 
                 @media only screen and (max-width: 920px) {
                     font-size: 2.8rem;
@@ -102,7 +102,6 @@ $blog-content-width: 800px;
                         font-weight: $font-weight-medium;
                         padding: 2rem;
                         margin-right: 1.5rem;
-                        background-color: $color-code-white;
                         text-align: center;
                         line-height: 3rem;
                     }
@@ -123,19 +122,31 @@ $blog-content-width: 800px;
                         margin-right: 1rem;
 
                         .wa-starhead-card {
+                            padding-bottom: 1rem;
                             font-size: 1.4rem;
+                            font-weight: $font-weight-medium;
 
                             .wa-starhead-card-header {
                                 height: 8rem;
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                padding: 0 2rem;
 
                                 .wa-starhead-card-image {
                                     border-radius: 100%;
-                                    border: 5px solid #FFFFFF;
-                                    background-color: #EEEEEE;
+                                    border: 5px solid #EEEEEE;
+                                    background-color: #FFFFFF;
                                     position: relative;
                                     height: 10rem;
-                                    top: 2rem;
-                                    left: 2rem;
+                                    width: 10rem;
+                                    top: 3rem;
+                                }
+
+                                .wa-starhead-card-position {
+                                    padding: 0.5rem;
+                                    background-color: #FFFFFF;
+                                    font-size: 1.6rem;
                                 }
                             }
 
@@ -149,7 +160,7 @@ $blog-content-width: 800px;
                                     padding: 1rem;
 
                                     .wa-starhead-card-meta-item-heading {
-                                        color: #777777;
+                                        color: $color-code-lighttext;
                                         font-size: 1.2rem;
                                     }
 
@@ -260,7 +271,6 @@ $blog-content-width: 800px;
         .wa-blog-post-disqus-thread {
             padding: 3rem;
             max-width: $blog-content-width;
-            background-color: $color-code-white;
         }
     }
 }
