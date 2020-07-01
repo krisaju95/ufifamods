@@ -2,34 +2,70 @@
 <div class="wa-container">
     <div class="wa-wrapper">
         <div class="wa-download-center-filters wa-raised-container">
-            <div class="wa-download-center-filter">
-                <wa-select class="wa-download-center-filter-element" label="Game" [(ngModel)]="selectedGame">
-                    <wa-option text="FIFA 20" value="fifa20"></wa-option>
-                    <wa-option text="FIFA 16" value="fifa19"></wa-option>
-                    <wa-option text="FIFA 16" value="fifa18"></wa-option>
-                    <wa-option text="FIFA 16" value="fifa17"></wa-option>
-                    <wa-option text="FIFA 16" value="fifa16"></wa-option>
-                </wa-select>
-            </div>
-            <div class="wa-download-center-filter">
-                <wa-select class="wa-download-center-filter-element" label="League" [(ngModel)]="selectedLeague">
-                    <wa-option text="English Premier League" value="1"></wa-option>
-                    <wa-option text="Test" value="2"></wa-option>
-                    <wa-option text="Test" value="3"></wa-option>
-                    <wa-option text="Test" value="4"></wa-option>
-                    <wa-option text="Test" value="5"></wa-option>
-                </wa-select>
-            </div>
-            <div class="wa-download-center-filter">
-                <wa-select class="wa-download-center-filter-element" label="Club" [(ngModel)]="selectedClub">
-                    <wa-option text="Arsenal" value="1"></wa-option>
-                    <wa-option text="Chelsea" value="2"></wa-option>
-                    <wa-option text="Test" value="3"></wa-option>
-                    <wa-option text="Test" value="4"></wa-option>
-                    <wa-option text="Test" value="5"></wa-option>
-                </wa-select>
-            </div>
-            <button class="wa-button wa-primary-button">Apply</button>
+            <ng-container *ngIf="WARootScope.fifaDBGenerated">
+                <div id="waGameSearchFilter" class="wa-download-center-filter">
+                    <wa-select class="wa-download-center-filter-element" label="Game" [(ngModel)]="selectedGame">
+                        <wa-option text="FIFA 20" value="fifa20"></wa-option>
+                        <wa-option text="FIFA 19" value="fifa19"></wa-option>
+                        <wa-option text="FIFA 18" value="fifa18"></wa-option>
+                        <wa-option text="FIFA 17" value="fifa17"></wa-option>
+                        <wa-option text="FIFA 16" value="fifa16"></wa-option>
+                    </wa-select>
+                </div>
+                <div class="wa-download-center-filter">
+                    <wa-select class="wa-download-center-filter-element" label="League" [(ngModel)]="selectedLeague" [enableSearchfilter]="true" searchType="startsWith" [addResetOption]="true" resetOptionText="All Leagues">
+                        <ng-container *ngFor="let league of WAFIFADBService.leagues">
+                            <wa-option
+                                *ngIf="!league.ignore"
+                                [text]="league.leaguename"
+                                [value]="league.leagueid"
+                                [prefixImage]="'https://www.fifarosters.com/assets/nations/fifa17/' + league.countryid + '.png'">
+                            </wa-option>
+                        </ng-container>
+                    </wa-select>
+                </div>
+                <div class="wa-download-center-filter">
+                    <wa-select class="wa-download-center-filter-element" label="Club" [(ngModel)]="selectedClub" [disabled]="!selectedLeague" [addResetOption]="true" resetOptionText="All Clubs">
+                        <wa-option
+                            *ngFor="let team of WAFIFADBService.leagueTeamLinks[selectedLeague]"
+                            [text]="team.name"
+                            [value]="team.id"
+                            [prefixImage]="team.image">
+                        </wa-option>
+                    </wa-select>
+                </div>
+                <div class="wa-download-center-filter">
+                    <wa-select class="wa-download-center-filter-element" label="Nationality" [(ngModel)]="selectedNationality" [enableSearchfilter]="true" searchType="startsWith" [addResetOption]="true" resetOptionText="All Nationalities">
+                        <wa-option
+                            *ngFor="let nation of WAFIFADBService.nations"
+                            [text]="nation.nationname"
+                            [value]="nation.nationid"
+                            [prefixImage]="'https://www.fifarosters.com/assets/nations/fifa17/' + nation.nationid + '.png'">
+                        </wa-option>
+                    </wa-select>
+                </div>
+                <button class="wa-button wa-primary-button" (click)="updateFilteredPosts()" [class.wa-button-loading]="loading">
+                    <span class="wa-button-text">Apply</span>
+                    <span class="wa-loader"></span>
+                </button>
+            </ng-container>
+            <ng-container *ngIf="!WARootScope.fifaDBGenerated">
+                <h4>Initializing FIFA Data-base</h4> <span class="wa-loader"></span>
+            </ng-container>
+        </div>
+        <div class="wa-download-center-results-section" [class.data-loading]="loading">
+            <ng-container *ngIf="filteredPosts.length > 0">
+                <h4>{{filteredPosts.length}} result(s) found.</h4>
+                <div class="wa-download-center-results">
+                    <div class="wa-download-center-result" *ngFor="let post of filteredPosts; let postIndex = index">
+                        <ufm-wa-post-card [loading]="loading" [post]="post" [showDescription]="false"></ufm-wa-post-card>
+                    </div>
+                </div>
+            </ng-container>
+            <ng-container *ngIf="filteredPosts.length == 0">
+                <h3>No posts found</h3>
+                <p>We weren't able to find any related posts. Please try reducing the search constraints.</p>
+            </ng-container>
         </div>
     </div>
 </div>

@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { WAPageDownloadCenterComponent } from './wa-page-download-center.component';
 import { WAPageHeaderModule } from '../../common/page-header';
 import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
-import { WASelectModule } from '../../common';
+import { WASelectModule, WAPostCardModule } from '../../common';
 import { FormsModule } from '@angular/forms';
 
 @NgModule({
@@ -18,7 +18,8 @@ import { FormsModule } from '@angular/forms';
         WAPageHeaderModule,
         WABlogPostFormatPipeModule,
         WASelectModule,
-        FormsModule
+        FormsModule,
+        WAPostCardModule
     ],
     exports: [WAPageDownloadCenterComponent]
 })

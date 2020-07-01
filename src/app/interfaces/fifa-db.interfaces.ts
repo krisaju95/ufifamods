@@ -78,6 +78,7 @@ export interface FIFADBLeaguesTuple {
     leagueid: string;
     leaguename: string;
     countryid: string;
+    ignore?: boolean;
 }
 
 export interface FIFADBLeagueTeamLinksTuple {
@@ -108,6 +109,7 @@ export const FIFADBTuple: any = {
     teamname: "teamname",
     leagueid: "leagueid",
     leaguename: "leaguename",
+    ignore: "ignore",
     countryid: "countryid",
     nationid: "nationid",
     isocountrycode: "isocountrycode",

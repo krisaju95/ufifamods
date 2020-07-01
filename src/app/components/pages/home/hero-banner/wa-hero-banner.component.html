@@ -6,12 +6,12 @@
         <div class="wa-hero-banner-content">
             <div class="wa-hero-banner-text-1">We're the <span class="wa-text-lightblue wa-text-normal">Ultimate FIFA Mods</span> team</div>
             <div class="wa-hero-banner-text-2">And we create free custom graphic mods for FIFA</div>
-            <ng-container *ngIf="WARootScope.isDevMode">
                 <div class="wa-hero-banner-cta-container">
-                    <button class="wa-button wa-primary-button dark-background">Download Center</button>
-                    <button class="wa-button wa-secondary-button dark-background">About Us</button>
+                    <button class="wa-button wa-primary-button dark-background" (click)="WARouterService.routeToPage('downloads')">Download Center</button>
+                    <ng-container *ngIf="WARootScope.isDevMode">
+                        <button class="wa-button wa-secondary-button dark-background">About Us</button>
+                    </ng-container>
                 </div>
-            </ng-container>
             <div class="wa-scroll-cta"></div>
         </div>
     </div>

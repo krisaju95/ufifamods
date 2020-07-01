@@ -57,7 +57,7 @@
                             <span class="wa-icon search option-search-filter-icon"></span>
                         </div>
                         <ul class="wa-form-element-options-list no-highlight">
-                            <li *ngIf="addResetOption" [id]="id + 'Option--1'" class="wa-form-element-option no-highlight" [class.selected-option]="!!selectedOption['value']" (click)="setValue('', true)" (keydown.enter)="setValue('', true)" [innerHTML]="resetOptionText || '-'" [attr.aria-hidden]="true"></li>
+                            <li *ngIf="addResetOption" [id]="id + 'Option--1'" class="wa-form-element-option no-highlight" [class.selected-option]="!selectedOption['value']" (click)="setValue('', true)" (keydown.enter)="setValue('', true)" [innerHTML]="resetOptionText || '-'" [attr.aria-hidden]="true"></li>
                             <ng-container *ngFor="let option of filteredOptions; let optionIndex = index">
                                 <li class="wa-form-element-option no-highlight" [id]="id + 'Option-' + optionIndex" [class.selected-option]="option.value == selectedOption['value']" (click)="setValue(option.value, true)" (keydown.enter)="setValue(option.value, true)" aria-hidden="true" [attr.option-value]="option.value">
                                     <div *ngIf="!!option.prefixIcon" class="prefix-icon-container">

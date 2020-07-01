@@ -1,5 +1,9 @@
 import { Component } from '@angular/core';
 import { WARootScope } from 'src/app/services/globals/wa-rootscope';
+import { WABlogPost } from 'src/app/interfaces';
+import { WAModFilterService, WASearchFilterConfig } from 'src/app/services/database/wa-mod-filter.service';
+import { WAFIFADBService } from 'src/app/services/database/wa-fifa-db.service';
+import { WALoaderService } from 'src/app/services/loader/wa-loader.service';
 
 @Component({
     selector: 'ufm-wa-page-download-center',
@@ -8,52 +12,66 @@ import { WARootScope } from 'src/app/services/globals/wa-rootscope';
 })
 export class WAPageDownloadCenterComponent {
 
+    minimumLoaderTime: number = 2500;
+
+    pageLoaderStartTime: number;
+
+    pageLoaderTimeoutRef: any;
+
+    filteredPosts: Array<WABlogPost> = [];
+
+    loading: boolean = true;
+
     selectedGame: string = "fifa20";
 
-    selectedClub: string;
+    selectedNationality: number;
 
-    selectedLeague: string;
+    selectedClub: number;
 
-    categories: Array<any> = [
-        {
-            title: "FIFA 20",
-            url: "fifa-20-mods",
-            thumbnail: "/assets/images/download-center/fifa-covers/fifa-20.jpg",
-            enabled: true
-        },
-        {
-            title: "FIFA 19",
-            url: "fifa-19-mods",
-            thumbnail: "/assets/images/download-center/fifa-covers/fifa-19.jpg",
-            enabled: true
-        },
-        {
-            title: "FIFA 18",
-            url: "fifa-18-mods",
-            thumbnail: "/assets/images/download-center/fifa-covers/fifa-18.jpg",
-            enabled: false
-        },
-        {
-            title: "FIFA 17",
-            url: "fifa-17-mods",
-            thumbnail: "/assets/images/download-center/fifa-covers/fifa-17.jpg",
-            enabled: false
-        },
-        {
-            title: "FIFA 16",
-            url: "fifa-16-mods",
-            thumbnail: "/assets/images/download-center/fifa-covers/fifa-16.jpg",
-            enabled: true
-        },
-        {
-            title: "Resources",
-            url: "resources",
-            thumbnail: "/assets/images/download-center/resources-thumb.jpg",
-            enabled: true
-        }
-    ];
+    selectedLeague: number;
 
     constructor(
-        public WARootScope: WARootScope
+        public WARootScope: WARootScope,
+        private WALoaderService: WALoaderService,
+        private WAModFilterService: WAModFilterService,
+        public WAFIFADBService: WAFIFADBService
     ) { }
+
+    ngOnInit() {
+        const initialLoad = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
+            if (!state) {
+                this.updateFilteredPosts();
+                initialLoad.unsubscribe();
+            }
+        });
+    }
+
+    updateFilteredPosts() {
+        this.loading = true;
+        this.pageLoaderStartTime = new Date().getTime();
+
+        const filterConfig: WASearchFilterConfig = {
+            game: this.selectedGame,
+            league: this.selectedLeague,
+            club: this.selectedClub,
+            nationality: this.selectedNationality
+        };
+
+        setTimeout(() => {
+            this.filteredPosts = this.WAModFilterService.filterMods(filterConfig);
+            const currentTime: number = new Date().getTime();
+            const elapsedTime: number = currentTime - (this.pageLoaderStartTime || currentTime);
+            const stateChangeDelay: number = (elapsedTime < this.minimumLoaderTime) ? (this.minimumLoaderTime - elapsedTime) : 0;
+            this.pageLoaderTimeoutRef = setTimeout(() => {
+                this.loading = false;
+                this.clearPageLoaderTimeoutRef();
+            }, stateChangeDelay);
+        }, 500);
+    }
+
+    clearPageLoaderTimeoutRef() {
+        if (this.pageLoaderTimeoutRef) {
+            clearTimeout(this.pageLoaderTimeoutRef);
+        }
+    }
 }

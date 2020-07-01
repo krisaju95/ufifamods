@@ -104,9 +104,10 @@
                         .suffix-image-container,
                         .prefix-image-container {
                             padding-right: 10px;
-                            width: 30px;
+                            height: 15px;
+
                             img {
-                                width: 25px;
+                                height: 15px;
                             }
                         }
 
@@ -257,17 +258,24 @@
 
                 &.wa-form-element-custom-select {
                     color: transparent;
+                    display: flex;
 
                     div {
                         overflow: hidden;
                         white-space: nowrap;
                         text-overflow: ellipsis;
+
                         &.suffix-icon-container, &.suffix-image-container,
                         &.prefix-icon-container, &.prefix-image-container {
-                            width: 30px;
+                            height: 15px;
+
                             img {
-                                width: 30px;
+                                height: 15px;
                             }
+                        }
+
+                        &.prefix-image-container {
+                            padding-right: 5px;
                         }
                     }
                 }

@@ -129,20 +129,23 @@ export class WADBService {
                         }
                         break;
                     }
-                    case 'fifa-20-mods': {
+                    case 'fifa20-mods': {
                         if (post.tags.includes("mods") && post.tags.includes("fifa 20")) {
                             filteredPostsData.push(post);
                         }
+                        break;
                     }
-                    case 'fifa-19-mods': {
+                    case 'fifa19-mods': {
                         if (post.tags.includes("mods") && post.tags.includes("fifa 19")) {
                             filteredPostsData.push(post);
                         }
+                        break;
                     }
-                    case 'fifa-16-mods': {
+                    case 'fifa16-mods': {
                         if (post.tags.includes("mods") && post.tags.includes("fifa 16")) {
                             filteredPostsData.push(post);
                         }
+                        break;
                     }
                     case 'all': {
                         filteredPostsData.push(post);

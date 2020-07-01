@@ -1,6 +1,7 @@
 <div class="wa-container wa-raised-container">
     <div class="wa-wrapper">
         <div class="wa-content">
+            <span class="wa-loader wa-header-loader" [class.loader-visible]="loading"></span>
             <a class="wa-logo" href="javascript: void(0)" (click)="routeToPage('home')">
                 <img class="wa-logo-img" alt="Ultimate FIFA Mods" src="/assets/images/logo/site-logo-dark-v1.png">
             </a>
@@ -41,12 +42,12 @@
                             Blog
                         </a>
                     </li>
+                    <li class="wa-navbar-item">
+                        <a href="javascript: void(0)" (click)="routeToPage('downloads')">
+                            Downloads
+                        </a>
+                    </li>
                     <ng-container *ngIf="WARootScope.isDevMode">
-                        <li class="wa-navbar-item">
-                            <a href="javascript: void(0)" (click)="routeToPage('downloads')">
-                                Downloads
-                            </a>
-                        </li>
                         <li class="wa-navbar-item">
                             <a href="javascript: void(0)" (click)="routeToPage('about-us')">
                                 About Us

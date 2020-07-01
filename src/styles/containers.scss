@@ -21,3 +21,16 @@
 .wa-panel-container {
     background-color: $color-code-container;
 }
+
+.wa-loader {
+    filter: invert(1);
+    padding: 0 3rem;
+    background-color: transparent;
+    background-image: url("/assets/images/loader/f20al.gif");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: inline-flex;
+    height: 3rem;
+    transition: all ease 300ms;
+}

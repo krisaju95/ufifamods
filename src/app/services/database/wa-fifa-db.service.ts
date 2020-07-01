@@ -37,7 +37,7 @@ export class WAFIFADBService {
 
     leaguesMap: any = {};
 
-    leagueteamlinks: Array<any> = [];
+    leagueTeamLinks: Array<any> = [];
 
     leagueTeamLinksMap: any = {};
 
@@ -61,6 +61,7 @@ export class WAFIFADBService {
     loadFIFADBData(): void {
         this.sheetsLoaded = 0;
         this.WARootScope.fifaDBGenerated = false;
+
         for (let sheetIndex = 1; sheetIndex <= numberOfSheets; sheetIndex++) {
             this.fifaDBData$[sheetIndex] = this.googleSheetsDbService.get<any>(
                 '1WXxmCBfEJt058umbg7LXy2bbINSTRbjKm5XH4wCyKis',
@@ -73,12 +74,16 @@ export class WAFIFADBService {
                 table.unsubscribe();
                 this.sheetsLoaded++;
                 if (this.sheetsLoaded == numberOfSheets) {
-                    this.generateFIFADBMaps();
-                    this.generateFIFADB();
-                    this.WARootScope.fifaDBGenerated = true;
+                    this.parseFIFADBData();
                 }
             });
         }
+    }
+
+    parseFIFADBData() {
+        this.generateFIFADBMaps();
+        this.generateFIFADB();
+        this.WARootScope.fifaDBGenerated = true;
     }
 
     generateFIFADB() {
@@ -110,15 +115,17 @@ export class WAFIFADBService {
         const playerNames: FIFADBPlayerNamesTuple[] = this.fifaDBData[2];
         const teams: FIFADBTeamsTuple[] = this.fifaDBData[3];
         const teamPlayerinks: FIFADBTeamPlayerLinksTuple[] = this.fifaDBData[4];
-        const leagues: FIFADBLeaguesTuple[] = this.fifaDBData[5];
+        this.leagues = this.fifaDBData[5];
+        console.log(this.leagues);
         const leagueTeamLinks: FIFADBLeagueTeamLinksTuple[] = this.fifaDBData[6];
-        const nations: FIFADBNationsTuple[] = this.fifaDBData[7];
+        this.nations = this.fifaDBData[7];
         this.playerNamesMap = this.convertArrayToObject(playerNames, "nameid");
         this.teamsMap = this.convertArrayToObject(teams, "teamid");
-        this.leaguesMap = this.convertArrayToObject(leagues, "leagueid");
+        this.leaguesMap = this.convertArrayToObject(this.leagues, "leagueid");
+        this.leagueTeamLinks = this.getLeagueTeamsMap(leagueTeamLinks);
         this.leagueTeamLinksMap = this.convertArrayToObject(leagueTeamLinks, "teamid");
         this.teamPlayerLinksMap = this.convertArrayToObject(teamPlayerinks, "playerid", "club");
-        this.nationsMap = this.convertArrayToObject(nations, "nationid");
+        this.nationsMap = this.convertArrayToObject(this.nations, "nationid");
     }
 
     getPlayerName(playerTuple: FIFADBPlayerTuple): FIFADBPlayerName {
@@ -172,6 +179,24 @@ export class WAFIFADBService {
             name: leagueName.split(" (")[0] || "",
             image: "https://www.fifarosters.com/assets/nations/fifa17/" + nationID + ".png"
         }
+    }
+
+    getLeagueTeamsMap(leagueTeamLinks: FIFADBLeagueTeamLinksTuple[]): any {
+        const leagueTeamsMap: any = {};
+        leagueTeamLinks.forEach((tuple: FIFADBLeagueTeamLinksTuple) => {
+            const leagueID: string = tuple.leagueid;
+            const team: any = {
+                id: tuple.teamid,
+                name: this.teamsMap[tuple.teamid].teamname || "",
+                image: "https://www.fifarosters.com/assets/clubs/fifa20/" + tuple.teamid + ".png",
+            };
+            if (leagueTeamsMap[leagueID]) {
+                leagueTeamsMap[leagueID].push(team);
+            } else {
+                leagueTeamsMap[leagueID] = [team];
+            }
+        });
+        return leagueTeamsMap;
     }
 
     convertArrayToObject(array: Array<any>, key: string, sortObjectInfo?: string): any {

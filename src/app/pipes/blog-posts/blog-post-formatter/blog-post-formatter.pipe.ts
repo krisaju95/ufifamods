@@ -33,6 +33,9 @@ export class WABlogPostFormatPipe implements PipeTransform {
 					const titleTextParts: Array<string> = (content || '').split(':');
 					let titlePart1: string = titleTextParts[1] ? ("<span class='wa-title-highlight'>#" + titleTextParts[0].trim() + "</span>") : titleTextParts[0].trim();
 					titlePart1 = titlePart1.replace(/FIFA/gi, "FIFA");
+					titlePart1 = titlePart1.replace(/TOTW/gi, "TOTW");
+					titlePart1 = titlePart1.replace(/TOTS/gi, "TOTS");
+					titlePart1 = titlePart1.replace(/FTW/gi, "FTW");
 					let titlePart2: string = titleTextParts[1] ? (" " + titleTextParts.slice(1).join(' - ')) : "";
 					titlePart2 = titlePart2.replace(' - ', '<br>');
 					return titlePart1 + titlePart2;

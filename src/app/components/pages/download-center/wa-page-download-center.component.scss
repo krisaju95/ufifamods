@@ -2,14 +2,44 @@
 
 .wa-download-center-filters {
     padding: 2rem;
+    margin-bottom: 4rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h4 {
+        display: inline-flex;
+        margin-bottom: 0;
+    }
 
     .wa-download-center-filter {
         flex: 1;
         padding-right: 2rem;
 
+        &#waGameSearchFilter {
+            max-width: 150px;
+        }
+
         .wa-download-center-filter-element {
             width: 100%;
+        }
+    }
+}
+
+$grid-margin: 1.5rem;
+
+.wa-download-center-results-section {
+    margin-bottom: 5rem;
+    
+    .wa-download-center-results {
+        display: flex;
+        flex-wrap: wrap;
+        width: calc(100% + #{$grid-margin});
+    
+        .wa-download-center-result {
+            width: calc(25% - #{$grid-margin});
+            margin-right: $grid-margin;
+            margin-bottom: $grid-margin;
         }
     }
 }

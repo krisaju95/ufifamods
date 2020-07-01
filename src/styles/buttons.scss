@@ -7,28 +7,44 @@ $background-color-primary-hover: $color-code-primary;
 $background-color-disabled: $color-code-darkergray;
 
 .wa-button {
-    display: inline-block;
+    display: inline-flex;
     position: relative;
     background-color: $color-code-white;
     border: 1px solid transparent;
     color: $color-code-text;
     padding: 1rem 4rem;
-    height: 5rem;
+    height: 5.2rem;
     font-family: $site-font-family;
     font-size: 1.4rem;
     font-weight: $font-weight-medium;
     text-transform: uppercase;
     text-decoration: none;
     text-align: center;
+    align-items: center;
     cursor: pointer;
     outline: 0;
     transition: all ease 200ms;
 
-    &>* {
+    .wa-button-text {
         position: relative;
-        
-        ~* {
-            margin-left: 1rem;
+        right: 0;
+        transition: all ease 200ms;
+    }
+
+    .wa-loader {
+        opacity: 0;
+        position: absolute;
+        filter: none;
+    }
+
+    &.wa-button-loading {
+        .wa-button-text {
+            right: 2rem;
+        }
+
+        .wa-loader {
+            opacity: 1;
+            right: 0.5rem;
         }
     }
 

@@ -4,6 +4,7 @@ import { WADBService } from 'src/app/services/database/wa-db.service';
 import { ActivatedRoute } from '@angular/router';
 import { WABlogPost } from 'src/app/interfaces/blog-post.interface';
 import { WARootScope } from 'src/app/services/globals/wa-rootscope';
+import { WARouterService } from 'src/app/services/router/wa-router.service';
 
 const numberOfHeroBannerImages: number = 6
 
@@ -22,6 +23,7 @@ export class WAHeroBannerComponent {
 		private WALoaderService: WALoaderService,
 		private WADBService: WADBService,
 		public WARootScope: WARootScope,
+		public WARouterService: WARouterService,
 		private route: ActivatedRoute
 	) { }
 
