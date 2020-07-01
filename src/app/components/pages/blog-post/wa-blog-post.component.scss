@@ -116,97 +116,12 @@ $blog-content-width: 800px;
                     flex-wrap: wrap;
                     align-items: stretch;
 
+                    $grid-margin: 2rem;
+
                     .wa-blog-post-starhead {
-                        width: calc(33.333% - 1rem);
-                        margin-bottom: 1rem;
-                        margin-right: 1rem;
-
-                        .wa-starhead-card {
-                            padding-bottom: 1rem;
-                            font-size: 1.4rem;
-                            font-weight: $font-weight-medium;
-
-                            .wa-starhead-card-header {
-                                height: 8rem;
-                                display: flex;
-                                align-items: center;
-                                justify-content: space-between;
-                                padding: 0 2rem;
-
-                                .wa-starhead-card-image {
-                                    border-radius: 100%;
-                                    border: 5px solid #EEEEEE;
-                                    background-color: #FFFFFF;
-                                    position: relative;
-                                    height: 10rem;
-                                    width: 10rem;
-                                    top: 3rem;
-                                }
-
-                                .wa-starhead-card-position {
-                                    padding: 0.5rem;
-                                    background-color: #FFFFFF;
-                                    font-size: 1.6rem;
-                                }
-                            }
-
-                            .wa-starhead-card-meta {
-                                display: flex;
-                                align-items: center;
-                                padding-left: 15rem;
-                                padding-right: 2rem;
-
-                                .wa-starhead-card-meta-item {
-                                    padding: 1rem;
-
-                                    .wa-starhead-card-meta-item-heading {
-                                        color: $color-code-lighttext;
-                                        font-size: 1.2rem;
-                                    }
-
-                                    .wa-starhead-card-meta-item-value {
-                                        font-size: 1.8rem;
-                                    }
-                                }
-                            }
-
-                            .wa-starhead-card-info-row {
-                                border-top: 1px solid $border-color;
-                                padding: 1rem 2rem;
-
-                                .wa-starhead-card-info-row-heading {
-                                    text-transform: uppercase;
-                                    font-size: 1.2rem;
-                                    color: $color-code-blue;
-                                    line-height: 1.5;
-                                }
-
-                                .wa-starhead-card-info-row-value {
-                                    display: flex;
-                                    align-items: center;
-                                    line-height: 2rem;
-                                    
-                                    img {
-                                        width: 2rem;
-                                        margin-left: 1rem;
-                                    }
-                                }
-
-                                &.wa-starhead-card-playername {
-                                    line-height: 1.5;
-                                    border-bottom: 1px solid $color-code-blue;
-
-                                    .wa-starhead-card-playername-small {
-                                        font-size: 1.2rem;
-                                    }
-
-                                    .wa-starhead-card-playername-large {
-                                        font-size: 1.6rem;
-                                        text-transform: uppercase;
-                                    }
-                                }
-                            }
-                        }
+                        width: calc(33.333% - #{$grid-margin});
+                        margin-bottom: $grid-margin;
+                        margin-right: $grid-margin;
                     }
                 }
             }

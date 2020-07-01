@@ -259,6 +259,7 @@
                 &.wa-form-element-custom-select {
                     color: transparent;
                     display: flex;
+                    align-items: center;
 
                     div {
                         overflow: hidden;
@@ -293,6 +294,7 @@
                     overflow: hidden;
                     white-space: nowrap;
                     text-overflow: ellipsis;
+                    font-weight: getConstant($font-weights, "semi-bold");
                 }
 
                 option {

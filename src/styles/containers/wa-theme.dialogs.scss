@@ -99,6 +99,15 @@ wa-dialog:last-of-type {
 						margin-bottom: 5vh;
 					}
 				}
+
+				@include customScrollBar(
+					'.wa-dialog-body',
+					15px,
+					getConstant($color-palette, "common", "white"),
+					getConstant($color-palette, "common", "dark-gray"),
+					10px,
+					getConstant($color-palette, "common", "blue-gray")
+				);
 	
 				&.wa-dialog-content-scrollbar-enabled {
 					max-height: 70vh;
@@ -182,10 +191,10 @@ wa-dialog:last-of-type {
 				}
 	
 				.wa-dialog-header {
-					background-color: getConstant($color-palette, "common", "dialog-header");
-					color: getConstant($color-palette, "common", "white");
+					background-color: getConstant($color-palette, "common", "white");
+					color: getConstant($color-palette, "common", "text");
 					line-height: 30px;
-					padding: 15px 10px;
+					padding: 25px 20px;
 	
 					.wa-dialog-heading {
 						margin: 0 5px;
@@ -197,7 +206,7 @@ wa-dialog:last-of-type {
 	
 				.wa-dialog-body {
 					font-size: 14px;
-					padding: 20px;
+					padding: 30px;
 					overflow-y: auto;
 	
 					@media (max-width: getConstant($breakpoints, "max-mobile")) {
@@ -236,15 +245,15 @@ wa-dialog:last-of-type {
 				}
 	
 				.wa-dialog-footer {
-					padding: 20px;
 					position: relative;
 					background-color: #FFFFFF;
 					display: flex;
 					width: 100%;
-					min-height: 80px;
 					flex-direction: row-reverse;
 					justify-content: flex-end;
 					margin-top: -1px;
+					padding: 20px 30px 30px 30px;
+					min-height: 100px;
 
 					&.wa-dialog-footer-border {
 						border-top: 1px solid getConstant($color-palette, "common", "border");
@@ -292,96 +301,13 @@ wa-dialog:last-of-type {
 					border: none;
 					color: inherit;
 					position: absolute;
-					top: 15px;
-					right: 15px;
+					top: 25px;
+					right: 25px;
+					cursor: pointer;
 	
-					span {
-						font-size: 16px;
+					i {
+						font-size: 1.8rem;
 						line-height: 30px;
-					}
-				}
-	
-				&.wa-dialog-theme-default {
-					@include customScrollBar(
-						'.wa-dialog-body',
-						10px,
-						getConstant($color-palette, "common", "light-gray"),
-						getConstant($color-palette, "common", "dark-gray"),
-						10px,
-						getConstant($color-palette, "common", "dark-gray")
-					);
-					
-					.wa-dialog-header .wa-dialog-heading {
-						font-size: 18px;
-						font-weight: getConstant($font-weights, "semi-bold");
-					}
-
-					.wa-dialog-body {
-						padding: 20px;
-					}
-
-					.wa-dialog-footer {
-						@media (max-width: getConstant($breakpoints, "max-mobile")) {
-							.wa-dialog-footer-cta ~.wa-dialog-footer-cta {
-								padding-top: 10px;
-							}
-						}
-					}
-	
-					.wa-dialog-close-button {
-						color: getConstant($color-palette, "common", "white");
-					}
-				}
-	
-				&.wa-dialog-theme-kilo {
-					@include customScrollBar(
-						'.wa-dialog-body',
-						15px,
-						getConstant($color-palette, "common", "white"),
-						getConstant($color-palette, "common", "dark-gray"),
-						10px,
-						getConstant($color-palette, "common", "blue-gray")
-					);
-
-					.wa-dialog-header {
-						background-color: getConstant($color-palette, "common", "white");
-						color: getConstant($color-palette, "common", "text");
-						line-height: 30px;
-						padding: 25px 20px;
-
-						.wa-dialog-heading {
-							margin-left: 10px;
-							padding-left: 10px;
-							position: relative;
-
-							&::before {
-								position: absolute;
-								content: "";
-								top: 7.5px;
-								left: 0;
-								height: 15px;
-								width: 2px;
-								background-color: getConstant($color-palette, "common", "brown");
-							}
-						}
-					}
-	
-					.wa-dialog-body {
-						padding: 30px;
-					}
-	
-					.wa-dialog-footer {
-						padding: 20px 30px 30px 30px;
-						min-height: 100px;
-					}
-	
-					.wa-dialog-close-button {
-						top: 25px;
-						right: 25px;
-
-						span {
-							font-weight: getConstant($font-weights, "semi-bold");
-						}
 					}
 				}
 			}

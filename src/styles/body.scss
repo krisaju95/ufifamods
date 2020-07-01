@@ -7,25 +7,28 @@ html, body {
     scroll-behavior: smooth;
     color: $color-code-text;
     background-color: $color-code-white;
+}
+
+body {
     overflow-x: hidden;
 
     * {
         box-sizing: border-box;
     }
+}
 
-    .wa-text-blue {
-        color: $color-code-blue;
-    }
+.wa-text-blue {
+    color: $color-code-blue;
+}
 
-    .wa-text-lightblue {
-        color: $color-code-lightblue;
-    }
+.wa-text-lightblue {
+    color: $color-code-lightblue;
+}
 
-    .wa-text-normal {
-        font-weight: $font-weight-normal;
-    }
+.wa-text-normal {
+    font-weight: $font-weight-normal;
+}
 
-    .wa-text-light {
-        font-weight: $font-weight-light;
-    }
+.wa-text-light {
+    font-weight: $font-weight-light;
 }

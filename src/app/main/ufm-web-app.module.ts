@@ -10,7 +10,7 @@ import { UFMWebAppRoutingModule } from '../routing/ufm-web-app.routing-module';
 import { UFMWebAppComponent } from './ufm-web-app.component';
 
 // Common Components & Modules
-import { WAHeaderComponent, WAFooterComponent } from '../components';
+import { WAHeaderComponent, WAFooterComponent, WADialogModule } from '../components';
 import { GoogleSheetsDbService } from 'ng-google-sheets-db';
 
 // Page Modules
@@ -45,7 +45,8 @@ import { WARouterServiceModule } from '../services/router';
 		WARootScopeModule,
 		WARouterServiceModule,
 		WABrowserStorageServiceModule,
-		HttpClientModule
+		HttpClientModule,
+		WADialogModule
 	],
 	providers: [
 		GoogleSheetsDbService

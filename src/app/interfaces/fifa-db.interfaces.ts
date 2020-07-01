@@ -34,7 +34,8 @@ export interface FIFADBPlayerClub {
     id: number;
     name: string;
     image: string;
-    color: string;
+    background: string;
+    foreground: string;
 }
 
 export interface FIFADBPlayerLeague {

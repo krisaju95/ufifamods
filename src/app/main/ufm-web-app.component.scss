@@ -8,8 +8,11 @@
 
 .wa-body {
     min-height: calc(100vh - 5rem);
-    transition: opacity 300ms ease;
+}
 
+.wa-body, .wa-footer {
+    transition: opacity 300ms ease;
+    
     &.wa-page-loading {
         opacity: 0;
     }

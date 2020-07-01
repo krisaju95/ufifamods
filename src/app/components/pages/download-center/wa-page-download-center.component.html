@@ -13,7 +13,7 @@
                     </wa-select>
                 </div>
                 <div class="wa-download-center-filter">
-                    <wa-select class="wa-download-center-filter-element" label="League" [(ngModel)]="selectedLeague" [enableSearchfilter]="true" searchType="startsWith" [addResetOption]="true" resetOptionText="All Leagues">
+                    <wa-select class="wa-download-center-filter-element" label="League" [(ngModel)]="selectedLeague" [enableSearchfilter]="true" searchType="startsWith" [addResetOption]="true" resetOptionText="All Leagues" (selectionChange)="newValueSelected('league')">
                         <ng-container *ngFor="let league of WAFIFADBService.leagues">
                             <wa-option
                                 *ngIf="!league.ignore"
@@ -25,7 +25,7 @@
                     </wa-select>
                 </div>
                 <div class="wa-download-center-filter">
-                    <wa-select class="wa-download-center-filter-element" label="Club" [(ngModel)]="selectedClub" [disabled]="!selectedLeague" [addResetOption]="true" resetOptionText="All Clubs">
+                    <wa-select class="wa-download-center-filter-element" label="Club" [(ngModel)]="selectedClub" [disabled]="!selectedLeague" [addResetOption]="true" resetOptionText="All Clubs" (selectionChange)="newValueSelected('club')">
                         <wa-option
                             *ngFor="let team of WAFIFADBService.leagueTeamLinks[selectedLeague]"
                             [text]="team.name"
@@ -35,7 +35,7 @@
                     </wa-select>
                 </div>
                 <div class="wa-download-center-filter">
-                    <wa-select class="wa-download-center-filter-element" label="Nationality" [(ngModel)]="selectedNationality" [enableSearchfilter]="true" searchType="startsWith" [addResetOption]="true" resetOptionText="All Nationalities">
+                    <wa-select class="wa-download-center-filter-element" label="Nationality" [(ngModel)]="selectedNationality" [enableSearchfilter]="true" searchType="startsWith" [addResetOption]="true" resetOptionText="All Nationalities" (selectionChange)="newValueSelected('nationality')">
                         <wa-option
                             *ngFor="let nation of WAFIFADBService.nations"
                             [text]="nation.nationname"

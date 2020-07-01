@@ -262,16 +262,16 @@ export class WADialogComponent implements AfterViewInit, OnDestroy {
 	/**
 	 * This is used to determine when any of the footer CTAs are clicked. It emits the CTA
 	 * object back to the dialogRef. You can observe events on these CTAs by subscribing to
-	 * dialogCTWAlick observable. If you want any of the CTAs to simply close the dialog,
+	 * dialogCTAClick observable. If you want any of the CTAs to simply close the dialog,
 	 * pass the callback string as "close" in the CTA object
 	 * @param CTA 
 	 */
-	dialogCTWAlick(CTA: WADialogCTA): void {
+	dialogCTAClick(CTA: WADialogCTA): void {
 		if (!this.loader.showLoader) {
 			if (CTA && CTA.callback == "close") {
 				this.close();
 			} else {
-				this.dialogRef.dialogCTWAlick(CTA);
+				this.dialogRef.dialogCTAClick(CTA);
 			}
 		}
 	}

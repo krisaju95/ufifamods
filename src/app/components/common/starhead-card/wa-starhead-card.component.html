@@ -1,0 +1,149 @@
+<ng-container *ngIf="starhead">
+    <ng-container *ngIf="(WARootScope.fifaDBGenerated && WAFIFADBService.fifaDBPlayers[starhead]); else initializingDB">
+        <div class="wa-starhead-card" tabindex="0">
+            <div class="wa-starhead-card-header"
+                [style.background-color]="WAFIFADBService.fifaDBPlayers[starhead].club.background"
+                [style.color]="WAFIFADBService.fifaDBPlayers[starhead].club.foreground">
+                <img class="wa-starhead-card-image" [src]="WAFIFADBService.fifaDBPlayers[starhead].image" onerror="
+                    this.onerror=null;
+                    this.src='assets/images/generic/silhouette.png'
+                ">
+                <div class="wa-starhead-card-position">
+                    {{WAFIFADBService.fifaDBPlayers[starhead].position}}
+                </div>
+            </div>
+            <div class="wa-starhead-card-meta">
+                <div class="wa-starhead-card-meta-item">
+                    <div class="wa-starhead-card-meta-item-heading">OVR</div>
+                    <div class="wa-starhead-card-meta-item-value">
+                        {{WAFIFADBService.fifaDBPlayers[starhead].rating.base}}
+                    </div>
+                </div>
+                <div class="wa-starhead-card-meta-item">
+                    <div class="wa-starhead-card-meta-item-heading">POT</div>
+                    <div class="wa-starhead-card-meta-item-value">
+                        {{WAFIFADBService.fifaDBPlayers[starhead].rating.potential}}
+                    </div>
+                </div>
+            </div>
+            <div class="wa-starhead-card-info-row wa-starhead-card-playername" tabindex="0" (click)="searchModsByPlayer(searchByPlayer)">
+                <div class="wa-starhead-card-playername-line wa-starhead-card-playername-small">
+                    <ng-container *ngIf="((WAFIFADBService.fifaDBPlayers[starhead].name.commonName || WAFIFADBService.fifaDBPlayers[starhead].name.lastName) && WAFIFADBService.fifaDBPlayers[starhead].name.firstName); else nameMissing">
+                        {{WAFIFADBService.fifaDBPlayers[starhead].name.firstName}}
+                    </ng-container>
+                    <ng-template #nameMissing>
+                        -
+                    </ng-template>
+                </div>
+                <div class="wa-starhead-card-playername-line wa-starhead-card-playername-large">
+                    {{
+                        WAFIFADBService.fifaDBPlayers[starhead].name.commonName
+                        || WAFIFADBService.fifaDBPlayers[starhead].name.lastName
+                        || WAFIFADBService.fifaDBPlayers[starhead].name.firstName
+                    }}
+                </div>
+            </div>
+            <div class="wa-starhead-card-info-row" tabindex="0" (click)="searchModsByNationality(searchByNationality)">
+                <div class="wa-starhead-card-info-row-heading">Nationality</div>
+                <div class="wa-starhead-card-info-row-value">
+                    <span>{{WAFIFADBService.fifaDBPlayers[starhead].nationality.name}}</span>
+                    <img [src]="WAFIFADBService.fifaDBPlayers[starhead].nationality.image">
+                </div>
+            </div>
+            <div class="wa-starhead-card-info-row" tabindex="0" (click)="searchModsByClub(searchByClub)">
+                <div class="wa-starhead-card-info-row-heading">Club</div>
+                <div class="wa-starhead-card-info-row-value">
+                    <span>{{WAFIFADBService.fifaDBPlayers[starhead].club.name}}</span>
+                    <img [src]="WAFIFADBService.fifaDBPlayers[starhead].club.image">
+                </div>
+            </div>
+            <div class="wa-starhead-card-info-row" tabindex="0" (click)="searchModsByLeague(searchByLeague)">
+                <div class="wa-starhead-card-info-row-heading">League</div>
+                <div class="wa-starhead-card-info-row-value">
+                    <span>{{WAFIFADBService.fifaDBPlayers[starhead].league.name}}</span>
+                    <img [src]="WAFIFADBService.fifaDBPlayers[starhead].league.image">
+                </div>
+            </div>
+        </div>
+    </ng-container>
+    
+    <ng-template #initializingDB>
+        <div class="wa-starhead-card-loading">
+            <div class="wa-starhead-card-header">
+                <img class="wa-starhead-card-image" [src]="'assets/images/generic/silhouette.png'">
+            </div>
+            <div *ngIf="!WARootScope.fifaDBGenerated" class="wa-starhead-card-loader">
+                <h4>Initializing FIFA Database</h4>
+                <span class="wa-loader"></span>
+            </div>
+            <div *ngIf="WARootScope.fifaDBGenerated" class="wa-starhead-card-loader">
+                <h4>Couldn't find player with ID {{starhead}} in DB</h4>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #searchByPlayer>
+        <p>Would you like to search for more mods for the following player?</p>
+        <div class="wa-starhead-player-dialog-info">
+            <div class="wa-starhead-dialog-image">
+                <img class="wa-starhead-player-image" [src]="WAFIFADBService.fifaDBPlayers[starhead].image" onerror="
+                    this.onerror=null;
+                    this.src='assets/images/generic/silhouette.png'
+                ">
+            </div>
+            <div class="wa-starhead-dialog-label">
+                <div class="wa-starhead-card-playername-line wa-starhead-card-playername-small">
+                    <ng-container *ngIf="((WAFIFADBService.fifaDBPlayers[starhead].name.commonName || WAFIFADBService.fifaDBPlayers[starhead].name.lastName) && WAFIFADBService.fifaDBPlayers[starhead].name.firstName); else nameMissing">
+                        {{WAFIFADBService.fifaDBPlayers[starhead].name.firstName}}
+                    </ng-container>
+                    <ng-template #nameMissing>
+                        -
+                    </ng-template>
+                </div>
+                <div class="wa-starhead-card-playername-line wa-starhead-card-playername-large">
+                    {{
+                        WAFIFADBService.fifaDBPlayers[starhead].name.commonName
+                        || WAFIFADBService.fifaDBPlayers[starhead].name.lastName
+                        || WAFIFADBService.fifaDBPlayers[starhead].name.firstName
+                    }}
+                </div>
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #searchByLeague>
+        <p>Would you like to search for more mods with the following league?</p>
+        <div class="wa-starhead-player-dialog-info">
+            <div class="wa-starhead-dialog-image">
+                <img [src]="WAFIFADBService.fifaDBPlayers[starhead].league.image">
+            </div>
+            <div class="wa-starhead-dialog-label">
+                {{WAFIFADBService.fifaDBPlayers[starhead].league.name}}
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #searchByClub>
+        <p>Would you like to search for more mods with the following club?</p>
+        <div class="wa-starhead-player-dialog-info">
+            <div class="wa-starhead-dialog-image">
+                <img [src]="WAFIFADBService.fifaDBPlayers[starhead].club.image">
+            </div>
+            <div class="wa-starhead-dialog-label">
+                {{WAFIFADBService.fifaDBPlayers[starhead].club.name}}
+            </div>
+        </div>
+    </ng-template>
+
+    <ng-template #searchByNationality>
+        <p>Would you like to search for more mods with the following nationality?</p>
+        <div class="wa-starhead-player-dialog-info">
+            <div class="wa-starhead-dialog-image">
+                <img [src]="WAFIFADBService.fifaDBPlayers[starhead].nationality.image">
+            </div>
+            <div class="wa-starhead-dialog-label">
+                {{WAFIFADBService.fifaDBPlayers[starhead].nationality.name}}
+            </div>
+        </div>
+    </ng-template>
+</ng-container>

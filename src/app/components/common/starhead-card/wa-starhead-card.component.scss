@@ -1,0 +1,167 @@
+@import 'variables.scss';
+
+.wa-starhead-card-loading {
+    border: 1px solid $border-color;
+    min-height: 37.5rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .wa-starhead-card-header {
+        height: 8rem;
+        width: 100%;
+        background-color: $color-code-container;
+
+        .wa-starhead-card-image {
+            border-radius: 100%;
+            border: 5px solid #FFFFFF;
+            background-color: $color-code-container;
+            position: relative;
+            height: 10rem;
+            width: 10rem;
+            top: 2rem;
+            left: 2rem;
+        }
+    }
+
+    .wa-starhead-card-loader {
+        flex: 1;
+        padding: 3rem;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+.wa-starhead-card {
+    font-size: 1.4rem;
+    border: 1px solid $border-color;
+
+    .wa-starhead-card-header {
+        height: 8rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid $border-color;
+        padding: 0 2rem;
+
+        .wa-starhead-card-image {
+            border-radius: 100%;
+            border: 5px solid #FFFFFF;
+            background-color: $color-code-container;
+            position: relative;
+            height: 10rem;
+            width: 10rem;
+            top: 3rem;
+        }
+
+        .wa-starhead-card-position {
+            font-size: 2.1rem;
+            font-weight: $font-weight-medium;
+        }
+    }
+
+    .wa-starhead-card-meta {
+        display: flex;
+        align-items: center;
+        padding-left: 15rem;
+        padding-right: 2rem;
+
+        .wa-starhead-card-meta-item {
+            padding: 1rem;
+
+            .wa-starhead-card-meta-item-heading {
+                color: $color-code-lighttext;
+                font-size: 1.2rem;
+            }
+
+            .wa-starhead-card-meta-item-value {
+                font-size: 1.8rem;
+            }
+        }
+    }
+
+    .wa-starhead-card-info-row {
+        cursor: pointer;
+        transition: background-color ease 300ms;
+        border-top: 1px solid $border-color;
+        padding: 1rem 2rem;
+
+        &:hover {
+            background-color: $color-code-container;
+        }
+
+        .wa-starhead-card-info-row-heading {
+            text-transform: uppercase;
+            font-size: 1.2rem;
+            color: $color-code-blue;
+            line-height: 1.5;
+        }
+
+        .wa-starhead-card-info-row-value {
+            display: flex;
+            align-items: center;
+            line-height: 2rem;
+            
+            img {
+                width: 2rem;
+                margin-left: 1rem;
+            }
+        }
+
+        &.wa-starhead-card-playername {
+            line-height: 1.5;
+            border-bottom: 1px solid $color-code-blue;
+
+            .wa-starhead-card-playername-small {
+                font-size: 1.2rem;
+            }
+
+            .wa-starhead-card-playername-large {
+                font-size: 1.6rem;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
+
+.wa-starhead-player-dialog-info {
+    display: flex;
+    align-items: center;
+
+    .wa-starhead-dialog-image {
+        height: 8rem;
+        width: 8rem;
+        border-radius: 100%;
+        background-color: $color-code-container;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+            width: 60%;
+
+            &.wa-starhead-player-image {
+                width: 100%;
+            }
+        }
+    }
+
+    .wa-starhead-dialog-label {
+        padding-left: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.5;
+
+        .wa-starhead-card-playername-small {
+            font-size: 1.4rem;
+        }
+
+        .wa-starhead-card-playername-large {
+            font-size: 1.8rem;
+            text-transform: uppercase;
+        }
+    }
+}

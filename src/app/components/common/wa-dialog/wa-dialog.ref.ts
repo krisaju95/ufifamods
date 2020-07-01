@@ -15,8 +15,8 @@ export class WADialogRef {
 	private readonly _dialogLoaderConfigChanged = new Subject<any>();
 	dialogLoaderConfigChanged: Observable<any> = this._dialogLoaderConfigChanged.asObservable();
 
-	private readonly _dialogCTWAlicked = new Subject<any>();
-	dialogCTWAlicked: Observable<any> = this._dialogCTWAlicked.asObservable();
+	private readonly _dialogCTAClicked = new Subject<any>();
+	dialogCTAClicked: Observable<any> = this._dialogCTAClicked.asObservable();
 	
 	dialogID: number;
 
@@ -40,8 +40,8 @@ export class WADialogRef {
 	 * Observer for when a user clicks on any of the dialog's footer CTA
 	 * @param CTA 
 	 */
-	dialogCTWAlick(CTA: WADialogCTA) {
-		this._dialogCTWAlicked.next(CTA);
+	dialogCTAClick(CTA: WADialogCTA) {
+		this._dialogCTAClicked.next(CTA);
 	}
 
 	/**

@@ -30,6 +30,8 @@ export class WAPageDownloadCenterComponent {
 
     selectedLeague: number;
 
+    selectedPlayer: any;
+
     constructor(
         public WARootScope: WARootScope,
         private WALoaderService: WALoaderService,
@@ -40,10 +42,22 @@ export class WAPageDownloadCenterComponent {
     ngOnInit() {
         const initialLoad = this.WALoaderService.pageLoadingStateChange.subscribe((state: boolean) => {
             if (!state) {
+                this.getPrefilledSearchConfig();
                 this.updateFilteredPosts();
                 initialLoad.unsubscribe();
             }
         });
+    }
+
+    getPrefilledSearchConfig() {
+        const filterConfig: WASearchFilterConfig = this.WARootScope.context.searchFilterConfig;
+        if (filterConfig) {
+            this.selectedClub = filterConfig.club;
+            this.selectedLeague = filterConfig.league;
+            this.selectedNationality = filterConfig.nationality;
+            this.selectedPlayer = filterConfig.player;
+        }
+        delete this.WARootScope.context.searchFilterConfig;
     }
 
     updateFilteredPosts() {
@@ -54,7 +68,8 @@ export class WAPageDownloadCenterComponent {
             game: this.selectedGame,
             league: this.selectedLeague,
             club: this.selectedClub,
-            nationality: this.selectedNationality
+            nationality: this.selectedNationality,
+            player: this.selectedPlayer
         };
 
         setTimeout(() => {
@@ -67,6 +82,23 @@ export class WAPageDownloadCenterComponent {
                 this.clearPageLoaderTimeoutRef();
             }, stateChangeDelay);
         }, 500);
+    }
+
+    newValueSelected(type: string): void {
+        switch(type) {
+            case "league": {
+                this.selectedClub = null;
+                this.selectedPlayer = null;
+                break;
+            }
+            case "club": {
+                this.selectedPlayer = null;
+                break;
+            }
+            case "nationality": {
+                this.selectedPlayer = null;
+            }
+        }
     }
 
     clearPageLoaderTimeoutRef() {

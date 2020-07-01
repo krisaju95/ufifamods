@@ -131,7 +131,7 @@ export class WADialogCTA {
 	/**
 	 * If you need to add an identifier for each CTA, you can pass it with this parameter. This does not
 	 * impact the way the CTA is rendered or any other logic within the dialog framework. This can be
-	 * used as a reference in the dialogCTWAlick event to determine which CTA was clicked in the dialog,
+	 * used as a reference in the dialogCTAClick event to determine which CTA was clicked in the dialog,
 	 * particularly useful when there is more than one CTA.
 	 */
 	identifier?: string;

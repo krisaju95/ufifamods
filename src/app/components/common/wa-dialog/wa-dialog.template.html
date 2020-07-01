@@ -1,7 +1,7 @@
 <div [id]="id" class="wa-theme-dialog" tabindex="0" role="dialog" [attr.aria-labelledby]="id + 'Header'" [attr.aria-describedby]="id + 'Body'" aria-modal="true" (keydown.escape)="!loader.showLoader && close()" modalTrapFocus>
 	<div class="wa-dialog-overlay" [class.wa-dialog-closing]="closing" (click)="onOverlayClick($event)">
-		<div class="wa-dialog-wrapper wa-dialog-size-{{size}} wa-typography wa-{{typography}}-typography">
-			<div class="wa-kilo-elevated-container closed wa-dialog wa-dialog-theme-{{theme}}
+		<div class="wa-dialog-wrapper wa-dialog-size-{{size}}">
+			<div class="wa-kilo-elevated-container closed wa-dialog
 				wa-dialog-full-screen-xs-{{(fullScreenOnMobile ? 'enabled' : 'disabled')}}
 				wa-dialog-content-scrollbar-{{(contentScrollEnabled ? 'enabled' : 'disabled')}}"
 				[class.show-dialog-overlay]="loader.type == 'button' && loader.showLoader"
@@ -19,18 +19,16 @@
 					<div *ngFor="let CTA of CTAs; let index = index" class="wa-dialog-footer-cta">
 						<button
 							[id]="CTA.id || (id + 'Button' + index)"
-							class="wa-button wa-button-type-{{CTA.type || (index == 0 ? 'primary' : (index == 1 ? 'secondary' : 'tertiary'))}} wa-button-theme-{{CTA.theme || 'red'}} wa-button-fullWidthXS"
+							class="wa-button wa-{{CTA.type || (index == 0 ? 'primary' : (index == 1 ? 'secondary' : 'tertiary'))}}-button"
 							[class.has-inset-loader]="index == 0"
 							[class.show-inset-loader]="loader.type == 'button' && loader.showLoader"
-							(click)="dialogCTWAlick(CTA)"
-							[attr.data-analytics-track]="CTA.DTM ? CTA.DTM.track : null"
-							[attr.data-analytics-val]="CTA.DTM ? CTA.DTM.val : null">
+							(click)="dialogCTAClick(CTA)">
 							<span [innerHTML]="CTA.label"></span>
 						</button>
 					</div>
 				</div>
 				<button *ngIf="dialogCloseEnabled" class="wa-dialog-close-button" (click)="close()" [id]="id + 'CloseButton'" data-se-id="closeLightBox" [attr.data-analytics-track]="closeButtonDTM.track" [attr.data-analytics-val]="closeButtonDTM.val">
-					<span class="wa-icon wa-icon-close"></span>
+					<i class="fas fa-times"></i>
 				</button>
 			</div>
 		</div>

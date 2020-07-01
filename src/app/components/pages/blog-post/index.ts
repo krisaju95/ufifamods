@@ -15,6 +15,8 @@ import { DisqusModule } from "ngx-disqus";
 import { WAImageLoaderDirectiveModule } from '../../../directives/image-loader';
 import { WABlogPostFormatPipeModule } from 'src/app/pipes/blog-posts/blog-post-formatter';
 import { SafePipeModule } from 'safe-pipe';
+import { WAStarheadCardComponent } from '../../common/starhead-card/wa-starhead-card.component';
+import { WAStarheadCardModule } from '../../common';
 
 @NgModule({
     declarations: [
@@ -28,6 +30,7 @@ import { SafePipeModule } from 'safe-pipe';
         WAProfileInfoPipeModule,
         WAPostsGridModule,
         WABlogPostFormatPipeModule,
+        WAStarheadCardModule,
         DisqusModule.forRoot('ufifamods')
     ],
     exports: [WABlogPostComponent]

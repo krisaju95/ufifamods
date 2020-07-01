@@ -33,75 +33,9 @@
                 <div *ngIf="post.starheads" class="wa-blog-post-starheads-wrapper">
                     <h3>Included Star-head(s)</h3>
                     <div class="wa-blog-post-starheads">
-                        <ng-container *ngFor="let starhead of post.starheads">
-                            <ng-container *ngIf="WARootScope.fifaDBGenerated && WAFIFADBService.fifaDBPlayers[starhead]">
-                                <div class="wa-blog-post-starhead">
-                                    <div class="wa-starhead-card wa-panel-container">
-                                        <div class="wa-starhead-card-header" [style.background-color]="WAFIFADBService.fifaDBPlayers[starhead].club.color">
-                                            <img class="wa-starhead-card-image" [src]="WAFIFADBService.fifaDBPlayers[starhead].image" onerror="
-                                                this.onerror=null;
-                                                this.src='https://www.orbistechnologies.com/wp-content/uploads/2018/12/profile-placeholder-image-gray-silhouette-no-vector-21542863.jpg'
-                                            ">
-                                            <div class="wa-starhead-card-position">
-                                                {{WAFIFADBService.fifaDBPlayers[starhead].position}}
-                                            </div>
-                                        </div>
-                                        <div class="wa-starhead-card-meta">
-                                            <div class="wa-starhead-card-meta-item">
-                                                <div class="wa-starhead-card-meta-item-heading">OVR</div>
-                                                <div class="wa-starhead-card-meta-item-value">
-                                                    {{WAFIFADBService.fifaDBPlayers[starhead].rating.base}}
-                                                </div>
-                                            </div>
-                                            <div class="wa-starhead-card-meta-item">
-                                                <div class="wa-starhead-card-meta-item-heading">POT</div>
-                                                <div class="wa-starhead-card-meta-item-value">
-                                                    {{WAFIFADBService.fifaDBPlayers[starhead].rating.potential}}
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="wa-starhead-card-info-row wa-starhead-card-playername">
-                                            <div class="wa-starhead-card-playername-line wa-starhead-card-playername-small">
-                                                <ng-container *ngIf="(WAFIFADBService.fifaDBPlayers[starhead].name.commonName || WAFIFADBService.fifaDBPlayers[starhead].name.lastName); else nameMissing">
-                                                    {{WAFIFADBService.fifaDBPlayers[starhead].name.firstName}}
-                                                </ng-container>
-                                                <ng-template #nameMissing>
-                                                    -
-                                                </ng-template>
-                                            </div>
-                                            <div class="wa-starhead-card-playername-line wa-starhead-card-playername-large">
-                                                {{
-                                                    WAFIFADBService.fifaDBPlayers[starhead].name.commonName
-                                                    || WAFIFADBService.fifaDBPlayers[starhead].name.lastName
-                                                    || WAFIFADBService.fifaDBPlayers[starhead].name.firstName
-                                                }}
-                                            </div>
-                                        </div>
-                                        <div class="wa-starhead-card-info-row">
-                                            <div class="wa-starhead-card-info-row-heading">Nationality</div>
-                                            <div class="wa-starhead-card-info-row-value">
-                                                <span>{{WAFIFADBService.fifaDBPlayers[starhead].nationality.name}}</span>
-                                                <img [src]="WAFIFADBService.fifaDBPlayers[starhead].nationality.image">
-                                            </div>
-                                        </div>
-                                        <div class="wa-starhead-card-info-row">
-                                            <div class="wa-starhead-card-info-row-heading">Club</div>
-                                            <div class="wa-starhead-card-info-row-value">
-                                                <span>{{WAFIFADBService.fifaDBPlayers[starhead].club.name}}</span>
-                                                <img [src]="WAFIFADBService.fifaDBPlayers[starhead].club.image">
-                                            </div>
-                                        </div>
-                                        <div class="wa-starhead-card-info-row">
-                                            <div class="wa-starhead-card-info-row-heading">League</div>
-                                            <div class="wa-starhead-card-info-row-value">
-                                                <span>{{WAFIFADBService.fifaDBPlayers[starhead].league.name}}</span>
-                                                <img [src]="WAFIFADBService.fifaDBPlayers[starhead].league.image">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </ng-container>
-                        </ng-container>
+                        <div class="wa-blog-post-starhead" *ngFor="let starhead of post.starheads">
+                            <ufm-wa-starhead-card [starhead]="starhead"></ufm-wa-starhead-card>
+                        </div>
                     </div>
                 </div>
                 <div *ngIf="post.screenshots" class="wa-blog-post-screenshots-wrapper">

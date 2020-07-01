@@ -116,7 +116,6 @@ export class WAFIFADBService {
         const teams: FIFADBTeamsTuple[] = this.fifaDBData[3];
         const teamPlayerinks: FIFADBTeamPlayerLinksTuple[] = this.fifaDBData[4];
         this.leagues = this.fifaDBData[5];
-        console.log(this.leagues);
         const leagueTeamLinks: FIFADBLeagueTeamLinksTuple[] = this.fifaDBData[6];
         this.nations = this.fifaDBData[7];
         this.playerNamesMap = this.convertArrayToObject(playerNames, "nameid");
@@ -154,11 +153,13 @@ export class WAFIFADBService {
     getPlayerClub(club: FIFADBTeamPlayerLinksTuple): FIFADBPlayerClub {
         const teamID: string = club.teamid;
         const teamData: FIFADBTeamsTuple = this.teamsMap[teamID];
+        const colors: any = this.getStarheadCardColors(teamData);
         return {
             id: parseInt(teamID),
             name: teamData.teamname,
             image: "https://www.fifarosters.com/assets/clubs/fifa20/" + teamID + ".png",
-            color: "rgb(" + teamData.teamcolor1r + ", " + teamData.teamcolor1g + ", " + teamData.teamcolor1b + ")"
+            background: colors.background,
+            foreground: colors.foreground
         }
     }
 
@@ -216,4 +217,26 @@ export class WAFIFADBService {
         });
         return map;
     };
+
+    getStarheadCardColors(teamData: FIFADBTeamsTuple): any {
+        let foreground: string = "";
+        const background: string = "rgb(" + teamData.teamcolor1r + ", " + teamData.teamcolor1g + ", " + teamData.teamcolor1b + ")";
+        const r: number = parseInt(teamData.teamcolor1r);
+        const g: number = parseInt(teamData.teamcolor1g);
+        const b: number = parseInt(teamData.teamcolor1b);
+        const hsp = Math.sqrt(
+            0.299 * (r * r) +
+            0.587 * (g * g) +
+            0.114 * (b * b)
+        );
+        if (hsp > 127.5) {
+            foreground = "#2A2A2A"
+        } else {
+            foreground = "#F5F5F5"
+        }
+        return {
+            background: background,
+            foreground: foreground
+        }
+    }
 }
