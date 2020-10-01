@@ -1,0 +1,153 @@
+/*
+This variable maintains the list of supported design. When you wish to create a new
+design variant, make sure to add it to this list and also add the individual design
+properties to the constants below. When you wish to de-scope any particular
+design, simply remove that design name from this list and all the associated code
+will be removed from your project's bundle
+*/
+$abc-supported-dialog-designs: "legacy" "kilo";
+
+/*
+The following constants are used for check-boxes.
+*/
+$abc-dialog-constants: (
+    /*
+    Set the base font color used for each design of the dialog
+    */
+    "color": (
+        "legacy": getConstant($color-palette, "text"),
+        "kilo": getConstant($color-palette, "black")
+    ),
+    /*
+    Set the background color used for each design of the dialog
+    */
+    "background": (
+        "legacy": getConstant($color-palette, "white"),
+        "kilo": getConstant($color-palette, "white")
+    ),
+    /*
+    Set the style properties for the header of the dialog
+    */
+    "header": (
+        /*
+        Set the background color of the header used for each design of the dialog
+        */
+        "background": (
+            "legacy": getConstant($color-palette, "text"),
+            "kilo": getConstant($color-palette, "white")
+        ),
+        /*
+        Set the font color of the header used for each design of the dialog
+        */
+        "color": (
+            "legacy": getConstant($color-palette, "white"),
+            "kilo": getConstant($color-palette, "black")
+        ),
+        /*
+        Set the padding of the header used for each design of the dialog
+        */
+        "padding": (
+            "legacy": 20px,
+            "kilo": 25px 30px
+        ),
+        /*
+        Set the font size of the header used for each design of the dialog
+        */
+        "font-size": (
+            "legacy": getSize(18),
+            "kilo": getSize(20)
+        ),
+        /*
+        Set the font weight of the header used for each design of the dialog
+        */
+        "font-weight": (
+            "legacy": getConstant($font-weights, "semi-bold"),
+            "kilo": getConstant($font-weights, "semi-bold")
+        ),
+        /*
+        Set the line height of the header used for each design of the dialog
+        */
+        "line-height": (
+            "legacy": getSize(20),
+            "kilo": getSize(30)
+        )
+    ),
+    /*
+    Set the body style properties of the dialog
+    */
+    "body": (
+        /*
+        Set the font size of the body used for each design of the dialog
+        */
+        "font-size": (
+            "legacy": getSize(14),
+            "kilo": getSize(14)
+        ),
+        /*
+        Set the padding of the body used for each design of the dialog
+        */
+        "padding": (
+            /*
+            Set the padding of the body when a footer is present in the dialog for each design of the dialog
+            */
+            "with-footer": (
+                "legacy": 20px,
+                "kilo": 0 30px 20px 30px
+            ),
+            /*
+            Set the padding of the body when a footer is not present in the dialog for each design of the dialog
+            */
+            "without-footer": (
+                "legacy": 20px,
+                "kilo": 0 30px 30px 30px
+            )
+        ),
+        /*
+        Set the background of the body for each design of the dialog
+        */
+        "background": (
+            "legacy": getConstant($color-palette, "white"),
+            "kilo": getConstant($color-palette, "white")
+        )
+    ),
+    /*
+    Set the footer's style properties of the dialog
+    */
+    "footer": (
+        /*
+        Set the background of the footer for each design of the dialog
+        */
+        "background": (
+            "legacy": getConstant($color-palette, "white"),
+            "kilo": getConstant($color-palette, "white")
+        ),
+        /*
+        Set the padding of the footer for each design of the dialog
+        */
+        "padding": (
+            "legacy": 20px,
+            "kilo": 20px 30px 30px 30px
+        ),
+        /*
+        Set properties of the CTAs/buttons of the footer for each design of the dialog
+        */
+        "CTAs": (
+            /*
+            Set the horizontal space between two buttons of the footer for each design of the dialog.
+            This is used for large viewports where the buttons are aligned horizontally
+            */
+            "horizontal-margin": (
+                "legacy": 20px,
+                "kilo": 20px
+            ),
+            /*
+            Set the vertical space between two buttons of the footer for each design of the dialog.
+            This is used for small viewports where the buttons are aligned vertically
+            */
+            "vertical-margin": (
+                "legacy": 10px,
+                "kilo": 20px
+            )
+        )
+    )
+)

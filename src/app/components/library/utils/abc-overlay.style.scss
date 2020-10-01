@@ -1,0 +1,31 @@
+@import "../styles//abc-constants.scss";
+@import "../styles/abc-animations.scss";
+
+@include fadeAnimation("abcOverlayFadeIn");
+
+:host.abc-overlay-aligned-element {
+    display: block;
+    z-index: 1000;
+    position: absolute;
+}
+
+:host.abc-overlay-fixed-element {
+    pointer-events: none;
+    display: block;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    &.abc-overlay-fade-background {
+        pointer-events: all;
+        background-color: getConstant($color-palette, "overlay");
+        @include animation(abcOverlayFadeIn, 400ms, ease);
+    }
+}
+
+:host.abc-higher-order-overlay {
+    z-index: 2000;
+}

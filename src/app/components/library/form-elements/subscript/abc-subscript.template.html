@@ -1,0 +1,15 @@
+<div [id]="prefixId + 'Subscript'" *ngIf="hasSubscript"
+    class="abc-form-element-subscript-text abc-form-element-input-subscript-text abc-form-element-material-subscript-text-container abc-dir-{{textDirection}}">
+    <div [id]="prefixId + 'ErrorText'"
+        class="abc-form-element-material-subscript-text abc-form-element-material-error-text"
+        *ngIf="(error && (touched && (control.invalid || invalid))); else abcHintText"
+        aria-live="polite" aria-atomic="true" role="alert" [innerHTML]="error">
+    </div>
+    <ng-template #abcHintText>
+        <div [id]="prefixId + 'HintText'"
+            class="abc-form-element-material-subscript-text abc-form-element-material-hint-text"
+            *ngIf="hint"
+            aria-live="polite" aria-atomic="true" role="definition" [innerHTML]="hint">
+        </div>
+    </ng-template>
+</div>

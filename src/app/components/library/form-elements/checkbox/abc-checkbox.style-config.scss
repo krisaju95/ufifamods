@@ -1,0 +1,150 @@
+@import "../../styles/abc-constants.scss";
+
+/*
+This variable maintains the list of supported design. When you wish to create a new
+design variant, make sure to add it to this list and also add the individual design
+properties to the constants below. When you wish to de-scope any particular
+design, simply remove that design name from this list and all the associated code
+will be removed from your project's bundle
+*/
+$abc-supported-checkbox-designs: "legacy" "material" "kilo";
+
+/*
+The following constants are used for check-boxes.
+*/
+$abc-checkbox-constants: (
+    /*
+    Define properties associated to the label of the checkbox
+    */
+    "label": (
+        /*
+        Set the font size of the checkbox label for each design variant
+        */
+        "font-size": (
+            "legacy": getSize(14),
+            "material": getSize(14),
+            "kilo": getSize(14)
+        ),
+        /*
+        Set the font weight of the checkbox label for each design variant
+        */
+        "font-weight": (
+            "legacy": getConstant($font-weights, "light"),
+            "material": getConstant($font-weights, "normal"),
+            "kilo": getConstant($font-weights, "normal")
+        ),
+        /*
+        Set the text color of the checkbox label for each design variant
+        */
+        "color": (
+            "legacy": getConstant($color-palette, "text"),
+            "material": getConstant($color-palette, "text"),
+            "kilo": getConstant($color-palette, "black")
+        )
+    ),
+    /*
+    Define properties associated to the checkmark component of the checkbox
+    */
+    "checkbox": (
+        /*
+        Set the size of the checkbox for each variant (this sets both the height and the width)
+        */
+        "size": (
+            "legacy": getSize(20),
+            "material": getSize(20),
+            "kilo": getSize(20)
+        ),
+        /*
+        Set the border radius of the checkbox for each design variant
+        */
+        "border-radius": (
+            "legacy": 0px,
+            "material": 2.5px,
+            "kilo": 2.5px
+        ),
+        /*
+        Set the border width of the checkbox for each design variant
+        */
+        "border-width": (
+            "legacy": 2.5px,
+            "material": 2.5px,
+            "kilo": 2.5px
+        ),
+        /*
+        Set the color of the checkmark for each design variant
+        */
+        "checkmark": (
+            "legacy": getConstant($color-palette, "light-blue"),
+            "material": getConstant($color-palette, "white"),
+            "kilo": getConstant($color-palette, "white"),
+            "disabled": (
+                "legacy": getConstant($color-palette, "sub-text"),
+                "material": getConstant($color-palette, "light-gray"),
+                "kilo": getConstant($color-palette, "light-gray"),
+            )
+        ),
+        /*
+        Set the checkbox design properties for when the checkbox is unchecked
+        */
+        "unchecked": (
+            /*
+            Set the border color of the checkbox for each design variant
+            */
+            "border-color": (
+                "legacy": getConstant($color-palette, "light-gray-3"),
+                "material": getConstant($color-palette, "light-gray-3"),
+                "kilo": getConstant($color-palette, "light-gray-3")
+            ),
+            /*
+            Set the background color of the checkbox for each design variant
+            */
+            "background-color": (
+                "legacy": getConstant($color-palette, "white"),
+                "material": getConstant($color-palette, "white"),
+                "kilo": getConstant($color-palette, "white")
+            )
+        ),
+        /*
+        Set the checkbox design properties for when the checkbox is unchecked
+        */
+        "checked": (
+            /*
+            Set the border color of the checkbox for each design variant
+            */
+            "border-color": (
+                "legacy": getConstant($color-palette, "light-gray-3"),
+                "material": getConstant($color-palette, "light-blue"),
+                "kilo": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the background color of the checkbox for each design variant
+            */
+            "background-color": (
+                "legacy": getConstant($color-palette, "white"),
+                "material": getConstant($color-palette, "light-blue"),
+                "kilo": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the radio button design properties for when the radio button is disabled and checked
+            */
+            "disabled": (
+                /*
+                Set the border color of the radio button for each design variant
+                */
+                "border-color": (
+                    "legacy": getConstant($color-palette, "light-gray-3"),
+                    "material": getConstant($color-palette, "sub-text"),
+                    "kilo": getConstant($color-palette, "sub-text")
+                ),
+                /*
+                Set the background color of the radio button for each design variant
+                */
+                "background-color": (
+                    "legacy": getConstant($color-palette, "white"),
+                    "material": getConstant($color-palette, "sub-text"),
+                    "kilo": getConstant($color-palette, "sub-text")
+                )
+            )
+        )
+    )
+)

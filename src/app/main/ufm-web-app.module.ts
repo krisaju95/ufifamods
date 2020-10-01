@@ -25,6 +25,7 @@ import { WADBServiceModule, WABrowserStorageServiceModule } from '../services/da
 import { WALoaderServiceModule } from '../services/loader';
 import { WARootScopeModule } from '../services/globals';
 import { WARouterServiceModule } from '../services/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 @NgModule({
 	declarations: [
@@ -46,7 +47,8 @@ import { WARouterServiceModule } from '../services/router';
 		WARouterServiceModule,
 		WABrowserStorageServiceModule,
 		HttpClientModule,
-		WADialogModule
+		WADialogModule,
+		TranslateModule.forRoot()
 	],
 	providers: [
 		GoogleSheetsDbService

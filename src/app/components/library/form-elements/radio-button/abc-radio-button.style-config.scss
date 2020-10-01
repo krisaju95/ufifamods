@@ -1,0 +1,149 @@
+@import "../../styles/abc-constants.scss";
+
+/*
+This variable maintains the list of supported design. When you wish to create a new
+design variant, make sure to add it to this list and also add the individual design
+properties to the constants below. When you wish to de-scope any particular
+design, simply remove that design name from this list and all the associated code
+will be removed from your project's bundle
+*/
+$abc-supported-radio-designs: "legacy" "material" "kilo";
+
+/*
+The following constants are used for radio button.
+*/
+$abc-radio-constants: (
+    /*
+    Define properties associated to the label of the radio button
+    */
+    "label": (
+        /*
+        Set the font size of the radio button label for each design variant
+        */
+        "font-size": (
+            "legacy": getSize(14),
+            "material": getSize(14),
+            "kilo": getSize(14)
+        ),
+        /*
+        Set the font weight of the radio button label for each design variant
+        */
+        "font-weight": (
+            "legacy": getConstant($font-weights, "light"),
+            "material": getConstant($font-weights, "normal"),
+            "kilo": getConstant($font-weights, "normal")
+        ),
+        /*
+        Set the text color of the radio button label for each design variant
+        */
+        "color": (
+            "legacy": getConstant($color-palette, "text"),
+            "material": getConstant($color-palette, "text"),
+            "kilo": getConstant($color-palette, "black")
+        )
+    ),
+    /*
+    Define properties associated to the radio button circle component of the checradio buttonkbox
+    */
+    "radio": (
+        /*
+        Set the size of the radio button for each variant (this sets both the height and the width)
+        */
+        "size": (
+            "legacy": 20,
+            "material": 20,
+            "kilo": 20
+        ),
+        /*
+        Set the border width of the radio button for each design variant
+        */
+        "border-width": (
+            "legacy": 2,
+            "material": 2,
+            "kilo": 2
+        ),
+        /*
+        Set the color of the radio button dot for each design variant
+        */
+        "radio-dot": (
+            "color": (
+                "legacy": getConstant($color-palette, "light-blue"),
+                "material": getConstant($color-palette, "white"),
+                "kilo": getConstant($color-palette, "blue"),
+                "disabled": (
+                    "legacy": getConstant($color-palette, "sub-text"),
+                    "material": getConstant($color-palette, "light-gray"),
+                    "kilo": getConstant($color-palette, "sub-text"),
+                )
+            ),
+            "size": (
+                "legacy": 10,
+                "material": 6,
+                "kilo": 10
+            )
+        ),
+        /*
+        Set the radio button design properties for when the radio button is unchecked
+        */
+        "unchecked": (
+            /*
+            Set the border color of the radio button for each design variant
+            */
+            "border-color": (
+                "legacy": getConstant($color-palette, "light-gray-3"),
+                "material": getConstant($color-palette, "light-gray-3"),
+                "kilo": getConstant($color-palette, "light-gray-3")
+            ),
+            /*
+            Set the background color of the radio button for each design variant
+            */
+            "background-color": (
+                "legacy": getConstant($color-palette, "white"),
+                "material": getConstant($color-palette, "white"),
+                "kilo": getConstant($color-palette, "white")
+            )
+        ),
+        /*
+        Set the radio button design properties for when the radio button is unchecked
+        */
+        "checked": (
+            /*
+            Set the border color of the radio button for each design variant
+            */
+            "border-color": (
+                "legacy": getConstant($color-palette, "light-gray-3"),
+                "material": getConstant($color-palette, "light-blue"),
+                "kilo": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the background color of the radio button for each design variant
+            */
+            "background-color": (
+                "legacy": getConstant($color-palette, "white"),
+                "material": getConstant($color-palette, "light-blue"),
+                "kilo": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the radio button design properties for when the radio button is disabled and checked
+            */
+            "disabled": (
+                /*
+                Set the border color of the radio button for each design variant
+                */
+                "border-color": (
+                    "legacy": getConstant($color-palette, "light-gray-3"),
+                    "material": getConstant($color-palette, "sub-text"),
+                    "kilo": getConstant($color-palette, "sub-text")
+                ),
+                /*
+                Set the background color of the radio button for each design variant
+                */
+                "background-color": (
+                    "legacy": getConstant($color-palette, "white"),
+                    "material": getConstant($color-palette, "sub-text"),
+                    "kilo": getConstant($color-palette, "white")
+                )
+            )
+        )
+    )
+)

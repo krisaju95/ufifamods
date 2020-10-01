@@ -1,0 +1,120 @@
+@import "../../styles/abc-constants.scss";
+@import "../../styles/abc-mixins.scss";
+@import "./abc-dialog.style-config.scss";
+
+@each $design in $abc-supported-dialog-designs {
+    .abc-theme-dialog {
+        color: getConstant($abc-dialog-constants, "color", $design);
+    
+        .abc-dialog-overlay {
+            .abc-dialog-wrapper {
+                .abc-dialog-theme-#{$design} {
+                    padding: 0;
+                    background: getConstant($abc-dialog-constants, "background", $design);
+    
+                    &::before {
+                        background: getConstant($abc-dialog-constants, "background", $design);
+                    }
+    
+                    .abc-dialog-overlay-loader {
+                        background: getConstant($abc-dialog-constants, "background", $design);
+                    }
+        
+                    .abc-dialog-header {
+                        background: getConstant($abc-dialog-constants, "header", "background", $design);
+                        color: getConstant($abc-dialog-constants, "header", "color", $design);
+                        line-height: getConstant($abc-dialog-constants, "header", "line-height", $design);
+                        padding: getConstant($abc-dialog-constants, "header", "padding", $design);
+        
+                        .abc-dialog-heading {
+                            color: getConstant($abc-dialog-constants, "header", "color", $design);
+                            font-size: getConstant($abc-dialog-constants, "header", "font-size", $design);
+                            font-weight: getConstant($abc-dialog-constants, "header", "font-weight", $design);
+                            line-height: getConstant($abc-dialog-constants, "header", "line-height", $design);
+
+                            @if ($design == "kilo") {
+                                position: relative;
+
+                                &::before {
+                                    position: absolute;
+                                    content: '';
+                                    top: 50%;
+                                    width: 2px;
+                                    height: calc(1em - 5px);
+                                    transform: translateY(-50%);
+                                    background-color: getConstant($color-palette, "gold");
+                                }
+
+                                &.abc-dir-ltr {
+                                    padding-left: 20px;
+
+                                    &::before {
+                                        left: 0;
+                                    }
+                                }
+
+                                &.abc-dir-rtl {
+                                    padding-right: 20px;
+
+                                    &::before {
+                                        right: 0;
+                                    }
+                                }
+                            }
+                        }
+                    }
+        
+                    .abc-dialog-body {
+                        background: getConstant($abc-dialog-constants, "body", "background", $design);
+                        font-size: getConstant($abc-dialog-constants, "body", "font-size", $design);
+                        padding: getConstant($abc-dialog-constants, "body", "padding", "without-footer", $design);
+
+                        &.abc-dialog-body-with-footer {
+                            padding: getConstant($abc-dialog-constants, "body", "padding", "with-footer", $design);
+                        }
+                    }
+        
+                    .abc-dialog-footer .abc-dialog-footer-content {
+                        padding: getConstant($abc-dialog-constants, "footer", "padding", $design);
+                        background: getConstant($abc-dialog-constants, "footer", "background", $design);
+        
+                        .abc-dialog-footer-cta {
+                            @media (min-width: getConstant($breakpoints, "min-tablet")) {
+                                ~.abc-dialog-footer-cta {
+                                    &.abc-dir-ltr {
+                                        padding-right: getConstant($abc-dialog-constants, "footer", "CTAs", "horizontal-margin", $design);
+                                    }
+
+                                    &.abc-dir-rtl {
+                                        padding-left: getConstant($abc-dialog-constants, "footer", "CTAs", "horizontal-margin", $design);
+                                    }
+                                }
+                            }
+                        }
+        
+                        @media (max-width: getConstant($breakpoints, "max-mobile")) {
+                            .abc-dialog-footer-cta {
+                                ~.abc-dialog-footer-cta {
+                                    padding-top: getConstant($abc-dialog-constants, "footer", "CTAs", "vertical-margin", $design);
+                                }
+                            }
+                        }
+                    }
+        
+                    .abc-dialog-close-button {
+                        color: getConstant($abc-dialog-constants, "header", "color", $design);
+                        height: getConstant($abc-dialog-constants, "header", "line-height", $design);
+                        width: getConstant($abc-dialog-constants, "header", "line-height", $design);
+                        line-height: getConstant($abc-dialog-constants, "header", "line-height", $design);
+                        margin: getConstant($abc-dialog-constants, "header", "padding", $design);
+        
+                        .abc-dialog-close-icon {
+                            font-size: getConstant($abc-dialog-constants, "header", "font-size", $design);
+                            line-height: getConstant($abc-dialog-constants, "header", "line-height", $design);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

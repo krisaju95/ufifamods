@@ -1,0 +1,143 @@
+@mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+        @content; 
+    }
+
+    @-moz-keyframes #{$name} {
+        @content;
+    }
+
+    @-ms-keyframes #{$name} {
+        @content;
+    }
+    
+    @keyframes #{$name} {
+        @content;
+    } 
+}
+
+@mixin fadeAnimation($name: 'fadeIn', $from: 0, $to: 1) {
+    @include keyframes($name) {
+        from { opacity: $from; }
+        to { opacity: $to; }
+    }
+}
+
+@mixin scaleUpAnimation($name: 'scaleUp', $from: 0, $to: 1) {
+    @include keyframes($name) {
+        from { transform: scale($from); }
+        to { transform: scale($to); }
+    }
+}
+
+@mixin slideInAnimation($name: 'slideIn', $direction: 'up', $from: 100vh, $to: 0) {
+    @if ($direction == 'up') {
+        @include keyframes($name) {
+            from { top: $from; }
+            to { top: $to; }
+        }
+    }
+    @if ($direction == 'down') {
+        @include keyframes($name) {
+            from { bottom: $from; }
+            to { bottom: $to; }
+        }
+    }
+    @if ($direction == 'left') {
+        @include keyframes($name) {
+            from { left: $from; }
+            to { left: $to; }
+        }
+    }
+    @if ($direction == 'right') {
+        @include keyframes($name) {
+            from { right: $from; }
+            to { right: $to; }
+        }
+    }
+}
+
+@mixin spinAnimation($name: 'spin') {
+    @include keyframes($name) {
+        100% { transform: rotate(360deg); }
+    }
+}
+
+@mixin customAnimation($name: 'customAnimation') {
+    @include keyframes($name) {
+        @content;
+    }
+}
+
+@mixin animation($name, $animationDuration, $animationStyle: ease, $animationFillMode: false, $animationIterationCount: false, $useOsAnimationPreference: true) {
+    -webkit-animation: $name $animationDuration $animationStyle $animationFillMode;
+    -moz-animation: $name $animationDuration $animationStyle $animationFillMode;
+    -ms-animation: $name $animationDuration $animationStyle;
+    animation: $name $animationDuration $animationStyle;
+
+    @if ($animationFillMode) {
+        -webkit-animation-fill-mode: $animationFillMode;
+        -moz-animation-fill-mode: $animationFillMode;
+        -ms-animation-fill-mode: $animationFillMode;
+        animation-fill-mode: $animationFillMode;
+    }
+
+    @if ($animationIterationCount) {
+        -webkit-animation-iteration-count: $animationIterationCount;
+        -moz-animation-iteration-count: $animationIterationCount;
+        -ms-animation-iteration-count: $animationIterationCount;
+        animation-iteration-count: $animationIterationCount;
+    }
+
+    @if ($useOsAnimationPreference) {
+        @media (prefers-reduced-motion: reduce) {
+            -webkit-animation: none;
+            animation: none;
+        }
+    }
+}
+
+@mixin transition($args...) {
+    $transition: "";
+    
+    @each $arg in $args {
+        @if ($transition != "") {
+            $transition: $transition + ", " + $arg;
+        } @else {
+            $transition: "" + $arg;
+        }
+    }
+
+    transition: unquote($transition);
+
+    @media (prefers-reduced-motion: reduce) {
+        transition: none;
+    }
+}
+
+@mixin warpSpeedAhead($setTransform: true, $setBackfaceVisibility: true, $setPerspective: true) {
+    @media (prefers-reduced-motion: no-preference) {
+        @if ($setBackfaceVisibility == true) {
+            -webkit-backface-visibility: hidden;
+            -moz-backface-visibility: hidden;
+            -ms-backface-visibility: hidden;
+            backface-visibility: hidden;
+        }
+    
+        @if ($setPerspective == true) {
+            -webkit-perspective: 1000;
+            -moz-perspective: 1000;
+            -ms-perspective: 1000;
+            perspective: 1000;
+        }
+    
+        @if ($setTransform == true) {
+            -webkit-transform: translate3d(0, 0, 0);
+            -moz-transform: translate3d(0, 0, 0);
+            -ms-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+        }
+    
+        -webkit-font-smoothing: subpixel-antialiased;
+    }
+}

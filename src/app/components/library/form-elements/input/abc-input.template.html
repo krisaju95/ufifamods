@@ -1,0 +1,92 @@
+<div class="abc-form-element-container {{appearanceClass}}">
+    <ng-container *ngIf="design == 'material'">
+        <div
+            class="abc-form-element-wrapper abc-form-element-material-wrapper abc-form-element-input-wrapper"
+            [ngClass]="{
+                'abc-form-element-focussed': focussed,
+                'abc-form-element-invalid': (touched && (control.invalid || invalid)),
+                'abc-form-element-disabled': (control.disabled || disabled),
+                'abc-form-element-readOnly': readOnly,
+                'abc-form-element-no-label': !label
+            }"
+            (click)="focusElement($event)">
+            <div class="abc-form-element-flex">
+                <span class="abc-form-element-affix abc-form-element-prefix abc-dir-{{textDirection}}" *ngIf="prefix">
+                    <img class="abc-form-element-prefix-img" *ngIf="prefix.imageSrc" [src]="prefix.imageSrc" [alt]="prefix.imageAlt">
+                    <span class="abc-form-element-prefix-icon {{prefix.icon}}" *ngIf="prefix.icon"></span>
+                    <ng-container *ngIf="prefix.template" [ngTemplateOutlet]="prefix.template"></ng-container>
+                    <span *ngIf="prefix.text" [innerHTML]="prefix.text"></span>
+                </span>
+                <div class="abc-form-element-infix">
+                    <label class="abc-form-element-label no-highlight abc-dir-{{textDirection}} {{label ? '' : screenReaderClass}}"
+                        [class.float]="!!control.value || !!value || focussed || inlinePrefix || readOnly"
+                        [for]="name || id">
+                        <span class="abc-form-element-label-text" [innerHTML]="label || placeholder"></span>
+                    </label>
+                    <div *ngIf="inlinePrefix"
+                        class="abc-form-element-inline-affix abc-form-element-inline-prefix abc-dir-{{textDirection}}">
+                        <ng-container *ngIf="inlinePrefix.template" [ngTemplateOutlet]="prefix.template"></ng-container>
+                        <span *ngIf="inlinePrefix.text" [innerHTML]="inlinePrefix.text"></span>
+                    </div>
+                    <div class="abc-form-element-main-container">
+                        <div class="abc-form-element-pseudo-main abc-dir-{{textDirection}}" *ngIf="displayFormattedInput && blurred">
+                            <div class="abc-form-element-pseudo-main-content">
+                                <ng-container [ngTemplateOutlet]="displayFormattedInput"></ng-container>
+                            </div>
+                        </div>
+                        <input class="abc-form-element-main abc-form-element-input text-transform-{{textTransform}}"
+                            [attr.id]="id"
+                            [name]="name || id"
+                            [type]="currentType"
+                            [placeholder]="placeholder"
+                            [minlength]="minlength"
+                            [maxlength]="maxlength"
+                            [disabled]="(control.disabled || disabled || readOnly)"
+                            [attr.aria-disabled]="(control.disabled || disabled)"
+                            [attr.readonly]="readOnly ? true : null"
+                            [attr.aria-readonly]="readOnly"
+                            [abcAcceptedCharacters]="((currentType == 'tel') ? (acceptedCharacters || '0-9') : acceptedCharacters)"
+                            [(ngModel)]="value"
+                            (ngModelChange)="modelChanged($event)"
+                            (focus)="focusElement($event)"
+                            (blur)="blurElement($event)"
+                            [attr.aria-required]="required"
+                            [attr.aria-invalid]="(touched && (control.invalid || invalid))"
+                            [attr.aria-label]="ariaLabel ? (ariaLabel | abcStripHtml) : label"
+                            [attr.aria-describedby]="hasSubscript ? (id + 'Subscript') : null"
+                            autocorrect="off"
+                            spellcheck="false"
+                            autocomplete="off">
+                    </div>
+                </div>
+                <span class="abc-form-element-affix abc-form-element-suffix abc-dir-{{textDirection}}" *ngIf="!(control.disabled || disabled || readOnly) && (showInputClearButton || type == 'password')">
+                    <button *ngIf="type == 'password'" [attr.aria-pressed]="currentType == 'text'"
+                        class="abc-input-field-control no-focus-ring" [title]="translations.showPassword | translate"
+                        (click)="$event.stopPropagation(); currentType = (currentType == 'password' ? 'text' : 'password')">
+                        <span class="abc-form-element-suffix-icon {{icons.password[(currentType == 'password' ? 'show' : 'hide')]}}" aria-hidden="true"></span>
+                    </button>
+
+                    <button *ngIf="showInputClearButton && type != 'password' && value"
+                        class="abc-input-field-control no-focus-ring" [title]="translations.clearInput | translate"
+                        (click)="$event.preventDefault(); $event.stopPropagation(); writeValue(''); focusElement($event)">
+                        <span class="abc-form-element-suffix-icon {{icons.clear}}" aria-hidden="true"></span>
+                    </button>
+                </span>
+                <span class="abc-form-element-affix abc-form-element-suffix abc-dir-{{textDirection}}" *ngIf="suffix && !(touched && (control.invalid || invalid) && icons.formFieldError)">
+                    <img class="abc-form-element-suffix-img" *ngIf="suffix.imageSrc" [src]="suffix.imageSrc" [alt]="suffix.imageAlt">
+                    <span class="abc-form-element-suffix-icon {{suffix.icon}}" *ngIf="suffix.icon"></span>
+                    <ng-container *ngIf="suffix.template" [ngTemplateOutlet]="suffix.template"></ng-container>
+                    <span *ngIf="suffix.text" [innerHTML]="suffix.text"></span>
+                </span>
+                <span class="abc-form-element-affix abc-form-element-suffix abc-dir-{{textDirection}}" *ngIf="icons.formFieldError && (touched && (control.invalid || invalid))">
+                    <span class="abc-form-element-suffix-icon abc-form-element-error-icon {{icons.formFieldError}}"></span>
+                </span>
+            </div>
+            <div class="abc-form-element-underline"></div>
+        </div>
+        <abc-subscript [prefixId]="id" [hasSubscript]="hasSubscript"
+            [design]="design" [control]="control" [touched]="touched"
+            [invalid]="invalid" [error]="error" [hint]="hint">
+        </abc-subscript>
+    </ng-container>
+</div>

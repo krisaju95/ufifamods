@@ -1,0 +1,28 @@
+@mixin acDialogScrollBox() {
+	&:not(.abc-dialog-body-no-shadow) {
+		.abc-dialog-scrollbox-shadow {
+			position: absolute;
+			pointer-events: none;
+			opacity: 0;
+			right: 0;
+			left: 0;
+			height: 10px;
+			z-index: 1;
+			background-image: linear-gradient(rgba(0, 0, 0, 0.15) 0%, rgba(255, 255, 255, 0) 100%);
+			@include transition(opacity ease-in-out 0.2s);
+
+			&.abc-dialog-scrollbox-shadow-top {
+				top: 100%;
+			}
+
+			&.abc-dialog-scrollbox-shadow-bottom {
+				bottom: 100%;
+				transform: rotate(180deg);
+			}
+
+			&.abc-dialog-scrollbox-shadow-visible {
+				opacity: 1;
+			}
+		}
+	}
+}

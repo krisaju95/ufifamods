@@ -1,0 +1,17 @@
+<div class="abc-inset-loader-container" [class.abc-inset-overlay-container]="type == 'overlay'">
+    <div class="abc-inset-loader-content">
+        <h2 [id]="id + 'Header'" *ngIf="header || !footer" tabindex="0"
+            aria-live="assertive" aria-atomic="true"
+            class="abc-inset-loader-text abc-inset-loader-header-text no-focus-ring {{header ? '' : screenReaderClass}}">
+            <span [innerHTML]="(header || translations.loader.defaultScreenReaderText) | translate"></span>
+            <span *ngIf="footer" [class]="screenReaderClass" [innerHTML]="footer | translate"></span>
+        </h2>
+        <div class="abc-inset-loader-spinner-container">
+            <img class="abc-loading-spinner-image" [src]="abcSpinnerImages.default" aria-hidden="true" />
+        </div>
+        <h3 [id]="id + 'Footer'" *ngIf="footer" tabindex="0"
+            class="abc-inset-loader-text abc-inset-loader-footer-text no-focus-ring"
+            [innerHTML]="footer | translate">
+        </h3>
+    </div>
+</div>

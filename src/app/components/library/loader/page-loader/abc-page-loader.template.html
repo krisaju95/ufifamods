@@ -1,0 +1,20 @@
+<div class="abc-page-loader-container" [class.abc-page-loader-visible]="showLoader">
+    <div class="abc-page-loader-content">
+        <h2 id="abcPageLoaderHeader" *ngIf="header || !footer" [tabindex]="showLoader ? 0 : -1"
+            aria-live="assertive" aria-atomic="true"
+            class="abc-page-loader-text abc-page-loader-header-text no-focus-ring {{header ? '' : screenReaderClass}}">
+            <span [innerHTML]="(header || translations.loader.defaultScreenReaderText) | translate"></span>
+            <span *ngIf="footer" [class]="screenReaderClass" [innerHTML]="footer | translate"></span>
+        </h2>
+        <div class="abc-page-loader-spinner-container">
+            <img class="abc-loading-spinner-image" [src]="abcSpinnerImages.default" aria-hidden="true" />
+        </div>
+        <h3 id="abcPageLoaderFooter" *ngIf="footer" [tabindex]="showLoader ? 0 : -1"
+            class="abc-page-loader-text abc-page-loader-footer-text no-focus-ring"
+            [innerHTML]="footer | translate">
+        </h3>
+    </div>
+</div>
+<div id="abcPageHasLoadedScreenReaderText" *ngIf="!showLoader" role="alert" aria-live="assertive" [class]="screenReaderClass">
+    {{ (onCompletion || translations.loader.pageHasLoadedScreenReaderText) | translate }}
+</div>

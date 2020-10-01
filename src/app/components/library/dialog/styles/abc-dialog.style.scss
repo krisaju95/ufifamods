@@ -1,0 +1,267 @@
+@import "../../styles/abc-animations.scss";
+@import "../../styles/abc-mixins.scss";
+@import "../../styles/abc-constants.scss";
+@import "./abc-dialog.scrollbox.scss";
+
+@include scaleUpAnimation("dialogBodyAnimation", 0.9, 1);
+@include slideInAnimation("dialogBodyAnimationXS");
+@include fadeAnimation("dialogOverlayAnimation");
+@include fadeAnimation("dialogOverlayCloseAnimation", 1, 0);
+
+.abc-theme-dialog {
+	.abc-dialog-overlay {
+		display: flex;
+		flex-direction: column;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		align-items: center;
+		justify-content: center;
+		z-index: 1000;
+		overflow-y: auto;
+		@include animation(dialogOverlayAnimation, 300ms, ease);
+
+		&:not(.abc-dialog-transparent-overlay) {
+			background: getConstant($color-palette, "overlay");
+		}
+	
+		&.abc-dialog-closing {
+			@include animation(dialogOverlayCloseAnimation, 300ms, ease, forwards);
+		}
+
+		&.abc-dialog-loader-visible {
+			cursor: progress !important;
+		}
+
+		@include isIosDevice() {
+			touch-action: none;
+			overflow: hidden;
+		}
+	
+		.abc-dialog-wrapper {
+			width: 100%;
+			height: auto;
+			max-height: 70vh;
+			display: flex;
+			flex-direction: column;
+			position: relative;
+			@include animation(dialogBodyAnimation, 300ms, ease);
+
+			&.abc-dialog-size-480 {
+				max-width: 480px;
+			}
+
+			&.abc-dialog-size-560 {
+				max-width: 560px;
+			}
+
+			&.abc-dialog-size-640 {
+				max-width: 640px;
+			}
+
+			&.abc-dialog-size-720 {
+				max-width: 720px;
+			}
+
+			@media (max-width: getConstant($breakpoints, "max-tablet")) {
+				width: 100%;
+				height: 100%;
+				max-height: 100%;
+				justify-content: flex-end;
+				@include animation(dialogBodyAnimationXS, 300ms, ease);
+
+				&.abc-dialog-size-480,
+				&.abc-dialog-size-560,
+				&.abc-dialog-size-640,
+				&.abc-dialog-size-720 {
+					width: 100%;
+					max-height: 100%;
+					max-width: 100%;
+					margin-bottom: 0;
+				}
+			}
+	
+			.abc-dialog {
+				padding: 0;
+				margin-bottom: 5vh;
+				display: flex;
+				width: 100%;
+				flex-direction: column;
+				position: relative;
+				box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+				@include customScrollBar(".abc-dialog-body");
+
+				@include isIEBrowser() {
+					display: block;
+					flex-direction: unset;
+					margin-bottom: 0;
+
+					.abc-dialog-footer {
+						margin-bottom: 5vh;
+					}
+				}
+	
+				&.abc-dialog-content-scrollbar-enabled {
+					max-height: 70vh;
+					@include acDialogScrollBox();
+
+					.abc-dialog-header, .abc-dialog-footer {
+						position: relative;
+					}
+
+					.abc-dialog-body {
+						overflow-y: auto; // for browsers where overflow overlay is not supported
+						overflow-y: overlay;
+					}
+
+					@include isIEBrowser() {
+						.abc-dialog-footer {
+							margin-bottom: 0;
+						}
+
+						.abc-dialog-body {
+							max-height: 40vh;
+						}
+					}
+				}
+	
+				@media (max-width: getConstant($breakpoints, "max-tablet")) {
+					width: 100%;
+					max-height: 100%;
+					max-width: 100%;
+					margin-bottom: 0;
+
+					&.abc-dialog-content-scrollbar-enabled {
+						width: 100%;
+						max-height: 100%;
+						max-width: 100%;
+						margin-bottom: 0;
+					}
+	
+					&.abc-dialog-full-screen-xs-enabled {
+						height: 100%;
+					}
+				}
+
+				&::before {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					content: "";
+					opacity: 0;
+					pointer-events: none;
+					@include transition(opacity ease 300ms);
+				}
+	
+				&.abc-show-dialog-overlay {
+					cursor: progress;
+	
+					&::before {
+						pointer-events: all;
+						opacity: 0.75;
+						z-index: 2;
+					}
+	
+					.abc-button.abc-button-show-inset-loader {
+						position: relative;
+						z-index: 2;
+					}
+				}
+
+				.abc-dialog-overlay-loader {
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					z-index: 2;
+					display: flex;
+					position: absolute;
+					transform: translateZ(0.001px);
+
+					&.abc-animate-loader {
+						@include animation(dialogOverlayAnimation, 500ms, ease);
+					}
+
+					.abc-loader-wrapper .abc-loader-container {
+						padding: 20px 0;
+					}
+				}
+	
+				.abc-dialog-header {
+					.abc-dialog-heading {
+						display: inline-flex;
+						max-width: calc(100% - 50px);
+						margin: 0;
+					}
+				}
+	
+				.abc-dialog-body {
+					@media (max-width: getConstant($breakpoints, "max-tablet")) {
+						flex: 1;
+						-webkit-overflow-scrolling: touch;
+					}
+				}
+	
+				.abc-dialog-footer .abc-dialog-footer-content {
+					position: relative;
+					display: flex;
+					width: 100%;
+					flex-direction: row-reverse;
+					justify-content: flex-end;
+
+					@media (min-width: getConstant($breakpoints, "min-tablet")) {
+						min-height: 80px;
+					}
+
+					&.abc-dialog-footer-border {
+						border-top: 1px solid getConstant($color-palette, "border");
+					}
+	
+					.abc-dialog-footer-cta {
+						&:first-child {
+							justify-content: flex-end;
+						}
+	
+						&:last-child {
+							flex: 1;
+							display: flex;
+							align-items: center;
+						}
+					}
+	
+					@media (max-width: getConstant($breakpoints, "max-mobile")) {
+						padding-bottom: 30px;
+						flex-direction: column;
+						align-items: stretch;
+					}
+				}
+	
+				.abc-dialog-close-button {
+					cursor: pointer;
+					background: transparent;
+					border: none;
+					color: inherit;
+					position: absolute;
+					top: 0;
+					padding: 0;
+
+					&.abc-dir-ltr {
+						right: 0;
+					}
+
+					&.abc-dir-rtl {
+						left: 0;
+					}
+
+					.abc-dialog-close-icon::before {
+						margin: 0 !important;
+					}
+				}
+			}
+		}
+	}
+}

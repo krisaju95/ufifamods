@@ -1,0 +1,61 @@
+@import "../../styles/abc-mixins.scss";
+@import "../../styles/abc-animations.scss";
+@import "../../styles/abc-constants.scss";
+
+@import "../styles/abc-form-element.constants.scss";
+
+@include scaleUpAnimation('errorIcon');
+
+@include customAnimation('subscriptText') {
+    from { transform: translateY(-20px); opacity: 0.5; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+$abc-error-text-color: getConstant($color-palette, "red");
+
+$abc-hint-text-color: getConstant($color-palette, "sub-text");
+
+abc-subscript {
+    display: block;
+    width: 100%;
+}
+
+.abc-form-element-subscript-text {
+    overflow: hidden;
+    margin: 5px 0;
+    min-height: getSize(20);
+    display: flex;
+    width: 100%;
+    align-items: center;
+    border-color: transparent !important;
+    border-top: none !important;
+    border-bottom: none !important;
+
+    &.abc-dir-ltr {
+        text-align: left;
+    }
+
+    &.abc-dir-rtl {
+        text-align: right;
+    }
+
+    .abc-form-element-material-subscript-text {
+        font-size: getSize(12);
+        position: relative;
+        @include animation(subscriptText, 0.15s, ease);
+
+        &.abc-form-element-material-hint-text {
+            color: $abc-hint-text-color;
+        }
+
+        &.abc-form-element-material-error-text {
+            color: $abc-error-text-color;
+        }
+    }
+}
+
+.abc-form-element-error-icon {
+    font-size: getSize(18);
+    color: $abc-error-text-color;
+    @include animation(errorIcon, 150ms, ease-in-out);
+}

@@ -1,0 +1,58 @@
+@import "../styles/abc-animations.scss";
+
+/*
+Visible margin between the active element and the focus ring. Set this to
+zero if the ring should stick to the edges of the element
+*/
+$focus-ring-margin: 5px;
+
+@mixin focusRingAppearance() {
+    border: 1px solid rgba(0, 0, 0, 0.50);
+    border-radius: 3px;
+    box-shadow: 0px 0px 15px 7px rgba(0, 10, 20, 0.2), inset 0px 0px 3px 2px #FFFFFF;
+}
+
+/*
+Set the outline as none for all the elements you wish to target
+*/
+a, button, [tabindex="0"], input, select, h1, h2, h3, h4 {
+    outline: none;
+}
+
+.abc-focus-ring-active {
+    a,
+    button,
+    .abc-form-element-wrapper,
+    .abc-button-wrapper,
+    h1, h2, h3, h4,
+    div[tabindex="0"] {
+        position: relative;
+    
+        &:not(.no-focus-ring):not(.abc-button):not(.abc-sr-only) {
+            &::after {
+                content: "";
+                pointer-events: none;
+                position: absolute;
+                left: -#{$focus-ring-margin};
+                top: -#{$focus-ring-margin};
+                width: calc(100% + #{$focus-ring-margin * 2});
+                height: calc(100% + #{$focus-ring-margin * 2});
+                @include focusRingAppearance();
+                box-sizing: border-box;
+                opacity: 0;
+                z-index: 1;
+                @include transition(opacity ease 200ms);
+            }
+
+            &.rounded-focus-ring::after {
+                border-radius: 999px;
+            }
+        }
+    
+        &:focus, &.abc-form-element-focussed, &.abc-button-focussed {
+            &::after {
+                opacity: 1 !important;
+            }
+        }
+    }
+}

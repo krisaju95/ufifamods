@@ -1,0 +1,23 @@
+@import "./abc-animations.scss";
+@import "./abc-constants.scss";
+
+@include customAnimation("abcRipple") {
+    from { width: 0; height: 0; opacity: 0.25 }
+    to { width: 400px; height: 400px; opacity: 0 }
+};
+
+.abc-ripple {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    border-radius: 50%;
+    @include animation(abcRipple, 0.5s, linear, forwards);
+
+    &.abc-ripple-theme-light {
+        background-color: getConstant($color-palette, "white");
+    }
+
+    &.abc-ripple-theme-dark {
+        background-color: getConstant($color-palette, "black");
+    }
+}

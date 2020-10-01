@@ -1,0 +1,32 @@
+@import "./abc-form-element.constants.scss";
+@import "../../styles/abc-animations.scss";
+
+.abc-form-element-material-wrapper {
+    .abc-form-element-underline {
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+        @include transition(background-color ease-in-out 0.2s);
+    }
+
+    &:hover {
+        .abc-form-element-underline {
+            background-color: getConstant($color-palette, "blue-gray");
+        }
+    }
+
+    &.abc-form-element-focussed {
+        .abc-form-element-underline {
+            background-color: getConstant($color-palette, "text");
+        }
+    }
+
+    &.abc-form-element-invalid {
+        .abc-form-element-underline, &:hover .abc-form-element-underline {
+            background-color: getConstant($color-palette, "red");
+        }
+    }
+}

@@ -1,0 +1,486 @@
+/*
+This variable maintains the list of supported design. When you wish to create a new
+design variant, make sure to add it to this list and also add the individual design
+properties to the constants below. When you wish to de-scope any particular
+design, simply remove that design name from this list and all the associated code
+will be removed from your project's bundle
+*/
+$abc-supported-button-themes: "red" "blue";
+
+/*
+This variable maintains the list of button levels
+*/
+$abc-supported-button-levels: "primary" "secondary" "tertiary";
+
+/*
+The following constants are used for buttons.
+*/
+$abc-button-constants: (
+    /*
+    Set the height of the button for each theme
+    */
+    "height": (
+        "red": getSize(40),
+        "blue": getSize(50)
+    ),
+    /*
+    Set the min-width of the button for each theme
+    */
+    "min-width": (
+        "red": getSize(130),
+        "blue": getSize(130)
+    ),
+    /*
+    Set the horizontal padding of the button for each theme.
+    */
+    "padding": (
+        "red": 40px,
+        "blue": 30px
+    ),
+    /*
+    Set the font-size of the button for each theme
+    */
+    "font-size": (
+        "red": getSize(16),
+        "blue": getSize(14)
+    ),
+    /*
+    Set the font-weight of the button for each theme
+    */
+    "font-weight": (
+        "red": getConstant($font-weights, "normal"),
+        "blue": getConstant($font-weights, "semi-bold")
+    ),
+    /*
+    Set the border-width of the button for each theme
+    */
+    "border-width": (
+        "red": 1px,
+        "blue": 2px
+    ),
+    /*
+    Set the border-radius of the button for each theme
+    */
+    "border-radius": (
+        "red": 0,
+        "blue": 0
+    ),
+    /*
+    Set the style properties for all primary level buttons for each theme
+    */
+    "primary": (
+        /*
+        Set the font color of the button for each theme for each state of the button
+        */
+        "color": (
+            /*
+            Set the font color of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "white"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the font color of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "white"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the font color of the button for each theme for the active state
+            */
+            "active": (
+                "red": getConstant($color-palette, "white"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the font color of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "off-white-2"),
+                "blue":getConstant($color-palette, "blue-gray")
+            )
+        ),
+        /*
+        Set the background of the button for each theme for each state of the button
+        */
+        "background": (
+            /*
+            Set the background of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "red"),
+                "blue": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the background of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "dark-red"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the background of the button for each theme for the active state
+            */
+            "active": (
+                "red":getConstant($color-palette, "blue-gray"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the background of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "sub-text"),
+                "blue": getConstant($color-palette, "light-gray")
+            )
+        ),
+        /*
+        Set the background of the button for each theme for each state of the button
+        */
+        "border-color": (
+            /*
+            Set the border-color of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "red"),
+                "blue": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the border-color of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "dark-red"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the border-color of the button for each theme for the active state
+            */
+            "active": (
+                "red":getConstant($color-palette, "blue-gray"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the border-color of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "sub-text"),
+                "blue": getConstant($color-palette, "light-gray")
+            )
+        ),
+        /*
+        Set the box-shadow of the button for each theme for each state of the button
+        */
+        "box-shadow": (
+            /*
+            Set the box-shadow of the button for each theme for the default state
+            */
+            "default": (
+                "red": none,
+                "blue": none
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": none,
+                "blue": none
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the active state
+            */
+            "active": (
+                "red": none,
+                "blue": none
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": none,
+                "blue": none
+            )
+        ),
+        /*
+        Set the image URLs for the spinner loading indicators shown within the button
+        */
+        "loader": (
+            "red": "/assets/images/common/loader/button-inset-loader-red.png",
+            "blue": "/assets/images/common/loader/button-inset-loader-blue.png"
+        )
+    ),
+    /*
+    Set the style properties for all secondary level buttons for each theme
+    */
+    "secondary": (
+        /*
+        Set the font color of the button for each theme for each state of the button
+        */
+        "color": (
+            /*
+            Set the font color of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "red"),
+                "blue": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the font color of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "white"),
+                "blue": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the font color of the button for each theme for the active state
+            */
+            "active": (
+                "red": getConstant($color-palette, "white"),
+                "blue": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the font color of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "off-white-2"),
+                "blue":getConstant($color-palette, "blue-gray")
+            )
+        ),
+        /*
+        Set the background of the button for each theme for each state of the button
+        */
+        "background": (
+            /*
+            Set the background of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "white"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the background of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "dark-red"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the background of the button for each theme for the active state
+            */
+            "active": (
+                "red":getConstant($color-palette, "blue-gray"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the background of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "sub-text"),
+                "blue": getConstant($color-palette, "light-gray")
+            )
+        ),
+        /*
+        Set the background of the button for each theme for each state of the button
+        */
+        "border-color": (
+            /*
+            Set the border-color of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "red"),
+                "blue": getConstant($color-palette, "white")
+            ),
+            /*
+            Set the border-color of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "dark-red"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the border-color of the button for each theme for the active state
+            */
+            "active": (
+                "red":getConstant($color-palette, "blue-gray"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the border-color of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "sub-text"),
+                "blue": getConstant($color-palette, "light-gray")
+            )
+        ),
+        /*
+        Set the box-shadow of the button for each theme for each state of the button
+        */
+        "box-shadow": (
+            /*
+            Set the box-shadow of the button for each theme for the default state
+            */
+            "default": (
+                "red": none,
+                "blue": 0 0 15px 0 rgba(0, 0, 0, 0.2)
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": none,
+                "blue": 0 0 20px 0 rgba(0, 0, 0, 0.2)
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the active state
+            */
+            "active": (
+                "red": none,
+                "blue": 0 0 20px 0 rgba(0, 0, 0, 0.2)
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": none,
+                "blue": none
+            )
+        )
+    ),
+    /*
+    Set the style properties for all tertiary level buttons for each theme
+    */
+    "tertiary": (
+        /*
+        Set the font color of the button for each theme for each state of the button
+        */
+        "color": (
+            /*
+            Set the font color of the button for each theme for the default state
+            */
+            "default": (
+                "red": getConstant($color-palette, "red"),
+                "blue": getConstant($color-palette, "blue")
+            ),
+            /*
+            Set the font color of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": getConstant($color-palette, "dark-red"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the font color of the button for each theme for the active state
+            */
+            "active": (
+                "red":getConstant($color-palette, "blue-gray"),
+                "blue": getConstant($color-palette, "dark-blue")
+            ),
+            /*
+            Set the font color of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": getConstant($color-palette, "off-white-2"),
+                "blue":getConstant($color-palette, "blue-gray")
+            )
+        ),
+        /*
+        Set the background of the button for each theme for each state of the button
+        */
+        "background": (
+            /*
+            Set the background of the button for each theme for the default state
+            */
+            "default": (
+                "red": transparent,
+                "blue": transparent
+            ),
+            /*
+            Set the background of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": transparent,
+                "blue": transparent
+            ),
+            /*
+            Set the background of the button for each theme for the active state
+            */
+            "active": (
+                "red": transparent,
+                "blue": transparent
+            ),
+            /*
+            Set the background of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": transparent,
+                "blue": transparent
+            )
+        ),
+        /*
+        Set the background of the button for each theme for each state of the button
+        */
+        "border-color": (
+            /*
+            Set the border-color of the button for each theme for the default state
+            */
+            "default": (
+                "red": transparent,
+                "blue": transparent
+            ),
+            /*
+            Set the border-color of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": transparent,
+                "blue": transparent
+            ),
+            /*
+            Set the border-color of the button for each theme for the active state
+            */
+            "active": (
+                "red": transparent,
+                "blue": transparent
+            ),
+            /*
+            Set the border-color of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": transparent,
+                "blue": transparent
+            )
+        ),
+        /*
+        Set the box-shadow of the button for each theme for each state of the button
+        */
+        "box-shadow": (
+            /*
+            Set the box-shadow of the button for each theme for the default state
+            */
+            "default": (
+                "red": none,
+                "blue": none
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the hover/focus state
+            */
+            "hover": (
+                "red": none,
+                "blue": none
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the active state
+            */
+            "active": (
+                "red": none,
+                "blue": none
+            ),
+            /*
+            Set the box-shadow of the button for each theme for the disabled state
+            */
+            "disabled": (
+                "red": none,
+                "blue": none
+            )
+        )
+    )
+)

@@ -1,0 +1,12 @@
+@import "../../styles/abc-constants.scss";
+@import "../../styles/abc-mixins.scss";
+@import "../../styles/abc-animations.scss";
+@import "../styles/abc-form-element.constants.scss";
+
+.abc-form-element-container {
+    .abc-form-element-material-wrapper {
+        &.abc-form-element-input-wrapper {
+            cursor: text;
+        }
+    }
+}

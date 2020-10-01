@@ -1,0 +1,38 @@
+@import "../../styles/abc-animations.scss";
+@import "../../styles/abc-mixins.scss";
+@import "../../styles/abc-constants.scss";
+
+@include spinAnimation("rotate");
+
+.abc-inset-loader-container {
+    height: 100%;
+    display: flex;
+    cursor: progress;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+
+    &.abc-inset-overlay-container {
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        position: absolute;
+        transform: translateZ(0.001px);
+        background-color: getConstant($color-palette, "white");
+    }
+
+    .abc-inset-loader-text {
+        display: inline-flex;
+        margin: 20px 0;
+    }
+
+    .abc-inset-loader-spinner-container {
+        .abc-loading-spinner-image {
+            width: 160px;
+            height: 160px;
+            @include animation(rotate, 2s, linear, false, infinite, false);
+        }
+    }
+}

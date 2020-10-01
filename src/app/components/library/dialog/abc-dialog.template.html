@@ -1,0 +1,92 @@
+<div [id]="id" class="abc-theme-dialog" role="dialog"
+	[attr.aria-labelledby]="id + 'Header'" [attr.aria-describedby]="bodyText ? (id + 'Body') : null"
+	aria-modal="true" (keydown.escape)="onEscape()" abcTrapFocus [attr.aria-busy]="loader.showLoader"
+	[class.abc-dialog-has-target-parent]="!!targetParent">
+	<div class="abc-dialog-overlay {{overlayClass}}" [class.no-highlight]="loader.showLoader"
+		[class.abc-dialog-closing]="closing" [class.abc-dialog-loader-visible]="loader.showLoader"
+		(click)="onOverlayClick($event)">
+		<div class="abc-dialog-wrapper abc-dialog-size-{{size}} abc-typography abc-{{typography}}-typography">
+			<div class="abc-dialog abc-dialog-theme-{{theme}}
+				abc-dialog-full-screen-xs-{{(fullScreenOnMobile ? 'enabled' : 'disabled')}}
+				abc-dialog-content-scrollbar-{{(contentScrollEnabled ? 'enabled' : 'disabled')}} {{dialogCustomClass}}"
+				[class.abc-show-dialog-overlay]="loader.type == 'button' && loader.showLoader"
+				(click)="onDialogClick($event)">
+				<abc-inset-loader *ngIf="loader.type == 'overlay' && loader.showLoader"
+					class="abc-dialog-overlay-loader" abcTrapFocus
+					[class.abc-animate-loader]="animateLoader" type="overlay"
+					[header]="loader.header" [footer]="loader.footer">
+				</abc-inset-loader>
+				<div class="abc-dialog-header" *ngIf="heading">
+					<span class="{{screenReaderClass}} no-focus-ring" *ngIf="translations.dialog.start">
+						{{translations.dialog.start | translate}}
+					</span>
+					<h1
+						[id]="id + 'Header'"
+						class="abc-dialog-heading abc-dir-{{textDirection}} {{hideHeading ? screenReaderClass : ''}}"
+						[class.no-focus-ring]="hideHeading"
+						[innerHTML]="heading | translate"
+						tabindex="0">
+					</h1>
+					<div class="abc-dialog-scrollbox-shadow abc-dialog-scrollbox-shadow-top"
+						[class.abc-dialog-scrollbox-shadow-visible]="scrollBoxShadow.top">
+					</div>
+				</div>
+				<div [id]="id + 'Body'" class="abc-dialog-body {{bodyPanelClass}}"
+					[class.abc-dialog-body-with-footer]="CTAs.length > 0 || footerTemplate"
+					(scroll)="toggleScrollBoxShadows()">
+					<div *ngIf="bodyText" [innerHTML]="bodyText | translate | safe : 'html'"></div>
+					<ng-template acDialogContentInsertion [ngTemplateOutlet]="templateRef"></ng-template>
+				</div>
+				<div class="abc-dialog-footer {{footerPanelClass}}" *ngIf="CTAs.length > 0 || footerTemplate">
+					<div class="abc-dialog-scrollbox-shadow abc-dialog-scrollbox-shadow-bottom"
+						[class.abc-dialog-scrollbox-shadow-visible]="scrollBoxShadow.bottom">
+					</div>
+					<div class="abc-dialog-footer-content">
+						<ng-container *ngIf="footerTemplate" [ngTemplateOutlet]="footerTemplate"></ng-container>
+						<div *ngFor="let CTA of CTAs; let index = index" class="abc-dialog-footer-cta abc-dir-{{textDirection}}">
+							<!-- For the legacy dialog designs, we only show two dialog CTAs in the footer. The first one is of type primary and the other is of type secondary. For kilo dialogs, the first button is of type primary, and the last button is of type tertiary. All other buttons are of type secondary. -->
+							<abc-button [id]="CTA.id || (id + 'Button' + index)"
+								[level]="CTA.type || (index == 0 ? 'primary' : (
+										(index == (CTAs.length - 1)) ? ((CTA.theme || (theme == 'kilo' ? 'blue' : 'red')) == 'blue' ? 'tertiary' : (CTAs.length > 2 ? 'tertiary' : 'secondary')) : 'secondary'
+									)
+								)"
+								[theme]="CTA.theme || (theme == 'kilo' ? 'blue' : 'red')"
+								fullWidth="mobile"
+								[showInsetLoader]="loader.type == 'button' && loader.showLoader && index == 0"
+								(clicked)="dialogCTAClick(CTA)"
+								[DTM]="CTA.DTM">
+								<span [attr.aria-hidden]="loader.type == 'button' && loader.showLoader && index == 0">
+									{{ CTA.label | translate }}
+								</span>
+								<ng-container *ngIf="loader.type == 'button' && loader.showLoader && index == 0">
+									<span [class]="screenReaderClass" *ngIf="loader.screenReaderText">{{ loader.screenReaderText | translate }}</span>
+									<ng-container *ngIf="!loader.screenReaderText">
+										<span [class]="screenReaderClass" *ngIf="loader.header">
+											{{ loader.header | translate }}
+										</span>
+										<span [class]="screenReaderClass" *ngIf="loader.footer">
+											{{ loader.footer | translate }}
+										</span>
+										<span [class]="screenReaderClass" *ngIf="!(loader.header || loader.footer)">
+											{{ translations.loader.defaultScreenReaderText | translate}}
+										</span>
+									</ng-container>
+								</ng-container>
+							</abc-button>
+						</div>
+					</div>
+				</div>
+				<button *ngIf="dialogCloseEnabled" class="abc-dialog-close-button abc-dir-{{textDirection}}" [class.no-focus-ring]="hideHeading" (click)="close()" [id]="id + 'CloseButton'" data-se-id="closeLightBox" [attr.data-analytics-track]="closeButtonDTM ? closeButtonDTM.track : null" [attr.data-analytics-val]="closeButtonDTM ? closeButtonDTM.val : null">
+					<span class="abc-dialog-close-icon" [class]="icons.close"></span>
+					<span [class]="screenReaderClass">
+						{{translations.close | translate}}
+					</span>
+				</button>
+				<a href="javascript: void(0)" *ngIf="translations.dialog.end"
+					class="{{screenReaderClass}} no-focus-ring" (click)="setInitialFocusState()">
+					{{translations.dialog.end | translate}}
+				</a>
+			</div>
+		</div>
+	</div>
+</div>

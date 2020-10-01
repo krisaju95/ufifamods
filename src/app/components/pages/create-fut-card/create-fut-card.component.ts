@@ -5,4 +5,6 @@ import { Component } from '@angular/core';
     templateUrl: './create-fut-card.component.html',
     styleUrls: ['./create-fut-card.component.scss']
 })
-export class CreateFUTCardComponent { }
+export class CreateFUTCardComponent {
+    phoneNumber: string = "2314512312";
+}

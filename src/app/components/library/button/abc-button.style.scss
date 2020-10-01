@@ -1,0 +1,192 @@
+@import "../styles/abc-constants.scss";
+@import "../styles/abc-mixins.scss";
+@import "../styles/abc-animations.scss";
+@import "./abc-button.style-config.scss";
+
+@include spinAnimation("rotate");
+
+.abc-button-wrapper {
+    display: inline-flex;
+    
+    .abc-button {
+        position: relative;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        height: getSize(50);
+        min-width: getSize(150);
+        padding: 0 getSize(30);
+        font-weight: getConstant($font-weights, "normal");
+        font-size: getSize(16);
+        cursor: pointer;
+        border-radius: 2.5px;
+        background-color: getConstant($color-palette, "off-white");
+        border: 1px solid getConstant($color-palette, "off-white");
+        color: getConstant($color-palette, "text");
+        white-space: nowrap;
+        text-decoration: none;
+        overflow: hidden;
+        @include transition(all ease-in-out 150ms);
+    
+        > * {
+            pointer-events: none;
+        }
+    
+        &.abc-button-has-inset-loader {
+            .abc-button-content {
+                position: relative;
+            }
+
+            .abc-button-text {
+                position: relative;
+                line-height: 20px;
+                left: 0;
+                right: 0;
+                @include transition(left ease 300ms, right ease 300ms);
+            }
+    
+            .abc-button-inset-loader {
+                position: absolute;
+                content: "";
+                width: 20px;
+                height: 20px;
+                top: 0;
+                background-size: contain;
+                background-repeat: no-repeat;
+                background-position: center center;
+                opacity: 0;
+                @include transition(opacity ease 150ms);
+                @include animation(rotate, 1.8s, linear, false, infinite, false);
+            }
+
+            &.abc-dir-ltr .abc-button-inset-loader {
+                right: -15px;
+            }
+
+            &.abc-dir-rtl .abc-button-inset-loader {
+                left: -15px;
+            }
+    
+            &.abc-button-show-inset-loader {
+                cursor: progress;
+    
+                &.abc-dir-ltr .abc-button-text {
+                    left: -15px;
+                }
+    
+                &.abc-dir-rtl .abc-button-text {
+                    right: -15px;
+                }
+    
+                .abc-button-inset-loader {
+                    opacity: 1;
+                }
+            }
+        }
+    
+        @each $theme in $abc-supported-button-themes {
+            &.abc-button-theme-#{$theme} {
+                padding: 0 getConstant($abc-button-constants, "padding", $theme);
+                min-width: getConstant($abc-button-constants, "min-width", $theme);
+                font-size: getConstant($abc-button-constants, "font-size", $theme);
+                font-weight: getConstant($abc-button-constants, "font-weight", $theme);
+                border-width: getConstant($abc-button-constants, "border-width", $theme);
+                border-radius: getConstant($abc-button-constants, "border-radius", $theme);
+    
+                &.abc-button-height-default {
+                    height: getConstant($abc-button-constants, "height", $theme);
+                }
+    
+                @if ($theme == "red") {
+                    transition: none;
+                    
+                    .abc-ripple {
+                        display: none;
+                    }
+                }
+                
+                @each $level in $abc-supported-button-levels {
+                    &.abc-button-type-#{$level} {
+                        color: getConstant($abc-button-constants, $level, "color", "default", $theme);
+                        background: getConstant($abc-button-constants, $level, "background", "default", $theme);
+                        border-color: getConstant($abc-button-constants, $level, "border-color", "default", $theme);
+                        box-shadow: getConstant($abc-button-constants, $level, "box-shadow", "default", $theme);
+    
+                        @if ($level == "tertiary") {
+                            height: auto;
+                            min-width: auto;
+                            padding: 0;
+
+                            .abc-ripple {
+                                display: none;
+                            }
+                        }
+    
+                        @if ($level == "primary") {
+                            &.abc-button-has-inset-loader {
+                                .abc-button-inset-loader {
+                                    background-image: url(getConstant($abc-button-constants, $level, "loader", $theme));
+                                }
+                
+                                &.abc-button-show-inset-loader {
+                                    color: getConstant($abc-button-constants, $level, "color", "default", $theme) !important;
+                                    background: getConstant($abc-button-constants, $level, "background", "default", $theme) !important;
+                                    border-color: getConstant($abc-button-constants, $level, "border-color", "default", $theme) !important;
+                                }
+                            }
+                        }
+    
+                        &:hover, &:focus {
+                            color: getConstant($abc-button-constants, $level, "color", "hover", $theme);
+                            background: getConstant($abc-button-constants, $level, "background", "hover", $theme);
+                            border-color: getConstant($abc-button-constants, $level, "border-color", "hover", $theme);
+                            box-shadow: getConstant($abc-button-constants, $level, "box-shadow", "hover", $theme);
+    
+                            @if ($level == "tertiary") {
+                                text-decoration: underline;
+                            }
+                        }
+    
+                        &:active {
+                            color: getConstant($abc-button-constants, $level, "color", "active", $theme);
+                            background: getConstant($abc-button-constants, $level, "background", "active", $theme);
+                            border-color: getConstant($abc-button-constants, $level, "border-color", "active", $theme);
+                            box-shadow: getConstant($abc-button-constants, $level, "box-shadow", "active", $theme);
+    
+                            @if ($level == "tertiary") {
+                                text-decoration: underline;
+                            }
+                        }
+    
+                        &:disabled, &[aria-disabled=true] {
+                            cursor: not-allowed !important;
+                            color: getConstant($abc-button-constants, $level, "color", "disabled", $theme) !important;
+                            background: getConstant($abc-button-constants, $level, "background", "disabled", $theme) !important;
+                            border-color: getConstant($abc-button-constants, $level, "border-color", "disabled", $theme) !important;
+                            box-shadow: getConstant($abc-button-constants, $level, "box-shadow", "disabled", $theme) !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    &.abc-button-fullWidth {
+        width: 100%;
+
+        .abc-button {
+            width: 100%;
+        }
+    }
+
+    &.abc-button-fullWidthXS {
+        @media (max-width: getConstant($breakpoints, "max-mobile")) {
+            width: 100% !important;
+
+            .abc-button {
+                width: 100% !important;
+            }
+        }
+    }
+}

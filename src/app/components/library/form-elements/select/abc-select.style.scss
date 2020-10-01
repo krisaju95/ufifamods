@@ -1,0 +1,367 @@
+@import "../../styles/abc-mixins.scss";
+@import "../../styles/abc-constants.scss";
+@import "../../styles/abc-animations.scss";
+@import "../styles/abc-form-element.constants.scss";
+
+@include fadeAnimation('optionsPanelFadeIn', 0.5, 1);
+@include customAnimation("optionsPanelOpen") {
+    from { transform: scale(0.95); opacity: 0.5; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+.abc-form-element-container {
+    .abc-form-element-material-wrapper {
+        .abc-form-element-select-trigger {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            text-align: center;
+            font-size: getSize(18);
+            transform: scaleY(1);
+            pointer-events: none;
+            @include transition(transform ease 300ms);
+
+            &.options-panel-displayed {
+                transform: scaleY(-1);
+            }
+
+            &.abc-dir-ltr {
+                right: 0;
+            }
+
+            &.abc-dir-rtl {
+                left: 0;
+            }
+        }
+
+        &.abc-form-element-select-wrapper {
+            position: relative;
+            cursor: pointer;
+
+            .abc-form-element-select {
+                cursor: pointer;
+                position: relative;
+                top: 0;
+                opacity: 0;
+
+                &.abc-dir-ltr {
+                    padding-right: 40px !important;
+                }
+
+                &.abc-dir-rtl {
+                    padding-left: 40px !important;
+                }
+
+                &.abc-form-element-custom-select {
+                    color: transparent;
+                    display: flex;
+                    align-items: center;
+
+                    div {
+                        display: flex;
+                        align-items: center;
+                        @include textOverflow();
+
+                        &.abc-dir-ltr {
+                            &.prefix-icon-container, &.prefix-image-container {
+                                padding-right: 10px;
+                            }
+    
+                            &.suffix-icon-container, &.suffix-image-container {
+                                padding-left: 10px;
+                            }
+                        }
+
+                        &.abc-dir-rtl {
+                            &.prefix-icon-container, &.prefix-image-container {
+                                padding-left: 10px;
+                            }
+    
+                            &.suffix-icon-container, &.suffix-image-container {
+                                padding-right: 10px;
+                            }
+                        }
+
+                        &.suffix-image-container,
+                        &.prefix-image-container {
+                            width: 30px;
+
+                            img {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+
+                &:not(.abc-form-element-custom-select) {
+                    appearance: none;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    -ms-appearance: none;
+                    -o-appearance: none;
+
+                    &::-ms-expand {
+                        display: none;
+                    }
+                }
+
+                &.option-selected {
+                    opacity: 1;
+                    @include textOverflow();
+                }
+            }
+
+            &.abc-form-element-disabled-select {
+                .abc-form-element-select-trigger {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+}
+
+.abc-form-element-options-panel-container {
+    opacity: 1;
+    transform: scale(1);
+    @include transition(opacity ease 250ms, transform ease-in-out 250ms);
+    @include customScrollBar('.abc-form-element-options-list');
+
+    &.closing {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    .abc-form-element-options-panel {
+        width: 100%;
+        cursor: pointer;
+        max-height: getSize(350);
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+        background-color: getConstant($color-palette, "white");
+        transform-origin: center center;
+        @include animation(optionsPanelOpen, 0.2s);
+
+        &.abc-options-panel-borderless {
+            width: calc(100% + 40px);
+            left: -20px;
+        }
+
+        .abc-form-element-options-panel-label {
+            display: none;
+            padding: 10px;
+            background-color: getConstant($color-palette, "black");
+            color: getConstant($color-palette, "white");
+        }
+
+        .abc-form-element-options-list {
+            overflow-x: hidden;
+            overflow-y: auto;
+            padding: 0;
+            margin: 0;
+            position: relative;
+
+            .abc-form-element-option {
+                list-style: none;
+                padding: 10px;
+                margin: 0;
+                font-size: getSize(14);
+                color: getConstant($color-palette, "text");
+                background-color: getConstant($color-palette, "white");
+                font-weight: getConstant($font-weights, "normal");
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                position: relative;
+                width: 100%;
+    
+                div {
+                    line-height: getSize(24);
+                    word-break: break-word;
+                }
+
+                .abc-form-element-option-text {
+                    flex: 1;
+                    @include textOverflow();
+                }
+    
+                .suffix-icon-container,
+                .prefix-icon-container,
+                .suffix-image-container,
+                .prefix-image-container {
+                    width: 30px;
+                    display: flex;
+                    align-items: center;
+                    font-size: getSize(18);
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .prefix-icon-container,
+                .prefix-image-container {
+                    &.abc-dir-ltr {
+                        padding-right: 10px;
+                    }
+
+                    &.abc-dir-rtl {
+                        padding-left: 10px;
+                    }
+                }
+
+                .suffix-icon-container,
+                .suffix-image-container {
+                    &.abc-dir-ltr {
+                        padding-left: 10px;
+                    }
+
+                    &.abc-dir-rtl {
+                        padding-right: 10px;
+                    }
+                }
+
+                .abc-selected-option-checkmark {
+                    opacity: 0;
+                    transform: scale(0);
+                    display: none;
+                    @include transition(opacity ease 300ms, transform ease 300ms);
+                }
+    
+                &:hover {
+                    background-color: getConstant($color-palette, "off-white-2");
+                }
+
+                &.selected-option {
+                    background-color: getConstant($color-palette, "light-gray");
+                }
+
+                &.disabled-option {
+                    cursor: not-allowed;
+                    color: getConstant($abc-formfield-constants, "input", "color", $abc-default-material-appearance, "disabled");
+                    background-color: getConstant($abc-formfield-constants, "background", "disabled");
+                }
+            }
+        }
+
+        .no-results-found {
+            padding: 20px;
+            text-align: center;
+            font-style: italic;
+            font-size: getSize(14);
+            color: getConstant($color-palette, "text");
+            background-color: getConstant($color-palette, "white");
+        }
+
+        &.abc-options-panel-borderless {
+            width: calc(100% + 40px);
+            left: -20px;
+
+            .abc-form-element-options-list {
+                padding: 10px 0;
+
+                .abc-form-element-option {
+                    padding: 10px 20px;
+
+                    .abc-selected-option-checkmark {
+                        display: block;
+                    }
+
+                    &.selected-option .abc-selected-option-checkmark {
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+            }
+        }
+
+        &.search-filter-present {
+            .option-search-filter-container {
+                padding: 5px;
+                position: relative;
+                background-color: getConstant($color-palette, "white");
+                border-bottom: 1px solid getConstant($color-palette, "border");
+
+                @include customPlaceholder() {
+                    opacity: 1;
+                }
+    
+                .option-search-filter-input {
+                    width: 100%;
+                    height: 45px;
+                    font-size: getSize(14);
+                    font-weight: getConstant($font-weights, "normal");
+                    color: getConstant($abc-formfield-constants, "label", $abc-default-material-appearance, "initial", "valid");
+                    border: none;
+                    padding: 10px 30px 10px 10px;
+                    line-height: getSize(25);
+                    background-color: transparent;
+                    @include transition(border-color ease 200ms, background-color ease 200ms);
+                }
+
+                .option-search-filter-icon {
+                    position: absolute;
+                    height: 45px;
+                    width: 30px;
+                    top: 5px;
+                    right: 5px;
+                    text-align: center;
+                    line-height: getSize(45);
+                    font-size: getSize(14);
+                    pointer-events: none;
+                }
+            }
+        }
+    }
+
+    &.overlay-options-panel {
+        @media (max-width: getConstant($breakpoints, "max-mobile")) {
+            display: flex;
+            position: fixed;
+            padding: 0;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 100000;
+            background: getConstant($color-palette, "white");
+            transform-origin: center center;
+            @include animation(optionsPanelFadeIn, 0.2s);
+
+            .abc-form-element-options-panel {
+                position: relative;
+                top: 0;
+                left: 0;
+                max-height: 100%;
+                height: auto;
+                width: 100%;
+                background: getConstant($color-palette, "white");
+                box-shadow: none;
+                transform-origin: center center;
+
+                .abc-form-element-options-panel-label {
+                    display: block;
+                    font-size: getSize(12);
+                }
+
+                .option-search-filter-container {
+                    position: relative;
+                    width: 100%;
+                    z-index: 1;
+                    border-width: 0;
+                    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.15);
+                }
+
+                .abc-form-element-options-list {
+                    flex: 1;
+                    height: 100%;
+                    background-color: getConstant($color-palette, "white");
+                }
+            }
+        }
+    }
+}

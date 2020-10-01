@@ -1,0 +1,177 @@
+<div class="abc-form-element-container {{appearanceClass}}" [id]="id + 'Container'">
+    <ng-container *ngIf="design == 'material'">
+        <ng-container *ngIf="designModifier == 'native'">
+            <div
+                class="abc-form-element-wrapper abc-form-element-material-wrapper abc-form-element-select-wrapper"
+                [ngClass]="{
+                    'abc-form-element-focussed': focussed,
+                    'abc-form-element-invalid': ((touched || control.touched) && (control.invalid || invalid)),
+                    'abc-form-element-disabled': (control.disabled || disabled),
+                    'abc-form-element-readOnly': readOnly
+                }">
+                <div class="abc-form-element-flex">
+                    <span class="abc-form-element-affix abc-form-element-prefix abc-dir-{{textDirection}}" *ngIf="prefix">
+                        <img class="abc-form-element-prefix-img" *ngIf="prefix.imageSrc" [src]="prefix.imageSrc" [alt]="prefix.imageAlt || null">
+                        <span class="abc-form-element-prefix-icon {{prefix.icon}}" *ngIf="prefix.icon"></span>
+                    </span>
+                    <div class="abc-form-element-infix">
+                        <label class="abc-form-element-label abc-dir-{{textDirection}}"
+                            [class.float]="!!control.value || !!value || inlinePrefix || readOnly"
+                            [for]="id">
+                            <span class="abc-form-element-label-text" [innerHTML]="label"></span>
+                        </label>
+                        <div *ngIf="inlinePrefix"
+                        class="abc-form-element-inline-affix abc-form-element-inline-prefix abc-dir-{{textDirection}}">
+                            <ng-container *ngIf="inlinePrefix.template" [ngTemplateOutlet]="prefix.template"></ng-container>
+                            <span *ngIf="inlinePrefix.text" [innerHTML]="inlinePrefix.text"></span>
+                        </div>
+                        <select
+                            class="abc-form-element-main abc-form-element-select abc-form-element-native-select no-highlight abc-dir-{{textDirection}}"
+                            [class.option-selected]="value" [attr.id]="id" [name]="name" [(ngModel)]="value"
+                            (focus)="focusElement($event)" (blur)="blurElement($event)"
+                            [attr.aria-invalid]="((touched || control.touched) && (control.invalid || invalid))"
+                            [attr.aria-required]="required" [attr.aria-describedby]="id + 'ErrorText'"
+                            [disabled]="(control.disabled || disabled || readOnly)"
+                            [attr.aria-disabled]="(control.disabled || disabled || readOnly)"
+                            [attr.aria-label]="ariaLabel ? (ariaLabel | abcStripHtml) : label"
+                            [attr.aria-describedby]="hasSubscript ? (id + 'Subscript') : null"
+                            autocorrect="off" spellcheck="false" autocomplete="off">
+                            <option *ngIf="addResetOption || !value" value="" [innerHTML]="resetOptionText || ''"></option>
+                            <ng-container *ngFor="let option of options; let optionIndex = index">
+                                <option [value]="option.value" [disabled]="option.disabled" [innerHTML]="option.text"></option>
+                            </ng-container>
+                        </select>
+                        <span class="{{icons.dropDownChevron}} abc-form-element-select-trigger abc-dir-{{textDirection}}" aria-hidden="true"></span> 
+                    </div>
+                </div>
+                <div class="abc-form-element-underline"></div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="designModifier == 'custom'">
+            <div [attr.id]="id"
+                class="abc-form-element-wrapper abc-form-element-material-wrapper abc-form-element-select-wrapper text-transform-{{textTransform}}"
+                [ngClass]="{
+                    'abc-form-element-focussed': focussed || showOptionsPanel,
+                    'abc-form-element-invalid': ((touched || control.touched) && (control.invalid || invalid)),
+                    'abc-form-element-disabled': (control.disabled || disabled),
+                    'abc-form-element-readOnly': readOnly
+                }"
+                (focus)="focusElement($event)"
+                [tabindex]="(control.disabled || disabled || readOnly) ? -1 : 0"
+                [attr.aria-label]="ariaLabel ? (ariaLabel | abcStripHtml) : label"
+                [attr.aria-invalid]="((touched || control.touched) && (control.invalid || invalid))"
+                [attr.aria-required]="required"
+                [attr.aria-expanded]="showOptionsPanel"
+                [attr.aria-disabled]="(control.disabled || disabled || readOnly)"
+                [attr.aria-describedby]="(id + 'SelectedOption') + (hasSubscript ? (' ' + id + 'Subscript') : '')"
+                (keydown)="keyDown($event)"
+                (blur)="blurElement($event)"
+                role="combobox" (click)="toggleDropdown($event)">
+                <div class="abc-form-element-flex">
+                    <span class="abc-form-element-affix abc-form-element-prefix abc-dir-{{textDirection}}" *ngIf="prefix">
+                        <img class="abc-form-element-prefix-img" *ngIf="prefix.imageSrc" [src]="prefix.imageSrc" [alt]="prefix.imageAlt">
+                        <span class="abc-form-element-prefix-icon {{prefix.icon}}" *ngIf="prefix.icon"></span>
+                    </span>
+                    <div class="abc-form-element-infix">
+                        <div class="abc-form-element-label no-highlight abc-dir-{{textDirection}}"
+                            [class.float]="!!control.value || !!selectedOption['value'] || inlinePrefix || readOnly"
+                            aria-hidden="true">
+                            <span class="abc-form-element-label-text" [innerHTML]="label"></span>
+                        </div>
+                        <div *ngIf="inlinePrefix"
+                            class="abc-form-element-inline-affix abc-form-element-inline-prefix abc-dir-{{textDirection}}">
+                            <ng-container *ngIf="inlinePrefix.template" [ngTemplateOutlet]="prefix.template"></ng-container>
+                            <span *ngIf="inlinePrefix.text" [innerHTML]="inlinePrefix.text"></span>
+                        </div>
+                        <div [attr.id]="id + 'SelectedOption'"
+                            class="abc-form-element-main abc-form-element-select abc-form-element-custom-select no-highlight abc-dir-{{textDirection}}"
+                            [class.option-selected]="!!selectedOption['value']"
+                            aria-live="polite" aria-atomic="true">
+                            <ng-container *ngIf="!selectedOption['template']; else abcCustomSelectedOptionTemplate">
+                                <div *ngIf="!!selectedOption['prefixIcon']" class="prefix-icon-container abc-dir-{{textDirection}}">
+                                    <span [class]="selectedOption['prefixIcon']" aria-hidden="true"></span>
+                                </div>
+                                <div *ngIf="!!selectedOption['prefixImage']" class="prefix-image-container abc-dir-{{textDirection}}">
+                                    <img [src]="selectedOption['prefixImage']" aria-hidden="true">
+                                </div>
+                                <div class="abc-selected-option-text" [innerHTML]="selectedOption['text'] || ''"></div>
+                                <div *ngIf="!!selectedOption['suffixIcon']" class="suffix-icon-container abc-dir-{{textDirection}}">
+                                    <span [class]="selectedOption['suffixIcon']" aria-hidden="true"></span>
+                                </div>
+                                <div *ngIf="!!selectedOption['suffixImage']" class="suffix-image-container abc-dir-{{textDirection}}">
+                                    <img [src]="selectedOption['suffixImage']" aria-hidden="true">
+                                </div>
+                            </ng-container>
+                            <ng-template #abcCustomSelectedOptionTemplate [ngTemplateOutlet]="selectedOption['template']"></ng-template>
+                        </div>
+                        <span class="{{icons.dropDownChevron}} abc-form-element-select-trigger abc-dir-{{textDirection}}" [ngClass]="{'options-panel-displayed': showOptionsPanel}" aria-hidden="true"></span>
+                    </div>
+                </div>
+                <div class="abc-form-element-underline"></div>
+                <ng-template #optionsPanel>
+                    <div *ngIf="initialised" [id]="id + 'OptionsPanel'"
+                        class="abc-form-element-options-panel-container no-highlight"
+                        [ngClass]="{'overlay-options-panel': (enableSearchFilter && isMobileView)}">
+                        <div class="abc-form-element-options-panel abc-options-panel-{{appearance}} no-highlight" [ngClass]="{'search-filter-present': enableSearchFilter}" aria-hidden="true">
+                            <div class="abc-form-element-options-panel-label" [innerHTML]="label" aria-hidden="true"></div>
+                            <div *ngIf="enableSearchFilter" class="abc-form-element-wrapper option-search-filter-container">
+                                <label [class]="screenReaderClass" [for]="id + 'OptionSearchField'">
+                                    {{searchFilterPlaceHolder | translate}} {{label}}
+                                </label>
+                                <input [attr.id]="id + 'OptionSearchField'"
+                                    class="option-search-filter-input"
+                                    tabindex="-1" type="text" [placeholder]="searchFilterPlaceHolder | translate"
+                                    (focus)="focusSearchBar($event)" (blur)="blurSearchBar($event)"
+                                    [(ngModel)]="optionSearchText" (keydown)="keyDown($event)"
+                                    (ngModelChange)="filterOptions(optionSearchText, true)"
+                                    autocorrect="off" spellcheck="false" autocomplete="disabled">
+                                <span class="{{icons.search}} option-search-filter-icon"></span>
+                            </div>
+                            <ul class="abc-form-element-options-list no-highlight">
+                                <li *ngIf="addResetOption" [id]="id + 'Option--1'"
+                                    class="abc-form-element-option no-highlight"
+                                    [class.selected-option]="!selectedOption['value']" (click)="setValue('', true)"
+                                    [innerHTML]="resetOptionText || '-'" [attr.aria-hidden]="true"
+                                    abcRipple abc-ripple-theme="dark"></li>
+                                <ng-container *ngFor="let option of filteredOptions; let optionIndex = index">
+                                    <li class="abc-form-element-option no-highlight {{option.class || ''}}"
+                                        [id]="id + 'Option-' + optionIndex"
+                                        [class.selected-option]="option.value == selectedOption['value']"
+                                        [class.disabled-option]="option.disabled"
+                                        (click)="setValue(option, true)"
+                                        aria-hidden="true" [attr.option-value]="option.value"
+                                        abcRipple abc-ripple-theme="dark">
+                                        <ng-container *ngIf="!option.template; else abcCustomOptionTemplate">
+                                            <div *ngIf="!!option.prefixIcon" class="prefix-icon-container abc-dir-{{textDirection}}">
+                                                <span [class]="option.prefixIcon" aria-hidden="true"></span>
+                                            </div>
+                                            <div *ngIf="!!option.prefixImage" class="prefix-image-container abc-dir-{{textDirection}}">
+                                                <img [src]="option.prefixImage" aria-hidden="true">
+                                            </div>
+                                            <div class="abc-form-element-option-text" [innerHTML]="option.text"></div>
+                                            <div *ngIf="!option.suffixIcon && !option.suffixImage" class="abc-selected-option-checkmark suffix-icon-container abc-dir-{{textDirection}}">
+                                                <span [class]="icons.checkmark" aria-hidden="true"></span>
+                                            </div>
+                                            <div *ngIf="!!option.suffixIcon" class="suffix-icon-container abc-dir-{{textDirection}}">
+                                                <span [class]="option.suffixIcon" aria-hidden="true"></span>
+                                            </div>
+                                            <div *ngIf="!!option.suffixImage" class="suffix-image-container abc-dir-{{textDirection}}">
+                                                <img [src]="option.suffixImage" aria-hidden="true">
+                                            </div>
+                                        </ng-container>
+                                        <ng-template #abcCustomOptionTemplate [ngTemplateOutlet]="option.template"></ng-template>
+                                    </li>
+                                </ng-container>
+                            </ul>
+                            <div class="no-results-found" *ngIf="filteredOptions.length == 0" [innerHTML]="searchFilterNoResultsText | translate"></div>
+                        </div>
+                    </div>
+                </ng-template>
+            </div>
+        </ng-container>
+        <abc-subscript [prefixId]="id" [hasSubscript]="hasSubscript"
+            [design]="design" [control]="control" [touched]="touched"
+            [invalid]="invalid" [error]="error" [hint]="hint">
+        </abc-subscript>
+    </ng-container>
+</div>

@@ -1,0 +1,32 @@
+<ng-container *ngIf="!isToastMessage && visible" [ngTemplateOutlet]="alertTemplate"></ng-container>
+<ng-template #alertTemplate>
+    <div [attr.id]="id"
+        class="abc-theme-alert abc-theme-alert-type-{{type}}"
+        [class.abc-alert-no-animation]="preventAnimation"
+        [class.abc-theme-toast-message]="isToastMessage"
+        [class.dismissing]="dismissingAlert"
+        [attr.role]="role"
+        [tabindex]="isToastMessage ? null : 0"
+        aria-live="polite">
+        <i *ngIf="showIcon && !icon"
+            class="abc-theme-alert-icon {{alertIcons[type]}}"
+            aria-hidden="true">
+        </i>
+        <i *ngIf="icon"
+            class="abc-theme-alert-icon {{icon}}"
+            aria-hidden="true">
+        </i>
+        <div class="abc-theme-alert-message">
+            <span class="abc-theme-alert-message-text">
+                <ng-content></ng-content>
+            </span>
+            <span *ngIf="errorCode" class="abc-theme-alert-error-code" [innerHTML]="errorCode"></span>
+        </div>
+        <button *ngIf="dismissable" class="abc-theme-alert-close-button" (click)="dismissAlert()">
+            <span class="{{icons.close}}"></span>
+            <span class="{{screenReaderClass}}">
+                {{translations.close | translate}}
+            </span>
+        </button>
+    </div>
+</ng-template>

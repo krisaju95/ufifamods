@@ -1,0 +1,24 @@
+<div class="abc-form-element-container abc-phone-number-container">
+    <abc-select [id]="id + 'DialCode'" [(ngModel)]="dialCodeCountry" [label]="dialCodeLabel" [design]="design"
+        [appearance]="appearance" [enableSearchFilter]="enableSearchFilter" searchType="startsWith"
+        [prefix]="{imageSrc: abcFlagImage.path + (dialCodeCountry | lowercase) + abcFlagImage.format}"
+        (change)="setDialCode($event)" [required]="required" [invalid]="invalid" [touched]="touched"
+        [disabled]="disabled" [readOnly]="readOnly" [hasSubscript]="false">
+        <abc-option
+            *ngFor="let country of sortedCountryList"
+            [value]="country.code"
+            [text]="country.name + ' +' + country.dialCode"
+            [prefixImage]="abcFlagImage.path + (country.code | lowercase) + abcFlagImage.format">
+        </abc-option>
+    </abc-select>
+    <abc-input [id]="id + 'PhoneNumber'" [(ngModel)]="value" [label]="label || 'Phone Number'"  type="tel"
+        [name]="name" [design]="design" [appearance]="appearance" [inlinePrefix]="{text: (dialCode ? ('+' + dialCode) : '')}"
+        (ngModelChange)="setFormattedPhoneNumber($event); modelUpdate($event)" [required]="required" [invalid]="invalid || control.invalid"
+        [touched]="touched" [disabled]="disabled" [readOnly]="readOnly" [hint]="hint" [error]="error"
+        (focus)="focusElement($event)" (blur)="blurElement($event)" [updateOn]="updateOn" [errorData]="errorData"
+        [displayFormattedInput]="displayFormattedInput || abcFormattedPhoneNumber">
+        <ng-template #abcFormattedPhoneNumber>
+            {{ formattedPhoneNumber }}
+        </ng-template>
+    </abc-input>
+</div>

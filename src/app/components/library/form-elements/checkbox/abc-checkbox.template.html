@@ -1,0 +1,41 @@
+<div class="abc-form-element-container abc-check-box-container">
+    <div
+        class="abc-form-element-wrapper abc-form-element-checkbox-wrapper abc-form-element-{{design}}-checkbox-wrapper"
+        [ngClass]="{
+            'abc-form-element-focussed': focussed,
+            'abc-form-element-invalid': ((control.touched || touched) && (control.invalid || invalid)),
+            'abc-form-element-disabled': (disabled || control.disabled),
+            'abc-form-element-checked': value
+        }"
+        (click)="focusElement($event)">
+        <input
+            class="abc-form-element-main abc-form-element-checkbox"
+            [attr.id]="id"
+            type="checkbox"
+            role="checkbox"
+            [(ngModel)]="value"
+            (ngModelChange)="modelChanged($event)"
+            (focus)="focusElement($event)"
+            (blur)="blurElement($event)"
+            [disabled]="(disabled || control.disabled)"
+            [attr.aria-label]="(ariaLabel ? (ariaLabel | abcStripHtml) : label) || null"
+            [attr.aria-disabled]="(disabled || control.disabled)"
+            [attr.aria-checked]="value"
+            [attr.aria-required]="required"
+            [attr.aria-describedby]="hasSubscript ? (id + 'Subscript') : null"
+            [attr.aria-invalid]="((control.touched || touched) && (control.invalid || invalid))">
+        <div class="abc-form-element-checkbox-container">
+            <span class="abc-form-element-checkmark"></span>
+        </div>
+        <label class="abc-form-element-label no-highlight text-transform-{{textTransform}}" [for]="id">
+            <span *ngIf="label" class="abc-form-element-label-text" [innerHTML]="label"></span>
+            <ng-container *ngIf="!label">
+                <ng-content></ng-content>
+            </ng-container>
+        </label>
+    </div>
+    <abc-subscript [prefixId]="id" [hasSubscript]="hasSubscript"
+        [design]="design" [control]="control" [touched]="touched"
+        [invalid]="invalid" [error]="error" [hint]="hint">
+    </abc-subscript>
+</div>

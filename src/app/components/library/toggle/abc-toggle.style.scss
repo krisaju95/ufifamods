@@ -1,0 +1,241 @@
+@import "../styles/abc-constants.scss";
+@import "../styles/abc-mixins.scss";
+@import "../styles/abc-animations.scss";
+
+/*
+Define the common style properties for the toggle designs
+Set values like width and height as px values (without the px)
+*/
+$toggle-switch-constants: (
+    "default": (
+        "width": 35,
+        "height": 15,
+        "background-off": getConstant($color-palette, "dark-red"),
+        "background-on": getConstant($color-palette, "green"),
+        "switch-size": 20,
+        "switch-background": getConstant($color-palette, "white")
+    ),
+    "kilo": (
+        "height": 40,
+        "background": getConstant($color-palette, "light-gray"),
+        "border-color": 1px solid getConstant($color-palette, "light-gray-2"),
+        "switch-background": getConstant($color-palette, "white")
+    )
+);
+
+.abc-form-element-toggle-container {
+    margin: 0;
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    abc-subscript {
+        margin-top: 20px;
+    }
+    
+    .abc-form-element-toggle-wrapper {
+        position: relative;
+        display: inline-flex;
+        cursor: pointer;
+
+        .abc-form-element-pseudo-input-wrapper {
+            .abc-form-element-pseudo-input {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                opacity: 0;
+            }
+        }
+
+        $defaultToggleHeight: getSize(getConstant($toggle-switch-constants, "default", "height"));
+        $defaultToggleWidth: getSize(getConstant($toggle-switch-constants, "default", "width"));
+        $defaultToggleSizeRatio: #{getConstant($toggle-switch-constants, "default", "switch-size") / getConstant($toggle-switch-constants, "default", "height")};
+
+        .abc-form-element-toggle-default-toggle {
+            display: inline-flex;
+            position: relative;
+            width: $defaultToggleWidth;
+            height: $defaultToggleHeight;
+            border-radius: $defaultToggleHeight;
+            background-color: getConstant($toggle-switch-constants, "default", "background-off");
+
+            &::before {
+                content: '';
+                position: absolute;
+                height: 100%;
+                width: 50%;
+                background-color: getConstant($toggle-switch-constants, "default", "background-on");
+                border-radius: $defaultToggleHeight;
+                top: 0;
+                left: 0;
+                @include transition(width ease 250ms);
+            }
+
+            .abc-toggle-notch {
+                content: '';
+                position: absolute;
+                height: $defaultToggleHeight;
+                width: $defaultToggleHeight;
+                border-radius: 100%;
+                top: 0;
+                transform: scale(#{$defaultToggleSizeRatio});
+                box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2),
+                            0 2px 1px -1px rgba(0, 0, 0, 0.12),
+                            0 1px 1px 0 rgba(0, 0, 0, 0.14);
+                @include transition(all ease 250ms, right ease 250ms);
+
+                &::before, &::after {
+                    position: absolute;
+                    content: '';
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 100%;
+                }
+
+                &::before {
+                    background-color: rgba(0, 0, 0, 0.05);
+                    pointer-events: none;
+                    @include transition(transform ease 150ms, background-color ease 150ms);
+                }
+
+                &::after {
+                    background-color: getConstant($toggle-switch-constants, "default", "switch-background");
+                }
+            }
+
+            &:hover {
+                .abc-toggle-notch::before {
+                    transform: scale(1.75);
+                }
+            }
+
+            &.abc-dir-ltr {
+                &::before, .abc-toggle-notch {
+                    left: 0;
+                }
+            }
+
+            &.abc-dir-rtl {
+                &::before, .abc-toggle-notch {
+                    right: 0;
+                }
+            }
+
+            &.abc-form-element-toggle-on {
+                &::before {
+                    width: 100%;
+                }
+
+                &.abc-dir-ltr .abc-toggle-notch {
+                    transform: scale(#{$defaultToggleSizeRatio}) translateX(#{$defaultToggleHeight});
+                }
+
+                &.abc-dir-rtl .abc-toggle-notch {
+                    transform: scale(#{$defaultToggleSizeRatio}) translateX(-#{$defaultToggleHeight});
+                }
+            }
+        }
+
+        $kiloToggleHeight: getSize(getConstant($toggle-switch-constants, "kilo", "height"));
+
+        .abc-form-element-toggle-kilo-toggle {
+            display: inline-flex;
+            align-items: center;
+            height: $kiloToggleHeight;
+            min-width: getSize(130);
+            border: getConstant($toggle-switch-constants, "kilo", "border-color");
+            border-radius: $kiloToggleHeight;
+            background: getConstant($toggle-switch-constants, "kilo", "background");
+            position: relative;
+
+            &::before {
+                position: absolute;
+                content: "";
+                top: -1px;
+                margin: 1px;
+                height: 100%;
+                width: calc(50% - 2px);
+                background: getConstant($toggle-switch-constants, "kilo", "switch-background");
+                box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.2);
+                border-radius: $kiloToggleHeight;
+                @include transition(all ease 300ms);
+            }
+
+            &.abc-dir-ltr::before {
+                left: 0
+            }
+
+            &.abc-dir-rtl::before {
+                right: 0
+            }
+
+            .abc-form-element-toggle-option {
+                width: 50%;
+                position: relative;
+                text-align: center;
+                font-size: getSize(14);
+                font-weight: getConstant($font-weights, "normal");
+
+                .abc-toggle-option-text {
+                    padding: 10px 15px;
+                    display: inline-block;
+                }
+
+                &.abc-active-toggle-option {
+                    font-weight: getConstant($font-weights, "semi-bold");
+                }
+            }
+
+            &.abc-form-element-toggle-option-1-active {
+                &.abc-dir-ltr::before {
+                    left: 0;
+                }
+    
+                &.abc-dir-rtl::before {
+                    right: 0;
+                }
+            }
+
+            &.abc-form-element-toggle-option-2-active {
+                &.abc-dir-ltr::before {
+                    left: 50%;
+                }
+    
+                &.abc-dir-rtl::before {
+                    right: 50%;
+                }
+            }
+
+            &.abc-form-element-toggle-3-options {
+                min-width: getSize(240);
+
+                &::before, .abc-form-element-toggle-option {
+                    width: calc(100% / 3);
+                }
+
+                &.abc-form-element-toggle-option-2-active {
+                    &.abc-dir-ltr::before {
+                        left: 33%;
+                    }
+        
+                    &.abc-dir-rtl::before {
+                        right: 33%;
+                    }
+                }
+
+                &.abc-form-element-toggle-option-3-active {
+                    &.abc-dir-ltr::before {
+                        left: 66%;
+                    }
+        
+                    &.abc-dir-rtl::before {
+                        right: 66%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,103 @@
+@import "../../styles/abc-constants.scss";
+
+.abc-form-element-container.abc-phone-number-container {
+    position: relative;
+    margin-bottom: 0;
+
+    abc-input {
+        display: block;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        width: 100%;
+
+        .abc-form-element-container {
+            pointer-events: none;
+
+            .abc-form-element-wrapper {
+                background-color: transparent;
+                pointer-events: none;
+
+                .abc-form-element-flex {
+                    margin-left: 65px;
+                    pointer-events: all;
+                    width: calc(100% - 65px);
+
+                    .abc-form-element-infix {
+                        .abc-form-element-inline-prefix.abc-dir-rtl {
+                            order: 1;
+                            direction: ltr;
+                            padding-right: 5px;
+                        }
+
+                        .abc-form-element-pseudo-main.abc-dir-rtl {
+                            direction: ltr;
+                            justify-content: flex-end;
+                        }
+                    }
+                }
+
+                .abc-form-element-underline {
+                    z-index: 1;
+                }
+            }
+        }
+    }
+
+    abc-select {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        
+        .abc-form-element-container {
+            .abc-form-element-wrapper {
+                .abc-form-element-flex {
+                    .abc-form-element-prefix {
+                        width: 35px;
+
+                        &.abc-dir-rtl {
+                            order: 1;
+                            padding-left: 0;
+                            padding-right: 10px;
+                        }
+                    }
+
+                    .abc-form-element-infix {
+                        position: static;
+
+                        .abc-form-element-label, .abc-form-element-main {
+                            opacity: 0;
+                        }
+
+                        .abc-form-element-native-select {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            padding-left: 10px !important;
+                            padding-right: 10px !important;
+                        }
+
+                        .abc-form-element-select-trigger {
+                            right: auto;
+                            left: 40px;
+                        }
+                    }
+                }
+
+                .abc-form-element-underline {
+                    z-index: 1;
+                }
+            }
+
+            &:not(.abc-form-element-material-appearance-borderless) .abc-form-element-wrapper .abc-form-element-flex {
+                background-color: getConstant($color-palette, "light-gray");
+            }
+
+            &.abc-form-element-material-appearance-borderless:not(.abc-form-element-material-appearance-condensed)  .abc-form-element-wrapper .abc-form-element-flex .abc-form-element-infix .abc-form-element-select-trigger {
+                left: 30px;
+            }
+        }
+    }
+}

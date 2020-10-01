@@ -1,0 +1,135 @@
+@import "./abc-mixins.scss";
+@import "../form-elements/styles/abc-form-element.constants.scss";
+@import "./abc-animations.scss";
+
+.abc-form-element-container {
+    text-align: left;
+
+    /*
+    All form elements will have a margin of 10px below them to ensure that
+    they don't stick to each other. This applies to input fields, dropd-downs,
+    radio-buttons etc
+    */
+    margin-bottom: 10px;
+
+    .abc-form-element-material-wrapper {
+        position: relative;
+        border-style: solid;
+        
+        @include transition(all ease-in-out 0.2s);
+
+        /*
+        This line of code makes sure that when the user selects to auto-fill
+        a form, the browser's auto-fill colors don't get added to the form field
+        */
+        @include clearAutofillColor(".abc-form-element-main");
+
+        @include customPlaceholder() {
+            opacity: 0 !important;
+            text-transform: none !important;
+            @include textOverflow();
+            @include transition(all ease-in-out 0.2s !important);
+        }
+
+        .abc-form-element-flex {
+            overflow: hidden;
+            display: flex;
+            align-items: flex-start;
+            width: 100%;
+            padding: 0 10px;
+
+            .abc-form-element-infix {
+                position: relative;
+                display: flex;
+                max-width: 100%;
+                flex: 1;
+
+                .abc-form-element-main-container {
+                    position: relative;
+                    width: 100%;
+                }
+
+                .abc-form-element-main {
+                    width: 100%;
+                    background-color: transparent;
+                    border: none;
+                }
+
+                .abc-form-element-pseudo-main {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    display: flex;
+                }
+            }
+        }
+
+        &.abc-form-element-disabled, &.abc-form-element-readOnly {
+            border-color: transparent !important;
+            pointer-events: none !important;
+
+            .abc-form-element-select-trigger {
+                display: none;
+            }
+
+            .abc-form-element-underline {
+                display: none !important;
+            }
+        }
+    }
+
+    /*
+    The following code makes sure that the browser's default input related controls
+    do not get displayed within these input infields. These refer to the spinner control
+    for number inputs and the clear button for text fields.
+    */
+    input {
+        &::-ms-reveal, &::-ms-clear {
+            display: none;
+        }
+    
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    
+        &[type=number] {
+            -moz-appearance: textfield;
+        }
+    }
+}
+
+/*
+The following block of code is used to ensure that the background elements behind
+a full screen overlay cannot be scrolled.
+*/
+.abc-overlay-scroll-block,
+.abc-dialog-open {
+    touch-action: none !important;
+    overflow: hidden !important;
+}
+
+.abc-overlay-scroll-block-xs {
+    @media only screen and (max-width: getConstant($breakpoints, "max-mobile")) {
+        touch-action: none !important;
+        overflow: hidden !important;
+    }
+}
+
+/*
+The following code block is used to remove the text highlight appearance for a given element.
+This should be used for decorative elements only (or for custom elements whose native counter-parts
+do not allow highlighting
+*/
+.no-highlight {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
+}

@@ -1,0 +1,204 @@
+@import "./abc-form-element.constants.scss";
+@import "../../styles/abc-animations.scss";
+@import "../../styles/abc-mixins.scss";
+
+@each $appearance in $abc-supported-material-appearances {
+    .abc-form-element-container {
+        &.abc-form-element-material-appearance-#{$appearance} {
+            .abc-form-element-material-wrapper {
+                $backgroundColor: getConstant($abc-formfield-constants, "background", $appearance);
+                background-color: $backgroundColor;
+                color: getConstant($abc-formfield-constants, "input", "color", $appearance, "valid");
+                border-width: getConstant($abc-formfield-constants, "border-width", $appearance);
+                border-color: getConstant($abc-formfield-constants, "border-color", $appearance);
+                border-radius: getConstant($abc-formfield-constants, "border-radius", $appearance);
+                height: calc(#{getConstant($abc-formfield-constants, "height", $appearance)} + 2px);
+
+                $borderStyle: getConstant($abc-formfield-constants, "border-style", $appearance);
+                @if ($borderStyle != solid) {
+                    border-style: $borderStyle;
+                }
+
+                @include customPlaceholder() {
+                    font-size: getConstant($abc-formfield-constants, "input", "font-size", $appearance, "placeholder");
+                    font-weight: getConstant($abc-formfield-constants, "input", "font-weight", $appearance, "placeholder") !important;
+                }
+
+                /*
+                This line of code makes sure that when the user selects to auto-fill
+                a form, the browser's auto-fill colors don't get added to the form field
+                */
+                @include clearAutofillColor(".abc-form-element-main", $backgroundColor);
+
+                &.abc-form-element-focussed {
+                    @include customPlaceholder() {
+                        opacity: 0.5 !important;
+                    }
+                }
+            
+                &.abc-form-element-no-label {
+                    @include customPlaceholder() {
+                        opacity: 1 !important;
+                        color: getConstant($abc-formfield-constants, "label", $abc-default-material-appearance, "initial", "valid") !important;
+                    }
+            
+                    &.abc-form-element-focussed {
+                        @include customPlaceholder() {
+                            opacity: 0.5 !important;
+                        }
+                    }
+                }
+
+                .abc-form-element-flex {
+                    background-color: $backgroundColor;
+                    padding: 0 getConstant($abc-formfield-constants, "horizontal-padding", $appearance);
+
+                    .abc-form-element-affix {
+                        height: getConstant($abc-formfield-constants, "height", $appearance);
+                        line-height: getConstant($abc-formfield-constants, "height", $appearance);
+                        font-size: getSize(getConstant($abc-formfield-constants, "label", $appearance, "initial", "font-size"));
+                    }
+
+                    .abc-form-element-infix {
+                        height: getConstant($abc-formfield-constants, "height", $appearance);
+                        color: getConstant($abc-formfield-constants, "input", "color", $appearance, "valid");
+                        line-height: getConstant($abc-formfield-constants, "input", "line-height", $appearance);
+
+                        .abc-form-element-label {
+                            height: getConstant($abc-formfield-constants, "height", $appearance);
+                            line-height: getConstant($abc-formfield-constants, "height", $appearance);
+                            font-size: getSize(getConstant($abc-formfield-constants, "label", $appearance, "initial", "font-size"));
+                            color: getConstant($abc-formfield-constants, "label", $appearance, "initial", "valid");
+            
+                            &.float {
+                                $float-font-size: #{getConstant($abc-formfield-constants, "label", $appearance, "float", "font-size") / getConstant($abc-formfield-constants, "label", $appearance, "initial", "font-size")};
+                                opacity: getConstant($abc-formfield-constants, "label", $appearance, "float", "opacity");
+                                color: getConstant($abc-formfield-constants, "label", $appearance, "float", "valid");
+
+                                $floatTransform: getConstant($abc-formfield-constants, "label", $appearance, "float-transform");
+                                @if ($floatTransform != none) {
+                                    transform: scale($float-font-size) $floatTransform;
+                                } @else {
+                                    transform: none;
+                                }
+                            }
+                        }
+
+                        .abc-form-element-inline-affix, .abc-form-element-main, .abc-form-element-pseudo-main {
+                            padding: getConstant($abc-formfield-constants, "input", "padding", $appearance);
+                            font-weight: getConstant($abc-formfield-constants, "input", "font-weight", $appearance, "text");
+                            font-size: getConstant($abc-formfield-constants, "input", "font-size", $appearance, "text");
+                            height: getConstant($abc-formfield-constants, "height", $appearance);
+                            color: getConstant($abc-formfield-constants, "input", "color", $appearance, "valid");
+                            line-height: getConstant($abc-formfield-constants, "input", "line-height", $appearance);
+                        }
+
+                        .abc-form-element-pseudo-main + .abc-form-element-main {
+                            opacity: 0;
+                        }
+
+                        .abc-form-element-main {
+                            &.option-selected, &::-ms-value {
+                                color: getConstant($abc-formfield-constants, "input", "color",  $appearance,"valid");
+                                background: transparent;
+                            }
+
+                            &.abc-form-element-native-select {
+                                &.abc-dir-ltr {
+                                    @include isIEBrowser() {
+                                        left: -2px !important;
+                                    }
+    
+                                    @include isFirefoxBrowser() {
+                                        left: -5px !important;
+                                    }
+                                }
+
+                                &.abc-dir-rtl {
+                                    @include isIEBrowser() {
+                                        right: -2px !important;
+                                    }
+    
+                                    @include isFirefoxBrowser() {
+                                        right: -5px !important;
+                                    }
+                                }
+                            }
+
+                            option {
+                                color: getConstant($abc-formfield-constants, "input", "color", $appearance, "valid");
+                                
+                                &:disabled {
+                                    color: getConstant($abc-formfield-constants, "input", "color", $appearance, "disabled");
+                                    background-color: getConstant($abc-formfield-constants, "background", "disabled");
+                                }
+                            }
+                        }
+                    }
+                }
+    
+                &.abc-form-element-invalid {
+                    .abc-form-element-flex {
+                        .abc-form-element-infix {
+                            .abc-form-element-label {
+                                color: getConstant($abc-formfield-constants, "label", $appearance, "initial", "invalid");
+            
+                                &.float {
+                                    color: getConstant($abc-formfield-constants, "label", $appearance, "float", "invalid");
+                                }
+                            }
+
+                            .abc-form-element-select-trigger {
+                                color: getConstant($abc-formfield-constants, "label", $appearance, "initial", "invalid");
+                            }
+                        }
+                    }
+                }
+
+                &.abc-form-element-no-label {
+                    .abc-form-element-flex {
+                        .abc-form-element-infix {
+                            .abc-form-element-main, .abc-form-element-pseudo-main {
+                                padding: 0;
+                                line-height: getConstant($abc-formfield-constants, "height", $appearance);
+                            }
+                        }
+                    }
+                }
+
+                &.abc-form-element-disabled {
+                    color: getConstant($abc-formfield-constants, "input", "color", $appearance, "disabled");
+                    background-color: getConstant($abc-formfield-constants, "background", "disabled");
+
+                    .abc-form-element-flex {
+                        background-color: getConstant($abc-formfield-constants, "background", "disabled");
+                        
+                        .abc-form-element-infix {
+                            .abc-form-element-label {
+                                color: getConstant($abc-formfield-constants, "label", $appearance, "disabled");
+            
+                                &.float {
+                                    color: getConstant($abc-formfield-constants, "label", $appearance, "disabled");
+                                }
+                            }
+
+                            .abc-form-element-main, .abc-form-element-pseudo-main {
+                                color: getConstant($abc-formfield-constants, "input", "color", $appearance, "disabled");
+                            }
+                        }
+                    }
+                }
+            }
+
+            .abc-form-element-subscript-text {
+                border-width: getConstant($abc-formfield-constants, "border-width", $appearance);
+                border-style: getConstant($abc-formfield-constants, "border-style", $appearance);
+
+                .abc-form-element-material-subscript-text {
+                    padding: 0 getConstant($abc-formfield-constants, "horizontal-padding", $appearance);
+                    
+                }
+            }
+        }
+    }
+}

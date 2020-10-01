@@ -1,0 +1,95 @@
+@import "./abc-form-element.constants.scss";
+@import "../../styles/abc-animations.scss";
+@import "../../styles/abc-mixins.scss";
+
+.abc-form-element-container {
+    .abc-form-element-material-wrapper {
+        .abc-form-element-flex {
+            .abc-form-element-affix {
+                padding: 5px 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                white-space: nowrap;
+        
+                img {
+                    max-width: 30px;
+                    width: 100%;
+                }
+    
+                &.abc-form-element-prefix .abc-form-element-prefix-icon {
+                    font-size: getSize(18);
+                }
+            
+                &.abc-form-element-suffix .abc-form-element-suffix-icon {
+                    font-size: getSize(16);
+                }
+
+                &.abc-dir-ltr {
+                    &.abc-form-element-prefix {
+                        padding-right: 10px;
+                    }
+                
+                    &.abc-form-element-suffix {
+                        padding-left: 10px;
+                    }
+                }
+
+                &.abc-dir-rtl {
+                    &.abc-form-element-prefix {
+                        padding-left: 10px;
+                    }
+                
+                    &.abc-form-element-suffix {
+                        padding-right: 10px;
+                    }
+                }
+
+                .abc-input-field-control {
+                    background-color: transparent;
+                    border: none;
+                    padding: 0;
+                    height: getSize(35);
+                    width: getSize(35);
+                    border-radius: 100%;
+                    cursor: pointer;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    @include transition(background-color ease 150ms);
+
+                    &:focus, &:hover {
+                        background-color: getConstant($color-palette, "light-gray");
+                    }
+                }
+            }
+    
+            .abc-form-element-infix {
+                .abc-form-element-inline-affix {
+                    white-space: nowrap;
+                    
+                    &.abc-dir-ltr {
+                        &.abc-form-element-inline-prefix {
+                            padding-right: 5px;
+                        }
+        
+                        &.abc-form-element-inline-suffix {
+                            padding-left: 5px;
+                        }
+                    }
+
+                    &.abc-dir-rtl {
+                        &.abc-form-element-prefix {
+                            padding-left: 5px;
+                        }
+                    
+                        &.abc-form-element-suffix {
+                            padding-right: 5px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

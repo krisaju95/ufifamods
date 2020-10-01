@@ -1,0 +1,162 @@
+@import "../styles/abc-form-element.constants.scss";
+@import "../../styles/abc-animations.scss";
+@import "./abc-radio-button.style-config.scss";
+
+abc-radio-group {
+    vertical-align: top;
+}
+
+.abc-radio-group-container {
+    display: inline-flex;
+    flex-wrap: wrap;
+
+    &.abc-radio-group-vertical-align {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .abc-form-element-radio-button-wrapper {
+        height: auto;
+        background-color: transparent;
+        border-color: transparent;
+        display: inline-flex;
+        align-items: flex-start;
+        position: relative;
+        padding: 5px 0;
+
+        .abc-form-element-radio-button {
+            top: 0;
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            position: absolute;
+        }
+
+        .abc-form-element-radio-button-container {
+            pointer-events: none;
+            position: relative;
+
+            .abc-form-element-radio-button-circle {
+                position: relative;
+                display: block;
+                width: 200%;
+                height: 200%;
+                border-radius: 50%;
+                transform: scale(0.5);
+                @include transition(background-color ease 200ms, border-color 200ms);
+    
+                .abc-form-element-radio-button-dot {
+                    border-radius: 50%;
+                    height: 100%;
+                    transform: scale(0);
+                    @include transition(transform ease 300ms);
+                }
+
+                &.abc-dir-ltr {
+                    transform-origin: top left;
+                }
+        
+                &.abc-dir-rtl {
+                    transform-origin: top right;
+                }
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 100%;
+                border-radius: 100%;
+                background-color: rgba(0, 0, 0, 0.025);
+                pointer-events: none;
+                @include transition(transform ease 150ms, background-color ease 150ms);
+            }
+        }
+
+        &.abc-form-element-focussed, &:hover:not(.abc-form-element-disabled) {
+            .abc-form-element-radio-button-container::before {
+                transform: scale(2.25);
+            }
+
+            &.abc-form-element-selected {
+                .abc-form-element-radio-button-container::before {
+                    background-color: rgba(0, 80, 120, 0.05);
+                }
+            }
+        }
+
+        &.abc-form-element-disabled {
+            cursor: not-allowed;
+            opacity: 0.75;
+
+            > * {
+                pointer-events: none;
+            }
+        }
+
+        .abc-form-element-label {
+            margin: 0 10px;
+            pointer-events: none;
+        }
+
+        @each $design in $abc-supported-radio-designs {
+            &.abc-form-element-#{$design}-radio-button-wrapper {
+                $radioButtonSize: getConstant($abc-radio-constants, "radio", "size", $design);
+
+                .abc-form-element-radio-button-container {
+                    height: getSize($radioButtonSize);
+                    width: getSize($radioButtonSize);
+                    min-width: getSize($radioButtonSize);
+                }
+
+                $radioButtonBorderWidth: getConstant($abc-radio-constants, "radio", "border-width", $design);
+                $radioButtonDotSize: getConstant($abc-radio-constants, "radio", "radio-dot", "size", $design);
+                $radioButtonDotSizeRatio: #{$radioButtonDotSize / ($radioButtonSize - $radioButtonBorderWidth * 2)};
+
+                .abc-form-element-radio-button-circle {
+                    border-style: solid;
+                    border-width: calc(#{getSize($radioButtonBorderWidth)} * 2);
+                    border-color: getConstant($abc-radio-constants, "radio", "unchecked", "border-color", $design);
+                    background-color: getConstant($abc-radio-constants, "radio", "unchecked", "background-color", $design);
+
+                    .abc-form-element-radio-button-dot {
+                        background: getConstant($abc-radio-constants, "radio", "radio-dot", "color", $design);
+                    }
+                }
+
+                .abc-form-element-label {
+                    font-size: getConstant($abc-radio-constants, "label", "font-size", $design);
+                    font-weight: getConstant($abc-radio-constants, "label", "font-weight", $design);
+                    color: getConstant($abc-radio-constants, "label", "color", $design);
+                    line-height: getSize($radioButtonSize);
+                }
+    
+                &.abc-form-element-selected {
+                    .abc-form-element-radio-button-circle {
+                        border-color: getConstant($abc-radio-constants, "radio", "checked", "border-color", $design);
+                        background-color: getConstant($abc-radio-constants, "radio", "checked", "background-color", $design);
+
+                        .abc-form-element-radio-button-dot {
+                            transform: scale($radioButtonDotSizeRatio);
+                        }
+                    }
+                }
+
+                &.abc-form-element-disabled.abc-form-element-selected {
+                    .abc-form-element-radio-button-circle {
+                        border-color: getConstant($abc-radio-constants, "radio", "checked", "disabled", "border-color", $design);
+                        background-color: getConstant($abc-radio-constants, "radio", "checked", "disabled", "background-color", $design);
+
+                        .abc-form-element-radio-button-dot {
+                            background: getConstant($abc-radio-constants, "radio", "radio-dot", "color", "disabled", $design);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

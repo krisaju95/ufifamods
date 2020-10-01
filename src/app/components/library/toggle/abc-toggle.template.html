@@ -1,0 +1,54 @@
+<div class="abc-form-element-container abc-form-element-toggle-container">
+    <div class="abc-form-element-wrapper abc-form-element-toggle-wrapper no-highlight rounded-focus-ring"
+        [class.abc-form-element-focussed]="focussed">
+        <div class="abc-form-element-pseudo-input-wrapper">
+            <ng-container *ngFor="let option of options; let optionIndex = index">
+                <label [class]="screenReaderClass" [attr.for]="name + 'Option' + optionIndex">
+                    <span [innerHTML]="option.ariaLabel || option.label"></span>
+                </label>
+                <input
+                    class="abc-form-element-pseudo-input abc-form-element-main rounded-focus-ring"
+                    type="radio"
+                    [attr.id]="option.id || (name + 'Option' + optionIndex)"
+                    [(ngModel)]="modelValue"
+                    (ngModelChange)="modelChanged($event)"
+                    [attr.name]="name"
+                    [name]="name"
+                    [value]="option.value"
+                    [attr.aria-required]="required"
+                    [attr.aria-invalid]="(touched && (control.invalid || invalid))"
+                    [attr.aria-checked]="modelValue == option.value"
+                    [attr.aria-label]="option.ariaLabel ? (option.ariaLabel | abcStripHtml) : null"
+                    [attr.aria-describedby]="hasSubscript ? (id + 'Subscript') : null"
+                    (focus)="focusElement($event)"
+                    (blur)="blurElement($event)">
+            </ng-container>
+        </div>
+
+        <div
+            *ngIf="design == 'default'"
+            class="abc-form-element-toggle-default-toggle abc-dir-{{textDirection}}"
+            [class.abc-form-element-toggle-on]="modelValue"
+            [class.abc-form-element-toggle-off]="!modelValue"
+            aria-hidden="true"
+            (click)="toggle($event, modelValue)">
+            <div class="abc-toggle-notch"></div>
+        </div>
+
+        <div
+            *ngIf="design == 'kilo'"
+            class="abc-form-element-toggle-kilo-toggle abc-form-element-toggle-{{options.length}}-options abc-form-element-toggle-option-{{activeOptionIndex + 1}}-active abc-dir-{{textDirection}}"
+            aria-hidden="true">
+            <div *ngFor="let option of options; let optionIndex = index"
+                class="abc-form-element-toggle-option abc-form-element-toggle-option-{{optionIndex + 1}}"
+                [class.abc-active-toggle-option]="option.value == modelValue"
+                aria-hidden="true" (click)="toggle($event, option.value)">
+                <div class="abc-toggle-option-text">{{ option.label || '' }}</div>
+            </div>
+        </div>
+    </div>
+    <abc-subscript [prefixId]="id" [hasSubscript]="hasSubscript"
+        [design]="design" [control]="control" [touched]="touched"
+        [invalid]="invalid" [error]="error" [hint]="hint">
+    </abc-subscript>
+</div>

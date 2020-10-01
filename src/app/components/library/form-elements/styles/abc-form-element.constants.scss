@@ -1,0 +1,270 @@
+@import "../../styles/abc-constants.scss";
+@import "../../styles/abc-mixins.scss";
+
+/*
+This variable maintains the list of supported appearances. When you wish to create a new
+appearance type, make sure to add it to this list and also add the individual appearance
+design properties to the constants below. When you wish to de-scope any particular
+appearance, simply remove that appearance name from this list and all the associated code
+will be removed from your project's bundle
+*/
+$abc-supported-material-appearances: "standard", "borderless", "condensed";
+
+/*
+Set the default appearance type for elements that have a common design. This appearance type
+will be used to pick up certain design properties that do not change based on the selected
+appearance.
+*/
+$abc-default-material-appearance: "standard";
+
+/*
+The following constants are used for input fields and drop-downs. It always makes
+design sense to have both these types of form fields look the same, so it also makes
+technical sense to reuse styles as much as possible.
+*/
+$abc-formfield-constants: (
+    /*
+    Define the height of the form field based on the appearance.
+    Configure these as getSize(<size in pixels>)
+    */
+    "height": (
+        "standard": getSize(50),
+        "condensed": getSize(40),
+        "borderless": getSize(50)
+    ),
+    /*
+    What's the background color of the form-field?
+    For disabled fields, it currently supports just a single color for all appearances
+    */
+    "background": (
+        "standard": getConstant($color-palette, "white"),
+        "condensed": getConstant($color-palette, "white"),
+        "borderless": transparent,
+        "disabled": getConstant($color-palette, "light-gray")
+    ),
+    /*
+    Define the border width for each appearance
+    */
+    "border-width": (
+        "standard": 1px,
+        "condensed": 1px,
+        "borderless": 1px
+    ),
+    /*
+    Define the border color for each appearance
+    */
+    "border-color": (
+        "standard": getConstant($color-palette, "border"),
+        "condensed": getConstant($color-palette, "border"),
+        "borderless": getConstant($color-palette, "light-gray-4")
+    ),
+    /*
+    Decide which sides of the form-field should have a border. For example, if you need all sides
+    to have a solid border, just configure the valus as "solid" (without quotes). If you want the border
+    to just appear on the bottom, then configure it as "none none solid none" (without quotes).
+    The directional order is top - right - bottom - left
+    */
+    "border-style": (
+        "standard": solid,
+        "condensed": solid,
+        "borderless": none none solid none
+    ),
+    /*
+    What should be the border-radius for each appearance. Set as 0 if no border-radius needs to be set
+    */
+    "border-radius": (
+        "standard": 0,
+        "condensed": 0,
+        "borderless": 0
+    ),
+    /*
+    This the padding on the right and left within the container of the form field. This means, if you set
+    a value of 0, the label, placeholder and the user input text will stick to the left side border of
+    the form-field. Similarly, a horizontal-padding of 10px means the label and text will be displayed 10px
+    away from the left side border of the field. This also adds padding on the right side to maintain
+    symettry
+    */
+    "horizontal-padding": (
+        "standard": 10px,
+        "condensed": 10px,
+        "borderless": 0px
+    ),
+    /*
+    The constants defined below are used for the main input text (or selected option text) for the form fields
+    */
+    "input": (
+        /*
+        This is the padding used for the main input text (or selected option text). Keep in mind that horizontal
+        padding has already been defined before this, so this should be used only for vertical padding ideally
+        */
+        "padding": (
+            "standard": 25px 0 5px 0,
+            "condensed": 5px 0 5px 0,
+            "borderless": 20px 0 5px 0
+        ),
+        /*
+        Set the line-height of the input/select field. Keep in mind that this value needs to be set such that the
+        vertical padding defined above added to the line-height should be equal to the total height of the form
+        field
+        */
+        "line-height": (
+            "standard": calc(#{getSize(50)} - 30px),
+            "condensed": calc(#{getSize(40)} - 10px),
+            "borderless": calc(#{getSize(50)} - 25px)
+        ),
+        /*
+        This are the font-sizes for the input/select text and the placeholder text. Usually, the placeholder text
+        should be the same as the input text, but this config will let you change that
+        */
+        "font-size": (
+            "standard": (
+                "text": getSize(16),
+                "placeholder": getSize(16)
+            ),
+            "condensed": (
+                "text": getSize(16),
+                "placeholder": getSize(16)
+            ),
+            "borderless": (
+                "text": getSize(16),
+                "placeholder": getSize(16)
+            )
+        ),
+        /*
+        Select the font-weights for the text field and the placeholder. Choose between "light", "regular",
+        "semi-bold" and "bold"
+        */
+        "font-weight": (
+            "standard": (
+                "text": getConstant($font-weights, "normal"),
+                "placeholder": getConstant($font-weights, "normal")
+            ),
+            "condensed": (
+                "text": getConstant($font-weights, "normal"),
+                "placeholder": getConstant($font-weights, "normal")
+            ),
+            "borderless": (
+                "text": getConstant($font-weights, "normal"),
+                "placeholder": getConstant($font-weights, "normal")
+            )
+        ),
+        /*
+        Set the text-field colors for the various states of the input/select fields
+        */
+        "color": (
+            "standard": (
+                "valid": getConstant($color-palette, "text"),
+                "invalid": getConstant($color-palette, "text"),
+                "disabled": getConstant($color-palette, "blue-gray")
+            ),
+            "condensed": (
+                "valid": getConstant($color-palette, "text"),
+                "invalid": getConstant($color-palette, "text"),
+                "disabled": getConstant($color-palette, "blue-gray")
+            ),
+            "borderless": (
+                "valid": getConstant($color-palette, "black"),
+                "invalid": getConstant($color-palette, "black"),
+                "disabled": getConstant($color-palette, "blue-gray")
+            )
+        )
+    ),
+    /*
+    The constants defined below are used for the labels of the form fields
+    */
+    "label": (
+        "standard": (
+            /*
+            The constants defined below are used for when the label is in the default state,
+            i.e., when there is no input present in the field
+            */
+            "initial": (
+                "font-size": 16,
+                "valid": getConstant($color-palette, "sub-text"),
+                "invalid": getConstant($color-palette, "red")
+            ),
+            /*
+            The constants defined below are used for when the label is in the floated state,
+            i.e., when there is input present in the field or when the field is in focus (in case
+            of text fields)
+            */
+            "float": (
+                "opacity": 1,
+                "font-size": 14,
+                "valid": getConstant($color-palette, "sub-text"),
+                "invalid": getConstant($color-palette, "red")
+            ),
+            /*
+            This is used for the positional transform of the label. It defines the distance by which
+            the label needs to move on the 3D axes (X, Y and Z in order)
+            */
+            "float-transform": translate3d(0, -#{getSize(10)}, 0),
+            /*
+            This is used for the color of the label when the form-field is disabled
+            */
+            "disabled": getConstant($color-palette, "blue-gray")
+        ),
+        "condensed": (
+            /*
+            The constants defined below are used for when the label is in the default state,
+            i.e., when there is no input present in the field
+            */
+            "initial": (
+                "font-size": 16,
+                "valid": getConstant($color-palette, "sub-text"),
+                "invalid": getConstant($color-palette, "red")
+            ),
+            /*
+            The constants defined below are used for when the label is in the floated state,
+            i.e., when there is input present in the field or when the field is in focus (in case
+            of text fields)
+            */
+            "float": (
+                "opacity": 0,
+                "font-size": 16,
+                "valid": getConstant($color-palette, "sub-text"),
+                "invalid": getConstant($color-palette, "red")
+            ),
+            /*
+            This is used for the positional transform of the label. It defines the distance by which
+            the label needs to move on the 3D axes (X, Y and Z in order)
+            */
+            "float-transform": none,
+            /*
+            This is used for the color of the label when the form-field is disabled
+            */
+            "disabled": getConstant($color-palette, "blue-gray")
+        ),
+        "borderless": (
+            /*
+            The constants defined below are used for when the label is in the default state,
+            i.e., when there is no input present in the field
+            */
+            "initial": (
+                "font-size": 16,
+                "valid": getConstant($color-palette, "sub-text"),
+                "invalid": getConstant($color-palette, "red")
+            ),
+            /*
+            The constants defined below are used for when the label is in the floated state,
+            i.e., when there is input present in the field or when the field is in focus (in case
+            of text fields)
+            */
+            "float": (
+                "opacity": 1,
+                "font-size": 12,
+                "valid": getConstant($color-palette, "sub-text"),
+                "invalid": getConstant($color-palette, "red")
+            ),
+            /*
+            This is used for the positional transform of the label. It defines the distance by which
+            the label needs to move on the 3D axes (X, Y and Z in order)
+            */
+            "float-transform": translate3d(0, -#{getSize(15)}, 0),
+            /*
+            This is used for the color of the label when the form-field is disabled
+            */
+            "disabled": getConstant($color-palette, "blue-gray")
+        )
+    )
+);

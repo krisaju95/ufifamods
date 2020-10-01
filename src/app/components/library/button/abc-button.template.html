@@ -1,0 +1,49 @@
+<button *ngIf="!href" [id]="id" [type]="type" [disabled]="disabled"
+    [attr.aria-disabled]="disabled || ariaDisabled"
+    [attr.aria-label]="ariaLabel || null"
+    [attr.aria-describedby]="ariaDescribedBy || null"
+    [attr.aria-pressed]="ariaPressed || null"
+    [attr.aria-expanded]="ariaExpanded || null"
+    [attr.aria-busy]="showInsetLoader"
+    [attr.role]="role || null"
+    [attr.title]="title || null"
+    [attr.tabindex]="tabIndex || null"
+    class="abc-button abc-button-type-{{level}} abc-button-theme-{{theme}} abc-button-height-{{height}} abc-dir-{{textDirection}} no-highlight"
+    [class.abc-button-has-inset-loader]="showInsetLoader != undefined && showInsetLoader != null"
+    [class.abc-button-show-inset-loader]="showInsetLoader"
+    [attr.data-analytics-track]="DTM ? DTM.track : null"
+	[attr.data-analytics-val]="DTM ? DTM.val : null"
+    abcRipple [attr.abc-ripple-theme]="level == 'primary' ? 'light' : 'dark'"
+    [attr.tabindex]="tabIndex" (focus)="focusButton($event)" (blur)="blurButton($event)">
+    <span class="abc-button-content">
+        <span class="abc-button-text">
+            <ng-container [ngTemplateOutlet]="abcButtonText"></ng-container>
+        </span>
+        <span *ngIf="showInsetLoader != undefined && showInsetLoader != null" class="abc-button-inset-loader"></span>
+    </span>
+</button>
+
+<a *ngIf="href" [id]="id" [attr.target]="(disabled || ariaDisabled || !href) ? null : target"
+    [href]="((disabled || ariaDisabled || !href) ? 'javascript: void(0)' : href) | safe : 'url'"
+    [attr.role]="role || null"
+    [attr.title]="title || null"
+    [attr.tabindex]="tabIndex || null"
+    [attr.aria-label]="ariaLabel || null"
+    [attr.aria-describedby]="ariaDescribedBy || null"
+    [attr.aria-disabled]="disabled || ariaDisabled"
+    class="abc-button abc-button-type-{{level}} abc-button-theme-{{theme}} no-highlight"
+    [class.abc-button-has-inset-loader]="showInsetLoader != undefined && showInsetLoader != null"
+    [class.abc-button-show-inset-loader]="showInsetLoader"
+    [attr.data-analytics-track]="DTM ? DTM.track : null"
+	[attr.data-analytics-val]="DTM ? DTM.val : null" (focus)="focusButton($event)" (blur)="blurButton($event)"
+    abcRipple [attr.abc-ripple-theme-light]="level == 'primary'" [attr.abc-ripple-theme-dark]="level == 'secondary'">
+    <span class="abc-button-content">
+        <span class="abc-button-text">
+            <ng-container [ngTemplateOutlet]="abcButtonText"></ng-container>
+        </span>
+    </span>
+</a>
+
+<ng-template #abcButtonText>
+    <ng-content></ng-content>
+</ng-template>
