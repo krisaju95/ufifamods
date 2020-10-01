@@ -29,6 +29,7 @@ export class WAStarheadCardComponent {
 		this.filterConfig = {
 			game: "fifa20",
 			player: this.starhead,
+			nationality: this.WAFIFADBService.fifaDBPlayers[this.starhead].nationality.id,
 			league: this.WAFIFADBService.fifaDBPlayers[this.starhead].league.id,
 			club: this.WAFIFADBService.fifaDBPlayers[this.starhead].club.id
 		};
