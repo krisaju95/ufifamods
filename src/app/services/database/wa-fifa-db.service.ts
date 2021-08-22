@@ -17,6 +17,8 @@ export class WAFIFADBService {
 
     sheetsLoaded: number = 0;
 
+    sheetNames: string[] = ["players", "playernames", "teams", "teamplayerlinks", "leagues", "leagueteamlinks", "nations"];
+
     players: Array<any> = [];
 
     playersMap: any = {};
@@ -62,10 +64,10 @@ export class WAFIFADBService {
         this.sheetsLoaded = 0;
         this.WARootScope.fifaDBGenerated = false;
 
-        for (let sheetIndex = 1; sheetIndex <= numberOfSheets; sheetIndex++) {
+        for (let sheetIndex = 0; sheetIndex < numberOfSheets; sheetIndex++) {
             this.fifaDBData$[sheetIndex] = this.googleSheetsDbService.get<any>(
                 '1WXxmCBfEJt058umbg7LXy2bbINSTRbjKm5XH4wCyKis',
-                sheetIndex,
+                this.sheetNames[sheetIndex],
                 FIFADBTuple
             );
 
@@ -188,7 +190,7 @@ export class WAFIFADBService {
             const leagueID: string = tuple.leagueid;
             const team: any = {
                 id: tuple.teamid,
-                name: this.teamsMap[tuple.teamid].teamname || "",
+                name: this.teamsMap[tuple.teamid] ? (this.teamsMap[tuple.teamid].teamname || "") : "",
                 image: "https://www.fifarosters.com/assets/clubs/fifa20/" + tuple.teamid + ".png",
             };
             if (leagueTeamsMap[leagueID]) {
@@ -202,7 +204,7 @@ export class WAFIFADBService {
 
     convertArrayToObject(array: Array<any>, key: string, sortObjectInfo?: string): any {
         const map: any = {};
-        array.forEach((item: any) => {
+        (array || []).forEach((item: any) => {
             if (
                 sortObjectInfo == 'club' &&
                 (

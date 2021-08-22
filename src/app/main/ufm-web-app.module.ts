@@ -11,7 +11,7 @@ import { UFMWebAppComponent } from './ufm-web-app.component';
 
 // Common Components & Modules
 import { WAHeaderComponent, WAFooterComponent, WADialogModule } from '../components';
-import { GoogleSheetsDbService } from 'ng-google-sheets-db';
+import { API_KEY, GoogleSheetsDbService } from 'ng-google-sheets-db';
 
 // Page Modules
 import { WAPageHomeModule } from '../components/pages/home';
@@ -51,6 +51,10 @@ import { TranslateModule } from '@ngx-translate/core';
 		TranslateModule.forRoot()
 	],
 	providers: [
+		{
+			provide: API_KEY,
+			useValue: 'AIzaSyDDk7Qbit_JDAbJmvopV2IvOeB8vzWrXZg'
+		},
 		GoogleSheetsDbService
 	],
 	bootstrap: [UFMWebAppComponent]

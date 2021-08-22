@@ -13,6 +13,8 @@ export class WADBService {
 
     sheetsLoaded: number = 0;
 
+    sheetNames: string[] = ["Custom Star-heads", "YouTube Videos"];
+
     blogPostsList: Array<WABlogPost> = [];
 
     blogPosts$: Array<Observable<WABlogPost[]>> = [];
@@ -23,10 +25,10 @@ export class WADBService {
     ) { }
 
     loadBlogData(): void {
-        for (let sheetIndex = 1; sheetIndex <= numberOfSheets; sheetIndex++) {
+        for (let sheetIndex = 0; sheetIndex < numberOfSheets; sheetIndex++) {
             this.blogPosts$[sheetIndex] = this.googleSheetsDbService.get<WABlogPost>(
                 '1gM7dvuanzHj010o5jlnf8z3BjTWBlYBKYdJkPL5xOLc',
-                sheetIndex,
+                this.sheetNames[sheetIndex],
                 WABlogPostAttributeMap
             );
 
