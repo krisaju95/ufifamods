@@ -34,3 +34,38 @@
         }
     }
 }
+
+div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    text-align: center;
+    order: 3;
+  }
+  
+  .sticky button {
+      margin-bottom: 30px;
+      background: #005078;
+      padding: 0 30px;
+      min-width: 130px;
+      border: none;
+      color: white;
+      font-weight: 600;
+      font-size: 14px;
+      min-height: 50px;
+      border-radius: 50px;
+      min-width: 320px;
+  }
+  
+  .bound {
+      display: flex;
+      flex-direction: column;
+  }
+  
+  .results {
+      order: 1;
+  }
+  
+  .footer {
+      order: 2;
+  }
