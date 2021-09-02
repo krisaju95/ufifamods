@@ -31,6 +31,18 @@ export class CreateFUTCardComponent {
         event.preventDefault();
         setTimeout(() => {
             window.blur();
-        }, 50)
+        }, 500)
+    }
+
+    onFocus6(event: Event): void {
+        event.preventDefault();
+        (document.querySelector(".wa-logo") as HTMLElement).focus();
+    }
+
+    onFocus7(event: Event): void {
+        event.preventDefault();
+        setTimeout(() => {
+            (document.querySelector(".wa-logo") as HTMLElement).focus();
+        }, 500)
     }
 }
